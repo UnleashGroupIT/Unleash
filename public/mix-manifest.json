@@ -1,0 +1,22 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/about.css": "/css/about.css",
+    "/css/agenda.css": "/css/agenda.css",
+    "/css/agenda_old.css": "/css/agenda_old.css",
+    "/css/flipclock.css": "/css/flipclock.css",
+    "/css/floorplan.css": "/css/floorplan.css",
+    "/css/index.css": "/css/index.css",
+    "/css/menu.css": "/css/menu.css",
+    "/css/reset.css": "/css/reset.css",
+    "/css/speaker.css": "/css/speaker.css",
+    "/css/speakers.css": "/css/speakers.css",
+    "/css/sponsor.css": "/css/sponsor.css",
+    "/css/sponsors.css": "/css/sponsors.css",
+    "/css/startup.css": "/css/startup.css",
+    "/css/stream.css": "/css/stream.css",
+    "/js/parallax.min.js": "/js/parallax.min.js",
+    "/js/main.js": "/js/main.js",
+    "/js/flipclock.min.js": "/js/flipclock.min.js",
+    "/js/agenda.js": "/js/agenda.js"
+}
