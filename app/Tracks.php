@@ -3,13 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\AgendaSessions;
 
 class Tracks extends Model
 {
 
 
-     public function speakergrid(){
+     public function sessions(){
 
-        return $this->hasMany('App\Sessions');
+        return $this->hasMany('App\AgendaSessions');
+    }
+
+    public function event(){
+
+    	return $this->belongsTo('App\Events');
     }
 }

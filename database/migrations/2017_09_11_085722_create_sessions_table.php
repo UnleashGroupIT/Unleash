@@ -13,7 +13,7 @@ class CreateSessionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('agenda_sessions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('track_id');
             $table->string('session_title');

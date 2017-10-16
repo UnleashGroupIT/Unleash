@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Grids;
+use App\Speakers;
+
+
+class SpeakersController extends Controller
+{
+
+
+    public function index(Request $request){
+
+     $SpeakerGridId = 1;
+     $site = '404.blade.php';   
+
+     if ($request->is('amsterdam') || $request->is('amsterdam/*')) {
+         $SpeakerGridId = 2;
+ 
+         $site = 'amsterdam.pages.speakers';
+     }      
+     
+      if ($request->is('london') || $request->is('london/*')) {
+         $SpeakerGridId = 1;
+
+         $site = 'london.pages.speakers';    
+     }   
+
+      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+         $SpeakerGridId = 1;
+
+         $site = 'lasvegas.pages.speakers';
+     }   
+
+
+        $speakerGrids = $this->listGridContent($SpeakerGridId);
+
+            return view($site, [
+                  'speakers' => $speakerGrids,
+                 
+                ]);
+
+    }
+
+
+	public function listGridContent($gridId){
+
+		$grid = Grids::find($gridId);
+
+		return $speaker = $grid->speakers()
+					 ->orderBy('speaker_grids.order_number','ASC')
+		             ->get();
+
+	}
+
+
+
+    public function speaker(Request $request, $speakerId = 99999){
+
+     $site = '404.blade.php';   
+
+     if ($request->is('amsterdam') || $request->is('amsterdam/*')) {
+ 
+ 
+         $site = 'amsterdam.pages.speaker';
+     }      
+     
+      if ($request->is('london') || $request->is('london/*')) {
+
+
+         $site = 'london.pages.speaker';    
+     }   
+
+      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+
+
+         $site = 'lasvegas.pages.speaker';
+     }          
+
+    	$speaker = Speakers::find($speakerId);
+
+    	    return view($site, [
+    			  'speaker' => $speaker,
+    			 
+
+    			]);
+    } 
+
+}

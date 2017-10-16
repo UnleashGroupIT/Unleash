@@ -23,6 +23,7 @@ class CreateSponsorGridsTable extends Migration
             $table->text('custom_bio')->nullable();
             $table->string('custom_link')->nullable();
             $table->string('custom_image')->nullable();
+			$table->integer('custom_order')->nullable();
             $table->timestamps();
         });
     }

@@ -17,6 +17,8 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('event_name');
             $table->string('event_code');
+            $table->dateTime('first_day');
+            $table->dateTime('second_day');
             $table->timestamps();
         });
     }

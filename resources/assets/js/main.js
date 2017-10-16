@@ -182,35 +182,35 @@ $(document).ready(function(){
 	//PARALLAX
 
 	$('#keynote').parallax({
-		imageSrc: './gfx/arianna-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/arianna-bg.jpg',
 		speed: '0.8'
 	});
 	$('#keynote-2').parallax({
-		imageSrc: './gfx/speakers-bg2.jpg',
+		imageSrc: '../../gfx/amsterdam/speakers-bg2.jpg',
 		speed: '0.8'
 	});
 	$('#expo').parallax({
-		imageSrc: './gfx/expo-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/expo-bg.jpg',
 		speed: '0.8'
 	});
 	$('#clients').parallax({
-		imageSrc: './gfx/clients-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/clients-bg.jpg',
 		speed: '0.8',
 	});
 	$('#testimonial').parallax({
-		imageSrc: './gfx/testimonial-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/testimonial-bg.jpg',
 		speed: '0.8',
 	});
 	$('#show-bg').parallax({
-		imageSrc: './gfx/show-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/show-bg.jpg',
 		speed: '0.8'
 	});
 	$('#team-bg').parallax({
-		imageSrc: './gfx/team-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/team-bg.jpg',
 		speed: '0.8'
 	});
 	$('#team2-bg').parallax({
-		imageSrc: './gfx/team2-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
 		speed: '0.8'
 	});
 	

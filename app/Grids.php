@@ -30,7 +30,7 @@ class Grids extends Model
     public function sponsors(){
                 
             return $this->belongsToMany('App\Sponsors', 'sponsor_grids','grid_id', 'sponsor_id')
-               ->withPivot('category_id', 'alacarte', 'alacarte_text', 'custom_bio', 'custom_link', 'custom_image')
+               ->withPivot('category_id', 'alacarte', 'alacarte_text', 'custom_bio', 'custom_link', 'custom_image', 'custom_order')
                ->withTimestamps();
         }
 
