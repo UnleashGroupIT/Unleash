@@ -28,81 +28,117 @@
 	</section>
 	<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
+
+		<h2>Diamond + Sponsors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 1)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
 		<h2>Diamond Sponsors</h2>
 		<div class="sponsors-wrp">
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div> 
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/workday.png" alt="Workday"></a>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsor.php"><img src="./gfx/oracle.png" alt="Workday"></a>
-			</div>
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 2)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
 		</div>
+
+
+		<h2>Emerald Sponsors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 3)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
+
+		<h2>Platinum Sponsors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 4)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
+		<h2>Gold Sponsors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 5)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
+
+		<h2>Silver Sponsors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 6)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
+
+		<h2> Exhibitors</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 7)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>	
+
+		<h2>A La Carte</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 10 || $sponsor->pivot->alacarte == 1)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach	
+		</div>	
+		
+		<h2> Startup</h2>
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 8)
+			 <!--sponsors-->
+				 @include('amsterdam.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach					
+
+		</div>												
 	</section>
 	<!--Sponsors END-->
 	<!--Counter-->

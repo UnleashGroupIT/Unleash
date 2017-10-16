@@ -60,18 +60,12 @@ h5 {
 }
 
 span {
-  font-size: 1rem;
-}
-
-@media (min-width: 40em) {
-  span {
-    font-size: 1.2rem;
-  }
+  font-size: 1.55rem;
 }
 
 @media (min-width: 120em) {
   span {
-    font-size: 1vw;
+    font-size: 1.3vw;
   }
 }
 
@@ -531,6 +525,10 @@ section.header-title:hover {
 
 #news {
   margin-top: 0;
+}
+
+.single {
+  margin-top: 0 !important;
 }
 
 .dropdownbox {
@@ -1367,7 +1365,14 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: auto 100%;
+  background-size: 100%;
+  background-position: top center;
+}
+
+@media (min-width: 75em) {
+  section.two .fix-bg {
+    background-size: 50% 100%;
+  }
 }
 
 @media (min-width: 120em) {
@@ -1515,7 +1520,6 @@ section.two.keynote.arianna .pdg {
 section.two.keynote.arianna .strn {
   display: block;
   font-weight: 600;
-  font-size: 1.2rem;
   margin: .5em 0;
 }
 
@@ -1745,15 +1749,25 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 .testim {
-  margin: 0 4em;
+  margin: 0 2em;
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testim .strn {
+  font-weight: 900;
+}
+
+@media (min-width: 75em) {
+  .testim {
+    margin: 3em 4em;
+  }
 }
 
 .testim .coma {
@@ -1765,7 +1779,7 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
   display: block;
   margin: 1em 0;
   color: #fff;
-  font-style: italic;
+  font-weight: 300;
   line-height: 1.5em;
 }
 
@@ -1777,14 +1791,15 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
   width: 100px;
   margin-left: auto;
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .testim.wdth {
-  margin: 0;
+  margin: 3em 0;
 }
 
-.testim.wdth .quote-logo {
-  margin-right: 2em;
+.testim.wdth span {
+  color: #323232;
 }
 
 section.map {

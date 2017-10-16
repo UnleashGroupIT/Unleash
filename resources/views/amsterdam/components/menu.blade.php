@@ -11,10 +11,10 @@
 			<nav id="desktop-menu">
 				
 				<ul class="menu-ul">
-					<li id="news"><a href="http://www.unleashgroup.io/" title="NEWS">News</a></li>
+					<li id="news" class="single"><a href="http://www.unleashgroup.io/" title="NEWS">News</a></li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more ams">
-						<a>Amsterdam</a>
+						<a href="http://www.unleashgroup.io/amsterdam">Amsterdam</a>
 						<!--Double wrap to prevent hover interrupt-->
 						<div class="dropdownbox">
 							<div class="ul-wrp">
@@ -26,7 +26,6 @@
 											<li><a href="{{ route('ams.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('ams.speakers') }}">Speakers</a></li>
 											<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
-											<li><a href="{{ route('ams.startup') }}">Startup</a></li>
 											<li><a href="{{ route('ams.floorplan') }}">Venue / Floorplan</a></li>
 										</ul>
 									</li>
@@ -49,7 +48,7 @@
 					</li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more lon">
-						<a>London</a>
+						<a href="http://www.unleashgroup.io/london">London</a>
 						<!--Double wrap to prevent hover interrupt-->
 						<div class="dropdownbox">
 							<div class="ul-wrp">
@@ -58,8 +57,8 @@
 										<a>Our Show in London</a>
 										<ul class="second-ul">
 											<li><a href="{{ route('london.index') }}">Event</a></li>
-											<li><a href="{{ route('london.speakers') }}">Past Speakers</a></li>
-											<li><a href="{{ route('london.sponsors') }}">Our Clients</a></li>
+											<li><a href="{{ route('london.index') }}#spkrgrd">Past Speakers</a></li>
+											<li><a href="{{ route('london.index') }}#spnsrgrd">Our Clients</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Venue / Floorplan</a></li>
 
 										</ul>
@@ -82,7 +81,7 @@
 						</div>
 					</li>
 					<li title="EVENTS" class="more las">
-						<a>Las Vegas</a>
+						<a href="http://www.unleashgroup.io/lasvegas">Las Vegas</a>
 						<!--Double wrap to prevent hover interrupt-->
 						<div class="dropdownbox">
 							<div class="ul-wrp">
@@ -91,8 +90,8 @@
 										<a>Our Show in Las Vegas</a>
 										<ul class="second-ul">
 											<li><a href="{{ route('lasvegas.index') }}">Event</a></li>
-											<li><a href="{{ route('lasvegas.speakers') }}">Past Speakers</a></li>
-											<li><a href="{{ route('lasvegas.sponsors') }}">Our Clients</a></li>
+											<li><a href="{{ route('lasvegas.index') }}#spkrgrd">Past Speakers</a></li>
+											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
 											<li><a href="{{ route('lasvegas.floorplan') }}">Venue / Floorplan</a></li>
 										</ul>
 									</li>
@@ -113,6 +112,7 @@
 							</div>
 						</div>
 					</li>
+					<li class="single"><a href="{{ route('ams.startup') }}">Startup</a></li>
 					<li title="EVENTS" class="more">
 						<a>About</a>
 						<!--Double wrap to prevent hover interrupt-->

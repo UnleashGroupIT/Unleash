@@ -8,6 +8,20 @@ use App\Grids;
 class SponsorsController extends Controller
 {
 
+  /*
+   Categories:
+    1 - Diamond Plus
+    2 - Diamond
+    3 - Emerald
+    4 - Platinum
+    5 - Gold
+    6 - Silver
+    7 - Exibitors
+    8 - Startup
+
+    10 - A La Carte Only
+  */
+
 		public function listGridContent($gridId){
 
 		$grid = Grids::find($gridId);
@@ -21,35 +35,35 @@ class SponsorsController extends Controller
 
     public function index(Request $request){
 
-     $SpeakerGridId = 1;
+     $SponsorGridId = 1;
      $site = '404.blade.php';   
 
      if ($request->is('amsterdam') || $request->is('amsterdam/*')) {
-         $SpeakerGridId = 1;
+         $SponsorGridId = 4;
  
          $site = 'amsterdam.pages.sponsors';
      }      
      
       if ($request->is('london') || $request->is('london/*')) {
-         $SpeakerGridId = 1;
+         $SponsorGridId = 1;
 
          $site = 'london.pages.sponsors';    
      }   
 
       if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
-         $SpeakerGridId = 1;
+         $SponsorGridId = 1;
 
          $site = 'lasvegas.pages.sponsors';
      }   
 
 
-       // $speakerGrids = $this->listGridContent($SpeakerGridId);
+        $sponsorGrids = $this->listGridContent($SponsorGridId);
 
-      /*      return view($site, [
-                  'speakers' => $speakerGrids,
+            return view($site, [
+                  'sponsors' => $sponsorGrids,
                  
-                ]);*/
-      return view($site);
+                ]);
+
     }	
 	
 	

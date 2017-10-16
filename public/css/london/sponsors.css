@@ -79,7 +79,6 @@ header {
   height: 92vh;
   min-height: 400px;
   overflow: hidden;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +89,7 @@ header {
   color: #fff;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  background: url("../../gfx/london/amsterdam-sponsors-mobile-bg.jpg") no-repeat #000;
+  background: url("../../gfx/london/sponsors-mobile-bg.jpg") no-repeat #000;
   background-size: cover;
   background-position: center;
 }
@@ -98,7 +97,7 @@ header {
 @media (min-width: 40em) {
   header {
     height: 55vh;
-    background: url("../../gfx/london/amsterdam-sponsors-bg.jpg") no-repeat #000;
+    background: url("../../gfx/london/sponsors-bg.jpg") no-repeat #000;
     background-size: cover;
     background-position: left;
   }
@@ -533,6 +532,10 @@ section.header-title:hover {
 
 #news {
   margin-top: 0;
+}
+
+.single {
+  margin-top: 0 !important;
 }
 
 .dropdownbox {
@@ -1354,16 +1357,58 @@ section.two.expo {
   }
 }
 
-section.two .fix-bg {
+section.two .wrppr {
   width: 100%;
   min-height: 500px;
+  -webkit-box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 75em) {
+  section.two .wrppr {
+    width: 50%;
+  }
+}
+
+section.two .fix-bg {
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+  display: block;
+  background-size: 100%;
+  background-position: top center;
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
-    width: 50%;
+    background-size: 50% 100%;
+  }
+}
+
+@media (min-width: 120em) {
+  section.two .fix-bg {
+    background-size: 50% 100%;
+  }
+}
+
+section.two .fix-bg.sponsorsbg {
+  background-image: url("../../gfx/london/startup-sec-mobile-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg.sponsorsbg {
+    background-image: url("../../gfx/london/startup-sec-tablet-bg.jpg");
+  }
+}
+
+@media (min-width: 75em) {
+  section.two .fix-bg.sponsorsbg {
+    background-image: url("../../gfx/london/startup-sec-bg.jpg");
+    background-position: top left;
   }
 }
 
@@ -1625,7 +1670,7 @@ section.one-cntr p, section.one-cntr h2 {
 section.one-cntr h2 {
   display: inline-block;
   position: relative;
-  background-color: #f2385a;
+  background-color: #33cc33;
   padding: .2em .5em;
   line-height: 1;
 }
@@ -1858,7 +1903,7 @@ section.sponsors h2 {
   margin: 1em .5em;
   font-size: 1.5rem;
   display: inline-block;
-  background: #36b1bf;
+  background: #33cc33;
   color: white;
 }
 

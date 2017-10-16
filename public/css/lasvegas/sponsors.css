@@ -533,6 +533,10 @@ section.header-title:hover {
   margin-top: 0;
 }
 
+.single {
+  margin-top: 0 !important;
+}
+
 .dropdownbox {
   visibility: hidden;
   opacity: 0;
@@ -1352,16 +1356,58 @@ section.two.expo {
   }
 }
 
-section.two .fix-bg {
+section.two .wrppr {
   width: 100%;
   min-height: 500px;
+  -webkit-box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 75em) {
+  section.two .wrppr {
+    width: 50%;
+  }
+}
+
+section.two .fix-bg {
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+  display: block;
+  background-size: 100%;
+  background-position: top center;
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
-    width: 50%;
+    background-size: 50% 100%;
+  }
+}
+
+@media (min-width: 120em) {
+  section.two .fix-bg {
+    background-size: 50% 100%;
+  }
+}
+
+section.two .fix-bg.sponsorsbg {
+  background-image: url("../../gfx/lasvegas/clients-sec-mobile-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg.sponsorsbg {
+    background-image: url("../../gfx/lasvegas/clients-sec-tablet-bg.jpg");
+  }
+}
+
+@media (min-width: 75em) {
+  section.two .fix-bg.sponsorsbg {
+    background-image: url("../../gfx/lasvegas/clients-sec-bg.jpg");
+    background-position: top left;
   }
 }
 

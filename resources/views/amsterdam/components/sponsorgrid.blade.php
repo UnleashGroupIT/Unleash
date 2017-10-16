@@ -4,7 +4,7 @@
 
 		 @foreach ($sponsors as $sponsor)
 			<div class="sponsor">
-				<img src="{{ URL::asset('storage/sponsors') }}/{{$sponsor->logo_url }}" alt="{{$sponsor->company_name }}">
+				<img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url }}" alt="{{$sponsor->company_name }}">
 			</div>
 
 		@endforeach	

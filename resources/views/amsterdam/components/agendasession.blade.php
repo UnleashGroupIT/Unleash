@@ -8,7 +8,13 @@
                     <div class="SessionTimeContainer">
                         <h3 class="SessionStartTime">{{$session->start_time['time']}}</h3>
                     </div>
-                    <div class="SessionContent BreakoutContent"><h3 class="SessionTitle" onclick="_gaq.push(['_trackEvent', 'Agenda', 'Toggle', 'RegistrationAndNetworking']);">{{$session->session_title}}</h3></div> 
+                    <div class="SessionContent BreakoutContent">
+						<h3 class="SessionTitle" onclick="_gaq.push(['_trackEvent', 'Agenda', 'Toggle', 'RegistrationAndNetworking']);">{{$session->session_title}}
+						 @if(isset($session->session_description) || isset($session->speakers[0]))
+							<i class="fa fa-angle-down"></i>
+						 @endif
+						</h3>
+					</div> 
                      @if(isset($session->session_description) || isset($session->speakers[0]))
                         <div class="SessionInfo">
                               <!-- Session Info Speakers Grid -->

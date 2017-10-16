@@ -396,8 +396,9 @@ section.header-title:hover {
   .more.las:hover a {
     color: #e80f42; }
 
-#news {
-  margin-top: 5px; }
+.single {
+  margin-top: 5px!important;
+}
 
 .dropdownbox {
   visibility: hidden;
@@ -1092,8 +1093,11 @@ section.two .wrppr {
     height: 100%;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: auto 100%;
-    background-position: top center; }
+    background-size:100%;
+    background-position: top center;
+    @media (min-width: 75em) {
+      background-size: 50% 100%;
+    } }
     @media (min-width: 120em) {
         section.two .fix-bg {
           background-size: 50% 100%; } }
@@ -1241,7 +1245,6 @@ section.two.keynote.arianna .pdg {
 section.two.keynote.arianna .strn {
   display: block;
   font-weight: 600;
-  font-size: 1.2rem;
   margin: .5em 0;
 }
 
@@ -1471,33 +1474,42 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 .testim {
-  margin: 3em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.testim .coma {
-  width: 30px;
-  margin: 1em 0;
-}
-
-.testim span {
-  text-transform: uppercase;
-  display: block;
-  margin: 1em 0;
-  line-height: 1.5em;
-}
-
-.testim .quote-logo {
-  width: 100px;
-  margin-left: auto;
+  margin: 0 2em;
   margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  .strn{
+    font-weight: 900;
+  }
+
 }
+  @media (min-width: 75em) {
+    .testim{
+      margin: 3em 4em;
+    }
+  }
+  .testim .coma {
+    width: 30px;
+    margin-top: 1em; }
+  .testim span {
+    display: block;
+    margin: 1em 0;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5em; }
+    .testim span.blck {
+      color: #323232; }
+  .testim .quote-logo {
+    width: 100px;
+    margin-left: auto;
+    margin-top: 1em;
+    margin-bottom: 2em }
+  .testim.wdth {
+    margin: 3em 0;
+    span{
+      color: #323232;
+    }
+  }
 
 section.map {
   background: url("../../gfx/amsterdam/map-bg.jpg");

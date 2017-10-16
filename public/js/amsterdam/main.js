@@ -60,20 +60,20 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 93);
+/******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 93:
+/***/ 96:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(94);
+module.exports = __webpack_require__(97);
 
 
 /***/ }),
 
-/***/ 94:
+/***/ 97:
 /***/ (function(module, exports) {
 
 
@@ -203,12 +203,31 @@ $(document).ready(function () {
 
 	//MENU
 
-	$(".more > a").click(function () {
-		if (!$(this).parent().hasClass("showmob")) {
-			$(this).parent().addClass("showmob");
-			$(this).parent().siblings().removeClass("showmob");
-		} else {
-			$(this).parent().removeClass("showmob");
+	var viewportWidth = $(window).width();
+	if (viewportWidth < 1100) {
+		$(".more > a").click(function (event) {
+			event.preventDefault();
+			if (!$(this).parent().hasClass("showmob")) {
+				$(this).parent().addClass("showmob");
+				$(this).parent().siblings().removeClass("showmob");
+			} else {
+				$(this).parent().removeClass("showmob");
+			}
+		});
+	}
+
+	$(window).resize(function () {
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 1100) {
+			$(".more > a").click(function (event) {
+				event.preventDefault();
+				if (!$(this).parent().hasClass("showmob")) {
+					$(this).parent().addClass("showmob");
+					$(this).parent().siblings().removeClass("showmob");
+				} else {
+					$(this).parent().removeClass("showmob");
+				}
+			});
 		}
 	});
 
@@ -235,11 +254,6 @@ $(document).ready(function () {
 		});
 	});
 
-	$(".first-ul > li").click(function () {
-		$(this).siblings().hide();
-		$(this).find(".second-ul").addClass("visib");
-	});
-
 	//SCROLLING BAR
 
 	$(window).scroll(function () {
@@ -255,12 +269,12 @@ $(document).ready(function () {
 	});
 
 	$(window).resize(function () {
-		$(window).trigger('resize.px.parallax');
 		var viewportWidth = $(window).width();
 		if (viewportWidth > 1100) {
 			$('#header-menu').removeClass("show");
 			$('#hamburger').removeClass("active");
 			$('.bar').removeClass('animate');
+			$('.more').removeClass("showmob");
 		}
 	});
 

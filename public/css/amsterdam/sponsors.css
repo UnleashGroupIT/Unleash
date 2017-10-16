@@ -530,8 +530,8 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-#news {
-  margin-top: 0;
+.single {
+  margin-top: 0 !important;
 }
 
 .dropdownbox {
@@ -1378,8 +1378,14 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: auto 100%;
+  background-size: 100%;
   background-position: top center;
+}
+
+@media (min-width: 75em) {
+  section.two .fix-bg {
+    background-size: 50% 100%;
+  }
 }
 
 section.two .fix-bg.sponsorsbg {

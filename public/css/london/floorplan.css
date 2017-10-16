@@ -532,6 +532,10 @@ section.header-title:hover {
   margin-top: 5px;
 }
 
+.single {
+  margin-top: 5px !important;
+}
+
 .dropdownbox {
   visibility: hidden;
   opacity: 0;
@@ -970,15 +974,15 @@ section.header-title:hover {
 }
 
 .blue-btn {
-  background-color: #f2385a;
+  background-color: #0090ff;
   color: #fff;
   margin: 0;
 }
 
 .blue-btn:hover {
-  color: #f2385a;
+  color: #0090ff;
   background-color: #fff;
-  border-color: #f2385a;
+  border-color: #0090ff;
 }
 
 .white-btn {
@@ -1323,38 +1327,6 @@ section.two {
   min-height: 600px;
 }
 
-section.two.clients {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.clients {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-section.two.expo {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.expo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
 section.two .wrppr {
   width: 100%;
   min-height: 500px;
@@ -1374,8 +1346,14 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: auto 100%;
+  background-size: 100%;
   background-position: top center;
+}
+
+@media (min-width: 75em) {
+  section.two .fix-bg {
+    background-size: 50% 100%;
+  }
 }
 
 @media (min-width: 120em) {
@@ -1654,7 +1632,7 @@ section.two.keynote button {
 }
 
 section.one-cntr {
-  background: url("../../gfx/lasvegas/one-cntr-bg.jpg");
+  background: url("../../gfx/london/one-cntr-bg.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -1663,7 +1641,7 @@ section.one-cntr {
 }
 
 section.one-cntr.counter {
-  background: url("../../gfx/lasvegas/counter-bg.jpg");
+  background: url("../../gfx/london/counter-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1693,12 +1671,12 @@ section.one-cntr h2::before, section.one-cntr h2::after {
 }
 
 section.one-cntr h2::before {
-  content: url("../../gfx/lasvegas/left-sign.png");
+  content: url("../../gfx/london/left-sign.png");
   left: -33px;
 }
 
 section.one-cntr h2::after {
-  content: url("../../gfx/lasvegas/right-sign.png");
+  content: url("../../gfx/london/right-sign.png");
   right: -33px;
 }
 
@@ -1802,7 +1780,7 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 section.map {
-  background: url("../../gfx/lasvegas/map-bg.jpg");
+  background: url("../../gfx/london/map-bg.jpg");
   background-size: cover;
   background-position: center;
   min-height: 600px;
@@ -1870,7 +1848,7 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/lasvegas/venue.jpg");
+  background: url("../../gfx/london/venue.jpg");
   background-size: cover;
   background-position: center;
   -webkit-box-shadow: 3px 3px 15px #999;

@@ -529,8 +529,8 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-#news {
-  margin-top: 0;
+.single {
+  margin-top: 0!important;
 }
 
 .dropdownbox {
@@ -1345,8 +1345,12 @@ section.two .wrppr {
     height: 100%;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: auto 100%;
-    background-position: top center; }
+    background-size: 100%;
+    background-position: top center;
+    @media (min-width: 75em) {
+      background-size: 50% 100%;
+    }
+  }
     section.two .fix-bg.showbg {
       background-image: url("../../gfx/amsterdam/show-sec-mobile-bg.jpg");
       background-attachment: fixed;
@@ -1359,9 +1363,6 @@ section.two .wrppr {
         section.two .fix-bg.showbg {
           background-image: url("../../gfx/amsterdam/show-sec-bg.jpg");
           background-position: top right; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.showbg {
-          background-size: 50% 100%; } }
           section.two .fix-bg.teambg {
       background-image: url("../../gfx/amsterdam/team-sec-mobile-bg.jpg");
       background-attachment: fixed;
@@ -1374,9 +1375,6 @@ section.two .wrppr {
         section.two .fix-bg.teambg {
           background-image: url("../../gfx/amsterdam/team-sec-bg.jpg");
           background-position: top left; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.teambg {
-          background-size: 50% 100%; } }
           section.two .fix-bg.teambg-2 {
       background-image: url("../../gfx/amsterdam/team-2-sec-mobile-bg.jpg");
       background-attachment: fixed;
@@ -1521,7 +1519,7 @@ section.two.keynote.arianna .pdg {
 
 @media (min-width: 120em) {
   section.two.keynote.arianna .pdg {
-    padding: 0 3.4vw;
+    padding: 0 3.1vw;
   }
 }
 

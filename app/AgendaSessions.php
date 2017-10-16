@@ -25,4 +25,16 @@ class AgendaSessions extends Model
     	return $dateData;
     }
 
+    public function getSessionTitleAttribute($value){
+       
+       $cleanText = html_entity_decode(\voku\helper\UTF8::cleanup($value));
+        return $cleanText;
+    }    
+
+    public function getSessionDescriptionAttribute($value){
+       
+       $cleanText = html_entity_decode(strip_tags(\voku\helper\UTF8::cleanup($value)));
+        return $cleanText;
+    }        
+
 }

@@ -56,8 +56,8 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed.</p>
-			<button class="green-btn">cta</button>
+			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
+			<button class="green-btn">Book now</button>
 		</div>
 	</section>
 @endsection

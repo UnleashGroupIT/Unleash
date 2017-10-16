@@ -343,7 +343,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: .4em;
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 @media (min-width: 120em) {
@@ -363,7 +363,7 @@ h4 {
   text-transform: uppercase;
   margin-bottom: .2em;
   font-size: 1.3rem;
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 @media (min-width: 120em) {
@@ -649,7 +649,7 @@ section.header-title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 section.header-title:hover {
@@ -976,7 +976,7 @@ section.header-title:hover {
 }
 
 .more.ams:hover a {
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 .more.lon:hover a {
@@ -987,8 +987,8 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-#news {
-  margin-top: 0;
+.single {
+  margin-top: 5px !important;
 }
 
 .dropdownbox {
@@ -1030,7 +1030,7 @@ section.header-title:hover {
     color: #323232;
   }
   .dropdownbox .first-ul li a:hover {
-    color: #36b1bf;
+    color: #0090ff;
   }
   .dropdownbox .first-ul li a:hover::before {
     content: '';
@@ -1058,13 +1058,13 @@ section.header-title:hover {
 
 .dropdownbox .first-ul .amsterdam > a {
   font-weight: 600;
-  color: #36b1bf;
+  color: #0090ff;
   margin-bottom: 1em;
   display: block;
 }
 
 .dropdownbox .first-ul .amsterdam > a:hover {
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 .dropdownbox .first-ul .london a {
@@ -1339,7 +1339,7 @@ section.header-title:hover {
   }
 }
 
-.btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+.btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
   padding: .8em;
   margin: .5em;
   width: 100%;
@@ -1350,20 +1350,20 @@ section.header-title:hover {
 }
 
 @media (min-width: 30em) {
-  .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+  .btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
     margin: 0 1em;
     width: 205px;
   }
 }
 
 @media (min-width: 120em) {
-  .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+  .btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
     width: 11vw;
     font-size: .8vw;
   }
 }
 
-.btn:hover, .full-btn:hover, .pink-btn:hover, .black-btn:hover, .blue-btn:hover, .white-btn:hover, .trans-btn:hover {
+.btn:hover, .full-btn:hover, .pink-btn:hover, .amsblue-btn, .black-btn:hover, .blue-btn:hover, .white-btn:hover, .trans-btn:hover {
   -webkit-transition: all .3s;
   transition: all .3s;
   cursor: pointer;
@@ -1371,15 +1371,15 @@ section.header-title:hover {
 
 .full-btn {
   width: 100%;
-  background-color: #36b1bf;
+  background-color: #0090ff;
   margin: 0 auto;
   color: #fff;
-  border-color: #36b1bf;
+  border-color: #0090ff;
 }
 
 .full-btn:hover {
-  color: #36b1bf;
-  border-color: #36b1bf;
+  color: #0090ff;
+  border-color: #0090ff;
   background-color: #fff;
 }
 
@@ -1430,6 +1430,18 @@ section.header-title:hover {
   border-color: #36b1bf;
 }
 
+.amsblue-btn {
+  background-color: #0090ff;
+  color: #fff;
+  margin: 0;
+}
+
+.amsblue-btn:hover {
+  color: #0090ff;
+  background-color: #fff;
+  border-color: #0090ff;
+}
+
 .white-btn {
   background-color: #fff;
   color: #000;
@@ -1445,8 +1457,8 @@ section.header-title:hover {
   margin: 2em 0;
   margin-bottom: 0;
   background-color: transparent;
-  color: #36b1bf;
-  border-color: #36b1bf;
+  color: #0090ff;
+  border-color: #0090ff;
   width: 100%;
 }
 
@@ -1458,7 +1470,7 @@ section.header-title:hover {
 
 .trans-btn:hover {
   color: #fff;
-  background-color: #36b1bf;
+  background-color: #0090ff;
 }
 
 #book {
@@ -1654,7 +1666,7 @@ section.one .wrp {
 }
 
 section.one .wrp h2 {
-  color: #36b1bf;
+  color: #0090ff;
 }
 
 section.one .wrp button {
@@ -2225,220 +2237,6 @@ section.map .map-pic {
   }
 }
 
-section.speakers-grid {
-  padding: 0 2em;
-  padding-bottom: 3em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid {
-    padding: 3em 4em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid {
-    padding: 2.5vw 3.35vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-bottom: 2em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-section.speakers-grid .speakers-wrap .speaker {
-  /*flex-grow: 1;*/
-  padding: .5em 0;
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker {
-    padding: .42vw 0;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker img {
-  width: 150px;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 220px;
-  }
-}
-
-@media (min-width: 95em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 330px;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 17.15vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
-  padding-top: 1em;
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-  color: #36b1bf;
-  font-weight: 900;
-  font-size: .8em;
-  text-transform: uppercase;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-    font-size: .83vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-  line-height: 1;
-  font-size: .75em;
-  margin-top: .4em;
-  margin-bottom: 0.2em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-    font-size: .83vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-  font-size: .75em;
-  display: block;
-  margin-top: .3em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-    font-size: .83vw;
-  }
-}
-
-section.sponsors {
-  min-height: 300px;
-  background-color: #f2f2f2;
-  text-align: center;
-}
-
-section.sponsors .full-btn {
-  margin-bottom: 3em;
-  width: 95%;
-}
-
-section.sponsors img {
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  opacity: .5;
-  margin: auto;
-  width: 100px;
-}
-
-@media (min-width: 75em) {
-  section.sponsors img {
-    width: 130px;
-  }
-}
-
-@media (min-width: 120em) {
-  section.sponsors img {
-    width: 6.8vw;
-  }
-}
-
-section.sponsors .sponsors-wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-section.sponsors .sponsors-wrp .sponsor {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: center;
-  padding: 2em 1em;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 75em) {
-  section.sponsors .sponsors-wrp .sponsor {
-    margin: 2em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.sponsors .sponsors-wrp .sponsor {
-    margin: 1.68vw;
-    padding: 1.68vw 1vw;
-  }
-}
-
-section.sponsors .sponsors-wrp .sponsor:hover {
-  background-color: #fff;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  cursor: pointer;
-  -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
-}
-
-section.sponsors .sponsors-wrp .sponsor:hover img {
-  -webkit-filter: grayscale(0);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
 .come-in {
   opacity: 0;
   -webkit-transform: scale3d(0, 0, 0);
@@ -2599,7 +2397,7 @@ footer .footer-menu ul li a {
 }
 
 footer .footer-menu ul li a:hover {
-  color: #36b1bf;
+  color: #0090ff;
   -webkit-transition: color .5s;
   transition: color .5s;
 }

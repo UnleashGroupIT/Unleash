@@ -41,7 +41,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: .4em;
-  color: #36b1bf;
+  color: #e80f42;
 }
 
 @media (min-width: 120em) {
@@ -61,7 +61,7 @@ h4 {
   text-transform: uppercase;
   margin-bottom: .2em;
   font-size: 1.3rem;
-  color: #36b1bf;
+  color: #e80f42;
 }
 
 @media (min-width: 120em) {
@@ -215,6 +215,10 @@ section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons > div {
   margin-right: 1em;
 }
 
+section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons img {
+  margin-right: 5px;
+}
+
 @media (min-width: 120em) {
   section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons img {
     width: 2vw;
@@ -347,7 +351,7 @@ section.header-title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #36b1bf;
+  color: #e80f42;
 }
 
 section.header-title:hover {
@@ -687,6 +691,10 @@ section.header-title:hover {
 
 #news {
   margin-top: 0;
+}
+
+.single {
+  margin-top: 0 !important;
 }
 
 .dropdownbox {
@@ -1069,15 +1077,15 @@ section.header-title:hover {
 
 .full-btn {
   width: 100%;
-  background-color: #36b1bf;
+  background-color: #e80f42;
   margin: 0 auto;
   color: #fff;
-  border-color: #36b1bf;
+  border-color: #e80f42;
 }
 
 .full-btn:hover {
-  color: #36b1bf;
-  border-color: #36b1bf;
+  color: #e80f42;
+  border-color: #e80f42;
   background-color: #fff;
 }
 
@@ -1117,15 +1125,15 @@ section.header-title:hover {
 }
 
 .blue-btn {
-  background-color: #36b1bf;
+  background-color: #e80f42;
   color: #fff;
   margin: 0;
 }
 
 .blue-btn:hover {
-  color: #36b1bf;
+  color: #e80f42;
   background-color: #fff;
-  border-color: #36b1bf;
+  border-color: #e80f42;
 }
 
 .white-btn {
@@ -1143,8 +1151,8 @@ section.header-title:hover {
   margin: 2em 0;
   margin-bottom: 0;
   background-color: transparent;
-  color: #36b1bf;
-  border-color: #36b1bf;
+  color: #e80f42;
+  border-color: #e80f42;
   width: 100%;
 }
 
@@ -1156,7 +1164,7 @@ section.header-title:hover {
 
 .trans-btn:hover {
   color: #fff;
-  background-color: #36b1bf;
+  background-color: #e80f42;
 }
 
 #book {
@@ -1352,7 +1360,7 @@ section.one .wrp {
 }
 
 section.one .wrp h2 {
-  color: #36b1bf;
+  color: #e80f42;
 }
 
 section.one .wrp button {
@@ -1997,7 +2005,7 @@ section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
 }
 
 section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-  color: #36b1bf;
+  color: #e80f42;
   font-weight: 900;
   font-size: .8em;
   text-transform: uppercase;
@@ -2297,7 +2305,7 @@ footer .footer-menu ul li a {
 }
 
 footer .footer-menu ul li a:hover {
-  color: #36b1bf;
+  color: #e80f42;
   -webkit-transition: color .5s;
   transition: color .5s;
 }

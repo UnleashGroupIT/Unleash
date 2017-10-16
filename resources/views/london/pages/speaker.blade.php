@@ -21,7 +21,7 @@
 						<img src="{{ URL::asset('storage/speakers') }}/{{$speaker->img_url }}" alt="{{ $speaker->full_name }}">
 					</div>
 					<div class="dtls-wrap">
-						<h2>{{ $speaker->full_name }}</h2>
+						<h2>{{ voku::cleanup($speaker->full_name) }}</h2>
 						<h3>{{ $speaker->job_title }}</h3>
 						<div class="social-icons">
 							@if($speaker->facebook)
@@ -40,7 +40,7 @@
 				</div>
 
 				<div class="speaker-more">
-					<p>{{$speaker->bio }}</p>
+					<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
 					<a href="#"><button class="blue-btn">cta</button></a>
 				</div>
 				<a class="quit" href="{{ route('london.speakers') }}"><img src="{{ URL::asset('gfx/london/x.svg') }}" alt="X"></a>

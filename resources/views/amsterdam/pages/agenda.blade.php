@@ -132,7 +132,7 @@
               <!-- Main Stage mobile -->
                 <div class="BreakoutMobile pardotTrackClick" onClick="_gaq.push(['_trackEvent', 'Agenda', 'BreakOut', '{{$track->url}}']);" id="MobileMainStage" data-mobilestage="{{$track->id}}" data-currstate="0">
                     <div class="BreakoutHeaderMobile" data-mobilestage="{{$track->id}}">
-                        <img class="MobileStageIcon" src="img/agenda/icons/color/{{$track->url}}.svg" alt="Icon">
+                        <img class="MobileStageIcon" src="/gfx/amsterdam/agenda/icons/color/{{$track->url}}.svg" alt="Icon">
                         <h2 class="MobileStageName {{$track->color_class}}Color">{{$track->track_name}}</h2>
                         <i data-mobilestage="{{$track->id}}" class="fa fa-caret-down"></i>
                     </div>
@@ -256,7 +256,11 @@
 @endsection
 
 @section('footerscripts')
+<script type="text/javascript">
+    document.getElementById("header-menu").style.backgroundColor = "#000";
+</script>
 <script src="https://use.typekit.net/oip3jmq.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script type="text/javascript" src="{{ URL::asset('js/amsterdam/main.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/amsterdam/agenda.js') }}"></script>
 @endsection

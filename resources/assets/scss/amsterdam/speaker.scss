@@ -27,7 +27,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: .4em;
-  color: #36b1bf; }
+  color: #0090ff; }
   @media (min-width: 120em) {
     h2 {
       font-size: 1.58vw; } }
@@ -42,7 +42,7 @@ h4 {
   text-transform: uppercase;
   margin-bottom: .2em;
   font-size: 1.3rem;
-  color: #36b1bf; }
+  color: #0090ff; }
   @media (min-width: 120em) {
     h4 {
       font-size: 1.08vw; } }
@@ -122,12 +122,14 @@ section.speaker-dtls-wrap {
         display: flex; }
         section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons > div {
           margin-right: 1em; }
+          section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons img {
+            margin-right: 5px; }
         @media (min-width: 120em) {
           section.speaker-dtls-wrap .speaker-soc .dtls-wrap .social-icons img {
             width: 2vw; } }
       section.speaker-dtls-wrap .speaker-soc .dtls-wrap a#website {
         display: block;
-        color: #f2385a;
+        color: #0090ff;
         margin-top: 1em; }
         @media (min-width: 120em) {
           section.speaker-dtls-wrap .speaker-soc .dtls-wrap a#website {
@@ -140,7 +142,6 @@ section.speaker-dtls-wrap {
 header {
   min-height: 60px;
   background-color: #000;
-  position: relative;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -163,7 +164,6 @@ section#header-menu {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.96);
     width: 100%;
-    height: 102vh;
     overflow: hidden;
     padding: 6em 2em;
     padding-bottom: 2em;
@@ -201,7 +201,7 @@ section.header-title {
   text-align: center;
   display: flex;
   flex-direction: column;
-  color: #36b1bf; }
+  color: #0090ff; }
   section.header-title:hover {
     cursor: default; }
   @media (min-width: 40em) {
@@ -389,14 +389,15 @@ section.header-title {
   .more#news::after {
     display: none; }
   .more.ams:hover a {
-    color: #36b1bf; }
+    color: #0090ff; }
   .more.lon:hover a {
     color: #82c43f; }
   .more.las:hover a {
     color: #e80f42; }
 
-#news {
-  margin-top: 0; }
+.single {
+  margin-top: 0!important;
+}
 
 .dropdownbox {
   visibility: hidden;
@@ -423,7 +424,7 @@ section.header-title {
     .dropdownbox .first-ul li a {
       color: #323232; }
       .dropdownbox .first-ul li a:hover {
-        color: #36b1bf; }
+        color: #0090ff; }
       .dropdownbox .first-ul li a:hover::before {
         content: '';
         width: 12px;
@@ -442,11 +443,11 @@ section.header-title {
         color: #323232; } }
   .dropdownbox .first-ul .amsterdam > a {
     font-weight: 600;
-    color: #36b1bf;
+    color: #0090ff;
     margin-bottom: 1em;
     display: block; }
     .dropdownbox .first-ul .amsterdam > a:hover {
-      color: #36b1bf; }
+      color: #0090ff; }
   .dropdownbox .first-ul .london a {
     color: #fff; }
     @media (min-width: 75em) {
@@ -613,7 +614,7 @@ section.header-title {
       position: absolute;
       margin-left: 0; } }
 
-.btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+.btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
   padding: .8em;
   margin: .5em;
   width: 100%;
@@ -622,26 +623,26 @@ section.header-title {
   font-weight: bold;
   border: 1px solid transparent; }
   @media (min-width: 30em) {
-    .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+    .btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
       margin: 0 1em;
       width: 205px; } }
   @media (min-width: 120em) {
-    .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .white-btn, .trans-btn {
+    .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .amsblue-btn, .white-btn, .trans-btn {
       width: 11vw;
       font-size: .8vw; } }
-  .btn:hover, .full-btn:hover, .pink-btn:hover, .black-btn:hover, .blue-btn:hover, .white-btn:hover, .trans-btn:hover {
+  .btn:hover, .full-btn:hover, .pink-btn:hover, .black-btn:hover, .amsblue-btn, .blue-btn:hover, .white-btn:hover, .trans-btn:hover {
     transition: all .3s;
     cursor: pointer; }
 
 .full-btn {
   width: 100%;
-  background-color: #36b1bf;
+  background-color: #0090ff;
   margin: 0 auto;
   color: #fff;
-  border-color: #36b1bf; }
+  border-color: #0090ff; }
   .full-btn:hover {
-    color: #36b1bf;
-    border-color: #36b1bf;
+    color: #0090ff;
+    border-color: #0090ff;
     background-color: #fff; }
 
 .pink-btn {
@@ -654,6 +655,15 @@ section.header-title {
   .pink-btn:hover {
     color: #f2385a;
     background-color: #fff; }
+
+    .amsblue-btn {
+  background-color: #0090ff;
+  color: #fff;
+  margin: 0; }
+  .amsblue-btn:hover {
+    color: #0090ff;
+    background-color: #fff;
+    border-color: #0090ff; }
 
 .black-btn {
   background-color: #000;
@@ -668,13 +678,13 @@ section.header-title {
     background-color: #fff; }
 
 .blue-btn {
-  background-color: #36b1bf;
+  background-color: #0090ff;
   color: #fff;
   margin: 0; }
   .blue-btn:hover {
-    color: #36b1bf;
+    color: #0090ff;
     background-color: #fff;
-    border-color: #36b1bf; }
+    border-color: #0090ff; }
 
 .white-btn {
   background-color: #fff;
@@ -688,15 +698,15 @@ section.header-title {
   margin: 2em 0;
   margin-bottom: 0;
   background-color: transparent;
-  color: #36b1bf;
-  border-color: #36b1bf;
+  color: #0090ff;
+  border-color: #0090ff;
   width: 100%; }
   @media (min-width: 40em) {
     .trans-btn {
       width: 205px; } }
   .trans-btn:hover {
     color: #fff;
-    background-color: #36b1bf; }
+    background-color: #0090ff; }
 
 #book {
   margin: 2em auto;
@@ -819,7 +829,7 @@ section.one .wrp {
     section.one .wrp {
       padding: 4em 3em; } }
   section.one .wrp h2 {
-    color: #36b1bf; }
+    color: #0090ff; }
   section.one .wrp button {
     margin: 4em 0;
     margin-bottom: 0; }
@@ -1163,7 +1173,7 @@ section.speakers-grid {
       section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
         padding-top: 1em; }
         section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-          color: #36b1bf;
+          color: #0090ff;
           font-weight: 900;
           font-size: .8em;
           text-transform: uppercase; }
@@ -1319,7 +1329,7 @@ footer {
         footer .footer-menu ul li a {
           color: #ededed; }
           footer .footer-menu ul li a:hover {
-            color: #36b1bf;
+            color: #0090ff;
             transition: color .5s; }
           @media (min-width: 120em) {
             footer .footer-menu ul li a {

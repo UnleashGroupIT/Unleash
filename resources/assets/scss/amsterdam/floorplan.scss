@@ -396,8 +396,9 @@ section.header-title:hover {
   .more.las:hover a {
     color: #e80f42; }
 
-#news {
-  margin-top: 5px; }
+.single {
+  margin-top: 5px!important;
+}
 
 .dropdownbox {
   visibility: hidden;
@@ -1055,22 +1056,6 @@ section.two {
   min-height: 600px;
 }
 
-section.two.expo {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.expo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 section.two .wrppr {
     width: 100%;
     min-height: 500px;
@@ -1083,8 +1068,11 @@ section.two .wrppr {
     height: 100%;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: auto 100%;
-    background-position: top center; }
+    background-size: 100%;
+    background-position: top center;
+    @media (min-width: 75em) {
+      background-size: 50% 100%;
+    } }
     @media (min-width: 120em) {
         section.two .fix-bg {
           background-size: 50% 100%; } }

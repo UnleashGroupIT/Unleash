@@ -317,8 +317,9 @@ section.header-title {
   .more.las:hover a {
     color: #e80f42; }
 
-#news {
-  margin-top: 0; }
+.single {
+  margin-top: 0!important;
+}
 
 .dropdownbox {
   visibility: hidden;
@@ -834,8 +835,11 @@ section.two {
     height: 100%;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: auto 100%;
-    background-position: top center; }
+    background-size: 100%;
+    background-position: top center;
+    @media (min-width: 75em) {
+      background-size: 50% 100%;
+    } }
     section.two .fix-bg.sponsorsbg {
       background-image: url("../../gfx/amsterdam/sponsors-sec-mobile-bg.jpg");
       background-attachment: fixed;

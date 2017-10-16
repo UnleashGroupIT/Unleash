@@ -40,7 +40,7 @@
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
-			<p>Unleash is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash your people!</strong></p>
+			<p>Unleash is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
 			<button class="green-btn">Join us now</button>
 		</div>
 	</section>
@@ -68,7 +68,7 @@
 					Company magazine, Sir Ken has received numerous awards and recognitions for his groundbreaking
 					contributions.</p>
 				<div class="testim">
-					<img class="coma" src="{{ URL::asset('gfx/london/coma.png') }}" alt="coma">
+					<img class="coma" src="{{ URL::asset('gfx/london/comawhite.png') }}" alt="coma">
 					<span>Imagination is the source of every form of human achievement. And it's the one thing that I believe we
 						are systematically jeopardizing in the way we educate our children and ourselves.</span>
 						<p><strong class="strn">Sir Ken Robinson</strong></p>
@@ -91,6 +91,11 @@
 			<div class="content-wrap">
 				<h2>Our Speakers</h2>
 				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at Unleash will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+				<div class="testim wdth">
+					<img class="coma" src="http://www.unleashgroup.io/gfx/london/coma.png" alt="coma">
+					<span>The best event in the world on HR and Technology</span>
+						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
+				</div>
 			</div>
 			<button class="green-btn">Become a Speaker</button>
 		</div>
@@ -108,9 +113,9 @@
 	<section class="one-cntr counter">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed.</p>
+			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="green-btn">cta</button>
+			<button class="green-btn">Book now</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -127,6 +132,7 @@
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/london/coma.png') }}" alt="coma">
 				<span class="blck">In my eyes by far the best and most inspiring show on HR globally</span>
+				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/london/google.png') }}" alt="Google">
 			</div>
 			<button class="green-btn">Get Your Ticket</button>
@@ -152,7 +158,7 @@
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/london/coma.png') }}" alt="coma">
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
-				<img class="quote-logo" src="{{ URL::asset('gfx/london/blizzard.png') }}" alt="Activision Blizzard">
+				<strong class="strn">- Activision Blizzard</strong>
 			</div>
 			<button class="green-btn">Get Your Ticket</button>
 		</div>
@@ -201,8 +207,8 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed.</p>
-			<button class="green-btn">cta</button>
+			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
+			<button class="green-btn">Book now</button>
 		</div>
 	</section>
 @endsection

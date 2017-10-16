@@ -59,14 +59,11 @@ h5 {
 }
 
 span {
-  font-size: 1rem;
-}
+  font-size: 1.55rem; }
+  @media (min-width: 120em) {
+    span {
+      font-size: 1.3vw; } }
 
-@media (min-width: 120em) {
-  span {
-    font-size: .85vw;
-  }
-}
 
 header {
   height: 92vh;
@@ -520,6 +517,9 @@ section.header-title {
 
 #news {
   margin-top: 0;
+}
+.single {
+  margin-top: 0!important;
 }
 
 .dropdownbox {
@@ -1188,6 +1188,17 @@ section.one .wrp {
   padding: 2em;
   padding-bottom: 3em;
   color: #fff;
+
+  p{
+    font-size:14px;
+    @media (min-width: 120em) {
+      font-size:.76vw;
+    }
+  }
+
+  strong{
+    font-weight: bold;
+  }
 }
 
 @media (min-width: 40em) {
@@ -1352,7 +1363,11 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: auto 100%;
+  background-size:100%;
+    background-position: top center;
+    @media (min-width: 75em) {
+      background-size: 50% 100%;
+    }
 }
 @media (min-width: 120em) {
   section.two .fix-bg {
@@ -1566,15 +1581,18 @@ section.two.keynote.arianna .pdg {
 
 @media (min-width: 120em) {
   section.two.keynote.arianna .pdg {
-    padding: 0 3.4vw;
+    padding: 0 3.1vw;
   }
 }
 
 section.two.keynote.arianna .strn {
   display: block;
   font-weight: 600;
-  font-size: 1.2rem;
   margin: .5em 0;
+}
+
+section.two.keynote.arianna .mic-logo{
+  margin-left: 5px;
 }
 
 section.two.keynote.arianna .schedule-wrp {
@@ -1803,47 +1821,42 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 .testim {
-  margin: 0 4em;
+  margin: 0 2em;
   margin-top: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+  flex-direction: column;
+  .strn{
+    font-weight: 900;
+  }
 
-.testim .coma {
-  width: 30px;
-  margin-top: 1em;
 }
-
-.testim span {
-  display: block;
-  margin: 1em 0;
-  color: #fff;
-  font-style: italic;
-  line-height: 1.5em;
-}
-
-.testim span.blck {
-  color: #323232;
-}
-
-.testim .quote-logo {
-  width: 100px;
-  margin-left: auto;
-  margin-top: 1em;
-}
-
-.testim.wdth {
-  margin: 0;
-}
-
-.testim.wdth .quote-logo {
-  margin-right: 2em;
-}
+  @media (min-width: 75em) {
+    .testim{
+      margin: 3em 4em;
+    }
+  }
+  .testim .coma {
+    width: 30px;
+    margin-top: 1em; }
+  .testim span {
+    display: block;
+    margin: 1em 0;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5em; }
+    .testim span.blck {
+      color: #323232; }
+  .testim .quote-logo {
+    width: 100px;
+    margin-left: auto;
+    margin-top: 1em;
+    margin-bottom: 2em }
+  .testim.wdth {
+    margin: 3em 0;
+    span{
+      color: #323232;
+    }
+  }
 
 section.map {
   background: url("../../gfx/lasvegas/map-bg.jpg");
