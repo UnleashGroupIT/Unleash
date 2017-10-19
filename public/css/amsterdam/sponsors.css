@@ -530,8 +530,10 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-.single {
-  margin-top: 0 !important;
+@media (min-width: 75em) {
+  .single {
+    margin-top: 0 !important;
+  }
 }
 
 .dropdownbox {
@@ -1374,23 +1376,32 @@ section.two .wrppr {
 
 section.two .fix-bg {
   width: 100%;
-  height: 100%;
+  height: 500px;
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: 100%;
-  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: left center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
+    height: 100%;
     background-size: 50% 100%;
+    background-attachment: fixed;
   }
 }
 
 section.two .fix-bg.sponsorsbg {
   background-image: url("../../gfx/amsterdam/sponsors-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1398,6 +1409,7 @@ section.two .fix-bg.sponsorsbg {
 @media (min-width: 40em) {
   section.two .fix-bg.sponsorsbg {
     background-image: url("../../gfx/amsterdam/sponsors-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1792,13 +1804,21 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 section.map {
-  background: url("../../gfx/amsterdam/map-bg.jpg");
+  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 600px) {
+  section.map {
+    background: url("../../gfx/amsterdam/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 65em) {
@@ -2030,6 +2050,12 @@ section.sponsors a {
   margin: auto;
 }
 
+@media (min-width: 120em) {
+  section.sponsors a {
+    margin: 0 auto;
+  }
+}
+
 section.sponsors img {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
@@ -2039,15 +2065,10 @@ section.sponsors img {
   width: 100px;
 }
 
-@media (min-width: 75em) {
-  section.sponsors img {
-    width: 130px;
-  }
-}
-
 @media (min-width: 120em) {
   section.sponsors img {
-    width: 6.8vw;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -2057,9 +2078,9 @@ section.sponsors .sponsors-wrp {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 1em;
 }
 

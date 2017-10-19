@@ -213,6 +213,6 @@ $(document).ready(function(){
 		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
 		speed: '0.8'
 	});
-	
+
 
 }); // READY END

@@ -399,7 +399,9 @@ section.header-title:hover {
 #news {
   margin-top: 5px; }
     .single {
-  margin-top: 5px!important;
+    @media (min-width: 75em) {
+      margin-top: 5px!important;
+    }
 }
 
 .dropdownbox {
@@ -1070,43 +1072,48 @@ section.two .wrppr {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
-    height: 100%;
+    height: 500px;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: 100%;
-    background-position: top center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
     @media (min-width: 75em) {
+      height: 100%;
       background-size: 50% 100%;
-    } }
-    @media (min-width: 120em) {
-        section.two .fix-bg {
-          background-size: 50% 100%; } }
+      background-attachment:fixed;
+    }
+  }
     section.two .fix-bg.floorplanbg {
       background-image: url("../../gfx/london/floorplan-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: bottom center; }
       @media (min-width: 40em) {
         section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/london/floorplan-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/london/floorplan-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.floorplanbg {
           background-image: url("../../gfx/london/floorplan-sec-bg.jpg");
           background-position: bottom left; } }
     section.two .fix-bg.floorplancitybg {
       background-image: url("../../gfx/london/floorplancity-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/london/floorplancity-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/london/floorplancity-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.floorplancitybg {
           background-image: url("../../gfx/london/floorplancity-sec-bg.jpg");
           background-position: top right; } }
 
-section.two.testimonial {
+section.two.clients {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -1114,7 +1121,7 @@ section.two.testimonial {
 }
 
 @media (min-width: 75em) {
-  section.two.testimonial {
+  section.two.clients {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1484,13 +1491,16 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 section.map {
-  background: url("../../gfx/london/map-bg.jpg");
+ background: url("../../gfx/london/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  @media (min-width: 600px) {
+    background: url("../../gfx/london/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 65em) {

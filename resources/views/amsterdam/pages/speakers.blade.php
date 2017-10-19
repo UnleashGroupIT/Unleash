@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakers.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 @endsection
 
 @section('headerjs')

@@ -4,6 +4,7 @@
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/floorplan.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
 @endsection
 
 @section('headerjs')

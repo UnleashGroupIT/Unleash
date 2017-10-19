@@ -530,7 +530,9 @@ section.header-title:hover {
 }
 
 .single {
-  margin-top: 0!important;
+    @media (min-width: 75em) {
+      margin-top: 0!important;
+    }
 }
 
 .dropdownbox {
@@ -1342,54 +1344,73 @@ section.two .wrppr {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
-    height: 100%;
+    height: 500px;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: 100%;
-    background-position: top center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
     @media (min-width: 75em) {
+      height: 100%;
       background-size: 50% 100%;
+      background-attachment:fixed;
     }
   }
     section.two .fix-bg.showbg {
       background-image: url("../../gfx/amsterdam/show-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.showbg {
-          background-image: url("../../gfx/amsterdam/show-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/show-sec-tablet-bg.jpg");
+          background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.showbg {
           background-image: url("../../gfx/amsterdam/show-sec-bg.jpg");
           background-position: top right; } }
           section.two .fix-bg.teambg {
       background-image: url("../../gfx/amsterdam/team-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.teambg {
-          background-image: url("../../gfx/amsterdam/team-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/team-sec-tablet-bg.jpg");
+          background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.teambg {
           background-image: url("../../gfx/amsterdam/team-sec-bg.jpg");
           background-position: top left; } }
           section.two .fix-bg.teambg-2 {
       background-image: url("../../gfx/amsterdam/team-2-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.teambg-2 {
-          background-image: url("../../gfx/amsterdam/team-2-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/team-2-sec-tablet-bg.jpg");
+          background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.teambg-2 {
           background-image: url("../../gfx/amsterdam/team-2-sec-bg.jpg");
-          background-position: top left; } }
+          background-position: top right; } }
       @media (min-width: 120em) {
         section.two .fix-bg.teambg-2 {
           background-size: 50% 100%; } }
+
+section.two.keynote.arianna.rev{
+            flex-direction: column-reverse;
+            @media (min-width: 75em) {
+              flex-direction: row;
+            }
+          }
+          
+
+
+
+
 
 section.two.testimonial {
   -webkit-box-orient: vertical;
@@ -1400,22 +1421,6 @@ section.two.testimonial {
 
 @media (min-width: 75em) {
   section.two.testimonial {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-section.two.keynote.arianna {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1447,12 +1452,12 @@ section.two.keynote.arianna .h4wrp > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 @media (min-width: 75em) {
   section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.5em;
+    margin-left: 3.8em;
   }
 }
 
@@ -1497,7 +1502,7 @@ section.two.keynote.arianna h4 {
 @media (min-width: 75em) {
   section.two.keynote.arianna h4 {
     font-size: 1.3rem;
-    padding: 0 2em;
+    padding:0;
   }
 }
 

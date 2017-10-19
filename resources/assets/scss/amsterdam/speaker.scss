@@ -396,7 +396,9 @@ section.header-title {
     color: #e80f42; }
 
 .single {
-  margin-top: 0!important;
+    @media (min-width: 75em) {
+      margin-top: 0!important;
+    }
 }
 
 .dropdownbox {

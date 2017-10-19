@@ -528,8 +528,10 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-.single {
-  margin-top: 5px !important;
+@media (min-width: 75em) {
+  .single {
+    margin-top: 5px !important;
+  }
 }
 
 .dropdownbox {
@@ -1370,25 +1372,27 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: 100%;
-  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: left center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
     background-size: 50% 100%;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two .fix-bg {
-    background-size: 50% 100%;
+    background-attachment: fixed;
   }
 }
 
 section.two .fix-bg.lastwinner {
   background-image: url("../../gfx/amsterdam/lastwinner-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1396,6 +1400,7 @@ section.two .fix-bg.lastwinner {
 @media (min-width: 40em) {
   section.two .fix-bg.lastwinner {
     background-image: url("../../gfx/amsterdam/lastwinner-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1408,7 +1413,6 @@ section.two .fix-bg.lastwinner {
 
 section.two .fix-bg.investorsbg {
   background-image: url("../../gfx/amsterdam/investor-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1416,6 +1420,7 @@ section.two .fix-bg.investorsbg {
 @media (min-width: 40em) {
   section.two .fix-bg.investorsbg {
     background-image: url("../../gfx/amsterdam/investor-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1522,8 +1527,14 @@ section.two.keynote.arianna h4 {
 
 section.two.keynote.arianna h3 {
   color: #fff;
-  margin-left: 3em;
+  margin-left: 1.5em;
   margin-top: 2em;
+}
+
+@media (min-width: 75em) {
+  section.two.keynote.arianna h3 {
+    margin-left: 3em;
+  }
 }
 
 section.two.keynote.arianna .pdg {
@@ -2252,4 +2263,24 @@ footer .social-icons > div img:hover {
 .parallax-mirror {
   -webkit-transition: none;
   transition: none;
+}
+
+#BlogpostContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#BlogImgContainer {
+  margin-right: 10px;
+}
+
+#BlogImgContainer img {
+  width: 175px;
+}
+
+#BlogDataContainer h4 {
+  font-size: 15px;
+  text-transform: none;
+  color: #323232;
 }

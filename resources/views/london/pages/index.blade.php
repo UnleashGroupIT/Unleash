@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
 @endsection
 
 @section('headerjs')

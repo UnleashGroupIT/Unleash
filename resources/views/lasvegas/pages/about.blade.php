@@ -4,7 +4,8 @@
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/lasvegas/about.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/lasvegas/speakergrid.css') }}">	
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/lasvegas/speakergrid.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/common.css') }}">	
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/lasvegas/flipclock.css') }}">
 @endsection

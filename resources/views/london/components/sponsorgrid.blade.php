@@ -1,5 +1,5 @@
 <!--Sponsors-->
-	<section class="sponsors">
+	<section id="spnsrgrd" class="sponsors">
 		<div class="sponsors-wrp">
 
 		 @foreach ($sponsors as $sponsor)

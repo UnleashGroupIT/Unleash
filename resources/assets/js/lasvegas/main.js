@@ -157,13 +157,14 @@ $(window).on('scroll', function () {
 	var viewportWidth = $(window).width();
     	if (viewportWidth < 1100) {
             $(".more > a").click(function(event){
-				event.preventDefault();
+				
 				if(!$(this).parent().hasClass("showmob")){
 				$(this).parent().addClass("showmob");
 				$(this).parent().siblings().removeClass("showmob");
 			}else{
 				$(this).parent().removeClass("showmob");
 			}
+			event.preventDefault();
 			});
     	}
 
@@ -171,13 +172,13 @@ $(window).on('scroll', function () {
     	var viewportWidth = $(window).width();
     	if (viewportWidth < 1100) {
             $(".more > a").click(function(event){
-				event.preventDefault();
 				if(!$(this).parent().hasClass("showmob")){
 				$(this).parent().addClass("showmob");
 				$(this).parent().siblings().removeClass("showmob");
 			}else{
 				$(this).parent().removeClass("showmob");
 			}
+			event.preventDefault();
 			});
     	}
     });

@@ -60,20 +60,20 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 112);
+/******/ 	return __webpack_require__(__webpack_require__.s = 115);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 112:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(113);
+module.exports = __webpack_require__(116);
 
 
 /***/ }),
 
-/***/ 113:
+/***/ 116:
 /***/ (function(module, exports) {
 
 
@@ -224,13 +224,14 @@ $(document).ready(function () {
 	var viewportWidth = $(window).width();
 	if (viewportWidth < 1100) {
 		$(".more > a").click(function (event) {
-			event.preventDefault();
+
 			if (!$(this).parent().hasClass("showmob")) {
 				$(this).parent().addClass("showmob");
 				$(this).parent().siblings().removeClass("showmob");
 			} else {
 				$(this).parent().removeClass("showmob");
 			}
+			event.preventDefault();
 		});
 	}
 
@@ -238,13 +239,13 @@ $(document).ready(function () {
 		var viewportWidth = $(window).width();
 		if (viewportWidth < 1100) {
 			$(".more > a").click(function (event) {
-				event.preventDefault();
 				if (!$(this).parent().hasClass("showmob")) {
 					$(this).parent().addClass("showmob");
 					$(this).parent().siblings().removeClass("showmob");
 				} else {
 					$(this).parent().removeClass("showmob");
 				}
+				event.preventDefault();
 			});
 		}
 	});

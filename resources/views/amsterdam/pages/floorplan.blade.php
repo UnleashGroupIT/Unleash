@@ -3,6 +3,7 @@
 @section('title', 'Floorplan')
 
 @section('headercss')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/floorplan.css') }}">
 @endsection
 

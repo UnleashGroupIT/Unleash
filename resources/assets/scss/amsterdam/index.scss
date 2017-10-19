@@ -309,7 +309,10 @@ section.header-title {
     color: #e80f42; }
 
 .single {
-  margin-top: 5px!important; }
+    @media (min-width: 75em) {
+      margin-top: 5px!important;
+    }
+}
 
 .dropdownbox {
   visibility: hidden;
@@ -824,36 +827,59 @@ section.two {
     @media (min-width: 75em) {
       section.two .wrppr {
         width: 50%; } }
+  section.two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 600px;
+}
+
+section.two .wrppr {
+    width: 100%;
+    min-height: 500px;
+    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+    @media (min-width: 75em) {
+      section.two .wrppr {
+        width: 50%; } }
   section.two .fix-bg {
     width: 100%;
-    height: 100%;
+    height: 500px;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: 100%;
-    background-position: top center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
     @media (min-width: 75em) {
+      height: 100%;
       background-size: 50% 100%;
-    } }
+      background-attachment:fixed;
+    }
+  }
     section.two .fix-bg.arianna {
       background-image: url("../../gfx/amsterdam/arianna-mobile-bg.jpg");
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: top center; }
+      background-repeat: no-repeat; }
       @media (min-width: 40em) {
         section.two .fix-bg.arianna {
-          background-image: url("../../gfx/amsterdam/arianna-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/arianna-tablet-bg.jpg");
+            background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.arianna {
           background-image: url("../../gfx/amsterdam/arianna-bg.jpg");
-          background-position: top left; } }
+          background-position: left center; } }
     section.two .fix-bg.expobg {
       background-image: url("../../gfx/amsterdam/expo-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.expobg {
-          background-image: url("../../gfx/amsterdam/expo-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/expo-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.expobg {
           background-image: url("../../gfx/amsterdam/expo-sec-bg.jpg");
@@ -863,12 +889,13 @@ section.two {
           background-size: 50% 100%; } }
     section.two .fix-bg.clientsbg {
       background-image: url("../../gfx/amsterdam/clients-sec-mobile-bg.jpg");
-      background-attachment: fixed;
+
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.clientsbg {
-          background-image: url("../../gfx/amsterdam/clients-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/clients-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.clientsbg {
           background-image: url("../../gfx/amsterdam/clients-sec-bg.jpg");
@@ -878,12 +905,12 @@ section.two {
           background-size: 50% 100%; } }
     section.two .fix-bg.startupbg {
       background-image: url("../../gfx/amsterdam/startup-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.startupbg {
-          background-image: url("../../gfx/amsterdam/startup-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/startup-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.startupbg {
           background-image: url("../../gfx/amsterdam/startup-sec-bg.jpg");
@@ -893,12 +920,12 @@ section.two {
           background-size: 50% 100%; } }
     section.two .fix-bg.speakers.right {
       background-image: url("../../gfx/amsterdam/speakers-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: bottom center; }
       @media (min-width: 40em) {
         section.two .fix-bg.speakers.right {
-          background-image: url("../../gfx/amsterdam/speakers-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/speakers-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.speakers.right {
           background-image: url("../../gfx/amsterdam/speakers-sec-bg.jpg");
@@ -906,6 +933,27 @@ section.two {
       @media (min-width: 120em) {
         section.two .fix-bg.speakers.right {
           background-size: 50% 100%; } }
+
+
+          section.two.expo {
+            flex-direction: column-reverse;
+            @media (min-width: 75em) {
+              flex-direction: row;
+            }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media (min-width: 75em) {
     section.two.keynote.arianna .mic-logo{
       margin-left: 5px;
@@ -1123,11 +1171,17 @@ section.one-cntr {
   }
 
 section.map {
-  background: url("../../gfx/amsterdam/map-bg.jpg");
+  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
-  display: flex; }
+  display: flex;
+  @media (min-width: 600px) {
+    background: url("../../gfx/amsterdam/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
   @media (min-width: 65em) {
     section.map {
       display: block; } }
@@ -1190,12 +1244,11 @@ section.sponsors {
     opacity: .5;
     margin: auto;
     width: 100px; }
-    @media (min-width: 75em) {
-      section.sponsors img {
-        width: 130px; } }
+    
     @media (min-width: 120em) {
       section.sponsors img {
-        width: 6.8vw; } }
+        width: auto;
+        height: 100%; } }
   section.sponsors .sponsors-wrp {
     display: flex;
     flex-wrap: wrap;
@@ -1208,13 +1261,18 @@ section.sponsors {
       padding: 2em 1em;
       opacity: 0;
       display: flex; }
+
+      section.sponsors .sponsors-wrp .sponsor:last-child{
+        display: none;
+      }
+
       @media (min-width: 75em) {
         section.sponsors .sponsors-wrp .sponsor {
           margin: 2em; } }
       @media (min-width: 120em) {
         section.sponsors .sponsors-wrp .sponsor {
           margin: 1.68vw;
-          padding: 1.68vw 1vw; } }
+        } }
       section.sponsors .sponsors-wrp .sponsor:hover {
         background-color: #fff;
         transition: all 1s;

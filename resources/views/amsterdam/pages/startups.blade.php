@@ -5,6 +5,7 @@
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/startup.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 @endsection
 
 @section('headerjs')

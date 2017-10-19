@@ -13,14 +13,15 @@ section.speakers-grid {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 2em;
-    justify-content: space-between; }
+    justify-content: center; }
     section.speakers-grid .speakers-wrap a{
       color: #323232;
     }
     section.speakers-grid .speakers-wrap .speaker {
       /*flex-grow: 1;*/
       padding: .5em 0;
-      width: 49%; }
+      margin: 0 3px;
+      width: 48%; }
       @media (min-width: 512px) {
         section.speakers-grid .speakers-wrap .speaker {
           width: 150px;

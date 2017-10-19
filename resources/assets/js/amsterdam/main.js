@@ -137,13 +137,13 @@ $(document).ready(function(){
 	var viewportWidth = $(window).width();
     	if (viewportWidth < 1100) {
             $(".more > a").click(function(event){
-				event.preventDefault();
 				if(!$(this).parent().hasClass("showmob")){
 				$(this).parent().addClass("showmob");
 				$(this).parent().siblings().removeClass("showmob");
 			}else{
 				$(this).parent().removeClass("showmob");
 			}
+			event.preventDefault();
 			});
     	}
 
@@ -151,13 +151,13 @@ $(document).ready(function(){
     	var viewportWidth = $(window).width();
     	if (viewportWidth < 1100) {
             $(".more > a").click(function(event){
-				event.preventDefault();
 				if(!$(this).parent().hasClass("showmob")){
 				$(this).parent().addClass("showmob");
 				$(this).parent().siblings().removeClass("showmob");
 			}else{
 				$(this).parent().removeClass("showmob");
 			}
+			event.preventDefault();
 			});
     	}
     });
@@ -246,6 +246,23 @@ $(document).ready(function(){
 		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
 		speed: '0.8'
 	});
+
+
+	// Get the modal
+	var modal = document.getElementsByClassName('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName('book');
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	$('.book').click(function() { $('#myModal').css("display", "flex")})
+	$('.close').click(function() { $('#myModal').css("display", "none")})
+
+	
+
+	
 	
 
 }); // READY END

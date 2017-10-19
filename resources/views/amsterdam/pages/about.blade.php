@@ -4,6 +4,7 @@
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/about.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/speakergrid.css') }}">	
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/flipclock.css') }}">
@@ -27,7 +28,7 @@
 			<div class="fix-bg showbg"></div>
 		</div>
 	</section>
-	<section class="two keynote arianna">
+	<section class="two keynote arianna rev">
 		<div class="wrppr">
 			<div class="fix-bg teambg"></div>
 		</div>
@@ -35,7 +36,6 @@
 			<div class="content-wrap">
 				<div class="h4wrp">
 					<div>
-						<img class="mic-logo" src="{{ asset('gfx/amsterdam/mic.png') }}" alt="Keynote">
 						<h4 class="ky">About the Team</h4>
 					</div>
 					<img class="U-logo" src="{{ asset('gfx/amsterdam/U.png') }}" alt="Unleash">
@@ -48,14 +48,7 @@
 			</div>
 		</div>
 	</section>
-		<!--Speakers-->
-	 @include('amsterdam.components.speakergrid')
-	<!--Speakers END-->
-
 	<section class="two keynote arianna">
-		<div class="wrppr">
-			<div class="fix-bg teambg-2"></div>
-		</div>
 		<div class="content">
 			<div class="content-wrap">
 				<div class="h4wrp">
@@ -72,22 +65,10 @@
 				<button class="white-btn">Apply Today</button>
 			</div>
 		</div>
-	</section>	
-	<!--Map-->
-	<section class="map">
-		<div class="content">
-			<div class="mapcont-wrp">
-				<div class="content-wrap">
-					<h2>Home</h2>
-					<p>Budapest is a leading global city a cultural capital that excels in commerce, finance, media, art, fashion, research, technology, education, and entertainment. Budapest has the second fastest-developing urban economy in Europe.</p>
-				</div>
-				<button class="blue-btn">Join Us</button>
-			</div>
-			<div class="map-pic">
-			</div>
+		<div class="wrppr">
+			<div class="fix-bg teambg-2"></div>
 		</div>
-	</section>
-	<!--Map END-->
+	</section>	
 @endsection
 
 @section('footerscripts')

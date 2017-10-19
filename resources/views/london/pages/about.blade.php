@@ -5,7 +5,7 @@
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/about.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/speakergrid.css') }}">	
-
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/flipclock.css') }}">
 @endsection
 

@@ -534,7 +534,9 @@ section.header-title:hover {
   margin-top: 0;
 }
   .single {
-  margin-top: 0!important;
+    @media (min-width: 75em) {
+      margin-top: 0!important;
+    }
 }
 .dropdownbox {
   visibility: hidden;

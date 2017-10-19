@@ -5,6 +5,7 @@
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/sponsors.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 @endsection
 
 @section('headerjs')
@@ -29,7 +30,7 @@
 	<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
 
-		<h2>Diamond + Sponsors</h2>
+		<h2>Diamond<sup>+</sup> Sponsors</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 1)

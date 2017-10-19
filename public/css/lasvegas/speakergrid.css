@@ -28,9 +28,9 @@ section.speakers-grid .speakers-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 2em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.speakers-grid .speakers-wrap a {
@@ -40,7 +40,8 @@ section.speakers-grid .speakers-wrap a {
 section.speakers-grid .speakers-wrap .speaker {
   /*flex-grow: 1;*/
   padding: .5em 0;
-  width: 49%;
+  margin: 0 3px;
+  width: 48%;
 }
 
 @media (min-width: 512px) {

@@ -522,8 +522,10 @@ section.header-title {
   margin-top: 0;
 }
 
-.single {
-  margin-top: 0 !important;
+@media (min-width: 75em) {
+  .single {
+    margin-top: 0 !important;
+  }
 }
 
 .dropdownbox {
@@ -1336,22 +1338,6 @@ section.two {
   min-height: 600px;
 }
 
-section.two.expo {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.expo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
 section.two .wrppr {
   width: 100%;
   min-height: 500px;
@@ -1367,29 +1353,32 @@ section.two .wrppr {
 
 section.two .fix-bg {
   width: 100%;
-  height: 100%;
+  height: 500px;
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: 100%;
-  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: left center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
+    height: 100%;
     background-size: 50% 100%;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two .fix-bg {
-    background-size: 50% 100%;
+    background-attachment: fixed;
   }
 }
 
 section.two .fix-bg.gary {
   background-image: url("../../gfx/lasvegas/gary-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1397,6 +1386,7 @@ section.two .fix-bg.gary {
 @media (min-width: 40em) {
   section.two .fix-bg.gary {
     background-image: url("../../gfx/lasvegas/gary-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1409,7 +1399,6 @@ section.two .fix-bg.gary {
 
 section.two .fix-bg.expobg {
   background-image: url("../../gfx/lasvegas/expo-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1417,6 +1406,7 @@ section.two .fix-bg.expobg {
 @media (min-width: 40em) {
   section.two .fix-bg.expobg {
     background-image: url("../../gfx/lasvegas/expo-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1429,7 +1419,6 @@ section.two .fix-bg.expobg {
 
 section.two .fix-bg.clientsbg {
   background-image: url("../../gfx/lasvegas/clients-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1437,6 +1426,7 @@ section.two .fix-bg.clientsbg {
 @media (min-width: 40em) {
   section.two .fix-bg.clientsbg {
     background-image: url("../../gfx/lasvegas/clients-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1449,7 +1439,6 @@ section.two .fix-bg.clientsbg {
 
 section.two .fix-bg.startupbg {
   background-image: url("../../gfx/lasvegas/startup-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1457,6 +1446,7 @@ section.two .fix-bg.startupbg {
 @media (min-width: 40em) {
   section.two .fix-bg.startupbg {
     background-image: url("../../gfx/lasvegas/startup-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1469,7 +1459,6 @@ section.two .fix-bg.startupbg {
 
 section.two .fix-bg.speakers.right {
   background-image: url("../../gfx/lasvegas/speakers-sec-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom center;
 }
@@ -1477,6 +1466,7 @@ section.two .fix-bg.speakers.right {
 @media (min-width: 40em) {
   section.two .fix-bg.speakers.right {
     background-image: url("../../gfx/lasvegas/speakers-sec-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1484,6 +1474,22 @@ section.two .fix-bg.speakers.right {
   section.two .fix-bg.speakers.right {
     background-image: url("../../gfx/lasvegas/speakers-sec-bg.jpg");
     background-position: top right;
+  }
+}
+
+.two.clients {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 75em) {
+  .two.clients {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1646,22 +1652,6 @@ section.two.keynote.arianna button {
 
 section.two.keynote.arianna button:hover {
   color: #fff;
-}
-
-section.two.keynote.second {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.second {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
 }
 
 section.two .content {
@@ -1887,13 +1877,21 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 section.map {
-  background: url("../../gfx/lasvegas/map-bg.jpg");
+  background: url("../../gfx/lasvegas/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 600px) {
+  section.map {
+    background: url("../../gfx/lasvegas/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 65em) {
@@ -1990,15 +1988,10 @@ section.sponsors img {
   width: 100px;
 }
 
-@media (min-width: 75em) {
-  section.sponsors img {
-    width: 130px;
-  }
-}
-
 @media (min-width: 120em) {
   section.sponsors img {
-    width: 6.8vw;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -2033,7 +2026,6 @@ section.sponsors .sponsors-wrp .sponsor {
 @media (min-width: 120em) {
   section.sponsors .sponsors-wrp .sponsor {
     margin: 1.68vw;
-    padding: 1.68vw 1vw;
   }
 }
 

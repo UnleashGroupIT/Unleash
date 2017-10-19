@@ -3,6 +3,7 @@
 @section('title', 'Index')
 
 @section('headercss')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
@@ -17,7 +18,7 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/amsterdam/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn">Book Now</button>
+		<button id="book" class="pink-btn book">Book Now</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<h4>Main sponsors</h4>
@@ -212,6 +213,29 @@
 			<button class="amsblue-btn">Book now</button>
 		</div>
 	</section>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>Book Now</h3>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Phone Number" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>
 @endsection
 
 @section('footerscripts')

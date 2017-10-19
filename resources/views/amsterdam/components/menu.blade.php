@@ -32,7 +32,10 @@
 									<li class="amsterdam">
 										<a>Latest News For Amsterdam</a>
 										<ul class="news-ul">
-											<li><p>Lorem ipsum dolor sit am, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p></li>
+											<li>
+											 @include('global.components.blogpost')		
+
+											</li>
 											<li class="show-me"><a href="#"><button class="blue-btn">Show Me</button></a></li>
 										</ul>
 									</li>
@@ -66,7 +69,10 @@
 									<li class="london" title="AMSTERDAM">
 										<a>Latest News For London</a>
 										<ul class="news-ul">
-											<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p></li>
+											<li>
+											 @include('global.components.blogpost')		
+
+											</li>
 											<li class="show-me"><a href="#"><button class="blue-btn">Show Me</button></a></li>
 										</ul>
 									</li>
@@ -98,8 +104,11 @@
 									<li class="america" title="AMSTERDAM">
 										<a>Latest News For Las Vegas</a>
 										<ul class="news-ul">
-											<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p></li>
-											<li class="show-me"><a href="#"><button class="blue-btn">Show Me</button></a></li>
+											<li>
+											 @include('global.components.blogpost')		
+
+											</li>
+											<li class="show-me"><a href="{{ strip_tags( $blogpost[0]['link'] )}}"><button class="blue-btn">Show Me</button></a></li>
 										</ul>
 									</li>
 									<li class="america">
@@ -131,7 +140,10 @@
 									<li class="amsterdam" title="AMSTERDAM">
 										<a>About Us</a>
 										<ul class="news-ul">
-											<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p></li>
+											<li>
+											 @include('global.components.blogpost')		
+
+											</li>
 											<li class="show-me"><a href="#"><button class="blue-btn">More</button></a></li>
 										</ul>
 									</li>
@@ -154,7 +166,7 @@
 						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/amsterdam/twitter-white.png') }}" alt="Twitter"></a></div>
 					</div>
 					<!--Ticket button-->
-					<button class="amsblue-btn">Book now</button>
+					<button class="amsblue-btn book">Book now</button>
 				</div>
 			</nav>
 		</section>

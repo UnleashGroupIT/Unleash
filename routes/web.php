@@ -51,6 +51,18 @@ Route::get('/amsterdam/join', 'StaticPageController@about')->name('ams.join');
 
 Route::get('/amsterdam/floorplan', 'StaticPageController@floorplan')->name('ams.floorplan');
 
+
+Route::get('/amsterdam/livestream', function(){
+	return view('amsterdam.pages.livestream');
+});
+
+Route::get('/amsterdam/live', function(){
+	return view('amsterdam.pages.streamform');
+});
+Route::get('/amsterdam/thankyou', function(){
+	return view('amsterdam.pages.streamthankyou');
+});
+
 //Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
 
 

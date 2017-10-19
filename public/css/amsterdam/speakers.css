@@ -524,8 +524,10 @@ section.header-title:hover {
   color: #e80f42;
 }
 
-.single {
-  margin-top: 0 !important;
+@media (min-width: 75em) {
+  .single {
+    margin-top: 0 !important;
+  }
 }
 
 .dropdownbox {
@@ -1362,19 +1364,27 @@ section.two .fix-bg {
   -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
           box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
   display: block;
-  background-size: 100%;
-  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: left center;
+}
+
+@media (min-width: 40em) {
+  section.two .fix-bg {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg {
     background-size: 50% 100%;
+    background-attachment: fixed;
   }
 }
 
 section.two .fix-bg.arianna {
   background-image: url("../../gfx/amsterdam/arianna-mobile-bg.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1382,6 +1392,7 @@ section.two .fix-bg.arianna {
 @media (min-width: 40em) {
   section.two .fix-bg.arianna {
     background-image: url("../../gfx/amsterdam/arianna-tablet-bg.jpg");
+    background-attachment: fixed;
   }
 }
 
@@ -1800,13 +1811,21 @@ section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .
 }
 
 section.map {
-  background: url("../../gfx/amsterdam/map-bg.jpg");
+  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 600px) {
+  section.map {
+    background: url("../../gfx/amsterdam/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 65em) {

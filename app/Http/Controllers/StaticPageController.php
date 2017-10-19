@@ -67,5 +67,12 @@ class StaticPageController extends Controller
 
     			]);
     	
+    }
+
+   public function stream(Request $request){
+  	
+
+    return view('amsterdam.pages.stream');
+    	
     }	
 }

@@ -318,7 +318,9 @@ section.header-title {
     color: #e80f42; }
 
 .single {
-  margin-top: 0!important;
+    @media (min-width: 75em) {
+      margin-top: 0!important;
+    }
 }
 
 .dropdownbox {
@@ -832,22 +834,30 @@ section.two {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
-    height: 100%;
+    height: 500px;
     box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
-    background-size: 100%;
-    background-position: top center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
     @media (min-width: 75em) {
+      height: 100%;
       background-size: 50% 100%;
-    } }
+      background-attachment:fixed;
+    }
+  }
     section.two .fix-bg.sponsorsbg {
       background-image: url("../../gfx/amsterdam/sponsors-sec-mobile-bg.jpg");
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center; }
       @media (min-width: 40em) {
         section.two .fix-bg.sponsorsbg {
-          background-image: url("../../gfx/amsterdam/sponsors-sec-tablet-bg.jpg"); } }
+          background-image: url("../../gfx/amsterdam/sponsors-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
       @media (min-width: 75em) {
         section.two .fix-bg.sponsorsbg {
           background-image: url("../../gfx/amsterdam/sponsors-sec-bg.jpg");
@@ -1061,11 +1071,17 @@ section.one-cntr {
     margin-top: 1em; }
 
 section.map {
-  background: url("../../gfx/amsterdam/map-bg.jpg");
+ background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   min-height: 600px;
-  display: flex; }
+  display: flex;
+  @media (min-width: 600px) {
+    background: url("../../gfx/amsterdam/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
   @media (min-width: 65em) {
     section.map {
       display: block; } }
@@ -1194,7 +1210,10 @@ section.sponsors {
       section.sponsors h2 {
         font-size: 1.9rem; } }
   section.sponsors a {
-    margin: auto; }
+    margin: auto;
+    @media (min-width: 120em) {
+        margin: 0 auto;
+      } }
   section.sponsors img {
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
@@ -1202,16 +1221,14 @@ section.sponsors {
     opacity: .5;
     margin: auto;
     width: 100px; }
-    @media (min-width: 75em) {
-      section.sponsors img {
-        width: 130px; } }
     @media (min-width: 120em) {
       section.sponsors img {
-        width: 6.8vw; } }
+        width: auto;
+        height: 100%; } }
   section.sponsors .sponsors-wrp {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 1em; }
     section.sponsors .sponsors-wrp .sponsor {
       width: 150px;

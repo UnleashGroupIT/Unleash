@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/common.css') }}">
 @endsection
 
 @section('headerjs')
@@ -129,6 +130,7 @@
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/lasvegas/coma.png') }}" alt="coma">
 				<span class="blck">In my eyes by far the best and most inspiring show on HR globally</span>
+				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/lasvegas/google.png') }}" alt="Google">
 			</div>
 			<button class="red-btn">Get Your Ticket</button>
@@ -154,7 +156,7 @@
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/lasvegas/coma.png') }}" alt="coma">
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
-				<img class="quote-logo" src="{{ URL::asset('gfx/lasvegas/blizzard.png') }}" alt="Activision Blizzard">
+				<strong class="strn">- Activision Blizzard</strong>
 			</div>
 			<button class="red-btn">Get Your Ticket</button>
 		</div>
