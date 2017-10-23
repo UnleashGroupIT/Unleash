@@ -12,7 +12,13 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+   .js('resources/assets/js/main.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css/amsterdam');
+
+mix.sass('resources/assets/scss/menu.scss', 'public/css')
+   .sass('resources/assets/scss/popup.scss', 'public/css')
+   .sass('resources/assets/scss/404.scss', 'public/css');
+
 
 //Amsterdam   
 mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
@@ -31,6 +37,7 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/sponsors.scss', 'public/css/amsterdam') 
    .sass('resources/assets/scss/amsterdam/startup.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/stream.scss', 'public/css/amsterdam')
+   .sass('resources/assets/scss/amsterdam/terms.scss', 'public/css/amsterdam')
       .options({
       processCssUrls: false
    }); 
@@ -50,13 +57,15 @@ mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speakergrid.scss', 'public/css/london')
    .sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/menu.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/popup.scss', 'public/css/london')
    .sass('resources/assets/scss/london/reset.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speaker.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speakers.scss', 'public/css/london')
    .sass('resources/assets/scss/london/sponsor.scss', 'public/css/london')
    .sass('resources/assets/scss/london/sponsors.scss', 'public/css/london') 
    .sass('resources/assets/scss/london/startup.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/stream.scss', 'public/css/london')   
+   .sass('resources/assets/scss/london/stream.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/tickets_old.scss', 'public/css/london')      
       .options({
       processCssUrls: false
    }); 
@@ -75,6 +84,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/speakergrid.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/index.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/menu.scss', 'public/css/lasvegas')
+   .sass('resources/assets/scss/lasvegas/popup.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/reset.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/speaker.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/speakers.scss', 'public/css/lasvegas')

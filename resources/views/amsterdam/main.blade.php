@@ -40,12 +40,26 @@
 	<title>Unleash Confrence | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/reset.css') }}">
-
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
 	 @yield('headercss')
 	 
      @include('amsterdam.components.fixedjs')
 
 	 @yield('headerjs')
+
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69202140-20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-69202140-20');
+</script>
+<!-- CrazyEgg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
 
 </head>
 <body>
@@ -56,22 +70,9 @@
 
 	 @include('amsterdam.components.menu')
 		<!--Menu icon in lower sizes.-->
-
-
-		<div class="hamb-wrp">
-			<!--Logo-->
-			<div id="unleash-logo">
-				<a href="/">
-					<h1>
-						<img src="{{ URL::asset('gfx/amsterdam/logo.png') }}" alt="Unleash logo" title="HOME">
-					</h1>
-				</a>
-			</div>
-			<div id="hamburger">
-				<div class="bar"></div>
-			</div>
-		</div>
-
+        <div id="hamburger">
+            <div class="bar"></div>
+        </div>
  	@yield('headercontent')		
 
 	<!--Mainsponsors END-->
@@ -86,8 +87,8 @@
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
-
+    @include('amsterdam.components.popup')
 </body>
 @yield('footerscripts')
-
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

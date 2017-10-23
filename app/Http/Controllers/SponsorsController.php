@@ -50,7 +50,7 @@ class SponsorsController extends Controller
          $site = 'london.pages.sponsors';    
      }   
 
-      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+      if ($request->is('america') || $request->is('america/*')) {
          $SponsorGridId = 1;
 
          $site = 'lasvegas.pages.sponsors';

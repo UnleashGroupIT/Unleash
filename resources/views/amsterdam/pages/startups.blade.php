@@ -20,7 +20,7 @@
 			<h2>Startup Zone</h2>
 			<p>Startup Competition 5 finalists will compete and showcase what real disruptive technology looks like.
 				Winner takes away a trophy and €10,000 worth of sponsorship!</p>
-			<button class="startup-btn">Apply to compete</button>
+			<button class="startup-btn popup" data-popupdata="compete">Apply to compete</button>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -40,7 +40,7 @@ Speaking slots are available to apply</p>
 
 			</div>
 			<div class="schedule-wrp">
-				<button class="white-btn">apply to compete</button>
+				<button class="white-btn popup" data-popupdata="compete">Apply to compete</button>
 			</div>
 		</div>
 	</section>
@@ -59,7 +59,7 @@ tool to network!</p>
 					<p><strong class="strn">Aisling Teillard CEO of Tandem</strong></p>
 				</div>
 			</div>
-			<button class="startup-btn">apply to compete</button>
+			<button class="startup-btn popup" data-popupdata="compete">Apply to Compete</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg investorsbg"></div>
@@ -72,7 +72,7 @@ tool to network!</p>
 			<h2>Hurry Up!</h2>
 			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="blue-btn">Book now</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 	</section>
 @endsection

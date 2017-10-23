@@ -35,7 +35,7 @@
 				</div>
 				<div class="speaker-more">
 					<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed at which technology is disrupting industries, companies and jobs is happening at an exponential pace never seen before. HR Tech World has become more important now than when it was born at the end of The Great Recession.</p>
-					<button class="blue-btn">cta</button>
+					<button class="blue-btn popup" data-popupdata="booknow">Book Now</button>
 				</div>
 				<a class="quit" href="http://www.oxygenperspectives.com/DEV/RC/unleash/sponsors.php#spnsrz"><img src="{{ URL::asset('gfx/x.svg') }}" alt="X"></a>
 			</div>

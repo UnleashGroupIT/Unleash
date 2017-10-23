@@ -30,7 +30,7 @@ class MainPageController extends Controller
          $site = 'london.pages.index';    
      }   
 
-      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+      if ($request->is('america') || $request->is('america/*')) {
          $SpeakerGridId = 1;
          $SponsorGridId = 3;
          $site = 'lasvegas.pages.index';

@@ -262,6 +262,5 @@
 </script>
 <script src="https://use.typekit.net/oip3jmq.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-<script type="text/javascript" src="{{ URL::asset('js/amsterdam/main.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/amsterdam/agenda.js') }}"></script>
 @endsection

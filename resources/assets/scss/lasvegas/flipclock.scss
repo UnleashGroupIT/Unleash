@@ -230,7 +230,7 @@
 .flip-clock-divider .flip-clock-label {
   position: absolute;
   top: -1.5em;
-  right: -86px;
+  right: -135px;
   color: #fff;
   text-shadow: none;
 }
@@ -406,5 +406,27 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+
+section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+4) {
+  display: none;
+}
+
+@media (min-width: 45em) {
+  section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+4) {
+    display: block;
+  }
+}
+
+section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours {
+  display: none;
+}
+
+@media (min-width: 45em) {
+  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours {
+    display: block;
   }
 }

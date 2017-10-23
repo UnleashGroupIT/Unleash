@@ -42,9 +42,20 @@
 
 				<div class="speaker-more">
 					<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
-					<a href="#"><button class="blue-btn">cta</button></a>
+					<a href="#"><button class="blue-btn popup" data-popupdata="becomeaspeaker">Apply To Speak</button></a>
 				</div>
-				<a class="quit" href="{{ route('ams.speakers') }}"><img src="{{ URL::asset('gfx/amsterdam/x.svg') }}" alt="X"></a>
+				<a class="quit" href="
+				@if($speaker->referer)
+					@if($speaker->referer == 'http://www.unleashgroup.io/amsterdam/index')
+						{{ $speaker->referer }}#spkrgrd
+					@else 
+						{{ $speaker->referer }}
+					@endif
+				@else
+					{{ route('amsterdam.speakers') }}
+				@endif					
+				
+				"><img src="{{ URL::asset('gfx/amsterdam/x.svg') }}" alt="X"></a>
 			</div>
 
 		@else

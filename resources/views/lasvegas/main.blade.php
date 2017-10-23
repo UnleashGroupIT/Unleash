@@ -40,6 +40,10 @@
 	<title>Unleash Confrence | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/reset.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/menu.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/popup.css') }}">
 
 	 @yield('headercss')
 	 
@@ -47,6 +51,19 @@
 
 	 @yield('headerjs')
 
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69202140-19"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-69202140-19');
+</script>
+
+<!-- Crazyegg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
 </head>
 <body>
 
@@ -86,8 +103,8 @@
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
-
+    @include('lasvegas.components.popup')
 </body>
 @yield('footerscripts')
-
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

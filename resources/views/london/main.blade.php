@@ -40,12 +40,31 @@
 	<title>Unleash Confrence | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/reset.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/menu.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/popup.css') }}">
 
 	 @yield('headercss')
 	 
      @include('london.components.fixedjs')
 
 	 @yield('headerjs')
+
+
+
+
+<!--Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69202140-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-69202140-18');
+</script>
+<!-- CrazyEgg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
 
 </head>
 <body>
@@ -86,8 +105,8 @@
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
-
+    @include('london.components.popup')
 </body>
 @yield('footerscripts')
-
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

@@ -42,9 +42,17 @@
 
 				<div class="speaker-more">
 				<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
-					<a href="#"><button class="blue-btn">cta</button></a>
+					<a href="#"><button class="blue-btn popup" data-popupdata="applytospeak">Apply to Speak</button></a>
 				</div>
-				<a class="quit" href="{{ route('lasvegas.speakers') }}"><img src="{{ URL::asset('gfx/lasvegas/x.svg') }}" alt="X"></a>
+				<a class="quit" href="
+				@if($speaker->referer)
+					{{-- $speaker->referer --}}
+				     {{ route('lasvegas.speakers') }}
+				@else
+					{{ route('lasvegas.speakers') }}
+				@endif	
+				
+				"><img src="{{ URL::asset('gfx/lasvegas/x.svg') }}" alt="X"></a>
 			</div>
 
 		@else

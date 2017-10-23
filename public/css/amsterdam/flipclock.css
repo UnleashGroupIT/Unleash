@@ -408,3 +408,7 @@
     opacity: 0;
   }
 }
+
+section.one-cntr.counter .your-clock {
+  display: none !important;
+}

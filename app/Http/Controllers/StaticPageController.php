@@ -22,7 +22,7 @@ class StaticPageController extends Controller
 	   $site = 'london.pages.about';	
 	 }   
 
-	  if ($request->is('lasvegas/*')) {
+	  if ($request->is('america/*')) {
 	   $Grid = 1;
 	   $site = 'lasvegas.pages.about';
 	 }   	
@@ -38,24 +38,24 @@ class StaticPageController extends Controller
     	
     }
 	
-    public function floorplan(Request $request){
+    public function venue(Request $request){
 
      $Grid = 1;
      $site = '404.blade.php';	
 
 	 if ($request->is('amsterdam/*')) {
 	   $Grid = 1;
-	   $site = 'amsterdam.pages.floorplan';
+	   $site = 'amsterdam.pages.venue';
 	 }   	
 	 
 	  if ($request->is('london/*')) {
 	   $Grid = 1;
-	   $site = 'london.pages.floorplan';	
+	   $site = 'london.pages.venue';	
 	 }   
 
-	  if ($request->is('lasvegas/*')) {
+	  if ($request->is('america/*')) {
 	   $Grid = 1;
-	   $site = 'lasvegas.pages.floorplan';
+	   $site = 'lasvegas.pages.venue';
 	 }   	
 
      $SpeakerGridController = new SpeakersController;

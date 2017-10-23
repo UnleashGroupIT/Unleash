@@ -5,13 +5,15 @@ $(document).ready(function(){
 		var scroll = $(window).scrollTop();
 
     	if (scroll >= 100) {
-        	$(".hamb-wrp").addClass("black");
-        	$("#header-menu").addClass("black");
+        	$("#unleash-logo").addClass("show");
     	} else {
-        	$(".hamb-wrp").removeClass("black");
-        	$("#header-menu").removeClass("black");
+        	$("#unleash-logo").removeClass("show");
     	}
 	})();
+
+	$(".hrg").click(function(e){
+		$('#header-menu').removeClass("show");
+	});
 
 	(function () {
 		$('#hamburger').on('click', function() { // ICON CLICK
@@ -42,10 +44,10 @@ $(document).ready(function(){
 
 	//COUNTER
 
-	var clock = $('.your-clock').FlipClock(3600 * 24 * 3, {
-		clockFace: 'DailyCounter',
-		countdown: true
-	});
+	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"),{
+    	clockFace: 'DailyCounter',
+   		countdown: true
+   });
 
 
 	//SPONSORS

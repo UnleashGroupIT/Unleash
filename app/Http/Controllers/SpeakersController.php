@@ -28,7 +28,7 @@ class SpeakersController extends Controller
          $site = 'london.pages.speakers';    
      }   
 
-      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+      if ($request->is('america') || $request->is('america/*')) {
          $SpeakerGridId = 1;
 
          $site = 'lasvegas.pages.speakers';
@@ -73,14 +73,24 @@ class SpeakersController extends Controller
          $site = 'london.pages.speaker';    
      }   
 
-      if ($request->is('lasvegas') || $request->is('lasvegas/*')) {
+      if ($request->is('america') || $request->is('america/*')) {
 
 
          $site = 'lasvegas.pages.speaker';
      }          
+	 
+
 
     	$speaker = Speakers::find($speakerId);
 
+	 if ($request->header() !== null){
+		 $headerData = $request->header();
+		 if(isset($headerData['referer'][0]) && $headerData['referer'][0] != null){
+			 
+			 $speaker->referer = $headerData['referer'][0];
+		 }
+	 }		
+		
     	    return view($site, [
     			  'speaker' => $speaker,
     			 

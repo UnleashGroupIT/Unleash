@@ -18,19 +18,24 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/lasvegas/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn">Book Now</button>
+		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
-			<h4>Main sponsors</h4>
+			<h4>2017 SPONSORS</h4>
 			<div class="mainsponsors-wrap">
-				<div><img src="{{ URL::asset('gfx/lasvegas/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/workday-white.png') }}" alt="Workday"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/glassdoor-white.png') }}" alt="Glassdoor"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/workday-white.png') }}" alt="Workday"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/glassdoor-white.png') }}" alt="Glassdoor"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/lasvegas/workday-white.png') }}" alt="Workday"></div>
+                   <!-- <div><a href="https://hrtechcongress.com/lasvegas/" target="_blank" title="Lead Sponsors"><img id="LeadSponsorsLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/lead-spons.png') }}" alt="Lead Sponsors"></a></div>-->
+                   <div> <a href="https://acrobat.adobe.com/uk/en/sign.html" target="_blank" title="Adobe"><img id="AdobeHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adobe.svg') }}" alt="Adobe"></a></div>
+                   <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="ADPHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
+                   <div> <a href="http://www.avature.net/" target="_blank" title="Avature"><img id="AvatureHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+                    <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="CrossKnowledgeHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
+                   <div> <a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone"><img id="CornerstoneLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                   <div> <a href="https://www.deloitte.com/" target="_blank" title="Deloitte"><img id="DeloitteLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/deloitte.svg') }}" alt="Deloitte"></a></div>
+                  <div>  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="IBMLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
+                   <div> <a href="http://www.ngahr.co.uk/" target="_blank" title="ngahr"><img id="NGAHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/nga.svg') }}" alt="ngahr"></a></div>
+                  <div><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="SmartRecruitersHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
+                   <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="SuccessFactorsHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+                    <div><a href="https://www.workday.com/" target="_blank" title="Workday"><img id="WorkdayHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
+
 			</div>
 		</section>
 	<!--Mainsponsors END-->
@@ -42,7 +47,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>Unleash is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="red-btn">Join us now</button>
+			<button class="red-btn popup" data-popupdata="joinourcommunity">Join us now</button>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -56,7 +61,7 @@
 				<div class="h4wrp">
 					<div>
 						<img class="mic-logo" src="{{ URL::asset('gfx/lasvegas/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in Las Vegas</h4>
+						<h4 class="ky">Keynote in San Francisco 2017</h4>
 					</div>
 					<img class="U-logo" src="{{ URL::asset('gfx/lasvegas/U.png') }}" alt="Unleash">
 				</div>
@@ -80,7 +85,7 @@
 
 					</div>
 				</div>
-				<button class="white-btn">Apply to Speak</button>
+				<button class="white-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
@@ -95,7 +100,7 @@
 						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
 				</div>
 			</div>
-			<button class="red-btn">Become a Speaker</button>
+			<button class="red-btn popup" data-popupdata="applytospeak">Become a Speaker</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg speakers right"></div>
@@ -111,9 +116,9 @@
 	<section class="one-cntr counter">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
+			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="pink-btn">Book now</button>
+			<button class="pink-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -133,7 +138,7 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/lasvegas/google.png') }}" alt="Google">
 			</div>
-			<button class="red-btn">Get Your Ticket</button>
+			<button class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg expobg"></div>
@@ -148,17 +153,14 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
-				<p>In 2017 we have welcomed +7000 people from as many as +120 countries. Representing the world’s
-					leading organizations across all industry verticals, Unleash is the leading show on people and technology
-					both in terms of content and deals done. With a global footprint that influences millions of employees
-					worldwide no other community is having such a powerful impact on shaping the Future of Work!</p>
+				<p>In 2017 we have welcomed +8500 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, Unleash is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/lasvegas/coma.png') }}" alt="coma">
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="red-btn">Get Your Ticket</button>
+			<button class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 	</section>
 	<!--Clients END-->
@@ -180,7 +182,7 @@
 					Josh Bersin, Gary Hamel and Simon Sinek, as well as investors, vendors, media - and perhaps most
 					importantly of all - the organizations they wish to serve.</p>
 			</div>
-			<button class="red-btn">Apply to compete</button>
+			<button class="red-btn popup" data-popupdata="compete">Apply to compete</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg startupbg"></div>
@@ -193,9 +195,9 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>Unleash is delighted to be making it’s US home at the Aria Resort and Casino, one of North America's premier destinations for large-scale meetings and events.</p>
+					<p>Unleash is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
-				<button class="red-btn">More</button>
+				<a href="{{ route('lasvegas.floorplan') }}"><button class="red-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
@@ -205,8 +207,8 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
-			<button class="red-btn">Book now</button>
+			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
+			<button class="red-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 	</section>
 @endsection

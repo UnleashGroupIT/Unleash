@@ -1,37 +1,12 @@
 
 $(document).ready(function(){
 
-	var parallaxElements = $('.prllx'),
-    parallaxQuantity = parallaxElements.length;
-
-$(window).on('scroll', function () {
-
-  window.requestAnimationFrame(function () {
-
-    for (var i = 0; i < parallaxQuantity; i++) {
-      var currentElement = parallaxElements.eq(i);
-      var scrolled = $(window).scrollTop();
-
-      currentElement.css({
-        'transform': 'translate3d(0,' + scrolled * -0.15 + 'px, 0)'
-      });
-    }
-  });
-
-});
-
-
-	(function () {
-		var scroll = $(window).scrollTop();
-
-    	if (scroll >= 100) {
-        	$(".hamb-wrp").addClass("black");
-        	$("#header-menu").addClass("black");
-    	} else {
-        	$(".hamb-wrp").removeClass("black");
-        	$("#header-menu").removeClass("black");
-    	}
-	})();
+	$(".hrg").click(function(){
+		$('#hamburger').removeClass("active");
+		$('#header-menu').removeClass("show");
+		$('.hamb-wrp').removeClass("vanish");
+		$('.bar').toggleClass('animate');
+	});
 
 	(function () {
 		$('#hamburger').on('click', function() { // ICON CLICK
@@ -62,10 +37,10 @@ $(window).on('scroll', function () {
 
 	//COUNTER
 
-	var clock = $('.your-clock').FlipClock(3600 * 24 * 3, {
-		clockFace: 'DailyCounter',
-		countdown: true
-	});
+	var clock = $('.your-clock').FlipClock(new Date("March 20, 2018 07:30:00"),{
+    	clockFace: 'DailyCounter',
+   		countdown: true
+   });
 
 
 	//SPONSORS
@@ -216,11 +191,9 @@ $(window).on('scroll', function () {
     	var scroll = $(window).scrollTop();
 
     	if (scroll >= 100) {
-        	$(".hamb-wrp").addClass("black");
-        	$("#header-menu").addClass("black");
+        	$("#unleash-logo").addClass("show");
     	} else {
-        	$(".hamb-wrp").removeClass("black");
-        	$("#header-menu").removeClass("black");
+        	$("#unleash-logo").removeClass("show");
     	}
 	});
 
@@ -234,42 +207,41 @@ $(window).on('scroll', function () {
             $('.more').removeClass("showmob");
     	}
 	});
-
-
-	//PARALLAX
-
-	$('#keynote').parallax({
-		imageSrc: '../../gfx/london/arianna-bg.jpg',
-		speed: '0.8'
-	});
-	$('#keynote-2').parallax({
-		imageSrc: '../../gfx/london/speakers-bg2.jpg',
-		speed: '0.8'
-	});
-	$('#expo').parallax({
-		imageSrc: '../../gfx/london/expo-bg.jpg',
-		speed: '0.8'
-	});
-	$('#clients').parallax({
-		imageSrc: '../../gfx/london/clients-bg.jpg',
-		speed: '0.8',
-	});
-	$('#testimonial').parallax({
-		imageSrc: '../../gfx/london/testimonial-bg.jpg',
-		speed: '0.8',
-	});
-	$('#show-bg').parallax({
-		imageSrc: '../../gfx/london/show-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team-bg').parallax({
-		imageSrc: '../../gfx/london/team-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team2-bg').parallax({
-		imageSrc: '../../gfx/london/team2-bg.jpg',
-		speed: '0.8'
-	});
 	
+
+	// Get the modal
+	var modal = document.getElementsByClassName('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName('book');
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	$('.popup').click(function() { 
+		let popupName = $(this).data('popupdata');
+		$('#'+popupName).css("display", "flex")
+	})
+
+	$('.close').click(function() { 
+		$('.modal').css("display", "none")
+	})
+
+    // Form handle 
+    $(document).on("change", "#FullName", function () {
+        var c = $(this).val().split(" "), a = "", b = "";
+        $.each(c, function (e, d) {
+            e == c.length - 1 ? b += d : a += d + " "
+        });
+        a.slice(0, -1);
+        $('[data-field="fname"]').val(a);
+        $('[data-field="fname"]').html(a);
+        $('[data-field="lname"]').val(b);
+        $('[data-field="lname"]').html(b)
+    });
+
+    if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
+			$('#thankyou').css("display", "flex")
+    }    
 
 }); // READY END

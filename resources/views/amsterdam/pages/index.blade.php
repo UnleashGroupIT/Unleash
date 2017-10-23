@@ -3,7 +3,6 @@
 @section('title', 'Index')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
@@ -18,19 +17,24 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/amsterdam/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn book">Book Now</button>
+		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
-			<h4>Main sponsors</h4>
+			<!--<h4>Main sponsors</h4>-->
 			<div class="mainsponsors-wrap">
-				<div><img src="{{ URL::asset('gfx/amsterdam/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/workday-white.png') }}" alt="Workday"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/glassdoor-white.png') }}" alt="Glassdoor"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/workday-white.png') }}" alt="Workday"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/glassdoor-white.png') }}" alt="Glassdoor"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/talentBrew-white.png') }}" alt="TalentBrew"></div>
-				<div><img src="{{ URL::asset('gfx/amsterdam/workday-white.png') }}" alt="Workday"></div>
+			
+               <div> <a href="https://www.avature.net/" target="_blank" title="Avature"><img id="AvatureHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+               <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="ADPHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
+                <div><a href="https://www.benify.com/p/et-en/" target="_blank" title="Benify"><img id="BenifyHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/benify.svg') }}" alt="Benify"></a></div>
+                <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="CornerstoneHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                <div><a href="http://www-01.ibm.com/software/uk/smarterworkforce/" target="_blank" title="IBM"><img id="IBMHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
+               <div> <a href="http://www.ngahr.com/" target="_blank" title="NGA Human Resources"><img id="NGAHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/nga.svg') }}" alt="NGA Human Resources"></a></div>
+				<div><a href="https://www.oracle.com/uk/applications/human-capital-management/index.html" target="_blank" title="Oracle"><img id="OracleHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/oracle.svg') }}" alt="Oracle"></a></div>
+               <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="SuccessFactorsHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+               <div> <a href="http://www.talentsoft.com/" target="_blank" title="TalentSoft"><img id="TalentSoftHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/talentsoft.png') }}" alt="TalentSoft"></a></div>
+               <div> <a href="http://www.adeccogroup.com/" target="_blank" title="The Adeco Group"><img id="TheAdecoGroupHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/the-adeco-group.svg') }}" alt="The Adeco Group"></a></div>
+               <div> <a href="http://www.workday.com/" target="_blank" title="Workday"><img id="WorkdayHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/workday.svg') }}" alt="Workday"></a></div>			
+			
 			</div>
 		</section>
 	<!--Mainsponsors END-->
@@ -43,7 +47,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>Unleash is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="blue-btn">Join us now</button>
+			<button class="blue-btn popup" data-popupdata="brochure">Download Brochure</button>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -83,7 +87,7 @@
 
 					</div>
 				</div>
-				<button class="white-btn">Apply to Speak</button>
+				<button class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
@@ -98,7 +102,7 @@
 						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
 				</div>
 			</div>
-			<button class="blue-btn">Become a Speaker</button>
+			<button class="blue-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg speakers right"></div>
@@ -114,9 +118,9 @@
 	<section class="one-cntr counter">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.<p>
+			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.<p>
 			<div class="your-clock"></div>
-			<button class="amsblue-btn">Book now</button>
+			<button class="amsblue-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -136,7 +140,7 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/amsterdam/google.png') }}" alt="Google">
 			</div>
-			<button class="blue-btn">Get Your Ticket</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg expobg"></div>
@@ -151,17 +155,14 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
-				<p>In 2017 we have welcomed +7000 people from as many as +120 countries. Representing the world’s
-					leading organizations across all industry verticals, Unleash is the leading show on people and technology
-					both in terms of content and deals done. With a global footprint that influences millions of employees
-					worldwide no other community is having such a powerful impact on shaping the Future of Work!</p>
+				<p>In 2017 we have welcomed +8500 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, Unleash is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/amsterdam/coma.png') }}" alt="coma">
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="blue-btn">Get Your Ticket</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 	</section>
 	<!--Clients END-->
@@ -183,7 +184,7 @@
 					Josh Bersin, Gary Hamel and Simon Sinek, as well as investors, vendors, media - and perhaps most
 					importantly of all - the organizations they wish to serve.</p>
 			</div>
-			<button class="blue-btn">Apply to compete</button>
+			<button class="blue-btn popup" data-popupdata="compete">Apply to compete</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg startupbg"></div>
@@ -196,10 +197,9 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress
-						centre’s in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
-				<button class="blue-btn">More</button>
+				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
@@ -209,33 +209,10 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Unleash Yourself!  Book your place at the world’s leading and fastest growing show on the future of work.  Now is the time face the challenge of change and let your people loose to power your organization in the next decade of the 21st Century.</p>
-			<button class="amsblue-btn">Book now</button>
+			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
+			<button class="amsblue-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 	</section>
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-		  <div class="modal-header">
-		    <span class="close">&times;</span>
-		    <h3>Book Now</h3>
-		  </div>
-		  <div class="modal-body">
-		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
-                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Phone Number" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
-                <div class="popup-paragraph popup-policy ">
-                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-                </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn">
-            </form>
-		  </div>
-		</div>
-	</div>
 @endsection
 
 @section('footerscripts')

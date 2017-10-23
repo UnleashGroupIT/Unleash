@@ -60,20 +60,20 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 59:
+/***/ 96:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(60);
+module.exports = __webpack_require__(97);
 
 
 /***/ }),
 
-/***/ 60:
+/***/ 97:
 /***/ (function(module, exports) {
 
 
@@ -83,13 +83,15 @@ $(document).ready(function () {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 100) {
-			$(".hamb-wrp").addClass("black");
-			$("#header-menu").addClass("black");
+			$("#unleash-logo").addClass("show");
 		} else {
-			$(".hamb-wrp").removeClass("black");
-			$("#header-menu").removeClass("black");
+			$("#unleash-logo").removeClass("show");
 		}
 	})();
+
+	$(".hrg").click(function (e) {
+		$('#header-menu').removeClass("show");
+	});
 
 	(function () {
 		$('#hamburger').on('click', function () {
@@ -119,7 +121,7 @@ $(document).ready(function () {
 
 	//COUNTER
 
-	var clock = $('.your-clock').FlipClock(3600 * 24 * 3, {
+	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"), {
 		clockFace: 'DailyCounter',
 		countdown: true
 	});
@@ -249,35 +251,35 @@ $(document).ready(function () {
 	//PARALLAX
 
 	$('#keynote').parallax({
-		imageSrc: './gfx/arianna-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/arianna-bg.jpg',
 		speed: '0.8'
 	});
 	$('#keynote-2').parallax({
-		imageSrc: './gfx/speakers-bg2.jpg',
+		imageSrc: '../../gfx/amsterdam/speakers-bg2.jpg',
 		speed: '0.8'
 	});
 	$('#expo').parallax({
-		imageSrc: './gfx/expo-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/expo-bg.jpg',
 		speed: '0.8'
 	});
 	$('#clients').parallax({
-		imageSrc: './gfx/clients-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/clients-bg.jpg',
 		speed: '0.8'
 	});
 	$('#testimonial').parallax({
-		imageSrc: './gfx/testimonial-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/testimonial-bg.jpg',
 		speed: '0.8'
 	});
 	$('#show-bg').parallax({
-		imageSrc: './gfx/show-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/show-bg.jpg',
 		speed: '0.8'
 	});
 	$('#team-bg').parallax({
-		imageSrc: './gfx/team-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/team-bg.jpg',
 		speed: '0.8'
 	});
 	$('#team2-bg').parallax({
-		imageSrc: './gfx/team2-bg.jpg',
+		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
 		speed: '0.8'
 	});
 }); // READY END

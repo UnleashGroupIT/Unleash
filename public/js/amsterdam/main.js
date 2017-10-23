@@ -60,28 +60,24 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 99);
+/******/ 	return __webpack_require__(__webpack_require__.s = 108);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 100:
+/***/ 108:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(109);
+
+
+/***/ }),
+
+/***/ 109:
 /***/ (function(module, exports) {
 
 
 $(document).ready(function () {
-
-	(function () {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 100) {
-			$(".hamb-wrp").addClass("black");
-			$("#header-menu").addClass("black");
-		} else {
-			$(".hamb-wrp").removeClass("black");
-			$("#header-menu").removeClass("black");
-		}
-	})();
 
 	(function () {
 		$('#hamburger').on('click', function () {
@@ -111,7 +107,7 @@ $(document).ready(function () {
 
 	//COUNTER
 
-	var clock = $('.your-clock').FlipClock(3600 * 24 * 3, {
+	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"), {
 		clockFace: 'DailyCounter',
 		countdown: true
 	});
@@ -252,11 +248,9 @@ $(document).ready(function () {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 100) {
-			$(".hamb-wrp").addClass("black");
-			$("#header-menu").addClass("black");
+			$("#unleash-logo").addClass("show");
 		} else {
-			$(".hamb-wrp").removeClass("black");
-			$("#header-menu").removeClass("black");
+			$("#unleash-logo").removeClass("show");
 		}
 	});
 
@@ -270,41 +264,6 @@ $(document).ready(function () {
 		}
 	});
 
-	//PARALLAX
-
-	$('#keynote').parallax({
-		imageSrc: '../../gfx/amsterdam/arianna-bg.jpg',
-		speed: '0.8'
-	});
-	$('#keynote-2').parallax({
-		imageSrc: '../../gfx/amsterdam/speakers-bg2.jpg',
-		speed: '0.8'
-	});
-	$('#expo').parallax({
-		imageSrc: '../../gfx/amsterdam/expo-bg.jpg',
-		speed: '0.8'
-	});
-	$('#clients').parallax({
-		imageSrc: '../../gfx/amsterdam/clients-bg.jpg',
-		speed: '0.8'
-	});
-	$('#testimonial').parallax({
-		imageSrc: '../../gfx/amsterdam/testimonial-bg.jpg',
-		speed: '0.8'
-	});
-	$('#show-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/show-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/team-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team2-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
-		speed: '0.8'
-	});
-
 	// Get the modal
 	var modal = document.getElementsByClassName('myModal');
 
@@ -314,21 +273,34 @@ $(document).ready(function () {
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
-	$('.book').click(function () {
-		$('#myModal').css("display", "flex");
+	$('.popup').click(function () {
+		var popupName = $(this).data('popupdata');
+		$('#' + popupName).css("display", "flex");
 	});
+
 	$('.close').click(function () {
-		$('#myModal').css("display", "none");
+		$('.modal').css("display", "none");
 	});
+
+	// Form handle 
+	$(document).on("change", "#FullName", function () {
+		var c = $(this).val().split(" "),
+		    a = "",
+		    b = "";
+		$.each(c, function (e, d) {
+			e == c.length - 1 ? b += d : a += d + " ";
+		});
+		a.slice(0, -1);
+		$('[data-field="fname"]').val(a);
+		$('[data-field="fname"]').html(a);
+		$('[data-field="lname"]').val(b);
+		$('[data-field="lname"]').html(b);
+	});
+
+	if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
+		$('#thankyou').css("display", "flex");
+	}
 }); // READY END
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(100);
-
 
 /***/ })
 

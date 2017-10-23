@@ -50,7 +50,7 @@
 
 					</div>
 				</div>
-				<button class="white-btn">Apply to Speak</button>
+				<button class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
@@ -59,7 +59,7 @@
 		<div class="wrp">
 			<h2>Our Speakers</h2>
 				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at Unleash will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
-				<button class="blue-btn">Become a Speaker</button>
+				<button class="blue-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
 			</div>
 		</div>
 	</section>
@@ -71,9 +71,9 @@
 	<section class="one-cntr counter">
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
-			<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed.</p>
+			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="blue-btn">cta</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Book Now</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -83,10 +83,9 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress
-						centre’s in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
-				<button class="blue-btn">More</button>
+				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
