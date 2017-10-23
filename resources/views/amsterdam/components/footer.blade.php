@@ -14,7 +14,11 @@
 						</div>
 					</div>
 					<div class="footer-btns">
+					@if(Request::url() === 'http://www.unleashgroup.io/about')
+						<button class="blue-btn popup" data-popupdata="contact">Contact Us</button>
+					@else
 						<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
+					@endif
 						<button class="black-btn popup" data-popupdata="joinourcommunity">Subscribe</button>
 					</div>
 				</div>

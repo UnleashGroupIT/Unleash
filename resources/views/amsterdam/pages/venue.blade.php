@@ -48,7 +48,7 @@ the top financial centers in Europe.  Amsterdam is considered an alpha world cit
 					<h2>Venue</h2>
 					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
-				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
+				<button class="blue-btn popup" data-popupdata="joinourcommunity">Join Us</button>
 			</div>
 			<div class="map-pic">
 			</div>

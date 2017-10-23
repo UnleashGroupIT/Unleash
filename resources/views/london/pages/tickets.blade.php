@@ -13,10 +13,6 @@
 
 
 @section('maincontent')
-	
-		
-<div style="width:100%; text-align:left; margin:125px 0px 0 0; "><iframe src="//eventbrite.co.uk/tickets-external?eid=34137650632&ref=etckt" frameborder="0" height="1150" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:100%; text-align:left;" ></div></div>
-
 
 	   <!-- Ticket promo code -->
         <section id="ticket-promo-code" class="ticket-promo-code">
@@ -28,7 +24,12 @@
             </form>
 
         </section>
-        <!-- END Ticket promo code -->	
+        <!-- END Ticket promo code -->		
+		
+<div style="width:100%; text-align:left; margin:125px 0px 0 0; "><iframe src="//eventbrite.co.uk/tickets-external?eid=34137650632&ref=etckt" frameborder="0" height="1150" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:100%; text-align:left;" ></div></div>
+
+
+
 @endsection
 
 @section('footerscripts')
