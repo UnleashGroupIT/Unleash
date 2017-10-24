@@ -3,7 +3,9 @@
 namespace App;
 use Carbon\Carbon;
 
+use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class AgendaSessions extends Model
 {
@@ -35,6 +37,19 @@ class AgendaSessions extends Model
        
        $cleanText = html_entity_decode(strip_tags(\voku\helper\UTF8::cleanup($value)));
         return $cleanText;
-    }        
+    } 
 
+    public function apply(Builder $builder, Model $model)
+    {
+        $builder->OrderBy('start_time', 'ASC');
+    }	
+
+	    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('start_time', function (Builder $builder) {
+            $builder->OrderBy('start_time', 'ASC');
+        });
+    }
 }

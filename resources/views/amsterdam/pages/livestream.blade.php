@@ -80,6 +80,11 @@
 						$('#MainStreamContainer').html('');
 						var ifrm = document.createElement("iframe");
 							ifrm.setAttribute("src", stream[selectedStream]);
+							ifrm.setAttribute("style", "border: 0 none transparent");
+							ifrm.setAttribute("webkitallowfullscreen", " ");
+							ifrm.setAttribute("allowfullscreen", " ");
+							ifrm.setAttribute("frameborder", "no");
+							
 						   document.getElementById('MainStreamContainer').appendChild(ifrm);
 						   
 						$('#'+SelectedID+'Name').html(streamname[live.selected]); 						
@@ -89,6 +94,10 @@
 					$('#'+SelectedID).html('');
 					var ifrm2 = document.createElement("iframe");
 							ifrm2.setAttribute("src", stream[live.selected]);
+							ifrm2.setAttribute("style", "border: 0 none transparent");
+							ifrm2.setAttribute("webkitallowfullscreen", " ");
+							ifrm2.setAttribute("allowfullscreen", " ");
+							ifrm2.setAttribute("frameborder", "no");							
 							$('#'+SelectedID).append(ifrm2);
 							
 							

@@ -6,7 +6,7 @@
                 <h3 class="SessionStartTime">{{session.start_time.time}}</h3>
             </div>
             <div class="SessionContent">
-                <h3 class="SessionTitle" onClick="_gaq.push(['_trackEvent', 'Agenda', 'Toggle', 'WelcomeAndampIntroductionFromTheMc']);"> {{session.session_title}}  
+                <h3 class="SessionTitle" onClick="_gaq.push(['_trackEvent', 'Agenda', 'Toggle', 'Session']);"> {{session.session_title}}  
                     <i v-if="session.session_description || session.speakers[0]" class="fa fa-angle-down"></i>
                 </h3>
              </div><!-- Session Info -->
@@ -17,7 +17,7 @@
                         <div v-for="speakers in session.speakers" class="SessionInfoSpeaker">
                             <a :href="'speaker/'+speakers.id" :title="speakers.full_name"><img :src="'/storage/speakers/'+ speakers.img_url" :alt="speakers.full_name"></a>
                                 <div class="SessionInfoSpeakerDetails">
-                                    <p><a href="speakers#JasonAverbook" :title="speakers.full_name" :class="track.color_class+'Color'">{{speakers.full_name}}</a></p>
+                                    <p><a :href="'speaker/'+speakers.id" :title="speakers.full_name" :class="track.color_class+'Color'">{{speakers.full_name}}</a></p>
                                     <p class="SessionInfoSpeakerJobtitle">{{speakers.job_title}}</p>
                                     <p :class="track.color_class+'Color'"><a :href="speakers.website" target="_blank" title="Visit Website" class="track.color_class+'Color'">{{speakers.company}}</a></p>
                                 </div>
@@ -43,6 +43,7 @@ export default {
   data() {
 	return {
 		track: {},
+		extra: 0,
 	};
   
   },

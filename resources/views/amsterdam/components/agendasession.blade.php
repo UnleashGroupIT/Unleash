@@ -1,4 +1,4 @@
-           <!-- {{$session->session_title}} -->
+		  <!-- {{$session->session_title}} -->
                 <div class="Session
                 @if($session->category_id == 1)
                   {{$track->color_class}}Color
@@ -24,7 +24,7 @@
                                 <div class="SessionInfoSpeaker">
                                     <a href="speaker/{{$speakers->id}}" title="{{$speakers->full_name}}"><img src="/storage/speakers/{{$speakers->img_url}}" alt="{{$speakers->full_name}}"></a>
                                         <div class="SessionInfoSpeakerDetails">
-                                            <p><a href="speakers/{{$speakers->id}}" title="{{$speakers->full_name}}" class="{{$track->color_class}}Color">{{$speakers->full_name}}</a></p>
+                                            <p><a href="speakers/{{$speakers->id}}" title="{{$speakers->full_name}}" class="{{$track->color_class}}Color">{{voku::cleanup($speakers->full_name) }}</a></p>
                                             <p class="SessionInfoSpeakerJobtitle">{{$speakers->job_title}}</p>
                                             <p class="{{$track->color_class}}Color"><a href="{{$speakers->website}}" target="_blank" title="Visit Website" class="{{$track->color_class}}Color">{{$speakers->company}}</a></p>
                                         </div>

@@ -17,7 +17,7 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/amsterdam/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now</button>
+		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now 2018</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->
@@ -120,7 +120,7 @@
 			<h2>Hurry Up!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.<p>
 			<div class="your-clock"></div>
-			<button class="amsblue-btn popup" data-popupdata="booknow">Book now</button>
+			<button class="amsblue-btn popup" data-popupdata="booknow">Book now 2018</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -210,7 +210,7 @@
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<button class="amsblue-btn popup" data-popupdata="booknow">Book now</button>
+			<button class="amsblue-btn popup" data-popupdata="booknow">Book now 2018</button>
 		</div>
 	</section>
 @endsection

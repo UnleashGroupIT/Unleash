@@ -48,11 +48,13 @@
 				@if($speaker->referer)
 					@if($speaker->referer == 'http://www.unleashgroup.io/amsterdam/index')
 						{{ $speaker->referer }}#spkrgrd
-					@else 
+					@elseif ($speaker->referer == 'http://www.unleashgroup.io/amsterdam/agenda')
+					{{ route('ams.agenda') }}
+					@else 						
 						{{ $speaker->referer }}
 					@endif
 				@else
-					{{ route('amsterdam.speakers') }}
+					{{ route('ams.speakers') }}
 				@endif					
 				
 				"><img src="{{ URL::asset('gfx/amsterdam/x.svg') }}" alt="X"></a>

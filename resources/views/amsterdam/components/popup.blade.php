@@ -4,7 +4,7 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h3>Book Now</h3>
+		    <h3>Book Now For 2018</h3>
 		    <p>Thank you for your interest in our event.
 Please fill in all the fields below, and we'll get back to you soon.</p>
 		  </div>

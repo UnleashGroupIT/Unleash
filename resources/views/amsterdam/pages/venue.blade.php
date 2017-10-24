@@ -33,7 +33,7 @@ the top financial centers in Europe.  Amsterdam is considered an alpha world cit
 				<h2>Amsterdam</h2>
 				<p>Known for it’s tolerance and openness Amsterdam is the world’s most multicultural city, as well as being a leading financial centre, and a major arts and cultural capital. A leading world trading centre Amsterdam features on many indexes as one of the best places to live.</p>
 			</div>
-			<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Book now 2018</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg floorplancitybg"></div>
@@ -59,7 +59,7 @@ the top financial centers in Europe.  Amsterdam is considered an alpha world cit
 		<div class="wrp">
 			<h2>Hurry Up!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
+			<button class="blue-btn popup" data-popupdata="booknow">Book now 2018</button>
 		</div>
 	</section>
 @endsection

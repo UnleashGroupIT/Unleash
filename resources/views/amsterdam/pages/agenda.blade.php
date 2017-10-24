@@ -7,6 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/agenda.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/agenda_old.css') }}">
+	<style>
+	 .Session {
+		 cursor:pointer;
+	 }
+	 p{
+		line-height: 1.5em; 
+	 }
+	</style>
 @endsection
 
 @section('headerjs')
@@ -155,12 +163,29 @@
             <!-- Day 1 Data -->
             <div class="SessionBoxMobileOne SessionsList">
 
-        @foreach($track->sessions as $session)
-            @if ('24' == $session->start_time['day'])
-                 @include('amsterdam.components.agendasession')
-            @endif    
-        @endforeach
+						  
+        @if ($track->sessions->get(0)['extra_category'] == 'A')
+			<h3 class="ExtraSessionType">{{$track->track_name}} A</h3>
+			@foreach($track->sessions as $session)
+				@if ('24' == $session->start_time['day'] && $session->extra_category == 'A')
+					 @include('amsterdam.components.agendasession')
+				@endif    
+			@endforeach	
 
+			<h3 class="ExtraSessionType">{{$track->track_name}} B</h3>
+			@foreach($track->sessions as $session)
+				@if ('24' == $session->start_time['day'] && $session->extra_category == 'B')
+					 @include('amsterdam.components.agendasession')
+				@endif    
+			@endforeach				
+		@else
+						  
+			@foreach($track->sessions as $session)
+				@if ('24' == $session->start_time['day'])
+					 @include('amsterdam.components.agendasession')
+				@endif    
+			@endforeach
+		@endif
 
             </div>
             <!--  END Day 1 Data -->
@@ -175,12 +200,29 @@
                <h3 class="AgendaDateClass AgendaDateDayTwo">{{$track->event->second_day['textFormat']}} <span class="AgendaDateDay">DAY 2</span></h3>
              <!-- Day 1 Data -->
                <div class="SessionBoxMobileTwo SessionsList">
+					<?php $extraOne = 0; ?>
+					@if ($track->sessions->get(0)['extra_category'] == 'A')
+						<h3 class="ExtraSessionType">{{$track->track_name}} A</h3>
+						@foreach($track->sessions as $session)
+							@if ('25' == $session->start_time['day'] && $session->extra_category == 'A')
+								 @include('amsterdam.components.agendasession')
+							@endif    
+						@endforeach	
 
-                        @foreach($track->sessions as $session)
-                            @if ('25' == $session->start_time['day'])
-                                 @include('amsterdam.components.agendasession')
-                            @endif    
-                        @endforeach
+						<h3 class="ExtraSessionType">{{$track->track_name}} B</h3>
+						@foreach($track->sessions as $session)
+							@if ('25' == $session->start_time['day'] && $session->extra_category == 'B')
+								 @include('amsterdam.components.agendasession')
+							@endif    
+						@endforeach				
+					@else
+									  
+						@foreach($track->sessions as $session)
+							@if ('25' == $session->start_time['day'])
+								 @include('amsterdam.components.agendasession')
+							@endif    
+						@endforeach
+					@endif
   
 
               </div>

@@ -17,7 +17,7 @@
 					@if(Request::url() === 'http://www.unleashgroup.io/about')
 						<button class="blue-btn popup" data-popupdata="contact">Contact Us</button>
 					@else
-						<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
+						<button class="blue-btn popup" data-popupdata="booknow">Book now 2018</button>
 					@endif
 						<button class="black-btn popup" data-popupdata="joinourcommunity">Subscribe</button>
 					</div>

@@ -66,13 +66,13 @@ Route::get('/amsterdam/join', 'StaticPageController@about')->name('ams.join');
 Route::get('/amsterdam/venue', 'StaticPageController@venue')->name('ams.floorplan');
 
 
-Route::get('/amsterdam/livestream', function(){
+Route::get('/amsterdam/stream', function(){
 	return view('amsterdam.pages.livestream');
-})->name('ams.live');
+})->name('ams.livestream');
 
 Route::get('/amsterdam/live', function(){
 	return view('amsterdam.pages.streamform');
-});
+})->name('ams.live');
 Route::get('/amsterdam/thankyou', function(){
 	return view('amsterdam.pages.streamthankyou');
 });
