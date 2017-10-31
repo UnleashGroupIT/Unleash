@@ -4,9 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="UNLEASH"/>
 
-  
+ 	@yield('meta')
+
+	
      <!-- Browser color  -->
     <meta name="theme-color" content="#00a8e2">
     <!-- Windows Phone -->

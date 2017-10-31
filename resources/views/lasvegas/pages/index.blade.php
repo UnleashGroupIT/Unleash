@@ -1,5 +1,24 @@
 @extends('lasvegas.main')
 
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
+ 
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH - America"/>
+        <meta property="og:title" content="UNLEASH - America"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/america">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH - America">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}">
+@endsection
+
 @section('title', 'Index')
 
 @section('headercss')

@@ -4,9 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="UNLEASH"/>
 
- 
+ 	 @yield('meta')
 
      <!-- Browser color  -->
     <meta name="theme-color" content="#00a8e2">
@@ -34,10 +33,11 @@
     <link rel="manifest" href="{{ URL::asset('gfx/london/favicon/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/london/favicon/ms-icon-144x144.png') }}">
 
+	
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>UNLEASH Conference | @yield('title')</title>
+	<title>UNLEASH @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/reset.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">

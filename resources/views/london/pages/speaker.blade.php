@@ -1,6 +1,25 @@
 @extends('london.main')
 
-@section('title', 'Speaker')
+@section('meta')
+ <meta name="description" content="UNLEASH shows attract the most influential thought leaders in the Future of Work space, including Arianna Huffington and Sir Richard Branson.">
+ 
+ 	  <!-- Open Graph data -->
+	<meta property="og:site_name" content="UNLEASH London - Speaker"/>
+	<meta property="og:title" content="UNLEASH London - Speaker"/>
+	<meta property="og:description" content="UNLEASH shows attract the most influential thought leaders in the Future of Work space, including Arianna Huffington and Sir Richard Branson."/>
+	<meta property="og:url" content="http://www.unleashgroup.io/london">
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@hrtechworld">
+	<meta name="twitter:creator" content="@hrneurope">
+	<meta name="twitter:title" content="UNLEASH London - Speaker">
+	<meta name="twitter:description" content="UNLEASH shows attract the most influential thought leaders in the Future of Work space, including Arianna Huffington and Sir Richard Branson." />
+	<meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
+@endsection
+
+@section('title', 'London - Speaker')
 
 @section('headercss')
 	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speaker.css') }}">

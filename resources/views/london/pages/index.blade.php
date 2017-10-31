@@ -1,6 +1,26 @@
 @extends('london.main')
 
-@section('title', 'Index')
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
+ 
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH - London"/>
+        <meta property="og:title" content="UNLEASH - London"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/london">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH - London">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
+@endsection
+
+
+@section('title', '- London')
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakergrid.css') }}">
