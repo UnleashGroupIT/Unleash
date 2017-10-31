@@ -44,7 +44,7 @@
 			</div>
 			<div class="schedule-wrp">
 				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/amsterdam/clock.png') }}" alt="Date">
+					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
 						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
 
@@ -58,7 +58,7 @@
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>Our Speakers</h2>
-				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at Unleash will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
 				<button class="blue-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
 				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>

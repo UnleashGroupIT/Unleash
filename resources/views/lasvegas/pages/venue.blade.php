@@ -20,7 +20,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Aria Resort &amp; Casino - Las Vegas</h2>
-				<p>Unleash is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
+				<p>UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
 			</div>
 			<button class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
@@ -45,7 +45,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>Unleash is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
+					<p>UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
 				<button class="red-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
 			</div>

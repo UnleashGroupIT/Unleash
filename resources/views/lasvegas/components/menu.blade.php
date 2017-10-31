@@ -22,7 +22,7 @@
 							<div class="ul-wrp">
 								<ul class="first-ul">
 									<li class="amsterdam">
-										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 24-25 October 2017</a>
+										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
 									</li>
 									<li class="london">
 										<a href="{{ route('london.index') }}"><p>London</p> <span>|</span> 20-21 March 2018</a>
@@ -45,10 +45,10 @@
 				</ul>
 				<div class="social-booknow">
 					<div class="icos-wrp">
-						<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ URL::asset('gfx/amsterdam/youtube-white.png') }}" alt="Youtube"></a></div>
-						<div><a href="https://www.facebook.com/hrtechworld"><img src="{{ URL::asset('gfx/amsterdam/facebook-white.png') }}" alt="Facebook"></a></div>
-						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/amsterdam/linkedin-white.png') }}" alt="Linkedin"></a></div>
-						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/amsterdam/twitter-white.png') }}" alt="Twitter"></a></div>
+						<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ URL::asset('gfx/youtube-white.png') }}" alt="Youtube"></a></div>
+						<div><a href="https://www.facebook.com/hrtechworld"><img src="{{ URL::asset('gfx/facebook-white.png') }}" alt="Facebook"></a></div>
+						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/linkedin-white.png') }}" alt="Linkedin"></a></div>
+						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.png') }}" alt="Twitter"></a></div>
 					</div>
 					<div class="envelope popup" data-popupdata="joinourcommunity">
 					  <div class="icon-envelope"></div>

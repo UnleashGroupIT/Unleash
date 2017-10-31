@@ -20,7 +20,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Amsterdam RAI</h2>
-				<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.  One of the greatest small cities in the world and a city of tolerance and diversity, Amsterdam has all the advantages of a big city and is one of 
+				<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.  One of the greatest small cities in the world and a city of tolerance and diversity, Amsterdam has all the advantages of a big city and is one of 
 the top financial centers in Europe.  Amsterdam is considered an alpha world city and was ranked the second best city in which to live by the Economist Intelligence Unit.</p>
 			</div>
 			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
@@ -46,7 +46,7 @@ the top financial centers in Europe.  Amsterdam is considered an alpha world cit
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
 				<button class="blue-btn popup" data-popupdata="joinourcommunity">Join Us</button>
 			</div>

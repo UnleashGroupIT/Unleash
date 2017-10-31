@@ -523,7 +523,7 @@ section.one-cntr {
   text-align: center;
   padding: 2em 0; }
   section.one-cntr.counter {
-    background: url("../../gfx/amsterdam/counter-bg.jpg");
+    background: url("../../gfx/counter-bg.jpg");
     background-size: cover;
     background-position: center; }
   @media (min-width: 75em) {
@@ -808,7 +808,7 @@ footer {
     @media (min-width: 23em) {
       footer .footer-logo {
         width: auto; } }
-    @media (min-width: 120em) {
+    @media (min-width: 130em) {
       footer .footer-logo img {
         width: 8.9vw; } }
   footer .wrp {

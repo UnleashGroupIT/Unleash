@@ -20,7 +20,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>ExCel - London</h2>
-				<p>ExCeL London, will host Unleash in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier. Just a short ride by metro or car takes you to the heart of London, a leading global city, world cultural capital and leading financial center has been measured as the world’s most visited capital city. </p>
+				<p>ExCeL London, will host UNLEASH in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier. Just a short ride by metro or car takes you to the heart of London, a leading global city, world cultural capital and leading financial center has been measured as the world’s most visited capital city. </p>
 			</div>
 			<button class="green-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
@@ -45,7 +45,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>ExCeL London, will host Unleash in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier.</p>
+					<p>ExCeL London, will host UNLEASH in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier.</p>
 				</div>
 				<button class="green-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
 			</div>

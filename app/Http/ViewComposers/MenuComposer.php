@@ -30,9 +30,9 @@ class MenuComposer
      */
     public function compose(View $view)
     {
-        $json = file_get_contents('http://www.unleashgroup.io/news/wp-json/wp/v2/posts?per_page=1&_embed');
+        /*$json = file_get_contents('http://www.unleashgroup.io/news/wp-json/wp/v2/posts?per_page=1&_embed');
 
         $blogpost = json_decode($json, TRUE);
-        $view->with('blogpost', $blogpost);
+        $view->with('blogpost', $blogpost);*/
     }
 }

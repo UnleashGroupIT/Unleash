@@ -27,10 +27,15 @@ Route::get('/about', function () {
   return view('amsterdam.pages.about');
 })->name('ams.about');
 
-Route::get('/amsterdam/live23', function(){
+Route::get('/amsterdam/liveasd', function(){
+	dd(Request::server('HTTP_REFERER'));
 	return view('amsterdam.pages.livestream2');
 });
 
+Route::get('/amsterdam/asd', function(){
+	return redirect('/amsterdam/live23');
+	
+});
 	  
 //Amsterdam
 

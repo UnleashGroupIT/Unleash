@@ -22,7 +22,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Sponsors</h2>
-				<p>Unleash sponsors represent the Who’s Who of the world’s leading solution and service providers offering the most innovative and disruptive technologies to be found anywhere. Our sponsors have the solutions that are shaping the Future of Work and driving rapid transformation inside the the 21st century’s most forward thinking organizations. At Unleash the show is a happening place for optimism and wonder where inspiration bubbles, and where attendees can discuss and identify the latest technologies and how to implement them for the greatest potential impact.</p>
+				<p>UNLEASH sponsors represent the Who’s Who of the world’s leading solution and service providers offering the most innovative and disruptive technologies to be found anywhere. Our sponsors have the solutions that are shaping the Future of Work and driving rapid transformation inside the the 21st century’s most forward thinking organizations. At UNLEASH the show is a happening place for optimism and wonder where inspiration bubbles, and where attendees can discuss and identify the latest technologies and how to implement them for the greatest potential impact.</p>
 			</div>
 			<button class="blue-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
 		</div>
@@ -158,7 +158,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
 				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>

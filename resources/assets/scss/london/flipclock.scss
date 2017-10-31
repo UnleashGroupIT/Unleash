@@ -230,17 +230,23 @@
 .flip-clock-divider .flip-clock-label {
   position: absolute;
   top: -1.5em;
-  right: -135px;
   color: #fff;
   text-shadow: none;
 }
 
+.days .flip-clock-label {
+  right: -135px;
+}
+.hours .flip-clock-label {
+  right: -100px;
+}
+
 .flip-clock-divider.minutes .flip-clock-label {
-  right: -88px;
+  right: -115px;
 }
 
 .flip-clock-divider.seconds .flip-clock-label {
-  right: -91px;
+  right: -115px;
 }
 
 .flip-clock-dot.top {

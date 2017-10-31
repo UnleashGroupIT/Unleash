@@ -1,1 +1,13 @@
-.modal-header{color:#3c3}.blue-btn{background-color:#3c3!important}.blue-btn:hover{border-color:#3c3!important;color:#3c3!important;background-color:#fff!important}
+.modal-header {
+  color: #33cc33;
+}
+
+.blue-btn {
+  background-color: #33cc33 !important;
+}
+
+.blue-btn:hover {
+  border-color: #33cc33 !important;
+  color: #33cc33 !important;
+  background-color: #fff !important;
+}

@@ -4,9 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="Unleash"/>
+    <meta name="description" content="UNLEASH"/>
 
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+ 
 
      <!-- Browser color  -->
     <meta name="theme-color" content="#00a8e2">
@@ -37,7 +37,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>Unleash Confrence | @yield('title')</title>
+	<title>UNLEASH Conference | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/reset.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
@@ -75,22 +75,9 @@
 
 	 @include('london.components.menu')
 		<!--Menu icon in lower sizes.-->
-
-
-		<div class="hamb-wrp">
-			<!--Logo-->
-			<div id="unleash-logo">
-				<a href="/">
-					<h1>
-						<img src="{{ URL::asset('gfx/london/logo.png') }}" alt="Unleash logo" title="HOME">
-					</h1>
-				</a>
-			</div>
-			<div id="hamburger">
-				<div class="bar"></div>
-			</div>
-		</div>
-
+        <div id="hamburger">
+            <div class="bar"></div>
+        </div>
  	@yield('headercontent')		
 
 	<!--Mainsponsors END-->
@@ -106,6 +93,19 @@
 	 	@include('globalscript')
 	</div>
     @include('london.components.popup')
+
+
+ <!-- LiveChat code -->
+<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8465813;
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
+</script>
+<!-- END LiveChat code -->  
 </body>
 @yield('footerscripts')
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

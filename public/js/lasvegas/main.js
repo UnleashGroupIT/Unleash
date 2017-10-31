@@ -1,1 +1,316 @@
-!function(e){function a(o){if(s[o])return s[o].exports;var n=s[o]={i:o,l:!1,exports:{}};return e[o].call(n.exports,n,n.exports,a),n.l=!0,n.exports}var s={};a.m=e,a.c=s,a.d=function(e,s,o){a.o(e,s)||Object.defineProperty(e,s,{configurable:!1,enumerable:!0,get:o})},a.n=function(e){var s=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(s,"a",s),s},a.o=function(e,a){return Object.prototype.hasOwnProperty.call(e,a)},a.p="",a(a.s=124)}({124:function(e,a,s){e.exports=s(125)},125:function(e,a){$(document).ready(function(){$(".hrg").click(function(){$("#hamburger").removeClass("active"),$("#header-menu").removeClass("show"),$(".hamb-wrp").removeClass("vanish"),$(".bar").toggleClass("animate")}),function(){$(window).scrollTop()>=100?($(".hamb-wrp").addClass("black"),$("#header-menu").addClass("black")):($(".hamb-wrp").removeClass("black"),$("#header-menu").removeClass("black"))}(),function(){$("#hamburger").on("click",function(){$(this).hasClass("active")?($(this).removeClass("active"),$(".hamb-wrp").removeClass("vanish"),$("#header-menu").removeClass("show"),$("section#header-menu").addClass("fixed")):(window.scrollTo(0,0),$(this).addClass("active"),$(".hamb-wrp").addClass("vanish"),$("#header-menu").addClass("show"),$("section#header-menu").removeClass("fixed")),$(".bar").toggleClass("animate")})}();$(".your-clock").FlipClock(new Date("May 15, 2018 07:30:00"),{clockFace:"DailyCounter",countdown:!0});!function(){$.fn.visible=function(e){var a=$(this),s=$(window),o=s.scrollTop(),n=o+s.height(),i=a.offset().top,t=i+a.height(),l=!0===e?t:i;return(!0===e?i:t)<=n&&l>=o}}();var e=$(window),a=$(".sponsor"),s=$(".content-wrap"),o=$(".wrp");a.each(function(e,a){var a=$(a);a.visible(!0)&&a.addClass("visible")}),e.scroll(function(e){s.each(function(e,a){var a=$(a);a.visible(!0)?a.addClass("animated fadeInRight"):a.removeClass("animated fadeInRight")})}),e.scroll(function(e){o.each(function(e,a){var a=$(a);a.visible(!0)?a.addClass("animated fadeInTop"):a.removeClass("animated fadeInTop")})}),e.scroll(function(e){a.each(function(e,a){var a=$(a);a.visible(!0)&&a.addClass("come-in")})}),$(".mainsponsors-wrap > div").each(function(e){var a=$(this);setTimeout(function(){a.addClass("visible")},500*e)}),$(window).width()<1100&&$(".more > a").click(function(e){$(this).parent().hasClass("showmob")?$(this).parent().removeClass("showmob"):($(this).parent().addClass("showmob"),$(this).parent().siblings().removeClass("showmob")),e.preventDefault()}),$(window).resize(function(){$(window).width()<1100&&$(".more > a").click(function(e){$(this).parent().hasClass("showmob")?$(this).parent().removeClass("showmob"):($(this).parent().addClass("showmob"),$(this).parent().siblings().removeClass("showmob")),e.preventDefault()})}),$(".more").mouseover(function(){$("#header-menu").addClass("black")}),$(".dropdownbox").mouseleave(function(){0==$(window).scrollTop()&&$("#header-menu").removeClass("black")}),$(".more > a").mouseover(function(){$(".first-ul li").each(function(){$(this).show(),$(this).find(".second-ul").removeClass("visib")})}),$(".second-ul").mouseleave(function(){$(".first-ul li").each(function(){$(this).show(),$(this).find(".second-ul").removeClass("visib")})}),$(window).scroll(function(){$(window).scrollTop()>=100?$("#unleash-logo").addClass("show"):$("#unleash-logo").removeClass("show")}),$(window).resize(function(){$(window).trigger("resize.px.parallax"),$(window).width()>1100&&($("#header-menu").removeClass("show"),$("#hamburger").removeClass("active"),$(".bar").removeClass("animate"),$(".more").removeClass("showmob"))});document.getElementsByClassName("myModal"),document.getElementsByClassName("book"),document.getElementsByClassName("close")[0];$(".popup").click(function(){var e=$(this).data("popupdata");$("#"+e).css("display","flex")}),$(".close").click(function(){$(".modal").css("display","none")}),$(document).on("change","#FullName",function(){var e=$(this).val().split(" "),a="",s="";$.each(e,function(o,n){o==e.length-1?s+=n:a+=n+" "}),a.slice(0,-1),$('[data-field="fname"]').val(a),$('[data-field="fname"]').html(a),$('[data-field="lname"]').val(s),$('[data-field="lname"]').html(s)}),-1!=window.location.href.indexOf("#ThankYouForEnquiry")&&$("#thankyou").css("display","flex")})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 124);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 124:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(125);
+
+
+/***/ }),
+
+/***/ 125:
+/***/ (function(module, exports) {
+
+
+$(document).ready(function () {
+
+	$(".hrg").click(function () {
+		$('#hamburger').removeClass("active");
+		$('#header-menu').removeClass("show");
+		$('.hamb-wrp').removeClass("vanish");
+		$('.bar').toggleClass('animate');
+	});
+
+	(function () {
+		$('#hamburger').on('click', function () {
+			// ICON CLICK
+
+			if (!$(this).hasClass("active")) {
+
+				window.scrollTo(0, 0);
+				$(this).addClass("active");
+				$('.hamb-wrp').addClass("vanish");
+				$('#header-menu').addClass("show");
+				$('section#header-menu').removeClass("fixed");
+			} else {
+
+				$(this).removeClass("active");
+				$('.hamb-wrp').removeClass("vanish");
+
+				$('#header-menu').removeClass("show");
+
+				$('section#header-menu').addClass("fixed");
+			}
+
+			$('.bar').toggleClass('animate');
+		}); // ICON CLICK END
+	})(); // FUNC END
+
+
+	//COUNTER
+
+	var clock = $('.your-clock').FlipClock(new Date("May 15, 2018 07:30:00"), {
+		clockFace: 'DailyCounter',
+		countdown: true
+	});
+
+	//SPONSORS
+
+	(function () {
+		$.fn.visible = function (partial) {
+
+			var $t = $(this),
+			    $w = $(window),
+			    viewTop = $w.scrollTop(),
+			    viewBottom = viewTop + $w.height(),
+			    _top = $t.offset().top,
+			    _bottom = _top + $t.height(),
+			    compareTop = partial === true ? _bottom : _top,
+			    compareBottom = partial === true ? _top : _bottom;
+
+			return compareBottom <= viewBottom && compareTop >= viewTop;
+		};
+	})();
+
+	var win = $(window);
+
+	var allMods = $(".sponsor");
+	var allanimRight = $(".content-wrap");
+	var allanimTop = $(".wrp");
+
+	allMods.each(function (i, el) {
+		var el = $(el);
+		if (el.visible(true)) {
+			el.addClass("visible");
+		}
+	});
+
+	win.scroll(function (event) {
+
+		allanimRight.each(function (i, animRight) {
+			var animRight = $(animRight);
+			if (animRight.visible(true)) {
+				animRight.addClass("animated fadeInRight");
+			} else {
+				animRight.removeClass("animated fadeInRight");
+			}
+		});
+	});
+
+	win.scroll(function (event) {
+
+		allanimTop.each(function (i, allanimTop) {
+			var allanimTop = $(allanimTop);
+			if (allanimTop.visible(true)) {
+				allanimTop.addClass("animated fadeInTop");
+			} else {
+				allanimTop.removeClass("animated fadeInTop");
+			}
+		});
+	});
+
+	win.scroll(function (event) {
+
+		allMods.each(function (i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+				el.addClass("come-in");
+			}
+		});
+	}); //SPONSORS END
+
+
+	//MAINSPONSORS EFFECT
+
+	var mainsponsors = $(".mainsponsors-wrap > div");
+
+	mainsponsors.each(function (i) {
+		var el = $(this);
+		setTimeout(function () {
+			el.addClass("visible");
+		}, i * 500);
+	});
+
+	//MENU
+
+	var viewportWidth = $(window).width();
+	if (viewportWidth < 1100) {
+		$(".more > a").click(function (event) {
+
+			if (!$(this).parent().hasClass("showmob")) {
+				$(this).parent().addClass("showmob");
+				$(this).parent().siblings().removeClass("showmob");
+			} else {
+				$(this).parent().removeClass("showmob");
+			}
+			event.preventDefault();
+		});
+	}
+
+	$(window).resize(function () {
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 1100) {
+			$(".more > a").click(function (event) {
+				if (!$(this).parent().hasClass("showmob")) {
+					$(this).parent().addClass("showmob");
+					$(this).parent().siblings().removeClass("showmob");
+				} else {
+					$(this).parent().removeClass("showmob");
+				}
+				event.preventDefault();
+			});
+		}
+	});
+
+	$(".more").mouseover(function () {
+		$("#header-menu").addClass("black");
+	});
+	$(".dropdownbox").mouseleave(function () {
+		if ($(window).scrollTop() == 0) {
+			$("#header-menu").removeClass("black");
+		}
+	});
+
+	$(".more > a").mouseover(function () {
+		$(".first-ul li").each(function () {
+			$(this).show();
+			$(this).find(".second-ul").removeClass("visib");
+		});
+	});
+
+	$(".second-ul").mouseleave(function () {
+		$(".first-ul li").each(function () {
+			$(this).show();
+			$(this).find(".second-ul").removeClass("visib");
+		});
+	});
+
+	//SCROLLING BAR
+
+	$(window).scroll(function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 100) {
+			$("#unleash-logo").addClass("show");
+		} else {
+			$("#unleash-logo").removeClass("show");
+		}
+	});
+
+	$(window).resize(function () {
+		$(window).trigger('resize.px.parallax');
+		var viewportWidth = $(window).width();
+		if (viewportWidth > 1100) {
+			$('#header-menu').removeClass("show");
+			$('#hamburger').removeClass("active");
+			$('.bar').removeClass('animate');
+			$('.more').removeClass("showmob");
+		}
+	});
+
+	// Get the modal
+	var modal = document.getElementsByClassName('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName('book');
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	$('.popup').click(function () {
+		var popupName = $(this).data('popupdata');
+		$('#' + popupName).css("display", "flex");
+	});
+
+	$('.close').click(function () {
+		$('.modal').css("display", "none");
+	});
+
+	// Form handle 
+	$(document).on("change", "#FullName", function () {
+		var c = $(this).val().split(" "),
+		    a = "",
+		    b = "";
+		$.each(c, function (e, d) {
+			e == c.length - 1 ? b += d : a += d + " ";
+		});
+		a.slice(0, -1);
+		$('[data-field="fname"]').val(a);
+		$('[data-field="fname"]').html(a);
+		$('[data-field="lname"]').val(b);
+		$('[data-field="lname"]').html(b);
+	});
+
+	if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
+		$('#thankyou').css("display", "flex");
+	}
+}); // READY END
+
+/***/ })
+
+/******/ });

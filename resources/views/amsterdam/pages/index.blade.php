@@ -45,9 +45,9 @@
 	<!--Future of Work-->
 	<section class="one futureofwork">
 		<div class="wrp">
-			<h2>The Future of Work is Now!</h2>
-			<p>Unleash is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="blue-btn popup" data-popupdata="brochure">Download Brochure</button>
+			<h2>Thank You!</h2>
+			<p>A massive thank you to all of the delegates and sponsors who joined us at HR Tech World Amsterdam, our biggest show yet. We are taking our quest to improve the Future of Work for the better to the next level and have officially rebranded as UNLEASH. The fun kicks off again on March 20-21, 2018 in London!<br /><strong>See you there!</strong></p>
+			<a href="https://www.slideshare.net/HRTechWorld/clipboards/hr-tech-world-amsterdam-2017"><button class="blue-btn presentations">View Presentations</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -81,7 +81,7 @@
 			</div>
 			<div class="schedule-wrp">
 				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/amsterdam/clock.png') }}" alt="Date">
+					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
 						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
 
@@ -95,7 +95,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Speakers</h2>
-				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at Unleash will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
 				<div class="testim wdth">
 					<img class="coma" src="http://www.unleashgroup.io/gfx/amsterdam/coma.png" alt="coma">
 					<span>The best event in the world on HR and Technology</span>
@@ -129,10 +129,10 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>The Expo</h2>
-				<p>Meet the Who’s Who of the Future of Work at Unleash. Buyers of technology can take a year’s worth of
-					meetings in just 2 days and all under one roof as well as meet colleagues and counterparts. At Unleash
+				<p>Meet the Who’s Who of the Future of Work at UNLEASH. Buyers of technology can take a year’s worth of
+					meetings in just 2 days and all under one roof as well as meet colleagues and counterparts. At UNLEASH
 					the expo is more than just a showcase - it’s a hub full of interactivity, excitement, fun, friendship and
-					entertainment. Unleash - it’s where the future of work meets!</p>
+					entertainment. UNLEASH - it’s where the future of work meets!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/amsterdam/coma.png') }}" alt="coma">
@@ -155,7 +155,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
-				<p>In 2017 we have welcomed +8500 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, Unleash is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
+				<p>In 2017 we have welcomed 9000 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, UNLEASH is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/amsterdam/coma.png') }}" alt="coma">
@@ -176,7 +176,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Startup Zone</h2>
-				<p>Unleash is host to the world’s leading Startup Competition on the Future of Work and people technology.
+				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and people technology.
 					First staged in October 2011, it has successfully hosted 8 editions in total, including four in Amsterdam,
 					two in London and two in Paris. As the show has matured, what started as pro-bono work is now the
 					must-attend show for startups; it’s where they learn how to pitch their product to fans and critics alike
@@ -197,7 +197,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
 				</div>
 				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>
