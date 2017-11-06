@@ -1,13 +1,28 @@
 @extends('amsterdam.main')
 
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! If you value a workplace that promotes an entrepreneurial environment & accountability, exemplifies loyalty, offers the chaos that is growth, never compromises integrity and has a strong social conscience, then start your career with us by applying now!">
+ 		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH - About"/>
+        <meta property="og:title" content="UNLEASH - About"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! If you value a workplace that promotes an entrepreneurial environment & accountability, exemplifies loyalty, offers the chaos that is growth, never compromises integrity and has a strong social conscience, then start your career with us by applying now!"/>
+        <meta property="og:url" content="http://www.unleashgroup.io/about">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH - About">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! If you value a workplace that promotes an entrepreneurial environment & accountability, exemplifies loyalty, offers the chaos that is growth, never compromises integrity and has a strong social conscience, then start your career with us by applying now!" />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
+@endsection
+
 @section('title', 'About')
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/about.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/common.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/speakergrid.css') }}">	
-
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/flipclock.css') }}">
 @endsection
 
 @section('headerjs')
@@ -46,6 +61,36 @@
 			<div class="schedule-wrp">
 				<button class="white-btn popup" data-popupdata="contact">Contact Us</button>
 			</div>
+		</div>
+	</section>
+	<section id="careers" class="one-cntr">
+		<div class="wrp">
+			<h2>Join us!</h2>
+			<p>If you value a workplace that promotes an entrepreneurial environment & accountability, exemplifies loyalty, offers the chaos that is growth, never compromises integrity and has a strong social conscience, then start your career with us by applying now!</p>
+			<div class="job-wrp">
+				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662025423-head-of-digital-marketing" target="_blank">
+					<div class="job">
+						<p>Head of Digital Marketing</p>
+					</div>
+				</a>
+				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662011452-sponsorship-sales-manager-events" target="_blank">
+					<div class="job">
+						<p>Sponsorship Sales Manager – Events</p>
+					</div>
+				</a>
+				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662011129-sales-international-tradeshows" target="_blank">
+					<div class="job">
+						<p>Sales international tradeshows</p>
+					</div>
+				</a>
+				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662011619-senior-fullstack-developer" target="_blank">
+					<div class="job">
+						<p>Senior Fullstack Developer</p>
+					</div>
+				</a>
+				
+			</div>
+
 		</div>
 	</section>
 	

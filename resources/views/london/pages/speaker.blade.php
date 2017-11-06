@@ -45,14 +45,14 @@
 						<h3>{{ $speaker->job_title }}</h3>
 						<div class="social-icons">
 							@if($speaker->facebook)
-							<a href="{{ $speaker->facebook }}"><div><img src="{{ URL::asset('gfx/london/facebook.png') }}" alt="Facebook"></div></a>
+							<a href="{{ $speaker->facebook }}"><div><img src="{{ URL::asset('gfx/facebook.png') }}" alt="Facebook"></div></a>
 							@endif
 							<!-- <a href=""><div><img src="{{ URL::asset('gfx/london/youtube.png') }}" alt="Youtube"></div></a>-->
 							@if($speaker->twitter)
-							<a href="{{ $speaker->twitter }}"><div><img src="{{ URL::asset('gfx/london/twitter.png') }}" alt="Twitter"></div></a>
+							<a href="{{ $speaker->twitter }}"><div><img src="{{ URL::asset('gfx/twitter.png') }}" alt="Twitter"></div></a>
 							@endif
 							@if($speaker->linkedin)
-							<a href="{{ $speaker->linkedin }}"><div><img src="{{ URL::asset('gfx/london/linkedin.png') }}" alt="Linkedin"></div></a>
+							<a href="{{ $speaker->linkedin }}"><div><img src="{{ URL::asset('gfx/linkedin.png') }}" alt="Linkedin"></div></a>
 							@endif
 						</div>
 						<a href="{{$speaker->website }}" id="website">{{$speaker->website }}</a>

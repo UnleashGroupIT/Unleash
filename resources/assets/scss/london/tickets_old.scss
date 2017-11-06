@@ -8,14 +8,17 @@ body {
 
 /* Ticket promo code */
 #RegisterDiscount {
-border-radius: 2px;
-font-weight: 900;
+  border-radius: 2px;
+  font-weight: 900;
+  -webkit-appearance:button;
+  -moz-appearance:button;
+  appearance:button;
 }
 
 .ticket-promo-code {
     width: 100%;
     text-align: center;
-    margin-top: 7.8125vw;
+    padding-top: 7.8125vw;
 }
 
 .ticket-promo-code-headline {
@@ -52,7 +55,7 @@ font-weight: 900;
 
 @media (max-width: 1920px) {
     .ticket-promo-code{
-        margin-top: 150px;     
+        padding-top: 150px;     
     }
 
     .ticket-promo-code-headline {
@@ -419,7 +422,7 @@ header {
 #hamburger {
   position: fixed;
   right: 5%;
-  top: 0;
+  top: -4px;
   width: 35px;
   height: 57px;
   cursor: pointer; }

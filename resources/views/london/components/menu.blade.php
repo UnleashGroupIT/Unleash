@@ -35,12 +35,13 @@
 						</div>
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
+					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 				</ul>
 				<ul class="spec-menu london">
 					<li class="londoncolor"><strong>London </strong> 20-21 March 2018</li>
 					<li><a href="{{ route('london.index') }}">SHOW</a></li>
 					<li><a class="hrg" href="{{ route('london.index') }}#spkrgrd">SPEAKERS</a></li>
-					<li><a class="hrg" href="{{ route('london.index') }}#spnsrgrd">SPONSORS</a></li>
+					<li><a class="hrg" href="{{ route('london.index') }}#spnsrgrd">OUR CLIENTS</a></li>
 					<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
 					<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 				</ul>

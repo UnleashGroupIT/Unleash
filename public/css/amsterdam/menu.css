@@ -1,7 +1,3 @@
-.fixed {
-  position: fixed;
-}
-
 section#header-menu {
   width: 0;
   position: fixed;

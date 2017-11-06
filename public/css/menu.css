@@ -27,6 +27,7 @@ section.header-title {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  top: 0;
   z-index: 10;
   width: 100%;
   background-color: #000;
@@ -60,6 +61,7 @@ section.header-title {
   #unleash-logo {
     padding: .42vw .83vw;
     width: 14vw;
+    height: 2.5vw;
   }
 }
 
@@ -222,6 +224,13 @@ section.header-title {
 
 #desktop-menu .menu-ul li.more {
   position: relative;
+}
+
+@media (min-width: 75em) {
+  #desktop-menu .menu-ul li.more {
+    margin: auto 1em;
+    margin-right: 1.5em;
+  }
 }
 
 #desktop-menu .menu-ul li.more:hover .dropdownbox {
@@ -440,6 +449,7 @@ section.header-title {
 @media (min-width: 120em) {
   #desktop-menu .spec-menu {
     padding: .4vw .8vw;
+    top: 2.5vw;
   }
 }
 
@@ -493,6 +503,12 @@ section.header-title {
     margin-right: 2.5em;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+
+@media (min-width: 120em) {
+  #desktop-menu .spec-menu li:first-child {
+    font-size: .74vw;
   }
 }
 
@@ -761,6 +777,13 @@ section.header-title {
           box-shadow: 0px 0.5px 0px #fff;
 }
 
+@media (min-width: 125em) {
+  .envelope .icon-envelope {
+    width: 1.25vw;
+    height: .23vw;
+  }
+}
+
 .envelope .icon-envelope:before {
   z-index: 1;
   position: absolute;
@@ -886,6 +909,12 @@ section.header-title {
   top: -12px;
   left: -70px;
   content: "SIGN UP";
+}
+
+@media (min-width: 125em) {
+  .envelope:after {
+    font-size: .78vw;
+  }
 }
 
 @media (min-width: 30em) {

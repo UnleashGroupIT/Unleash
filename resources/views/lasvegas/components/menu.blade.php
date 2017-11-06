@@ -35,12 +35,13 @@
 						</div>
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
+					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 				</ul>
 				<ul class="spec-menu lasvegas">
 					<li class="lasvegascolor"><strong>America</strong> 15-16 May 2018</li>
 					<li><a href="{{ route('lasvegas.index') }}">SHOW</a></li>
 					<li><a class="hrg" href="{{ route('lasvegas.index') }}#spkrgrd">SPEAKERS</a></li>
-					<li><a class="hrg" href="{{ route('lasvegas.index') }}#spnsrgrd">SPONSORS</a></li>
+					<li><a class="hrg" href="{{ route('lasvegas.index') }}#spnsrgrd">OUR CLIENTS</a></li>
 					<li><a href="{{ route('lasvegas.floorplan') }}">VENUE</a></li>
 				</ul>
 				<div class="social-booknow">

@@ -1,6 +1,3 @@
-.fixed {
-  position: fixed; }
-
 .presentations{
   font-size: 13px!important;
 }
@@ -49,8 +46,7 @@ span {
       font-size: 1.3vw; } }
 
 header {
-  height: 92vh;
-  min-height: 400px;
+  min-height: 800px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -68,154 +64,7 @@ header {
       background-position: center; } }
   @media (min-width: 75em) {
     header {
-      position: relative; } }
-
-	  
-#AvatureHeaderLogo {
-    width: 5.364583vw;
-    height: 1.927083vw;
-}
-#ADPHeaderLogo {
-    width: 3.802083vw;
-    height: 1.718750vw;
-}
-#BenifyHeaderLogo {
-    width: 6.093750vw;
-    height: 1.666667vw;
-}
-#CornerstoneHeaderLogo {
-    width: 6.979167vw;
-    height: 1.354167vw;
-}
-#IBMHeaderLogo {
-    width: 3.541667vw;
-    height: 1.302083vw;
-}
-#NGAHeaderLogo {
-    width: 4.895833vw;
-    height: 2.239583vw;
-}
-#SuccessFactorsHeaderLogo {
-    width: 12.760417vw;
-    height: 1.562500vw;
-}
-#TalentSoftHeaderLogo{
-    width: 8.072917vw;
-    height: 1.406250vw;
-}
-#TheAdecoGroupHeaderLogo{
-    width: 7vw;
-}
-#WorkdayHeaderLogo {
-    width: 5.208333vw;
-    height: 2.083333vw;
-}
-
-#OracleHeaderLogo{
-    width: 7.208333vw;
-    height: 2.083333vw;
-}
-@media (max-width: 999px) {
-
-#AvatureHeaderLogo {
-    width: 12.364583vw;
-    height: 10.927083vw;
-}
-#ADPHeaderLogo {
-    width: 7.802083vw;
-    height: 10.718750vw;
-}
-#BenifyHeaderLogo {
-    width: 13.093750vw;
-    height: 10.666667vw;
-}
-#CornerstoneHeaderLogo {
-    width: 15.979167vw;
-    height: 10.354167vw;
-}
-#IBMHeaderLogo {
-    width: 9.541667vw;
-    height: 10.302083vw;
-}
-#NGAHeaderLogo {
-    width: 10.895833vw;
-    height: 10.239583vw;
-}
-#SuccessFactorsHeaderLogo {
-    width: 23.760417vw;
-    height: 10.562500vw;
-}
-#TalentSoftHeaderLogo{
-    width: 15.072917vw;
-    height: auto;
-    padding-bottom: 15px;
-}
-#TheAdecoGroupHeaderLogo{
-     width: 12vw;
-    height: 11vw;
-}
-#WorkdayHeaderLogo {
-    width: 13.208333vw;
-    height: 10.083333vw;
-}
-
-#OracleHeaderLogo{
-    width: 12.208333vw;
-    height: 9.083333vw;
-}
-
-}
-
-@media (max-width: 750px) {
-
-#AvatureHeaderLogo {
-	width: 22.364583vw;
-    height: 9.927083vw;
-}
-#ADPHeaderLogo {
-    width: 15.802083vw;
-    height: 9.718750vw;
-}
-#BenifyHeaderLogo {
-    width: 23.09375vw;
-    height: 9.666667vw;
-}
-#CornerstoneHeaderLogo {
-    width: 27.979167vw;
-    height: 9.354167vw;
-}
-#IBMHeaderLogo {
-    width: 15.541667vw;
-    height: 10.302083vw;
-}
-#NGAHeaderLogo {
-    width: 15.895833vw;
-    height: 10.239583vw;
-}
-#SuccessFactorsHeaderLogo {
-    width: 45.760417vw;
-    height: 10.562500vw;
-}
-#TalentSoftHeaderLogo{
-    width: 28.072917vw;
-    height: 10.406250vw;
-    padding-top:15px;
-}
-#TheAdecoGroupHeaderLogo{
-	width: 24vw;
-    height: 10vw;
-}
-#WorkdayHeaderLogo {
-    width: 22.208333vw;
-    height: 10.083333vw;
-}
-
-#OracleHeaderLogo{
-    width: 21.208333vw;
-    height: 9.083333vw;
-}
-
-}	  
+      position: relative; } }   
 
 .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .amsblue-btn, .white-btn, .trans-btn {
   padding: .8em;
@@ -311,27 +160,6 @@ header {
     color: #fff;
     background-color: #0090ff; }
 
-#book {
-  margin: 2em auto;
-  margin-top: auto;
-  display: none;
-  font-weight: bold;
-  width: 80%;
-  color: #fff;
-  background-color: #0090ff;
-  border-color: #0090ff; }
-  #book:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-color: #fff; }
-  @media (min-width: 40em) {
-    #book {
-      margin: 0 auto;
-      margin-bottom: 6em;
-      width: 205px; } }
-  @media (min-width: 120em) {
-    #book {
-      width: 10.7vw; } }
-
 .wrp {
   max-width: 1024px;
   margin: 0 auto;
@@ -369,34 +197,35 @@ section.one .wrp {
     text-align: center; } }
 section.one.mainsponsors {
   text-align: center;
-  margin-top: 7em; }
-  section.one.mainsponsors h4 {
-    display: inline-block;
-    background-color: #083643;
-    color: #fff;
-    padding: .3em 1em;
-    font-size: 1em;
-    margin-bottom: 2em; }
-    @media (min-width: 40em) {
-      section.one.mainsponsors h4 {
-        margin-bottom: 2em; } }
-    @media (min-width: 120em) {
-      section.one.mainsponsors h4 {
-        font-size: .84vw; } }
+  margin-top: auto;
+  span{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: .5em;
+    strong{
+      color:#0090ff;
+    }
+  }
+}
+  
   section.one.mainsponsors .mainsponsors-wrap {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 1em;
-    padding-bottom: 1em;
-    justify-content: space-between; }
-    @media (min-width: 40em) {
-      section.one.mainsponsors .mainsponsors-wrap {
-        justify-content: center; } }
+    padding: .4em 1em;
+    justify-content: center;
     @media (min-width: 55em) {
+      padding:1em;
+    }
+  }
+    @media (min-width: 125em) {
       section.one.mainsponsors .mainsponsors-wrap {
-        padding: 0 8em; } }
+        padding: 0 1vw;
+        padding-bottom: 1vw;
+      }
+    }
     section.one.mainsponsors .mainsponsors-wrap > div {
-      margin: 0 .5em;
+      margin: 1em .5em;
       margin-top: auto;
       flex-grow: 1;
       text-align: center;
@@ -404,22 +233,63 @@ section.one.mainsponsors {
       opacity: 0; }
       @media (min-width: 75em) {
         section.one.mainsponsors .mainsponsors-wrap > div {
-          margin: 0 2em;
+          margin: 0 1em;
           margin-top: auto;
           flex-grow: 0;
-          padding-bottom: 2em; } }
+          padding-bottom: 1em; } }
       section.one.mainsponsors .mainsponsors-wrap > div.visible {
         visibility: visible;
         opacity: 1;
         transition: all 4s; }
       section.one.mainsponsors .mainsponsors-wrap > div img {
-        width: 60px; }
-        @media (min-width: 40em) {
+        width: 75px; }
+        @media (min-width: 55em) {
           section.one.mainsponsors .mainsponsors-wrap > div img {
-            width: auto; } }
+            width: 100px; } }
         @media (min-width: 120em) {
           section.one.mainsponsors .mainsponsors-wrap > div img {
-            width: 5.85vw; } }
+            width: 5.3vw; } }
+
+      #adp,#ibm{
+        width: 60px;
+        @media (min-width: 55em) {
+          width: 80px;
+        }
+        @media (min-width: 125em) {
+          width: 4.2vw;
+        }
+      }
+      #cornerstone{
+        width: 110px;
+        @media (min-width: 55em) {
+          width: 135px;
+        }
+        @media (min-width: 125em) {
+          width: 7vw;
+        }
+      }
+      #nga{
+        width: 70px;
+        @media (min-width: 55em) {
+          width: 85px;
+        }
+        @media (min-width: 125em) {
+          width: 4.4vw;
+        }
+      }
+      #sap{
+        width: 200px;
+        @media (min-width: 125em) {
+          width: 10.5vw;
+        }
+      }
+
+      #book{
+        padding:.6em;
+        margin-bottom:.4em;
+        display: none; 
+      }
+
 
 section.two {
   display: flex;
@@ -959,8 +829,5 @@ footer {
         @media (min-width: 120em) {
           footer .social-icons > div img {
             width: 1.83vw; } }
-
-.parallax-mirror {
-  transition: none; }
 
 /*# sourceMappingURL=index.css.map */

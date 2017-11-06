@@ -1,6 +1,26 @@
 @extends('amsterdam.main')
 
-@section('title', 'Floorplan')
+@section('meta')
+ <meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018.">
+ 
+	  <!-- Open Graph data -->
+	<meta property="og:site_name" content="UNLEASH Amsterdam - Venue"/>
+	<meta property="og:title" content="UNLEASH Amsterdam - Venue"/>
+	<meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018."/>
+	<meta property="og:url" content="http://www.unleashgroup.io/amsterdam/venue">
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="{{ URL::asset('gfx/amsterdam/UNLEASH_metashare_amsterdam.png') }}" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@hrtechworld">
+	<meta name="twitter:creator" content="@hrneurope">
+	<meta name="twitter:title" content="UNLEASH Amsterdam - Venue">
+	<meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018." />
+	<meta name="twitter:image" content="{{ URL::asset('gfx/amsterdam/UNLEASH_metashare_amsterdam.png') }}">
+		
+@endsection
+
+@section('title', 'Venue')
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
@@ -12,20 +32,6 @@
 @endsection
 
 @section('maincontent')
-
-	<section class="two clients">
-		<div class="wrppr">
-			<div class="fix-bg floorplanbg"></div>
-		</div>
-		<div class="content">
-			<div class="content-wrap">
-				<h2>Amsterdam RAI</h2>
-				<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.  One of the greatest small cities in the world and a city of tolerance and diversity, Amsterdam has all the advantages of a big city and is one of 
-the top financial centers in Europe.  Amsterdam is considered an alpha world city and was ranked the second best city in which to live by the Economist Intelligence Unit.</p>
-			</div>
-			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
-		</div>
-	</section>
 
 	<section class="two expo">
 		<div class="content">
@@ -46,7 +52,7 @@ the top financial centers in Europe.  Amsterdam is considered an alpha world cit
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>Known for it’s tolerance and openness Amsterdam is the world’s most multicultural city, as well as being a leading financial centre, and a major arts and cultural capital.</p>
 				</div>
 				<button class="blue-btn popup" data-popupdata="joinourcommunity">Join Us</button>
 			</div>

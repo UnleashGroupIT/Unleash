@@ -27,6 +27,10 @@ Route::get('/about', function () {
   return view('amsterdam.pages.about');
 })->name('ams.about');
 
+Route::get('/about-prev', function () {
+  return view('amsterdam.pages.about-prev');
+})->name('ams.about-prev');
+
 Route::get('/amsterdam/liveasd', function(){
 	dd(Request::server('HTTP_REFERER'));
 	return view('amsterdam.pages.livestream2');
@@ -49,6 +53,7 @@ Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
 
 Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
+
 Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
@@ -67,6 +72,16 @@ Route::get('/amsterdam/about', function () {
 Route::get('/amsterdam/team', 'StaticPageController@about')->name('ams.team');
 
 Route::get('/amsterdam/join', 'StaticPageController@about')->name('ams.join');
+
+
+Route::get('/amsterdam/sponsor-pdf', function () {
+  return view('amsterdam.pages.sponsorshippdf');
+});
+
+Route::get('/amsterdam/index-prev', function () {
+  return view('amsterdam.pages.index-prev');
+});
+
 
 Route::get('/amsterdam/venue', 'StaticPageController@venue')->name('ams.floorplan');
 
@@ -101,6 +116,10 @@ Route::get('/london/speaker', function () {
 Route::get('/london/speakers', function () {
     return redirect('/london/index#spkrgrd');
 })->name('london.speakers');
+
+Route::get('/london/sponsor-pdf', function () {
+  return view('london.pages.sponsorshippdf');
+});
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
@@ -183,3 +202,7 @@ Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
 
 //Route::get('/lasvegas/tickets', 'StaticPageController@about')->name('lasvegas.tickets');
+
+Route::get('/america/sponsor-pdf', function () {
+  return view('lasvegas.pages.sponsorshippdf');
+});

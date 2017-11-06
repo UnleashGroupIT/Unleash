@@ -29,6 +29,7 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/floorplan.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/speakergrid.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/index.scss', 'public/css/amsterdam')
+   .sass('resources/assets/scss/amsterdam/index-prev.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/menu.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/reset.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/speaker.scss', 'public/css/amsterdam')
@@ -44,8 +45,7 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    
 mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
    .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
-   .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam')
-   .js('resources/assets/js/amsterdam/parallax.min.js', 'public/js/amsterdam');
+   .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 //London
 mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
@@ -71,8 +71,7 @@ mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
    }); 
 mix.js('resources/assets/js/london/agenda.js', 'public/js/london') 
 .js('resources/assets/js/london/flipclock.min.js', 'public/js/london')
-.js('resources/assets/js/london/main.js', 'public/js/london')
-.js('resources/assets/js/london/parallax.min.js', 'public/js/london');
+.js('resources/assets/js/london/main.js', 'public/js/london');
    
 //Lasvegas
 mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
@@ -98,8 +97,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
 
 mix.js('resources/assets/js/lasvegas/agenda.js', 'public/js/lasvegas') 
    .js('resources/assets/js/lasvegas/flipclock.min.js', 'public/js/lasvegas')
-   .js('resources/assets/js/lasvegas/main.js', 'public/js/lasvegas')
-   .js('resources/assets/js/lasvegas/parallax.min.js', 'public/js/lasvegas');   
+   .js('resources/assets/js/lasvegas/main.js', 'public/js/lasvegas');   
    
 mix.copy('resources/assets/gfx', 'public/gfx', false); // Don't flatten!   
    

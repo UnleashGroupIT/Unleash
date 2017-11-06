@@ -1,5 +1,24 @@
 @extends('lasvegas.main')
 
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
+ 
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH America - Speaker"/>
+        <meta property="og:title" content="UNLEASH America - Speaker"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/america">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH America - Speaker">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}">
+@endsection
+
 @section('title', 'Speaker')
 
 @section('headercss')
@@ -26,14 +45,14 @@
 						<h3>{{ $speaker->job_title }}</h3>
 						<div class="social-icons">
 							@if($speaker->facebook)
-							<a href="{{ $speaker->facebook }}"><div><img src="{{ URL::asset('gfx/lasvegas/facebook.png') }}" alt="Facebook"></div></a>
+							<a href="{{ $speaker->facebook }}"><div><img src="{{ URL::asset('gfx/facebook.png') }}" alt="Facebook"></div></a>
 							@endif
 							<!-- <a href=""><div><img src="{{ URL::asset('gfx/lasvegas/youtube.png') }}" alt="Youtube"></div></a>-->
 							@if($speaker->twitter)
-							<a href="{{ $speaker->twitter }}"><div><img src="{{ URL::asset('gfx/lasvegas/twitter.png') }}" alt="Twitter"></div></a>
+							<a href="{{ $speaker->twitter }}"><div><img src="{{ URL::asset('gfx/twitter.png') }}" alt="Twitter"></div></a>
 							@endif
 							@if($speaker->linkedin)
-							<a href="{{ $speaker->linkedin }}"><div><img src="{{ URL::asset('gfx/lasvegas/linkedin.png') }}" alt="Linkedin"></div></a>
+							<a href="{{ $speaker->linkedin }}"><div><img src="{{ URL::asset('gfx/linkedin.png') }}" alt="Linkedin"></div></a>
 							@endif
 						</div>
 						<a href="{{$speaker->website }}" id="website">{{$speaker->website }}</a>

@@ -38,7 +38,6 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/london/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->
@@ -62,7 +61,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>UNLEASH is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="green-btn popup" data-popupdata="joinourcommunity">Join us now</button>
+			<button class="green-btn popup" data-popupdata="booknow">Book Now</button>
 		</div>
 	</section>
 	<!--Future of Work END-->

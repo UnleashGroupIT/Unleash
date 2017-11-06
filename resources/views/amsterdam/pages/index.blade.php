@@ -36,23 +36,23 @@
 <section class="header-title">
 			<h1><img src="{{ URL::asset('gfx/amsterdam/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
 		</section>
-		<button id="book" class="pink-btn popup" data-popupdata="booknow">Book Now 2018</button>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->
+			<span>Lead Sponsors <strong>2017</strong></span>
 			<div class="mainsponsors-wrap">
 			
-               <div> <a href="https://www.avature.net/" target="_blank" title="Avature"><img id="AvatureHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
-               <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="ADPHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
-                <div><a href="https://www.benify.com/p/et-en/" target="_blank" title="Benify"><img id="BenifyHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/benify.svg') }}" alt="Benify"></a></div>
-                <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="CornerstoneHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                <div><a href="http://www-01.ibm.com/software/uk/smarterworkforce/" target="_blank" title="IBM"><img id="IBMHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
-               <div> <a href="http://www.ngahr.com/" target="_blank" title="NGA Human Resources"><img id="NGAHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/nga.svg') }}" alt="NGA Human Resources"></a></div>
-				<div><a href="https://www.oracle.com/uk/applications/human-capital-management/index.html" target="_blank" title="Oracle"><img id="OracleHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/oracle.svg') }}" alt="Oracle"></a></div>
-               <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="SuccessFactorsHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
-               <div> <a href="http://www.talentsoft.com/" target="_blank" title="TalentSoft"><img id="TalentSoftHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/talentsoft.png') }}" alt="TalentSoft"></a></div>
-               <div> <a href="http://www.adeccogroup.com/" target="_blank" title="The Adeco Group"><img id="TheAdecoGroupHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/the-adeco-group.svg') }}" alt="The Adeco Group"></a></div>
-               <div> <a href="http://www.workday.com/" target="_blank" title="Workday"><img id="WorkdayHeaderLogo" src="{{ URL::asset('gfx/amsterdam/header/sponsors/workday.svg') }}" alt="Workday"></a></div>			
+               <div> <a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+               <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="adp" src="{{ URL::asset('gfx/amsterdam/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
+                <div><a href="https://www.benify.com/p/et-en/" target="_blank" title="Benify"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/benify.svg') }}" alt="Benify"></a></div>
+                <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                <div><a href="http://www-01.ibm.com/software/uk/smarterworkforce/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/amsterdam/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
+               <div> <a href="http://www.ngahr.com/" target="_blank" title="NGA Human Resources"><img id="nga" src="{{ URL::asset('gfx/amsterdam/header/sponsors/nga.svg') }}" alt="NGA Human Resources"></a></div>
+				<div><a href="https://www.oracle.com/uk/applications/human-capital-management/index.html" target="_blank" title="Oracle"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/oracle.svg') }}" alt="Oracle"></a></div>
+               <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+               <div> <a href="http://www.talentsoft.com/" target="_blank" title="TalentSoft"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/talentsoft.png') }}" alt="TalentSoft"></a></div>
+               <div> <a href="http://www.adeccogroup.com/" target="_blank" title="The Adeco Group"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/the-adeco-group.svg') }}" alt="The Adeco Group"></a></div>
+               <div> <a href="http://www.workday.com/" target="_blank" title="Workday"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/workday.svg') }}" alt="Workday"></a></div>			
 			
 			</div>
 		</section>
@@ -81,7 +81,7 @@
 				<div class="h4wrp">
 					<div>
 						<img class="mic-logo" src="{{ URL::asset('gfx/amsterdam/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in Amsterdam</h4>
+						<h4 class="ky">Keynote in Amsterdam 2017</h4>
 					</div>
 					<img class="U-logo" src="{{ URL::asset('gfx/amsterdam/U.png') }}" alt="Unleash">
 				</div>
@@ -102,7 +102,7 @@
 				<div class="schedule">
 					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
-						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
+						<p><strong>day 01</strong></p>
 
 					</div>
 				</div>
@@ -216,7 +216,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to UNLEASH, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>Known for it’s tolerance and openness Amsterdam is the world’s most multicultural city, as well as being a leading financial centre, and a major arts and cultural capital.</p>
 				</div>
 				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>

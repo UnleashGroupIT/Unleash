@@ -35,11 +35,11 @@
 						</div>
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
+					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 				</ul>
 				<ul class="spec-menu amsterdam">
 					<li class="amsterdamcolor"><strong>Amsterdam</strong> 23-24 October 2018</li>
 					<li><a href="{{ route('ams.index') }}">SHOW</a></li>
-					<li><a href="{{ route('ams.agenda') }}">AGENDA</a></li>
 					<li><a href="{{ route('ams.speakers') }}">SPEAKERS</a></li>
 					<li><a href="{{ route('ams.sponsors') }}">SPONSORS</a></li>
 					<li><a href="{{ route('ams.floorplan') }}">VENUE</a></li>
