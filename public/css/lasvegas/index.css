@@ -69,8 +69,7 @@ span {
 }
 
 header {
-  height: 92vh;
-  min-height: 400px;
+  min-height: 800px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,93 +100,6 @@ header {
   header {
     position: relative;
   }
-}
-
-#AdobeHeaderLogo {
-  width: 2.154531vw;
-  height: 2.964531vw;
-  margin-right: 1.875000vw;
-  top: 0.6vw;
-}
-
-#LeadSponsorsLogo, #CornerstoneLogo {
-  top: .35vw;
-  width: 7.8vw;
-}
-
-#DeloitteLogo {
-  top: .25vw;
-  width: 6.7vw;
-}
-
-#IBMLogo {
-  top: .35vw;
-  width: 4.5vw;
-}
-
-#ADPHeaderLogo {
-  width: 3.802083vw;
-  height: 1.718750vw;
-}
-
-#AvatureHeaderLogo {
-  width: 5.520833vw;
-  height: 1.927083vw;
-  margin-right: 1.892708vw;
-  top: 0.1vw;
-}
-
-#CrossKnowledgeHeaderLogo {
-  width: 9.479167vw;
-  height: 1.979167vw;
-}
-
-#CornerstoneHeaderLogo {
-  width: 8.229167vw;
-  height: 1.614583vw;
-}
-
-/*
-#DeloitteHeaderLogo {
-    width: 6.250000vw;
-    height: 1.145833vw;
-    top: -0.3vw;
-    margin-right: 2.233333vw;
-}
-
-#IbmHeaderLogo {
-    width: 4.062500vw;
-    height: 1.510417vw;
-    margin-right: 2.096302vw;
-}
-*/
-#NGAHeaderLogo {
-  width: 5.729167vw;
-  height: 2.604167vw;
-  top: 0.6vw;
-  margin-right: 2.043229vw;
-}
-
-#SmartRecruitersHeaderLogo {
-  width: 8.541667vw;
-  height: 1.562500vw;
-  margin-right: 2.277083vw;
-}
-
-#SuccessFactorsHeaderLogo {
-  width: 13.75vw;
-  height: 1.61458vw;
-}
-
-#VirginPulseHeaderLogo {
-  width: 3.75vw;
-  height: 1.615vw;
-}
-
-#WorkdayHeaderLogo {
-  width: 5.000000vw;
-  height: 2.031250vw;
-  top: 0.3vw;
 }
 
 .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .red-btn, .white-btn, .trans-btn {
@@ -324,35 +236,6 @@ header {
   background-color: #e80f42;
 }
 
-#book {
-  margin: 2em auto;
-  margin-top: auto;
-  font-weight: bold;
-  width: 80%;
-  color: #fff;
-  background-color: #e80f42;
-  border-color: #e80f42;
-}
-
-#book:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: #fff;
-}
-
-@media (min-width: 40em) {
-  #book {
-    margin: 0 auto;
-    margin-bottom: 6em;
-    width: 205px;
-  }
-}
-
-@media (min-width: 120em) {
-  #book {
-    width: 10.7vw;
-  }
-}
-
 .hamb-wrp {
   width: 100%;
   height: 60px;
@@ -457,27 +340,18 @@ section.one .wrp button {
 
 section.one.mainsponsors {
   text-align: center;
+  margin-top: auto;
 }
 
-section.one.mainsponsors h4 {
-  display: inline-block;
-  background-color: #083643;
-  color: #fff;
-  padding: .3em 1em;
-  font-size: 1em;
-  margin-bottom: 2em;
+section.one.mainsponsors span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: .5em;
 }
 
-@media (min-width: 40em) {
-  section.one.mainsponsors h4 {
-    margin-bottom: 2em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.one.mainsponsors h4 {
-    font-size: .84vw;
-  }
+section.one.mainsponsors span strong {
+  color: #e80f42;
 }
 
 section.one.mainsponsors .mainsponsors-wrap {
@@ -485,35 +359,32 @@ section.one.mainsponsors .mainsponsors-wrap {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0 2em;
-  padding-bottom: 1em;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media (min-width: 40em) {
-  section.one.mainsponsors .mainsponsors-wrap {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+      flex-wrap: wrap;
+  padding: .4em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 55em) {
   section.one.mainsponsors .mainsponsors-wrap {
-    padding: 0 8em;
+    padding: 1em;
+  }
+}
+
+@media (min-width: 125em) {
+  section.one.mainsponsors .mainsponsors-wrap {
+    padding: 0 1vw;
+    padding-bottom: 1vw;
   }
 }
 
 section.one.mainsponsors .mainsponsors-wrap > div {
-  margin: .5em;
+  margin: 1em .5em;
   margin-top: auto;
-  padding-bottom: .5em;
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -521,12 +392,12 @@ section.one.mainsponsors .mainsponsors-wrap > div {
 
 @media (min-width: 75em) {
   section.one.mainsponsors .mainsponsors-wrap > div {
-    margin: 0 2em;
+    margin: 0 1em;
     margin-top: auto;
     -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    padding-bottom: 2em;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    padding-bottom: 1em;
   }
 }
 
@@ -538,18 +409,93 @@ section.one.mainsponsors .mainsponsors-wrap > div.visible {
 }
 
 section.one.mainsponsors .mainsponsors-wrap > div img {
-  width: 60px;
+  width: 75px;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 55em) {
   section.one.mainsponsors .mainsponsors-wrap > div img {
-    width: auto;
+    width: 100px;
   }
 }
 
 @media (min-width: 120em) {
   section.one.mainsponsors .mainsponsors-wrap > div img {
-    width: 5.85vw;
+    width: 5.3vw;
+  }
+}
+
+#adp, #ibm {
+  width: 60px;
+}
+
+@media (min-width: 55em) {
+  #adp, #ibm {
+    width: 80px;
+  }
+}
+
+@media (min-width: 125em) {
+  #adp, #ibm {
+    width: 4.2vw;
+  }
+}
+
+#adobe {
+  height: 35px;
+  width: auto;
+}
+
+@media (min-width: 55em) {
+  #adobe {
+    height: 45px;
+  }
+}
+
+@media (min-width: 125em) {
+  #adobe {
+    height: 2.4vw;
+  }
+}
+
+#cornerstone, #cross, #smart {
+  width: 110px;
+}
+
+@media (min-width: 55em) {
+  #cornerstone, #cross, #smart {
+    width: 135px;
+  }
+}
+
+@media (min-width: 125em) {
+  #cornerstone, #cross, #smart {
+    width: 7vw;
+  }
+}
+
+#nga {
+  width: 70px;
+}
+
+@media (min-width: 55em) {
+  #nga {
+    width: 85px;
+  }
+}
+
+@media (min-width: 125em) {
+  #nga {
+    width: 4.4vw;
+  }
+}
+
+#sap {
+  width: 200px;
+}
+
+@media (min-width: 125em) {
+  #sap {
+    width: 10.5vw;
   }
 }
 

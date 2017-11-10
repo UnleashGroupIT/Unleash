@@ -74,3 +74,9 @@ section.speakers-grid {
           @media (min-width: 120em) {
             section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
               font-size: .83vw; } }
+			  
+@media (max-width: 1000px) {
+.speakers-wrap a:last-child {
+    display:none;
+}
+}			  

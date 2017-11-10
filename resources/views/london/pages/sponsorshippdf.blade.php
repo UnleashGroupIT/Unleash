@@ -1,12 +1,12 @@
 @extends('london.main')
 @section('maincontent')
-<p style="margin-top:150px">
+<p style="margin: 10% auto 15% auto; width: 640px; max-width: 100%">
 This browser does not support inline PDFs. Please download the PDF to view it: <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">Download PDF</a>
 </p>
 @endsection
 
 <!doctype html>
-<html>
+<html class="se-pre-con">
 <head>
 <meta charset="utf-8">
 	<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
@@ -48,8 +48,24 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
 </head>
+<style type="text/css">
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background:url({{URL::asset('gfx/london/Preloader_green.gif')}} ) center no-repeat #fff;
+    }
 
+    body{
+        opacity: 0;
+    }
+</style>
 <body>
 <script src='https://www.hrn.io/vendor/pdfobject/pdfobject.js'></script>
 <script>
@@ -67,5 +83,11 @@ PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World
             }, 1);
         </script>
         <!-- END Crazy Egg -->
+        <script type="text/javascript">
+            setTimeout(function() {
+                document.getElementsByTagName('body')[0].style.opacity = "1";
+                document.getElementsByTagName('html')[0].style.background = "none";
+            }, 10000);
+        </script>
 </body>
 </html>

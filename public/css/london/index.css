@@ -60,8 +60,7 @@ span {
 }
 
 header {
-  height: 92vh;
-  min-height: 400px;
+  min-height: 800px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,166 +90,6 @@ header {
 @media (min-width: 75em) {
   header {
     position: relative;
-  }
-}
-
-@media (min-width: 75em) {
-  #instructure {
-    margin-bottom: 5px;
-  }
-}
-
-#AchieversHeaderLogo {
-  display: inline-block;
-  width: 7.1875vw;
-  height: 1.97916vw;
-  top: 0.260416vw;
-  margin-right: 2.733229vw;
-}
-
-#AvatureHeaderLogo {
-  display: inline-block;
-  width: 5.495781vw;
-  height: 1.947708vw;
-  top: 0.208333vw;
-}
-
-#BenifyHeaderLogo {
-  display: inline-block;
-  width: 7.1875vw;
-  height: 1.97916vw;
-  top: 0.260416vw;
-  margin-right: 2.733229vw;
-}
-
-#CornerstoneHeaderLogo {
-  display: inline-block;
-  width: 8.1770833vw;
-  height: 1.5625vw;
-}
-
-#IbmHeaderLogo {
-  display: inline-block;
-  height: 1.560729vw;
-  width: 4.192708vw;
-  margin-right: 2.64375vw;
-}
-
-#OracleHeaderLogo {
-  display: inline-block;
-  height: 0.767031vw;
-  width: 6.065104vw;
-  margin-right: 2.557865vw;
-  top: -0.46875vw;
-}
-
-#SuccessFactorsHeaderLogo {
-  display: inline-block;
-  width: 13.85416vw;
-  height: 1.66vw;
-}
-
-/*#SuccessFactorsHeaderLogoMobile {
-    display:none;
-}*/
-#WorkdayHeaderLogo {
-  display: inline-block;
-  width: 4.996198vw;
-  height: 2.009688vw;
-  top: 0.520833vw;
-}
-
-@media (max-width: 1000px) {
-  #AvatureHeaderLogo {
-    width: 12.364583vw;
-    height: 10.927083vw;
-  }
-  #ADPHeaderLogo {
-    width: 7.802083vw;
-    height: 10.718750vw;
-  }
-  #BenifyHeaderLogo {
-    width: 13.093750vw;
-    height: 10.666667vw;
-  }
-  #CornerstoneHeaderLogo {
-    width: 15.979167vw;
-    height: 10.354167vw;
-  }
-  #IBMHeaderLogo {
-    width: 9.541667vw;
-    height: 10.302083vw;
-  }
-  #NGAHeaderLogo {
-    width: 10.895833vw;
-    height: 10.239583vw;
-  }
-  #SuccessFactorsHeaderLogo {
-    width: 23.760417vw;
-    height: 10.562500vw;
-  }
-  #TalentSoftHeaderLogo {
-    width: 15.072917vw;
-    height: 10.406250vw;
-  }
-  #TheAdecoGroupHeaderLogo {
-    width: 12vw;
-    height: 11vw;
-  }
-  #WorkdayHeaderLogo {
-    width: 13.208333vw;
-    height: 10.083333vw;
-  }
-  #OracleHeaderLogo {
-    width: 12.208333vw;
-    height: 9.083333vw;
-  }
-}
-
-@media (max-width: 640px) {
-  #AvatureHeaderLogo {
-    width: 22.364583vw;
-    height: 9.927083vw;
-  }
-  #ADPHeaderLogo {
-    width: 15.802083vw;
-    height: 9.718750vw;
-  }
-  #BenifyHeaderLogo {
-    width: 23.09375vw;
-    height: 9.666667vw;
-  }
-  #CornerstoneHeaderLogo {
-    width: 27.979167vw;
-    height: 9.354167vw;
-  }
-  #IBMHeaderLogo {
-    width: 15.541667vw;
-    height: 10.302083vw;
-  }
-  #NGAHeaderLogo {
-    width: 15.895833vw;
-    height: 10.239583vw;
-  }
-  #SuccessFactorsHeaderLogo {
-    width: 45.760417vw;
-    height: 10.562500vw;
-  }
-  #TalentSoftHeaderLogo {
-    width: 28.072917vw;
-    height: 10.406250vw;
-  }
-  #TheAdecoGroupHeaderLogo {
-    width: 24vw;
-    height: 10vw;
-  }
-  #WorkdayHeaderLogo {
-    width: 22.208333vw;
-    height: 10.083333vw;
-  }
-  #OracleHeaderLogo {
-    width: 21.208333vw;
-    height: 9.083333vw;
   }
 }
 
@@ -388,35 +227,6 @@ header {
   background-color: #36b1bf;
 }
 
-#book {
-  margin: 2em auto;
-  margin-top: auto;
-  font-weight: bold;
-  width: 80%;
-  color: #fff;
-  background-color: #33cc33;
-  border-color: #33cc33;
-}
-
-#book:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: #fff;
-}
-
-@media (min-width: 40em) {
-  #book {
-    margin: 0 auto;
-    margin-bottom: 6em;
-    width: 205px;
-  }
-}
-
-@media (min-width: 120em) {
-  #book {
-    width: 10.7vw;
-  }
-}
-
 .hamb-wrp {
   width: 100%;
   height: 60px;
@@ -521,27 +331,18 @@ section.one .wrp button {
 
 section.one.mainsponsors {
   text-align: center;
+  margin-top: auto;
 }
 
-section.one.mainsponsors h4 {
-  display: inline-block;
-  background-color: #083643;
-  color: #fff;
-  padding: .3em 1em;
-  font-size: 1em;
-  margin-bottom: 2em;
+section.one.mainsponsors span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: .5em;
 }
 
-@media (min-width: 40em) {
-  section.one.mainsponsors h4 {
-    margin-bottom: 2em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.one.mainsponsors h4 {
-    font-size: .84vw;
-  }
+section.one.mainsponsors span strong {
+  color: #3c3;
 }
 
 section.one.mainsponsors .mainsponsors-wrap {
@@ -549,35 +350,32 @@ section.one.mainsponsors .mainsponsors-wrap {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0 2em;
-  padding-bottom: 1em;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media (min-width: 40em) {
-  section.one.mainsponsors .mainsponsors-wrap {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+      flex-wrap: wrap;
+  padding: .4em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 55em) {
   section.one.mainsponsors .mainsponsors-wrap {
-    padding: 0 8em;
+    padding: 1em;
+  }
+}
+
+@media (min-width: 125em) {
+  section.one.mainsponsors .mainsponsors-wrap {
+    padding: 0 1vw;
+    padding-bottom: 1vw;
   }
 }
 
 section.one.mainsponsors .mainsponsors-wrap > div {
-  margin: .5em;
+  margin: 1em .5em;
   margin-top: auto;
-  padding-bottom: .5em;
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -585,12 +383,11 @@ section.one.mainsponsors .mainsponsors-wrap > div {
 
 @media (min-width: 75em) {
   section.one.mainsponsors .mainsponsors-wrap > div {
-    margin: 0 1em;
-    margin-top: auto;
+    margin: auto 1em;
     -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    padding-bottom: 2em;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    padding-bottom: 1em;
   }
 }
 
@@ -602,18 +399,60 @@ section.one.mainsponsors .mainsponsors-wrap > div.visible {
 }
 
 section.one.mainsponsors .mainsponsors-wrap > div img {
-  width: 60px;
+  width: 75px;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 55em) {
   section.one.mainsponsors .mainsponsors-wrap > div img {
-    width: auto;
+    width: 100px;
   }
 }
 
 @media (min-width: 120em) {
   section.one.mainsponsors .mainsponsors-wrap > div img {
-    width: 5.85vw;
+    width: 5.3vw;
+  }
+}
+
+#cornerstone, #ins, #oracle {
+  width: 110px;
+}
+
+@media (min-width: 55em) {
+  #cornerstone, #ins, #oracle {
+    width: 135px;
+  }
+}
+
+@media (min-width: 125em) {
+  #cornerstone, #ins, #oracle {
+    width: 7vw;
+  }
+}
+
+#sap {
+  width: 200px;
+}
+
+@media (min-width: 125em) {
+  #sap {
+    width: 10.5vw;
+  }
+}
+
+#ach {
+  width: 100px;
+}
+
+@media (min-width: 55em) {
+  #ach {
+    width: 120px;
+  }
+}
+
+@media (min-width: 125em) {
+  #ach {
+    width: 6.3vw;
   }
 }
 
@@ -1504,15 +1343,5 @@ footer .social-icons > div img:hover {
 @media (min-width: 120em) {
   footer .social-icons > div img {
     width: 1.83vw;
-  }
-}
-
-section.one.mainsponsors .mainsponsors-wrap > div .sppn {
-  width: 8.1770833vw;
-}
-
-@media (max-width: 640px) {
-  section.one.mainsponsors .mainsponsors-wrap > div .sppn {
-    width: 27.979167vw;
   }
 }

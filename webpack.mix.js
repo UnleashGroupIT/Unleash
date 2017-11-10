@@ -17,13 +17,14 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.sass('resources/assets/scss/menu.scss', 'public/css')
    .sass('resources/assets/scss/popup.scss', 'public/css')
+   .sass('resources/assets/scss/footer.scss', 'public/css')
    .sass('resources/assets/scss/404.scss', 'public/css');
 
 
 //Amsterdam   
 mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/agenda.scss', 'public/css/amsterdam')
-   .sass('resources/assets/scss/amsterdam/common.scss', 'public/css/amsterdam')
+   //.sass('resources/assets/scss/amsterdam/common.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/agenda_old.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/floorplan.scss', 'public/css/amsterdam')
@@ -48,12 +49,12 @@ mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam')
    .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 //London
-mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/common.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/agenda_old.scss', 'public/css/london')
+mix.sass('resources/assets/scss/london/common.scss', 'public/css/london')
+  // .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
+   //.sass('resources/assets/scss/london/agenda_old.scss', 'public/css/london')
    .sass('resources/assets/scss/london/flipclock.scss', 'public/css/london')
    .sass('resources/assets/scss/london/floorplan.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/travel.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speakergrid.scss', 'public/css/london')
    .sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/menu.scss', 'public/css/london')

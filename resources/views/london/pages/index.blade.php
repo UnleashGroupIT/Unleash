@@ -40,15 +40,16 @@
 		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
+			<span>Lead Sponsors <strong>2018</strong></span>
 			<!--<h4>Main sponsors</h4>-->
 			<div class="mainsponsors-wrap">
 					
-					<div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img class="sppn" src="{{ URL::asset('gfx/london/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
-			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img id="AvatureHeaderLogo" src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
-                    <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="CornerstoneHeaderLogo" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                    <div id="instructure"><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
-                    <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
-                    <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="SuccessFactorsHeaderLogo" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+					<div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img id="ach" src="{{ URL::asset('gfx/london/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
+			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+                    <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                    <div><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" id="ins" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
+                    <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
+                    <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
 
 			</div>
 		</section>
@@ -98,7 +99,7 @@
 				<div class="schedule">
 					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
-						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
+						<p><strong>day 01</strong> / Main Auditorium</p>
 
 					</div>
 				</div>

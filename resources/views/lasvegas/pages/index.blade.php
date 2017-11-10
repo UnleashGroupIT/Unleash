@@ -39,20 +39,19 @@
 		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
-			<h4>2017 SPONSORS</h4>
+			<span>Lead Sponsors <strong>2018</strong></span>
 			<div class="mainsponsors-wrap">
-                   <!-- <div><a href="https://hrtechcongress.com/lasvegas/" target="_blank" title="Lead Sponsors"><img id="LeadSponsorsLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/lead-spons.png') }}" alt="Lead Sponsors"></a></div>-->
-                   <div> <a href="https://acrobat.adobe.com/uk/en/sign.html" target="_blank" title="Adobe"><img id="AdobeHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adobe.svg') }}" alt="Adobe"></a></div>
-                   <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="ADPHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
-                   <div> <a href="http://www.avature.net/" target="_blank" title="Avature"><img id="AvatureHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
-                    <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="CrossKnowledgeHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
-                   <div> <a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone"><img id="CornerstoneLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                   <div> <a href="https://www.deloitte.com/" target="_blank" title="Deloitte"><img id="DeloitteLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/deloitte.svg') }}" alt="Deloitte"></a></div>
-                  <div>  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="IBMLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
-                   <div> <a href="http://www.ngahr.co.uk/" target="_blank" title="ngahr"><img id="NGAHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/nga.svg') }}" alt="ngahr"></a></div>
-                  <div><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="SmartRecruitersHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
-                   <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="SuccessFactorsHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
-                    <div><a href="https://www.workday.com/" target="_blank" title="Workday"><img id="WorkdayHeaderLogo" src="{{ URL::asset('gfx/lasvegas/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
+                   <div> <a href="https://acrobat.adobe.com/uk/en/sign.html" target="_blank" title="Adobe"><img id="adobe" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adobe.svg') }}" alt="Adobe"></a></div>
+                   <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="adp" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
+                   <div> <a href="http://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+                    <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="cross" src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
+                   <div> <a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone"><img id="cornerstone" src="{{ URL::asset('gfx/lasvegas/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                   <div> <a href="https://www.deloitte.com/" target="_blank" title="Deloitte"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/deloitte.svg') }}" alt="Deloitte"></a></div>
+                  <div>  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
+                   <div> <a href="http://www.ngahr.co.uk/" target="_blank" title="ngahr"><img id="nga" src="{{ URL::asset('gfx/lasvegas/header/sponsors/nga.svg') }}" alt="ngahr"></a></div>
+                  <div><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
+                   <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+                    <div><a href="https://www.workday.com/" target="_blank" title="Workday"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
 
 			</div>
 		</section>

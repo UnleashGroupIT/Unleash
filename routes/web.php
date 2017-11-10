@@ -11,6 +11,7 @@
 |
 */
 
+/*********** GLOBAL ************/
 Route::get('/index', function () {
     return redirect('/news/');
 });
@@ -36,12 +37,9 @@ Route::get('/amsterdam/liveasd', function(){
 	return view('amsterdam.pages.livestream2');
 });
 
-Route::get('/amsterdam/asd', function(){
-	return redirect('/amsterdam/live23');
-	
-});
+Route::get('/wpredirect', 'StaticPageController@wpredirect');
 	  
-//Amsterdam
+/*********** Amsterdam ************/
 
 Route::get('/amsterdam/', 'MainPageController@index')->name('ams.index');
 
@@ -53,7 +51,6 @@ Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
 
 Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
-
 Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
@@ -64,7 +61,7 @@ Route::get('/amsterdam/startups', 'StartupsController@index')->name('ams.startup
 
 Route::get('/amsterdam/agenda', 'AgendaController@index')->name('ams.agenda');
 
-//Route::get('/amsterdam/about', 'StaticPageController@about')->name('ams.about');
+
 Route::get('/amsterdam/about', function () {
     return redirect('/about');
 });
@@ -81,7 +78,6 @@ Route::get('/amsterdam/sponsor-pdf', function () {
 Route::get('/amsterdam/index-prev', function () {
   return view('amsterdam.pages.index-prev');
 });
-
 
 Route::get('/amsterdam/venue', 'StaticPageController@venue')->name('ams.floorplan');
 
@@ -100,7 +96,8 @@ Route::get('/amsterdam/thankyou', function(){
 //Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
 
 
-//London
+/*********** London ************/
+
 Route::get('/london/', 'MainPageController@index')->name('london.index');
 
 Route::get('/london/index', 'MainPageController@index')->name('london.index');
@@ -117,9 +114,23 @@ Route::get('/london/speakers', function () {
     return redirect('/london/index#spkrgrd');
 })->name('london.speakers');
 
+Route::get('/london/travel', function () {
+  return view('london.pages.travel');
+});
+
 Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
 });
+
+Route::get('/london/delegate-brochure', function () {
+  return view('london.pages.delegatepdf');
+});
+
+Route::get('/london/room-availability', function () {
+  return view('london.pages.roompdf');
+});
+
+
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
@@ -150,6 +161,8 @@ Route::get('/london/tickets', function(){
 	return view('london.pages.tickets');
 })->name('london.tickets');
 
+
+/*********** America ************/
 
 Route::get('/lasvegas/', function () {
     return redirect('/america/');
