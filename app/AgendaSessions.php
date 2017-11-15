@@ -1,0 +1,55 @@
+<?php
+
+namespace App;
+use Carbon\Carbon;
+
+use Illuminate\Database\Eloquent\Scope;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+
+class AgendaSessions extends Model
+{
+
+     public function speakers(){
+
+        	return $this->belongsToMany('App\Speakers', 'sessionspeakers','session_id', 'speaker_id')
+        	   ->withTimestamps();
+   		
+    }
+
+    public function getStartTimeAttribute($value){
+    	$dt = Carbon::parse($value);
+
+    	$dateData['year'] = $dt->year;
+    	$dateData['month'] = $dt->month;
+    	$dateData['day'] =  $dt->day;
+    	$dateData['time'] = $dt->hour.':'.sprintf("%02d", $dt->minute);
+    	return $dateData;
+    }
+
+    public function getSessionTitleAttribute($value){
+       
+       $cleanText = html_entity_decode(\voku\helper\UTF8::cleanup($value));
+        return $cleanText;
+    }    
+
+    public function getSessionDescriptionAttribute($value){
+       
+       $cleanText = html_entity_decode(strip_tags(\voku\helper\UTF8::cleanup($value)));
+        return $cleanText;
+    } 
+
+    public function apply(Builder $builder, Model $model)
+    {
+        $builder->OrderBy('start_time', 'ASC');
+    }	
+
+	    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('start_time', function (Builder $builder) {
+            $builder->OrderBy('start_time', 'ASC');
+        });
+    }
+}

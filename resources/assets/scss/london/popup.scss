@@ -1,0 +1,12 @@
+.modal-header {
+  color: #33cc33;
+}
+
+.blue-btn{
+  background-color: #33cc33!important;
+  &:hover{
+    border-color:#33cc33!important;
+    color:#33cc33!important;
+    background-color:#fff!important;
+  }
+}

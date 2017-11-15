@@ -1,0 +1,584 @@
+/* These CSS rules will affect the Speakers page.  */
+
+/* Header */
+
+header {
+  background-size: cover;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 3.906250vw;
+}
+
+header.Header {
+  background-position: top center;
+}
+
+header .Button {
+  display: inline-block;
+}
+
+#HeaderContainer {
+  width: 100%;
+  left: 3.125vw;
+}
+
+#HeaderContainer h2 {
+  max-width: 18.5vw;
+}
+
+#HeaderCTA2 {
+  margin-left: 1.5vw;
+}
+
+@media (max-width: 1920px) {
+  header {
+    margin-top: 75px;
+  }
+
+  #HeaderContainer {
+    left: 60px;
+  }
+
+  #HeaderContainer h2 {
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    /*	margin-top: 25px;*/
+  }
+
+  #HeaderContainer {
+    left: 0;
+  }
+
+  #HeaderContainer h2 {
+    max-width: 325px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  #HeaderContainer h1 {
+    font-size: 30px;
+  }
+
+  #HeaderCTA2 {
+    margin-top: 6.25vw;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header.Header {
+    background-size: cover;
+    height: 150.625vw;
+  }
+
+  #HeaderContainer h2 {
+    max-width: 90vw;
+    font-size: 3.75vw;
+  }
+
+  #HeaderContainer h1 {
+    font-size: 9.375vw;
+  }
+
+  header .Button {
+    max-width: 62.5vw;
+    height: 12.5vw;
+    font-size: 4.375vw;
+  }
+}
+
+/* END Header */
+
+/* Speakers */
+
+.SpeakersGrid {
+  width: 67.70833vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.GridItem {
+  width: 12.5vw;
+  height: 12.5vw;
+}
+
+.GridOverlay {
+  width: 12.5vw;
+  margin-top: 12.5vw;
+  height: 3.125vw;
+  background-color: transparent;
+  color: #000;
+}
+
+.GridOverlay > .SliphoverHeadline {
+  font-size: 0.78125vw;
+  margin-top: 0.260416vw;
+  /* text-shadow: 0 0 9px rgba(150,149,150,1);*/
+  color: #14a6df;
+}
+
+.GridOverlay > .SmallParagraph {
+  font-size: 0.572916vw;
+  /*text-shadow: 0 0 9px rgba(150,149,150,1);*/
+}
+
+.GridImageContainer {
+  margin-bottom: 0;
+}
+
+.SpeakerName {
+  font-size: 0.78125vw;
+  margin: 0.4vw 0 0 0.5vw;
+  font-weight: 600;
+}
+
+.SpeakerData {
+  font-size: 0.572916vw;
+  margin: 0 0 0 0.5vw;
+  line-height: 145%;
+}
+
+.SpeakerInfo {
+  font-size: 0.56vw;
+  margin: 0.5vw 0.98958vw 0 0.5vw;
+  line-height: 140%;
+}
+
+.SpeakerHoverLinks {
+  position: absolute;
+  bottom: 0.5vw;
+  left: 0.7vw;
+}
+
+.SpeakerHoverLinks a {
+  color: #fff;
+  font-size: 0.885416vw;
+  margin-right: 1vw;
+}
+
+.CompanyName {
+  font-weight: 900;
+}
+
+.GridContainer ul li {
+  vertical-align: top;
+}
+
+@media (max-width: 1920px) {
+  .SpeakersGrid {
+    width: 1300px;
+  }
+
+  .GridItem {
+    width: 240px;
+    height: 240px;
+  }
+
+  .GridOverlay {
+    width: 240px;
+    margin-top: 240px;
+    height: 60px;
+  }
+
+  .GridOverlay > .SliphoverHeadline {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .GridOverlay > .SmallParagraph {
+    font-size: 11px;
+  }
+
+  .SpeakerName {
+    font-size: 15px;
+    margin: 7px 0 0 10px;
+  }
+
+  .SpeakerData {
+    font-size: 11px;
+    margin: 0 0 0 10px;
+  }
+
+  .SpeakerInfo {
+    font-size: 11px;
+    margin: 10px 19px 0 10px;
+  }
+
+  .SpeakerHoverLinks {
+    bottom: 10px;
+    left: 13px;
+  }
+
+  .SpeakerHoverLinks a {
+    font-size: 17px;
+    margin-right: 19px;
+  }
+
+  .GridContainer ul li {
+    margin: 0 0 70px 0;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 1300px) {
+  .SpeakersGrid {
+    width: 100%;
+  }
+
+  .GridItem {
+    width: 22.135416vw;
+    height: 22.135416vw;
+  }
+
+  .GridImageContainer {
+    margin: 0.5vw;
+  }
+
+  .GridOverlay {
+    margin-top: 22.40625vw;
+    height: 5.729166vw;
+    width: 22.135416vw;
+  }
+
+  .GridOverlay > .SliphoverHeadline {
+    font-size: 1.5vw;
+  }
+
+  .GridOverlay > .SmallParagraph {
+    font-size: 1.04166vw;
+  }
+
+  .sliphover-overlay {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .GridContainer > ul > li {
+    width: 46.875%;
+    margin: 0 1% 14% 1%;
+  }
+
+  .GridImageContainer {
+    width: 100%;
+    position: relative;
+  }
+
+  .GridItem {
+    width: 100%;
+    height: 46.875%;
+  }
+
+  .GridOverlay {
+    position: absolute;
+    bottom: 0vw;
+    left: 0;
+    height: 0vw;
+    width: 100%;
+  }
+
+  .GridOverlay > .SliphoverHeadline {
+    margin-top: 0.625vw;
+    font-size: 3.125vw;
+  }
+
+  .GridOverlay > .SmallParagraph {
+    font-size: 2.5vw;
+  }
+}
+
+/* END Speakers */
+
+/* Testimonials */
+
+.testimonial {
+  width: 100%;
+  height: 35.15625vw;
+  background-size: cover;
+  position: relative;
+}
+
+.testimonial-quotation-marks {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3.020833vw;
+  height: 3.020833vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonial-quotation-marks img {
+  width: 1.221823vw;
+  height: 0.992865vw;
+  margin: 0 auto;
+}
+
+.testimonial-paragraph {
+  color: white;
+  padding: 5.385vw 3.75vw 0 3.75vw;
+  font-family: "Playfair Display", serif;
+  font-size: 1.158vw;
+  line-height: 140%;
+}
+
+.testimonial-paragraph strong {
+  font-size: 1.770833vw;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* Left  section */
+
+.testimonial-left-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25.000000vw;
+  height: 25.000000vw;
+  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 6px);
+}
+
+.testimonial-left {
+  width: 19.895833vw;
+  height: 19.895833vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(-45deg, #1fb3e6, #1fb3e6 2px, #00a8e2 2px, #00a8e2 4px);
+}
+
+.testimonial-left-img {
+  position: absolute;
+  padding: 0px 0 2.2vw 3.75vw;
+  bottom: 0;
+  height: 5vw;
+}
+
+/* Right section */
+
+.testimonial-right-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25.000000vw;
+  height: 25.000000vw;
+  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 6px);
+}
+
+.testimonial-right {
+  width: 19.895833vw;
+  height: 19.895833vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(-45deg, #1fb3e6, #1fb3e6 2px, #00a8e2 2px, #00a8e2 4px);
+}
+
+.testimonial-right-img {
+  position: absolute;
+  padding: 0 0 2.2vw 3.75vw;
+  bottom: 0;
+  height: 5vw;
+}
+
+@media (max-width: 1000px) {
+  .testimonial {
+    height: 35.15625vw;
+    background-size: cover;
+  }
+
+  .testimonial-left-bg {
+    width: 50.781250vw;
+    height: 49.479167vw;
+  }
+
+  .testimonial-right-bg {
+    width: 50.781250vw;
+    height: 49.479167vw;
+  }
+
+  .testimonial-right {
+    width: 40.364583vw;
+    height: 40.364583vw;
+  }
+
+  .testimonial-left {
+    width: 40.364583vw;
+    height: 40.364583vw;
+  }
+
+  .testimonial-quotation-marks {
+    width: 6.119792vw;
+    height: 5.859375vw;
+  }
+
+  .testimonial-quotation-marks img {
+    width: 2.473958vw;
+    height: 1.953125vw;
+  }
+
+  .testimonial-paragraph {
+    padding: 11.385vw 3.75vw 0 6.75vw;
+    font-size: 2.4vw;
+  }
+
+  .testimonial-paragraph strong {
+    font-size: 4.03vw;
+  }
+
+  .testimonial-right-img {
+    padding: 0 0 3.2vw 6.75vw;
+    height: 8vw;
+  }
+
+  .testimonial-left-img {
+    padding: 0 0 3.2vw 6.75vw;
+    height: 8vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial {
+    width: 100%;
+    height: 126.562500vw;
+    background-size: cover;
+    position: relative;
+  }
+
+  .testimonial-right-bg {
+    width: 76.093750vw;
+    height: 74.375000vw;
+  }
+
+  .testimonial-right {
+    width: 60.312500vw;
+    height: 60.312500vw;
+  }
+
+  .testimonial-quotation-marks {
+    width: 9.062500vw;
+    height: 8.750000vw;
+  }
+
+  .testimonial-quotation-marks img {
+    width: 3.750000vw;
+    height: 2.968750vw;
+  }
+
+  .testimonial-paragraph {
+    padding: 9.385vw 3.75vw 0 9.75vw;
+    font-size: 2.7vw;
+  }
+
+  .testimonial-paragraph strong {
+    font-size: 4.094vw;
+  }
+
+  .testimonial-right-img {
+    padding: 0 0 5.2vw 9.75vw;
+    height: 10vw;
+  }
+
+  .testimonial-left-img {
+    padding: 0 0 5.2vw 9.75vw;
+    height: 10vw;
+  }
+}
+
+/* END Testimonial */
+
+.fa-plus-square {
+  color: #2dbd00;
+}
+
+.fa-times-circle {
+  color: #e45555;
+}
+
+.GridImageContainer:hover > .IconContainer {
+  opacity: 1;
+}
+
+.IconContainer {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  font-size: 26px;
+  width: 12.5vw;
+  opacity: 0;
+}
+
+.AddToGrid,
+.RemoveFromGrid {
+  text-align: right;
+  padding: 15px;
+  text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.96);
+  cursor: pointer;
+  width: 53px;
+  float: right;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.DeleteItem {
+  padding: 15px;
+  color: #d83232;
+  text-shadow: 1px 1px 1px rgba(14, 5, 5, 0.82);
+  cursor: pointer;
+  width: 53px;
+  float: left;
+  text-align: left;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.AddToGrid:hover,
+.RemoveFromGrid:hover,
+.DeleteItem:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+@media (max-width: 1920px) {
+  .IconContainer {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .IconContainer {
+    width: 22.135416vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .IconContainer {
+    width: 100%;
+  }
+}
+
+#PageContainer {
+  text-align: center;
+}
+
+.SectionHeader {
+  margin: 2vw;
+}
+
+.SearchContainer {
+  margin: 1vw;
+}
+
