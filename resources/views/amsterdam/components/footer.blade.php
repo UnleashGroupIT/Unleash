@@ -35,7 +35,7 @@
 							<ul>
 								<li><a href="{{ route('ams.index') }}">Show</a></li>
 								<li><a href="{{ route('ams.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
+								<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
 								<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
 							</ul>
 						</nav>

@@ -75,7 +75,7 @@
 	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<button class="red-btn popup" data-popupdata="booknow">Book now</button>
 		</div>

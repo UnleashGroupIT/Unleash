@@ -9,11 +9,11 @@
 
 	
      <!-- Browser color  -->
-    <meta name="theme-color" content="#00a8e2">
+    <meta name="theme-color" content="#e80f42">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#00a8e2">
+    <meta name="msapplication-navbutton-color" content="#e80f42">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#00a8e2">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e80f42">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-57x57.png') }}">
@@ -40,8 +40,15 @@
 	<title>UNLEASH Conference | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/reset.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/common.css') }}">
+
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/menu.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/footer.css') }}">
+    
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/popup.css') }}">
 

@@ -35,7 +35,7 @@
 							<ul>
 								<li><a href="{{ route('london.index') }}">Show</a></li>
 								<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
+								<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
 								<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
 							</ul>
 						</nav>

@@ -1,5 +1,6 @@
 section.speakers-grid {
-  padding: 0 2em;
+  padding: 2em;
+  padding-bottom: 0;
 }
 
 @media (min-width: 75em) {
@@ -28,9 +29,9 @@ section.speakers-grid .speakers-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 section.speakers-grid .speakers-wrap a {
@@ -47,7 +48,7 @@ section.speakers-grid .speakers-wrap .speaker {
 @media (min-width: 512px) {
   section.speakers-grid .speakers-wrap .speaker {
     width: 150px;
-    margin: 0 .5em;
+    margin: 0;
   }
 }
 

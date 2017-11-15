@@ -33,3 +33,11 @@
     margin-right: 5em;
   }
 }
+
+h2, h4 {
+  color: #33cc33;
+}
+
+.white-btn {
+  color: #33cc33;
+}

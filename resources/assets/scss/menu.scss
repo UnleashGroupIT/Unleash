@@ -45,37 +45,38 @@ section.header-title {
 #unleash-logo{
   width: 215px;
   height: 50px;
-  padding: .5em 1em;
+  padding: .6em 1em;
   @media (min-width: 75em) {
     width: 275px;
+    padding: .45em 1em;
   }
   @media (min-width: 120em) {
-    padding: .42vw .83vw;
+    padding: .32vw .83vw;
     width: 14vw;
     height: 2.5vw;
   }
   
   &:hover{
-    transition: background-color .1s;
+    transition: background-color 1s;
     @media (min-width: 75em) {
       background-color:$ams;
     }
   }
   &:hover #full-logo{
     transform: translateX(237px);
-    transition: all .1s;
+    transition: all .5s;
     @media (min-width: 120em) {
       transform: translateX(12.8vw);
     }
   }
   &.show{
-    transition: background-color .1s;
+    transition: background-color 1s;
     @media (min-width: 75em) {
       background-color:$ams;
     }
     #full-logo{
       transform: translateX(237px);
-      transition: all .1s;
+      transition: all .5s;
       @media (min-width: 120em) {
         transform: translateX(12.8vw);
       }
@@ -651,20 +652,3 @@ section.header-title {
       width: 220px!important;
     }
 }
-
-footer .wrp .left .wrap{
-  width: 150px!important;
-  @media (min-width: 450px) {
-    width: auto!important;
-  }
-}
-
-@media (min-width: 30em){
-  footer .wrp .left .footer-btns button{
-    width: 95%!important;
-  }
-}
-
-footer .social-icons > div img{
-    width: 42px!important;
-  }

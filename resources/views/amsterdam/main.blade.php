@@ -40,6 +40,8 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/reset.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/common.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/footer.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
 	 @yield('headercss')
 	 

@@ -26,7 +26,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakergrid.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
 @endsection
 
 @section('headerjs')
@@ -133,7 +132,7 @@
 	<!--Counter-->
 	<section class="one-cntr counter">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
 			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
@@ -224,7 +223,7 @@
 	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world’s leading and fastest growing show on the future of work. Now is the time face the challenge of change and let your people loose to power your organization into the next decade of the 21st Century.</p>
 			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
 		</div>

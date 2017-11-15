@@ -25,7 +25,6 @@
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="http://www.unleashgroup.io/css/london/speakergrid.css">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/travel.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
 @endsection
 
 @section('headerjs')
@@ -41,14 +40,14 @@
 		<div class="content">
 			<div class="content-wrap">
 				<div class="h4wrp">
-					<h2>Aloft London Excel</h2>
+					<h2 class="aloft">Aloft London</h2>
 					<img class="U-logo" src="{{ URL::asset('gfx/london/U.png') }}" alt="Unleash">
 				</div>
 				<p class="pdg">Aloft London Excel is the only hotel in ExCeL London directly connected to the ExCeL International Convention Centre. Located right next to the Prince Regent DLR station, it is minutes away from London City Airport and Canary Wharf.</p>
 			</div>
 			<div class="content-wrap pdg">
 				<h3>Aloft London Excel</h3>
-				<span>Booking Code:<p class="code">UNLEASH18</p></span>
+				<!--<span>Booking Code:<p class="code">UNLEASH18</p></span>-->
 				<span>Single Occupancy: &pound;230 per night</span>
 				<span>Double Occupancy: &pound;240 per night</span>
 			</div>
@@ -68,7 +67,7 @@
 				<img src="{{ URL::asset('gfx/london/doubletree.jpg') }}" alt="Doubletree by Hilton">
 				<div class="dtls-wrap">
 					<h6 class="name">Doubletree by Hilton</h6>
-					<span>Booking Code: <p class="code">UNLEASH18</p></span>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<span>Single Occupancy: &pound;180 / night</span>
 					<span>Double Occupancy: &pound;195 / night</span>
 					<a href="http://doubletree.hilton.com/en/dt/groups/personalized/L/LONEXDI-CHRN-20180317/index.jhtml" target="_blank"><button class="green-btn">Book now</button></a>
@@ -78,40 +77,40 @@
 				<img src="{{ URL::asset('gfx/london/moxy.jpg') }}" alt="Moxy">
 				<div class="dtls-wrap">
 					<h6 class="name">Moxy</h6>
-					<span>Booking Code: <p class="code">UNLEASH18</p></span>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<span>Single Occupancy: &pound;199 / night</span>
 					<span>Double Occupancy: &pound;209 / night</span>
 					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=HR%20Tech%202018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6003/02/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="green-btn">Book now</button></a>
 				</div>
 			</div>
-			<div class="speaker">
-				<img src="{{ URL::asset('gfx/london/holiday-inn.jpg') }}" alt="Holiday Inn Express">
-				<div class="dtls-wrap">
-					<h6 class="name">Holiday Inn Express</h6>
-					<span>Booking Code: <p class="code">UNLEASH18</p></span>
-					<span>Single Occupancy: &pound;149 / night</span>
-					<span>Double Occupancy: &pound;195 / night</span>
-					<button class="green-btn popup" data-popupdata="booknow">Book now</button>
-				</div>
-			</div>
-			<div class="speaker">
+			<div class="speaker none">
 				<img src="{{ URL::asset('gfx/london/novotel.jpg') }}" alt="Novotel">
 				<div class="dtls-wrap">
 					<h6 class="name">Novotel London ExCeL</h6>
-					<span>Booking Code: <p class="code">UNLEASH18</p></span>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<span>Single Occupancy: &pound;175 / night</span>
 					<span>Double Occupancy: &pound;185 / night</span>
 					<button class="green-btn popup" data-popupdata="booknow">Book now</button>
 				</div>
 			</div>
-			<div class="speaker">
+			<div class="speaker none">
 				<img src="{{ URL::asset('gfx/london/hampton.jpg') }}" alt="Hampton by Hilton">
 				<div class="dtls-wrap">
 					<h6 class="name">Hampton by Hilton</h6>
-					<span>Booking Code: <p class="code">UNLEASH18</p></span>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<span>Single Occupancy: &pound;119 / night</span>
 					<span>Double Occupancy: &pound;119 / night</span>
 					<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+				</div>
+			</div>
+			<div class="speaker holiday">
+				<img src="{{ URL::asset('gfx/london/holiday-inn.jpg') }}" alt="Holiday Inn Express">
+				<div class="dtls-wrap">
+					<h6 class="name">Holiday Inn Express</h6>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<span>Single Occupancy: &pound;149 / night</span>
+					<span>Double Occupancy: &pound;195 / night</span>
+					<button class="green-btn popup" data-popupdata="reservation">Book now</button>
 				</div>
 			</div>
 		</div>
@@ -199,7 +198,7 @@
 	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
 		</div>

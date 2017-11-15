@@ -48,26 +48,27 @@ section.header-title {
 #unleash-logo {
   width: 215px;
   height: 50px;
-  padding: .5em 1em;
+  padding: .6em 1em;
 }
 
 @media (min-width: 75em) {
   #unleash-logo {
     width: 275px;
+    padding: .45em 1em;
   }
 }
 
 @media (min-width: 120em) {
   #unleash-logo {
-    padding: .42vw .83vw;
+    padding: .32vw .83vw;
     width: 14vw;
     height: 2.5vw;
   }
 }
 
 #unleash-logo:hover {
-  -webkit-transition: background-color .1s;
-  transition: background-color .1s;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 @media (min-width: 75em) {
@@ -79,8 +80,8 @@ section.header-title {
 #unleash-logo:hover #full-logo {
   -webkit-transform: translateX(237px);
           transform: translateX(237px);
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 @media (min-width: 120em) {
@@ -91,8 +92,8 @@ section.header-title {
 }
 
 #unleash-logo.show {
-  -webkit-transition: background-color .1s;
-  transition: background-color .1s;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 @media (min-width: 75em) {
@@ -104,8 +105,8 @@ section.header-title {
 #unleash-logo.show #full-logo {
   -webkit-transform: translateX(237px);
           transform: translateX(237px);
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 @media (min-width: 120em) {
@@ -921,24 +922,4 @@ section.header-title {
   .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
     width: 220px !important;
   }
-}
-
-footer .wrp .left .wrap {
-  width: 150px !important;
-}
-
-@media (min-width: 450px) {
-  footer .wrp .left .wrap {
-    width: auto !important;
-  }
-}
-
-@media (min-width: 30em) {
-  footer .wrp .left .footer-btns button {
-    width: 95% !important;
-  }
-}
-
-footer .social-icons > div img {
-  width: 42px !important;
 }

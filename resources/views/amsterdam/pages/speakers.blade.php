@@ -89,7 +89,7 @@
 	<!--Counter-->
 	<section class="one-cntr counter">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
 			<button class="blue-btn popup" data-popupdata="booknow">Book Now 2018</button>

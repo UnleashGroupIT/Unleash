@@ -64,9 +64,10 @@
 	<!--Future of Work-->
 	<section class="one futureofwork">
 		<div class="wrp">
-			<h2>Thank You!</h2>
-			<p>A massive thank you to all of the delegates and sponsors who joined us at HR Tech World Amsterdam, our biggest show yet. We are taking our quest to improve the Future of Work for the better to the next level and have officially rebranded as UNLEASH. The fun kicks off again on March 20-21, 2018 in London!<br /><strong>See you there!</strong></p>
-			<a href="https://www.slideshare.net/HRTechWorld/clipboards/hr-tech-world-amsterdam-2017"><button class="blue-btn presentations">View Presentations</button></a>
+			<h2>The Future of Work is Now!</h2>
+			<p>UNLEASH is much more than technology it's about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
+			<button class="blue-btn popup" data-popupdata="booknow">Book Now</button>
+
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -136,7 +137,7 @@
 	<!--Counter-->
 	<section class="one-cntr counter">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.<p>
 			<div class="your-clock"></div>
 			<button class="amsblue-btn popup" data-popupdata="booknow">Book now 2018</button>
@@ -227,7 +228,7 @@
 	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<button class="amsblue-btn popup" data-popupdata="booknow">Book now 2018</button>
 		</div>
