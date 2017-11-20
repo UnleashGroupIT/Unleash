@@ -75,4 +75,8 @@ class StaticPageController extends Controller
     return view('amsterdam.pages.stream');
     	
     }	
+	
+   public function wpredirect(Request $request){
+		 return redirect($request->server('HTTP_REFERER').'#ThankYou');
+   }
 }

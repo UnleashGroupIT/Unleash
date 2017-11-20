@@ -1,5 +1,24 @@
 @extends('lasvegas.main')
 
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
+ 
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH America - Venue"/>
+        <meta property="og:title" content="UNLEASH America - Venue"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/america/venue">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH America - Venue">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}">
+@endsection
+
 @section('title', 'Floorplan')
 
 @section('headercss')
@@ -20,7 +39,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Aria Resort &amp; Casino - Las Vegas</h2>
-				<p>Unleash is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
+				<p>UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
 			</div>
 			<button class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
@@ -45,7 +64,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>Unleash is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
+					<p>UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
 				<button class="red-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
 			</div>
@@ -56,7 +75,7 @@
 	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<button class="red-btn popup" data-popupdata="booknow">Book now</button>
 		</div>

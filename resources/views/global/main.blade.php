@@ -37,7 +37,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>Unleash Confrence | @yield('title')</title>
+	<title>Unleash Conference | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/reset.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">

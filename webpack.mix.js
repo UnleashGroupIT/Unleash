@@ -17,18 +17,21 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.sass('resources/assets/scss/menu.scss', 'public/css')
    .sass('resources/assets/scss/popup.scss', 'public/css')
+   .sass('resources/assets/scss/common.scss', 'public/css')
+   .sass('resources/assets/scss/footer.scss', 'public/css')
    .sass('resources/assets/scss/404.scss', 'public/css');
 
 
 //Amsterdam   
 mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/agenda.scss', 'public/css/amsterdam')
-   .sass('resources/assets/scss/amsterdam/common.scss', 'public/css/amsterdam')
+   //.sass('resources/assets/scss/amsterdam/common.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/agenda_old.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/floorplan.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/speakergrid.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/index.scss', 'public/css/amsterdam')
+   .sass('resources/assets/scss/amsterdam/index-prev.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/menu.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/reset.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/speaker.scss', 'public/css/amsterdam')
@@ -44,20 +47,20 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    
 mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
    .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
-   .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam')
-   .js('resources/assets/js/amsterdam/parallax.min.js', 'public/js/amsterdam');
+   .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 //London
-mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/common.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/agenda_old.scss', 'public/css/london')
+mix.sass('resources/assets/scss/london/common.scss', 'public/css/london')
+  // .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
+   //.sass('resources/assets/scss/london/agenda_old.scss', 'public/css/london')
    .sass('resources/assets/scss/london/flipclock.scss', 'public/css/london')
    .sass('resources/assets/scss/london/floorplan.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/travel.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speakergrid.scss', 'public/css/london')
    .sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/menu.scss', 'public/css/london')
    .sass('resources/assets/scss/london/popup.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/footer.scss', 'public/css/london')
    .sass('resources/assets/scss/london/reset.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speaker.scss', 'public/css/london')
    .sass('resources/assets/scss/london/speakers.scss', 'public/css/london')
@@ -71,8 +74,7 @@ mix.sass('resources/assets/scss/london/about.scss', 'public/css/london')
    }); 
 mix.js('resources/assets/js/london/agenda.js', 'public/js/london') 
 .js('resources/assets/js/london/flipclock.min.js', 'public/js/london')
-.js('resources/assets/js/london/main.js', 'public/js/london')
-.js('resources/assets/js/london/parallax.min.js', 'public/js/london');
+.js('resources/assets/js/london/main.js', 'public/js/london');
    
 //Lasvegas
 mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
@@ -84,6 +86,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/speakergrid.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/index.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/menu.scss', 'public/css/lasvegas')
+   .sass('resources/assets/scss/lasvegas/footer.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/popup.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/reset.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/speaker.scss', 'public/css/lasvegas')
@@ -98,8 +101,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
 
 mix.js('resources/assets/js/lasvegas/agenda.js', 'public/js/lasvegas') 
    .js('resources/assets/js/lasvegas/flipclock.min.js', 'public/js/lasvegas')
-   .js('resources/assets/js/lasvegas/main.js', 'public/js/lasvegas')
-   .js('resources/assets/js/lasvegas/parallax.min.js', 'public/js/lasvegas');   
+   .js('resources/assets/js/lasvegas/main.js', 'public/js/lasvegas');   
    
 mix.copy('resources/assets/gfx', 'public/gfx', false); // Don't flatten!   
    

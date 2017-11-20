@@ -25,6 +25,7 @@
 								<li><a href="http://www.unleashgroup.io">News</a></li>
 								<!--<li><a href="#">Events</a></li>-->
 								<li><a href="{{ route('ams.about') }}">About</a></li>
+								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 								<!--<li><a href="#">Careers</a></li>
 								<li><a href="#">Press</a></li>
 								<li><a href="#">Contact</a></li>-->
@@ -34,7 +35,7 @@
 							<ul>
 								<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
 								<li><a href="{{ route('lasvegas.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('lasvegas.sponsors') }}">Sponsors</a></li>
+								<li><a href="{{ route('lasvegas.sponsors') }}">OUR CLIENTS</a></li>
 								<li><a href="{{ route('lasvegas.floorplan') }}">Venue</a></li>
 							</ul>
 						</nav>

@@ -1,5 +1,24 @@
 @extends('amsterdam.main')
 
+@section('meta')
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018.">
+ 
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH Amsterdam - Speakers"/>
+        <meta property="og:title" content="UNLEASH Amsterdam - Speakers"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/amsterdam/speakers">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/amsterdam/UNLEASH_metashare_amsterdam.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH Amsterdam - Speakers">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/amsterdam/UNLEASH_metashare_amsterdam.png') }}">
+@endsection
+
 @section('title', 'Speakers')
 
 @section('headercss')
@@ -25,7 +44,7 @@
 				<div class="h4wrp">
 					<div>
 						<img class="mic-logo" src="{{ URL::asset('gfx/amsterdam/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in Amsterdam</h4>
+						<h4 class="ky">Keynote in Amsterdam 2017</h4>
 					</div>
 					<img class="U-logo" src="{{ URL::asset('gfx/amsterdam/U.png') }}" alt="Unleash">
 				</div>
@@ -44,7 +63,7 @@
 			</div>
 			<div class="schedule-wrp">
 				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/amsterdam/clock.png') }}" alt="Date">
+					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
 						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
 
@@ -57,8 +76,8 @@
 	<!--Future of Work-->
 	<section class="one futureofwork">
 		<div class="wrp">
-			<h2>Our Speakers</h2>
-				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at Unleash will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+			<h2>Our Past Speakers</h2>
+				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
 				<button class="blue-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
 			</div>
 		</div>
@@ -70,7 +89,7 @@
 	<!--Counter-->
 	<section class="one-cntr counter">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
 			<button class="blue-btn popup" data-popupdata="booknow">Book Now 2018</button>
@@ -83,7 +102,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>The RAI Amsterdam, home to Unleash, is one of the leading international exhibitions and congress centres in Europe located just a few minutes from the city center.</p>
+					<p>Known for it’s tolerance and openness Amsterdam is the world’s most multicultural city, as well as being a leading financial centre, and a major arts and cultural capital.</p>
 				</div>
 				<a href="{{ route('ams.floorplan') }}"><button class="blue-btn">More</button></a>
 			</div>

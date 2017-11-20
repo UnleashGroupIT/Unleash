@@ -25,6 +25,7 @@
 								<li><a href="http://www.unleashgroup.io">News</a></li>
 								<!--<li><a href="#">Events</a></li>-->
 								<li><a href="{{ route('ams.about') }}">About</a></li>
+								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 								<!--<li><a href="#">Careers</a></li>
 								<li><a href="#">Press</a></li>
 								<li><a href="#">Contact</a></li>-->

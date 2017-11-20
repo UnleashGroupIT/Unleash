@@ -12,8 +12,8 @@
 			<nav id="desktop-menu">
 				
 				<ul class="menu-ul">
-					<li><a href="http://www.unleashgroup.io/" title="HOME">Home</a></li>
-					<li><a href="http://www.unleashgroup.io/" title="NEWS">News</a></li>
+					<li><a href="/" title="HOME">Home</a></li>
+					<li><a href="/" title="NEWS">News</a></li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more">
 						<a href="{{ route('london.index') }}">Events</a>
@@ -21,35 +21,37 @@
 						<div class="dropdownbox">
 							<div class="ul-wrp">
 								<ul class="first-ul">
-									<li class="amsterdam">
-										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 24-25 October 2017</a>
-									</li>
 									<li class="london">
 										<a href="{{ route('london.index') }}"><p>London</p> <span>|</span> 20-21 March 2018</a>
 									</li>
 									<li class="lasvegas">
 										<a href="{{ route('lasvegas.index') }}"><p>America</p> <span>|</span> 15-16 May 2018</a>
 									</li>
+									<li class="amsterdam">
+										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
+									</li>
 								</ul>
 							</div>
 						</div>
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
+					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 				</ul>
 				<ul class="spec-menu london">
 					<li class="londoncolor"><strong>London </strong> 20-21 March 2018</li>
 					<li><a href="{{ route('london.index') }}">SHOW</a></li>
 					<li><a class="hrg" href="{{ route('london.index') }}#spkrgrd">SPEAKERS</a></li>
-					<li><a class="hrg" href="{{ route('london.index') }}#spnsrgrd">SPONSORS</a></li>
+					<li><a class="hrg" href="{{ route('london.sponsors') }}">SPONSORS</a></li>
 					<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+					<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 					<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 				</ul>
 				<div class="social-booknow">
 					<div class="icos-wrp">
-						<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ URL::asset('gfx/amsterdam/youtube-white.png') }}" alt="Youtube"></a></div>
-						<div><a href="https://www.facebook.com/hrtechworld"><img src="{{ URL::asset('gfx/amsterdam/facebook-white.png') }}" alt="Facebook"></a></div>
-						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/amsterdam/linkedin-white.png') }}" alt="Linkedin"></a></div>
-						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/amsterdam/twitter-white.png') }}" alt="Twitter"></a></div>
+						<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ URL::asset('gfx/youtube-white.png') }}" alt="Youtube"></a></div>
+						<div><a href="https://www.facebook.com/hrtechworld"><img src="{{ URL::asset('gfx/facebook-white.png') }}" alt="Facebook"></a></div>
+						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/linkedin-white.png') }}" alt="Linkedin"></a></div>
+						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.png') }}" alt="Twitter"></a></div>
 					</div>
 					<div class="envelope popup" data-popupdata="joinourcommunity">
 					  <div class="icon-envelope"></div>

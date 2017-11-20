@@ -1,5 +1,6 @@
 section.speakers-grid {
-  padding: 0 2em;
+  padding: 2em;
+  padding-bottom:0;
 }
   @media (min-width: 75em) {
     section.speakers-grid {
@@ -13,7 +14,7 @@ section.speakers-grid {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 2em;
-    justify-content: center; }
+    justify-content: space-between; }
     section.speakers-grid .speakers-wrap a{
       color: #323232;
     }
@@ -25,7 +26,7 @@ section.speakers-grid {
       @media (min-width: 512px) {
         section.speakers-grid .speakers-wrap .speaker {
           width: 150px;
-          margin: 0 .5em } }
+          margin: 0} }
       @media (min-width: 120em) {
         section.speakers-grid .speakers-wrap .speaker {
           padding: .42vw 0; } }
@@ -74,3 +75,9 @@ section.speakers-grid {
           @media (min-width: 120em) {
             section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
               font-size: .83vw; } }
+			  
+@media (max-width: 1000px) {
+.speakers-wrap a:last-child {
+    display:none;
+}
+}			  

@@ -8,20 +8,6 @@ $(document).ready(function(){
 		$('.bar').toggleClass('animate');
 	});
 
-
-
-	(function () {
-		var scroll = $(window).scrollTop();
-
-    	if (scroll >= 100) {
-        	$(".hamb-wrp").addClass("black");
-        	$("#header-menu").addClass("black");
-    	} else {
-        	$(".hamb-wrp").removeClass("black");
-        	$("#header-menu").removeClass("black");
-    	}
-	})();
-
 	(function () {
 		$('#hamburger').on('click', function() { // ICON CLICK
 

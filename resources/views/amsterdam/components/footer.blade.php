@@ -27,19 +27,15 @@
 						<nav>
 							<ul>
 								<li><a href="http://www.unleashgroup.io">News</a></li>
-								<!--<li><a href="#">Events</a></li>-->
 								<li><a href="{{ route('ams.about') }}">About</a></li>
-								<!--<li><a href="#">Careers</a></li>
-								<li><a href="#">Press</a></li>
-								<li><a href="#">Contact</a></li>-->
+								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
 							</ul>
 						</nav>
 						<nav class="upper">
 							<ul>
 								<li><a href="{{ route('ams.index') }}">Show</a></li>
-								<li><a href="{{ route('ams.agenda') }}">Agenda</a></li>
 								<li><a href="{{ route('ams.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
+								<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
 								<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
 							</ul>
 						</nav>

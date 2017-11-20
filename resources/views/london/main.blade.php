@@ -4,16 +4,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="Unleash"/>
 
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+ 	 @yield('meta')
 
      <!-- Browser color  -->
-    <meta name="theme-color" content="#00a8e2">
+    <meta name="theme-color" content="#33cc33">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#00a8e2">
+    <meta name="msapplication-navbutton-color" content="#33cc33">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#00a8e2">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#33cc33">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gfx/london/favicon/apple-touch-icon-57x57.png') }}">
@@ -34,16 +33,27 @@
     <link rel="manifest" href="{{ URL::asset('gfx/london/favicon/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/london/favicon/ms-icon-144x144.png') }}">
 
+	
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>Unleash Confrence | @yield('title')</title>
+	<title>UNLEASH @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/reset.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/menu.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
+	
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/common.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/menu.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/footer.css') }}">
+	
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/popup.css') }}">
+
+
+
 
 	 @yield('headercss')
 	 
@@ -66,6 +76,9 @@
 <!-- CrazyEgg -->
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
 
+<!-- Google API for MAPS -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC23Ed2Jj6V22JPpxKutPZnH1LiJ7tabsA&callback=initMap"
+                    type="text/javascript"></script>
 </head>
 <body>
 
@@ -75,22 +88,9 @@
 
 	 @include('london.components.menu')
 		<!--Menu icon in lower sizes.-->
-
-
-		<div class="hamb-wrp">
-			<!--Logo-->
-			<div id="unleash-logo">
-				<a href="/">
-					<h1>
-						<img src="{{ URL::asset('gfx/london/logo.png') }}" alt="Unleash logo" title="HOME">
-					</h1>
-				</a>
-			</div>
-			<div id="hamburger">
-				<div class="bar"></div>
-			</div>
-		</div>
-
+        <div id="hamburger">
+            <div class="bar"></div>
+        </div>
  	@yield('headercontent')		
 
 	<!--Mainsponsors END-->
@@ -106,6 +106,19 @@
 	 	@include('globalscript')
 	</div>
     @include('london.components.popup')
+
+
+ <!-- LiveChat code -->
+<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8465813;
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
+</script>
+<!-- END LiveChat code -->  
 </body>
 @yield('footerscripts')
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

@@ -27,6 +27,7 @@ section.header-title {
 #header-menu{
   display: flex;
   position:fixed;
+  top: 0;
   z-index: 10;
   width: 100%;
   background-color:$black;
@@ -44,36 +45,38 @@ section.header-title {
 #unleash-logo{
   width: 215px;
   height: 50px;
-  padding: .5em 1em;
+  padding: .6em 1em;
   @media (min-width: 75em) {
     width: 275px;
+    padding: .45em 1em;
   }
   @media (min-width: 120em) {
-    padding: .42vw .83vw;
+    padding: .32vw .83vw;
     width: 14vw;
+    height: 2.5vw;
   }
   
   &:hover{
-    transition: background-color .1s;
+    transition: background-color 1s;
     @media (min-width: 75em) {
       background-color:$ams;
     }
   }
   &:hover #full-logo{
     transform: translateX(237px);
-    transition: all .1s;
+    transition: all .5s;
     @media (min-width: 120em) {
       transform: translateX(12.8vw);
     }
   }
   &.show{
-    transition: background-color .1s;
+    transition: background-color 1s;
     @media (min-width: 75em) {
       background-color:$ams;
     }
     #full-logo{
       transform: translateX(237px);
-      transition: all .1s;
+      transition: all .5s;
       @media (min-width: 120em) {
         transform: translateX(12.8vw);
       }
@@ -140,6 +143,10 @@ section.header-title {
       }
       &.more{
         position:relative;
+        @media (min-width: 75em) {
+          margin: auto 1em;
+          margin-right: 1.5em;  
+        }
         &:hover{
           .dropdownbox{
             visibility: visible;
@@ -255,7 +262,7 @@ section.header-title {
       visibility: hidden;
       position:absolute;
       opacity: 0;
-      width: 300px;
+      width: 305px;
       z-index: 15;
       margin-top: 1em;
       @media (min-width: 75em) {
@@ -292,6 +299,7 @@ section.header-title {
     }
     @media (min-width: 120em) {
       padding: .4vw .8vw;
+      top: 2.5vw;
     }
 
     li{
@@ -325,6 +333,9 @@ section.header-title {
             font-size: 89%;
             margin-right: 2.5em;
             align-self: center;
+         }
+         @media (min-width: 120em) {
+          font-size: .74vw;
          } 
         strong{
           display: block;
@@ -513,6 +524,10 @@ section.header-title {
   height: 3.5px;
   background-color: #fff;
   box-shadow: 0px 0.5px 0px #fff;
+  @media (min-width: 125em) {
+    width: 1.25vw;
+    height: .23vw;
+  }
   &:before {
     z-index: 1;
     position: absolute;
@@ -622,11 +637,14 @@ section.header-title {
 }
 
 .envelope:after {
-color:#fff; 
-position:relative;
-top:-12px;
-left:-70px; 
-content:"SIGN UP"
+  color:#fff; 
+  position:relative;
+  top:-12px;
+  left:-70px; 
+  content:"SIGN UP";
+  @media (min-width: 125em) {
+    font-size: .78vw;
+  }
 }
 
 @media (min-width: 30em) {
@@ -634,20 +652,8 @@ content:"SIGN UP"
       width: 220px!important;
     }
 }
-
-footer .wrp .left .wrap{
-  width: 150px!important;
-  @media (min-width: 450px) {
-    width: auto!important;
-  }
+@media (min-width: 125em) {
+    .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
+      width: 11.5vw!important;
+    }
 }
-
-@media (min-width: 30em){
-  footer .wrp .left .footer-btns button{
-    width: 95%!important;
-  }
-}
-
-footer .social-icons > div img{
-    width: 42px!important;
-  }

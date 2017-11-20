@@ -8,6 +8,8 @@
             <div class="SessionContent">
                 <h3 class="SessionTitle" onClick="_gaq.push(['_trackEvent', 'Agenda', 'Toggle', 'Session']);"> {{session.session_title}}  
                     <i v-if="session.session_description || session.speakers[0]" class="fa fa-angle-down"></i>
+					<span v-if="session.extra_category != 0">({{session.extra_category}})</span>
+					
                 </h3>
              </div><!-- Session Info -->
                 <div class="SessionInfo" v-if="session.session_description || session.speakers[0]">
