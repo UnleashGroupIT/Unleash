@@ -1,3 +1,8 @@
+@import 'reset';
+@import '../common';
+@import '../footer';
+@import '../menu';
+@import '../popup';
 
 body {
   position: relative;
@@ -278,7 +283,6 @@ section.two.keynote.arianna.rev{
           
 
 section.two.keynote.arianna .content {
-  background-color: #438ee0;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 3em;
@@ -290,48 +294,12 @@ section.two.keynote.arianna .content {
   }
 }
 
-section.two.keynote.arianna .h4wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1em;
-}
-
-section.two.keynote.arianna .h4wrp > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 1em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.8em;
-  }
-}
-
-section.two.keynote.arianna .h4wrp .U-logo {
-  margin: auto;
-  margin-right: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp .U-logo {
-    margin: auto;
-    margin-right: 4em;
-  }
-}
-
-section.two.keynote.arianna p {
-  color: #fff;
-}
-
 section.two.keynote.arianna h2 {
   padding: .2em;
   padding-left: 1em;
   padding-right: .5em;
-  color: #438ee0;
-  background-color: #fff;
+  color: #fff;
+  background-color: #438ee0;
   display: inline-block;
 }
 
@@ -398,11 +366,6 @@ section.two.keynote.arianna .schedule-wrp {
 
 section.two.keynote.arianna button {
   margin-left: 0;
-  color: #438ee0;
-}
-
-section.two.keynote.arianna button:hover {
-  color: #fff;
 }
 
 @media (min-width: 75em) {

@@ -79,28 +79,6 @@ header {
   }
 }
 
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  width: 35px;
-  height: 57px;
-  cursor: pointer;
-}
-
-@media (min-width: 40em) {
-  #hamburger {
-    top: 1px;
-    right: 3%;
-  }
-}
-
-@media (min-width: 75em) {
-  #hamburger {
-    display: none;
-  }
-}
-
 .bar,
 .bar:after,
 .bar:before {
@@ -308,8 +286,19 @@ section.two .content .content-wrap {
   }
 }
 
-section.two button {
+section.two button,section.two a {
   margin-top: auto;
+}
+
+section.two a{
+  width: 100%;
+  @media (min-width: 30em) {
+    width: 220px;
+  }
+  @media (min-width: 125em) {
+    width: 11.5vw;
+  }
+
 }
 
 @media (min-width: 75em) {

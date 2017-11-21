@@ -63,10 +63,13 @@ section.header-title {
     }
   }
   &:hover #full-logo{
-    transform: translateX(237px);
+    transform: translateX(267px);
     transition: all .5s;
+    @media (min-width: 75em) {
+      transform: translateX(270px);
+    }
     @media (min-width: 120em) {
-      transform: translateX(12.8vw);
+      transform: translateX(14.6vw);
     }
   }
   &.show{
@@ -75,10 +78,13 @@ section.header-title {
       background-color:$ams;
     }
     #full-logo{
-      transform: translateX(237px);
+      transform: translateX(267px);
       transition: all .5s;
+      @media (min-width: 75em) {
+        transform: translateX(270px);
+      }
       @media (min-width: 120em) {
-        transform: translateX(12.8vw);
+        transform: translateX(14.6vw);
       }
     }
   }
@@ -86,7 +92,7 @@ section.header-title {
   #full-logo{
     position:absolute;
     left: -220px;
-    width: 180px;
+    width: 150px;
     @media (min-width: 75em) {
       width: auto;
     }
@@ -174,7 +180,7 @@ section.header-title {
           width: 10px;
           height: 9px;
           display: block;
-          background:url("../gfx/arrow-down.png");
+          background:url("/gfx/arrow-down.png");
           background-size:contain;
           background-repeat:no-repeat;
           position:absolute;
@@ -186,7 +192,7 @@ section.header-title {
           }
         }
         > a:hover::after{
-          background:url("../gfx/arrow-down-blue.png");
+          background:url("/gfx/arrow-down-blue.png");
           background-size:contain;
           background-repeat:no-repeat;
         }
@@ -389,8 +395,15 @@ section.header-title {
       }
 
       img{
+        height: 16px;
         @media (min-width: 120em) {
-          height: 0.73vw;
+          height: 0.85vw;
+        }
+        &.youtube{
+          height: 18px;
+          @media (min-width: 120em) {
+            height: 1vw;
+          }
         }
       }
     }
@@ -650,5 +663,10 @@ section.header-title {
 @media (min-width: 30em) {
     .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
       width: 220px!important;
+    }
+}
+@media (min-width: 125em) {
+    .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
+      width: 11.5vw!important;
     }
 }

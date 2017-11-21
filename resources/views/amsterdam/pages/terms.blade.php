@@ -3,9 +3,8 @@
 @section('title', 'Terms')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/terms.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/terms.css') }}">
+
 @endsection
 
 @section('headerjs')

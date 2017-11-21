@@ -23,9 +23,8 @@
 @section('title', 'Sponsors')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/sponsors.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/sponsors.css') }}">
+
 @endsection
 
 @section('headerjs')
@@ -147,17 +146,17 @@
 			@endforeach	
 		</div>	
 		
-		<h2> Startup</h2>
+		<!--<h2> Startup</h2>
 		<div class="sponsors-wrp">
-			@foreach($sponsors as $sponsor)
+			{{--@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 8)
 			 <!--sponsors-->
 				 @include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
-			@endforeach					
+			@endforeach		--}}			
 
-		</div>												
+	<!--	</div>	-->											
 	</section>
 	<!--Sponsors END-->
 	<!--Counter-->

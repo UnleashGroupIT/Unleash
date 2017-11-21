@@ -1,5 +1,103 @@
 @extends('london.main')
 @section('maincontent')
+<section class="demo">
+        <a href="#"><span></span>Scroll</a>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document.body).scroll(function() {    
+      var scroll = $(document.body).scrollTop();
+	console.log(scroll);
+      if (scroll >= 600) {
+          $(".demo").addClass("hide");
+      } else {
+          $(".demo").removeClass("hide");
+      }
+  });
+</script>
+<style>
+.demo a {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      padding-top: 60px;
+      z-index: 2;
+      display: inline-block;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: #fff;
+      font : normal 400 20px/1 'Josefin Sans', sans-serif;
+      letter-spacing: .1em;
+      text-decoration: none;
+      transition: opacity .3s;
+    }
+    .demo a:hover {
+      opacity: .5;
+    }
+.demo.hide{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+   .demo a span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 30px;
+      height: 50px;
+      margin-left: -15px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-sizing: border-box;
+    }
+    .demo a span::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      content: '';
+      width: 6px;
+      height: 6px;
+      margin-left: -3px;
+      background-color: #fff;
+      border-radius: 100%;
+      -webkit-animation: sdb10 2s infinite;
+      animation: sdb10 2s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb10 {
+      0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb10 {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+</style>
 <p style="margin: 10% auto 15% auto; width: 640px; max-width: 100%">
 This browser does not support inline PDFs. Please download the PDF to view it: <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">Download PDF</a>
 </p>
@@ -48,7 +146,7 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/pdfs.css') }}">
 </head>
 <style type="text/css">
     .no-js #loader { display: none;  }
@@ -71,6 +169,7 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
 <script>
 PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf", document.body);
 </script>
+
  <!-- Crazy Egg -->
         <script type="text/javascript">
             setTimeout(function () {

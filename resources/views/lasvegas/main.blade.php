@@ -39,23 +39,8 @@
 
 	<title>UNLEASH Conference | @yield('title')</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/reset.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/common.css') }}">
-
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/menu.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/footer.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/footer.css') }}">
-    
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/popup.css') }}">
-
 	 @yield('headercss')
-	 
-     @include('lasvegas.components.fixedjs')
-
+	
 	 @yield('headerjs')
 
 
@@ -94,6 +79,7 @@
 	<!--Footer-->
 
 	 @include('lasvegas.components.footer')
+     @include('lasvegas.components.fixedjs')	 
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
@@ -112,5 +98,6 @@
 <!-- END LiveChat code -->  
 </body>
 @yield('footerscripts')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

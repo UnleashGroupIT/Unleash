@@ -1,3 +1,11 @@
+@import 'components/reset';
+@import '../common';
+@import '../footer';
+@import '../menu';
+@import '../popup';
+@import 'components/common';
+@import 'agenda_old';
+
 body {
   position: relative;
 }

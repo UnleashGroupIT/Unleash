@@ -1,3 +1,13 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/common';
+
 body {
   position: relative; }
 
@@ -46,23 +56,6 @@ header {
     @media (min-width: 40em) {
       .hamb-wrp.black {
         transition: background-color 2s; } }
-
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  width: 35px;
-  height: 57px;
-  cursor: pointer; }
-  #hamburger.active {
-    position: absolute; }
-  @media (min-width: 40em) {
-    #hamburger {
-      top: 1px;
-      right: 3%; } }
-  @media (min-width: 75em) {
-    #hamburger {
-      display: none; } }
 
 .bar,
 .bar:after,
@@ -509,12 +502,12 @@ section.sponsors {
     padding: 0 1.1em;
     margin: 1em .5em;
     font-size: 1.5rem;
+    font-weight: 500;
     display: inline-block;
-    background: #33cc33;
-    color: white; }
+    color: #c9c9c9; }
     @media (min-width: 75em) {
       section.sponsors h2 {
-        font-size: 1.9rem; } }
+        font-size: 1.7rem; } }
   section.sponsors a {
     margin: auto;
     @media (min-width: 120em) {

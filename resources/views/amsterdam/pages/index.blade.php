@@ -22,9 +22,8 @@
 @section('title', 'Index')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/index.css') }}">
 @endsection
 
 @section('headerjs')
@@ -107,14 +106,14 @@
 
 					</div>
 				</div>
-				<button class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
+				<button id="spkrgrd" class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
 	<section class="two keynote second speakers">
 		<div class="content">
 			<div class="content-wrap">
-				<h2>Our Speakers</h2>
+				<h2>Past Speakers</h2>
 				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
 				<div class="testim wdth">
 					<img class="coma" src="http://www.unleashgroup.io/gfx/amsterdam/coma.png" alt="coma">
@@ -160,7 +159,7 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/amsterdam/google.png') }}" alt="Google">
 			</div>
-			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<button id="spnsrgrd" class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg expobg"></div>

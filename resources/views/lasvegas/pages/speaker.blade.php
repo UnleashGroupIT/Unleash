@@ -22,9 +22,8 @@
 @section('title', 'Speaker')
 
 @section('headercss')
-	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/speaker.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/common.css') }}">
+	 <link rel="stylesheet" type="text/css" href="{{ mix('css/lasvegas/speaker.css') }}">
+
 @endsection
 
 @section('headerjs')

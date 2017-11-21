@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Grids;
+use App\Sponsors;
 
 class SponsorsController extends Controller
 {
@@ -68,9 +69,46 @@ class SponsorsController extends Controller
 	
 	
 
-    public function sponsor(){
+    public function sponsor(Request $request, $sponsorId = ''){
 
-    	return view('amsterdam.pages.sponsor');
-    }    
+     $site = '404.blade.php';   
+
+     if ($request->is('amsterdam') || $request->is('amsterdam/*')) {
+ 
+ 
+         $site = 'amsterdam.pages.sponsor';
+     }      
+     
+      if ($request->is('london') || $request->is('london/*')) {
+
+
+         $site = 'london.pages.sponsor';    
+     }   
+
+      if ($request->is('america') || $request->is('america/*')) {
+
+
+         $site = 'lasvegas.pages.sponsor';
+     }          
+     
+
+
+        $sponsorTemp = Sponsors::where('slug',$sponsorId)->get();
+        $sponsor = $sponsorTemp[0];
+         
+     if ($request->header() !== null){
+         $headerData = $request->header();
+         if(isset($headerData['referer'][0]) && $headerData['referer'][0] != null){
+             
+             $sponsor->referer = $headerData['referer'][0];
+         }
+     }      
+        
+            return view($site, [
+                  'sponsor' => $sponsor,
+                 
+
+                ]);
+    }  
 
 }

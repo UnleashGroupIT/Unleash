@@ -46,10 +46,10 @@
 				</ul>
 				<div class="social-booknow">
 					<div class="icos-wrp">
-						<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ URL::asset('gfx/youtube-white.png') }}" alt="Youtube"></a></div>
-						<div><a href="https://www.facebook.com/hrtechworld"><img src="{{ URL::asset('gfx/facebook-white.png') }}" alt="Facebook"></a></div>
-						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/linkedin-white.png') }}" alt="Linkedin"></a></div>
-						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.png') }}" alt="Twitter"></a></div>
+						<div><a href="https://www.youtube.com/user/hrneurope/"><img class="youtube" src="{{ URL::asset('gfx/youtube-white.svg') }}" alt="Youtube"></a></div>
+						<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a></div>
+						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a></div>
+						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a></div>
 					</div>
 					<div class="envelope popup" data-popupdata="joinourcommunity">
 					  <div class="icon-envelope"></div>

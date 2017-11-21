@@ -1,3 +1,13 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/common';
+
 @charset "utf-8";
 /* CSS Document for the Tickets page*/
 
@@ -418,21 +428,6 @@ header {
     @media (min-width: 40em) {
       .hamb-wrp.black {
         transition: background-color 2s; } }
-
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: -4px;
-  width: 35px;
-  height: 57px;
-  cursor: pointer; }
-  @media (min-width: 40em) {
-    #hamburger {
-      top: 1px;
-      right: 3%; } }
-  @media (min-width: 75em) {
-    #hamburger {
-      display: none; } }
 
 .bar,
 .bar:after,

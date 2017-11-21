@@ -85,32 +85,6 @@ header {
   }
 }
 
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  width: 35px;
-  height: 57px;
-  cursor: pointer;
-}
-
-#hamburger.active {
-  position: absolute;
-}
-
-@media (min-width: 40em) {
-  #hamburger {
-    top: 1px;
-    right: 3%;
-  }
-}
-
-@media (min-width: 75em) {
-  #hamburger {
-    display: none;
-  }
-}
-
 .bar,
 .bar:after,
 .bar:before {

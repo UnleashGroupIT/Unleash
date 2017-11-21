@@ -3,8 +3,7 @@
 @section('title', 'Startups')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/startup.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/startup.css') }}">
 @endsection
 
 @section('headerjs')

@@ -1,20 +1,6 @@
 
 $(document).ready(function(){
-
-	(function () {
-		var scroll = $(window).scrollTop();
-
-    	if (scroll >= 100) {
-        	$("#unleash-logo").addClass("show");
-    	} else {
-        	$("#unleash-logo").removeClass("show");
-    	}
-	})();
-
-	$(".hrg").click(function(e){
-		$('#header-menu').removeClass("show");
-	});
-
+	
 	(function () {
 		$('#hamburger').on('click', function() { // ICON CLICK
 
@@ -43,12 +29,12 @@ $(document).ready(function(){
 
 
 	//COUNTER
-
+/*
 	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"),{
     	clockFace: 'DailyCounter',
    		countdown: true
    });
-
+*/
 
 	//SPONSORS
 
@@ -136,6 +122,44 @@ $(document).ready(function(){
 
 	//MENU
 
+	var viewportWidth = $(window).width();
+    	if (viewportWidth < 1100) {
+            $(".more > a").click(function(event){
+				if(!$(this).parent().hasClass("showmob")){
+				$(this).parent().addClass("showmob");
+				$(this).parent().siblings().removeClass("showmob");
+			}else{
+				$(this).parent().removeClass("showmob");
+			}
+			event.preventDefault();
+			});
+    	}
+
+	$(window).resize(function () {
+    	var viewportWidth = $(window).width();
+    	if (viewportWidth < 1100) {
+            $(".more > a").click(function(event){
+				if(!$(this).parent().hasClass("showmob")){
+				$(this).parent().addClass("showmob");
+				$(this).parent().siblings().removeClass("showmob");
+			}else{
+				$(this).parent().removeClass("showmob");
+			}
+			event.preventDefault();
+			});
+    	}
+    });
+
+
+		$(".more").mouseover(function(){
+        $("#header-menu").addClass("black");
+    });
+    $(".dropdownbox").mouseleave(function(){
+        if ($(window).scrollTop() == 0) {
+            $("#header-menu").removeClass("black");
+        }
+    });
+
 	$("#more > a").mouseover(function(){
 		$(".first-ul li").each(function(){
 			$(this).show();
@@ -150,11 +174,6 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".first-ul > li").click(function(){
-		$(this).siblings().hide();
-		$(this).find(".second-ul").addClass("visib");
-	});
-
 
 	//SCROLLING BAR
 
@@ -162,59 +181,57 @@ $(document).ready(function(){
     	var scroll = $(window).scrollTop();
 
     	if (scroll >= 100) {
-        	$(".hamb-wrp").addClass("black");
-        	$("#header-menu").addClass("black");
+        	$("#unleash-logo").addClass("show");
     	} else {
-        	$(".hamb-wrp").removeClass("black");
-        	$("#header-menu").removeClass("black");
+        	$("#unleash-logo").removeClass("show");
     	}
 	});
 
 	$(window).resize(function () {
-		$(window).trigger('resize.px.parallax');
     	var viewportWidth = $(window).width();
     	if (viewportWidth > 1100) {
             $('#header-menu').removeClass("show");
             $('#hamburger').removeClass("active");
             $('.bar').removeClass('animate');
+            $('.more').removeClass("showmob");
     	}
 	});
 
+	// Get the modal
+	var modal = document.getElementsByClassName('myModal');
 
-	//PARALLAX
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName('book');
 
-	$('#keynote').parallax({
-		imageSrc: '../../gfx/amsterdam/arianna-bg.jpg',
-		speed: '0.8'
-	});
-	$('#keynote-2').parallax({
-		imageSrc: '../../gfx/amsterdam/speakers-bg2.jpg',
-		speed: '0.8'
-	});
-	$('#expo').parallax({
-		imageSrc: '../../gfx/amsterdam/expo-bg.jpg',
-		speed: '0.8'
-	});
-	$('#clients').parallax({
-		imageSrc: '../../gfx/amsterdam/clients-bg.jpg',
-		speed: '0.8',
-	});
-	$('#testimonial').parallax({
-		imageSrc: '../../gfx/amsterdam/testimonial-bg.jpg',
-		speed: '0.8',
-	});
-	$('#show-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/show-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/team-bg.jpg',
-		speed: '0.8'
-	});
-	$('#team2-bg').parallax({
-		imageSrc: '../../gfx/amsterdam/team2-bg.jpg',
-		speed: '0.8'
-	});
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
 
+	$('.popup').click(function() { 
+		let popupName = $(this).data('popupdata');
+		$('#'+popupName).css("display", "flex")
+	})
+
+	$('.close').click(function() { 
+		$('.modal').css("display", "none")
+	})
+
+
+	
+	    // Form handle 
+    $(document).on("change", "#FullName", function () {
+        var c = $(this).val().split(" "), a = "", b = "";
+        $.each(c, function (e, d) {
+            e == c.length - 1 ? b += d : a += d + " "
+        });
+        a.slice(0, -1);
+        $('[data-field="fname"]').val(a);
+        $('[data-field="fname"]').html(a);
+        $('[data-field="lname"]').val(b);
+        $('[data-field="lname"]').html(b)
+    });
+
+    if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
+			$('#thankyou').css("display", "flex")
+    }        
 
 }); // READY END
