@@ -60,20 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 116);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 116:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(117);
-
-
-/***/ }),
-
-/***/ 117:
+/***/ "./resources/assets/js/london/main.js":
 /***/ (function(module, exports) {
 
 
@@ -309,6 +301,14 @@ $(document).ready(function () {
 		$('#thankyou').css("display", "flex");
 	}
 }); // READY END
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./resources/assets/js/london/main.js");
+
 
 /***/ })
 

@@ -3,10 +3,8 @@
 @section('title', 'Agenda')
 
 @section('headercss')
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/agenda.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/agenda_old.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/agenda.css') }}">
+
 	<style>
 	 .Session {
 		 cursor:pointer;

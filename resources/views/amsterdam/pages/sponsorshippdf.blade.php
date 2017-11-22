@@ -47,7 +47,7 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/pdfs.css') }}">
 </head>
 <style type="text/css">
     .no-js #loader { display: none;  }
@@ -64,11 +64,12 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
         opacity: 0;
     }
 </style>
-<body>
+<body>    
 <script src='https://www.hrn.io/vendor/pdfobject/pdfobject.js'></script>
 <script>
 PDFObject.embed("http://www.hrn.io/BROCHURES/UnleashAmsterdam2018/UNLEASH_2018_Amsterdam_Sponsorship.pdf", document.body);
 </script>
+
  <!-- Crazy Egg -->
         <script type="text/javascript">
             setTimeout(function () {

@@ -3,10 +3,9 @@
 @section('title', 'Speakers')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakergrid.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakers.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/speakers.css') }}">
+
 @endsection
 
 @section('headerjs')

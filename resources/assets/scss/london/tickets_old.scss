@@ -1,3 +1,13 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/common';
+
 body {
   position: relative; }
 
@@ -37,21 +47,6 @@ header {
     @media (min-width: 40em) {
       .hamb-wrp.black {
         transition: background-color 2s; } }
-
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: -4px;
-  width: 35px;
-  height: 57px;
-  cursor: pointer; }
-  @media (min-width: 40em) {
-    #hamburger {
-      top: 1px;
-      right: 3%; } }
-  @media (min-width: 75em) {
-    #hamburger {
-      display: none; } }
 
 .bar,
 .bar:after,
@@ -114,24 +109,31 @@ section.one .wrp {
 
 /*Header Navigation */
     #TicketNavigation {
-      margin-top: 3.00625vw;
+      margin-top: 50px;
       background-color: #f9f9f9;
       -webkit-box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52);
       -moz-box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52);
       box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52); 
     }
     #TNInnerContainer{
-      width: 100vw;
-      padding: 1.83vw 0;
+      width: 100%;
+      padding: 17px 0;
       margin: 0 auto;
       text-align: center;
+
+      ul{
+        display: flex;
+        justify-content: center;
+        padding: 0 1em;
+      }
     }
 
     .NavMenuLi{
       color:#ababab;
       display: inline-block;
-      margin: 0 1.40625vw;
-      font-size: 0.93vw;
+      margin: auto 1em;
+      font-size: 18px;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.3s;
       position:relative;
@@ -144,24 +146,41 @@ section.one .wrp {
        color:#33cc33; 
     }
 
+    @media(min-width: 540px){
+      .NavActive:after{
+        content: "";
+        position: absolute;
+        top: 31px;
+        left: calc(50% - 14px);
+        width: 0;
+        height: 0;
+        box-sizing: border-box;
+        border: 10px solid black;
+        border-color: transparent transparent #f9f9f9 #f9f9f9;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -3px 3px 3px 0 rgba(109, 102, 102, 0.14);
+      }
+  }
+  @media(min-width: 55em ){
     .NavActive:after{
-    content: "";
-    position: absolute;
-    top: 43px;
-    left: calc(50% - 17px);
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    border: 0.625vw solid black;
-    border-color: transparent transparent #f9f9f9 #f9f9f9;
-    transform-origin: 0 0;
-    transform: rotate(-45deg);
-    box-shadow: -3px 3px 3px 0 rgba(109, 102, 102, 0.14);   
+      top: 34px;
     }
+  }
+  @media(min-width: 75em ){
+    .NavActive:after{
+      top: 42px;
+    }
+  }
+  @media(min-width: 125em ){
+    .NavActive:after{
+      top: 2vw;
+    }
+  }
 
 
 
-@media(max-width: 1920px){ 
+@media(min-width: 75em){ 
     #TicketNavigation {
         margin-top: 80px;
     }  
@@ -193,26 +212,29 @@ section.one .wrp {
 
 }
 
-@media(max-width: 1100px){
- .NavMenuLi{
-           margin: 0 1.25vw;
-    }
+@media(min-width: 125em){
+  #TNInnerContainer{
+    padding:1.3vw 0;
+  }
+  #TicketNavigation {
+    margin-top: 4.1vw;
+  }
 }
 
+@media(max-width: 1200px){
+  .NavMenuLi{
+    font-weight: 300;
+  }
+}
 
 
 @media(max-width: 800px){
     #TNInnerContainer{
          width: 100%;
          max-width: 100%; 
-         padding: 17px 0;
     }    
     .NavMenuLi{
-    font-size: 14px;
-    width: 80px;
-    text-align: center;
-    vertical-align: top;
-       
+      font-size: 14px;       
     }
     .NavIcon{
         margin:0 10px;
@@ -224,11 +246,8 @@ section.one .wrp {
 }
   @media(max-width: 380px){
 .NavMenuLi{
-    font-size: 10px;
-    width: 60px;
-    text-align: center;
-    vertical-align: top;
-    }
+  font-size: 12px;
+}
   
 }
 #TimelineOther{
@@ -236,11 +255,21 @@ section.one .wrp {
 }
 
 .TimelineContainer{
-    padding: 2.760416vw 0 1.82291vw 0;
     width: 100%;
     max-width: 52.083vw;
     margin: 0 auto;
     text-align: center;
+}
+
+@media(min-width: 640px){
+  #TimelineList{
+    padding-top:40px;
+  }
+}
+@media(min-width: 75em){
+  #TimelineList{
+    padding-bottom:20px;
+  }
 }
 
 #TimelineList li{
@@ -259,11 +288,7 @@ section.one .wrp {
   text-align: left;   
     
   } 
-  @media (max-width:1000px){
-    #UntilSummer{
-      top: -3px; 
-    }   
-  }
+
 #TimelineList .TimeLineActive{
      color: #33cc33;
      font-weight: 900;
@@ -310,9 +335,6 @@ section.one .wrp {
 #TicketContainer, #BoxContainer{
 max-width: 800px; 
   margin:0 auto;    
-}
-#GovSector{
-    margin-top:80px;
 }
 
 #GovSector.showp{
@@ -367,13 +389,18 @@ max-width: 800px;
   top:-2px;
 }
 .SummerSaverUntil{
-    font-size: 0.625vw;
     font-weight: 500;
     color: #000;
 }
 .SummerSaverDate{
-    font-size: 0.72916vw;
     color: #e80f42;
+}
+
+@media(min-width: 125em){
+  .SummerSaverUntil,.SummerSaverDate{
+    font-size: .7vw;
+    line-height: .6vw;
+  }
 }
 
 /*TIMELINE*/
@@ -391,7 +418,7 @@ max-width: 800px;
     }
 
     .TimelineContainer{
-        padding: 50px 0;
+        padding: 25px 0;
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
@@ -536,13 +563,7 @@ max-width: 800px;
 .BoxInner {
   /*margin: .5em 0;*/
 }
-.TicketBoxHeader {
-  width: 100%;
-  display: block;
-  background: #f8f8f8;
-  color: #00a7e1;
-  transition: background .3s ease;
-}
+
 .TicketBoxHeader:hover {
  /*background: rgba(0, 0, 0, 0.9);*/
 }
@@ -556,6 +577,25 @@ max-width: 800px;
     
   }
   
+  .PopularTicketBox .TicketBoxHeader {
+  width: 100%;
+  display: block;
+  background: #f8f8f8;
+  color: #00a7e1;
+  transition: background .3s ease;
+  &::after{
+    content:'';
+    display: block;
+    width: 180px;
+    height: 180px;
+    background:url("../../gfx/london/ribbon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    position:absolute;
+    right: -10px;
+    top: -10px; 
+  }
+}
   
 .TicketButton{
     height: 60px;
@@ -607,6 +647,7 @@ max-width: 800px;
 @media(max-width: 640px){
     .TicketBox, .PopularTicketBox{
        margin: 23px auto;
+       margin-top: 0;
        max-width: 330px;
     }
 

@@ -1,4 +1,5 @@
 /* CSS Document of the 404 page */
+
 body {
   font-family: 'museo-sans', sans-serif;
   margin: 0;
@@ -10,7 +11,7 @@ body {
   background-color: #FFFBF7;
 }
 
-h1, h2, h3, p {
+h1,h2,h3,p {
   margin: 0;
   color: #1c2126;
 }
@@ -63,10 +64,12 @@ a {
   #Logo404 {
     width: 167px;
   }
+
   #Headline404 {
     font-size: 32px;
     margin-top: 12px;
   }
+
   #Info404 {
     font-size: 14px;
     margin-top: 7px;
@@ -77,10 +80,12 @@ a {
   #Logo404 {
     width: 12.37037vw;
   }
+
   #Headline404 {
     font-size: 2.37037vw;
     margin-top: 0.888888vw;
   }
+
   #Info404 {
     font-size: 1.037037vw;
     margin-top: 0.5185185vw;
@@ -94,23 +99,28 @@ a {
     background-position: top center;
     background-repeat: no-repeat;
   }
+
   #Content {
     position: relative;
     top: 26.04166vw;
     margin-left: 39.0625vw;
   }
+
   #Logo404 {
     width: 167px;
   }
+
   #Headline404 {
     font-size: 32px;
     margin-top: 12px;
   }
+
   #Info404 {
     font-size: 14px;
     margin-top: 0;
     line-height: 180%;
   }
+
   .TabletLineBreak {
     display: block;
   }
@@ -121,6 +131,7 @@ a {
     background: none;
     background-color: #FFFBF7;
   }
+
   #Content {
     margin-top: 0;
     margin-left: 0;
@@ -128,19 +139,24 @@ a {
     padding-left: 14.0625vw;
     padding-right: 14.0625vw;
   }
+
   .TabletLineBreak {
     display: inline;
   }
+
   #Logo404 {
     width: 52.1875vw;
   }
+
   #Headline404 {
     font-size: 10vw;
     margin-top: 3.75vw;
   }
+
   #Info404 {
     font-size: 4.375vw;
   }
+
   #MobileBG {
     display: block;
     width: 36.5625vw;

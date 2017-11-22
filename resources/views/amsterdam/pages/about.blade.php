@@ -21,7 +21,7 @@
 @section('title', 'About')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/about.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/about.css') }}">
 @endsection
 
 @section('headerjs')

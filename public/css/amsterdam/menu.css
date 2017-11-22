@@ -225,6 +225,7 @@ section#header-menu #unleash-logo img {
   #more {
     overflow: hidden;
   }
+
   #more:hover {
     overflow: visible;
   }
@@ -267,6 +268,7 @@ section#header-menu #unleash-logo img {
   #dropdownbox .first-ul li a {
     color: #ededed;
   }
+
   #dropdownbox .first-ul li a:hover {
     color: #fff;
   }
@@ -339,22 +341,6 @@ section#header-menu #unleash-logo img {
   transition: none;
 }
 
-#dropdownbox .second-ul.visib {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-  position: static;
-  margin-left: 2em;
-}
-
-@media (min-width: 75em) {
-  #dropdownbox .second-ul.visib {
-    position: absolute;
-    margin-left: 0;
-  }
-}
-
 @media (min-width: 75em) {
   #dropdownbox {
     visibility: visible;
@@ -362,6 +348,7 @@ section#header-menu #unleash-logo img {
     -webkit-transition: all 1s;
     transition: all 1s;
   }
+
   #dropdownbox ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -375,7 +362,7 @@ section#header-menu #unleash-logo img {
   }
 }
 
-.btn, .pink-btn {
+.btn,.pink-btn {
   padding: .8em;
   margin: .5em;
   width: 100%;
@@ -386,20 +373,20 @@ section#header-menu #unleash-logo img {
 }
 
 @media (min-width: 30em) {
-  .btn, .pink-btn {
+  .btn,  .pink-btn {
     margin: 0 1em;
     width: 205px;
   }
 }
 
 @media (min-width: 120em) {
-  .btn, .pink-btn {
+  .btn,  .pink-btn {
     width: 11vw;
     font-size: .8vw;
   }
 }
 
-.btn:hover, .pink-btn:hover {
+.btn:hover,.pink-btn:hover {
   -webkit-transition: all .3s;
   transition: all .3s;
   cursor: pointer;

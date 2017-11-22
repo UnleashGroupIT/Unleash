@@ -1,4 +1,4 @@
-.btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
+.btn,.full-btn,.pink-btn,.green-btn,.black-btn,.blue-btn,.amsblue-btn,.red-btn,.white-btn {
   padding: .8em;
   margin: .5em;
   width: 100%;
@@ -9,20 +9,20 @@
 }
 
 @media (min-width: 30em) {
-  .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
+  .btn,  .full-btn,  .pink-btn,  .green-btn,  .black-btn,  .blue-btn,  .amsblue-btn,  .red-btn,  .white-btn {
     margin: 0 1em;
     width: 205px;
   }
 }
 
 @media (min-width: 120em) {
-  .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
+  .btn,  .full-btn,  .pink-btn,  .green-btn,  .black-btn,  .blue-btn,  .amsblue-btn,  .red-btn,  .white-btn {
     width: 11vw;
     font-size: .8vw;
   }
 }
 
-.btn:hover, .full-btn:hover, .pink-btn:hover, .green-btn:hover, .black-btn:hover, .blue-btn:hover, .amsblue-btn:hover, .red-btn:hover, .white-btn:hover, .trans-btn:hover {
+.btn:hover,.full-btn:hover,.pink-btn:hover,.green-btn:hover,.black-btn:hover,.blue-btn:hover,.amsblue-btn:hover,.red-btn:hover,.white-btn:hover {
   -webkit-transition: all .3s;
   transition: all .3s;
   cursor: pointer;
@@ -133,26 +133,6 @@
 .white-btn:hover {
   color: #fff;
   background-color: transparent;
-}
-
-.trans-btn {
-  margin: 2em 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  color: #36b1bf;
-  border-color: #36b1bf;
-  width: 100%;
-}
-
-@media (min-width: 40em) {
-  .trans-btn {
-    width: 205px;
-  }
-}
-
-.trans-btn:hover {
-  color: #fff;
-  background-color: #36b1bf;
 }
 
 h2 {

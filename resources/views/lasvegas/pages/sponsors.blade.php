@@ -3,9 +3,7 @@
 @section('title', 'Sponsors')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/sponsors.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/lasvegas/sponsors.css') }}">
 @endsection
 
 @section('headerjs')

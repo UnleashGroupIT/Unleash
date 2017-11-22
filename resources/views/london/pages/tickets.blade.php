@@ -94,9 +94,9 @@
   <div class="TicketBox PopularTicketBox IsoBox SummerSaver TicketOne" data-category="SummerSaver">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
-            <h2 class="TicketHeadline">LATE BOOKING</h2>
-            <h2 class="TicketPrice">&pound;1,695</h2>
-            <h3 class="TicketDeadline">Until March 18.</h3>
+            <h2 class="TicketHeadline">SUPER SAVER</h2>
+            <h2 class="TicketPrice">&pound;995</h2>
+            <h3 class="TicketDeadline">UNTIL NOVEMBER 30.</h3>
             <h4 id="hide" class="TicketSmallText">.</h4>
         </div>
     </div>
@@ -135,7 +135,7 @@
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">PUBLIC &amp; GOVERNMENTAL SECTOR</h2>
             <h2 class="TicketPrice">&pound;895</h2>
-            <h4 class="TicketSmallText">Save €300 from the Regular</h4>
+            <h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>
             <h3 class="TicketDeadline">Until Dec 31.</h3>
         </div>
     </div>
@@ -210,7 +210,7 @@
   <div class="TicketBox IsoBox Group TicketFour" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
-            <h2 class="TicketHeadline">GROUP À LA CARTE</h2>
+            <h2 class="TicketHeadline">LOYALTY PROGRAM</h2>
 
             <p class="AlaCarteText">To gain access to an exclusive and multi-dimensional conference experience, bring your leadership figures with you and enjoy the benefits of a tailor-made package designed to ensure you make the best of your team's away days.</p>
 
@@ -541,6 +541,30 @@ $(document).ready(function() {
     setTimeout(function(){ 
         $('.IsoBox').css('visibility','visible');
     }, 50);
+});
+
+</script>
+
+<script>
+$('.StandardTicket').click(function(e)  {
+     e.preventDefault();
+     let discount = $('#DiscountField').val();
+    if(typeof discount != 'undefined'){
+        window.open("https://www.eventbrite.com/e/unleash-london-formerly-hr-tech-world-tickets-34137650632?discount="+discount+"#tickets","_blank");
+    } else {
+        window.open("https://www.eventbrite.com/e/unleash-london-formerly-hr-tech-world-tickets-34137650632#tickets","_blank"); 
+    }
+
+     
+});
+
+//Trigger the discount code check on enter
+$('#DiscountField').on( 'keyup', function(e) {
+  if(e.keyCode === 13){
+	$( '.StandardTicket' ).trigger( "click" );
+  }
+
+
 });
 
 </script>

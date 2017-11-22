@@ -1,25 +1,8 @@
 /* These CSS rules will affect the Agenda page.  */
+
 .cnt {
   width: 100%;
   background-color: #fff;
-}
-
-.fxd {
-  position: fixed;
-  top: 7.3%;
-  z-index: 7000;
-}
-
-@media (min-width: 1920px) {
-  .fxd {
-    top: 3.5vw;
-  }
-}
-
-.opa {
-  opacity: 0;
-  -webkit-transition: opacity .6s;
-  transition: opacity .6s;
 }
 
 @media (min-width: 1000px) {
@@ -36,6 +19,7 @@
 }
 
 /* Navigation Desktop */
+
 .agendaWrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,7 +140,7 @@
   transition: all 0.3s;
 }
 
-.BreakoutDesktop:hover .BreakoutDesktopIcon, .ActiveBreakoutIcon {
+.BreakoutDesktop:hover .BreakoutDesktopIcon,.ActiveBreakoutIcon {
   -webkit-transform: scale(0.8, 0.8) !important;
   transform: scale(0.8, 0.8) !important;
 }
@@ -174,10 +158,7 @@
   transition: all 0.3s;
 }
 
-.BreakoutDesktop:hover .BreakoutDesktopIcon:before,
-.BreakoutDesktop:active .BreakoutDesktopIcon:before,
-.BreakoutDesktop:focus .BreakoutDesktopIcon:before,
-.ActiveBreakoutIcon {
+.BreakoutDesktop:hover .BreakoutDesktopIcon:before,.BreakoutDesktop:active .BreakoutDesktopIcon:before,.BreakoutDesktop:focus .BreakoutDesktopIcon:before,.ActiveBreakoutIcon {
   opacity: 1;
 }
 
@@ -185,7 +166,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/futureofwork.svg) center no-repeat;
 }
 
-#FutureOfWorkIcon:before, #FutureOfWorkIcon.ActiveBreakoutIcon {
+#FutureOfWorkIcon:before,#FutureOfWorkIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/futureofwork.svg) center no-repeat;
 }
 
@@ -193,7 +174,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/home.svg) center no-repeat;
 }
 
-#HomeIcon:before, #HomeIcon.ActiveBreakoutIcon {
+#HomeIcon:before,#HomeIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/home.svg) center no-repeat;
 }
 
@@ -201,23 +182,15 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/godigital.svg) center no-repeat;
 }
 
-#GoDigitalIcon:before, #GoDigitalIcon.ActiveBreakoutIcon {
+#GoDigitalIcon:before,#GoDigitalIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/godigital.svg) center no-repeat;
-}
-
-#EmergingTechTrendsIcon {
-  background: url(../../gfx/lasvegas/agenda/icons/grey/emergingtechtrends.svg) center no-repeat;
-}
-
-#EmergingTechTrendsIcon:before, #EmergingTechTrendsIcon.ActiveBreakoutIcon {
-  background: url(../../gfx/lasvegas/agenda/icons/color/emergingtechtrends.svg) center no-repeat;
 }
 
 #iRecruitIcon {
   background: url(../../gfx/lasvegas/agenda/icons/grey/irecruit.svg) center no-repeat;
 }
 
-#iRecruitIcon:before, #iRecruitIcon.ActiveBreakoutIcon {
+#iRecruitIcon:before,#iRecruitIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/irecruit.svg) center no-repeat;
 }
 
@@ -225,7 +198,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/hrtechworld.svg) center no-repeat;
 }
 
-#HRTechIcon:before, #HRTechIcon.ActiveBreakoutIcon {
+#HRTechIcon:before,#HRTechIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/hrtechworld.svg) center no-repeat;
 }
 
@@ -233,7 +206,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/smartdata.svg) center no-repeat;
 }
 
-#SmartDataIcon:before, #SmartDataIcon.ActiveBreakoutIcon {
+#SmartDataIcon:before,#SmartDataIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/smartdata.svg) center no-repeat;
 }
 
@@ -241,7 +214,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/learning.svg) center no-repeat;
 }
 
-#LearningIcon:before, #LearningIcon.ActiveBreakoutIcon {
+#LearningIcon:before,#LearningIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/learning.svg) center no-repeat;
 }
 
@@ -249,7 +222,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/adoption.svg) center no-repeat;
 }
 
-#AdoptionIcon:before, #AdoptionIcon.ActiveBreakoutIcon {
+#AdoptionIcon:before,#AdoptionIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/adoption.svg) center no-repeat;
 }
 
@@ -257,7 +230,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/govtech.svg) center no-repeat;
 }
 
-#GovIcon:before, #GovIcon.ActiveBreakoutIcon {
+#GovIcon:before,#GovIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/speedconference.svg) center no-repeat;
 }
 
@@ -265,7 +238,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/thinktank.svg) center no-repeat;
 }
 
-#ThinkTankIcon:before, #ThinkTankIcon.ActiveBreakoutIcon {
+#ThinkTankIcon:before,#ThinkTankIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/thinktank.svg) center no-repeat;
 }
 
@@ -273,7 +246,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/hrtechanalysts.svg) center no-repeat;
 }
 
-#HRTechAnalystsIcon:before, #HRTechAnalystsIcon.ActiveBreakoutIcon {
+#HRTechAnalystsIcon:before,#HRTechAnalystsIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/analysts.svg) center no-repeat;
 }
 
@@ -281,7 +254,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/wellbeingandrewards.svg) center no-repeat;
 }
 
-#WellbeingAndRewardsIcon:before, #WellbeingAndRewardsIcon.ActiveBreakoutIcon {
+#WellbeingAndRewardsIcon:before,#WellbeingAndRewardsIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/wellbeing.svg) center no-repeat;
 }
 
@@ -289,7 +262,7 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/disrupthr.svg) center no-repeat;
 }
 
-#disruptHRBetaPitchIcon:before, #disruptHRBetaPitchIcon.ActiveBreakoutIcon {
+#disruptHRBetaPitchIcon:before,#disruptHRBetaPitchIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/disrupthr.svg) center no-repeat;
 }
 
@@ -297,45 +270,31 @@
   background: url(../../gfx/lasvegas/agenda/icons/grey/productdemo.svg) center no-repeat;
 }
 
-#ProductDemosIcon:before, #ProductDemosIcon.ActiveBreakoutIcon {
+#ProductDemosIcon:before,#ProductDemosIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/productdemo.svg) center no-repeat;
 }
 
 /* not created yet */
+
 #TalentManagementIcon {
   background: url(../../gfx/lasvegas/agenda/icons/grey/talentmanagement.svg) center no-repeat;
 }
 
-#TalentManagementIcon:before, #TalentManagementIcon.ActiveBreakoutIcon {
+#TalentManagementIcon:before,#TalentManagementIcon.ActiveBreakoutIcon {
   background: url(../../gfx/lasvegas/agenda/icons/color/talentmanagement.svg) center no-repeat;
 }
 
 /* END not created yet */
+
 #DesktopAgenda {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-#AgendaInfoContainer {
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-#AgendaDescContainer {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  max-width: 36.45833vw;
-}
-
 @media (max-width: 1920px) {
-  .BreakoutDesktopIcon,
-  .BreakoutDesktopIcon:before {
+  .BreakoutDesktopIcon,  .BreakoutDesktopIcon:before {
     width: 60px;
     height: 60px;
-  }
-  #AgendaDescContainer {
-    max-width: 700px;
   }
 }
 
@@ -346,18 +305,17 @@
     -webkit-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
   }
+
   .BreakoutDesktopIcon:before {
     width: 55px;
     height: 55px;
   }
-  #AgendaDescContainer {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 
 /* END Navigation */
+
 /* Tooltip */
+
 .TooltipContent {
   position: absolute;
   /*z-index: 9999;*/
@@ -406,6 +364,7 @@
     font-size: 12px;
     padding-bottom: 10px;
   }
+
   .TooltipContent::after {
     content: '';
     position: absolute;
@@ -435,8 +394,7 @@
   transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
-.BreakoutDesktop:hover .TooltipContent,
-.TooltipContent.ActiveTooltipContent {
+.BreakoutDesktop:hover .TooltipContent,.TooltipContent.ActiveTooltipContent {
   pointer-events: auto;
   -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
@@ -448,21 +406,27 @@
 }
 
 /* END Tooltip */
+
 /* Navigation Mobile */
+
 @media (max-width: 1000px) {
   #DesktopAgenda {
     display: none !important;
   }
+
   #AgendaNavDesktop {
     display: none;
   }
+
   #AgendaNavMobile {
     display: block;
     overflow: visible;
   }
+
   .BreakoutMobile {
     width: 100%;
   }
+
   .BreakoutHeaderMobile {
     color: #fff;
     cursor: pointer;
@@ -472,9 +436,7 @@
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .BreakoutHeaderMobile.BreakoutHeaderMobileActive {
-    border-bottom: 1px solid transparent;
-  }
+
   .MobileStageIcon {
     margin-top: -3px;
     width: 49px;
@@ -482,6 +444,7 @@
     -webkit-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
   }
+
   .MobileStageName {
     font-family: 'museo-sans', sans-serif;
     font-size: 16px;
@@ -494,6 +457,7 @@
     top: 19px;
     left: 60px;
   }
+
   .BreakoutHeaderMobile .fa {
     position: absolute;
     top: 20px;
@@ -506,29 +470,31 @@
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
-  .BreakoutHeaderMobile .fa.CaretActive {
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-  }
+
   .BreakoutCollapsibleMobile {
     display: none;
   }
+
   .MobileCloseSession {
     text-align: center;
     cursor: pointer;
     padding: 10px 0;
   }
+
   .MobileCloseSession span {
     font-family: 'museo-sans', sans-serif;
     font-size: 13px;
   }
+
   .MobileCloseSession .fa {
     margin: 0 20px;
   }
 }
 
 /* END Navigation Mobile */
+
 /*Track Location*/
+
 #LocationContainerDesktop {
   width: 100%;
   border-bottom: 1px solid;
@@ -537,15 +503,8 @@
   padding-bottom: 1vw;
 }
 
-#LocationLevel, .LocationLevel {
+#LocationLevel,.LocationLevel {
   display: inline-block;
-}
-
-#LocationRoom {
-  display: inline-block;
-  position: relative;
-  margin-left: 87%;
-  text-align: right;
 }
 
 #LocationLevel {
@@ -575,12 +534,13 @@
 }
 
 @media (min-width: 1920px) {
-  #LevelNum, #RoomData {
+  #LevelNum,  #RoomData {
     font-size: .9vw;
   }
 }
 
 /*Tablet-Mobile*/
+
 .LocationContainerMobile {
   width: 100%;
   border-bottom: 1px solid;
@@ -605,16 +565,11 @@
   right: 0;
 }
 
-.LocationRoom {
-  display: inline-block;
-  position: relative;
-  margin-left: 77%;
-  text-align: right;
-}
-
 /*END Track Location*/
+
 /* Agenda Session List Stage Name and Date */
-#AgendaStageTitle, .AgendaDateClass {
+
+#AgendaStageTitle,.AgendaDateClass {
   width: 100%;
   max-width: 53.38541vw;
   margin: 0 auto;
@@ -628,14 +583,6 @@
   font-size: 1.354166vw;
   font-weight: 900;
   text-transform: uppercase;
-}
-
-#CategoryRoom {
-  float: right;
-  font-size: 0.875vw;
-  vertical-align: bottom;
-  position: relative;
-  top: 0.3vw;
 }
 
 .AgendaDateClass {
@@ -656,17 +603,6 @@
   padding-bottom: 0.78125vw;
 }
 
-.ProductDName {
-  font-family: 'museo-sans', sans-serif;
-  font-weight: 300;
-  font-size: 1.04166vw;
-  padding-left: 1.5625vw;
-}
-
-#SessionsDayTwoMobile .ProductDName {
-  margin-top: 50px;
-}
-
 .AgendaDateDay {
   float: right;
 }
@@ -682,34 +618,31 @@
 }
 
 @media (max-width: 1920px) {
-  #AgendaStageTitle, .AgendaDateClass {
+  #AgendaStageTitle,  .AgendaDateClass {
     max-width: 1025px;
   }
+
   #AgendaStageTitle {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 26px;
   }
-  #CategoryRoom {
-    font-size: 25.2px;
-    top: 0.75vw;
-  }
+
   #AgendaDayOne {
     margin-top: 25px;
     padding-bottom: 15px;
   }
+
   #AgendaDayTwo {
     margin-top: 50px;
     padding-bottom: 15px;
   }
+
   .AgendaDateClass {
     margin-bottom: 0;
     font-size: 21px;
   }
-  .ProductDName {
-    font-size: 20px;
-    padding-left: 30px;
-  }
+
   #SelectedStageText {
     max-width: 1024px;
     font-size: 13px;
@@ -717,13 +650,15 @@
 }
 
 @media (max-width: 1070px) {
-  #AgendaStageTitle, .AgendaDateClass {
+  #AgendaStageTitle,  .AgendaDateClass {
     padding-left: 20px;
   }
+
   #SelectedStageText {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .AgendaDateClass {
     max-width: 980px;
     padding-left: 0;
@@ -731,9 +666,10 @@
 }
 
 @media (max-width: 1000px) {
-  #AgendaStageTitle, .AgendaDateClass {
+  #AgendaStageTitle,  .AgendaDateClass {
     padding-left: 4vw;
   }
+
   #AgendaStageTitle {
     padding: 4vw 0 3vw 0vw;
     font-size: 3.3854166vw;
@@ -741,23 +677,19 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  #CategoryRoom {
-    font-size: 2.1875vw;
-  }
+
   .AgendaDateClass {
     margin-top: 5vw;
     max-width: 95vw;
     padding-left: 0;
     font-size: 2.734375vw;
   }
+
   .AgendaDateDayTwo {
     margin-top: 6vw;
   }
-  .ProductDName {
-    font-size: 2.08333vw;
-    padding-left: 1.692708vw;
-  }
-  #SelectedStageText, .StageTextMobile {
+
+  #SelectedStageText,  .StageTextMobile {
     max-width: 95vw;
     font-size: 1.6927083vw;
     padding-left: 0;
@@ -774,28 +706,25 @@
     padding-left: 2.8125vw;
     padding-right: 2.8125vw;
   }
+
   .AgendaDateDayTwo {
     margin-top: 10vw;
   }
-  #CategoryRoom {
-    font-size: 4.6vw;
-    top: 0;
-  }
-  #AgendaDayOne, #AgendaDayTwo {
+
+  #AgendaDayOne,  #AgendaDayTwo {
     margin-top: 7.8125vw;
   }
+
   #AgendaDayOne {
     margin-bottom: 0;
   }
+
   .AgendaDateClass {
     font-size: 4.0625vw;
     max-width: 89.375vw;
   }
-  .ProductDName {
-    font-size: 4.375vw;
-    padding-left: 2vw;
-  }
-  #SelectedStageText, .StageTextMobile {
+
+  #SelectedStageText,  .StageTextMobile {
     max-width: 100%;
     font-size: 3.52vw;
     padding: 0 5.625vw;
@@ -804,32 +733,15 @@
 }
 
 /* END Agenda Session List Stage name and Date */
-/* Session List */
-.BreakoutSponsorLogo {
-  position: relative;
-  bottom: 0;
-  vertical-align: middle;
-}
 
-.BreakoutSponsor, .SessionContent {
+/* Session List */
+
+.SessionContent {
   display: inline-block;
   vertical-align: middle;
 }
 
-.BreakoutSponsorLogo {
-  height: 2.6vw;
-}
-
-#SessionListMobile {
-  margin-top: 2vw;
-}
-
-.EventDayTitle {
-  width: 48.489062vw;
-  margin: 0 auto;
-}
-
-.SessionsList, #SessionCategories {
+.SessionsList {
   width: 100%;
   max-width: 53.333333vw;
   margin: 0vw auto;
@@ -840,7 +752,7 @@
   border-bottom: 1px solid #CCCCCC;
 }
 
-.SessionTimeContainer, .SessionContent {
+.SessionTimeContainer,.SessionContent {
   display: inline-block;
   vertical-align: top;
 }
@@ -850,7 +762,7 @@
   vertical-align: middle;
 }
 
-.SessionStartTime, .SessionTitle, .SessionSpeaker {
+.SessionStartTime,.SessionTitle {
   font-family: 'museo-sans', sans-serif;
   font-weight: 400;
   margin: 0;
@@ -858,17 +770,9 @@
   transition: all 0.3s;
 }
 
-.SessionStartTime, .SessionTitle {
+.SessionStartTime,.SessionTitle {
   font-size: 0.833333vw;
   vertical-align: middle;
-}
-
-.SessionSpeaker {
-  font-size: 0.6770833vw;
-  line-height: 140%;
-  margin-bottom: 0.364583vw;
-  color: #000;
-  font-weight: 600;
 }
 
 .SessionStartTime {
@@ -897,19 +801,6 @@
   transition: all 0.3s;
 }
 
-.SessionTitle .fa.OpenedSession {
-  -webkit-transform: scale(1.3) rotate(180deg);
-  transform: scale(1.3) rotate(180deg);
-}
-
-.SessionLocation {
-  font-size: 0.833333vw;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 0.260416vw;
-}
-
 .ExtraSessionType {
   margin-top: 1.0416vw;
   margin-bottom: 0.52083vw;
@@ -931,7 +822,7 @@
   padding-top: 0.78125vw;
 }
 
-.SessionAbstract, .SessionAbstract[style] {
+.SessionAbstract,.SessionAbstract[style] {
   margin-top: 0.520833vw !important;
   font-size: 0.6770833vw !important;
   font-weight: 300 !important;
@@ -946,7 +837,7 @@
   color: #000 !important;
 }
 
-.SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+.SessionAbstract,.SessionInfoSpeakersGrid {
   padding-left: 5.8vw;
 }
 
@@ -991,130 +882,66 @@
   cursor: default !important;
 }
 
-.BreakoutTextColor {
-  color: #747474;
-  font-weight: 300;
-}
-
-.ExtraBreakoutText {
-  float: right;
-  color: #747474;
-}
-
-.ExtraBreakoutQuestionMark {
-  background-color: #747474;
-  color: #fff;
-  font-size: 10px;
-  padding: 1px 3px 0px 4px;
-  vertical-align: middle;
-  margin-right: 7px;
-}
-
-#EventDay2Title {
-  display: inline-block;
-  position: relative;
-  top: 50vw;
-  margin-left: 0;
-  z-index: 10;
-}
-
-#EventDay1Title {
-  width: 25vw;
-  background-color: rgba(116, 116, 116, 0.85);
-  color: #fff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  position: relative;
-  top: 50vw;
-  margin-left: 0;
-  z-index: 10;
-}
-
-#SessionsDayTwoAnchor, #SessionsDayOneAnchor {
-  position: relative;
-  top: -30vh;
-}
-
 @media (max-width: 1920px) {
-  .BreakoutSponsorLogo {
-    height: 64px;
-  }
   .BreakoutContent {
     max-width: 740px !important;
   }
-  #SessionListMobile {
-    margin-top: 38px;
-  }
+
   .SessionContent {
     max-width: 850px;
   }
-  .EventDayTitle {
-    width: 939px;
-    margin: 0 auto;
-  }
+
   .Session {
     padding: 18px 0;
   }
-  .SessionsList, #SessionCategories {
+
+  .SessionsList {
     max-width: 1024px;
     margin: 0 auto;
   }
+
   .SessionTimeContainer {
     width: 83px;
   }
-  .SessionStartTime, .SessionTitle {
+
+  .SessionStartTime,  .SessionTitle {
     font-size: 16px;
   }
-  .SessionLocation {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
+
   .ExtraSessionType {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
   }
+
   .SessionInfo {
     padding-top: 15px;
   }
-  .SessionSpeaker {
-    font-size: 13px;
-    margin-bottom: 7px;
-  }
-  .SessionAbstract, .SessionAbstract[style] {
+
+  .SessionAbstract,  .SessionAbstract[style] {
     font-size: 13px !important;
     margin-top: 10px !important;
   }
+
   .SessionAbstract *[style] {
     font-size: 13px !important;
   }
-  .SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+
+  .SessionAbstract,  .SessionInfoSpeakersGrid {
     padding-left: 86px;
   }
+
   .SessionInfoSpeaker img {
     max-width: 52px;
   }
+
   .SessionInfoSpeakerDetails {
     max-width: 800px;
     padding-left: 18px;
   }
+
   .SessionInfoSpeaker p {
     font-size: 13px;
-  }
-  .ExtraBreakoutQuestionMark {
-    background-color: #747474;
-    color: #fff;
-    font-size: 10px;
-    padding: 1px 3px 0px 4px;
-    vertical-align: middle;
-    margin-right: 7px;
-  }
-}
-
-@media (max-width: 1500px) {
-  #SessionListMobile {
-    margin-top: 1vw;
   }
 }
 
@@ -1123,216 +950,173 @@
     max-width: 980px;
     margin: 0 auto;
   }
+
   .SessionContent {
     max-width: 730px;
   }
+
   .BreakoutContent {
     max-width: 63vw !important;
   }
 }
 
 @media (max-width: 1000px) {
-  #SessionListMobile {
-    margin-top: 0vw;
-  }
-  .BreakoutSponsorLogo {
-    height: 52px;
-  }
-  .EventDayTitle {
-    font-family: 'museo-sans', sans-serif;
-    font-size: 2.08333vw;
-    color: #747474;
-    background-color: #E0E0E0;
-    width: 100%;
-    max-width: 10.4166vw;
-    text-align: center;
-    margin: 0;
-    padding: 1.04166vw 0;
-  }
-  #EventDay2Title {
-    max-width: 13.02083vw;
-    background-color: rgba(116, 116, 116, 0.85);
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  #EventDay2Title .fa-angle-down {
-    font-size: 2.864583vw;
-  }
-  .SessionsList, #SessionCategories {
+  .SessionsList {
     width: 100%;
     max-width: 95vw;
     margin: 0 auto;
   }
-  .Session, .SessionSelector {
+
+  .Session {
     margin-bottom: 0;
   }
+
   .SessionTimeContainer {
     width: 10.546875vw;
   }
-  .SessionStartTime, .SessionTitle, .SessionSpeaker, .SessionInfoSpeakersGrid {
+
+  .SessionStartTime,  .SessionTitle,  .SessionInfoSpeakersGrid {
     font-size: 1.8229166vw;
     margin: 0;
   }
+
   .SessionStartTime {
     font-size: 2.0833vw;
   }
-  .SessionLocation {
-    font-size: 2.0833vw;
-    margin-bottom: 0.6510416vw;
-  }
+
   .ExtraSessionType {
     margin-top: 2.60416vw;
     margin-bottom: 1.302083vw;
     font-size: 2.60416vw;
   }
+
   .SessionTitle {
     font-size: 2.0833vw;
     /*word-wrap: break-word;*/
   }
+
   .SessionContent {
     margin-top: 0.130208vw;
     width: 100%;
     max-width: 66vw;
     /* overflow: hidden;*/
   }
-  .SessionSpeaker {
-    font-size: 1.6927083vw;
-    margin-bottom: 0.9114583vw;
-  }
-  .SessionAbstract, .SessionAbstract[style] {
+
+  .SessionAbstract,  .SessionAbstract[style] {
     font-size: 1.6927083vw !important;
     margin-top: 1.302083vw !important;
   }
+
   .SessionAbstract *[style] {
     font-size: 1.6927083vw !important;
   }
-  .SessionAbstract, .SessionInfo .SessionSpeaker {
+
+  .SessionAbstract {
     padding-left: 11.197916vw;
   }
+
   .SessionInfoSpeaker img {
     max-width: 6.770833vw;
   }
+
   .SessionInfoSpeakerDetails {
     max-width: 71.6145833vw;
     padding-left: 2.34375;
   }
+
   .SessionInfoSpeaker p {
     font-size: 1.6927083vw;
   }
 }
 
 @media (max-width: 900px) {
-  .SessionContent, .BreakoutContent {
+  .SessionContent,  .BreakoutContent {
     max-width: 63.89vw !important;
   }
 }
 
 @media (max-width: 800px) {
-  .SessionContent, .BreakoutContent {
+  .SessionContent,  .BreakoutContent {
     max-width: 61vw !important;
   }
 }
 
 @media (max-width: 700px) {
-  .SessionContent, .BreakoutContent {
+  .SessionContent,  .BreakoutContent {
     max-width: 65vw !important;
-  }
-  .BreakoutSponsor {
-    font-size: 8px !important;
-  }
-  .BreakoutSponsorLogo {
-    height: 25px;
   }
 }
 
 @media (max-width: 640px) {
-  #SessionListMobile {
-    margin-top: 0px;
-  }
   #SessionTitle {
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
-  .EventDayTitle {
-    font-size: 5vw;
-    max-width: 25vw;
-    padding: 2.5vw 0;
-  }
-  #EventDay2Title {
-    max-width: 31.25vw;
-  }
-  #EventDay2Title .fa-angle-down {
-    font-size: 6.875vw;
-  }
+
   .SessionsList {
     max-width: 89.375vw;
     margin: 0 auto;
   }
-  .Session, .SessionSelector {
+
+  .Session {
     margin-bottom: 0;
   }
+
   .Session {
     padding-top: 3vw;
     padding-bottom: 3vw;
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
+
   .SessionTimeContainer {
     width: 16.875vw;
   }
-  .SessionStartTime, .SessionTitle, .SessionSpeaker {
+
+  .SessionStartTime,  .SessionTitle {
     font-size: 3.52vw;
   }
-  .SessionLocation {
-    font-size: 5vw;
-    margin-bottom: 1.5625vw;
-  }
+
   .SessionContent {
     max-width: 67.5vw;
   }
-  #SessionCategoriesDesktop {
-    display: none !important;
-  }
-  .ExtraBreakoutText {
-    display: block;
-    float: none;
-  }
+
   .ExtraSessionType {
     margin-top: 6.25vw;
     margin-bottom: 3.125vw;
     font-size: 4.375vw;
   }
+
   .SessionInfo {
     padding-top: 4.6875vw;
   }
-  .SessionSpeaker {
-    margin-bottom: 6.25vw;
-  }
-  .SessionSpeaker strong {
-    display: block;
-    margin: 0.7vw 0;
-  }
-  .SessionAbstract, .SessionAbstract[style] {
+
+  .SessionAbstract,  .SessionAbstract[style] {
     font-size: 3.0625vw !important;
     margin-top: 3.125vw !important;
   }
+
   .SessionAbstract *[style] {
     font-size: 3.0625vw !important;
   }
-  .SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+
+  .SessionAbstract,  .SessionInfoSpeakersGrid {
     padding-left: 20.3125vw;
   }
+
   .SessionInfoSpeaker {
     margin-bottom: 6.25vw;
   }
+
   .SessionInfoSpeaker img {
     max-width: 16.25vw;
   }
+
   .SessionInfoSpeakerDetails {
     max-width: 50vw;
     padding-left: 3vw;
   }
+
   .SessionInfoSpeaker p {
     font-size: 2.9vw;
   }
@@ -1342,234 +1126,20 @@
   .BreakoutContent {
     max-width: 45.5vw !important;
   }
-  .BreakoutSponsor {
-    font-size: 8px !important;
-  }
-  .BreakoutSponsorLogo {
-    height: 21px;
-  }
 }
 
 /* END Session List */
+
 /* Go Top Button Agenda customization */
-#GoTopImg {
-  bottom: 50px;
-  z-index: 5000;
-}
-
-@media (max-width: 640px) {
-  .ExtraBreakoutText {
-    display: none;
-  }
-}
-
-.RoomNum {
-  margin-top: 3vw !important;
-}
-
-.invisible {
-  display: none;
-}
 
 /* Colors */
+
 /*Desktop*/
-.MainStageColor {
-  color: #18a8e1;
-}
-
-.InfluencersColor {
-  color: #39B54A;
-}
-
-.LearningColor {
-  color: #cc6600;
-}
-
-.TalentColor {
-  color: #00cc33;
-}
-
-.AnalysisColor {
-  color: #686baf;
-}
-
-.WellbeingColor {
-  color: #33cccc;
-}
-
-.HRSSColor {
-  color: #809453;
-}
-
-.SmartDataColor {
-  color: #8A5EA4;
-}
-
-.disruptHRColor {
-  color: #CCA82E;
-}
-
-.SpeedConfColor {
-  color: #3476b9;
-}
-
-.ProductDemoColor {
-  color: #E41A52;
-}
-
-.DigitalHRColor {
-  color: #3300cc;
-}
-
-.PayAndRewardsColor {
-  color: #A92A31;
-}
-
-.SocialColor {
-  color: #3B8954;
-}
-
-.HRTechColor {
-  color: #ff9900;
-}
-
-.iRecruitColor {
-  color: #cc00cc;
-}
-
-.LeadershipColor {
-  color: #F15A29;
-}
-
-.DiversityColor {
-  /*color:#ED1C24;*/
-  /* color:#3B8954;*/
-  color: #f15a29;
-}
-
-.AdoptionColor {
-  color: #ff0033;
-}
-
-.ThinkTankColor {
-  color: #3F80C2;
-}
-
-.ThinkTankOneColor {
-  color: #3F80C2;
-}
-
-.ThinkTankTwoColor {
-  color: #3F80C2;
-}
-
-.ThinkTankThreeColor {
-  color: #3F80C2;
-}
-
-.WorkshopColor {
-  color: #FFA000;
-}
 
 /*Mobile*/
-.MainStageBgColor {
-  background-color: #18a8e1;
-}
-
-.InfluencersBgColor {
-  background-color: #39B54A;
-}
-
-.LearningBgColor {
-  background-color: #cc6600;
-}
-
-.TalentBgColor {
-  background-color: #00cc33;
-}
-
-.AnalysisBgColor {
-  background-color: #686baf;
-}
-
-.HRSSBgColor {
-  background-color: #809453;
-}
-
-.SpeedConfBgColor {
-  background-color: #3476b9;
-}
-
-.WellbeingBgColor {
-  backgorund-color: #33cccc;
-}
-
-.SmartDataBgColor {
-  background-color: #8A5EA4;
-}
-
-.disruptHRBgColor {
-  background-color: #CCA82E;
-}
-
-.ProductDemoBgColor {
-  background-color: #E41A52;
-}
-
-.DigitalHRBgColor {
-  background-color: #3300cc;
-}
-
-.PayAndRewardsBgColor {
-  background-color: #A92A31;
-}
-
-.SocialBgColor {
-  background-color: #3B8954;
-}
-
-.HRTechBgColor {
-  background-color: #ff9900;
-}
-
-.iRecruitBgColor {
-  background-color: #cc00cc;
-}
-
-.LeadershipBgColor {
-  background-color: #F15A29;
-}
-
-.DiversityBgColor {
-  /* background-color:#ED1C24;*/
-  background-color: #3B8954;
-}
-
-.AdoptionBgColor {
-  background-color: #ff0033;
-}
-
-.ThinkTankBgColor {
-  color: #3F80C2;
-}
-
-.ThinkTankOneBgColor {
-  background-color: #3F80C2;
-}
-
-.ThinkTankTwoBgColor {
-  background-color: #3F80C2;
-}
-
-.ThinkTankThreeBgColor {
-  background-color: #3F80C2;
-}
-
-.WorkshopBgColor {
-  background-color: #FFA000;
-}
 
 /* END Colors */
+
 #canvasLoader {
   position: static;
   top: 0;

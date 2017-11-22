@@ -36,8 +36,7 @@ img {
   max-width: 100%;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,details,footer,header,menu,nav,section {
   display: block;
 }
 
@@ -48,21 +47,15 @@ body {
   transition: all .5s;
 }
 
-ol, ul {
+ul {
   list-style: none;
 }
 
-blockquote, q {
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+q:before,q:after {
   content: '';
   content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }

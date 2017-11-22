@@ -22,9 +22,8 @@
 @section('title', 'Index')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/index.css') }}">
 @endsection
 
 @section('headerjs')

@@ -23,8 +23,8 @@
 @section('title', 'London - Venue')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="http://www.unleashgroup.io/css/london/speakergrid.css">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/travel.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/travel.css') }}">
 @endsection
 
 @section('headerjs')

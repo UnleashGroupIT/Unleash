@@ -23,8 +23,8 @@
 @section('title', 'London - Venue')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/floorplan.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/venue.css') }}">
+
 @endsection
 
 @section('headerjs')

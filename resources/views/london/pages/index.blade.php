@@ -23,9 +23,8 @@
 @section('title', '- London')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speakergrid.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/index.css') }}">
+
 @endsection
 
 @section('headerjs')

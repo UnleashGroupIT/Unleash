@@ -109,6 +109,9 @@ Route::get('/amsterdam/thankyou', function(){
 	return view('amsterdam.pages.streamthankyou');
 });
 
+Route::get('/amsterdam/terms', function () {
+    return redirect('/terms');
+});
 //Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
 
 
@@ -179,6 +182,9 @@ Route::get('/london/tickets', function(){
 	return view('london.pages.tickets');
 })->name('london.tickets');
 
+Route::get('/london/terms', function () {
+    return redirect('/terms');
+});
 
 /*********** America ************/
 
@@ -236,4 +242,8 @@ Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floor
 
 Route::get('/america/sponsor-pdf', function () {
   return view('lasvegas.pages.sponsorshippdf');
+});
+
+Route::get('/america/terms', function () {
+    return redirect('/terms');
 });
