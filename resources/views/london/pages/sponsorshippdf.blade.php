@@ -1,28 +1,24 @@
 @extends('london.main')
 @section('maincontent')
 <section class="demo">
-        <a href="#"><span></span>Scroll</a>
+        <a><span></span></a>
 </section>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  $(document.body).scroll(function() {    
-      var scroll = $(document.body).scrollTop();
-	console.log(scroll);
-      if (scroll >= 600) {
-          $(".demo").addClass("hide");
-      } else {
-          $(".demo").removeClass("hide");
-      }
-  });
-</script>
+<div id="pdf-wrap" style="width:100%; height: 11000px;">
+    <object id="pdf" data="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf" type="application/pdf" width="100%" height="100%">
+        alt : <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf</a>
+    </object>
+</div>
 <style>
 .demo a {
       position: absolute;
-      bottom: 20px;
-      left: 50%;
-      padding-top: 60px;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.01);
+      width: 100%;
+      padding-bottom: 100%;
+      text-align: center;
       z-index: 2;
-      display: inline-block;
+      display: block;
       -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
       color: #fff;
@@ -30,9 +26,6 @@
       letter-spacing: .1em;
       text-decoration: none;
       transition: opacity .3s;
-    }
-    .demo a:hover {
-      opacity: .5;
     }
 .demo.hide{
   opacity: 0;
@@ -42,7 +35,7 @@
 
    .demo a span {
       position: absolute;
-      top: 0;
+      bottom: 50px;
       left: 50%;
       width: 30px;
       height: 50px;
@@ -51,6 +44,17 @@
       border-radius: 50px;
       box-sizing: border-box;
     }
+    
+    .demo a span::after {
+      content: 'SCROLL';
+      font-size: 12px;
+      position: absolute;
+      left: -15px;
+      bottom: -20px;
+
+
+    }
+
     .demo a span::before {
       position: absolute;
       top: 10px;
@@ -98,9 +102,6 @@
       }
     }
 </style>
-<p style="margin: 10% auto 15% auto; width: 640px; max-width: 100%">
-This browser does not support inline PDFs. Please download the PDF to view it: <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">Download PDF</a>
-</p>
 @endsection
 
 <!doctype html>
@@ -163,13 +164,26 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
     body{
         opacity: 0;
     }
+    body::-webkit-scrollbar { 
+      display: none; 
+    }
+    footer{
+      display: none;
+    }
 </style>
 <body>
-<script src='https://www.hrn.io/vendor/pdfobject/pdfobject.js'></script>
-<script>
-PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf", document.body);
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  
+    $(window).scroll(function () { 
+        var scroll = $(window).scrollTop();
+      if (scroll >= 100) {
+          $(".demo").addClass("hide");
+      } else {
+          $(".demo").removeClass("hide");
+      }
+    });
 </script>
-
  <!-- Crazy Egg -->
         <script type="text/javascript">
             setTimeout(function () {
@@ -186,7 +200,7 @@ PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World
             setTimeout(function() {
                 document.getElementsByTagName('body')[0].style.opacity = "1";
                 document.getElementsByTagName('html')[0].style.background = "none";
-            }, 10000);
+            }, 35000);
         </script>
 </body>
 </html>
