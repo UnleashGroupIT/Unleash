@@ -22,9 +22,8 @@
 @section('title', 'Speaker')
 
 @section('headercss')
-	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/speaker.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/common.css') }}">
+	 <link rel="stylesheet" type="text/css" href="{{ mix('css/lasvegas/speaker.css') }}">
+
 @endsection
 
 @section('headerjs')
@@ -61,7 +60,7 @@
 
 				<div class="speaker-more">
 				<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
-					<a href="#"><button class="blue-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button></a>
+					<a href="#"><button class="blue-btn popup" data-popupdata="applytospeak">Apply to Speak</button></a>
 				</div>
 				<a class="quit" href="
 				@if($speaker->referer)

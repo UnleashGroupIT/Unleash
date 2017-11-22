@@ -22,10 +22,9 @@
 @section('title', 'Speakers')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakergrid.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speakers.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/speakers.css') }}">
+
 @endsection
 
 @section('headerjs')

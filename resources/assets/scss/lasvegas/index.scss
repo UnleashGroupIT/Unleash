@@ -1,3 +1,14 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/speakergrid';
+@import 'components/common';
+
 .social-booknow button{
   background-color: #e80f42;
   color: #fff;
@@ -28,7 +39,7 @@ header {
 @media (min-width: 40em) {
   header {
     height: 100vh;
-    min-height: 900px;
+    min-height: 780px;
     background: url("../../gfx/lasvegas/header-bg-desktop.jpg") no-repeat #000;
     background-size: cover;
     background-position: center;

@@ -23,8 +23,8 @@
 @section('title', 'London - Venue')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/floorplan.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/venue.css') }}">
+
 @endsection
 
 @section('headerjs')
@@ -42,7 +42,7 @@
 				<h2>ExCel - London</h2>
 				<p>ExCeL London, will host UNLEASH in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier. Just a short ride by metro or car takes you to the heart of London, a leading global city, world cultural capital and leading financial center has been measured as the world’s most visited capital city. </p>
 			</div>
-			<button class="green-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<a href="https://www.excel.london/" target="_blank"><button class="green-btn">Learn More</button></a>
 		</div>
 	</section>
 

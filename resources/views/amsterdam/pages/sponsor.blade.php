@@ -22,9 +22,8 @@
 @section('title', 'Sponsors')
 
 @section('headercss')
-	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/speaker.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/common.css') }}">
+	 <link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/sponsor.css') }}">
+
 @endsection
 
 @section('headerjs')
@@ -63,16 +62,16 @@
 					<a href="#"><button class="blue-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button></a>
 				</div>
 				<a class="quit" href="
-				@if($sponsor->referer)
+				{{-- @if($sponsor->referer)
 					@if($sponsor->referer == 'http://www.unleashgroup.io/amsterdam/index')
-						{{ $sponsor->referer }}#spnsrgrd
+						{{ route('ams.sponsors') }}
 					@else 						
 						{{ $sponsor->referer }}
 					@endif
 				@else
 					{{ route('ams.sponsors') }}
-				@endif					
-				
+				@endif	--}}				
+				{{ route('ams.sponsors') }}
 				"><img src="{{ URL::asset('gfx/amsterdam/x.svg') }}" alt="X"></a>
 			</div>
 

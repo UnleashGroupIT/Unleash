@@ -1,8 +1,117 @@
 @extends('london.main')
 @section('maincontent')
-<p style="margin: 10% auto 15% auto; width: 640px; max-width: 100%">
-This browser does not support inline PDFs. Please download the PDF to view it: <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">Download PDF</a>
-</p>
+<section class="demo">
+        <a><span></span></a>
+</section>
+<div id="pdf-wrap" style="width:100%; height: 11000px;">
+    <object id="pdf" data="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf" type="application/pdf" width="100%" height="100%">
+        alt : <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf">http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf</a>
+    </object>
+</div>
+<style>
+.demo a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.01);
+      width: 100%;
+      height: 2000px;
+      text-align: center;
+      z-index: 2;
+      display: block;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: #fff;
+      font : normal 400 20px/1 'Josefin Sans', sans-serif;
+      letter-spacing: .1em;
+      text-decoration: none;
+      transition: opacity .3s;
+    }
+.demo.hide{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+   .demo a span {
+      position: fixed;
+      top: 1090px;
+      right: 100px;
+      width: 35px;
+      height: 55px;
+      margin-left: -15px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-sizing: border-box;
+    }
+    @media(min-width: 1300px){
+      .demo a span {
+        top: 56%;
+      }
+    }
+    @media(min-width: 1600px){
+      .demo a span {
+        top: 1130px;
+      }
+    }
+    
+    .demo a span::after {
+      content: 'SCROLL';
+      font-size: 12px;
+      position: absolute;
+      left: -15px;
+      bottom: -20px;
+
+
+    }
+
+    .demo a span::before {
+      position: absolute;
+      top: 10px;
+      left: 45%;
+      content: '';
+      width: 8px;
+      height: 8px;
+      margin-left: -3px;
+      background-color: #fff;
+      border-radius: 100%;
+      -webkit-animation: sdb10 2s infinite;
+      animation: sdb10 2s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb10 {
+      0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb10 {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+</style>
 @endsection
 
 <!doctype html>
@@ -48,7 +157,7 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/pdfs.css') }}">
 </head>
 <style type="text/css">
     .no-js #loader { display: none;  }
@@ -65,11 +174,25 @@ This browser does not support inline PDFs. Please download the PDF to view it: <
     body{
         opacity: 0;
     }
+    body::-webkit-scrollbar { 
+      display: none; 
+    }
+    footer{
+      display: none;
+    }
 </style>
 <body>
-<script src='https://www.hrn.io/vendor/pdfobject/pdfobject.js'></script>
-<script>
-PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World_2018_London_Sponsorship.pdf", document.body);
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  
+    $(window).scroll(function () { 
+        var scroll = $(window).scrollTop();
+      if (scroll >= 10) {
+          $(".demo").addClass("hide");
+      } else {
+          $(".demo").removeClass("hide");
+      }
+    });
 </script>
  <!-- Crazy Egg -->
         <script type="text/javascript">
@@ -87,7 +210,7 @@ PDFObject.embed("http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/HR_Tech_World
             setTimeout(function() {
                 document.getElementsByTagName('body')[0].style.opacity = "1";
                 document.getElementsByTagName('html')[0].style.background = "none";
-            }, 10000);
+            }, 35000);
         </script>
 </body>
 </html>

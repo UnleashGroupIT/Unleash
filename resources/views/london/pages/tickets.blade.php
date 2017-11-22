@@ -21,8 +21,7 @@
 @section('title', 'London - Tickets')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/tickets_old.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/london/flipclock.css') }}">	
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/tickets_old.css') }}">
 @endsection
 
 @section('headerjs')

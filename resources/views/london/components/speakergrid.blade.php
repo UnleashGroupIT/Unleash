@@ -1,5 +1,5 @@
 <!--Speakers-->
-	<section id="spkrgrd" class="speakers-grid">
+	<section class="speakers-grid">
 		<div class="speakers-wrap">
 
 		 @foreach ($speakers as $speaker)

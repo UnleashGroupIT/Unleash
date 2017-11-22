@@ -286,8 +286,19 @@ section.two .content .content-wrap {
   }
 }
 
-section.two button {
+section.two button,section.two a {
   margin-top: auto;
+}
+
+section.two a{
+  width: 100%;
+  @media (min-width: 30em) {
+    width: 220px;
+  }
+  @media (min-width: 125em) {
+    width: 11.5vw;
+  }
+
 }
 
 @media (min-width: 75em) {

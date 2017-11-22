@@ -16,46 +16,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#e80f42">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('cgfx/lasvegas/favicon/apple-touch-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('gfx/lasvegas/favicon/apple-touch-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ URL::asset('gfx/lasvegas/favicon/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gfx/lasvegas/favicon/favicon-128.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gfx/lasvegas/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('gfx/lasvegas/favicon/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gfx/lasvegas/favicon/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gfx/lasvegas/favicon/favicon-196x196.png') }}">
-    <link rel="manifest" href="{{ URL::asset('gfx/lasvegas/favicon/manifest.json') }}">
-    <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/lasvegas/favicon/ms-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gfx/favicon/apple-touch-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('gfx/favicon/apple-touch-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('gfx/favicon/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('gfx/favicon/apple-touch-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('gfx/favicon/apple-touch-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('gfx/favicon/apple-touch-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('cgfx/favicon/apple-touch-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('gfx/favicon/apple-touch-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('gfx/favicon/apple-touch-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ URL::asset('gfx/favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gfx/favicon/favicon-128.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gfx/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('gfx/favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gfx/favicon/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gfx/favicon/favicon-196x196.png') }}">
+    <link rel="manifest" href="{{ URL::asset('gfx/favicon/manifest.json') }}">
+    <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/favicon/ms-icon-144x144.png') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<title>UNLEASH Conference | @yield('title')</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/reset.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/common.css') }}">
-
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/menu.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/footer.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/footer.css') }}">
-    
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/popup.css') }}">
-
 	 @yield('headercss')
-	 
-     @include('lasvegas.components.fixedjs')
-
+	
 	 @yield('headerjs')
 
 
@@ -94,6 +79,7 @@
 	<!--Footer-->
 
 	 @include('lasvegas.components.footer')
+     @include('lasvegas.components.fixedjs')	 
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
@@ -112,5 +98,6 @@
 <!-- END LiveChat code -->  
 </body>
 @yield('footerscripts')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

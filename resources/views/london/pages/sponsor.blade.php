@@ -22,9 +22,8 @@
 @section('title', 'Sponsor')
 
 @section('headercss')
-	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/speaker.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/flipclock.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/london/common.css') }}">
+	 <link rel="stylesheet" type="text/css" href="{{ mix('css/london/sponsor.css') }}">
+
 @endsection
 
 @section('headerjs')

@@ -60,20 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 121);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 121:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(122);
-
-
-/***/ }),
-
-/***/ 122:
+/***/ "./resources/assets/js/lasvegas/main.js":
 /***/ (function(module, exports) {
 
 
@@ -310,6 +302,14 @@ $(document).ready(function () {
 		$('#thankyou').css("display", "flex");
 	}
 }); // READY END
+
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./resources/assets/js/lasvegas/main.js");
+
 
 /***/ })
 

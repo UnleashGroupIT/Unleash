@@ -21,7 +21,7 @@
 @section('title', 'About')
 
 @section('headercss')
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/about.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/amsterdam/about.css') }}">
 @endsection
 
 @section('headerjs')
@@ -89,6 +89,11 @@
 				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662133725-conference-sales-manager" target="_blank">
 					<div class="job">
 						<p>Conference Sales Manager</p>
+					</div>
+				</a>
+				<a href="https://jobs.smartrecruiters.com/UNLEASH/743999662183303-customer-success-manager" target="_blank">
+					<div class="job">
+						<p>Customer Success Manager</p>
 					</div>
 				</a>
 				

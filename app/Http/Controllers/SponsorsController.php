@@ -69,7 +69,6 @@ class SponsorsController extends Controller
 	
 	
 
-
     public function sponsor(Request $request, $sponsorId = ''){
 
      $site = '404.blade.php';   
@@ -110,9 +109,6 @@ class SponsorsController extends Controller
                  
 
                 ]);
-    } 
-
-
-  
+    }  
 
 }
