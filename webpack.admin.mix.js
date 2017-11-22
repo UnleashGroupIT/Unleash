@@ -18,6 +18,7 @@ let mix = require('laravel-mix');
 
 mix.sass('resources/assets/admin/scss/style.scss', 'public/admin/css');   
 mix.sass('resources/assets/admin/scss/speakers.scss', 'public/admin/css'); 
+mix.sass('resources/assets/admin/scss/sponsors.scss', 'public/admin/css'); 
    
 mix.js('resources/assets/admin/js/speakers.js', 'public/admin/js');
 mix.js('resources/assets/admin/js/sponsors.js', 'public/admin/js');

@@ -21,14 +21,14 @@
 						<div class="dropdownbox">
 							<div class="ul-wrp">
 								<ul class="first-ul">
-									<li class="amsterdam">
-										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
-									</li>
 									<li class="london">
 										<a href="{{ route('london.index') }}"><p>London</p> <span>|</span> 20-21 March 2018</a>
 									</li>
 									<li class="lasvegas">
 										<a href="{{ route('lasvegas.index') }}"><p>America</p> <span>|</span> 15-16 May 2018</a>
+									</li>
+									<li class="amsterdam">
+										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
 									</li>
 								</ul>
 							</div>

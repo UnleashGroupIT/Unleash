@@ -45,7 +45,7 @@ Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speaker
 
 Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
 
-Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
+Route::get('/amsterdam/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('ams.speaker');
 
 Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
@@ -112,7 +112,7 @@ Route::get('/london/speakers', function () {
 
 Route::get('/london/travel', function () {
   return view('london.pages.travel');
-});
+})->name('london.travel');
 
 Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
@@ -128,7 +128,7 @@ Route::get('/london/room-availability', function () {
 
 
 
-Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
+Route::get('/london/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('london.speaker');
 
 Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
 
@@ -188,7 +188,7 @@ Route::get('/america/speakers', function () {
     return redirect('/america/index#spkrgrd');
 })->name('lasvegas.speakers');
 
-Route::get('/america/speaker/{speakerId}', 'SpeakersController@speaker')->name('lasvegas.speaker');
+Route::get('/america/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('lasvegas.speaker');
 
 //Route::get('/america/sponsors', 'SponsorsController@index')->name('lasvegas.sponsors');
 
@@ -202,7 +202,7 @@ Route::get('/america/sponsor', function () {
     return redirect('/america/index#spnsrgrd');
 })->name('lasvegas.sponsors');
 
-//Route::get('/america/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('lasvegas.sponsor');
+Route::get('/america/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('lasvegas.sponsor');
 
 Route::get('/america/startups', 'StartupsController@index')->name('lasvegas.startups');
 
@@ -244,4 +244,7 @@ Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
 //Admin pages
 Route::get('/adminsite/speakers', 'Admin\SpeakerPageController@speakerUI')->name('admin.speakers');
 Route::get('/adminsite/sponsors', 'Admin\SpeakerPageController@sponsorUI')->name('admin.sponsors');
+
+//Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
+//Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');
 

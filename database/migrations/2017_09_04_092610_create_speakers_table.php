@@ -15,9 +15,11 @@ class CreateSpeakersTable extends Migration
     {
         Schema::create('speakers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('prefix')->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('full_name');
+            $table->string('slug')->nullable();
             $table->string('job_title')->nullable();
             $table->text('bio')->nullable();
             $table->string('company')->nullable();

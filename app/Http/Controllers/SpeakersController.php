@@ -57,7 +57,7 @@ class SpeakersController extends Controller
 
 
 
-    public function speaker(Request $request, $speakerId = 99999){
+    public function speaker(Request $request, $speakerSlug = ''){
 
      $site = '404.blade.php';   
 
@@ -81,8 +81,9 @@ class SpeakersController extends Controller
 	 
 
 
-    	$speaker = Speakers::find($speakerId);
-
+    	$speakerTemp = Speakers::where('slug',$speakerSlug)->get();
+        $speaker = $speakerTemp[0];
+         
 	 if ($request->header() !== null){
 		 $headerData = $request->header();
 		 if(isset($headerData['referer'][0]) && $headerData['referer'][0] != null){

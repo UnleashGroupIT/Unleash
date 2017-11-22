@@ -39,9 +39,7 @@
 	<title>UNLEASH Conference | @yield('title')</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/reset.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
-	 @yield('headercss')
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/unleash.css') }}">
 	 
      @include('amsterdam.components.fixedjs')
 

@@ -69,7 +69,7 @@
 	<!--Counter-->
 	<section class="one-cntr counter">
 		<div class="wrp">
-			<h2>Hurry Up!</h2>
+			<h2>Register Now!</h2>
 			<p>Now is the most exciting time to be an HR professional – a profession still heaving with bureaucrats and administrators, politics and legacy systems. The global leadership crisis, the 4th industrial revolution and the speed.</p>
 			<div class="your-clock"></div>
 			<button class="pink-btn">cta</button>

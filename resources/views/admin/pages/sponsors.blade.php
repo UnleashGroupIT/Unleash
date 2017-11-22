@@ -9,7 +9,7 @@
   
  
   <link href="{{ URL::asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('admin/css/speakers.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ URL::asset('admin/css/sponsors.css') }}" rel="stylesheet" type="text/css">
 
   <style>
 .modal-open {

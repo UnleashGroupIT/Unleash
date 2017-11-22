@@ -21,14 +21,14 @@
 						<div class="dropdownbox">
 							<div class="ul-wrp">
 								<ul class="first-ul">
-									<li class="amsterdam">
-										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
-									</li>
 									<li class="london">
 										<a href="{{ route('london.index') }}"><p>London</p> <span>|</span> 20-21 March 2018</a>
 									</li>
 									<li class="lasvegas">
 										<a href="{{ route('lasvegas.index') }}"><p>America</p> <span>|</span> 15-16 May 2018</a>
+									</li>
+									<li class="amsterdam">
+										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
 									</li>
 								</ul>
 							</div>
@@ -41,7 +41,7 @@
 					<li class="amsterdamcolor"><strong>Amsterdam</strong> 23-24 October 2018</li>
 					<li><a href="{{ route('ams.index') }}">SHOW</a></li>
 					<li><a href="{{ route('ams.speakers') }}">SPEAKERS</a></li>
-					<li><a href="{{ route('ams.sponsors') }}">SPONSORS</a></li>
+					<li><a href="{{ route('ams.sponsors') }}">OUR CLIENTS</a></li>
 					<li><a href="{{ route('ams.floorplan') }}">VENUE</a></li>
 				</ul>
 				<div class="social-booknow">

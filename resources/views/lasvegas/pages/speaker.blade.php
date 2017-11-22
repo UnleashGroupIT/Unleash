@@ -41,7 +41,7 @@
 						<img src="{{ URL::asset('storage/speakers') }}/{{$speaker->img_url }}" alt="{{ $speaker->full_name }}">
 					</div>
 					<div class="dtls-wrap">
-						<h2>{{ voku::cleanup($speaker->full_name) }}</h2>
+						<h2>{{$speaker->prefix}} {{ voku::cleanup($speaker->full_name) }}</h2>
 						<h3>{{ $speaker->job_title }}</h3>
 						<div class="social-icons">
 							@if($speaker->facebook)
@@ -61,7 +61,7 @@
 
 				<div class="speaker-more">
 				<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
-					<a href="#"><button class="blue-btn popup" data-popupdata="applytospeak">Apply to Speak</button></a>
+					<a href="#"><button class="blue-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button></a>
 				</div>
 				<a class="quit" href="
 				@if($speaker->referer)
