@@ -3,19 +3,19 @@
 <section class="demo">
         <a><span></span></a>
 </section>
-<div id="pdf-wrap" style="width:100%; height: 11000px;">
+<div id="pdf-wrap" style="width:100%; height: 3000px;">
     <object id="pdf" data="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/UNLEASH18_London_Room_Availability.pdf" type="application/pdf" width="100%" height="100%">
         alt : <a href="http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/UNLEASH18_London_Room_Availability.pdf">http://www.hrn.io/BROCHURES/HRTechWorldLondon2018/UNLEASH18_London_Room_Availability.pdf</a>
     </object>
 </div>
 <style>
 .demo a {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       background: rgba(255,255,255,0.01);
       width: 100%;
-      padding-bottom: 100%;
+      height: 2000px;
       text-align: center;
       z-index: 2;
       display: block;
@@ -34,15 +34,25 @@
 }
 
    .demo a span {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      width: 30px;
-      height: 50px;
+      position: fixed;
+      top: 1090px;
+      right: 100px;
+      width: 35px;
+      height: 55px;
       margin-left: -15px;
       border: 2px solid #fff;
       border-radius: 50px;
       box-sizing: border-box;
+    }
+    @media(min-width: 1300px){
+      .demo a span {
+        top: 56%;
+      }
+    }
+    @media(min-width: 1600px){
+      .demo a span {
+        top: 1130px;
+      }
     }
     
     .demo a span::after {
@@ -58,10 +68,10 @@
     .demo a span::before {
       position: absolute;
       top: 10px;
-      left: 50%;
+      left: 45%;
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       margin-left: -3px;
       background-color: #fff;
       border-radius: 100%;
