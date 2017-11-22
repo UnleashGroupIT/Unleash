@@ -198,7 +198,7 @@
             setTimeout(function() {
                 document.getElementsByTagName('body')[0].style.opacity = "1";
                 document.getElementsByTagName('html')[0].style.background = "none";
-            }, 25000);
+            }, 35000);
         </script>
 </body>
 </html>
