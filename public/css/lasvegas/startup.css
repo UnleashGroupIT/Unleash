@@ -1707,6 +1707,10 @@ footer .footer-menu ul li a:hover {
   color: #323232;
 }
 
+.fixed {
+  position: fixed;
+}
+
 body {
   position: relative;
 }

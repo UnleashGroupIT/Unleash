@@ -7,6 +7,11 @@ Vue.component(
     require('../components/AgendaSession.vue')
 );
 
+Vue.component(
+    'agenda-search',
+    require('../components/AgendaSearch.vue')
+);
+
  var spVue = new Vue({
   el: '#AgendaSection',
 
@@ -26,12 +31,20 @@ Vue.component(
     dayoneset: true,
     daytwoset: true,
     agendaTracks: [1, 2, 3, 15, 16, 7, 5, 6, 10, 11, 9, 13, 12, 17, 18],
-    pointer: 0 
+    pointer: 0,
+    searchField: '',
+    serachResults: null
   },
 
 
 
   methods: {
+
+    doSearch(){
+      axios.get('/api/search/agenda/'+this.searchField).then(response => this.serachResults = response.data);
+      this.$refs.searchsessions.sessionSearch(this.serachResults);
+      
+    },
 
     changesessions(trackId){
        this.DesktopAgendaToggle = 0;

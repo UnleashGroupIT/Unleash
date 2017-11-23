@@ -6,9 +6,12 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Laravel\Scout\Searchable;
 
 class AgendaSessions extends Model
 {
+
+   use Searchable;
 
      public function speakers(){
 
@@ -16,6 +19,29 @@ class AgendaSessions extends Model
         	   ->withTimestamps();
    		
     }
+
+
+
+   /* public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        $array['speakers'] = $this->speakers['full_name'];
+
+        return $array;
+    }*/
+
+    public function toSearchableArray()
+    {
+        $extra_data = [];
+        $extra_data['speakers'] = array_map(function ($data) {
+            return $data['full_name'];
+        }
+        , $this->speakers->toArray());
+
+        return array_merge($this->toArray(), $extra_data);
+    }   
+
 
     public function getStartTimeAttribute($value){
     	$dt = Carbon::parse($value);

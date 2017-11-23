@@ -33,6 +33,11 @@ Route::get('/about-prev', function () {
 })->name('ams.about-prev');
 
 
+Route::get('/search/{query}', function ($query) {
+  return App\AgendaSessions::search($query)->paginate(25)->load('speakers');
+});
+
+
 
 Route::get('/wpredirect', 'StaticPageController@wpredirect');
 	  
