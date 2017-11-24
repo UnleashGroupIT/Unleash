@@ -1908,6 +1908,10 @@ body {
 
 /* END Eventbrite Container */
 
+.fixed {
+  position: fixed;
+}
+
 body {
   position: relative;
 }
