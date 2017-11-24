@@ -23,6 +23,7 @@ mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam
 /******** Amsterdam *********/  
 mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
    .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
+   .js('resources/assets/js/amsterdam/jquery.mousewheel.slim.min.js', 'public/js/amsterdam')
    .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 
