@@ -2,7 +2,7 @@
 
 @section('meta')
 		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
- 
+ <meta name="google-site-verification" content="n0SN8rSlfzJtkCBmSexzIG6dT59FadZc03C1eYF1qeg" />
          <!-- Open Graph data -->
         <meta property="og:site_name" content="UNLEASH - America"/>
         <meta property="og:title" content="UNLEASH - America"/>
