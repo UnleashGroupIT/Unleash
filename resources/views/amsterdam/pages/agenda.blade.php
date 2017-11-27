@@ -29,8 +29,28 @@
      opacity: 0;   
 }
 
+#SearchBoxContainer{
+    margin: 55px auto;
+    text-align: center;
+}
+#searchBar{
+    border: 1px solid #999;
+    width: 400px;
+    height: 30px;
+    -webkit-box-shadow: inset 1px 2px 13px 1px rgba(52, 55, 62, 0.13);
+    -moz-box-shadow: inset 1px 2px 13px 1px rgba(52, 55, 62, 0.13);
+    box-shadow: inset 1px 2px 13px 1px rgba(52, 55, 62, 0.13);
+}
 </style>
+
+
 	<section class="agenda" id="AgendaSection">
+    <div id="SearchBoxContainer">
+        <input type=text name="searchBar" id="searchBar" v-model="searchField" @keyup="doSearch()">
+
+    </div>
+         <div id="Results"></div>    
+
   <!-- Agenda Desktop -->
         <div id="AgendaDesktop">
             <div class="cnt">
@@ -230,15 +250,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
                         <p class="MobileCloseSession" data-mobilestage="{{$track->id}}" data-closetrack="{{$track->id}}"><i class="fa fa-caret-up"></i><span>Close Session</span><i class="fa fa-caret-up"></i></p>
                     </div>
                     <!-- end Breakout Content -->
@@ -252,6 +263,10 @@
         </section>
         <!-- END Agenda Navigation Mobile -->
 
+
+<section id="SearchResultSection">
+     <agenda-search  ref="searchsessions"></agenda-search>
+</section>    
 
         <!-- Desktop Agenda -->
         <section id="DesktopAgenda" :style="{ opacity: DesktopAgendaToggle }" class="MarginBottomMedium TrackSelectToggle">
