@@ -29,12 +29,12 @@ $(document).ready(function(){
 
 
 	//COUNTER
-
+/*
 	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"),{
     	clockFace: 'DailyCounter',
    		countdown: true
    });
-
+*/
 
 	//SPONSORS
 

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -462,11 +462,12 @@ $(document).ready(function () {
 
 
 	//COUNTER
-
-	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"), {
-		clockFace: 'DailyCounter',
-		countdown: true
-	});
+	/*
+ 	var clock = $('.your-clock').FlipClock(new Date("October 24, 2017 07:30:00"),{
+     	clockFace: 'DailyCounter',
+    		countdown: true
+    });
+ */
 
 	//SPONSORS
 
@@ -660,7 +661,7 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./resources/assets/js/amsterdam/flipclock.min.js");

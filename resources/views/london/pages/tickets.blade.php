@@ -496,7 +496,7 @@ $('.NavMenuLi').on( 'click', function(e) {
 
   $('.NavMenuLi').removeClass('NavActive');
   $(e.target).addClass('NavActive');
-
+/*
   if ( filterValue == ".SummerSaver"){
      $('#TimelineOther').fadeOut(100, function(){
         $('#TimelineSingle').fadeIn(100);
@@ -508,7 +508,7 @@ $('.NavMenuLi').on( 'click', function(e) {
          $('#TimelineOther').fadeIn(100);
     });    
 
-  }
+  }*/
 });
 
 

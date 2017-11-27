@@ -109,11 +109,11 @@ Route::get('/amsterdam/thankyou', function(){
 	return view('amsterdam.pages.streamthankyou');
 });
 
+//Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
+
 Route::get('/amsterdam/terms', function () {
     return redirect('/terms');
 });
-//Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
-
 
 /*********** London ************/
 
@@ -182,10 +182,10 @@ Route::get('/london/tickets', function(){
 	return view('london.pages.tickets');
 })->name('london.tickets');
 
+
 Route::get('/london/terms', function () {
     return redirect('/terms');
 });
-
 /*********** America ************/
 
 Route::get('/lasvegas/', function () {

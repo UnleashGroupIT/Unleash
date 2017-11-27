@@ -2,6 +2,7 @@
 
 @section('meta')
 		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
+<meta name="google-site-verification" content="n0SN8rSlfzJtkCBmSexzIG6dT59FadZc03C1eYF1qeg" />
  
          <!-- Open Graph data -->
         <meta property="og:site_name" content="UNLEASH - London"/>
