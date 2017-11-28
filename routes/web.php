@@ -48,19 +48,21 @@ Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speaker
 
 //Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
-//Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
+Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
 
-//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
-
-Route::get('/amsterdam/sponsors', function () {
-    return redirect('/amsterdam/index#spnsrgrd');
+Route::get('/amsterdam/sponsor', function () {
+    return redirect('/amsterdam/sponsors');
 });
 
-Route::get('/amsterdam/sponsor', function () {
+//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
+
+/*Route::get('/amsterdam/sponsors', function () {
     return redirect('/amsterdam/index#spnsrgrd');
-})->name('ams.sponsors');
+});*/
+
+
 
 Route::get('/amsterdam/speaker', function () {
     return redirect('/amsterdam/index#spkrgrd');

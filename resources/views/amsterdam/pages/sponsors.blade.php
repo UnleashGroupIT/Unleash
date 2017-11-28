@@ -146,7 +146,7 @@
 			@endforeach	
 		</div>	
 		
-		<h2> Startup</h2>
+		 {{--<!--<h2> Startup</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 8)
@@ -154,9 +154,9 @@
 				 @include('amsterdam.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
-			@endforeach					
+			@endforeach	--}}				
 
-		</div>												
+		<!--</div>-->											
 	</section>
 	<!--Sponsors END-->
 	<!--Counter-->

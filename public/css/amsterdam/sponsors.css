@@ -1847,7 +1847,7 @@ header {
   color: #fff;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  background: url("../../gfx/amsterdam/amsterdam-sponsors-mobile-bg.jpg") no-repeat #000;
+  background: url("../../gfx/amsterdam/sponsors-mobile-bg.jpg") no-repeat #000;
   background-size: cover;
   background-position: center;
 }
@@ -1855,35 +1855,9 @@ header {
 @media (min-width: 40em) {
   header {
     height: 55vh;
-    background: url("../../gfx/amsterdam/amsterdam-sponsors-bg.jpg") no-repeat #000;
+    background: url("../../gfx/amsterdam/sponsors-bg.jpg") no-repeat #000;
     background-size: cover;
     background-position: left;
-  }
-}
-
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  width: 35px;
-  height: 57px;
-  cursor: pointer;
-}
-
-#hamburger.active {
-  position: absolute;
-}
-
-@media (min-width: 40em) {
-  #hamburger {
-    top: 1px;
-    right: 3%;
-  }
-}
-
-@media (min-width: 75em) {
-  #hamburger {
-    display: none;
   }
 }
 
@@ -1950,7 +1924,7 @@ section.one .wrp {
 }
 
 section.one .wrp h2 {
-  color: #0090ff;
+  color: #33cc33;
 }
 
 section.one .wrp button {
@@ -2073,6 +2047,10 @@ section.two.clients {
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
+}
+
+section.two.clients .green-btn {
+  margin-top: 0;
 }
 
 section.two.clients p {
@@ -2367,7 +2345,7 @@ section.two .content .content-wrap {
 
 @media (min-width: 120em) {
   section.two .content .content-wrap {
-    margin: 1.68vw 0;
+    margin: 1vw 0;
   }
 }
 
@@ -2375,12 +2353,13 @@ section.two .content .content-wrap {
   section.two .content {
     width: 50%;
     padding: 2em 4em;
+    padding-top: 3em;
   }
 }
 
 @media (min-width: 120em) {
   section.two .content {
-    padding: 1.68vw 3.4vw;
+    padding: 1vw 3.4vw;
   }
 }
 
@@ -2438,12 +2417,12 @@ section.one-cntr h2::before,section.one-cntr h2::after {
 }
 
 section.one-cntr h2::before {
-  content: url("../../gfx/amsterdam/left-sign.png");
+  content: url("../../gfx/left-sign.png");
   left: -33px;
 }
 
 section.one-cntr h2::after {
-  content: url("../../gfx/amsterdam/right-sign.png");
+  content: url("../../gfx/right-sign.png");
   right: -33px;
 }
 
@@ -2635,135 +2614,6 @@ section.map .map-pic {
   }
 }
 
-section.speakers-grid {
-  padding: 0 2em;
-  padding-bottom: 3em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid {
-    padding: 3em 4em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid {
-    padding: 2.5vw 3.35vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-bottom: 2em;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-section.speakers-grid .speakers-wrap .speaker {
-  /*flex-grow: 1;*/
-  padding: .5em 0;
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker {
-    padding: .42vw 0;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker img {
-  width: 150px;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 220px;
-  }
-}
-
-@media (min-width: 95em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 330px;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker img {
-    width: 17.15vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
-  padding-top: 1em;
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-  color: #0090ff;
-  font-weight: 900;
-  font-size: .8em;
-  text-transform: uppercase;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
-    font-size: .83vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-  line-height: 1;
-  font-size: .75em;
-  margin-top: .4em;
-  margin-bottom: 0.2em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
-    font-size: .83vw;
-  }
-}
-
-section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-  font-size: .75em;
-  display: block;
-  margin-top: .3em;
-}
-
-@media (min-width: 75em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-    font-size: .83vw;
-  }
-}
-
 section.sponsors {
   min-height: 300px;
   background-color: #f2f2f2;
@@ -2775,14 +2625,14 @@ section.sponsors h2 {
   padding: 0 1.1em;
   margin: 1em .5em;
   font-size: 1.5rem;
+  font-weight: 500;
   display: inline-block;
-  background: #0090ff;
-  color: white;
+  color: #c9c9c9;
 }
 
 @media (min-width: 75em) {
   section.sponsors h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 }
 
