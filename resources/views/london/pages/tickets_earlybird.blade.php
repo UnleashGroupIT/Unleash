@@ -51,9 +51,9 @@
  <div id="TimelineSingle">
     <div class="TimelineContainer">
         <ul id="TimelineList">
-            <li class="TimeLineActive">
-                <span class="SlashClassActive">/</span>SUPER SAVER<div  id="UntilSummer"> <span class="SummerSaverUntil">UNTIL</span> <br class="BRDesktop"> <span class="SummerSaverDate">NOV 30</span></div><span class="SlashClassActive">/</span></li>
-            <li>EARLY BIRD <span>/</span></li>
+            <li>
+                <span>/</span>SUPER SAVER<span class="SlashClassActive">/</span></li>
+            <li class="TimeLineActive">EARLY BIRD <div  id="UntilSummer"> <span class="SummerSaverUntil">UNTIL</span> <br class="BRDesktop"> <span class="SummerSaverDate">DEC 31</span></div> <span class="SlashClassActive">/</span></li>
             <li>REGULAR <span>/</span></li>
             <li>LATE <span>/</span></li>
             <li>ONSITE REGISTRATION</li>
@@ -100,9 +100,9 @@
   <div class="TicketBox PopularTicketBox IsoBox SummerSaver TicketOne" data-category="SummerSaver">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
-            <h2 class="TicketHeadline">SUPER SAVER</h2>
-            <h2 class="TicketPrice">&pound;995</h2>
-            <h3 class="TicketDeadline">UNTIL NOVEMBER 30.</h3>
+            <h2 class="TicketHeadline">EARLY BIRD</h2>
+            <h2 class="TicketPrice">&pound;1195</h2>
+            <h3 class="TicketDeadline">UNTIL DECEMBER 31.</h3>
             <h4 id="hide" class="TicketSmallText">.</h4>
         </div>
     </div>
@@ -142,7 +142,7 @@
             <h2 class="TicketHeadline">PUBLIC &amp; GOVERNMENTAL SECTOR</h2>
             <h2 class="TicketPrice">&pound;695</h2>
             <h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>
-            <h3 class="TicketDeadline">UNTIL NOVEMBER 30.</h3>
+            <h3 class="TicketDeadline">UNTIL DECEMBER 31.</h3>
         </div>
     </div>
         <div class="BoxInnerConent">
@@ -350,7 +350,7 @@
             <h2 class="TicketHeadline">INVESTOR/VC</h2>
             <h2 class="TicketPrice">&pound;495</h2>
             <h4 class="TicketSmallText">Save &pound;200</h4>
-            <h3 class="TicketDeadline">Until November 30.</h3>
+            <h3 class="TicketDeadline">Until December 31.</h3>
         </div>
     </div>
         <div class="BoxInnerConent">
@@ -388,9 +388,9 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">STARTUP</h2>
-            <h2 class="TicketPrice">&pound;1095</h2>
-            <h4 class="TicketSmallText">Save &pound;300</h4>
-            <h3 class="TicketDeadline">Until November 30.</h3>
+            <h2 class="TicketPrice">&pound;795</h2>
+            <h4 class="TicketSmallText">Save &pound;200</h4>
+            <h3 class="TicketDeadline">Until December 31.</h3>
         </div>
     </div>
 
@@ -502,32 +502,6 @@ $('.NavMenuLi').on( 'click', function(e) {
 
   $('.NavMenuLi').removeClass('NavActive');
   $(e.target).addClass('NavActive');
-/*
-  if ( filterValue == ".SummerSaver"){
-     $('#TimelineOther').fadeOut(100, function(){
-        $('#TimelineSingle').fadeIn(100);
-     });
-        
-
-  } else {
-    $('#TimelineSingle').fadeOut(100, function(){
-         $('#TimelineOther').fadeIn(100);
-    });    
-
-  }*/
-});
-
-
-// bind filter button click
-$('.NavIcon').on( 'click', function(e) {
-
-  let filterValue = $(e.target).attr('data-filter');
- 
-  // use filterFn if matches value
-  $grid.isotope({ filter: filterValue });
-
-  $('.NavMenuLi').removeClass('NavActive');
-  $(e.target).parent().addClass('NavActive');
 
   if ( filterValue == ".SummerSaver"){
      $('#TimelineOther').fadeOut(100, function(){
@@ -541,6 +515,32 @@ $('.NavIcon').on( 'click', function(e) {
     });    
 
   }
+});
+
+
+// bind filter button click
+$('.NavIcon').on( 'click', function(e) {
+
+  let filterValue = $(e.target).attr('data-filter');
+ 
+  // use filterFn if matches value
+  $grid.isotope({ filter: filterValue });
+
+  $('.NavMenuLi').removeClass('NavActive');
+  $(e.target).parent().addClass('NavActive');
+/*
+  if ( filterValue == ".SummerSaver"){
+     $('#TimelineOther').fadeOut(100, function(){
+        $('#TimelineSingle').fadeIn(100);
+     });
+        
+
+  } else {
+    $('#TimelineSingle').fadeOut(100, function(){
+         $('#TimelineOther').fadeIn(100);
+    });    
+
+  }*/
 });
 
 $(document).ready(function() {

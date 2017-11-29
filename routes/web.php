@@ -1,5 +1,5 @@
 <?php
-
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -181,7 +181,19 @@ Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
 
 Route::get('/london/tickets', function(){
-	return view('london.pages.tickets');
+
+	$now = Carbon::now();
+	
+	$early = Carbon::create(2017, 11, 30, 23, 0, 0);
+
+	if ($now->gt($early)){
+		return view('london.pages.tickets_earlybird');
+	
+	} else {
+		return view('london.pages.tickets');
+	}
+
+	
 })->name('london.tickets');
 
 
