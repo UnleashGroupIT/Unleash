@@ -125,9 +125,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="America2018-ApplyToSpeak" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="America2018-ApplyToSpeak" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="America2018-ApplyToSpeak" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="America2018-Compete" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="America2018-Compete" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="America2018-Compete" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
