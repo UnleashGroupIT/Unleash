@@ -8,6 +8,8 @@
 body {
   position: relative; }
 
+  $dark-green: #083643;
+
 header {
   height: 92vh;
   min-height: 400px;
@@ -53,6 +55,23 @@ header {
     @media (min-width: 40em) {
       .hamb-wrp.black {
         transition: background-color 2s; } }
+
+#hamburger {
+  position: fixed;
+  right: 5%;
+  top: 0;
+  width: 35px;
+  height: 57px;
+  cursor: pointer; }
+  #hamburger.active {
+    position: absolute; }
+  @media (min-width: 40em) {
+    #hamburger {
+      top: 1px;
+      right: 3%; } }
+  @media (min-width: 75em) {
+    #hamburger {
+      display: none; } }
 
 .bar,
 .bar:after,
@@ -110,7 +129,7 @@ section.one .wrp {
     section.one .wrp {
       padding: 4em 3em; } }
   section.one .wrp h2 {
-    color: #33cc33; }
+    color: #0090ff; }
   section.one .wrp button {
     margin: 4em 0;
     margin-bottom: 0; }
@@ -174,9 +193,6 @@ section.two {
   min-height: 400px; }
   section.two.clients {
     flex-direction: column-reverse;
-    .green-btn{
-      margin-top: 0;
-    }
     p{
       margin-top: 2em;
     }
@@ -332,7 +348,7 @@ section.two {
       margin-top: 0; }
       @media (min-width: 120em) {
         section.two .content .content-wrap {
-          margin: 1vw 0; } }
+          margin: 1.68vw 0; } }
     @media (min-width: 75em) {
       section.two .content {
         width: 50%;
@@ -340,12 +356,10 @@ section.two {
         padding-top:3em; } }
     @media (min-width: 120em) {
       section.two .content {
-        padding: 1vw 3.4vw; } }
+        padding: 1.68vw 3.4vw; } }
   section.two button {
-    margin-top: auto; }
-    @media (min-width: 75em) {
-      section.two button {
-        margin-bottom: 2em; } }
+    margin-top: 2em;
+    margin-bottom: 0; }
   section.two.keynote button {
     margin-bottom: 0; }
 
@@ -376,10 +390,10 @@ section.one-cntr {
       position: absolute;
       top: 3px; }
     section.one-cntr h2::before {
-      content: url("../../gfx/left-sign.png");
+      content: url("../../gfx/amsterdam/left-sign.png");
       left: -33px; }
     section.one-cntr h2::after {
-      content: url("../../gfx/right-sign.png");
+      content: url("../../gfx/amsterdam/right-sign.png");
       right: -33px; }
   section.one-cntr button {
     margin: 1em;
@@ -433,6 +447,18 @@ section.one-cntr {
     width: 100px;
     margin-left: auto;
     margin-top: 1em; }
+
+    section.divider{
+      background:$dark-green;
+      text-align: center;
+      padding:1em;
+      h4{
+        font-size: 1.2rem;
+        color: #fff;
+        margin:0;
+      }
+    }
+
 
 section.map {
  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
@@ -489,6 +515,74 @@ section.map {
       section.map .map-pic {
         width: 50%;
         display: block; } }
+
+section.speakers-grid {
+  padding: 0 2em;
+  padding-bottom: 3em; }
+  @media (min-width: 75em) {
+    section.speakers-grid {
+      padding: 3em 4em;
+      display: flex;
+      flex-direction: column; } }
+  @media (min-width: 120em) {
+    section.speakers-grid {
+      padding: 2.5vw 3.35vw; } }
+  section.speakers-grid .speakers-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+    justify-content: space-between; }
+    section.speakers-grid .speakers-wrap .speaker {
+      /*flex-grow: 1;*/
+      padding: .5em 0; }
+      @media (min-width: 120em) {
+        section.speakers-grid .speakers-wrap .speaker {
+          padding: .42vw 0; } }
+      section.speakers-grid .speakers-wrap .speaker img {
+        width: 150px; }
+        @media (min-width: 75em) {
+          section.speakers-grid .speakers-wrap .speaker img {
+            width: 220px; } }
+        @media (min-width: 95em) {
+          section.speakers-grid .speakers-wrap .speaker img {
+            width: 330px; } }
+        @media (min-width: 120em) {
+          section.speakers-grid .speakers-wrap .speaker img {
+            width: 17.15vw; } }
+      section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
+        padding-top: 1em; }
+        section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
+          color: #0090ff;
+          font-weight: 900;
+          font-size: .8em;
+          text-transform: uppercase; }
+          @media (min-width: 75em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
+              font-size: 1em; } }
+          @media (min-width: 120em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
+              font-size: .83vw; } }
+        section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
+          line-height: 1;
+          font-size: .75em;
+          margin-top: .4em;
+          margin-bottom: 0.2em; }
+          @media (min-width: 75em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
+              font-size: 1em; } }
+          @media (min-width: 120em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap p {
+              font-size: .83vw; } }
+        section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
+          font-size: .75em;
+          display: block;
+          margin-top: .3em; }
+          @media (min-width: 75em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
+              font-size: 1em; } }
+          @media (min-width: 120em) {
+            section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
+              font-size: .83vw; } }
 
 section.sponsors {
   min-height: 300px;
