@@ -10,6 +10,7 @@
 @import 'components/common';
 
 $lon : #33cc33;
+$dark-green: #083643;
 
 
 body {
@@ -666,47 +667,96 @@ section.hotels{
   .speakers-wrap .speaker{
     width: 100%;
     margin:0 .5em;
+    display: flex;
+    flex-direction: column;
 
     &.none{
       display: none;
     }
 
-    @media (min-width: 512px) {
+    @media (min-width: 650px) {
       width: 46%;
     }
-    @media (min-width: 55em) {
-      width: 30%;
+    @media (min-width: 75em) {
+      width: 31%;
     }
     @media (min-width: 95em) {
-      width: 25%;
+      width: 32%;
+    }
+    @media (min-width: 110em) {
+      width: 19%;
     }
     @media (min-width: 125em) {
-      margin: 0 1vw;
+      margin: 0 .45vw;
     }
   }
 
   .speakers-wrap a:last-child{
     display: block;
+    margin-top: auto;
   }
 
+
+  .speakers-wrap .speaker .dtls-wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   .speakers-wrap .speaker .dtls-wrap h6.name{
     margin: .5em 0;
     font-size: 16px;
-    @media (min-width: 512px) {
-      font-size: .8em;
+    @media (min-width: 500px) {
+      font-size: 3.3vw;
+    }
+    @media (min-width: 650px) {
+      font-size: 2.3vw;
+    }
+    @media (min-width: 55em) {
+      font-size: 1.8vw;
     }
     @media (min-width: 75em) {
-      font-size: 1.1vw;;
+      font-size: 1.4vw;
     }
     @media (min-width: 95em) {
-      font-size: 1em;;
+      font-size: 1.3em;
+    }
+    @media (min-width: 125em) {
+      font-size: .8vw;
+    }
+  }
+
+  .speakers-wrap .speaker .dtls-wrap p{
+    font-weight: bold;
+    color: $dark-green;
+    margin-top: 1em;
+    font-size: .8em;
+    @media (min-width: 500px) {
+      font-size: 3vw;
+    }
+    @media (min-width: 650px) {
+      font-size: 2vw;
+    }
+    @media (min-width: 55em) {
+      font-size: 1.5vw;
+    }
+    @media (min-width: 75em) {
+      font-size: 1.2vw;
+    }
+    @media (min-width: 95em) {
+      font-size: 1.1vw;
+    }
+    @media (min-width: 110em) {
+      font-size: .85em;
+    }
+    @media (min-width: 125em) {
+      font-size: .75vw;
     }
   }
 
   .speakers-wrap .speaker .dtls-wrap p.code{
     color: $lon;
-    margin:0;
+    margin:1em 0;
     font-size: 13px;
     padding: 0;
     @media (min-width: 75em) {
@@ -720,24 +770,33 @@ section.hotels{
     }
   }
   .speakers-wrap .speaker .dtls-wrap span{
-    margin: .5em 0;
+    margin: .2em 0;
     text-transform: uppercase;
-    font-size: 13px;
-    @media (min-width: 512px) {
-      font-size: .75em;
+    font-size: 12px;
+     @media (min-width: 500px) {
+      font-size: 3vw;
+    }
+    @media (min-width: 650px) {
+      font-size: 2vw;
+    }
+    @media (min-width: 55em) {
+      font-size: 1.5vw;
     }
     @media (min-width: 75em) {
-      font-size: .9vw;
+      font-size: 1.2vw;
     }
     @media (min-width: 95em) {
-      font-size: 13px;
+      font-size: 1.1vw;
+    }
+    @media (min-width: 110em) {
+      font-size: .85em;
     }
     @media (min-width: 125em) {
-      font-size: .68vw;
+      font-size: .75vw;
     }
   }
   .speakers-wrap .speaker .dtls-wrap button{
-    margin-top: 1.3em;
+    margin-top: auto;
     width: 100%!important;
   }
 }
@@ -873,4 +932,33 @@ section.hotels{
       }
     }
   }
+}
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
 }

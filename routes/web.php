@@ -1,5 +1,5 @@
 <?php
-
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,19 +53,21 @@ Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speaker
 
 //Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
-//Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
+Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
 
-//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
-
-Route::get('/amsterdam/sponsors', function () {
-    return redirect('/amsterdam/index#spnsrgrd');
+Route::get('/amsterdam/sponsor', function () {
+    return redirect('/amsterdam/sponsors');
 });
 
-Route::get('/amsterdam/sponsor', function () {
+//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
+
+/*Route::get('/amsterdam/sponsors', function () {
     return redirect('/amsterdam/index#spnsrgrd');
-})->name('ams.sponsors');
+});*/
+
+
 
 Route::get('/amsterdam/speaker', function () {
     return redirect('/amsterdam/index#spkrgrd');
@@ -184,7 +186,19 @@ Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
 
 Route::get('/london/tickets', function(){
-	return view('london.pages.tickets');
+
+	$now = Carbon::now();
+	
+	$early = Carbon::create(2017, 11, 30, 23, 0, 0);
+
+	if ($now->gt($early)){
+		return view('london.pages.tickets_earlybird');
+	
+	} else {
+		return view('london.pages.tickets');
+	}
+
+	
 })->name('london.tickets');
 
 

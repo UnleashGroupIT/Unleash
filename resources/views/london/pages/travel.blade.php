@@ -50,6 +50,7 @@
 				<!--<span>Booking Code:<p class="code">UNLEASH18</p></span>-->
 				<span>Single Occupancy: &pound;230 per night</span>
 				<span>Double Occupancy: &pound;240 per night</span>
+				<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
 			</div>
 			<div class="pdg btm">
 				<div class="h4wrp">
@@ -68,8 +69,14 @@
 				<div class="dtls-wrap">
 					<h6 class="name">Doubletree by Hilton</h6>
 					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<p>Standard Room: 17<sup>th</sup>, 18<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
+					<span>Single Occupancy: &pound;160 / night</span>
+					<span>Double Occupancy: &pound;175 / night</span>
+					<p>Standard Room: 19<sup>th</sup>, 20<sup>th</sup> March 2018</p>
 					<span>Single Occupancy: &pound;180 / night</span>
 					<span>Double Occupancy: &pound;195 / night</span>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
+					<p class="code">The hotel requires a minimum nights’ stay of 2 nights on Monday 19th &amp; Tuesday 20th March 2018.</p>
 					<a href="http://doubletree.hilton.com/en/dt/groups/personalized/L/LONEXDI-CHRN-20180317/index.jhtml" target="_blank"><button class="green-btn">Book now</button></a>
 				</div>
 			</div>
@@ -78,29 +85,39 @@
 				<div class="dtls-wrap">
 					<h6 class="name">Moxy</h6>
 					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<p>Standard Room:</p>
 					<span>Single Occupancy: &pound;199 / night</span>
 					<span>Double Occupancy: &pound;209 / night</span>
-					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=HR%20Tech%202018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6003/02/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="green-btn">Book now</button></a>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
+					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Unleash%2018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6002/03/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="green-btn">Book now</button></a>
 				</div>
 			</div>
-			<div class="speaker none">
+			<div class="speaker">
 				<img src="{{ URL::asset('gfx/london/novotel.jpg') }}" alt="Novotel">
 				<div class="dtls-wrap">
 					<h6 class="name">Novotel London ExCeL</h6>
 					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<p>Standard Room:</p>
 					<span>Single Occupancy: &pound;175 / night</span>
 					<span>Double Occupancy: &pound;185 / night</span>
-					<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
+					<a href="http://www.accorhotels.com/gb/promotions-offers/hot-deals-offers/owm004847-001-hr-tech-world.shtml" target="_blank"><button class="green-btn">Book now</button></a>
 				</div>
 			</div>
-			<div class="speaker none">
+			<div class="speaker">
 				<img src="{{ URL::asset('gfx/london/hampton.jpg') }}" alt="Hampton by Hilton">
 				<div class="dtls-wrap">
 					<h6 class="name">Hampton by Hilton</h6>
 					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<p>Queen Room: 17<sup>th</sup>, 19<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;119 / night</span>
 					<span>Double Occupancy: &pound;119 / night</span>
-					<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+					<p>Standard Room: 18<sup>th</sup> March 2018</p>
+					<span>Single Occupancy: &pound;90 / night</span>
+					<span>Double Occupancy: &pound;90 / night</span>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
+					<p class="code">The hotel requires a minimum nights’ stay of 2 nights.</p>
+					<a href="http://group.hamptoninn.com/Unleash18" target="_blank"><button class="green-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker holiday">
@@ -108,8 +125,13 @@
 				<div class="dtls-wrap">
 					<h6 class="name">Holiday Inn Express</h6>
 					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<p>Standard Room: 17<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;149 / night</span>
-					<span>Double Occupancy: &pound;195 / night</span>
+					<span>Double Occupancy: &pound;154 / night</span>
+					<p>Standard Room: 18<sup>th</sup>, 19<sup>th</sup> March 2018</p>
+					<span>Single Occupancy: &pound;99 / night</span>
+					<span>Double Occupancy: &pound;104 / night</span>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
 					<button class="green-btn popup" data-popupdata="reservation">Book now</button>
 				</div>
 			</div>
@@ -122,9 +144,6 @@
 				<h2>Flights</h2>
 				<p class="pdg">We would like to provide you the best experience possible as you arrive to London. That’s why HR Tech World and British Airways have partnered to give you 20% off of your round-trip airfare! For you to receive the discounted airfare, please click below to be directed to the British Airways’ website where you can purchase your flight to London. <br /><br />Please note, to be eligible for the 20% discount, HR Tech World London attendees must be flying to London City Airport from Amsterdam, Edinburgh, Dublin, Dusseldorf, Frankfurt, Geneva, Glasgow, Isle of Man, Madrid, Rotterdam or Zurich.</p>
 			</div>
-			<div class="pdg btm">
-				<button class="white-btn popup" data-popupdata="booknow">Book now</button>
-			</div>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg floorplancitybg"></div>
@@ -136,10 +155,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Excel - London</h2>
-				<p class="pdg">ExCeL London, where great connections happen every day, will host HR Tech World London. ExCeL London is a leading venue taking every event to heart with exhibitions, conferences, and much more. It is an unparalleled location for our unparalleled show.</p>
-			</div>
-			<div class="pdg btm">
-				<button class="white-btn popup" data-popupdata="booknow">Book now</button>
+				<p class="pdg">ExCeL London, where great connections happen every day, will host Unleash 18. ExCeL London is a leading venue taking every event to heart with exhibitions, conferences, and much more. It is an unparalleled location for our unparalleled show.</p>
 			</div>
 		</div>
 		<div class="wrppr">

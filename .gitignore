@@ -3,6 +3,9 @@
 /public/storage
 /public/news
 /publicBACKUP
+/public/gfx
+/public/css
+/public/js
 /storage/*.key
 /vendor
 /.idea
