@@ -1,6 +1,13 @@
 
 window._ = require('lodash');
 
+import InstantSearch from 'vue-instantsearch';
+
+
+window.Vue = require('vue');
+
+Vue.use(InstantSearch);
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

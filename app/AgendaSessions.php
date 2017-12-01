@@ -20,6 +20,11 @@ class AgendaSessions extends Model
    		
     }
 
+    public function tracks(){
+
+        return $this->belongsTo('App\Tracks', 'tracks_id');
+    }    
+
 
 
    /* public function toSearchableArray()
@@ -34,10 +39,17 @@ class AgendaSessions extends Model
     public function toSearchableArray()
     {
         $extra_data = [];
-        $extra_data['speakers'] = array_map(function ($data) {
+       /*$extra_data['speakers'] = array_map(function ($data) {
             return $data['full_name'];
         }
-        , $this->speakers->toArray());
+        , $this->speakers->toArray());*/
+
+        $extra_data['speakers'] = $this->speakers;
+
+        $extra_data['track_name'] = $this->tracks->track_name; 
+
+         $extra_data['start_timestamp'] = $this->start_time['time'];
+         $extra_data['end_timestamp'] = $this->end_time['time'];
 
         return array_merge($this->toArray(), $extra_data);
     }   
@@ -51,6 +63,16 @@ class AgendaSessions extends Model
     	$dateData['day'] =  $dt->day;
     	$dateData['time'] = $dt->hour.':'.sprintf("%02d", $dt->minute);
     	return $dateData;
+    }
+
+    public function getEndTimeAttribute($value){
+        $dt = Carbon::parse($value);
+
+        $dateData['year'] = $dt->year;
+        $dateData['month'] = $dt->month;
+        $dateData['day'] =  $dt->day;
+        $dateData['time'] = $dt->hour.':'.sprintf("%02d", $dt->minute);
+        return $dateData;
     }
 
     public function getSessionTitleAttribute($value){

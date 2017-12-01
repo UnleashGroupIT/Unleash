@@ -10,27 +10,24 @@ use JavaScript;
 class AgendaController extends Controller
 {
   public function index(){
-	  
-	  //TODO: Sort Sessions by start time!!
 
-	
-	  
- 	//$sessions = Tracks::where('id',1)
- 	$sessions = Tracks::where('event_id',1)
- 	                     ->where('track_status',1)
- 	                     ->with('event', 'sessions.speakers')
-						 ->get();   	
-	$sessions->extra = 0;	
-	
+	   $tracks = Tracks::where('event_id',1)
+                       ->where('track_status',1)
+                       ->pluck('track_name', 'order')
+                      ->all();
+  
      JavaScript::put([
-        'trackData' => $sessions,
+        'trackData' => $tracks,
         
     ]);
-    	
-    	   return view('amsterdam.pages.agenda', [
-                  	'tracks' => $sessions
+      
+         return view('amsterdam.pages.agenda', [
+                    'tracks' => $tracks
                  
                 ]);
+
+    	
+    	  // return view('amsterdam.pages.agenda');
 
   }
 

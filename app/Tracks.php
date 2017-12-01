@@ -3,16 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\AgendaSessions;
+use Laravel\Scout\Searchable;
 
 class Tracks extends Model
 {
 
-
-     public function sessions(){
-
-        return $this->hasMany('App\AgendaSessions');
-    }
+ use Searchable;
 
     public function event(){
 
