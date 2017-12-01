@@ -143,6 +143,11 @@ Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
 });
 
+Route::get('/london/sponsor-alacarte', function () {
+  return view('london.pages.sponsorshipalacarte');
+});
+
+
 Route::get('/london/delegate-brochure', function () {
   return view('london.pages.delegatepdf');
 });

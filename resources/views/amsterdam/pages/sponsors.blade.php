@@ -39,7 +39,6 @@
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<h2>JOIN THE LEADING PROVIDERS<br /> ON THE FUTURE OF WORK</h2>
 				<p>UNLEASH sponsors represent the Who’s Who of the world’s leading solution and service providers offering the most innovative and disruptive technologies to be found anywhere. Our sponsors have the solutions that are shaping the Future of Work and driving rapid transformation inside the the 21st century’s most forward thinking organizations. At UNLEASH the show is a happening place for optimism and wonder where inspiration bubbles, and where attendees can discuss and identify the latest technologies and how to implement them for the greatest potential impact.</p>
 				<button class="blue-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
 			</div>

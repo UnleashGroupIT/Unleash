@@ -352,14 +352,15 @@ section.two {
     @media (min-width: 75em) {
       section.two .content {
         width: 50%;
-        padding: 2em 4em;
-        padding-top:3em; } }
+        padding: 2em 4em; } }
     @media (min-width: 120em) {
       section.two .content {
         padding: 1.68vw 3.4vw; } }
   section.two button {
-    margin-top: 2em;
-    margin-bottom: 0; }
+    margin-top: 2em;}
+    @media (min-width: 75em) {
+      section.two button {
+        margin-bottom: 2em; } }
   section.two.keynote button {
     margin-bottom: 0; }
 

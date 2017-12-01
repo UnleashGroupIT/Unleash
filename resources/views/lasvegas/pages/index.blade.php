@@ -38,7 +38,7 @@
 		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
-			<span>Lead Sponsors <strong>2018</strong></span>
+			<span>Lead Sponsors <strong>2017</strong></span>
 			<div class="mainsponsors-wrap">
                    <div> <a href="https://acrobat.adobe.com/uk/en/sign.html" target="_blank" title="Adobe"><img id="adobe" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adobe.svg') }}" alt="Adobe"></a></div>
                    <div> <a href="http://www.adp.com/" target="_blank" title="ADP"><img id="adp" src="{{ URL::asset('gfx/lasvegas/header/sponsors/adp.svg') }}" alt="ADP"></a></div>
@@ -97,7 +97,7 @@
 				<div class="schedule">
 					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
 					<div class="date-place">
-						<p><strong>day 01</strong> / 10.25 / Main Auditorium</p>
+						<p>Main Auditorium</p>
 
 					</div>
 				</div>
