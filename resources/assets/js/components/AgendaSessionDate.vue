@@ -3,20 +3,15 @@
 
     <slot name="header"></slot>
 
-    <div v-for="facet in facetValues" :key="facet.name" :class="[facet.isRefined ? bem('item', 'active') : bem('item'), facet.isVisible ? 'ActiveItem' : 'DisabledItem' ]">
-      <label :class="bem('label')">
-        <input type="checkbox"
-               :class="bem('checkbox')"
-               v-model="facet.isRefined"
-               @change="toggleRefinement(facet)"
-               :value="facet.name"
-        >
+    <div v-for="facet in facetValues" :key="facet.name" :class="facet.isRefined ? 'AgendaDateItem_Active' : 'AgendaDateItem'">
 
-        <slot :count="facet.count" :active="facet.isRefined" :value="facet.name">
-          <span :class="bem('value')">{{facet.name}}</span>
-         <!-- <span :class="bem('count')">{{facet.count}}</span> -->
-        </slot>
-      </label>
+        <div class="DateSelector" v-model="facet.isRefined" @click="toggleRefinement(facet)">
+            {{ facet.name }}
+        </div> 
+
+
+
+
     </div>
 
     <slot name="footer"></slot>
@@ -65,10 +60,12 @@ export default {
     return {
       blockClassName: 'agenda-session',
       tracklist: [],
+      trackdates: [],
     };
   },
   created() {
     this.tracklist = trackData;
+    this.trackdates = trackDates;
     this.searchStore.addFacet(this.attributeName, this.operator);
     let miscElem = document.getElementById('MiscScripts');
     if (miscElem){
@@ -88,19 +85,26 @@ export default {
         this.sortBy,
         this.limit
       );
+     
 
         var orderedList = [];
         if(filters[0]){
 
-          let tracklist = JSON.parse(JSON.stringify(this.tracklist));
+      
+
+      
+          let dateList = JSON.parse(JSON.stringify(this.trackdates));
+
+   
         //  console.log(tracklist);
 
-          for (const key of Object.keys(tracklist)) {
-               let found = 0;
+          for (const key of Object.keys(dateList)) {
+              // console.log(key, tracklist[key]);
+              let found = 0;
               filters.forEach(function(value, key2){
-               
-                  if (value.name === tracklist[key]){
-                      value.isVisible = true;
+
+  
+                  if (value.name == dateList[key]){
                       orderedList.push(value);
                       found = 1;
                   }
@@ -109,28 +113,29 @@ export default {
 
               if (found == 0){
                   let newVal = {
-                    name: tracklist[key],
+                    name: dateList[key],
                     count: 0,
-                    isRefined: false,
-                    isVisible: false
+                    isRefined: false
                   };
                  orderedList.push(newVal);
-              }              
+              }
             }
-          
+         
+         
         /* tracklist.map(function(value, key) {
             console.log(value)
           // list.push(value);
            }); */     
 
-           return orderedList;
+          // return orderedList;
             //console.log(this.tracklist);
             //console.log(this.searchStore);
-        } else {
-          console.log(filters);
-          return filters;
         }
        
+     
+
+
+     return orderedList;
     },
     show() {
       return this.facetValues.length > 0;
@@ -151,4 +156,3 @@ export default {
   },
 };
 </script>
-

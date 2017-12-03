@@ -16,8 +16,13 @@ class AgendaController extends Controller
                        ->pluck('track_name', 'order')
                       ->all();
   
+//FOR NOW.. HARD CODE IT, BUT IN THE FUTURE, GET IT FROM THE DB.. PLS
+        $dates[0] = 24;
+        $dates[1] = 25;              
+
      JavaScript::put([
         'trackData' => $tracks,
+        'trackDates' => $dates,
         
     ]);
       

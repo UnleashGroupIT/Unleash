@@ -23,6 +23,33 @@
 
 @section('maincontent')
 
+<style>
+.AgendaDateItem, .AgendaDateItem_Active{
+    width: 100%;
+    max-width: 235px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 2px;
+}
+
+.AgendaDateItem{
+ background-color: #e9e9e9;
+
+}
+
+.AgendaDateItem_Active{
+  background-color: #e7d0d0;
+}
+ 
+.DateSelector{ 
+  padding: 15px 30px; 
+}
+  
+#DateSelectorContainer{
+      text-align: center;
+}
+</style>
+
 	<section class="agenda" id="AgendaSection">
 
 
@@ -31,9 +58,14 @@
     api-key="{{ config('scout.algolia.key') }}"
     index-name="agenda_sessions"
   >
+  <div id="SearchBoxContainer">
     <ais-search-box></ais-search-box>
+  </div> 
 
-     <agenda-session attribute-name="start_time.day"></agenda-session>
+<div id="DateSelectorContainer">
+     <agenda-session-date attribute-name="start_time.day"></agenda-session-date>
+
+</div>
 
  <agenda-session customorder=true attribute-name="tracks.track_name"></agenda-session>
 
@@ -41,23 +73,19 @@
 
     <ais-results>
       <template slot-scope="{ result }">
-        <p>
-            @{{ result.session_title }}
-          {{-- <ais-highlight :result="result" attribute-name="session_title"></ais-highlight> --}}
-            
-        </p>
+        <div class="Session">
+         <div class="">
+         </div> 
+        <h3>
+            @{{ result.session_title }}   
+        </h3>
+        <div class="SessionInnerContainer">
+          @{{ result }}
+        </div>  
+      </div>
       </template>
     </ais-results>
   </ais-index>
-
-
-{{--     <div id="SearchBoxContainer">
-        <input type=text name="searchBar" id="searchBar" v-model="searchField" @keyup="doSearch()">
-
-    </div>
-         <div id="Results"></div>     --}}
-
-  
 
 
 

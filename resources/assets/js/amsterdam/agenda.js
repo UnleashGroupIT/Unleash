@@ -6,6 +6,10 @@ Vue.component(
     require('../components/AgendaSession.vue')
 );
 
+Vue.component(
+    'agenda-session-date',
+    require('../components/AgendaSessionDate.vue')
+);
 
 
  const app = new Vue({
