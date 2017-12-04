@@ -24,6 +24,10 @@
 @section('maincontent')
 
 <style>
+#AgendaSection{
+  background-color: #f2f2f2;
+}
+
 .AgendaDateItem, .AgendaDateItem_Active{
     width: 100%;
     max-width: 235px;
@@ -48,6 +52,41 @@
 #DateSelectorContainer{
       text-align: center;
 }
+#TrackFilters, #SearchResults{
+  display:inline-block;
+}
+#TrackFilters {
+  vertical-align: top;
+}
+#SearchResults{
+    width: 100%;
+    max-width: 1100px;
+}
+
+.Session{
+  background-color: #fff;
+  margin: 0px 0 20px 0;
+  -webkit-box-shadow: 6px 6px 11px 1px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 6px 6px 11px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 6px 6px 11px 1px rgba(0, 0, 0, 0.06);
+}
+.LeftSection, .RightSection, .SessionLocation, .SessionDuration{
+    display:inline-block;
+}
+.RightSection{
+      max-width: 80%;
+}
+.LeftSection{
+  vertical-align: top;
+   width: 215px;
+}
+
+.SpeakerImage, .SpeakerInfo, .SpeakerTitle, .SpeakerCompany{
+    display:inline-block;
+}
+.SpeakerImage{
+    width: 40px;
+}
 </style>
 
 	<section class="agenda" id="AgendaSection">
@@ -70,25 +109,44 @@
     <agenda-searchbox></agenda-searchbox>
   </div> 
 
- <agenda-session customorder=true attribute-name="tracks.track_name"></agenda-session>
 
-   {{--  <ais-refinement-list limit="30" attribute-name="tracks.track_name"></ais-refinement-list> --}}
+ <div id="TrackFilters">
+  <agenda-session customorder=true attribute-name="tracks.track_name"></agenda-session>
+ </div>
+ 
 
+ <div id="SearchResults">
     <ais-results>
       <template slot-scope="{ result }">
         <div class="Session">
-         <div class="">
-         </div> 
-        <h3>
-            @{{ result.session_title }}   
-        </h3>
-        <div class="SessionInnerContainer">
-          @{{ result }}
-        </div>  
+         <div class="LeftSection">
+            <p>@{{ result.start_time.month }} @{{ result.start_time.day }}.</p>
+            <h3>@{{ result.start_time.time }}</h3>
+            <p>@{{ result.tracks.track_name }}</p>
+         </div>
+        <div class="RightSection"> 
+          <p class="SessionLocation">@{{result.tracks.level}} - @{{result.tracks.room}}</p>
+          <p class="SessionDuration">@{{ getMinutesBetweenDates(result.start_time.time, result.end_time.time) }}</p>
+           <h3>@{{ result.session_title }}</h3>
+          <div class="SessionInnerContainer">
+             <p>@{{ result.session_description }}</p>
+             <div class="SessionSpeaker" v-for="speaker in result.speakers">
+              <img class="SpeakerImage" :src="'/storage/speakers/'+speaker.img_url">
+               
+               <div class="SpeakerInfo">
+                 <p class="SpeakerName">@{{ speaker.full_name }}</p>
+                  <p class="SpeakerTitle">@{{ speaker.job_title }}</p>
+                  <p class="SpeakerCompany">@{{ speaker.company }}</p>
+               </div>
+
+             </div>
+          </div>  
+        </div>
       </div>
       </template>
     </ais-results>
   </ais-index>
+</div>
 
 
 

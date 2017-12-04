@@ -66656,7 +66656,17 @@ Vue.component('agenda-session-date', __webpack_require__("./resources/assets/js/
 Vue.component('agenda-searchbox', __webpack_require__("./resources/assets/js/components/AgendaSearch.vue"));
 
 var app = new Vue({
-    el: '#AgendaSection'
+    el: '#AgendaSection',
+
+    methods: {
+        getMinutesBetweenDates: function getMinutesBetweenDates(startDate, endDate) {
+            var start = new Date(startDate);
+            var end = new Date(endDate);
+
+            var diff = start - end;
+            return diff / 60000;
+        }
+    }
 
 });
 
