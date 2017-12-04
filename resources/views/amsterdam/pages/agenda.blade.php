@@ -57,15 +57,18 @@
     app-id="{{ config('scout.algolia.id') }}"
     api-key="{{ config('scout.algolia.key') }}"
     index-name="agenda_sessions"
+
   >
-  <div id="SearchBoxContainer">
-    <ais-search-box></ais-search-box>
-  </div> 
+
 
 <div id="DateSelectorContainer">
      <agenda-session-date attribute-name="start_time.day"></agenda-session-date>
 
 </div>
+
+  <div id="SearchBoxContainer">
+    <agenda-searchbox></agenda-searchbox>
+  </div> 
 
  <agenda-session customorder=true attribute-name="tracks.track_name"></agenda-session>
 

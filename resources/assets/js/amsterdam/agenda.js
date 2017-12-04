@@ -11,6 +11,11 @@ Vue.component(
     require('../components/AgendaSessionDate.vue')
 );
 
+Vue.component(
+    'agenda-searchbox',
+    require('../components/AgendaSearch.vue')
+);
+
 
  const app = new Vue({
   el: '#AgendaSection',

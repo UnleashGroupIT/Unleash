@@ -23,6 +23,7 @@ class AgendaController extends Controller
      JavaScript::put([
         'trackData' => $tracks,
         'trackDates' => $dates,
+        'eventId' => 1,
         
     ]);
       

@@ -5,7 +5,7 @@
 
     <div v-for="facet in facetValues" :key="facet.name" :class="facet.isRefined ? 'AgendaDateItem_Active' : 'AgendaDateItem'">
 
-        <div class="DateSelector" v-model="facet.isRefined" @click="toggleRefinement(facet)">
+        <div class="DateSelector" v-model="facet.isRefined" @click="clearRefinements(); toggleRefinement(facet)">
             {{ facet.name }}
         </div> 
 
@@ -64,13 +64,17 @@ export default {
     };
   },
   created() {
-    this.tracklist = trackData;
+this.searchStore.addFacetRefinement('tracks.event_id', '1');
+
+this.tracklist = trackData;
     this.trackdates = trackDates;
     this.searchStore.addFacet(this.attributeName, this.operator);
     let miscElem = document.getElementById('MiscScripts');
     if (miscElem){
       miscElem.remove();
     }
+
+this.searchStore.toggleFacetRefinement('start_time.day','24');
 
   },
   destroyed() {
@@ -88,12 +92,9 @@ export default {
      
 
         var orderedList = [];
+         let dateList = JSON.parse(JSON.stringify(this.trackdates));
+
         if(filters[0]){
-
-      
-
-      
-          let dateList = JSON.parse(JSON.stringify(this.trackdates));
 
    
         //  console.log(tracklist);
@@ -130,6 +131,20 @@ export default {
           // return orderedList;
             //console.log(this.tracklist);
             //console.log(this.searchStore);
+        } else {
+
+          for (const key of Object.keys(dateList)) {
+
+           
+                  let newVal = {
+                    name: dateList[key],
+                    count: 0,
+                    isRefined: false
+                  };
+                 orderedList.push(newVal);
+              }
+
+
         }
        
      
@@ -146,6 +161,11 @@ export default {
       return this.searchStore.toggleFacetRefinement(
         this.attributeName,
         value.name
+      );
+    },
+    clearRefinements() {
+      return this.searchStore.clearRefinements(
+        this.attributeName,
       );
     }
   },

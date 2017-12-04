@@ -68,6 +68,7 @@ export default {
     };
   },
   created() {
+
     this.tracklist = trackData;
     this.searchStore.addFacet(this.attributeName, this.operator);
     let miscElem = document.getElementById('MiscScripts');
@@ -90,9 +91,10 @@ export default {
       );
 
         var orderedList = [];
+        let tracklist = JSON.parse(JSON.stringify(this.tracklist));
         if(filters[0]){
 
-          let tracklist = JSON.parse(JSON.stringify(this.tracklist));
+         
         //  console.log(tracklist);
 
           for (const key of Object.keys(tracklist)) {
@@ -123,14 +125,24 @@ export default {
           // list.push(value);
            }); */     
 
-           return orderedList;
+           
             //console.log(this.tracklist);
             //console.log(this.searchStore);
         } else {
-          console.log(filters);
-          return filters;
+          
+          for (const key of Object.keys(tracklist)) {
+
+                  let newVal = {
+                    name: tracklist[key],
+                    count: 0,
+                    isRefined: false,
+                    isVisible: false
+                  };
+                 orderedList.push(newVal);
+                           
+            }
         }
-       
+       return orderedList;
     },
     show() {
       return this.facetValues.length > 0;

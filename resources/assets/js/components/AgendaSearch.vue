@@ -1,19 +1,57 @@
-<!-- CurrentQuery.vue -->
 <template>
-  <div>
-    {{ query }}
-  </div>
+  <form role="search" action="" @submit.prevent="onFormSubmit">
+    <slot>
+      <ais-input :search-store="searchStore" :placeholder="placeholder" :autofocus="autofocus"></ais-input>
+      <button type="submit" :class="bem('submit')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 40 40">
+          <title>{{ submitTitle }}</title>
+          <path
+            d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+    </slot>
+  </form>
 </template>
 
 <script>
-import { CustomAgenda } from 'vue-instantsearch';
+import algoliaComponent from 'vue-instantsearch';
+import AisInput from 'vue-instantsearch';
+import AisClear from 'vue-instantsearch';
+import { Component } from 'vue-instantsearch';
 
 export default {
-  mixins: [CustomAgenda],
-  computed: {
-    query() {
-      return this.searchStore.query;
+  mixins: [Component],
+  props: {
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    submitTitle: {
+      type: String,
+      default: 'search',
+    },
+    clearTitle: {
+      type: String,
+      default: 'clear',
+    },
+    autofocus: {
+      type: Boolean,
+      default: false,
     },
   },
+  data() {
+    return {
+      blockClassName: 'agenda-searchbox',
+    };
+  },
+  methods: {
+    onFormSubmit() {
+      const input = this.$el.querySelector('input[type=search]');
+      input.blur();
+    },
+  },
+
 };
 </script>
