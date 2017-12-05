@@ -52,7 +52,7 @@
 				<h2>London</h2>
 				<p>The world’s foremost financial center and a leading global and cultural capital, London is one of the world's most visited cities. London has something for everyone: from business and commerce through to history and culture, and it’s a great city for good times!</p>
 			</div>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg floorplancitybg"></div>
@@ -78,7 +78,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 @endsection

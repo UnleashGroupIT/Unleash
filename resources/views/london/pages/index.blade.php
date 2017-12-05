@@ -62,7 +62,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>UNLEASH is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="green-btn popup" data-popupdata="booknow">Book Now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -136,7 +136,7 @@
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -226,7 +226,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world’s leading and fastest growing show on the future of work. Now is the time face the challenge of change and let your people loose to power your organization into the next decade of the 21st Century.</p>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 @endsection

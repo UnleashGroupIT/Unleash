@@ -41,7 +41,7 @@
 						</nav>
 					</div>
 					<div class="contact-wrp">
-						<p>info@hrtechcongress.com</p>
+						<p>info@unleashgroup.io</p>
 						<p>+44 20 34 689 689</p>
 						<p>+36 1 201 1469</p>
 						<p>HRN Terms &amp; Conditions</p>
