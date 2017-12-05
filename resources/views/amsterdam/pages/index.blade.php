@@ -46,6 +46,7 @@
                 <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
                <div> <a href="https://www.indeed.com/" target="_blank" title="Indeed"><img id="ind" src="{{ URL::asset('gfx/amsterdam/header/sponsors/Indeed.png') }}" alt="Indeed"></a></div>
                <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+               <div> <a href="http://www.sumtotalsystems.com/" target="_blank" title="Sumtotal"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/sumtotal.svg') }}" alt="Sumtotal"></a></div>
        			
 			
 			</div>

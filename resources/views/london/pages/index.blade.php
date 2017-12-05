@@ -46,6 +46,7 @@
 					<div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img id="ach" src="{{ URL::asset('gfx/london/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
 			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
                     <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                    <div><a href="https://www.cut-e.com/assessment-solutions/" target="_blank" title="Cut-e"><img id="cute" src="{{ URL::asset('gfx/london/header/sponsors/cute.svg') }}" alt="Cut-e"></a></div>
                     <div><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" id="ins" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
                     <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
                     <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>

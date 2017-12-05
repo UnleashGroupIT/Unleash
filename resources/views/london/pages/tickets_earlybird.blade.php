@@ -140,7 +140,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">PUBLIC &amp; GOVERNMENTAL SECTOR</h2>
-            <h2 class="TicketPrice">&pound;995</h2>
+            <h2 class="TicketPrice">&pound;895</h2>
             <h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>
             <h3 class="TicketDeadline">UNTIL DECEMBER 31.</h3>
         </div>

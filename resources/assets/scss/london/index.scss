@@ -212,6 +212,16 @@ section.one.mainsponsors {
         }
       }
 
+      #cute{
+        width: 45px;
+        @media (min-width: 75em) {
+          width: 70px;
+        }
+        @media (min-width: 125em) {
+          width: 3.0vw;
+        }
+      }
+
       #ach{
         width: 100px;
         @media (min-width: 55em) {
