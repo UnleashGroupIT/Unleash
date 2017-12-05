@@ -22,11 +22,10 @@ Vue.component(
 
   methods: {
    getMinutesBetweenDates(startDate, endDate) {
-    var start = new Date(startDate);
-    var end = new Date(endDate);
 
-    var diff = start - end;
-    return (diff / 60000);
+
+    var diff = endDate - startDate;
+    return (diff /60);
   } 
   },
    

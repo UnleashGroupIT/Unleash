@@ -48,8 +48,8 @@ class AgendaSessions extends Model
 
         $extra_data['track_name'] = $this->tracks->track_name; 
 
-         $extra_data['start_timestamp'] = $this->start_time['time'];
-         $extra_data['end_timestamp'] = $this->end_time['time'];
+         $extra_data['start_timestamp'] = strtotime($this->start_time['year'].'-'.$this->start_time['month'].'-'.$this->start_time['day'].' '.$this->start_time['time']); //$this->start_time['time'];
+         $extra_data['end_timestamp'] = strtotime($this->end_time['year'].'-'.$this->end_time['month'].'-'.$this->end_time['day'].' '.$this->end_time['time']);
 
         return array_merge($this->toArray(), $extra_data);
     }   

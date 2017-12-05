@@ -81,11 +81,17 @@
    width: 215px;
 }
 
-.SpeakerImage, .SpeakerInfo, .SpeakerTitle, .SpeakerCompany{
+.SpeakerImage, .SpeakerInfo, .SpeakerTitle, .SpeakerCompany, .ExtraCategory{
     display:inline-block;
 }
 .SpeakerImage{
     width: 40px;
+}
+.SessionLocation{
+  margin: 0 38px 0 0;
+}
+.SessionUpperInfoRibbon{
+  margin: 15px 0;
 }
 </style>
 
@@ -125,8 +131,11 @@
             <p>@{{ result.tracks.track_name }}</p>
          </div>
         <div class="RightSection"> 
-          <p class="SessionLocation">@{{result.tracks.level}} - @{{result.tracks.room}}</p>
-          <p class="SessionDuration">@{{ getMinutesBetweenDates(result.start_time.time, result.end_time.time) }}</p>
+          <div class="SessionUpperInfoRibbon">
+            <p class="SessionLocation"><i class="fa fa-map-marker" aria-hidden="true"></i> @{{result.tracks.level}} - @{{result.tracks.room}}</p>
+            <p class="SessionDuration"><i class="fa fa-clock-o" aria-hidden="true"></i> @{{ getMinutesBetweenDates(result.start_timestamp, result.end_timestamp) }} mins</p>
+            <p class="ExtraCategory" v-if="result.extra_category">| @{{result.extra_category}}</p>
+         </div>
            <h3>@{{ result.session_title }}</h3>
           <div class="SessionInnerContainer">
              <p>@{{ result.session_description }}</p>
@@ -138,7 +147,7 @@
                   <p class="SpeakerTitle">@{{ speaker.job_title }}</p>
                   <p class="SpeakerCompany">@{{ speaker.company }}</p>
                </div>
-
+                   
              </div>
           </div>  
         </div>
