@@ -420,6 +420,23 @@ p.code{
     font-weight: 600;
   }
 
+  .booking-wrp{
+    margin-top:1em;
+    p.code{
+      margin:0!important;
+      font-style: italic;
+    }
+  }
+
+  .booking-code{
+    background: $dark-green;
+    padding: 5px;
+    span{
+      color:#fff;
+      font-weight: bold;
+    }
+  }
+
 section.two.keynote.arianna .btm{margin-top:auto}
 
 @media (min-width: 75em) {

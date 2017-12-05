@@ -68,7 +68,10 @@
 				<img src="{{ URL::asset('gfx/london/doubletree.jpg') }}" alt="Doubletree by Hilton">
 				<div class="dtls-wrap">
 					<h6 class="name">Doubletree by Hilton</h6>
-					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<div class="booking-wrp">
+						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
+						<p class="code">* Please quote if calling in or emailing the hotel.</p>
+					</div>
 					<p>Standard Room: 17<sup>th</sup>, 18<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;160 / night</span>
 					<span>Double Occupancy: &pound;175 / night</span>
@@ -84,7 +87,10 @@
 				<img src="{{ URL::asset('gfx/london/moxy.jpg') }}" alt="Moxy">
 				<div class="dtls-wrap">
 					<h6 class="name">Moxy</h6>
-					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<div class="booking-wrp">
+						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
+						<p class="code">* Please quote if calling in or emailing the hotel.</p>
+					</div>
 					<p>Standard Room:</p>
 					<span>Single Occupancy: &pound;199 / night</span>
 					<span>Double Occupancy: &pound;209 / night</span>
@@ -96,7 +102,10 @@
 				<img src="{{ URL::asset('gfx/london/novotel.jpg') }}" alt="Novotel">
 				<div class="dtls-wrap">
 					<h6 class="name">Novotel London ExCeL</h6>
-					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
+					<div class="booking-wrp">
+						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
+						<p class="code">* Please quote if calling in or emailing the hotel.</p>
+					</div>
 					<p>Standard Room:</p>
 					<span>Single Occupancy: &pound;175 / night</span>
 					<span>Double Occupancy: &pound;185 / night</span>

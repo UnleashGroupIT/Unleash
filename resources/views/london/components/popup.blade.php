@@ -283,7 +283,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 document.write(atob("PGEgaHJlZj0ibWFpbHRvOnJlc2VydmF0aW9uc21nckBoaWV4cHJlc3Nsb25kb25leGNlbC5jby51ayI+cmVzZXJ2YXRpb25zbWdyQGhpZXhwcmVzc2xvbmRvbmV4Y2VsLmNvLnVrPC9hPiA8YSBocmVmPSJodHRwOi8vd3d3LndlYmVzdG9vbHMuY29tL2FudGlzcGFtLWVtYWlsLXByb3RlY3Rpb24tb2JmdXNjYXRlLWVtYWlsLWFkZHJlc3Mtd2Vic2l0ZS1jb2RlLXNwYW0tamF2YXNjcmlwdC1iYXNlNjQtZW1haWwtZW5jb2RpbmctY3J5cHQuaHRtbCIgdGl0bGU9IkFudGktU1BBTSBQcm90ZWN0aW9uIj48aW1nIHNyYz0iLy91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy8yLzI4L1NlbWlfcHJvdGVjdC5zdmciIHdpZHRoPTE0IGhlaWdodD0xNCAvPjwvYT4="));
 </script>
 <noscript>Please enable Javascript to see the email address</noscript></span><p>Via phone:</p><span>00 44 203096 5888 Extension 2.</span>
-		    <button class="green-btn">Please refer to the „H02” code.</button>
+		    <button class="green-btn">Please refer to the UNLEASH18 booking name, and to the "H02" booking code.</button>
 		  </div>
 		</div>
 	</div>
