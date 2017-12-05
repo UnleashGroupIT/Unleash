@@ -272,14 +272,14 @@ button {
                     --}}
 
 
-    <speakers-all ref="allSpeakerGrid" @speakeradded="addToGrid($event)"></speakers-all>
+    <speakers-all ref="allSpeakerGrid" @speakeradded="addToGrid($event)" @editspeakerdata="speakerEditRequest($event)"></speakers-all>
         
    </div>
  </section>
 
 
 
-                            <div id="form_modal" class="modal fade animated" role="dialog">
+                            <div id="form_modal" class="modal fade animated" data-backdrop="static" data-keyboard="true" role="dialog">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -287,7 +287,7 @@ button {
                                             <h4 class="modal-title">Add New Speaker</h4>
                                         </div>
                                             
-                                            <form id="NewSpeakerForm" role="form" v-on:submit.prevent="formSubmit">
+                                            <form id="NewSpeakerForm" role="form" v-on:submit.prevent="newSpeakerSubmit">
                                             <div class="modal-body">
 
                                                 <label class="sr-only" for="first_name">First Name</label>
@@ -338,7 +338,70 @@ button {
                             <!-- form-modal end -->
 
 
-                            
+
+                            <div id="edit_form_modal" ref="editmodal" class="modal fade animated" data-backdrop="static" data-keyboard="true" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Edit global information</h4>
+                                        </div>
+                                            
+                                            <form id="EditSpeakerForm" role="form" v-on:submit.prevent="editSpeaker">
+                                            <div class="modal-body">
+
+                                                <label class="sr-only" for="first_name">Suffix</label>
+                                                <input type="text" name="suffix" :value="editSpeakerData.prefix ? editSpeakerData.prefix : ''" id="prefix" placeholder="Suffix" class="form-control m-t-10">
+
+                                                <label class="sr-only" for="first_name">First Name</label>
+                                                <input type="text" required name="first_name" :value="editSpeakerData.first_name ? editSpeakerData.first_name : ''" id="first_name" placeholder="First Name" class="form-control m-t-10">
+
+                                                <label class="sr-only" for="last_name">Last Name</label>
+                                                <input type="text" required name="last_name" id="last_name" :value="editSpeakerData.last_name ? editSpeakerData.last_name : ''" placeholder="Last Name" class="form-control m-t-10">
+
+
+                                                <label class="sr-only" for="job_title">Job Title</label>
+                                                <input type="text" name="job_title" id="job_title" :value="editSpeakerData.job_title ? editSpeakerData.job_title : ''" placeholder="Job Title" class="form-control m-t-10">
+
+                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-if="editSpeakerData.bio">@{{editSpeakerData.bio}}</textarea>
+
+                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-else></textarea>
+
+                                                <label class="sr-only" for="company">Company</label>
+                                                <input type="text" name="company" id="company" :value="editSpeakerData.company ? editSpeakerData.company : ''" placeholder="Company Name" class="form-control m-t-10"> 
+
+                                                <label class="sr-only" for="website">Website</label>
+                                                <input type="text" name="website" id="website" :value="editSpeakerData.website ? editSpeakerData.website : ''" placeholder="Website URL" class="form-control m-t-10"> 
+
+                                                <label class="sr-only" for="facebook">Facebook</label>
+                                                <input type="text" name="facebook" id="facebook" :value="editSpeakerData.facebook ? editSpeakerData.facebook : ''" placeholder="Facebook URL" class="form-control m-t-10">
+
+
+                                                <label class="sr-only" for="twitter">Twitter</label>
+                                                <input type="text" name="twitter" id="twitter" :value="editSpeakerData.twitter ? editSpeakerData.twitter : ''" placeholder="Twitter URL" class="form-control m-t-10">
+
+                                                <label class="sr-only" for="linkedin">Linkedin</label>
+                                                <input type="text" name="linkedin" id="linkedin" :value="editSpeakerData.linkedin ? editSpeakerData.linkedin : ''" placeholder="Linkedin URL" class="form-control m-t-10">
+
+                                                <div class="imgUploadContainer">
+                                               <input type="file" name="speaker_img" id="speaker_img" class="imgInput" @change="changeImage" accept="image/*">
+                                                <p id="EditImgAreaPlaceholder">@{{imgTempText}}</p>
+                                                <img id="speakerPrevImg" :src=" editSpeakerData.img_url ?'/storage/speakers/'+editSpeakerData.img_url : ''"/>
+                                               </div>                                                                                                 
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-succes">Submit</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- form-modal end -->
+
 
 </div>
 

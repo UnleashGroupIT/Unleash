@@ -92,7 +92,18 @@ export default {
     },
     editSpeaker(speakerId){
 
+        axios.get(`/api/speaker/${speakerId}`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+            this.$emit('editspeakerdata', response.data);
+        })
+        .catch(e => {
+          console.log(e);
+         // this.errors.push(e)
+        })
 
+
+       
     },
 
     filterSpeakers(gridId, searchQuery){

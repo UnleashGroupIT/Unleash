@@ -27,6 +27,7 @@ var spVue = new Vue({
 		speakerSearch: '',
 		speakerAll: '',
 		event: null,
+		editSpeakerData: {},
 		GridType: 1,
 		sortableOptions: {
 			animation: 150,
@@ -189,7 +190,7 @@ var spVue = new Vue({
 		},
 
 	//Create a new Speaker	
-	formSubmit($event){
+	newSpeakerSubmit($event){
 			let ref = this.$refs.allSpeakerGrid;
 			let selectedGr = this.selected;
 			let SearchVar = this.speakerSearch;
@@ -278,18 +279,70 @@ var spVue = new Vue({
       };
        reader.readAsDataURL(this.selectedImage);
      this.imgTempText = '';
-    },   						
+    }, 
 
-	}
+	speakerEditRequest(speakerData){
+		this.editSpeakerData = speakerData;
+	    $('#edit_form_modal').modal({backdrop: 'static', keyboard: true});
+	},
 
-	/*mounted(){
+	editSpeaker($event){
+			let ref = this.$refs.allSpeakerGrid;
+			let selectedGr = this.selected;
+			let SearchVar = this.speakerSearch;
+      // create a form
+      const form = new FormData();
+      form.append('speaker_img', this.selectedImage);
+      form.append('first_name', $event.target.first_name.value);
+      form.append('last_name', $event.target.last_name.value);
+      form.append('job_title', $event.target.job_title.value);
+      form.append('company', $event.target.company.value);
+      form.append('facebook', $event.target.facebook.value);
+      form.append('twitter', $event.target.twitter.value);
+      form.append('linkedin', $event.target.linkedin.value);
+      // submit the image			
 
-		
-	}*/
+        const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+
+			axios.patch(`/api/speaker/${this.editSpeakerData.id}`, form, config)
+			  .then(function (response) {
+			  	document.getElementById("EditSpeakerForm").reset();
+				document.getElementById("speakerPrevImg").src="";
+			  	document.getElementById("EditImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';	
+			 		    new PNotify({
+					        title: 'Success!',
+					        text: 'Speaker Saved!',
+					        type: 'success'
+    					});
+
+    			ref.filterSpeakers(selectedGr, SearchVar);	
+			  })
+			  .catch(function (error) {
+			  	 new PNotify({
+                  title: 'Error!',
+                  text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+                  type: 'error'
+              });
+			    console.log(error);
+			  });
+
+
+		},	
+
+	},
+
+  mounted(){
+    $(this.$refs.editmodal).on("hidden.bs.modal", function(){
+    	document.getElementById("EditSpeakerForm").reset();
+    })
+  },
+
+
 
 
 });
-
 
 
 
