@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 96);
+/******/ 	return __webpack_require__(__webpack_require__.s = 97);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -317,6 +317,138 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ }),
 
 /***/ 100:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            speakers: []
+        };
+    },
+
+
+    methods: {
+        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
+
+            this.$emit('speakeradded', speakerId);
+        },
+        deleteFromDatabase: function deleteFromDatabase(speakerId) {
+            var thisInstance = this;
+            var thisSelected = this.selected;
+            var thisSearch = this.speakerSearch;
+
+            new PNotify({
+                title: 'Confirmation Needed',
+                text: 'Are you sure you want to delete this speaker?',
+                icon: 'fa fa-question-circle',
+                type: 'error',
+                hide: false,
+                confirm: {
+                    confirm: true
+                },
+                buttons: {
+                    closer: false,
+                    sticker: false
+                },
+                history: {
+                    history: false
+                }
+
+            }).get().on('pnotify.confirm', function () {
+
+                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
+                    // JSON responses are automatically parsed.
+                    thisInstance.filterSpeakers(thisSelected, thisSearch);
+                    new PNotify({
+                        title: 'Success!',
+                        text: 'Deleted Successfully!',
+                        type: 'success'
+                    });
+                }).catch(function (error) {
+                    new PNotify({
+                        title: 'Error!',
+                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+                        type: 'error'
+                    });
+                    console.log(error);
+                });
+            }).on('pnotify.cancel', function () {});
+        },
+        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
+            var _this = this;
+
+            var exludeG = '';
+            var searchQ = '';
+
+            if (gridId) {
+                exludeG = 'exlude=' + gridId;
+            }
+
+            if (searchQuery) {
+                searchQ = 'search=' + searchQuery;
+            }
+
+            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
+                // JSON responses are automatically parsed.
+                _this.speakers = response.data;
+            }).catch(function (e) {
+                _this.errors.push(e);
+            });
+        },
+        getAllSpeakers: function getAllSpeakers() {
+            var _this2 = this;
+
+            axios.get('/api/sponsors').then(function (response) {
+                // JSON responses are automatically parsed.
+                _this2.speakers = response.data;
+            }).catch(function (e) {
+                _this2.errors.push(e);
+            });
+        }
+    },
+
+    // Fetches posts when the component is created.
+    created: function created() {
+        this.getAllSpeakers();
+
+        // async / await version (created() becomes async created())
+        //
+        // try {
+        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+        //   this.posts = response.data
+        // } catch (e) {
+        //   this.errors.push(e)
+        // }
+    }
+});
+
+/***/ }),
+
+/***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -2140,15 +2272,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 96:
+/***/ 97:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(97);
+module.exports = __webpack_require__(98);
 
 
 /***/ }),
 
-/***/ 97:
+/***/ 98:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2156,7 +2288,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
 
-Vue.component('speakers-all', __webpack_require__(98));
+Vue.component('speakers-all', __webpack_require__(99));
 
 Vue.component('grid-controller', __webpack_require__(9));
 
@@ -2411,15 +2543,15 @@ var spVue = new Vue({
 
 /***/ }),
 
-/***/ 98:
+/***/ 99:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(99)
+var __vue_script__ = __webpack_require__(100)
 /* template */
-var __vue_template__ = __webpack_require__(100)
+var __vue_template__ = __webpack_require__(101)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -2457,138 +2589,6 @@ if (false) {(function () {
 
 module.exports = Component.exports
 
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            speakers: []
-        };
-    },
-
-
-    methods: {
-        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
-
-            this.$emit('speakeradded', speakerId);
-        },
-        deleteFromDatabase: function deleteFromDatabase(speakerId) {
-            var thisInstance = this;
-            var thisSelected = this.selected;
-            var thisSearch = this.speakerSearch;
-
-            new PNotify({
-                title: 'Confirmation Needed',
-                text: 'Are you sure you want to delete this speaker?',
-                icon: 'fa fa-question-circle',
-                type: 'error',
-                hide: false,
-                confirm: {
-                    confirm: true
-                },
-                buttons: {
-                    closer: false,
-                    sticker: false
-                },
-                history: {
-                    history: false
-                }
-
-            }).get().on('pnotify.confirm', function () {
-
-                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
-                    // JSON responses are automatically parsed.
-                    thisInstance.filterSpeakers(thisSelected, thisSearch);
-                    new PNotify({
-                        title: 'Success!',
-                        text: 'Deleted Successfully!',
-                        type: 'success'
-                    });
-                }).catch(function (error) {
-                    new PNotify({
-                        title: 'Error!',
-                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-                        type: 'error'
-                    });
-                    console.log(error);
-                });
-            }).on('pnotify.cancel', function () {});
-        },
-        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
-            var _this = this;
-
-            var exludeG = '';
-            var searchQ = '';
-
-            if (gridId) {
-                exludeG = 'exlude=' + gridId;
-            }
-
-            if (searchQuery) {
-                searchQ = 'search=' + searchQuery;
-            }
-
-            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
-                // JSON responses are automatically parsed.
-                _this.speakers = response.data;
-            }).catch(function (e) {
-                _this.errors.push(e);
-            });
-        },
-        getAllSpeakers: function getAllSpeakers() {
-            var _this2 = this;
-
-            axios.get('/api/sponsors').then(function (response) {
-                // JSON responses are automatically parsed.
-                _this2.speakers = response.data;
-            }).catch(function (e) {
-                _this2.errors.push(e);
-            });
-        }
-    },
-
-    // Fetches posts when the component is created.
-    created: function created() {
-        this.getAllSpeakers();
-
-        // async / await version (created() becomes async created())
-        //
-        // try {
-        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-        //   this.posts = response.data
-        // } catch (e) {
-        //   this.errors.push(e)
-        // }
-    }
-});
 
 /***/ })
 
