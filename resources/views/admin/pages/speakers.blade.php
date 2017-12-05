@@ -291,10 +291,10 @@ button {
                                             <div class="modal-body">
 
                                                 <label class="sr-only" for="first_name">First Name</label>
-                                                <input type="text" name="first_name" id="first_name" placeholder="First Name" class="form-control m-t-10">
+                                                <input type="text" required name="first_name" id="first_name" placeholder="First Name" class="form-control m-t-10">
 
                                                 <label class="sr-only" for="last_name">Last Name</label>
-                                                <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="form-control m-t-10">
+                                                <input type="text" required name="last_name" id="last_name" placeholder="Last Name" class="form-control m-t-10">
 
 
                                                 <label class="sr-only" for="job_title">Job Title</label>
@@ -336,6 +336,9 @@ button {
                                 </div>
                             </div>
                             <!-- form-modal end -->
+
+
+                            
 
 </div>
 

@@ -4,6 +4,7 @@
                         <div class="GridImageContainer">
                           <div class="IconContainer">
                            <div title="Add To Current Grid" class="AddToGrid" @click="addSpeakerToGrid(speaker.id)"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
+                           <div title="Edit speaker across events" class="EditSpeakerGlobal" @click="editSpeaker(speaker.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>                           
                            <div title="Delete from Database" class="DeleteItem"  @click="deleteFromDatabase(speaker.id)"><i class="fa fa-trash" aria-hidden="true"></i></div>
                           </div>
                             <div class="GridOverlay">
@@ -86,6 +87,10 @@ export default {
         });
 
 
+
+
+    },
+    editSpeaker(speakerId){
 
 
     },

@@ -1,96 +1,11 @@
 @charset "utf-8";
 /* These CSS rules will affect the Speakers page.  */
 
-/* Header */
-header {
-    
-    background-size: cover;
-    transition: all 0.3s;
-    margin-top: 3.906250vw;
-}
-header.Header {
-    background-position: top center;
-}
-header .Button {
-display:inline-block;
-
-}
-
-#HeaderContainer {
-width:100%;
-    left: 3.125vw;
-}
-#HeaderContainer h2 {
-  max-width: 18.5vw;
-
-}
-#HeaderCTA2{
-margin-left: 1.5vw;}
-@media (max-width: 1920px) {
-    header {
-        margin-top: 75px;
-    }
-    #HeaderContainer {
-
-        left: 60px;
-    }
-    #HeaderContainer h2 {
-      max-width: 370px;
-
-    }
-}
-@media (max-width: 1000px) {
-    header {
-        
-        /*	margin-top: 25px;*/
-    }
-    #HeaderContainer {
-
-        left: 0;
-    }
-    #HeaderContainer h2 {
-    max-width: 325px;
-    font-size: 12px;
-	margin-left: auto;
-    margin-right: auto;
-
-    }
-
-}
-@media (max-width: 640px) {
-    #HeaderContainer h1 {
-        font-size: 30px;
-    }
-    #HeaderCTA2{
-      margin-top: 6.25vw;
-    margin-left: 0;}
-}
-@media (max-width: 480px) {
-    header.Header {
-       
-        background-size: cover;
-        height: 150.625vw;
-    }
-    #HeaderContainer h2 {
-        max-width: 90vw;
-        font-size: 3.75vw;
-    }
-    #HeaderContainer h1 {
-        font-size: 9.375vw;
-    }
-
-    header .Button {
-        max-width: 62.5vw;
-        height: 12.5vw;
-        font-size: 4.375vw;
-
-    }
-}
-/* END Header */
 $gridItemWidth_4k: 12.5vw;
 $gridItemWidth_1920: 240px;
 $gridItemWidth_1300: 22.135416vw;
 $gridItemWidth_640: 100%;
+
 
 /* Speakers */
 .SpeakersGrid {
@@ -260,225 +175,7 @@ font-weight: 900;
 /* END Speakers */
 
 
-/* Testimonials */
 
-.testimonial {
-    width: 100%;
-    height: 35.15625vw;
-    
-    background-size: cover;
-    position: relative;
-}
-
-
-.testimonial-quotation-marks {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3.020833vw;
-    height: 3.020833vw;
-    background-color: white;
-    display: flex;
-    align-items: center;
-}
-
-.testimonial-quotation-marks img {
-    width: 1.221823vw;
-    height: 0.992865vw;
-    margin: 0 auto;
-}
-
-.testimonial-paragraph {
-    color: white;
-    padding: 5.385vw 3.75vw 0 3.75vw;
-    font-family: "Playfair Display", serif;
-    font-size: 1.158vw;
-    line-height: 140%;
-}
-
-.testimonial-paragraph strong {
-    font-size: 1.770833vw;
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-}
-
-/* Left  section */
-.testimonial-left-bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 25.000000vw;
-    height: 25.000000vw;
-    background: repeating-linear-gradient(
-        -45deg,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5) 3px,
-        rgba(0, 0, 0, 0) 3px,
-        rgba(0, 0, 0, 0) 6px
-        );
-}
-
-.testimonial-left {
-    width: 19.895833vw;
-    height: 19.895833vw;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(-45deg,#1fb3e6,#1fb3e6 2px,#00a8e2 2px,#00a8e2 4px);
-}
-
-.testimonial-left-img {
-    position: absolute;
-    padding: 0px 0 2.2vw 3.75vw;
-    bottom: 0;
-    height: 5vw;
-}
-
-/* Right section */
-.testimonial-right-bg {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 25.000000vw;
-    height: 25.000000vw;
-    background: repeating-linear-gradient(
-        -45deg,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5) 3px,
-        rgba(0, 0, 0, 0) 3px,
-        rgba(0, 0, 0, 0) 6px
-        );
-}
-
-.testimonial-right {
-    width: 19.895833vw;
-    height: 19.895833vw;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(-45deg,#1fb3e6,#1fb3e6 2px,#00a8e2 2px,#00a8e2 4px);
-}
-
-.testimonial-right-img {
-    position: absolute;
-    padding: 0 0 2.2vw 3.75vw;
-    bottom: 0;
-    height: 5vw;
-}
-
-
-
-
-@media (max-width: 1000px) {
-
-    .testimonial {
-        height: 35.15625vw;
-
-        background-size: cover;
-    }
-
-    .testimonial-left-bg {
-        width: 50.781250vw;
-        height: 49.479167vw;
-    }
-    .testimonial-right-bg {
-        width: 50.781250vw;
-        height: 49.479167vw;
-    }
-
-    .testimonial-right {
-        width: 40.364583vw;
-        height: 40.364583vw;
-    }
-
-    .testimonial-left {
-        width: 40.364583vw;
-        height: 40.364583vw;
-    }
-
-    .testimonial-quotation-marks {
-        width: 6.119792vw;
-        height: 5.859375vw;
-    }
-
-    .testimonial-quotation-marks img {
-        width: 2.473958vw;
-        height: 1.953125vw;
-    }
-
-    .testimonial-paragraph {
-        padding: 11.385vw 3.75vw 0 6.75vw;
-        font-size: 2.4vw;
-    }
-
-    .testimonial-paragraph strong{
-        font-size: 4.03vw;
-    }
-
-    .testimonial-right-img {
-        padding: 0 0 3.2vw 6.75vw;
-        height: 8vw;
-    }
-
-
-    .testimonial-left-img {
-        padding: 0 0 3.2vw 6.75vw;
-        height: 8vw;
-    }
-
-}
-
-
-@media (max-width: 640px) {
-    .testimonial {
-        width: 100%;
-        height: 126.562500vw;
-
-        background-size: cover;
-        position: relative;
-    }
-
-    .testimonial-right-bg {
-        width: 76.093750vw;
-        height: 74.375000vw;
-    }
-
-    .testimonial-right {
-        width: 60.312500vw;
-        height: 60.312500vw;
-    }
-
-    .testimonial-quotation-marks {
-        width: 9.062500vw;
-        height: 8.750000vw;
-    }
-
-    .testimonial-quotation-marks img {
-        width: 3.750000vw;
-        height: 2.968750vw;
-    }
-
-    .testimonial-paragraph {
-        padding: 9.385vw 3.75vw 0 9.75vw;
-        font-size: 2.7vw;
-    }
-
-    .testimonial-paragraph strong{
-        font-size: 4.094vw;
-    }
-
-    .testimonial-right-img {
-        padding: 0 0 5.2vw 9.75vw;
-        height: 10vw;
-    }
-
-    .testimonial-left-img {
-        padding: 0 0 5.2vw 9.75vw;
-        height: 10vw;
-    }
-
-}
-/* END Testimonial */
 
 .fa-plus-square{
     color: rgb(45, 189, 0);
@@ -488,6 +185,9 @@ font-weight: 900;
 }
 
 
+.GridImageContainer{
+    position:relative;
+}
 
 .GridImageContainer:hover > .IconContainer{
    opacity: 1;
@@ -497,50 +197,60 @@ font-weight: 900;
 .IconContainer{
     transition: all 0.3s;
     position: absolute; 
-    font-size: 26px;
-    width: $gridItemWidth_4k;
+    font-size: 1.3541vw;
+    width: 3.125vw;
     opacity: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(42, 49, 49, 0.4196078431372549);
 }
-.AddToGrid, .RemoveFromGrid{
+.AddToGrid, .RemoveFromGrid, .EditSpeakerGlobal{
     text-align: right;
     padding: 15px;
+    margin: 5px 0;
     text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.96);
     cursor: pointer;
     width: 53px;
-    float: right;
     transition: all 0.3s;
+
+}
+
+.EditSpeakerGlobal{
+    color: #f3b353;
 }
 
 .DeleteItem{
     padding: 15px;
-    color: #d83232;
+    color: #e45353;
     text-shadow: 1px 1px 1px rgba(14, 5, 5, 0.82);
     cursor: pointer;
     width: 53px;
-   float: left; 
    text-align: left; 
    transition: all 0.3s;
 }
 
-.AddToGrid:hover, .RemoveFromGrid:hover, .DeleteItem:hover{
+.AddToGrid:hover, .RemoveFromGrid:hover, .DeleteItem:hover, .EditSpeakerGlobal:hover{
     transform: scale(1.2,1.2);
 }
 
 @media (max-width: 1920px) {
     .IconContainer{
-        width: $gridItemWidth_1920;
+    font-size: 26px;
+    width: 60px;
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
     .IconContainer{
-        width: $gridItemWidth_1300;
+    font-size: 19px;
+    width: 60px;
     }
 }
 
 @media (max-width: 640px) {
     .IconContainer{
-        width: $gridItemWidth_640;
+    font-size: 27px;
+    width: 60px;
     }
 }
 

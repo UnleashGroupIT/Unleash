@@ -2400,6 +2400,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2457,6 +2458,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 });
             }).on('pnotify.cancel', function () {});
         },
+        editSpeaker: function editSpeaker(speakerId) {},
         filterSpeakers: function filterSpeakers(gridId, searchQuery) {
             var _this = this;
 
@@ -2538,6 +2540,25 @@ var render = function() {
                 [
                   _c("i", {
                     staticClass: "fa fa-plus-square",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "EditSpeakerGlobal",
+                  attrs: { title: "Edit speaker across events" },
+                  on: {
+                    click: function($event) {
+                      _vm.editSpeaker(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil-square-o",
                     attrs: { "aria-hidden": "true" }
                   })
                 ]
