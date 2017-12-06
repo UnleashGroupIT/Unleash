@@ -156,7 +156,9 @@ Route::get('/london/room-availability', function () {
   return view('london.pages.roompdf');
 });
 
-
+Route::get('/london/loyalty', function () {
+  return view('london.pages.loyalty');
+})->name('london.loyalty');
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
@@ -256,6 +258,10 @@ Route::get('/america/startups', 'StartupsController@index')->name('lasvegas.star
 Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about');
 
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
+
+Route::get('/america/tickets', function () {
+    return view('lasvegas.pages.tickets');
+})->name('lasvegas.tickets');
 
 //Route::get('/lasvegas/tickets', 'StaticPageController@about')->name('lasvegas.tickets');
 

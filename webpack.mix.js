@@ -63,6 +63,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/sponsors.scss', 'public/css/lasvegas')  
    .sass('resources/assets/scss/lasvegas/venue.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/startup.scss', 'public/css/lasvegas')
+   .sass('resources/assets/scss/lasvegas/tickets_old.scss', 'public/css/lasvegas')     
    .sass('resources/assets/scss/lasvegas/pdfs.scss', 'public/css/lasvegas')       
    .options({
          processCssUrls: false,
@@ -87,7 +88,8 @@ mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/sponsors.scss', 'public/css/london')  
    .sass('resources/assets/scss/london/venue.scss', 'public/css/london')
    .sass('resources/assets/scss/london/startup.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/travel.scss', 'public/css/london')   
+   .sass('resources/assets/scss/london/travel.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/loyalty.scss', 'public/css/london')      
    .sass('resources/assets/scss/london/tickets_old.scss', 'public/css/london')
    .sass('resources/assets/scss/london/pdfs.scss', 'public/css/london')     
    .options({
