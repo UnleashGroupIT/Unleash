@@ -283,6 +283,7 @@ var spVue = new Vue({
 
 	speakerEditRequest(speakerData){
 		this.editSpeakerData = speakerData;
+		this.imgPrev =  '/storage/speakers/'+speakerData.img_url+'?id='+this.generateHash(10);
 	    $('#edit_form_modal').modal({backdrop: 'static', keyboard: true});
 	},
 
@@ -293,6 +294,7 @@ var spVue = new Vue({
       // create a form
       const form = new FormData();
       form.append('speaker_img', this.selectedImage);
+      form.append('prefix', $event.target.prefix.value);      
       form.append('first_name', $event.target.first_name.value);
       form.append('last_name', $event.target.last_name.value);
       form.append('job_title', $event.target.job_title.value);
@@ -306,11 +308,9 @@ var spVue = new Vue({
             headers: { 'content-type': 'multipart/form-data' }
         }
 
-			axios.patch(`/api/speaker/${this.editSpeakerData.id}`, form, config)
+			axios.post(`/api/speaker/${this.editSpeakerData.id}?_method=PATCH`, form, config)
 			  .then(function (response) {
-			  	document.getElementById("EditSpeakerForm").reset();
-				document.getElementById("speakerPrevImg").src="";
-			  	document.getElementById("EditImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';	
+			  	
 			 		    new PNotify({
 					        title: 'Success!',
 					        text: 'Speaker Saved!',
@@ -331,11 +331,26 @@ var spVue = new Vue({
 
 		},	
 
+  generateHash(num){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < num; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+
+  }		
+
 	},
 
   mounted(){
     $(this.$refs.editmodal).on("hidden.bs.modal", function(){
     	document.getElementById("EditSpeakerForm").reset();
+    	document.getElementById("NewSpeakerForm").reset();
+    	this.selectedImage = '';
+    	this.imgPrev = '';
+    	this.speakerPrevImg = '';
     })
   },
 

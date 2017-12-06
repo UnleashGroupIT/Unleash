@@ -386,7 +386,7 @@ button {
                                                 <div class="imgUploadContainer">
                                                <input type="file" name="speaker_img" id="speaker_img" class="imgInput" @change="changeImage" accept="image/*">
                                                 <p id="EditImgAreaPlaceholder">@{{imgTempText}}</p>
-                                                <img id="speakerPrevImg" :src=" editSpeakerData.img_url ?'/storage/speakers/'+editSpeakerData.img_url : ''"/>
+                                                <img id="speakerPrevImg" :src="imgPrev"/>
                                                </div>                                                                                                 
 
                                             </div>

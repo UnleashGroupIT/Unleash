@@ -13,7 +13,7 @@
                                 <h3 class="SmallParagraph CompanyName">{{ speaker.company }}</h3>
                             </div>
 
-                            <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url">
+                            <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url+'?id='+generateHash(10)">
                         </div>
                     </li>
 
@@ -131,17 +131,27 @@ export default {
     getAllSpeakers(){
         axios.get(`/api/speakers`)
         .then(response => {
+        
           // JSON responses are automatically parsed.
-          this.speakers = response.data;
+          this.speakers = response.data.data;
 
         })
         .catch(e => {
           this.errors.push(e)
         })
 
-    }
+    },
 
+  generateHash(num){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+    for (var i = 0; i < num; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+
+  }
   },
 
   // Fetches posts when the component is created.

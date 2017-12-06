@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Speakers;
 use App\SpeakerGrid;
+use Illuminate\Support\Facades\Storage;
 
 class SpeakerController extends Controller
 {
@@ -29,25 +30,52 @@ class SpeakerController extends Controller
             $speakers->where('full_name','like', '%'.$request->search.'%');
         }        
        
-        return $speakers->get();
-
+       // return $speakers->get();
+        return $speakers->paginate(30);
     	
     }
     //store a speaker
     public function storeSpeaker(Request $request){
 
-       
+       $fullName = $request->first_name.' '.$request->last_name;
+
+           if(isset($fullName)){
+
+                $slug = htmlspecialchars(Controller::clrSTR($fullName));
+
+            }       
+
     	
-    	if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
-   			 $img_url = 'storage/'.$request->file('speaker_img')->store('speakers');
-	    } else {
-	    	$img_url = '';
-	    }
+        if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
+
+            switch ($request->file('speaker_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
+
+
+               $img_url = 'storage/public/'.$request->file('speaker_img')->storeAs(
+                'public/speakers', $slug.$extension
+                );
+
+             $img_url = $slug.$extension;
+        } else {
+            $img_url = '';
+        }       
+    
     	   
     $created =	Speakers::create([
 		'first_name' => $request->first_name,
 		'last_name' => $request->last_name, 
-		'full_name' => $request->first_name.' '.$request->last_name, 
+		'full_name' => $fullName, 
+        'slug' => $slug,
 		'job_title' => $request->job_title ?? null, 
 		'bio' => $request->bio ?? null, 
 		'company' => $request->company ?? null, 
@@ -75,13 +103,38 @@ class SpeakerController extends Controller
 
     	$speaker = Speakers::find($speakerId);
 
+        if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
+
+            switch ($request->file('speaker_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
+
+
+               $img_url = 'storage/public/'.$request->file('speaker_img')->storeAs(
+                'public/speakers', $speaker->slug.$extension
+                );
+
+             $speaker->img_url = $speaker->slug.$extension;
+        }       
+    
+
     	foreach ($request->all() as $field => $value) {
-    		if(isset($speaker->$field) || is_null($speaker->$field)){
+    		if((isset($speaker->$field)) && $speaker->$field != $value){
 				$speaker->$field = $value;
 
     		}
     		
     	}
+
+
 
     	$speaker->save();
 
