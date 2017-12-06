@@ -5,8 +5,8 @@
     "/admin/css/speakers.css": "/admin/css/speakers.css",
     "/admin/css/sponsors.css": "/admin/css/sponsors.css",
     "/admin/js/api.js": "/admin/js/api.js",
-    "/admin/js/sponsors.js": "/admin/js/sponsors.js",
     "/admin/js/speakers.js": "/admin/js/speakers.js",
+    "/admin/js/sponsors.js": "/admin/js/sponsors.js",
     "/admin/js/axiostest.js": "/admin/js/axiostest.js",
     "/admin/css/bootstrap.min.css": "/admin/css/bootstrap.min.css"
 }

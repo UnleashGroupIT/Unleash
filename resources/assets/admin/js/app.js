@@ -16,6 +16,7 @@ global.axios = require('axios');
 
 global.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -41,6 +42,8 @@ Vue.use(VueResource);
 
 global.PNotify = require('pnotify');
 
+var infiniteScroll =  require('vue-infinite-scroll');
+Vue.use(infiniteScroll)
 
 
 import 'pnotify/dist/pnotify.css';

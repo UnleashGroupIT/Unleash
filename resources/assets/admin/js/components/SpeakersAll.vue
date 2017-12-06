@@ -16,9 +16,8 @@
                             <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url+'?id='+generateHash(10)">
                         </div>
                     </li>
-
+ 
     </ul>                
-
 </template>
 
 <script>
@@ -121,7 +120,7 @@ export default {
         axios.get(`/api/speakers?${exludeG}&${searchQ}`)
         .then(response => {
           // JSON responses are automatically parsed.
-          this.speakers = response.data
+          this.speakers = response.data.data
         })
         .catch(e => {
           this.errors.push(e)
@@ -131,7 +130,7 @@ export default {
     getAllSpeakers(){
         axios.get(`/api/speakers`)
         .then(response => {
-        
+        //console.log(response.data);
           // JSON responses are automatically parsed.
           this.speakers = response.data.data;
 
@@ -151,7 +150,8 @@ export default {
 
     return text;
 
-  }
+  },
+
   },
 
   // Fetches posts when the component is created.
@@ -166,7 +166,7 @@ export default {
     // } catch (e) {
     //   this.errors.push(e)
     // }
-  }
+  },
 }
 </script>
 

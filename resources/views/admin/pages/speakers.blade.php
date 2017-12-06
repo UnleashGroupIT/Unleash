@@ -204,6 +204,11 @@ button {
 #fill_modal .modal-backdrop {
     opacity: 1;
 }
+
+#AllSpeakerSection{
+  min-height: 1000px;
+  margin-bottom: 100px;
+}
 </style>
 @endsection
   
@@ -216,7 +221,7 @@ button {
 
  </section>
 
- <section id="SpeakerGridSection">
+ <section>
     <div class="SectionHeader">
       <h2>@{{ selectedName }}</h2>
 
@@ -237,13 +242,15 @@ button {
                                     <h3 class="SmallParagraph CompanyName">@{{ speaker.company }}</h3>
                                 </div>
                                 <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url">
-                            </div>
+                            </div>              
             </li>
+
           </ul>
+
       </div> 
  </section>
 
-  <section id="AllSpeakerSection">
+  <section id="AllSpeakerSection" id="SpeakerGridSection" v-infinite-scroll="loadMore" infinite-scroll-disabled="speakerPageData.busy" infinite-scroll-distance="10" infinite-scroll-immediate-check="false">
     <div class="SectionHeader">
         <h2>All Speakers</h2>
     </div>
@@ -274,10 +281,12 @@ button {
 
     <speakers-all ref="allSpeakerGrid" @speakeradded="addToGrid($event)" @editspeakerdata="speakerEditRequest($event)"></speakers-all>
         
-   </div>
+   </div> 
  </section>
 
-
+<div>
+  moo
+</div>
 
                             <div id="form_modal" class="modal fade animated" data-backdrop="static" data-keyboard="true" role="dialog">
                                 <div class="modal-dialog">
@@ -400,8 +409,7 @@ button {
                                     </div>
                                 </div>
                             </div>
-                            <!-- form-modal end -->
-
+                            <!-- form-modal end --> 
 
 </div>
 
@@ -424,6 +432,7 @@ button {
 
 
 </style>
+
 @endsection
 
 
