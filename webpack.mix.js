@@ -43,11 +43,11 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/pdfs.scss', 'public/css/amsterdam')      
    .options({
          processCssUrls: false,
-           purifyCss: {
+           /*purifyCss: {
                   purifyOptions: {
                        whitelist: ['sponsor', 'come-in', 'visible', 'flip', 'play', 'flip-clock-active', 'minutes', 'hours', 'days', 'flip-clock-dot top', 'flip-clock-dot bottom', 'top', 'bottom', 'flip-clock-dot', 'flip-clock-label', 'flip-clock-wrapper', 'your-clock', 'flip-clock-divider', 'flip-clock-before', 'flip-clock-after']
                   }
-              }      
+              } */     
       })
    .version(); 
 
@@ -67,11 +67,11 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/pdfs.scss', 'public/css/lasvegas')       
    .options({
          processCssUrls: false,
-           purifyCss: {
+          /* purifyCss: {
                   purifyOptions: {
                        whitelist: ['sponsor', 'come-in', 'visible', 'flip', 'play', 'flip-clock-active', 'minutes', 'hours', 'days', 'flip-clock-dot top', 'flip-clock-dot bottom', 'top', 'bottom', 'flip-clock-dot', 'flip-clock-label', 'flip-clock-wrapper', 'your-clock', 'flip-clock-divider', 'flip-clock-before', 'flip-clock-after']
                   }
-              }      
+              } */     
       })
    .version();    
 
@@ -94,11 +94,11 @@ mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/pdfs.scss', 'public/css/london')     
    .options({
          processCssUrls: false,
-           purifyCss: {
+          /* purifyCss: {
                   purifyOptions: {
                        whitelist: ['sponsor', 'come-in', 'visible', 'flip', 'play', 'flip-clock-active', 'minutes', 'hours', 'days', 'flip-clock-dot top', 'flip-clock-dot bottom', 'top', 'bottom', 'flip-clock-dot', 'flip-clock-label', 'flip-clock-wrapper', 'your-clock', 'flip-clock-divider', 'flip-clock-before', 'flip-clock-after']
                   }
-              }      
+              } */     
       })
    .version();    
 

@@ -33,9 +33,6 @@
 
 
 @section('headercontent')
-<section class="header-title">
-			<h1><img src="{{ URL::asset('gfx/lasvegas/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
-		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<span>Lead Sponsors <strong>2017</strong></span>

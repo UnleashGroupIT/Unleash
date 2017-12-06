@@ -32,9 +32,6 @@
 
 
 @section('headercontent')
-<section class="header-title">
-			<h1><img src="{{ URL::asset('gfx/amsterdam/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
-		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->

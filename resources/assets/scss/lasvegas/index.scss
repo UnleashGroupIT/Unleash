@@ -155,6 +155,9 @@ section.one .wrp button {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  @media (min-width: 75em) {
+    margin-bottom: 2em;
+  }
   span{
     display: block;
     text-transform: uppercase;

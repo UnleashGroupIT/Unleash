@@ -1,34 +1,77 @@
 		<section id="header-menu">
-			<!--Logo-->
+			<div id="hamburger">
+	            <div id="mobile-logo">
+					<a href="/">
+						<h1>
+							<img src="{{ URL::asset('gfx/amsterdam/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+						</h1>
+					</a>
+				</div>	
+	        	<div class="bar-wrp">
+	        		<div class="bar"></div>
+	        	</div>
+        	</div>
+			<!--Menu-->
+			<nav id="desktop-menu">
+				<!--Logo-->
 				<div id="unleash-logo">
 					<a href="/">
 						<h1>
-							<img id="u-logo" src="{{ URL::asset('gfx/u-logo.png') }}" alt="Unleash logo" title="UNLEASH">
-							<img id="full-logo" src="{{ URL::asset('gfx/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+							<img id="full-logo" src="{{ URL::asset('gfx/amsterdam/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
 						</h1>
 					</a>
 				</div>
-			<!--Menu-->
-			<nav id="desktop-menu">
-				
+				<img id="x-btn" src="{{ URL::asset('gfx/x-btn.svg') }}" alt="X">
 				<ul class="menu-ul">
 					<li><a href="/" title="HOME">Home</a></li>
 					<li><a href="/" title="NEWS">News</a></li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more opened">
-						<a href="{{ route('ams.index') }}">Events</a>
+						<a class="more-a">Events</a>
 						<!--Double wrap to prevent hover interrupt-->
 						<div class="dropdownbox">
 							<div class="ul-wrp">
+								<h4>Where would you like to go?</h4>
 								<ul class="first-ul">
-									<li class="london">
-										<a href="{{ route('london.index') }}"><p>London</p> <span>|</span> 20-21 March 2018</a>
+									<li class="london" title="LONDON">
+										<a class="prevent" href="{{ route('london.index') }}">
+											<img src="{{ URL::asset('gfx/london-box.png') }}" alt="LONDON">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('london.index') }}">Show</a></li>
+											<li><a href="{{ route('london.index') }}#spkrgrd">Speakers</a></li>
+											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
+											<li><a href="{{ route('london.loyalty') }}">Loyalty</a></li>
+											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('london.travel') }}">Travel</a></li>
+											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
+										</ul>
 									</li>
-									<li class="lasvegas">
-										<a href="{{ route('lasvegas.index') }}"><p>America</p> <span>|</span> 15-16 May 2018</a>
+									<li class="lasvegas" title="LAS VEGAS">
+										<a class="prevent" href="{{ route('lasvegas.index') }}">
+											<img src="{{ URL::asset('gfx/vegas-box.png') }}" alt="LAS VEGAS">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
+											<li><a href="{{ route('lasvegas.index') }}#spkrgrd">Speakers</a></li>
+											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
+											<li><a href="{{ route('lasvegas.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
+										</ul>
 									</li>
-									<li class="amsterdam">
-										<a href="{{ route('ams.index') }}"><p>Amsterdam</p> <span>|</span> 23-24 October 2018</a>
+									<li class="amsterdam" title="AMSTERDAM">
+										<a class="prevent" href="{{ route('ams.index') }}">
+											<img src="{{ URL::asset('gfx/ams-box.png') }}" alt="AMSTERDAM">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('ams.index') }}">Show</a></li>
+											<li><a href="{{ route('ams.index') }}#spkrgrd">Speakers</a></li>
+											<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
+											<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
+										</ul>
 									</li>
 								</ul>
 							</div>
@@ -36,13 +79,6 @@
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
 					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
-				</ul>
-				<ul class="spec-menu amsterdam">
-					<li class="amsterdamcolor"><strong>Amsterdam</strong> 23-24 October 2018</li>
-					<li><a href="{{ route('ams.index') }}">SHOW</a></li>
-					<li><a href="{{ route('ams.speakers') }}">SPEAKERS</a></li>
-					<li><a href="{{ route('ams.sponsors') }}">OUR CLIENTS</a></li>
-					<li><a href="{{ route('ams.floorplan') }}">VENUE</a></li>
 				</ul>
 				<div class="social-booknow">
 					<div class="icos-wrp">
@@ -61,4 +97,11 @@
 				
 			</nav>
 		</section>
-		<!--Menu icon in lower sizes.-->
+		<nav id="sub" class="sub-menu">
+			<ul class="spec-menu amsterdam">
+				<li><a href="{{ route('ams.index') }}">SHOW</a></li>
+				<li><a href="{{ route('ams.speakers') }}">SPEAKERS</a></li>
+				<li><a href="{{ route('ams.sponsors') }}">SPONSORS</a></li>
+				<li><a href="{{ route('ams.floorplan') }}">VENUE</a></li>
+			</ul>
+		</nav>
