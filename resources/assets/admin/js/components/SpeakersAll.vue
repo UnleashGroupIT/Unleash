@@ -25,7 +25,14 @@
 export default {
   data() {
 	return {
-		speakers: []
+		speakers: [],
+    bottom: false,
+    speakerPageData: {
+        current_page: 0,
+        list: [],
+        busy: false
+      },
+   filtered: false   
 	};
   
   },
@@ -109,6 +116,8 @@ export default {
        let exludeG = '';
        let searchQ = '';
 
+       this.filtered = true;
+
         if(gridId){
            exludeG = `exlude=${gridId}`;
         } 
@@ -128,6 +137,7 @@ export default {
     },
 
     getAllSpeakers(){
+      this.filtered = false;
         axios.get(`/api/speakers`)
         .then(response => {
         //console.log(response.data);
@@ -152,11 +162,44 @@ export default {
 
   },
 
+    bottomVisible() {
+      const scrollY = window.scrollY
+      const visible = document.documentElement.clientHeight
+      const pageHeight = document.documentElement.scrollHeight
+      const bottomOfPage = visible + scrollY >= pageHeight
+      return bottomOfPage || pageHeight < visible
+    },  
+
+ loadMore() {
+
+if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
+     axios.get(`/api/speakers`, {
+        params: {
+          page: this.speakerPageData.current_page +1,
+        },
+      }).then(({ data }) => {
+        if (data.data.length) {
+          this.speakerPageData.current_page = data.current_page;  
+          this.speakerPageData.max = data.last_page;
+          this.speakers = this.speakers.concat(data.data);
+
+        } 
+      }); 
+
+}
+
+  },  
+
   },
 
   // Fetches posts when the component is created.
   created() {
-      this.getAllSpeakers();
+   window.addEventListener('scroll', () => {
+      this.bottom = this.bottomVisible()
+    })
+    this.loadMore();
+
+    //  this.getAllSpeakers();
 
     // async / await version (created() becomes async created())
     //
@@ -167,6 +210,14 @@ export default {
     //   this.errors.push(e)
     // }
   },
+
+  watch: {
+    bottom(bottom) {
+      if (bottom && this.filtered == false) {
+        this.loadMore()
+      }
+    }
+  }  
 }
 </script>
 

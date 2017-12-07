@@ -42,8 +42,6 @@ Vue.use(VueResource);
 
 global.PNotify = require('pnotify');
 
-var infiniteScroll =  require('vue-infinite-scroll');
-Vue.use(infiniteScroll)
 
 
 import 'pnotify/dist/pnotify.css';

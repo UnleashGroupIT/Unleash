@@ -9,6 +9,12 @@ use App\Events;
 
 class SpeakerPageController extends Controller
 {
+
+      public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
       /* -- UI Function --*/   
 
    public function speakerUI(Request $request){

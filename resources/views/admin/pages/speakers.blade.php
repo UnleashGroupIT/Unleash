@@ -209,6 +209,50 @@ button {
   min-height: 1000px;
   margin-bottom: 100px;
 }
+
+.infinite-loading-container[_v-34d8cf3a] {
+    clear: both;
+    text-align: center;
+}
+.infinite-loading-container [class^=loading-][_v-34d8cf3a] {
+    display: inline-block;
+    margin: 15px 0;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+
+ }
+ .loading-default[_v-34d8cf3a]:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: #999;
+    border-radius: 50%;
+    }   
+.loading-default[_v-34d8cf3a] {
+    position: relative;
+    border: 1px solid #999;
+    -webkit-animation: ease loading-rotating 1.5s infinite;
+    animation: ease loading-rotating 1.5s infinite;
+}
+@keyframes loading-rotating {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+  }
+  100% {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+  }
+}    
 </style>
 @endsection
   
@@ -250,7 +294,7 @@ button {
       </div> 
  </section>
 
-  <section id="AllSpeakerSection" id="SpeakerGridSection" v-infinite-scroll="loadMore" infinite-scroll-disabled="speakerPageData.busy" infinite-scroll-distance="10" infinite-scroll-immediate-check="false">
+  <section id="AllSpeakerSection">
     <div class="SectionHeader">
         <h2>All Speakers</h2>
     </div>
@@ -280,13 +324,12 @@ button {
 
 
     <speakers-all ref="allSpeakerGrid" @speakeradded="addToGrid($event)" @editspeakerdata="speakerEditRequest($event)"></speakers-all>
-        
+      
+<div class="infinite-loading-container" _v-34d8cf3a=""> <div _v-34d8cf3a="" style=""> <i _v-34d8cf3a="" class="loading-default"></i> </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No results :( </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No more data :) </div> </div>
+
    </div> 
  </section>
 
-<div>
-  moo
-</div>
 
                             <div id="form_modal" class="modal fade animated" data-backdrop="static" data-keyboard="true" role="dialog">
                                 <div class="modal-dialog">

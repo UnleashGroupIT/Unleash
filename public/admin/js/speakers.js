@@ -2139,12 +2139,7 @@ var spVue = new Vue({
     selectedImage: null,
     image: null,
     imgPrev: '',
-    imgTempText: 'Drag your files here or click in this area.',
-    speakerPageData: {
-      current_page: 0,
-      list: [],
-      busy: false
-    }
+    imgTempText: 'Drag your files here or click in this area.'
 
   },
 
@@ -2370,30 +2365,6 @@ var spVue = new Vue({
       for (var i = 0; i < num; i++) {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
       }return text;
-    },
-    loadMore: function loadMore() {
-      var _this3 = this;
-
-      this.speakerPageData.busy = true;
-      axios.get('/api/speakers', {
-        params: {
-          page: this.speakerPageData.current_page + 1
-        }
-      }).then(function (_ref) {
-        var data = _ref.data;
-
-        if (data.data.length) {
-          _this3.speakerPageData.current_page = data.current_page;
-          _this3.speakerPageData.max = data.last_page;
-          _this3.speakerPageData.list = _this3.speakerPageData.list.concat(data.data);
-          _this3.speakerPageData.busy = false;
-          console.log(_this3.speakerPageData.list);
-          //  if (this.speakerPageData.current_page === this.speakerPageData.max + 1) {
-          if (_this3.speakerPageData.current_page === 5) {}
-        } else {
-          _this3.speakerPageData.busy = false;
-        }
-      });
     }
   },
 
@@ -2491,7 +2462,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      speakers: []
+      speakers: [],
+      bottom: false,
+      speakerPageData: {
+        current_page: 0,
+        list: [],
+        busy: false
+      },
+      filtered: false
     };
   },
 
@@ -2560,6 +2538,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var exludeG = '';
       var searchQ = '';
 
+      this.filtered = true;
+
       if (gridId) {
         exludeG = 'exlude=' + gridId;
       }
@@ -2578,6 +2558,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getAllSpeakers: function getAllSpeakers() {
       var _this3 = this;
 
+      this.filtered = false;
       axios.get('/api/speakers').then(function (response) {
         //console.log(response.data);
         // JSON responses are automatically parsed.
@@ -2593,12 +2574,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       for (var i = 0; i < num; i++) {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
       }return text;
+    },
+    bottomVisible: function bottomVisible() {
+      var scrollY = window.scrollY;
+      var visible = document.documentElement.clientHeight;
+      var pageHeight = document.documentElement.scrollHeight;
+      var bottomOfPage = visible + scrollY >= pageHeight;
+      return bottomOfPage || pageHeight < visible;
+    },
+    loadMore: function loadMore() {
+      var _this4 = this;
+
+      if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
+        axios.get('/api/speakers', {
+          params: {
+            page: this.speakerPageData.current_page + 1
+          }
+        }).then(function (_ref) {
+          var data = _ref.data;
+
+          if (data.data.length) {
+            _this4.speakerPageData.current_page = data.current_page;
+            _this4.speakerPageData.max = data.last_page;
+            _this4.speakers = _this4.speakers.concat(data.data);
+          }
+        });
+      }
     }
   },
 
   // Fetches posts when the component is created.
   created: function created() {
-    this.getAllSpeakers();
+    var _this5 = this;
+
+    window.addEventListener('scroll', function () {
+      _this5.bottom = _this5.bottomVisible();
+    });
+    this.loadMore();
+
+    //  this.getAllSpeakers();
 
     // async / await version (created() becomes async created())
     //
@@ -2608,6 +2622,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     // } catch (e) {
     //   this.errors.push(e)
     // }
+  },
+
+
+  watch: {
+    bottom: function bottom(_bottom) {
+      if (_bottom && this.filtered == false) {
+        this.loadMore();
+      }
+    }
   }
 });
 

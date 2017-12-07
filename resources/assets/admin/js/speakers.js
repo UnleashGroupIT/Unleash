@@ -84,11 +84,7 @@ var spVue = new Vue({
     	image: null,
     	imgPrev: '',
     	imgTempText: 'Drag your files here or click in this area.',
-    	speakerPageData: {
-    		current_page: 0,
-    		list: [],
-    		busy: false
-    	}		
+		
 
 	},
 
@@ -346,31 +342,6 @@ var spVue = new Vue({
     return text;
 
   }, 
-
- loadMore() {
-
- 	this.speakerPageData.busy = true;
-     axios.get(`/api/speakers`, {
-        params: {
-          page: this.speakerPageData.current_page +1,
-        },
-      }).then(({ data }) => {
-        if (data.data.length) {
-          this.speakerPageData.current_page = data.current_page;	
-          this.speakerPageData.max = data.last_page;
-          this.speakerPageData.list = this.speakerPageData.list.concat(data.data);
-          this.speakerPageData.busy = false;
-          console.log(this.speakerPageData.list);
-        //  if (this.speakerPageData.current_page === this.speakerPageData.max + 1) {
-        	if (this.speakerPageData.current_page === 5) {
-          
-          }
-        } else {
-         this.speakerPageData.busy = false;
-        }
-      }); 
-
-  },  
 
 },
 
