@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam') 
 .sass('resources/assets/scss/london/flipclock.scss', 'public/css/london')
+.sass('resources/assets/scss/404.scss', 'public/css')
 .sass('resources/assets/scss/lasvegas/flipclock.scss', 'public/css/lasvegas')
    .options({
          processCssUrls: false,
