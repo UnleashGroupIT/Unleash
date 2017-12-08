@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/adminsite/') }}">
+                      <img id="UnleashLogo" src="{{ asset('/admin/gfx/unleash_rgb_black.svg') }}">
                     </a>
                 </div>
 

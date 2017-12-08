@@ -1,16 +1,17 @@
 <template>
       <div id="GridController">
-        
+    
+        <div id="NewGridContainer">
+            <select v-model="seletedevent" name="EventSelect">
+              <option v-for="eventdata in events" v-bind:value="eventdata.event_code">
+                {{ eventdata.event_name }}
+              </option>
+            </select>
+            -
+            <input type="text" name="NewGrid" v-model="NewGridName">
 
-        <select v-model="seletedevent" name="EventSelect">
-          <option v-for="eventdata in events" v-bind:value="eventdata.event_code">
-            {{ eventdata.event_name }}
-          </option>
-        </select>
-        -
-        <input type="text" name="NewGrid" v-model="NewGridName">
-
-        <button @click="saveGrid()">Add Grid</button>
+            <button class="btn-xs btn-info" @click="saveGrid()">Create</button>
+        </div>
 
     <div id="GridSelectContainer">
         <select name="GridSelect" id="SelectSpeakerGrid" v-model="selectedGrid" v-on:change="prepareGrid">
@@ -48,6 +49,9 @@ export default {
   methods: {
 
     prepareGrid(event){
+      jQuery( "#CustomSpeakerGrid" ).fadeOut();
+      jQuery('#CustomSpeakerLoading').fadeIn();
+       
          if(event){
             let options = event.target.options;
             let selectedOption = options[options.selectedIndex];

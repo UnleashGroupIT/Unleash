@@ -211,6 +211,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -229,6 +230,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     prepareGrid: function prepareGrid(event) {
+      jQuery("#CustomSpeakerGrid").fadeOut();
+      jQuery('#CustomSpeakerLoading').fadeIn();
+
       if (event) {
         var options = event.target.options;
         var selectedOption = options[options.selectedIndex];
@@ -543,75 +547,80 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "GridController" } }, [
-    _c(
-      "select",
-      {
+    _c("div", { attrs: { id: "NewGridContainer" } }, [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.seletedevent,
+              expression: "seletedevent"
+            }
+          ],
+          attrs: { name: "EventSelect" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.seletedevent = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.events, function(eventdata) {
+          return _c("option", { domProps: { value: eventdata.event_code } }, [
+            _vm._v(
+              "\n                " +
+                _vm._s(eventdata.event_name) +
+                "\n              "
+            )
+          ])
+        })
+      ),
+      _vm._v("\n            -\n            "),
+      _c("input", {
         directives: [
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.seletedevent,
-            expression: "seletedevent"
+            value: _vm.NewGridName,
+            expression: "NewGridName"
           }
         ],
-        attrs: { name: "EventSelect" },
+        attrs: { type: "text", name: "NewGrid" },
+        domProps: { value: _vm.NewGridName },
         on: {
-          change: function($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function(o) {
-                return o.selected
-              })
-              .map(function(o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.seletedevent = $event.target.multiple
-              ? $$selectedVal
-              : $$selectedVal[0]
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.NewGridName = $event.target.value
           }
         }
-      },
-      _vm._l(_vm.events, function(eventdata) {
-        return _c("option", { domProps: { value: eventdata.event_code } }, [
-          _vm._v(
-            "\n            " + _vm._s(eventdata.event_name) + "\n          "
-          )
-        ])
-      })
-    ),
-    _vm._v("\n        -\n        "),
-    _c("input", {
-      directives: [
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
         {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.NewGridName,
-          expression: "NewGridName"
-        }
-      ],
-      attrs: { type: "text", name: "NewGrid" },
-      domProps: { value: _vm.NewGridName },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
+          staticClass: "btn-xs btn-info",
+          on: {
+            click: function($event) {
+              _vm.saveGrid()
+            }
           }
-          _vm.NewGridName = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        on: {
-          click: function($event) {
-            _vm.saveGrid()
-          }
-        }
-      },
-      [_vm._v("Add Grid")]
-    ),
+        },
+        [_vm._v("Create")]
+      )
+    ]),
     _vm._v(" "),
     _c("div", { attrs: { id: "GridSelectContainer" } }, [
       _c(

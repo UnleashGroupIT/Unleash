@@ -26,7 +26,9 @@ mix.js('resources/assets/admin/js/sponsors.js', 'js');
 mix.js('resources/assets/admin/js/axiostest.js', 'js');
 
 
-mix.copy('resources/assets/admin/scss/bootstrap.min.css', 'css/bootstrap.min.css');
+mix.copy('resources/assets/admin/scss/bootstrap.min.css', 'public/admin/css/bootstrap.min.css');
+
+mix.copy('resources/assets/admin/gfx', 'public/admin/gfx', false); // Don't flatten!   
 
 
    

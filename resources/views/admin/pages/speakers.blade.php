@@ -115,7 +115,7 @@ background-color: rgba(0, 0, 0, 0.82);
 
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 760px;
     margin: 30px auto; }
   .modal-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
@@ -253,6 +253,77 @@ button {
       transform: rotate(1turn);
   }
 }    
+#NewGridContainer{
+  display:none;
+    margin: 0px auto 30px auto;
+    background-color: #00000012;
+    padding: 50px;
+    width: 100%;
+    max-width: 500px; 
+    -webkit-box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);
+    box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);    
+}
+
+
+#NewGridHeadline{
+    background-color: #000000ba;
+    width: 100%;
+    max-width: 320px;
+    margin: 25px auto;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#GridSection{
+  background-color: #5f41160d;
+    padding: 50px 0 85px 0;
+    -webkit-box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+}
+
+#CustomSpeakerGrid{
+    display:none;
+    -webkit-box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px;
+
+}
+
+
+#CustomSpeakerLoading{
+  display:none;
+}
+.CustomSpeakerContainer{
+  min-height: 0;
+}
+.form-control{
+    margin: 10px 0px;
+    display: inline-block;
+    width: 43%;
+}
+#bio {
+    width: 87%;
+    height: 90px;
+    border: 1px solid #0000002e;
+    margin-bottom: 25px;
+}
+#first_name{
+    width: 28%;
+}
+#last_name{
+  width: 43%;
+}
+#prefix{
+    width: 15%;
+}
 </style>
 @endsection
   
@@ -260,9 +331,13 @@ button {
 
 <div id="PageContainer">
  <section id="GridSection">
- <grid-controller v-bind:gridtype="GridType" @griddisplay="showGrid($event)"></grid-controller>
+  <div id="GridInnerContainer">
 
+      <h3 id="NewGridHeadline"><i class="fa fa-plus-circle" aria-hidden="true"></i> Create New Speaker Grid</h3> 
 
+    <grid-controller v-bind:gridtype="GridType" @griddisplay="showGrid($event)"></grid-controller>
+
+  <div>
  </section>
 
  <section>
@@ -273,7 +348,9 @@ button {
     
   {{-- This is the selected grid's template  --}}  
 
-    <div class="GridContainer">
+<div class="infinite-loading-container" id="CustomSpeakerLoading" _v-34d8cf3a=""> <div _v-34d8cf3a="" style=""> <i _v-34d8cf3a="" class="loading-default"></i> </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No results :( </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No more data :) </div> </div>
+
+    <div class="GridContainer CustomSpeakerContainer">
         <ul class="SpeakersGrid" id="CustomSpeakerGrid" v-sortable="sortableOptions">
              <li v-for="speaker in speakers" :id=speaker.id :data-speakerid=speaker.id class="sortable">
                             <div class="GridImageContainer">
@@ -342,6 +419,9 @@ button {
                                             <form id="NewSpeakerForm" role="form" v-on:submit.prevent="newSpeakerSubmit">
                                             <div class="modal-body">
 
+                                                <label class="sr-only" for="suffix">Suffix</label>
+                                                <input type="text" name="suffix" id="prefix" placeholder="Suffix" class="form-control m-t-10">                                              
+
                                                 <label class="sr-only" for="first_name">First Name</label>
                                                 <input type="text" required name="first_name" id="first_name" placeholder="First Name" class="form-control m-t-10">
 
@@ -352,10 +432,10 @@ button {
                                                 <label class="sr-only" for="job_title">Job Title</label>
                                                 <input type="text" name="job_title" id="job_title" placeholder="Job Title" class="form-control m-t-10">
 
-                                                <textarea name="bio" id="bio" placeholder="Short Bio"></textarea>
-
                                                 <label class="sr-only" for="company">Company</label>
                                                 <input type="text" name="company" id="company" placeholder="Company Name" class="form-control m-t-10"> 
+
+
 
                                                 <label class="sr-only" for="website">Website</label>
                                                 <input type="text" name="website" id="website" placeholder="Website URL" class="form-control m-t-10"> 
@@ -369,6 +449,10 @@ button {
 
                                                 <label class="sr-only" for="linkedin">Linkedin</label>
                                                 <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin URL" class="form-control m-t-10">
+
+                                                <br />
+                                                <textarea name="bio" id="bio" placeholder="Short Bio"></textarea>
+                                                <br />
 
                                                 <div class="imgUploadContainer">
                                                <input type="file" name="speaker_img" id="speaker_img" class="imgInput" @change="changeImage" accept="image/*">
@@ -402,7 +486,7 @@ button {
                                             <form id="EditSpeakerForm" role="form" v-on:submit.prevent="editSpeaker">
                                             <div class="modal-body">
 
-                                                <label class="sr-only" for="first_name">Suffix</label>
+                                                <label class="sr-only" for="suffix">Suffix</label>
                                                 <input type="text" name="suffix" :value="editSpeakerData.prefix ? editSpeakerData.prefix : ''" id="prefix" placeholder="Suffix" class="form-control m-t-10">
 
                                                 <label class="sr-only" for="first_name">First Name</label>
@@ -415,12 +499,9 @@ button {
                                                 <label class="sr-only" for="job_title">Job Title</label>
                                                 <input type="text" name="job_title" id="job_title" :value="editSpeakerData.job_title ? editSpeakerData.job_title : ''" placeholder="Job Title" class="form-control m-t-10">
 
-                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-if="editSpeakerData.bio">@{{editSpeakerData.bio}}</textarea>
-
-                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-else></textarea>
-
                                                 <label class="sr-only" for="company">Company</label>
                                                 <input type="text" name="company" id="company" :value="editSpeakerData.company ? editSpeakerData.company : ''" placeholder="Company Name" class="form-control m-t-10"> 
+
 
                                                 <label class="sr-only" for="website">Website</label>
                                                 <input type="text" name="website" id="website" :value="editSpeakerData.website ? editSpeakerData.website : ''" placeholder="Website URL" class="form-control m-t-10"> 
@@ -434,6 +515,13 @@ button {
 
                                                 <label class="sr-only" for="linkedin">Linkedin</label>
                                                 <input type="text" name="linkedin" id="linkedin" :value="editSpeakerData.linkedin ? editSpeakerData.linkedin : ''" placeholder="Linkedin URL" class="form-control m-t-10">
+
+                                                <br />
+
+                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-if="editSpeakerData.bio">@{{editSpeakerData.bio}}</textarea>
+
+                                                <textarea name="bio" id="bio" placeholder="Short Bio" v-else></textarea>
+                                                <br />                                                
 
                                                 <div class="imgUploadContainer">
                                                <input type="file" name="speaker_img" id="speaker_img" class="imgInput" @change="changeImage" accept="image/*">
@@ -476,11 +564,21 @@ button {
 
 </style>
 
+
 @endsection
 
 
 @section('customscripts')
    <script src="{{ mix('js/app.js', '/admin') }}" type="text/javascript"></script>
   <script src="{{ mix('js/speakers.js', '/admin') }}" type="text/javascript"></script>
+
+<script>
+jQuery( "#NewGridHeadline" ).click(function() {
+  jQuery( "#NewGridContainer" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+});
+
+</script>  
 @endsection
 

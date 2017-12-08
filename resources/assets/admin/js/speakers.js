@@ -108,6 +108,14 @@ var spVue = new Vue({
 	       this.speakerAll = this.$refs.allSpeakerGrid;
 	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
 
+			setTimeout(function(){ 
+				     jQuery('#CustomSpeakerLoading').fadeOut();
+				     jQuery( "#CustomSpeakerGrid" ).fadeIn();
+			 		/* jQuery( "#CustomSpeakerGrid" ).slideToggle( "slow", function() {
+			 
+			  });*/
+			 }, 2000);
+
 		},
 
 	//Attach a speaker to the selected grid
