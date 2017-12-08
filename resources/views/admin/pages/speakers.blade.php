@@ -5,11 +5,11 @@
 
 @section('customcss')
 <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ mix('css/bootstrap.min.css', '/admin') }}" rel="stylesheet" type="text/css">
   
  
-  <link href="{{ URL::asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('admin/css/speakers.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ mix('css/style.css', '/admin') }}" rel="stylesheet">
+  <link href="{{ mix('css/speakers.css', '/admin') }}" rel="stylesheet" type="text/css">
 
   <style>
 .modal-open {
@@ -480,7 +480,7 @@ button {
 
 
 @section('customscripts')
-  <script src="{{ mix('/admin/js/app.js') }}" type="text/javascript"></script>
-  <script src="{{ mix('/admin/js/speakers.js') }}" type="text/javascript"></script>
+   <script src="{{ mix('js/app.js', '/admin') }}" type="text/javascript"></script>
+  <script src="{{ mix('js/speakers.js', '/admin') }}" type="text/javascript"></script>
 @endsection
 

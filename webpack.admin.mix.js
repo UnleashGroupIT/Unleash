@@ -1,4 +1,5 @@
-let mix = require('laravel-mix');
+let mix = require('laravel-mix').setPublicPath(path.normalize('public/admin'));
+
 
 /*
  |--------------------------------------------------------------------------
@@ -12,20 +13,20 @@ let mix = require('laravel-mix');
  */
 
 
- mix.js('resources/assets/admin/js/app.js', 'public/admin/js')
-   .js('resources/assets/admin/js/api.js', 'public/admin/js')
-   .sass('resources/assets/admin/scss/app.scss', 'public/admin/css');
+ mix.js('resources/assets/admin/js/app.js', 'js')
+   .js('resources/assets/admin/js/api.js', 'js')
+   .sass('resources/assets/admin/scss/app.scss', 'css');
 
-mix.sass('resources/assets/admin/scss/style.scss', 'public/admin/css');   
-mix.sass('resources/assets/admin/scss/speakers.scss', 'public/admin/css'); 
-mix.sass('resources/assets/admin/scss/sponsors.scss', 'public/admin/css'); 
+mix.sass('resources/assets/admin/scss/style.scss', 'css');   
+mix.sass('resources/assets/admin/scss/speakers.scss', 'css'); 
+mix.sass('resources/assets/admin/scss/sponsors.scss', 'css'); 
    
-mix.js('resources/assets/admin/js/speakers.js', 'public/admin/js');
-mix.js('resources/assets/admin/js/sponsors.js', 'public/admin/js');
-mix.js('resources/assets/admin/js/axiostest.js', 'public/admin/js');
+mix.js('resources/assets/admin/js/speakers.js', 'js');
+mix.js('resources/assets/admin/js/sponsors.js', 'js');
+mix.js('resources/assets/admin/js/axiostest.js', 'js');
 
 
-mix.copy('resources/assets/admin/scss/bootstrap.min.css', 'public/admin/css/bootstrap.min.css');
+mix.copy('resources/assets/admin/scss/bootstrap.min.css', 'css/bootstrap.min.css');
 
 
    
