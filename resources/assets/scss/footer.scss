@@ -15,6 +15,32 @@ footer {
     @media (min-width: 130em) {
       footer .footer-logo img {
         width: 8.9vw; } }
+
+    .wrp {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+@media (min-width: 120em) {
+  .wrp {
+    max-width: 53vw;
+  }
+}
+
+section.one .wrp {
+  padding: 2em;
+  padding-bottom: 3em;
+  color: #fff;
+}
+
+@media (min-width: 40em) {
+  section.one .wrp {
+    padding: 4em 3em;
+  }
+}
+
+
   footer .wrp {
     display: flex;
     flex-wrap: wrap;

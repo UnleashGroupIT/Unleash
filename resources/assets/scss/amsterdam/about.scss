@@ -2,6 +2,7 @@
 @import '../common';
 @import '../footer';
 @import '../menu';
+@import '../inner-menu';
 @import '../popup';
 
 body {
@@ -28,7 +29,7 @@ header {
   color: #fff;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  background: url("../../gfx/amsterdam/about-mobile-bg.jpg") no-repeat #000;
+  background: url("../../gfx/about-mobile-bg.jpg") no-repeat #000;
   background-size: cover;
   background-position: center;
 }
@@ -36,7 +37,7 @@ header {
 @media (min-width: 40em) {
   header {
     height: 55vh;
-    background: url("../../gfx/amsterdam/about-bg.jpg") no-repeat #000;
+    background: url("../../gfx/about-bg.jpg") no-repeat #000;
     background-size: cover;
     background-position: left;
   }

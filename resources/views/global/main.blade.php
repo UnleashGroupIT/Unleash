@@ -39,9 +39,6 @@
 
 	<title>Unleash Conference | @yield('title')</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/reset.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/menu.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popup.css') }}">
 	 @yield('headercss')
 	 
      @include('amsterdam.components.fixedjs')
@@ -70,9 +67,7 @@
 
 	 @include('amsterdam.components.menu')
 		<!--Menu icon in lower sizes.-->
-        <div id="hamburger">
-            <div class="bar"></div>
-        </div>
+
  	@yield('headercontent')		
 
 	<!--Mainsponsors END-->

@@ -2,6 +2,7 @@
 
 @section('meta')
 		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
+<meta name="google-site-verification" content="n0SN8rSlfzJtkCBmSexzIG6dT59FadZc03C1eYF1qeg" />
  
          <!-- Open Graph data -->
         <meta property="og:site_name" content="UNLEASH - London"/>
@@ -33,9 +34,6 @@
 
 
 @section('headercontent')
-<section class="header-title">
-			<h1><img src="{{ URL::asset('gfx/london/title-logo.png') }}" alt="Unleash" title="HOME"></h1>
-		</section>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<span>Lead Sponsors <strong>2018</strong></span>
@@ -45,6 +43,7 @@
 					<div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img id="ach" src="{{ URL::asset('gfx/london/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
 			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
                     <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                    <div><a href="https://www.cut-e.com/assessment-solutions/" target="_blank" title="Cut-e"><img id="cute" src="{{ URL::asset('gfx/london/header/sponsors/cute.svg') }}" alt="Cut-e"></a></div>
                     <div><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" id="ins" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
                     <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
                     <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
@@ -60,7 +59,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>UNLEASH is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
-			<button class="green-btn popup" data-popupdata="booknow">Book Now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -134,7 +133,7 @@
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -224,7 +223,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world’s leading and fastest growing show on the future of work. Now is the time face the challenge of change and let your people loose to power your organization into the next decade of the 21st Century.</p>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 @endsection

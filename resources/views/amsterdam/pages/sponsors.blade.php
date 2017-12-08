@@ -39,10 +39,13 @@
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<button class="blue-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
 				<p>UNLEASH sponsors represent the Who’s Who of the world’s leading solution and service providers offering the most innovative and disruptive technologies to be found anywhere. Our sponsors have the solutions that are shaping the Future of Work and driving rapid transformation inside the the 21st century’s most forward thinking organizations. At UNLEASH the show is a happening place for optimism and wonder where inspiration bubbles, and where attendees can discuss and identify the latest technologies and how to implement them for the greatest potential impact.</p>
+				<button class="blue-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
 			</div>
 		</div>
+	</section>
+	<section class="divider">
+		<h4>Our previous sponsors of 2017</h4>
 	</section>
 	<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
@@ -146,7 +149,7 @@
 			@endforeach	
 		</div>	
 		
-		<h2> Startup</h2>
+		{{--<h2> Startup</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 8)
@@ -154,7 +157,7 @@
 				 @include('amsterdam.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
-			@endforeach					
+			@endforeach	--}}				
 
 		</div>												
 	</section>

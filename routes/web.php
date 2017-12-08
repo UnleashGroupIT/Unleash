@@ -1,5 +1,5 @@
 <?php
-
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +33,7 @@ Route::get('/about-prev', function () {
 })->name('ams.about-prev');
 
 
+
 Route::get('/wpredirect', 'StaticPageController@wpredirect');
 	  
 /*********** Amsterdam ************/
@@ -43,15 +44,36 @@ Route::get('/amsterdam/index', 'MainPageController@index')->name('ams.index');
 
 Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speakers');
 
-Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
+//Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
 
-Route::get('/amsterdam/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('ams.speaker');
+//Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
 Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
 
-Route::get('/amsterdam/sponsor', 'SponsorsController@index');
+Route::get('/amsterdam/sponsor', function () {
+    return redirect('/amsterdam/sponsors');
+});
+
+//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
+
+/*Route::get('/amsterdam/sponsors', function () {
+    return redirect('/amsterdam/index#spnsrgrd');
+});*/
+
+
+
+Route::get('/amsterdam/speaker', function () {
+    return redirect('/amsterdam/index#spkrgrd');
+});
+
+Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
+
+Route::get('/amsterdam/speakers', function () {
+    return redirect('/amsterdam/index#spkrgrd');
+})->name('ams.speakers');
+
 
 Route::get('/amsterdam/startups', 'StartupsController@index')->name('ams.startup');
 
@@ -91,6 +113,9 @@ Route::get('/amsterdam/thankyou', function(){
 
 //Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
 
+Route::get('/amsterdam/terms', function () {
+    return redirect('/terms');
+});
 
 /*********** London ************/
 
@@ -118,6 +143,11 @@ Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
 });
 
+Route::get('/london/sponsor-alacarte', function () {
+  return view('london.pages.sponsorshipalacarte');
+});
+
+
 Route::get('/london/delegate-brochure', function () {
   return view('london.pages.delegatepdf');
 });
@@ -126,9 +156,11 @@ Route::get('/london/room-availability', function () {
   return view('london.pages.roompdf');
 });
 
+Route::get('/london/loyalty', function () {
+  return view('london.pages.loyalty');
+})->name('london.loyalty');
 
-
-Route::get('/london/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('london.speaker');
+Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
 Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
 
@@ -156,10 +188,25 @@ Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
 
 Route::get('/london/tickets', function(){
-	return view('london.pages.tickets');
+
+	$now = Carbon::now();
+	
+	$early = Carbon::create(2017, 11, 30, 23, 0, 0);
+
+	if ($now->gt($early)){
+		return view('london.pages.tickets_earlybird');
+	
+	} else {
+		return view('london.pages.tickets');
+	}
+
+	
 })->name('london.tickets');
 
 
+Route::get('/london/terms', function () {
+    return redirect('/terms');
+});
 /*********** America ************/
 
 Route::get('/lasvegas/', function () {
@@ -188,7 +235,7 @@ Route::get('/america/speakers', function () {
     return redirect('/america/index#spkrgrd');
 })->name('lasvegas.speakers');
 
-Route::get('/america/speaker/{speakerSlug}', 'SpeakersController@speaker')->name('lasvegas.speaker');
+Route::get('/america/speaker/{speakerId}', 'SpeakersController@speaker')->name('lasvegas.speaker');
 
 //Route::get('/america/sponsors', 'SponsorsController@index')->name('lasvegas.sponsors');
 
@@ -212,10 +259,18 @@ Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about
 
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
 
+Route::get('/america/tickets', function () {
+    return view('lasvegas.pages.tickets');
+})->name('lasvegas.tickets');
+
 //Route::get('/lasvegas/tickets', 'StaticPageController@about')->name('lasvegas.tickets');
 
 Route::get('/america/sponsor-pdf', function () {
   return view('lasvegas.pages.sponsorshippdf');
+});
+
+Route::get('/america/terms', function () {
+    return redirect('/terms');
 });
 
 /******** Admin Routes **********/

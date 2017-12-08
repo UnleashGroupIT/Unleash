@@ -73,6 +73,9 @@ section.one .wrp {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  @media (min-width: 75em) {
+    margin-bottom: 2em;
+  }
   span{
     display: block;
     text-transform: uppercase;
@@ -143,6 +146,15 @@ section.one.mainsponsors {
           width: 7vw;
         }
       }
+      #cross{
+        width: 145px;
+        @media (min-width: 55em) {
+          width: 155px;
+        }
+        @media (min-width: 125em) {
+          width: 8vw;
+        }
+      }
       #nga{
         width: 70px;
         @media (min-width: 55em) {
@@ -153,11 +165,23 @@ section.one.mainsponsors {
         }
       }
       #sap{
-        width: 200px;
+        width: 210px;
         @media (min-width: 125em) {
-          width: 10.5vw;
+          width: 10.7vw;
         }
       }
+
+      #ach,#ind{
+        width: 100px;
+        @media (min-width: 55em) {
+          width: 110px;
+        }
+        @media (min-width: 125em) {
+          width: 6.3vw;
+        }
+      }
+
+
 
       #book{
         padding:.6em;

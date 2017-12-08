@@ -1,12 +1,15 @@
 @import 'components/reset';
 @import '../common';
 @import '../menu';
+@import '../inner-menu';
 @import '../footer';
 @import '../popup';
 @import 'components/menu';
 @import 'components/footer';
 @import 'components/popup';
 @import 'components/common';
+
+$dark-green: #083643;
 
 body {
   position: relative; }
@@ -178,7 +181,7 @@ section.two {
   section.two.clients {
     flex-direction: column-reverse;
     .green-btn{
-      margin-top: 0;
+      margin-top: 2em;
     }
     p{
       margin-top: 2em;
@@ -335,7 +338,7 @@ section.two {
       margin-top: 0; }
       @media (min-width: 120em) {
         section.two .content .content-wrap {
-          margin: 1vw 0; } }
+          margin: 1.68vw 0; } }
     @media (min-width: 75em) {
       section.two .content {
         width: 50%;
@@ -436,6 +439,17 @@ section.one-cntr {
     width: 100px;
     margin-left: auto;
     margin-top: 1em; }
+
+    section.divider{
+      background:$dark-green;
+      text-align: center;
+      padding:1em;
+      h4{
+        font-size: 1.2rem;
+        color: #fff;
+        margin:0;
+      }
+    }
 
 section.map {
  background: url("../../gfx/london/map-mobile-bg.jpg");

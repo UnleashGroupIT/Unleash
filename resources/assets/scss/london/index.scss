@@ -145,6 +145,9 @@ section.one .wrp button {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  @media (min-width: 75em) {
+    margin-bottom: 2em;
+  }
   span{
     display: block;
     text-transform: uppercase;
@@ -209,6 +212,16 @@ section.one.mainsponsors {
         width: 200px;
         @media (min-width: 125em) {
           width: 10.5vw;
+        }
+      }
+
+      #cute{
+        width: 45px;
+        @media (min-width: 75em) {
+          width: 70px;
+        }
+        @media (min-width: 125em) {
+          width: 3.0vw;
         }
       }
 

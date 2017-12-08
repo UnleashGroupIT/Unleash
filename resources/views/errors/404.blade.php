@@ -4,7 +4,6 @@
 
 @section('headercss')
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/amsterdam/common.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/404.css') }}">
 
 @endsection

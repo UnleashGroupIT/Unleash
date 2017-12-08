@@ -2,11 +2,14 @@
 @import '../common';
 @import '../footer';
 @import '../menu';
+@import '../inner-menu';
 @import '../popup';
 @import 'components/common';
 
 body {
   position: relative; }
+
+  $dark-green: #083643;
 
 header {
   height: 92vh;
@@ -16,13 +19,13 @@ header {
   flex-direction: column;
   color: #fff;
   transition: all 1s ease-in-out;
-  background: url("../../gfx/amsterdam/amsterdam-sponsors-mobile-bg.jpg") no-repeat #000;
+  background: url("../../gfx/amsterdam/sponsors-mobile-bg.jpg") no-repeat #000;
   background-size: cover;
   background-position: center; }
   @media (min-width: 40em) {
     header {
       height: 55vh;
-      background: url("../../gfx/amsterdam/amsterdam-sponsors-bg.jpg") no-repeat #000;
+      background: url("../../gfx/amsterdam/sponsors-bg.jpg") no-repeat #000;
       background-size: cover;
       background-position: left; } }
 
@@ -355,7 +358,7 @@ section.two {
       section.two .content {
         padding: 1.68vw 3.4vw; } }
   section.two button {
-    margin-top: auto; }
+    margin-top: 2em;}
     @media (min-width: 75em) {
       section.two button {
         margin-bottom: 2em; } }
@@ -446,6 +449,18 @@ section.one-cntr {
     width: 100px;
     margin-left: auto;
     margin-top: 1em; }
+
+    section.divider{
+      background:$dark-green;
+      text-align: center;
+      padding:1em;
+      h4{
+        font-size: 1.2rem;
+        color: #fff;
+        margin:0;
+      }
+    }
+
 
 section.map {
  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
@@ -580,12 +595,12 @@ section.sponsors {
     padding: 0 1.1em;
     margin: 1em .5em;
     font-size: 1.5rem;
+    font-weight: 500;
     display: inline-block;
-    background: #0090ff;
-    color: white; }
+    color: #c9c9c9; }
     @media (min-width: 75em) {
       section.sponsors h2 {
-        font-size: 1.9rem; } }
+        font-size: 1.7rem; } }
   section.sponsors a {
     margin: auto;
     @media (min-width: 120em) {

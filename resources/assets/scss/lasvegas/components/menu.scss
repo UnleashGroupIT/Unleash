@@ -1,18 +1,5 @@
 $las : #e80f42;
 
-#unleash-logo{
-  &.show{
-    @media (min-width: 75em) {
-      background-color:$las;
-    }
-  }
-  &:hover{
-    @media (min-width: 75em) {
-      background-color:$las;
-    }
-  }
-}
-
 #desktop-menu .menu-ul li a:hover{
   color:$las;
 }
@@ -35,6 +22,16 @@ $las : #e80f42;
 @media (min-width: 75em) {
   #desktop-menu .spec-menu li:first-child{
     margin-right: 6em;
+  }
+}
+
+.sub-menu .spec-menu li a:hover{
+  color:$las;
+}
+
+@media (min-width: 75em){
+  .sub-menu .spec-menu li:hover {
+    border-color:$las;
   }
 }
 

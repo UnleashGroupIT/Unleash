@@ -1,18 +1,5 @@
 $lon : #33cc33;
 
-#unleash-logo{
-  &.show{
-    @media (min-width: 75em) {
-      background-color:$lon;
-    }
-  }
-  &:hover{
-    @media (min-width: 75em) {
-      background-color:$lon;
-    }
-  }
-}
-
 #desktop-menu .menu-ul li a:hover{
   color:$lon;
 }
@@ -37,6 +24,15 @@ $lon : #33cc33;
   }
 }
 
+.sub-menu .spec-menu li a:hover{
+  color:$lon;
+}
+
+@media (min-width: 75em){
+  .sub-menu .spec-menu li:hover {
+    border-color:$lon;
+  }
+}
 
 // TAGS COLOR
 
