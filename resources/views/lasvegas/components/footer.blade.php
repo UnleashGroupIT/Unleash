@@ -10,7 +10,7 @@
 							<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ asset('gfx/facebook.png') }}" alt="Facebook"></a></div>
 							<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ asset('gfx/youtube.png') }}" alt="Youtube"></a></div>
 							<div><a href="https://twitter.com/hrtechworld"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
-							<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
+							<div><a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
 						</div>
 					</div>
 					<div class="footer-btns">

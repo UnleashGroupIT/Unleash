@@ -48,8 +48,10 @@ section.header-title {
   top: 0;
   right: 0;
   width: 100%;
+  z-index: 16;
+  height: 60px;
   @media (min-width: 75em) {
-    z-index: 16;
+    height: auto;
   }
   @media (min-width: 125em) {
     height: 3.67vw;

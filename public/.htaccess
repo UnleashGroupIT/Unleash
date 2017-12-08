@@ -113,7 +113,7 @@
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 2 day"
+    ExpiresByType text/css                              "access plus 2 days"
 
 
   # Data interchange
