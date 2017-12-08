@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome to the Admin site of Unleash!
+
                 </div>
             </div>
         </div>

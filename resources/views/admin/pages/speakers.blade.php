@@ -324,6 +324,10 @@ button {
 #prefix{
     width: 15%;
 }
+#GridLabelContainer{
+  margin: 0 28%;
+    width: 170px;
+}
 </style>
 @endsection
   
@@ -331,6 +335,7 @@ button {
 
 <div id="PageContainer">
  <section id="GridSection">
+  <h2>Grid Selector</h2>
   <div id="GridInnerContainer">
 
       <h3 id="NewGridHeadline"><i class="fa fa-plus-circle" aria-hidden="true"></i> Create New Speaker Grid</h3> 

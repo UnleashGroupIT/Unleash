@@ -212,6 +212,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -548,6 +554,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "GridController" } }, [
     _c("div", { attrs: { id: "NewGridContainer" } }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
       _c(
         "select",
         {
@@ -559,7 +569,7 @@ var render = function() {
               expression: "seletedevent"
             }
           ],
-          attrs: { name: "EventSelect" },
+          attrs: { name: "EventSelect", id: "EventSelect" },
           on: {
             change: function($event) {
               var $$selectedVal = Array.prototype.filter
@@ -596,7 +606,7 @@ var render = function() {
             expression: "NewGridName"
           }
         ],
-        attrs: { type: "text", name: "NewGrid" },
+        attrs: { type: "text", name: "NewGrid", id: "NewGrid" },
         domProps: { value: _vm.NewGridName },
         on: {
           input: function($event) {
@@ -621,6 +631,10 @@ var render = function() {
         [_vm._v("Create")]
       )
     ]),
+    _vm._v(" "),
+    _c("p", [_vm._v("or")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("Please select an existing grid for editing")]),
     _vm._v(" "),
     _c("div", { attrs: { id: "GridSelectContainer" } }, [
       _c(
@@ -669,7 +683,20 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "GridLabelContainer" } }, [
+      _c("label", { attrs: { for: "EventSelect" } }, [
+        _vm._v("Unleash Event - ")
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "NewGrid" } }, [_vm._v("Grid Name")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

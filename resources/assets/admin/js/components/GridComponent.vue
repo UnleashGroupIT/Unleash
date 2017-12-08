@@ -2,17 +2,23 @@
       <div id="GridController">
     
         <div id="NewGridContainer">
-            <select v-model="seletedevent" name="EventSelect">
+           <div id="GridLabelContainer">
+            <label for="EventSelect">Unleash Event - </label>
+            <label for="NewGrid">Grid Name</label>
+          </div>
+          <br/>
+            <select v-model="seletedevent" name="EventSelect" id ="EventSelect">
               <option v-for="eventdata in events" v-bind:value="eventdata.event_code">
                 {{ eventdata.event_name }}
               </option>
             </select>
             -
-            <input type="text" name="NewGrid" v-model="NewGridName">
+            <input type="text" name="NewGrid" v-model="NewGridName" id="NewGrid">
 
             <button class="btn-xs btn-info" @click="saveGrid()">Create</button>
         </div>
-
+<p>or</p>
+<p>Please select an existing grid for editing</p>
     <div id="GridSelectContainer">
         <select name="GridSelect" id="SelectSpeakerGrid" v-model="selectedGrid" v-on:change="prepareGrid">
           <option v-for="grid in grids" v-bind:value="grid.id">
