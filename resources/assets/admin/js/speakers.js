@@ -290,6 +290,22 @@ var spVue = new Vue({
      this.imgTempText = '';
     }, 
 
+    editFilteredSpeaker(speakerId){
+
+        axios.get(`/api/speaker/${speakerId}`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+           this.speakerEditRequest(response.data);
+        })
+        .catch(e => {
+          console.log(e);
+         // this.errors.push(e)
+        })
+
+
+       
+    },
+
 	speakerEditRequest(speakerData){
 		this.editSpeakerData = speakerData;
 		this.imgPrev =  '/storage/speakers/'+speakerData.img_url+'?id='+this.generateHash(10);

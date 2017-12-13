@@ -6,6 +6,7 @@
 /public/gfx
 /public/css
 /public/js
+/public/admin
 /storage/*.key
 /vendor
 /.idea

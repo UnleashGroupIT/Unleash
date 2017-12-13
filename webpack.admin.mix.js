@@ -17,7 +17,8 @@ let mix = require('laravel-mix').setPublicPath(path.normalize('public/admin'));
    .js('resources/assets/admin/js/api.js', 'js')
    .sass('resources/assets/admin/scss/app.scss', 'css');
 
-mix.sass('resources/assets/admin/scss/style.scss', 'css');   
+mix.sass('resources/assets/admin/scss/style.scss', 'css'); 
+mix.sass('resources/assets/admin/scss/common.scss', 'css');  
 mix.sass('resources/assets/admin/scss/speakers.scss', 'css'); 
 mix.sass('resources/assets/admin/scss/sponsors.scss', 'css'); 
    
