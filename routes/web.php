@@ -48,7 +48,7 @@ Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speaker
 
 //Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
-Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
+//Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
 
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
 
@@ -58,9 +58,9 @@ Route::get('/amsterdam/sponsor', function () {
 
 //Route::get('/amsterdam/sponsor', 'SponsorsController@index');
 
-/*Route::get('/amsterdam/sponsors', function () {
+Route::get('/amsterdam/sponsors', function () {
     return redirect('/amsterdam/index#spnsrgrd');
-});*/
+})->name('ams.sponsors');
 
 
 
@@ -139,6 +139,10 @@ Route::get('/london/travel', function () {
   return view('london.pages.travel');
 })->name('london.travel');
 
+Route::get('/london/volunteer', function () {
+  return view('london.pages.volunteer');
+})->name('london.volunteer');
+
 Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
 });
@@ -162,15 +166,15 @@ Route::get('/london/loyalty', function () {
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
-Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
+//Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
 
 
 
 //Route::get('/london/sponsor', 'SponsorsController@index');
 
-/*Route::get('/london/sponsors', function () {
+Route::get('/london/sponsors', function () {
     return redirect('/london/index#spnsrgrd');
-})->name('london.sponsors');*/
+})->name('london.sponsors');
 
 Route::get('/london/sponsor', function () {
     return redirect('/london/index#spnsrgrd');
@@ -262,6 +266,10 @@ Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floor
 Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');
+
+Route::get('/america/travel', function () {
+    return view('lasvegas.pages.travel');
+})->name('lasvegas.travel');
 
 //Route::get('/lasvegas/tickets', 'StaticPageController@about')->name('lasvegas.tickets');
 

@@ -41,6 +41,7 @@
 			   <div> <a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
 			   <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="cross" src="{{ URL::asset('gfx/amsterdam/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
                 <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                <div><a href="https://www.hirevue.com/" target="_blank" title="Hirevue"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/hirevue.svg') }}" alt="Hirevue"></a></div>
                <div> <a href="https://www.indeed.com/" target="_blank" title="Indeed"><img id="ind" src="{{ URL::asset('gfx/amsterdam/header/sponsors/Indeed.png') }}" alt="Indeed"></a></div>
                <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
                <div> <a href="http://www.sumtotalsystems.com/" target="_blank" title="Sumtotal"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/sumtotal.svg') }}" alt="Sumtotal"></a></div>
@@ -92,13 +93,6 @@
 				</div>
 			</div>
 			<div class="schedule-wrp">
-				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
-					<div class="date-place">
-						<p><strong>day 01</strong></p>
-
-					</div>
-				</div>
 				<button id="spkrgrd" class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
 			</div>
 		</div>
@@ -174,7 +168,7 @@
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<button class="blue-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
 		</div>
 	</section>
 	<!--Clients END-->

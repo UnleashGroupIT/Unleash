@@ -16,6 +16,14 @@
     max-height: 200px;
     text-align: center;
   }
+
+  .form .select{
+    color:#bbb;
+    font-size: 13px;
+    padding:.75em 0;
+    text-align-last: center;
+    padding-left: 20px;
+  }
     .form .form-input::-webkit-input-placeholder,.form textarea::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #bbb;

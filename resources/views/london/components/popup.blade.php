@@ -173,6 +173,40 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
             </form>
 		  </div>
 		</div>
+	</div>
+
+	<div id="volunteer" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>APPLY AS VOLUNTEER</h3>
+		    <p>We can only accept applications with full availability between 19-21 March 2018.</p>
+		    <P>We can only welcome applications from candidates based in London, UK.</P>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" enctype="multipart/form-data" action="https://smart.devmoo.net" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Email Address" class="form-input" name="email" id="email" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Phone" class="form-input" name="phone" id="phone" size="30" maxlength="40" type="tel">
+				<textarea required style="border: 1px solid rgb(221, 221, 221)" name="description" id="description" placeholder="Tell us why you would like to participate" onchange="" class="TextAreaClass ContactTextArea"></textarea>
+				<div id="cv">
+					<p>Upload your CV</p>
+					<input type="file" name="CV" id="CV">
+				</div>
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="fname" id="fname" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="lname" id="lname" size="30" maxlength="255" type="text">
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
 	</div>	
 
 	<div id="becomeasponsor" class="modal">

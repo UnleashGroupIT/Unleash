@@ -41,8 +41,9 @@
 										<ul class="subs-ul">
 											<li><a href="{{ route('london.index') }}">Show</a></li>
 											<li><a href="{{ route('london.index') }}#spkrgrd">Speakers</a></li>
-											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
-											<li><a href="{{ route('london.loyalty') }}">Loyalty</a></li>
+											<li><a href="{{ route('london.sponsors') }}">Our Clients</a></li>
+											<!--<li><a href="{{ route('london.loyalty') }}">Loyalty</a></li>-->
+											<!--<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>-->
 											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
 											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
@@ -58,6 +59,7 @@
 											<li><a href="{{ route('lasvegas.index') }}#spkrgrd">Speakers</a></li>
 											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
 											<li><a href="{{ route('lasvegas.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('lasvegas.travel') }}">Travel</a></li>
 											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
 										</ul>
 									</li>
@@ -69,7 +71,7 @@
 										<ul class="subs-ul">
 											<li><a href="{{ route('ams.index') }}">Show</a></li>
 											<li><a href="{{ route('ams.index') }}#spkrgrd">Speakers</a></li>
-											<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
+											<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
 											<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
 										</ul>
 									</li>
@@ -103,6 +105,7 @@
 				<li><a href="{{ route('lasvegas.index') }}#spkrgrd">SPEAKERS</a></li>
 				<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">OUR CLIENTS</a></li>
 				<li><a href="{{ route('lasvegas.floorplan') }}">VENUE</a></li>
+				<li><a href="{{ route('lasvegas.travel') }}">TRAVEL</a></li>
 				<li><a href="{{ route('lasvegas.tickets') }}">TICKETS</a></li>
 
 			</ul>

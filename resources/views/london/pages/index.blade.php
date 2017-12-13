@@ -44,7 +44,9 @@
 			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
                     <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
                     <div><a href="https://www.cut-e.com/assessment-solutions/" target="_blank" title="Cut-e"><img id="cute" src="{{ URL::asset('gfx/london/header/sponsors/cute.svg') }}" alt="Cut-e"></a></div>
+                    <div><a href="https://www.hirevue.com/" target="_blank" title="Hirevue"><img src="{{ URL::asset('gfx/london/header/sponsors/hirevue.svg') }}" alt="Hirevue"></a></div>
                     <div><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" id="ins" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
+                    <div><a href="https://www.mhr.co.uk/" target="_blank" title="MHR"><img id="mhr" src="{{ URL::asset('gfx/london/header/sponsors/mhr.svg') }}" alt="MHR"></a></div>
                     <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
                     <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
 
@@ -93,13 +95,6 @@
 				</div>
 			</div>
 			<div class="schedule-wrp">
-				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
-					<div class="date-place">
-						<p><strong>day 01</strong> / Main Auditorium</p>
-
-					</div>
-				</div>
 				<button id="spkrgrd" class="white-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
 			</div>
 		</div>
@@ -175,7 +170,7 @@
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="green-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<button class="green-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
 		</div>
 	</section>
 	<!--Clients END-->

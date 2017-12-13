@@ -271,6 +271,10 @@ $(document).ready(function(){
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
+	if(window.location.hash == "#contact") {
+		$("#contact").css("display", "flex");
+	}
+
 	$('.popup').click(function() { 
 		let popupName = $(this).data('popupdata');
 		$('#'+popupName).css("display", "flex")

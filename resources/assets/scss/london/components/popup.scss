@@ -53,3 +53,20 @@
 		}
 	}
 }
+
+#volunteer .modal-header p{
+	font-size:13px;
+}
+
+#cv{
+	display:flex;
+	flex-direction:column;
+	p{
+		text-align:center;
+	}
+	input{
+		font-size: 13px;
+		width: 175px;
+		margin: 0 auto;
+	}
+}

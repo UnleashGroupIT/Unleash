@@ -153,9 +153,6 @@ section.one.mainsponsors {
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: .5em;
-    strong{
-      color:#3c3;
-    }
   }
 }
   
@@ -222,6 +219,13 @@ section.one.mainsponsors {
         }
         @media (min-width: 125em) {
           width: 3.0vw;
+        }
+      }
+
+      #mhr{
+        width: 45px;
+        @media (min-width: 125em) {
+          width: 2vw;
         }
       }
 

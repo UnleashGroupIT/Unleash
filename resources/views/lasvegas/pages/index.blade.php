@@ -91,13 +91,6 @@
 				</div>
 			</div>
 			<div class="schedule-wrp">
-				<div class="schedule">
-					<img class="clock-logo" src="{{ URL::asset('gfx/clock.png') }}" alt="Date">
-					<div class="date-place">
-						<p>Main Auditorium</p>
-
-					</div>
-				</div>
 				<button id="spkrgrd" class="white-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
 			</div>
 		</div>
@@ -173,7 +166,7 @@
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<button class="red-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
 		</div>
 	</section>
 	<!--Clients END-->
