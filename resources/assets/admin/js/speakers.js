@@ -38,7 +38,7 @@ var spVue = new Vue({
 					let new_item_id = evt.item.dataset.speakerid
 					let new_item_order = evt.newIndex
 					let old_item_order = evt.oldIndex;
-					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
+					let old_item_id = $( "#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
 					let gridId = $("#SelectSpeakerGrid").val();
 
 				axios.patch(`/api/speakergrid/${gridId}/${old_item_id}`, {
@@ -109,8 +109,8 @@ var spVue = new Vue({
 	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
 
 			setTimeout(function(){ 
-				     jQuery('#CustomSpeakerLoading').fadeOut();
-				     jQuery( "#CustomSpeakerGrid" ).fadeIn();
+				     jQuery('#CustomItemLoading').fadeOut();
+				     jQuery( "#CustomItemGrid" ).fadeIn();
 			 		/* jQuery( "#CustomSpeakerGrid" ).slideToggle( "slow", function() {
 			 
 			  });*/

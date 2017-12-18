@@ -10,7 +10,7 @@
 
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Unleash Admin</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">

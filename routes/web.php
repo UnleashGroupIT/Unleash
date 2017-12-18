@@ -297,8 +297,8 @@ Route::get('/adminsite/home', 'HomeController@index')->name('home');
 Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
 
 //Admin pages
-Route::get('/adminsite/speakers', 'Admin\SpeakerPageController@speakerUI')->name('admin.speakers');
-Route::get('/adminsite/sponsors', 'Admin\SpeakerPageController@sponsorUI')->name('admin.sponsors');
+Route::get('/adminsite/speakers', 'Admin\SubPageController@speakerUI')->name('admin.speakers');
+Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
 
 //Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
 //Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');

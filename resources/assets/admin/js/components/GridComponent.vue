@@ -20,7 +20,7 @@
 <p>or</p>
 <p>Please select an existing grid for editing</p>
     <div id="GridSelectContainer">
-        <select name="GridSelect" id="SelectSpeakerGrid" v-model="selectedGrid" v-on:change="prepareGrid">
+        <select name="GridSelect" id="SelectGrid" v-model="selectedGrid" v-on:change="prepareGrid">
           <option v-for="grid in grids" v-bind:value="grid.id">
           {{ grid.events[0].event_name }} - {{ grid.grid_name }}
           </option>
@@ -55,8 +55,8 @@ export default {
   methods: {
 
     prepareGrid(event){
-      jQuery( "#CustomSpeakerGrid" ).fadeOut();
-      jQuery('#CustomSpeakerLoading').fadeIn();
+      jQuery( "#CustomItemGrid" ).fadeOut();
+      jQuery('#CustomItemLoading').fadeIn();
        
          if(event){
             let options = event.target.options;

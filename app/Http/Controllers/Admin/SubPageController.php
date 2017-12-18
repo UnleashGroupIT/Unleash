@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\GridController;
 use App\Events;
 
-class SpeakerPageController extends Controller
+class SubPageController extends Controller
 {
 
       public function __construct()

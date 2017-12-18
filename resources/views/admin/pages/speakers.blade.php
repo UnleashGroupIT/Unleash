@@ -33,13 +33,14 @@
       <h2>@{{ selectedName }}</h2>
 
     </div>
+   
     
   {{-- This is the selected grid's template  --}}  
 
-<div class="infinite-loading-container" id="CustomSpeakerLoading" _v-34d8cf3a=""> <div _v-34d8cf3a="" style=""> <i _v-34d8cf3a="" class="loading-default"></i> </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No results :( </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No more data :) </div> </div>
+<div class="infinite-loading-container" id="CustomItemLoading" _v-34d8cf3a=""> <div _v-34d8cf3a="" style=""> <i _v-34d8cf3a="" class="loading-default"></i> </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No results :( </div> <div class="infinite-status-prompt" _v-34d8cf3a="" style="display: none;"> No more data :) </div> </div>
 
     <div class="GridContainer CustomSpeakerContainer">
-        <ul class="SpeakersGrid" id="CustomSpeakerGrid" v-sortable="sortableOptions">
+        <ul class="SpeakersGrid" id="CustomItemGrid" v-sortable="sortableOptions">
              <li v-for="speaker in speakers" :id=speaker.id :data-speakerid=speaker.id class="sortable">
                             <div class="GridImageContainer">
                               <div class="IconContainer">

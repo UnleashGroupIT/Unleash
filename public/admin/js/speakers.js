@@ -236,8 +236,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     prepareGrid: function prepareGrid(event) {
-      jQuery("#CustomSpeakerGrid").fadeOut();
-      jQuery('#CustomSpeakerLoading').fadeIn();
+      jQuery("#CustomItemGrid").fadeOut();
+      jQuery('#CustomItemLoading').fadeIn();
 
       if (event) {
         var options = event.target.options;
@@ -429,7 +429,7 @@ var render = function() {
               expression: "selectedGrid"
             }
           ],
-          attrs: { name: "GridSelect", id: "SelectSpeakerGrid" },
+          attrs: { name: "GridSelect", id: "SelectGrid" },
           on: {
             change: [
               function($event) {
@@ -2138,7 +2138,7 @@ var spVue = new Vue({
         var new_item_id = evt.item.dataset.speakerid;
         var new_item_order = evt.newIndex;
         var old_item_order = evt.oldIndex;
-        var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
+        var old_item_id = $("#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
         var gridId = $("#SelectSpeakerGrid").val();
 
         axios.patch('/api/speakergrid/' + gridId + '/' + old_item_id, {
@@ -2200,8 +2200,8 @@ var spVue = new Vue({
       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
 
       setTimeout(function () {
-        jQuery('#CustomSpeakerLoading').fadeOut();
-        jQuery("#CustomSpeakerGrid").fadeIn();
+        jQuery('#CustomItemLoading').fadeOut();
+        jQuery("#CustomItemGrid").fadeIn();
         /* jQuery( "#CustomSpeakerGrid" ).slideToggle( "slow", function() {
         			  });*/
       }, 2000);
