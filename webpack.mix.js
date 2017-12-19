@@ -20,7 +20,20 @@ mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam
            purifyCss: false      
       });
  
-   
+
+/******** Global **************/   
+mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
+   .sass('resources/assets/scss/global/about.scss', 'public/css/global')
+   .sass('resources/assets/scss/global/holiday.scss', 'public/css/global').options({
+         processCssUrls: false,
+          /* purifyCss: {
+                  purifyOptions: {
+                       whitelist: ['sponsor', 'come-in', 'visible', 'flip', 'play', 'flip-clock-active', 'minutes', 'hours', 'days', 'flip-clock-dot top', 'flip-clock-dot bottom', 'top', 'bottom', 'flip-clock-dot', 'flip-clock-label', 'flip-clock-wrapper', 'your-clock', 'flip-clock-divider', 'flip-clock-before', 'flip-clock-after']
+                  }
+              } */     
+      })
+   .version(); 
+ 
 /******** Amsterdam *********/  
 mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
    .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')

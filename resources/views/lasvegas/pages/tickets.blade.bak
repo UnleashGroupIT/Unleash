@@ -51,9 +51,9 @@
  <div id="TimelineSingle">
     <div class="TimelineContainer">
         <ul id="TimelineList">
-           <!-- <li>
-                <span class="">/</span>SUPER SAVER</li> -->
-            <li  class="TimeLineActive"> EARLY BIRD<div  id="UntilSummer"> <span class="SummerSaverUntil SlashClassActive">UNTIL</span> <br class="BRDesktop"> <span class="SummerSaverDate">MARCH 21</span></div> <span >/</span></li>
+            <li class="TimeLineActive">
+                <span class="SlashClassActive">/</span>SUPER SAVER<div  id="UntilSummer"> <span class="SummerSaverUntil">UNTIL</span> <br class="BRDesktop"> <span class="SummerSaverDate">JAN 31</span></div><span class="SlashClassActive">/</span></li>
+            <li>EARLY BIRD <span>/</span></li>
             <li>REGULAR <span>/</span></li>
             <li>LATE <span>/</span></li>
             <li>ONSITE REGISTRATION</li>
@@ -100,10 +100,10 @@
   <div class="TicketBox PopularTicketBox IsoBox SummerSaver TicketOne" data-category="SummerSaver">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
-            <h2 class="TicketHeadline">EARLY BIRD</h2>
-            <h2 class="TicketPrice">$1,349</h2>
-            <h3 class="TicketDeadline">UNTIL MARCH 21.</h3>
-            <h4 class="TicketSmallText"></h4>
+            <h2 class="TicketHeadline">SUPER SAVER</h2>
+            <h2 class="TicketPrice">$1,295</h2>
+            <h3 class="TicketDeadline">UNTIL JANUARY 31.</h3>
+            <h4 class="TicketSmallText">Save $200</h4>
             <h4 id="hide" class="TicketSmallText">.</h4>
         </div>
     </div>
@@ -132,7 +132,7 @@
             </ul>
             <h3>+ 2 nights accomodation</h3> 
        </div>
-   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover" onclick="window.open('https://www.eventbrite.com/e/unleash-america-2018-tickets-35256262430?discount=18EARLYBIRD#tickets', 'blank');">BOOK NOW</button>
+   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover" onclick="window.open('https://www.eventbrite.com/e/unleash-america-2018-tickets-35256262430?discount=18LVSUPER#tickets', 'blank');">BOOK NOW</button>
   </div>
   
   

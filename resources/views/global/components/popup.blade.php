@@ -4,32 +4,35 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h3>Book Now</h3>
+		    <h3>Book Now For 2018</h3>
 		    <p>Thank you for your interest in our event.
 Please fill in all the fields below, and we'll get back to you soon.</p>
 		  </div>
 		  <div class="modal-body">
-		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-10-23/kr7xq" class="form">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-10-20/kr5vz" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Business Email" class="form-input" name="145751_27041pi_145751_27041" id="145751_27041pi_145751_27041" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_27043pi_145751_27043" id="145751_27043pi_145751_27043" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organisation Name" class="form-input" name="145751_27039pi_145751_27039" id="145751_27039pi_145751_27039" size="30" maxlength="255" type="text">
-				
-				<select required name="145751_27045pi_145751_27045" id="145751_27045pi_145751_27045" class="select form-input" onchange=""><option value="165149" selected="selected" hidden>Apply as</option>
-<option value="165149">Delegate</option>
-<option value="165151">Sponsor</option>
-<option value="165153">Startup</option>
-<option value="165155">Media</option>
-<option value="165157">Analyst</option>
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_26983pi_145751_26983" id="145751_26983pi_145751_26983" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_26985pi_145751_26985" id="145751_26985pi_145751_26985" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Organisation name" class="form-input" name="145751_26987pi_145751_26987" id="145751_26987pi_145751_26987" size="30" maxlength="255" type="text">
+
+								<select name="145751_27001pi_145751_27001" id="145751_27001pi_145751_27001" class="select form-input" onchange=""><option value="165139" selected="selected" hidden>Apply as</option>
+
+								<option value="165139">Delegate</option>
+								<option value="165129">Sponsor</option>							
+								<option value="165127">Startup</option>
+								<option value="165131">Media</option>
+								<option value="165135">Analyst</option>
+
+
 </select>
-				
+
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_27035pi_145751_27035" id="145751_27035pi_145751_27035" size="30" maxlength="255" type="text">
-                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_27037pi_145751_27037" id="145751_27037pi_145751_27037" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-BookNow" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-BookNow" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-BookNow" class="text" size="30" maxlength="255"  />
+                    <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_26979pi_145751_26979" id="145751_26979pi_145751_26979" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_26981pi_145751_26981" id="145751_26981pi_145751_26981" size="30" maxlength="255" type="text">
+					 <input placeholder="Robot Source" value="Amsterdam2018-BookNow" class="form-input" name="145751_26993pi_145751_26993" id="145751_26993pi_145751_26993" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-BookNow" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_27005pi_145751_27005" id="145751_27005pi_145751_27005" value="Amsterdam2018-BookNow" class="text" size="30" maxlength="255"  />
                 </p>                
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -60,9 +63,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-DownloadBrochure" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-DownloadBrochure" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-DownloadBrochure" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-DownloadBrochure" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-DownloadBrochure" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-DownloadBrochure" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -75,7 +78,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 	</div>
 
 
-	<div id="applytospeak" class="modal">
+	<div id="becomeaspeaker" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -93,9 +96,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-ApplyToSpeak" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-ApplyToSpeak" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-ApplyToSpeak" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-ApplyToSpeak" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-ApplyToSpeak" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-ApplyToSpeak" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -126,9 +129,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-Compete" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-Compete" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-Compete" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-Compete" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-Compete" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-Compete" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -161,43 +164,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-Contact" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-Contact" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-Contact" class="text" size="30" maxlength="255"  />
-                </p>  
-                <div class="popup-paragraph popup-policy ">
-                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-                </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn">
-            </form>
-		  </div>
-		</div>
-	</div>
-
-	<div id="volunteer" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-		  <div class="modal-header">
-		    <span class="close">&times;</span>
-		    <h3>APPLY AS VOLUNTEER</h3>
-		    <p>We can only accept applications with full availability between 19-21 March 2018.</p>
-		    <P>We can only welcome applications from candidates based in London UK, unless all accommodation and travel costs are covered by the applicant.</P>
-		  </div>
-		  <div class="modal-body">
-		    <form accept-charset="UTF-8" method="post" enctype="multipart/form-data" action="https://smart.devmoo.net" class="form">
-                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Email Address" class="form-input" name="email" id="email" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Phone" class="form-input" name="phone" id="phone" size="30" maxlength="40" type="tel">
-				<textarea required style="border: 1px solid rgb(221, 221, 221)" name="description" id="description" placeholder="Tell us why you would like to participate" onchange="" class="TextAreaClass ContactTextArea"></textarea>
-				<div id="cv">
-					<p>Upload your CV</p>
-					<input type="file" name="CV" id="CV">
-				</div>
-
-			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="First name" data-field="fname" class="form-input" name="fname" id="fname" size="30" maxlength="255" type="text">
-                    <input placeholder="Last name" data-field="lname" class="form-input" name="lname" id="lname" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-Contact" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-Contact" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-Contact" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -209,6 +178,40 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		</div>
 	</div>	
 
+	<div id="contactabout" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>Contact Us</h3>
+		    <p>Thank you for your interest in our event.
+Please fill in all the fields below, and we'll get back to you soon.</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+				<textarea required style="border: 1px solid rgb(221, 221, 221)" name="145751_15966pi_145751_15966" id="145751_15966pi_145751_15966" placeholder="Message" onchange="" class="TextAreaClass ContactTextArea"></textarea>
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 1" value="About-Contact" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="About-Contact" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="About-Contact" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>		
+	
 	<div id="becomeasponsor" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
@@ -227,9 +230,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-BecomeASponsor" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-BecomeASponsor" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-BecomeASponsor" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-BecomeASponsor" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-BecomeASponsor" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-BecomeASponsor" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -260,9 +263,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_15950pi_145751_15950" id="145751_15950pi_145751_15950" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 1" value="London2018-JoinOurCommunity" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="London2018-JoinOurCommunity" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-JoinOurCommunity" class="text" size="30" maxlength="255"  />
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-JoinOurCommunity" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -272,10 +275,39 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
             </form>
 		  </div>
 		</div>
-	</div>	
+	</div>
+
+	<div id="subscribe" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>SUBSCRIBE</h3>
+		    <p>Sign up to receive our latest announcements about UNLEASH events and news.</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="" class="form">
+                
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="Lead Source 1" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
+                    <input placeholder="Lead Source 2" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-JoinOurCommunity" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>
 
 
-	   <div id="thankyou" class="modal">
+
+   <div id="thankyou" class="modal">
 		<!-- Modal content -->
 		<div class="ThanksModelContent modal-content">
 		  <div class="modal-header">
@@ -306,18 +338,3 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		</div>
 	</div>
 
-	<div id="reservation" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-		  <div class="modal-header">
-		    <span class="close">&times;</span>
-		    <h3>Reservations</h3>
-		    <p>Via email:</p>
-		    <span><script type="text/javascript">
-document.write(atob("PGEgaHJlZj0ibWFpbHRvOnJlc2VydmF0aW9uc21nckBoaWV4cHJlc3Nsb25kb25leGNlbC5jby51ayI+cmVzZXJ2YXRpb25zbWdyQGhpZXhwcmVzc2xvbmRvbmV4Y2VsLmNvLnVrPC9hPiA8YSBocmVmPSJodHRwOi8vd3d3LndlYmVzdG9vbHMuY29tL2FudGlzcGFtLWVtYWlsLXByb3RlY3Rpb24tb2JmdXNjYXRlLWVtYWlsLWFkZHJlc3Mtd2Vic2l0ZS1jb2RlLXNwYW0tamF2YXNjcmlwdC1iYXNlNjQtZW1haWwtZW5jb2RpbmctY3J5cHQuaHRtbCIgdGl0bGU9IkFudGktU1BBTSBQcm90ZWN0aW9uIj48aW1nIHNyYz0iLy91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy8yLzI4L1NlbWlfcHJvdGVjdC5zdmciIHdpZHRoPTE0IGhlaWdodD0xNCAvPjwvYT4="));
-</script>
-<noscript>Please enable Javascript to see the email address</noscript></span><p>Via phone:</p><span>00 44 203096 5888 Extension 2.</span>
-		    <button class="green-btn">Please refer to the UNLEASH18 booking name, and to the "H02" booking code.</button>
-		  </div>
-		</div>
-	</div>

@@ -67,7 +67,7 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>APPLY as VOLUNTEER</h2>
-			<p>We can only accept applications with full availability between 19-21 March 2018.<br />We can only welcome applications from candidates based in London, UK</p>
+			<p>We can only accept applications with full availability between 19-21 March 2018.<br />We can only welcome applications from candidates based in London UK,<br />unless all accommodation and travel costs are covered by the applicant.</p>
 			<button class="green-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>
 	</section>

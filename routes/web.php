@@ -25,14 +25,16 @@ Route::get('/terms', function () {
 });
 
 Route::get('/about', function () {
-  return view('amsterdam.pages.about');
+  return view('global.pages.about');
 })->name('ams.about');
 
 Route::get('/about-prev', function () {
   return view('amsterdam.pages.about-prev');
 })->name('ams.about-prev');
 
-
+Route::get('/holiday', function () {
+  return view('global.pages.holiday');
+})->name('ams.holiday');
 
 Route::get('/wpredirect', 'StaticPageController@wpredirect');
 	  
