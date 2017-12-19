@@ -2138,7 +2138,7 @@ var spVue = new Vue({
         var new_item_id = evt.item.dataset.speakerid;
         var new_item_order = evt.newIndex;
         var old_item_order = evt.oldIndex;
-        var old_item_id = $("#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
+        var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
         var gridId = $("#SelectSpeakerGrid").val();
 
         axios.patch('/api/speakergrid/' + gridId + '/' + old_item_id, {
@@ -2197,7 +2197,7 @@ var spVue = new Vue({
       });
 
       this.speakerAll = this.$refs.allSpeakerGrid;
-      this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+      this.speakerAll.filterSpeakers(this.selected, this.speakerSearch, true);
 
       setTimeout(function () {
         jQuery('#CustomItemLoading').fadeOut();
@@ -2428,7 +2428,9 @@ var spVue = new Vue({
       document.getElementById("NewSpeakerForm").reset();
       this.selectedImage = '';
       this.imgPrev = '';
+      this.image = '';
       this.speakerPrevImg = '';
+      $('#speakerPrevImg').attr('src', '');
     });
   }
 });
@@ -2523,7 +2525,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         list: [],
         busy: false
       },
-      filtered: false
+      filtered: false,
+      filters: {
+        grid: '',
+        query: ''
+      }
     };
   },
 
@@ -2586,13 +2592,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         // this.errors.push(e)
       });
     },
-    filterSpeakers: function filterSpeakers(gridId, searchQuery) {
+    filterSpeakers: function filterSpeakers(gridId, searchQuery, scrollable) {
       var _this2 = this;
 
       var exludeG = '';
       var searchQ = '';
 
       this.filtered = true;
+
+      /* if(scrollable == "true"){
+         this.filtered = true;
+       } else {
+           this.filtered = false;
+       }*/
+      this.filters.grid = gridId;
+      this.filters.query = searchQuery;
 
       if (gridId) {
         exludeG = 'exlude=' + gridId;
@@ -2640,7 +2654,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this4 = this;
 
       if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
-        axios.get('/api/speakers', {
+        var url = '';
+
+        if (this.filtered) {
+          url = '/api/speakers?exlude=' + this.filters.grid + '&search=' + this.filters.query;
+        } else {
+          url = '/api/speakers';
+        }
+
+        axios.get(url, {
           params: {
             page: this.speakerPageData.current_page + 1
           }
@@ -2681,7 +2703,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   watch: {
     bottom: function bottom(_bottom) {
-      if (_bottom && this.filtered == false) {
+      if (_bottom) {
         this.loadMore();
       }
     }

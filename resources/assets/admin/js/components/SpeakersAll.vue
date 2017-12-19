@@ -32,7 +32,11 @@ export default {
         list: [],
         busy: false
       },
-   filtered: false   
+   filtered: false,
+   filters: {
+    grid: '',
+    query: '',
+   },   
 	};
   
   },
@@ -112,11 +116,19 @@ export default {
        
     },
 
-    filterSpeakers(gridId, searchQuery){
+    filterSpeakers(gridId, searchQuery, scrollable){
        let exludeG = '';
        let searchQ = '';
 
-       this.filtered = true;
+      this.filtered = true;
+
+      /* if(scrollable == "true"){
+         this.filtered = true;
+       } else {
+           this.filtered = false;
+       }*/
+       this.filters.grid = gridId;
+       this.filters.query = searchQuery;
 
         if(gridId){
            exludeG = `exlude=${gridId}`;
@@ -173,7 +185,16 @@ export default {
  loadMore() {
 
 if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
-     axios.get(`/api/speakers`, {
+        let url = '';
+
+        if(this.filtered){
+           url = `/api/speakers?exlude=${this.filters.grid}&search=${this.filters.query}`;
+        } else {
+           url = `/api/speakers`;
+        }
+     
+
+     axios.get(url, {
         params: {
           page: this.speakerPageData.current_page +1,
         },
@@ -213,7 +234,7 @@ if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
 
   watch: {
     bottom(bottom) {
-      if (bottom && this.filtered == false) {
+      if (bottom) {
         this.loadMore()
       }
     }

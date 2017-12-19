@@ -38,7 +38,7 @@ var spVue = new Vue({
 					let new_item_id = evt.item.dataset.speakerid
 					let new_item_order = evt.newIndex
 					let old_item_order = evt.oldIndex;
-					let old_item_id = $( "#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
+					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
 					let gridId = $("#SelectSpeakerGrid").val();
 
 				axios.patch(`/api/speakergrid/${gridId}/${old_item_id}`, {
@@ -106,11 +106,11 @@ var spVue = new Vue({
 			axios.get('/api/speakergrid/'+this.selected).then(response => this.speakers = response.data);
 	       
 	       this.speakerAll = this.$refs.allSpeakerGrid;
-	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch, true);
 
 			setTimeout(function(){ 
 				     jQuery('#CustomItemLoading').fadeOut();
-				     jQuery( "#CustomItemGrid" ).fadeIn();
+					 jQuery( "#CustomItemGrid" ).fadeIn();
 			 		/* jQuery( "#CustomSpeakerGrid" ).slideToggle( "slow", function() {
 			 
 			  });*/
@@ -375,7 +375,9 @@ var spVue = new Vue({
     	document.getElementById("NewSpeakerForm").reset();
     	this.selectedImage = '';
     	this.imgPrev = '';
+		  this.image= '';
     	this.speakerPrevImg = '';
+		$('#speakerPrevImg').attr('src','');
     })
   },
 
