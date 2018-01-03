@@ -114,7 +114,7 @@
 				<li><a href="{{ route('lasvegas.index') }}">SHOW</a></li>
 				<li><a href="{{ route('lasvegas.index') }}#spkrgrd">SPEAKERS</a></li>
 				<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">OUR CLIENTS</a></li>
-				<li><a href="{{ route('lasvegas.floorplan') }}">VENUE</a></li>
+				<li><a href="{{ route('lasvegas.travel') }}">VENUE &amp; TRAVEL</a></li>
 				<li><a href="{{ route('lasvegas.tickets') }}">TICKETS</a></li>
 
 			</ul>

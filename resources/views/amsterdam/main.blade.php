@@ -110,8 +110,9 @@
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('ams.index') }}">SHOW</a></li>
 				<li><a href="{{ route('ams.speakers') }}">SPEAKERS</a></li>
-				<li><a href="{{ route('ams.sponsors') }}">SPONSORS</a></li>
+				<li><a href="{{ route('ams.sponsors') }}">OUR CLIENTS</a></li>
 				<li><a href="{{ route('ams.floorplan') }}">VENUE</a></li>
+				<li><a href="{{ route('ams.tickets') }}">TICKETS</a></li>
 			</ul>
 		</nav>		
 		

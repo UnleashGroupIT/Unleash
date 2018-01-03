@@ -24,7 +24,7 @@
 <meta name="author" content="HRN - Human Resources Network | Unleash Your People!">
 <meta name="keywords" content="HR Tech, HRN">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<title>UNLEASH 2018 London | Sponsorship Brochure</title>
+<title>UNLEASH 2018 London | Delegate Brochure</title>
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">

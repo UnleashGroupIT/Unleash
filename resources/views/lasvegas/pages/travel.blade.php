@@ -50,7 +50,7 @@
 			</div>
 			<div class="pdg btm">
 				<div class="h4wrp">
-					<a href="https://www.aria.com/en/booking/room-booking.html" target="_blank"><button class="white-btn">Book now</button></a>
+					<!--<a href="https://www.aria.com/en/booking/room-booking.html" target="_blank"><button class="white-btn">Book now</button></a>-->
 					<a href="https://www.google.hu/maps/place/ARIA+Resort+%26+Casino+Las+Vegas/@36.1074628,-115.1789045,17z/data=!3m2!4b1!5s0x80c8c431e35b9c4b:0xa1d65d6b6c79b3db!4m5!3m4!1s0x80c8c42e1d156485:0x2ef3882f44b3056f!8m2!3d36.1074585!4d-115.1767158?hl=hu" target="_blank"><button class="white-btn">Show on Map</button></a>
 				</div>
 			</div>

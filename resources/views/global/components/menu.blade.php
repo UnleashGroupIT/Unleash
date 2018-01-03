@@ -34,8 +34,7 @@
 											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
 											<li><a href="{{ route('lasvegas.index') }}#spkrgrd">Speakers</a></li>
 											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
-											<li><a href="{{ route('lasvegas.floorplan') }}">Venue</a></li>
-											<li><a href="{{ route('lasvegas.travel') }}">Travel</a></li>
+											<li><a href="{{ route('lasvegas.travel') }}">Venue &amp; Travel</a></li>
 											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
 										</ul>
 									</li>
