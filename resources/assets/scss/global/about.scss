@@ -289,11 +289,6 @@ section.two.keynote button {
 
 
 #desktop-menu .spec-menu{display:none}
-@media (min-width: 75em) {
-  #desktop-menu .menu-ul li.more:hover .ul-wrp{
-  transform: translateY(25px);
-}
-}
 
 @media (max-width: 75em) {
   #desktop-menu .opened .dropdownbox{

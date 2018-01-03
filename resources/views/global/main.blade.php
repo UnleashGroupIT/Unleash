@@ -62,11 +62,53 @@
 	<!--Header-->
 	<header>
 
-	 @include('global.components.menu')
+		<section id="header-menu">
+			<div id="hamburger">
+	            <div id="mobile-logo">
+					<a href="/">
+						<h1>
+							<img src="{{ URL::asset('gfx/london/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+						</h1>
+					</a>
+				</div>	
+	        	<div class="bar-wrp">
+	        		<div class="bar"></div>
+	        	</div>
+        	</div>
+			<!--Menu-->
+			<nav id="desktop-menu">
+				<!--Logo-->
+				<div id="unleash-logo">
+					<a href="/">
+						<h1>
+							<img id="full-logo" src="{{ URL::asset('gfx/london/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+						</h1>
+					</a>
+				</div>
+				<img id="x-btn" src="{{ URL::asset('gfx/x-btn.svg') }}" alt="X">
+				
+				@include('global.components.menu')
+				
+				<div class="social-booknow">
+					<div class="icos-wrp">
+						<div><a href="https://www.youtube.com/user/hrneurope/"><img class="youtube" src="{{ URL::asset('gfx/youtube-white.svg') }}" alt="Youtube"></a></div>
+						<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a></div>
+						<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a></div>
+						<div><a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a></div>
+					</div>
+					<div class="envelope popup" data-popupdata="joinourcommunity">
+					  <div class="icon-envelope"></div>
+					  <div class="header"></div>
+					  <div class="letter"></div>
+					</div>
+				</div>
+					
+				
+			</nav>
+		</section>
+		
+		
 		<!--Menu icon in lower sizes.-->
-        <div id="hamburger">
-            <div class="bar"></div>
-        </div>
  	@yield('headercontent')		
 
 	<!--Mainsponsors END-->
