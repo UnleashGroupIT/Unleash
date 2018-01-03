@@ -41,6 +41,7 @@
     <div class="GridContainer CustomItemContainer">
         <ul class="SponsorsGrid" id="CustomSponsorGrid" v-sortable="sortableOptions">
              <li v-for="sponsor in sponsors" :id=sponsor.id :data-sponsorid=sponsor.id class="sortable">
+              @{{ sponsor }}
                             <div class="GridImageContainer">
                               <div class="IconContainer">
                                <div title="Remove from selected grid" class="RemoveFromGrid" v-on:click="removeFromGrid(sponsor.id)"><i class="fa fa-times-circle" aria-hidden="true"></i></div>

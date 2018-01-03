@@ -375,7 +375,10 @@ var spVue = new Vue({
     	document.getElementById("NewSponsorForm").reset();
     	this.selectedImage = '';
     	this.imgPrev = '';
-    	this.sponsorPrevImg = '';
+		 this.image= '';
+    	this.speakerPrevImg = '';
+		$('#sponsorPrevImg').attr('src','');
+
     })
   },
 
