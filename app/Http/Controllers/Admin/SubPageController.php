@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\GridController;
 use App\Events;
+use App\User;
 
 class SubPageController extends Controller
 {
@@ -17,7 +18,10 @@ class SubPageController extends Controller
     
       /* -- UI Function --*/   
 
-   public function speakerUI(Request $request){
+   public function speakerUI(Request $request, User $user){
+
+      $this->authorize('AdminSubSiteAccess', $user);
+
    	 $request->request->add(['category' => 1]);
    	
      $grids = new GridController;

@@ -41,6 +41,8 @@ export default {
   
   },
 
+//TODO: Reload the selected grid when we edit a speaker
+
   methods: {
   	addSpeakerToGrid(speakerId){
 
