@@ -298,3 +298,42 @@ Route::get('/america/sponsor-pdf', function () {
 Route::get('/america/terms', function () {
     return redirect('/terms');
 });
+
+/******** Admin Routes **********/
+
+  
+Route::get('adminsite/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('adminsite/login', 'Auth\LoginController@login');
+Route::post('adminsite/logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+//Route::get('adminsite/usrreg', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//Route::post('adminsite/usrreg', 'Auth\RegisterController@register');
+
+//Admin Registration is closed for the moment... need some more safeguards and stuff
+Route::get('adminsite/usrreg', function () {
+    return redirect('adminsite/login');
+})->name('register');
+Route::post('adminsite/usrreg', function () {
+    return redirect('adminsite/login');
+});
+
+// Password Reset Routes...
+Route::get('adminsite/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('adminsite/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('adminsite/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('adminsite/password/reset', 'Auth\ResetPasswordController@reset');
+
+//Auth::routes();
+Route::get('/adminsite', 'HomeController@index');
+Route::get('/adminsite/home', 'HomeController@index')->name('home');
+
+Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
+
+//Admin pages
+Route::get('/adminsite/speakers', 'Admin\SubPageController@speakerUI')->name('admin.speakers');
+Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
+
+//Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
+//Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');
+

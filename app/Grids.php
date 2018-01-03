@@ -34,5 +34,7 @@ class Grids extends Model
                ->withTimestamps();
         }
 
+      protected $fillable = ['event_id', 'grid_name', 'grid_type'];   
+
 
 }
