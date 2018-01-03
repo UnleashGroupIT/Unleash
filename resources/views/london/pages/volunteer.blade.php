@@ -40,8 +40,8 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>UNLEASH LONDON<br />VOLUNTEER PROGRAM</h2>
-				<p>UNLEASH is a network of creative people on a mission to inspire and transform the Future of Work and technology. Our shows attract the world’s leading visionaries, entrepreneurs, disrupters and doers including Arianna Huffington, Sir Richard Branson, Gary Vaynerchuk and more. They attract delegates from the world’s leading Fortune Top 500 companies and brands such as Uber, Airbus, Reddit and Shazam. UNLEASH (previously HR Tech World) is much more than just business events; we are in the change the world for the greater good business.</p>
-				<p>One mission: Unleash Your People! London, Las Vegas, Amsterdam. #UNLEASH18</p>
+				<p>UNLEASH is much more than just business events; we are in the change-the-world-for-the-greater-good business. We are passionate creative people on a mission to inspire and transform the world of work &amp; technology. Our events attract the world’s leading entrepreneurs, visionaries, disrupters and doers, including Sir Richard Branson, Arianna Huffington, Sir Ken Robinson, Rachel Botsman, Gary Vaynerchuk and many more. Past and future show locations include Amsterdam, London, San Francisco, Paris and Las Vegas and have welcomed over 9,000 attendees in 2017.</p>
+				<p>In 2018, UNLEASH will scale significantly to become the world’s leading marketplace and community on the future of the workplace and technology. #UNLEASH18</p>
 			</div>
 			<button class="green-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>

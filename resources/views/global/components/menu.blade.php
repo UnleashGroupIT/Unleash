@@ -71,6 +71,7 @@
 											<li><a href="{{ route('ams.index') }}#spkrgrd">Speakers</a></li>
 											<li><a href="{{ route('ams.sponsors') }}">Sponsors</a></li>
 											<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
+											
 										</ul>
 									</li>
 								</ul>

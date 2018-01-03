@@ -1,6 +1,6 @@
 //BUTTONS
 
-.btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
+.btn, .full-btn, .pink-btn, .darkgreen-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
   padding: .8em;
   margin: .5em;
   width: 100%;
@@ -61,6 +61,17 @@
   	color: #33cc33;
   	background-color: #fff;
   	border-color: #33cc33;
+  }
+}
+
+.darkgreen-btn {
+  background-color: #083643;
+  color: #fff;
+  margin: 0;
+  &:hover{
+    color: #083643;
+    background-color: #fff;
+    border-color: #083643;
   }
 }
 

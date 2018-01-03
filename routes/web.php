@@ -1,5 +1,6 @@
 <?php
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,11 +13,13 @@ use Carbon\Carbon;
 */
 
 /*********** GLOBAL ************/
-Route::get('/index', function () {
-    return redirect('/news/');
+Route::get('/index', function (Request $request) {
+    
+	return redirect('/news/');
+   
 });
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
     return redirect('/news/');
 });
 
@@ -33,7 +36,10 @@ Route::get('/about-prev', function () {
 })->name('ams.about-prev');
 
 Route::get('/holiday', function () {
+	Cookie::queue('hrnholiday', '1', 11000);
+	
   return view('global.pages.holiday');
+  
 })->name('ams.holiday');
 
 Route::get('/wpredirect', 'StaticPageController@wpredirect');
@@ -113,7 +119,9 @@ Route::get('/amsterdam/thankyou', function(){
 	return view('amsterdam.pages.streamthankyou');
 });
 
-//Route::get('/amsterdam/tickets', 'StaticPageController@about')->name('ams.tickets');
+Route::get('/amsterdam/tickets', function () {
+    return view('amsterdam.pages.tickets_temp');
+})->name('ams.tickets');
 
 Route::get('/amsterdam/terms', function () {
     return redirect('/terms');
@@ -193,7 +201,7 @@ Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 
 Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
 
-Route::get('/london/tickets', function(){
+/*Route::get('/london/tickets', function(){
 
 	$now = Carbon::now();
 	
@@ -207,8 +215,12 @@ Route::get('/london/tickets', function(){
 	}
 
 	
-})->name('london.tickets');
+})->name('london.tickets');*/
 
+
+Route::get('/london/tickets', function () {
+    return view('london.pages.tickets_temp');
+})->name('london.tickets');
 
 Route::get('/london/terms', function () {
     return redirect('/terms');
@@ -265,8 +277,12 @@ Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about
 
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
 
-Route::get('/america/tickets', function () {
+/*Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
+})->name('lasvegas.tickets');*/
+
+Route::get('/america/tickets', function () {
+    return view('lasvegas.pages.tickets_temp');
 })->name('lasvegas.tickets');
 
 Route::get('/america/travel', function () {

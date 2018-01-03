@@ -42,8 +42,8 @@
 					</div>
 					<div class="contact-wrp">
 						<p>info@unleashgroup.io</p>
-						<p>+44 20 34 689 689</p>
-						<p>+36 1 201 1469</p>
+						<p>UK: +44 20 34 689 689</p>
+						<p>US: +1 415 795 7022</p>
 						<p>HRN Terms &amp; Conditions</p>
 						<p>Cookie Policy</p>
 						<p>Copyright &copy; 2017 HRN.</p>
