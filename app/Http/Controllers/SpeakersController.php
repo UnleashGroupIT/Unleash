@@ -23,7 +23,7 @@ class SpeakersController extends Controller
      }      
      
       if ($request->is('london') || $request->is('london/*')) {
-         $SpeakerGridId = 1;
+         $SpeakerGridId = 8;
 
          $site = 'london.pages.speakers';    
      }   

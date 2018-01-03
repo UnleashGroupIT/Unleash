@@ -25,13 +25,13 @@ class MainPageController extends Controller
      }      
      
       if ($request->is('london') || $request->is('london/*')) {
-         $SpeakerGridId = 1;
+         $SpeakerGridId = 6;
          $SponsorGridId = 3;
          $site = 'london.pages.index';    
      }   
 
       if ($request->is('america') || $request->is('america/*')) {
-         $SpeakerGridId = 1;
+         $SpeakerGridId = 7;
          $SponsorGridId = 3;
          $site = 'lasvegas.pages.index';
      }   
@@ -75,7 +75,7 @@ class MainPageController extends Controller
    
     
      $SpeakerGridController = new SpeakersController;
-     $speakerGrids =  $SpeakerGridController->listGridContent(1);
+     $speakerGrids =  $SpeakerGridController->listGridContent(6);
 
      $SponsorGridController = new SponsorsController;
      $sponsorGrids =  $SponsorGridController->listGridContent(3);
@@ -96,7 +96,7 @@ class MainPageController extends Controller
    
     
      $SpeakerGridController = new SpeakersController;
-     $speakerGrids =  $SpeakerGridController->listGridContent(1);
+     $speakerGrids =  $SpeakerGridController->listGridContent(7);
 
      $SponsorGridController = new SponsorsController;
      $sponsorGrids =  $SponsorGridController->listGridContent(3);
