@@ -38,8 +38,8 @@ var spVue = new Vue({
 					let new_item_id = evt.item.dataset.speakerid
 					let new_item_order = evt.newIndex
 					let old_item_order = evt.oldIndex;
-					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
-					let gridId = $("#SelectSpeakerGrid").val();
+					let old_item_id = $( "#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
+					let gridId = $("#SelectGrid").val();
 
 				axios.patch(`/api/speakergrid/${gridId}/${old_item_id}`, {
 				    order_number: old_item_order
