@@ -10,7 +10,7 @@
 
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Unleash Admin</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -51,7 +51,9 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav admin-nav">
+                        @can('AdminSubSiteAccess', App\User::class)
                        <li><a href="{{ route('admin.speakers') }}">Speakers</a></li>
+                       @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -95,6 +95,11 @@ section.two .wrppr {
     }
     @media (min-width: 75em) {
       height: 100%;
+      background-size: contain;
+      background-attachment:fixed;
+    }
+    @media (min-width: 110em) {
+      height: 100%;
       background-size: 50% 100%;
       background-attachment:fixed;
     }
@@ -148,6 +153,19 @@ section.two .wrppr {
           background-image: url("../../gfx/press4-sec-bg.jpg");
           background-position: top right; } }
 
+          section.two .fix-bg.press-5 {
+      background-image: url("../../gfx/press5-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.press-5 {
+          background-image: url("../../gfx/press5-sec-tablet-bg.jpg");
+          background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.press-5 {
+          background-image: url("../../gfx/press5-sec-bg.jpg");
+          background-position: top left; } }
+
           section.two.clients {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
@@ -187,6 +205,11 @@ section.two .content .content-wrap {
   a{
   	color:#0090ff;
   	display: block;
+    line-height: 1.5;
+    margin:1em 0;
+    &:hover{
+      color:$dark-green;
+    }
   }
 }
 

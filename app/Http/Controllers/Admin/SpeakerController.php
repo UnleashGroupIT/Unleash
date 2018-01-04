@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Storage;
 
 class SpeakerController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 	//List all speakers
     public function getSpeakers(Request $request){
         $speakerIds = [];
@@ -130,7 +136,13 @@ class SpeakerController extends Controller
     		if((isset($speaker->$field)) && $speaker->$field != $value){
 				$speaker->$field = $value;
 
+                if(($field == "first_name") || ($field == "last_name")){
+                   $speaker->full_name = $request->first_name.' '.$request->last_name;
+                }
+
     		}
+
+
     		
     	}
 

@@ -14,7 +14,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+      //  'App\Model' => 'App\Policies\ModelPolicy',
+        'App\User' => 'App\Policies\AdminPolicy',
     ];
 
     /**
@@ -25,8 +26,11 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-		
-		Passport::routes();
+        Passport::routes();
+
+        Gate::before(function ($user){
+            if ($user->user_level == 1) return true;
+        });
 
         //
     }

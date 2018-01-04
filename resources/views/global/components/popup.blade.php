@@ -13,7 +13,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_26983pi_145751_26983" id="145751_26983pi_145751_26983" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_26985pi_145751_26985" id="145751_26985pi_145751_26985" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organisation name" class="form-input" name="145751_26987pi_145751_26987" id="145751_26987pi_145751_26987" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Organization Name" class="form-input" name="145751_26987pi_145751_26987" id="145751_26987pi_145751_26987" size="30" maxlength="255" type="text">
 
 								<select name="145751_27001pi_145751_27001" id="145751_27001pi_145751_27001" class="select form-input" onchange=""><option value="165139" selected="selected" hidden>Apply as</option>
 
@@ -84,14 +84,14 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
 		    <h3>Apply to Speak</h3>
-		    <p>If you would like to join our incredible community of world thought leaders and influencers from the HR industry,<br> please fill out the following details and we will get in touch with you.</p>
+		    <p>If you would like to join our incredible community of thought leaders and influencers from the HR industry,<br> please fill out the following details and we will get in touch with you.</p>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -124,7 +124,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -217,15 +217,15 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h3>APPLY FOR SPONSORSHIP</h3>
-		    <p>Join Who’s Who on the Future of Work & Technology</p>
+		    <h3>APPLY TO BE A SPONSOR</h3>
+		    <p>Join the Event that Helps Shape the Future of Work &amp; Technology</p>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -251,14 +251,14 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
 		    <h3>JOIN OUR COMMUNITY</h3>
-		    <p>Join Who’s Who on the Future of Work & Technology</p>
+		    <p>Join Who’s Who on the Future of Work &amp; Technology</p>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -277,6 +277,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		</div>
 	</div>
 
+	<!--PRESS-->
+
 	<div id="subscribe" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
@@ -286,15 +288,43 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		    <p>Sign up to receive our latest announcements about UNLEASH events and news.</p>
 		  </div>
 		  <div class="modal-body">
-		    <form accept-charset="UTF-8" method="post" action="" class="form">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-01-04/mdq8k" class="form" id="pardot-form">
                 
-                <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_29224pi_145751_29224" id="145751_29224pi_145751_29224" size="30" maxlength="255" type="email">
 
-			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="Lead Source 1" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15960pi_145751_15960" id="145751_15960pi_145751_15960" size="30" maxlength="255" type="text">
-                    <input placeholder="Lead Source 2" value="Amsterdam2018-JoinOurCommunity" class="form-input" name="145751_15962pi_145751_15962" id="145751_15962pi_145751_15962" size="30" maxlength="255" type="text">
-					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="Amsterdam2018-JoinOurCommunity" class="text" size="30" maxlength="255"  />
-                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>
+
+	<div id="pressreg" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>PRESS &amp; ANALYST REGISTRATION</h3>
+		    <p>Register for a Press/Analyst Pass at UNLEASH Conference &amp; Expo in London, 20-21 March, 2018!</p>
+		  </div>
+		  <div class="modal-body">
+		    <form class="form" accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-05-23/jqxys">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Publication Name" class="form-input" name="145751_22397pi_145751_22397" id="145751_22397pi_145751_22397" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_22399pi_145751_22399" id="145751_22399pi_145751_22399" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_22401pi_145751_22401" id="145751_22401pi_145751_22401" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="City, Country" class="form-input" name="145751_22403pi_145751_22403" id="145751_22403pi_145751_22403" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="URL to latest article from past 3 months" class="form-input" name="145751_22405pi_145751_22405" id="145751_22405pi_145751_22405" size="30" maxlength="255" type="text">
+                <p class="hidden">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_22393pi_145751_22393" id="145751_22393pi_145751_22393" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_22395pi_145751_22395" id="145751_22395pi_145751_22395" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" data-field="sourcetwo" id="145751_23341pi_145751_23341" value="amsterdam" class="text" size="30" maxlength="255"  />
+
+                    <input placeholder="Lead Source 3" data-field="sourcethree" value="Amsterdam2017-Press" class="form-input" name="145751_22407pi_145751_22407" id="145751_22407pi_145751_22407" size="30" maxlength="255" type="text">
+                </p>
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
                     <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
@@ -317,6 +347,37 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
             </div>
 		    <h3 class="ThanksH3">THANK YOU FOR YOUR ENQUIRY</h3>
 		    <p>We will be in touch shortly. In the meantime, you can find out more about our range of services and events by visiting our websites.</p>
+		  </div>
+        <ul class="popup-social-icons"> 
+            <li>
+                <a title="Twitter" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Twitter']);" href="https://twitter.com/hrtechworld" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a title="LinkedIn" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Linkedin']);" href="https://www.linkedin.com/grp/home?gid=3930182" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a title="Facebook" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Facebook']);" href="https://www.facebook.com/hrtechworld" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a title="Youtube" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Youtube']);" href="https://www.youtube.com/user/hrneurope/" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            </li>
+        </ul>		  
+		  <div class="modal-body">
+
+		  </div>
+		</div>
+	</div>
+
+	<div id="thankyousign" class="modal">
+		<!-- Modal content -->
+		<div class="ThanksModelContent modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		      <div class="thank-you-image">
+                <img class="ThankYouImage" src="{{ URL::asset('gfx/thankyou.svg') }}" alt="Thank You" />
+            </div>
+		    <h3 class="ThanksH3">THANK YOU FOR YOUR SIGNING UP</h3>
+		    <p>Thank you! You've been added to our mailing list. You wont miss any important news and updates in the Future!</p>
 		  </div>
         <ul class="popup-social-icons"> 
             <li>

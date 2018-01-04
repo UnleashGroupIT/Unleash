@@ -301,6 +301,11 @@ $(document).ready(function(){
 
     if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
 			$('#thankyou').css("display", "flex")
-    }        
+    }  
+
+    if (window.location.href.indexOf('#ThankYouForSigningUp') != -1) {
+			$('#thankyousign').css("display", "flex")
+    }  
+	
 
 }); // READY END

@@ -161,7 +161,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
-				<p>In 2017 we have welcomed 9000 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, UNLEASH is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
+				<p>In 2017 we welcomed 9000 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, UNLEASH is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/amsterdam/coma.png') }}" alt="coma">

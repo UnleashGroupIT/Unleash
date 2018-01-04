@@ -31,6 +31,10 @@ Route::get('/about', function () {
   return view('global.pages.about');
 })->name('ams.about');
 
+Route::get('/press', function () {
+  return view('global.pages.press');
+})->name('press');
+
 Route::get('/about-prev', function () {
   return view('amsterdam.pages.about-prev');
 })->name('ams.about-prev');
@@ -307,16 +311,16 @@ Route::post('adminsite/login', 'Auth\LoginController@login');
 Route::post('adminsite/logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
-//Route::get('adminsite/usrreg', 'Auth\RegisterController@showRegistrationForm')->name('register');
-//Route::post('adminsite/usrreg', 'Auth\RegisterController@register');
+Route::get('adminsite/usrreg', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('adminsite/usrreg', 'Auth\RegisterController@register');
 
 //Admin Registration is closed for the moment... need some more safeguards and stuff
-Route::get('adminsite/usrreg', function () {
+/*Route::get('adminsite/usrreg', function () {
     return redirect('adminsite/login');
 })->name('register');
 Route::post('adminsite/usrreg', function () {
     return redirect('adminsite/login');
-});
+});*/
 
 // Password Reset Routes...
 Route::get('adminsite/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
