@@ -60,7 +60,7 @@
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
-			<p>UNLEASH is much more than technology it’s about unleashing the power and potential of people. The 4th industrial revolution, leadership crises, rapid advances in technology coupled with fast paced innovation are now forever changing our world. Industries, jobs and ways of working are being disrupted and so is the role and relationship of people with work - people are back and they are taking center stage!<br /><strong>Unleash Your People!</strong></p>
+			<p>2018 marks UNLEASH’s fourth year at the ExCel London, a ground-breaking show unlike any other. Offering unparalleled learning and networking opportunities on the Future of Work and Technology, UNLEASH 2018 Conference &amp; Expo is officially the UK’s largest enterprise show for decision makers, with over 60 nationalities represented in 2017 and more than half of the attendees from the C-Level suite. We are the fastest growing people-focused event on the planet and we pride ourselves in organizing shows that make a real difference and bring a greater good to the world.</p>
 			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
@@ -69,30 +69,28 @@
 	<!--Keynote-->
 	<section class="two keynote arianna">
 		<div class="wrppr">
-			<div class="fix-bg robinson"></div>
+			<div class="fix-bg betts"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
 				<div class="h4wrp">
 					<div>
 						<img class="mic-logo" src="{{ URL::asset('gfx/london/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in London 2017</h4>
+						<h4 class="ky">Keynote in London</h4>
 					</div>
 					<img class="U-logo" src="{{ URL::asset('gfx/london/U.png') }}" alt="Unleash">
 				</div>
-				<h2>Sir Ken Robinson</h2>
-				<p class="pdg">Watch to see who we Unleash to Keynote in London in 2018. In March 2017 we hosted Sir Ken Robinson
-					whose Ted TalK has been seen by an estimated 300 million people in over 150 countries. Sir Ken works
-					with governments in Europe, Asia and the US, international agencies, Fortune 500 companies and leading
-					cultural organizations. Called “one of the world’s elite thinkers on creativity and innovation” by Fast
-					Company magazine, Sir Ken has received numerous awards and recognitions for his groundbreaking
-					contributions.</p>
-				<div class="testim">
-					<img class="coma" src="{{ URL::asset('gfx/comawhite.png') }}" alt="coma">
-					<span>Imagination is the source of every form of human achievement. And it's the one thing that I believe we
-						are systematically jeopardizing in the way we educate our children and ourselves.</span>
-						<p><strong class="strn">Sir Ken Robinson</strong></p>
-				</div>
+				<h2>Alexander Betts</h2>
+				<h5 class="BettsOxford">Oxford University</h5>
+				
+				<p class="pdg">Coinciding with Brexit contingency planning in March 2018 for most UK, European and global organisation’s, instead of simply asking why it happened, or depicting doomsday scenarios of the future, UNLEASH will ask: what opportunities does Brexit offer for business? How will the resulting policy decisions taken by government on mobility and trade, societal changes, and economic adjustments redefine the opportunity structures for business? What needs to be done in terms of innovation, technology and leadership to grasp those opportunities?</p>
+				
+				<p class="pdg">Alexander Betts is a WEF Young Global Leader named to the Thinkers50 2017 Radar list of “People Most Likely to Shape the Future”. He will walk us through why Brexit happened and what comes next for enterprise organisations and their employees. Join us to hear a new vision of the positive effects of globalization and the steps leaders should take while stepping into the post-Brexit era.</p>
+							
+
+				<p class="pdg">“The biggest challenge we face in Europe is how to reconcile globalisation with democracy.”</p>
+				
+
 			</div>
 			<div class="schedule-wrp">
 				<button id="spkrgrd" class="white-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
@@ -103,14 +101,14 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Past Speakers</h2>
-				<p>We bring you the visionaries, the movers and shakers and the hard edged thinkers shaping and unleashing tomorrows world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today.  More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+				<p>We bring you the visionaries, the movers &amp; shakers and the hard-edged thinkers shaping and unleashing tomorrow's world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today speak and attend our events. More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
 				<div class="testim wdth">
 					<img class="coma" src="http://www.unleashgroup.io/gfx/london/coma.png" alt="coma">
 					<span>The best event in the world on HR and Technology</span>
 						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
 				</div>
 			</div>
-			<button class="green-btn popup" data-popupdata="applytospeak">Become a Speaker</button>
+			<button class="green-btn popup" data-popupdata="applytospeak">Become a speaker</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg speakers right"></div>
@@ -126,9 +124,9 @@
 	<section class="one-cntr counter">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
+			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
 			<div class="your-clock"></div>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
+			<a href="{{ route('london.tickets') }}"><button class="green-btn">Register Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -137,10 +135,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>The Expo</h2>
-				<p>Meet the Who’s Who of the Future of Work at UNLEASH. Buyers of technology can take a year’s worth of
-					meetings in just 2 days and all under one roof as well as meet colleagues and counterparts. At UNLEASH
-					the expo is more than just a showcase - it’s a hub full of interactivity, excitement, fun, friendship and
-					entertainment. UNLEASH - it’s where the future of work meets!</p>
+				<p>The Expo at UNLEASH is more than just a showcase of vendors - it’s full of interactivity, excitement, fun, friendships and entertainment. Its where those shaping the future of work and technology – from large enterprises to the next innovators from around the world – network and meet up.</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/london/coma.png') }}" alt="coma">
@@ -163,14 +158,14 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
-				<p>In 2017 we welcomed 9000 people from as many as +120 countries. Representing the world's leading organizations across all industry verticals, UNLEASH is the leading show on people and technology both in terms of content and deals done. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the Future of Work!</p>
+				<p>In 2017, we welcomed over 9000 attendees from as many as +120 countries. Representing the world's leading organizations across most industry verticals, UNLEASH is the leading show on Future of Work and Technology both in terms of content provided from hundreds of speakers and deal-making on our expo floors. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the way the world works!</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/london/coma.png') }}" alt="coma">
 				<span class="blck">Fantastic opportunity to network, this show just gets better every year!</span>
 				<strong class="strn">- Activision Blizzard</strong>
 			</div>
-			<button class="green-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
+			<button class="green-btn popup" data-popupdata="becomeasponsor">Apply to be a Sponsor</button>
 		</div>
 	</section>
 	<!--Clients END-->
@@ -184,8 +179,8 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Startup Zone</h2>
-				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and people technology.
-					First staged in October 2011, it has successfully hosted 8 editions in total, including four in Amsterdam,
+				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and Technology.
+					First staged in October 2011, it has successfully hosted eight editions in total, including four in Amsterdam,
 					two in London and two in Paris. As the show has matured, what started as pro-bono work is now the
 					must-attend show for startups; it’s where they learn how to pitch their product to fans and critics alike
 					including entrepreneurs such as Arianna Huffington and Sir Richard Branson, thinkers and analysts like
@@ -205,7 +200,7 @@
 			<div class="mapcont-wrp">
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>ExCeL London, will host UNLEASH in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just 5 minutes away, getting to ExCeL London couldn't be easier.</p>
+					<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier.</p>
 				</div>
 				<a href="{{ route('london.floorplan') }}"><button class="green-btn">More</button></a>
 			</div>
@@ -214,13 +209,6 @@
 		</div>
 	</section>
 	<!--Map END-->
-	<section class="one-cntr">
-		<div class="wrp">
-			<h2>Register Now!</h2>
-			<p>Unleash Yourself! Book your place at the world’s leading and fastest growing show on the future of work. Now is the time face the challenge of change and let your people loose to power your organization into the next decade of the 21st Century.</p>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
-		</div>
-	</section>
 @endsection
 
 @section('footerscripts')

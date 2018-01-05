@@ -57,4 +57,5 @@
 					</li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
 					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
+					<li><a href="{{ route('press') }}">Press</a></li>
 				</ul>

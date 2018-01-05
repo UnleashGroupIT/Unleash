@@ -163,6 +163,9 @@ section.one.mainsponsors {
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: .5em;
+    strong{
+      color:#e80f42;
+    }
   }
 }
   
@@ -294,27 +297,32 @@ section.two .fix-bg {
     }
     @media (min-width: 75em) {
       height: 100%;
+      background-size: contain;
+      background-attachment:fixed;
+    }
+    @media (min-width: 105em) {
+      height: 100%;
       background-size: 50% 100%;
       background-attachment:fixed;
     }
   }
 
-section.two .fix-bg.gary {
-  background-image: url("../../gfx/lasvegas/gary-mobile-bg.jpg");
+section.two .fix-bg.keynote {
+  background-image: url("../../gfx/lasvegas/keynote-mobile-bg.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 @media (min-width: 40em) {
-  section.two .fix-bg.gary {
-    background-image: url("../../gfx/lasvegas/gary-tablet-bg.jpg");
+  section.two .fix-bg.keynote {
+    background-image: url("../../gfx/lasvegas/keynote-tablet-bg.png");
       background-attachment: fixed;
   }
 }
 
 @media (min-width: 75em) {
-  section.two .fix-bg.gary {
-    background-image: url("../../gfx/lasvegas/gary-bg.jpg");
+  section.two .fix-bg.keynote {
+    background-image: url("../../gfx/lasvegas/keynote-bg.png");
     background-position: top left;
   }
 }
@@ -442,8 +450,9 @@ section.two.keynote.arianna .content {
 section.two.keynote.arianna .h4wrp {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   margin-bottom: 1em;
+  vertical-align: top;
 }
 
 section.two.keynote.arianna .h4wrp > div {
@@ -480,13 +489,39 @@ section.two.keynote.arianna h2 {
   padding-left: 1em;
   padding-right: .5em;
   color: #fff;
-  background-color: #083643;
+  /*background-color: #083643;*/
   display: inline-block;
+  width: 89%;
 }
 
-@media (min-width: 75em) {
+
+
+
+
+@media (min-width: 300px) {
+  section.two.keynote.arianna h2 {
+    font-size: 1.6rem;
+    padding-left: 1em;
+	width: 79%
+  }
+}
+@media (min-width: 1200px) {
   section.two.keynote.arianna h2 {
     padding-left: 2em;
+	width: 79%
+  }
+}
+
+@media (min-width: 1800px) {
+  section.two.keynote.arianna h2 {
+    padding-left: 2em;
+	 width: 89%;
+  }
+}
+
+@media (min-width: 2000px) {
+  section.two.keynote.arianna h2 {
+    padding-left: 3.2vw;
   }
 }
 
@@ -503,6 +538,8 @@ section.two.keynote.arianna h4 {
     padding: 0 2em;
   }
 }
+
+
 
 section.two.keynote.arianna .pdg {
   padding: 0 2em;

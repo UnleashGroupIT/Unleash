@@ -1,5 +1,5 @@
 <!-- The Modal -->
-	<div id="booknow-old" class="modal">
+	<div id="booknow" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -13,7 +13,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_26177pi_145751_26177" id="145751_26177pi_145751_26177" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_26179pi_145751_26179" id="145751_26179pi_145751_26179" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organisation name" class="form-input" name="145751_26175pi_145751_26175" id="145751_26175pi_145751_26175" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Organization Name" class="form-input" name="145751_26175pi_145751_26175" id="145751_26175pi_145751_26175" size="30" maxlength="255" type="text">
 
 								<select name="145751_26181pi_145751_26181" id="145751_26181pi_145751_26181" class="select form-input" onchange=""><option value="149591" required hidden>Apply as</option>
 								<option value="149591" >Delegate</option>
@@ -39,52 +39,6 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		  </div>
 		</div>
 	</div>
-	
-
-<div id="booknow" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-		  <div class="modal-header">
-		    <span class="close">&times;</span>
-		    <h3>Book Now</h3>
-		    <p>Thank you for your interest in our event.
-Please fill in all the fields below, and we'll get back to you soon.</p>
-		  </div>
-		  <div class="modal-body">
-		    <form action="http://go.pardot.com/l/145751/2017-12-13/lkkft" method="POST" class="form">
-        <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-        <input required="required" placeholder="Business Email" class="form-input" name="145751_28508pi_145751_28508" id="145751_28508pi_145751_28508" size="30" maxlength="255" type="email">
-        <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_28510pi_145751_28510" id="145751_28510pi_145751_28510" size="30" maxlength="40" type="tel">
-        <input required="required" placeholder="Organisation Name" class="form-input" name="145751_28506pi_145751_28506" id="145751_28506pi_145751_28506" size="30" maxlength="255" type="text">
-                
-        <select required name="145751_28532pi_145751_28532" id="145751_28532pi_145751_28532" class="select form-input" onchange="">
-            <option value="" selected="selected" hidden>Apply as</option>
-            <option value="183346">Analyst</option>
-            <option value="183348">Blogger</option>
-            <option value="183350">Delegate</option>
-            <option value="183352">Investor</option>
-            <option value="183354">Media</option>
-            <option value="183356">Speaker</option>
-            <option value="183358">Sponsor</option>
-            <option value="183360">Startup</option>
-        </select>
-
-        <p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-            <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_28502pi_145751_28502" id="145751_28502pi_145751_28502" size="30" maxlength="255" type="text">
-            <input placeholder="Last name" data-field="lname" class="form-input" name="145751_28504pi_145751_28504" id="145751_28504pi_145751_28504" size="30" maxlength="255" type="text">
-            
-            <input placeholder="Page Source" type="text" name="145751_28516pi_145751_28516" id="145751_28516pi_145751_28516" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-            <input placeholder="Robot Source" type="text" name="145751_28514pi_145751_28514" id="145751_28514pi_145751_28514" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-        </p>                
-        <div class="popup-paragraph popup-policy ">
-            <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-            <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-        </div>
-        <input name="submit" value="submit" type="submit" class="darkgreen-btn">
-    </form>
-		  </div>
-		</div>
-	</div>	
 
 	<div id="brochure" class="modal">
 		<!-- Modal content -->
@@ -126,14 +80,14 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
 		    <h3>Apply to Speak</h3>
-		    <p>If you would like to join our incredible community of world thought leaders and influencers from the HR industry,<br> please fill out the following details and we will get in touch with you.</p>
+		    <p>If you would like to join our incredible community of thought leaders and influencers from the HR industry,<br> please fill out the following details and we will get in touch with you.</p>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -166,7 +120,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">
@@ -225,15 +179,15 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h3>APPLY FOR SPONSORSHIP</h3>
-		    <p>Join Who’s Who on the Future of Work & Technology</p>
+		    <h3>APPLY TO BE A SPONSOR</h3>
+		    <p>Join the Event that Helps Shape the Future of Work &amp; Technology</p>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2016-11-07/fqbvp" class="form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_15952pi_145751_15952" id="145751_15952pi_145751_15952" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_15954pi_145751_15954" id="145751_15954pi_145751_15954" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Company name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_15956pi_145751_15956" id="145751_15956pi_145751_15956" size="30" maxlength="255" type="text">
 
 			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_15948pi_145751_15948" id="145751_15948pi_145751_15948" size="30" maxlength="255" type="text">

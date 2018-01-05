@@ -97,7 +97,7 @@ header {
 }
 
 .wrp {
-  max-width: 1024px;
+  max-width: 1030px;
   margin: 0 auto;
   padding: 0 1em;
 }
@@ -277,27 +277,32 @@ section.two .fix-bg {
     }
     @media (min-width: 75em) {
       height: 100%;
+      background-size: contain;
+      background-attachment:fixed;
+    }
+    @media (min-width: 105em) {
+      height: 100%;
       background-size: 50% 100%;
       background-attachment:fixed;
     }
   }
 
-section.two .fix-bg.robinson {
-  background-image: url("../../gfx/london/robinson-mobile-bg.jpg");
+section.two .fix-bg.betts {
+  background-image: url("../../gfx/london/betts-mobile-bg.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 @media (min-width: 40em) {
-  section.two .fix-bg.robinson {
-    background-image: url("../../gfx/london/robinson-tablet-bg.jpg");
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/london/betts-tablet-bg.png");
     background-attachment: fixed;
   }
 }
 
 @media (min-width: 75em) {
-  section.two .fix-bg.robinson {
-    background-image: url("../../gfx/london/robinson-bg.jpg");
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/london/betts-bg.png");
     background-position: top left;
   }
 }
@@ -474,6 +479,28 @@ section.two.keynote.arianna h4 {
 
 section.two.keynote.arianna .pdg {
   padding: 0 2em;
+  margin-bottom: 30px;
+}
+
+section.two.keynote.arianna .BettsOxford {
+  padding: 0 1.4em;
+  color:#fff;
+  font-size: 1.2rem;
+  margin: 1em 0;
+}
+
+
+@media (min-width: 75em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3em;
+  }
+}
+
+@media (min-width: 120em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3.1vw;
+
+  }
 }
 
 @media (min-width: 75em) {
@@ -485,6 +512,7 @@ section.two.keynote.arianna .pdg {
 @media (min-width: 120em) {
   section.two.keynote.arianna .pdg {
     padding: 0 3.1vw;
+    margin-bottom: 2vw;
   }
 }
 
