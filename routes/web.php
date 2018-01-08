@@ -229,6 +229,9 @@ Route::get('/london/tickets', function () {
 Route::get('/london/terms', function () {
     return redirect('/terms');
 });
+
+
+
 /*********** America ************/
 
 Route::get('/lasvegas/', function () {

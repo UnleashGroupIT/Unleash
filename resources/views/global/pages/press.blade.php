@@ -37,7 +37,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Press Centre</h2>
-				<p>Welcome to the UNLEASH Press Centre for our media, analysts and influencers! Make sure to browse the full menu for press releases, latest articles, as well, as press and analyst registration information to our UNLEASH events.<br /></p>
+				<p>Welcome to the UNLEASH Press Centre for our media, analysts and influencers! Make sure to browse the full menu for press releases, latest articles, as well as press and analyst registration information to our UNLEASH events.<br /></p>
 				<p>For any inquiries, please contact Andi Lustak on <strong>pr@unleashgroup.io</strong><br />or by calling the following numbers:<br /></p>
 				<p><strong>UK: +44 20 34 689 689<br />US: +1 415 795 7022<br />EU: +36 1 201 1469</strong></p>
 			</div>
@@ -167,7 +167,7 @@
 	<section id="analyst" class="one-cntr">
 		<div class="wrp">
 			<h2>PRESS &amp; AnaLyst registration</h2>
-			<p>All media and analyst representatives who plan to attend UNLEASH Conference and Expo in London must register their interest in attending the show. Press Passes are free-of-charge to all press/media/ industry analysts/ bloggers with valid and current credentials. The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved. Register here to receive more information!</p>
+			<p>All media and analyst representatives who plan to attend UNLEASH Conference and Expo in London must register their interest in attending the show. Press Passes are free-of-charge to all press/media/ industry analysts/ bloggers with valid and current credentials. The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved.</p>
 			<p>If you have any questions about registration or require assistance, please contact Andi Lustak at pr@unleashgroup.io Please note: You will be required to show identification and credentials when you arrive at ExCeL, London.</p>
 			<button class="white-btn popup" data-popupdata="pressreg">Press Registration</button>
 		</div>

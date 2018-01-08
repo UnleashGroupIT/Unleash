@@ -184,7 +184,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		    <span class="close">&times;</span>
 		    <h3>APPLY AS VOLUNTEER</h3>
 		    <p>Please submit your application by 14 February 2018.</p>
-		    <P>We only accept applications from candidates based in London, UK.</P>
+		    <P>We only accept applications from candidates based in London UK, unless all accommodation and travel costs are covered by the applicant.</P>
 		  </div>
 		  <div class="modal-body">
 		    <form accept-charset="UTF-8" method="post" enctype="multipart/form-data" action="https://smart.devmoo.net" class="form">

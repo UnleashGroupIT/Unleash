@@ -77,13 +77,31 @@
             <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
             <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
         </div>
-        <input name="submit" value="submit" type="submit" class="darkgreen-btn">
+        <input name="submit" value="submit" type="submit" id="BookNowSubmit" class="darkgreen-btn">
     </form>
 </section>
 
 @endsection
 
 @section('footerscripts')
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 873672563;
+var google_conversion_label = "rChqCJ7M2noQ897MoAM";
+var google_remarketing_only = false;
+/* ]]> */
+$(document).ready(function() {
+    $('body').on('click', '#BookNowSubmit', function(e) {
+			
+		  var gts = document.createElement('script'); gts.type = 'text/javascript'; gts.async = true;
+		  gts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.googleadservices.com/pagead/conversion.js';
+		  var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(gts, ss);
+
+        
+	});
+ });	
+</script>
+
 <script>
 	    // Form handle 
     $(document).on("change", "#FullName", function () {

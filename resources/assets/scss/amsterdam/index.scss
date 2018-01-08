@@ -212,6 +212,11 @@ section.two {
     }
     @media (min-width: 75em) {
       height: 100%;
+      background-size: contain;
+      background-attachment:fixed;
+    }
+    @media (min-width: 100em) {
+      height: 100%;
       background-size: 50% 100%;
       background-attachment:fixed;
     }

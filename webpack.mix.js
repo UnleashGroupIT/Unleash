@@ -110,7 +110,9 @@ mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/loyalty.scss', 'public/css/london') 
    .sass('resources/assets/scss/london/tickets_temp.scss', 'public/css/london')   
    .sass('resources/assets/scss/london/tickets_old.scss', 'public/css/london')
-   .sass('resources/assets/scss/london/pdfs.scss', 'public/css/london')     
+   .sass('resources/assets/scss/london/pdfs.scss', 'public/css/london')  
+   .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/agenda-v2.scss', 'public/css/london')     
    .options({
          processCssUrls: false,
           /* purifyCss: {
