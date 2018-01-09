@@ -43,7 +43,7 @@
 					<h2 class="aloft">Aloft London</h2>
 					<img class="U-logo" src="{{ URL::asset('gfx/london/U.png') }}" alt="Unleash">
 				</div>
-				<p class="pdg">Aloft London Excel is the only hotel in ExCeL London directly connected to the ExCeL International Convention Centre. Located right next to the Prince Regent DLR station, it is minutes away from London City Airport and Canary Wharf.</p>
+				<p class="pdg">Aloft London Excel is the only hotel in London directly connected to the ExCeL International Convention Centre. Located right next to the Prince Regent DLR station, it is minutes away from London City Airport and Canary Wharf.</p>
 			</div>
 			<div class="content-wrap pdg">
 				<h3>Aloft London Excel</h3>

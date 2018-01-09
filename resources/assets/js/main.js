@@ -275,6 +275,10 @@ $(document).ready(function(){
 		$("#contact").css("display", "flex");
 	}
 
+	if(window.location.hash == "signup") {
+		$("#joinourcommunity").css("display", "flex");
+	}
+
 	$('.popup').click(function() { 
 		let popupName = $(this).data('popupdata');
 		$('#'+popupName).css("display", "flex")

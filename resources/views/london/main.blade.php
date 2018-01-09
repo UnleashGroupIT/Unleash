@@ -117,7 +117,7 @@
 		<nav id="sub" class="sub-menu">
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('london.index') }}">SHOW</a></li>
-				<li><a href="{{ route('london.index') }}#spkrgrd">SPEAKERS</a></li>
+				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
 				<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
 				{{--<li><a href="{{ route('london.loyalty') }}">LOYALTY</a></li>--}}

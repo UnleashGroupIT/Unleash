@@ -1,4 +1,8 @@
 $(document).ready(function()	{
+
+	if(window.location.hash == "signup") {
+		$("#joinourcommunity").css("display", "flex");
+	}
 	
 	(function () {
 		$('#hamburger .bar-wrp').on('click', function() { // ICON CLICK

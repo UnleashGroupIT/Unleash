@@ -44,7 +44,7 @@
 						<p>info@unleashgroup.io</p>
 						<p>+44 20 34 689 689</p>
 						<p>+36 1 201 1469</p>
-						<p>HRN Terms &amp; Conditions</p>
+						<a href="{{ route('global.terms') }}"><p>HRN Terms &amp; Conditions</p></a>
 						<p>Cookie Policy</p>
 						<p>Copyright &copy; 2017 HRN.</p>
 						<p>All Rights Reserved.</p>

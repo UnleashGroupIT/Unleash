@@ -213,6 +213,8 @@ var spVue = new Vue({
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
+	  form.append('bio', $event.target.bio.value);
+	  form.append('website', $event.target.website.value);
       // submit the image			
 
         const config = {
@@ -327,6 +329,10 @@ var spVue = new Vue({
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
+	  form.append('bio', $event.target.bio.value);
+	  form.append('website', $event.target.website.value);
+	  
+	  console.log($event.target.bio.value);
       // submit the image			
 
         const config = {

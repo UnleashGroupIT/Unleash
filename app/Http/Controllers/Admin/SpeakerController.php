@@ -130,10 +130,27 @@ class SpeakerController extends Controller
 
              $speaker->img_url = $speaker->slug.$extension;
         }       
-    
 
+     $changable = [
+        'prefix', 
+        'first_name', 
+        'last_name',
+        'full_name',
+        'slug',
+        'job_title',
+        'bio',
+        'company',
+        'img_url',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'website',
+        'blog_url'
+];
     	foreach ($request->all() as $field => $value) {
-    		if((isset($speaker->$field)) && $speaker->$field != $value){
+          
+    		if(in_array($field, $changable) && $speaker->$field != $value){
+                
 				$speaker->$field = $value;
 
                 if(($field == "first_name") || ($field == "last_name")){
@@ -145,6 +162,7 @@ class SpeakerController extends Controller
 
     		
     	}
+
 
 
 

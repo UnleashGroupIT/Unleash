@@ -60,7 +60,7 @@
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
-			<p>2018 marks UNLEASH’s fourth year at the ExCel London, a ground-breaking show unlike any other. Offering unparalleled learning and networking opportunities on the Future of Work and Technology, UNLEASH 2018 Conference &amp; Expo is officially the UK’s largest enterprise show for decision makers, with over 60 nationalities represented in 2017 and more than half of the attendees from the C-Level suite. We are the fastest growing people-focused event on the planet and we pride ourselves in organizing shows that make a real difference and bring a greater good to the world.</p>
+			<p>2018 marks UNLEASH’s fourth year at the ExCel London, a ground-breaking show unlike any other. Offering unparalleled learning and networking opportunities on the Future of Work and Technology, UNLEASH Conference &amp; Expo in 2018 is officially the UK’s largest enterprise show for decision makers, with over 60 nationalities represented in 2017 and more than half of the attendees from the C-Suite. We are the fastest growing people-focused event on the planet and we pride ourselves in organising shows that make a real difference and bring a greater good to the world.</p>
 			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>

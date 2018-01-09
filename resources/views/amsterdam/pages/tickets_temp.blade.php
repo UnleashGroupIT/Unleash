@@ -40,7 +40,7 @@
 <section id="TicketTimeline">
  <div id="TimelineSingle">
     <div class="TimelineContainer">
-        <h4>WE ARE PERFORMING ROUTINE MAINTENANCE ON OUR TICKET SITES BETWEEN DECEMBER 22ND, 2017 TO JANUARY 8TH, 2018 INCLUSIVELY.</h4>
+        <h4>WE ARE PERFORMING ROUTINE MAINTENANCE ON OUR TICKET SITES.</h4>
     </div>
  </div>
 </section>

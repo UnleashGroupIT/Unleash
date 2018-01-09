@@ -60,7 +60,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to apply them that will have the greatest potential impact and value. Brought to you by the team behind UNLEASH World Congress (formerly HR Tech World), the fastest growing HR Show in the World over the last five years, UNLEASH America gives you the platform to meet with more than vendors, but also the decision makers and innovators shaping the way we work and get work done.</p>
-			<button class="red-btn popup" data-popupdata="booknow">Book Now</button>
+			<a href="{{ route('lasvegas.tickets') }}"><button class="red-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -128,7 +128,7 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/lasvegas/google.png') }}" alt="Google">
 			</div>
-			<button id="spnsrgrd" class="red-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<a href="{{ route('lasvegas.tickets') }}"><button id="spnsrgrd" class="red-btn">Get Your Ticket</button></a>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg expobg"></div>

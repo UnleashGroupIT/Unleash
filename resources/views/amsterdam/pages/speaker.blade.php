@@ -41,6 +41,7 @@
 					<div class="dtls-wrap">
 						<h2>{{$speaker->prefix}} {{ voku::cleanup($speaker->full_name) }}</h2>
 						<h3>{{ $speaker->job_title }}</h3>
+						<h3>{{ $speaker->company }}</h3>
 						<div class="social-icons">
 							@if($speaker->facebook)
 							<a href="{{ $speaker->facebook }}"><div><img src="{{ URL::asset('gfx/facebook.png') }}" alt="Facebook"></div></a>

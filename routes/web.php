@@ -24,8 +24,8 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/terms', function () {
-  return view('amsterdam.pages.terms');
-});
+  return view('global.pages.terms');
+})->name('global.terms');
 
 Route::get('/about', function () {
   return view('global.pages.about');
@@ -137,17 +137,19 @@ Route::get('/london/', 'MainPageController@index')->name('london.index');
 
 Route::get('/london/index', 'MainPageController@index')->name('london.index');
 
-//Route::get('/london/speakers', 'SpeakersController@index')->name('london.speakers');
+Route::get('/london/speakers', 'SpeakersController@index')->name('london.speakers');
 
-//Route::get('/london/speaker', 'SpeakersController@speaker');
 
-Route::get('/london/speaker', function () {
+Route::get('/london/speaker', 'SpeakersController@speaker');
+
+/*Route::get('/london/speaker', function () {
     return redirect('/london/index#spkrgrd');
-});
+});*/
 
-Route::get('/london/speakers', function () {
+/*Route::get('/london/speakers', function () {
     return redirect('/london/index#spkrgrd');
-})->name('london.speakers');
+})->name('london.speakers');*/
+
 
 Route::get('/london/travel', function () {
   return view('london.pages.travel');
@@ -223,7 +225,7 @@ Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorpla
 
 
 Route::get('/london/tickets', function () {
-    return view('london.pages.tickets_temp');
+    return view('london.pages.tickets_earlybird');
 })->name('london.tickets');
 
 Route::get('/london/terms', function () {
@@ -289,7 +291,7 @@ Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floor
 })->name('lasvegas.tickets');*/
 
 Route::get('/america/tickets', function () {
-    return view('lasvegas.pages.tickets_temp');
+    return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');
 
 Route::get('/america/travel', function () {
