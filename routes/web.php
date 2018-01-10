@@ -207,6 +207,8 @@ Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 
 Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
 
+
+
 /*Route::get('/london/tickets', function(){
 
 	$now = Carbon::now();
@@ -232,7 +234,9 @@ Route::get('/london/terms', function () {
     return redirect('/terms');
 });
 
-
+Route::get('/london/startup-pdf', function () {
+  return view('london.pages.startuppdf');
+});
 
 /*********** America ************/
 
