@@ -24,6 +24,7 @@ mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam
 /******** Global **************/   
 mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
    .sass('resources/assets/scss/global/about.scss', 'public/css/global')
+   .sass('resources/assets/scss/global/startup.scss', 'public/css/global')
    .sass('resources/assets/scss/global/holiday.scss', 'public/css/global').options({
          processCssUrls: false,
           /* purifyCss: {

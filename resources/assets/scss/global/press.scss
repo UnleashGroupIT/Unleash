@@ -4,6 +4,7 @@
 @import '../menu';
 @import '../inner-menu';
 @import '../popup';
+@import 'menu';
 
 @media (min-width: 120em) {
   p {
@@ -95,7 +96,7 @@ section.two .wrppr {
     }
     @media (min-width: 75em) {
       height: 100%;
-      background-size: 50% 100%;
+      background-size: contain;
       background-attachment:fixed;
     }
     @media (min-width: 110em) {

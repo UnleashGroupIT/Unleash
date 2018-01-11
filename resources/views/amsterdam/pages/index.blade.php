@@ -58,7 +58,7 @@
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
-			<p>UNLEASH World Congress 2018 returns to the RAI Amsterdam as the largest conference in the world on the Future of Work and Technology. As organisations adapt to the future of work, models of leadership need to change if they want to have any hope of unleashing their people. Leadership needs to be as adaptive as the organisation they are seeking to create. </p><br/>
+			<p>UNLEASH World Conference & Expo returns to the RAI Amsterdam in 2018 as the largest conference in the world on the Future of Work and Technology. As organisations adapt to the future of work, models of leadership need to change if they want to have any hope of unleashing their people. Leadership needs to be as adaptive as the organisation they are seeking to create. </p><br/>
 			
 			<p>From 23-24 October in 2018, +6000 leaders from the most exciting brands, largest enterprises, startups, media and governments will attend our largest show to date at the RAI Amsterdam from over 120 countries worldwide for three days of inspiring stories, networking, and FUN. </p>
 			<button class="blue-btn popup" data-popupdata="booknow">Book Now</button>

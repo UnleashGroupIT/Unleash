@@ -67,7 +67,7 @@
 	            <div id="mobile-logo">
 					<a href="/">
 						<h1>
-							<img src="{{ URL::asset('gfx/london/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+							<img src="{{ URL::asset('gfx/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
 						</h1>
 					</a>
 				</div>	
@@ -81,7 +81,7 @@
 				<div id="unleash-logo">
 					<a href="/">
 						<h1>
-							<img id="full-logo" src="{{ URL::asset('gfx/london/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
+							<img id="full-logo" src="{{ URL::asset('gfx/unleash-logo.png') }}" alt="Unleash logo" title="UNLEASH">
 						</h1>
 					</a>
 				</div>

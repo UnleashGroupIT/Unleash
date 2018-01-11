@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+
+
 	
 	(function () {
 		$('#hamburger .bar-wrp').on('click', function() { // ICON CLICK
@@ -201,6 +203,14 @@ $(document).ready(function(){
         	$("#hamburger").removeClass("blck");
     	}
 
+    	if ($(window).scrollTop() >= 300) {
+    		$("#startup-logo-wrp").addClass("show bounceInDown");
+    		$("#startup-logo-wrp").removeClass("bounceOutUp");
+    	}else{
+    		$("#startup-logo-wrp").removeClass("bounceInDown");
+    		$("#startup-logo-wrp").addClass("bounceOutUp");
+    	}
+
     if ($(window).scrollTop() >= 850) {
 			$(".sub-menu").addClass("fxd");
     	}else{
@@ -237,6 +247,14 @@ $(document).ready(function(){
     		}else{
     			$(".sub-menu").removeClass("fxd");
     		}
+    	}
+
+    	if (scroll >= 300) {
+    		$("#startup-logo-wrp").addClass("show bounceInDown");
+    		$("#startup-logo-wrp").removeClass("bounceOutUp");
+    	}else{
+    		$("#startup-logo-wrp").removeClass("bounceInDown");
+    		$("#startup-logo-wrp").addClass("bounceOutUp");
     	}
 
 	});
@@ -279,6 +297,11 @@ $(document).ready(function(){
 		$("#joinourcommunity").css("display", "flex");
 	}
 
+	if(window.location.hash == "becomeasponsor") {
+		$("#becomeasponsor").css("display", "flex");
+	}
+
+
 	$('.popup').click(function() { 
 		let popupName = $(this).data('popupdata');
 		$('#'+popupName).css("display", "flex")
@@ -288,6 +311,20 @@ $(document).ready(function(){
 		$('.modal').css("display", "none")
 	})
 
+	$("#trailer").click(function() { 
+		$("#videoo").addClass("showvid");
+		$(".PopupContainer").addClass("op");
+	});
+
+	$("#vidclose").click(function() { 
+		$("#videoo").removeClass("showvid");
+	});
+
+	
+
+	
+		
+	
 
 	
 	    // Form handle 
@@ -305,11 +342,10 @@ $(document).ready(function(){
 
     if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
 			$('#thankyou').css("display", "flex")
-    }  
+    }   
 
     if (window.location.href.indexOf('#ThankYouForSigningUp') != -1) {
 			$('#thankyousign').css("display", "flex")
-    }  
-	
+    }  	
 
 }); // READY END

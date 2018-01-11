@@ -2,7 +2,9 @@
 @import '../common';
 @import '../footer';
 @import '../menu';
+@import '../inner-menu';
 @import '../popup';
+@import 'menu';
 
 body {
   position: relative;
