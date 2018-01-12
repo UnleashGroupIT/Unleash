@@ -88,6 +88,7 @@
 			<div class="content-wrap">
 				<h2>PRESS RELEASES</h2>
 				<p>
+					<a href="http://www.unleashgroup.io/news/unleash-first-round-of-speakers-london18/" target="_blank">UNLEASH Conference &amp; Expo announces first round of speakers for London show in March. (11 January 2018)</a>
 					<a href="http://www.unleashgroup.io/news/bri-vellis-chief-marketing-officer/" target="_blank">Bri Vellis Joins UNLEASH as Chief Marketing Officer (12 December 2017)</a>
 					<a href="http://www.unleashgroup.io/news/unleash-appoints-mark-downey-head-strategy-corporate-ventures/" target="_blank">UNLEASH Appoints Mark Downey as Head of Strategy and Corporate Ventures; Continues to Roll Out Future Growth Plans (20 November 2017)</a>
 					<a href=" http://www.unleashgroup.io/news/hr-tech-world-is-now-unleash/" target="_blank">HR Tech World is now UNLEASH (24 October 2017)</a>
@@ -172,10 +173,45 @@
 			<button class="white-btn popup" data-popupdata="pressreg">Press Registration</button>
 		</div>
 	</section>
+	<div id="thankyoupress" class="modal">
+		<!-- Modal content -->
+		<div class="ThanksModelContent modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		      <div class="thank-you-image">
+                <img class="ThankYouImage" src="{{ URL::asset('gfx/thankyou.svg') }}" alt="Thank You" />
+            </div>
+		    <h3 class="ThanksH3">Thank you for registering your interest for a press pass.</h3>
+		    <p>The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved. Thanks!</p>
+		  </div>
+        <ul class="popup-social-icons"> 
+            <li>
+                <a title="Twitter" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Twitter']);" href="https://twitter.com/UNLEASHgroup" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a title="LinkedIn" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Linkedin']);" href="https://www.linkedin.com/company/1484407/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a title="Facebook" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Facebook']);" href="https://www.facebook.com/unleashgroup/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a title="Youtube" onclick="_gaq.push(['_trackEvent', 'Popup', 'ExternalForward', 'Youtube']);" href="https://www.youtube.com/user/hrneurope/" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            </li>
+        </ul>		  
+		  <div class="modal-body">
+
+		  </div>
+		</div>
+	</div>
 	
 @endsection
 
 @section('footerscripts')
+<script type="text/javascript">
+	if (window.location.href.indexOf('#thankyoupress') != -1) {
+           $('#thankyoupress').css("display", "flex")
+   }
+</script>
 <script src="https://use.typekit.net/oip3jmq.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 @endsection

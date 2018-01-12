@@ -10,6 +10,10 @@
 @charset "utf-8";
 /* CSS Document of the 404 page */
 
+header,footer{
+    display: none!important;
+}
+
 body {
     font-family: 'museo-sans', sans-serif;	
     margin: 0;

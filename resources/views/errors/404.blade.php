@@ -15,10 +15,9 @@
 
 @section('maincontent')
         <section id="Content">
-            <h1 class="InvisibleHeadline">404</h1>
             <img id="Logo404" src="{{ asset('gfx/404/logo-404.svg') }}" alt="404">
             <h2 id="Headline404">oops, it seems like <span class="TabletLineBreak FontProximaNova">you are lost.</span></h2>
-            <p id="Info404">Please use navigation menu above, <span class="TabletLineBreak">or let us take you back to our home page in <span id="Countdown">10</span> seconds</span></p>
+            <p id="Info404"><span class="TabletLineBreak">We will take you back to our home page in <span id="Countdown">10</span> seconds</span></p>
             <img id="MobileBG" src="{{ asset('gfx/404/mobile-bg.png') }}" alt="Mobile">
         </section>
 		

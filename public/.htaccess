@@ -19,6 +19,10 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+	
+	RewriteRule ^london/ http://www.unleashgroup.io/london/index [R=301,L]	
+	RewriteRule ^america/ http://www.unleashgroup.io/america/index [R=301,L]	
+	RewriteRule ^amsterdam/ http://www.unleashgroup.io/amsterdam/index [R=301,L]		
 </IfModule>
 
 <IfModule mod_deflate.c>
