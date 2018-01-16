@@ -107,6 +107,8 @@ class SpeakerController extends Controller
     //edit a specific speaker
     public function editSpeaker(Request $request, $speakerId){
 
+
+
     	$speaker = Speakers::find($speakerId);
 
         if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
@@ -132,8 +134,26 @@ class SpeakerController extends Controller
         }       
     
 
+     $changable = [
+        'prefix', 
+        'first_name', 
+        'last_name',
+        'full_name',
+        'slug',
+        'job_title',
+        'bio',
+        'company',
+        'img_url',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'website',
+        'blog_url'
+];
     	foreach ($request->all() as $field => $value) {
-    		if((isset($speaker->$field)) && $speaker->$field != $value){
+          
+    		if(in_array($field, $changable) && $speaker->$field != $value){
+                
 				$speaker->$field = $value;
 
                 if(($field == "first_name") || ($field == "last_name")){

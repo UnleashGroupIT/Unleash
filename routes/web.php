@@ -207,6 +207,16 @@ Route::get('/london/tickets', function(){
 Route::get('/london/terms', function () {
     return redirect('/terms');
 });
+
+Route::get('/london/agenda', function () {
+  return view('london.pages.agenda');
+})->name('london.agenda');
+
+Route::get('/london/agenda-v2', function () {
+  return view('london.pages.agenda-v2');
+})->name('london.agenda-v2');
+
+
 /*********** America ************/
 
 Route::get('/lasvegas/', function () {
@@ -299,6 +309,7 @@ Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
 //Admin pages
 Route::get('/adminsite/speakers', 'Admin\SubPageController@speakerUI')->name('admin.speakers');
 Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
+Route::get('/adminsite/agenda', 'Admin\SubPageController@agendaUI')->name('admin.agenda');
 
 //Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
 //Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');

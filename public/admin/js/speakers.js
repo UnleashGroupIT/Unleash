@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 93);
+/******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -323,6 +323,124 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     // }
   }
 });
+
+/***/ }),
+
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    { staticClass: "SpeakersGrid" },
+    _vm._l(_vm.speakers, function(speaker) {
+      return _c(
+        "li",
+        { attrs: { id: speaker.id, "data-speakerId": speaker.id } },
+        [
+          _c("div", { staticClass: "GridImageContainer" }, [
+            _c("div", { staticClass: "IconContainer" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "AddToGrid",
+                  attrs: { title: "Add To Current Grid" },
+                  on: {
+                    click: function($event) {
+                      _vm.addSpeakerToGrid(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-plus-square",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "EditSpeakerGlobal",
+                  attrs: { title: "Edit speaker across events" },
+                  on: {
+                    click: function($event) {
+                      _vm.editSpeaker(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil-square-o",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "DeleteItem",
+                  attrs: { title: "Delete from Database" },
+                  on: {
+                    click: function($event) {
+                      _vm.deleteFromDatabase(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-trash",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "GridOverlay" }, [
+              _c("h2", { staticClass: "SliphoverHeadline" }, [
+                _vm._v(_vm._s(speaker.full_name))
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "SmallParagraph" }, [
+                _vm._v(_vm._s(speaker.job_title))
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "SmallParagraph CompanyName" }, [
+                _vm._v(_vm._s(speaker.company))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "Square GridItem",
+              attrs: {
+                alt: speaker.full_name,
+                src:
+                  "/storage/speakers/" +
+                  speaker.img_url +
+                  "?id=" +
+                  _vm.generateHash(10)
+              }
+            })
+          ])
+        ]
+      )
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5b2af5b9", module.exports)
+  }
+}
 
 /***/ }),
 
@@ -2089,15 +2207,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 93:
+/***/ 96:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(94);
+module.exports = __webpack_require__(97);
 
 
 /***/ }),
 
-/***/ 94:
+/***/ 97:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2105,7 +2223,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
 
-Vue.component('speakers-all', __webpack_require__(95));
+Vue.component('speakers-all', __webpack_require__(98));
 
 Vue.component('grid-controller', __webpack_require__(9));
 
@@ -2138,8 +2256,8 @@ var spVue = new Vue({
         var new_item_id = evt.item.dataset.speakerid;
         var new_item_order = evt.newIndex;
         var old_item_order = evt.oldIndex;
-        var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
-        var gridId = $("#SelectSpeakerGrid").val();
+        var old_item_id = $("#CustomItemGrid").children().eq(evt.oldIndex).data('speakerid');
+        var gridId = $("#SelectGrid").val();
 
         axios.patch('/api/speakergrid/' + gridId + '/' + old_item_id, {
           order_number: old_item_order
@@ -2292,6 +2410,8 @@ var spVue = new Vue({
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
+      form.append('bio', $event.target.bio.value);
+      form.append('website', $event.target.website.value);
       // submit the image			
 
       var config = {
@@ -2388,6 +2508,9 @@ var spVue = new Vue({
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
+      form.append('bio', $event.target.bio.value);
+      form.append('website', $event.target.website.value);
+
       // submit the image			
 
       var config = {
@@ -2437,15 +2560,15 @@ var spVue = new Vue({
 
 /***/ }),
 
-/***/ 95:
+/***/ 98:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(96)
+var __vue_script__ = __webpack_require__(99)
 /* template */
-var __vue_template__ = __webpack_require__(97)
+var __vue_template__ = __webpack_require__(100)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -2486,7 +2609,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 96:
+/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2533,6 +2656,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
 
+
+  //TODO: Reload the selected grid when we edit a speaker
 
   methods: {
     addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
@@ -2709,124 +2834,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
   }
 });
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "ul",
-    { staticClass: "SpeakersGrid" },
-    _vm._l(_vm.speakers, function(speaker) {
-      return _c(
-        "li",
-        { attrs: { id: speaker.id, "data-speakerId": speaker.id } },
-        [
-          _c("div", { staticClass: "GridImageContainer" }, [
-            _c("div", { staticClass: "IconContainer" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "AddToGrid",
-                  attrs: { title: "Add To Current Grid" },
-                  on: {
-                    click: function($event) {
-                      _vm.addSpeakerToGrid(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-plus-square",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "EditSpeakerGlobal",
-                  attrs: { title: "Edit speaker across events" },
-                  on: {
-                    click: function($event) {
-                      _vm.editSpeaker(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-pencil-square-o",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "DeleteItem",
-                  attrs: { title: "Delete from Database" },
-                  on: {
-                    click: function($event) {
-                      _vm.deleteFromDatabase(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-trash",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "GridOverlay" }, [
-              _c("h2", { staticClass: "SliphoverHeadline" }, [
-                _vm._v(_vm._s(speaker.full_name))
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "SmallParagraph" }, [
-                _vm._v(_vm._s(speaker.job_title))
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "SmallParagraph CompanyName" }, [
-                _vm._v(_vm._s(speaker.company))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "Square GridItem",
-              attrs: {
-                alt: speaker.full_name,
-                src:
-                  "/storage/speakers/" +
-                  speaker.img_url +
-                  "?id=" +
-                  _vm.generateHash(10)
-              }
-            })
-          ])
-        ]
-      )
-    })
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5b2af5b9", module.exports)
-  }
-}
 
 /***/ })
 

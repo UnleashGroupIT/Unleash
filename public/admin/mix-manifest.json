@@ -9,5 +9,6 @@
     "/js/sponsors.js": "/js/sponsors.js",
     "/js/speakers.js": "/js/speakers.js",
     "/js/axiostest.js": "/js/axiostest.js",
-    "/css/bootstrap.min.css": "/css/bootstrap.min.css"
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/agenda.css": "/css/agenda.css"
 }

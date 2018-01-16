@@ -45,42 +45,42 @@ Route::middleware(['auth:api', 'roles'])->patch('/speaker/{speakerId}', 'Admin\S
 Route::middleware(['auth:api', 'roles'])->delete('/speaker/{speakerId}', 'Admin\SpeakerController@deleteSpeaker');
 
 //Sponsors
-Route::middleware(['auth:api', 'roles'])->get('/sponsors', 'Admin\SponsorController@getSponsors');
+Route::middleware(['auth:api', 'hidden'])->get('/sponsors', 'Admin\SponsorController@getSponsors');
 
-Route::middleware(['auth:api', 'roles'])->post('/sponsors', 'Admin\SponsorController@storeSponsor');
+Route::middleware(['auth:api', 'hidden'])->post('/sponsors', 'Admin\SponsorController@storeSponsor');
 
-Route::middleware(['auth:api', 'roles'])->get('/sponsor/{sponsorId}', 'Admin\SponsorController@showSponsor');
+Route::middleware(['auth:api', 'hidden'])->get('/sponsor/{sponsorId}', 'Admin\SponsorController@showSponsor');
 
-Route::middleware(['auth:api', 'roles'])->patch('/sponsor/{sponsorId}', 'Admin\SponsorController@editSponsor');
+Route::middleware(['auth:api', 'hidden'])->patch('/sponsor/{sponsorId}', 'Admin\SponsorController@editSponsor');
 
-Route::middleware(['auth:api', 'roles'])->delete('/sponsor/{sponsorId}', 'Admin\SponsorController@deleteSponsor');
+Route::middleware(['auth:api', 'hidden'])->delete('/sponsor/{sponsorId}', 'Admin\SponsorController@deleteSponsor');
 
 //Agenda Tracks
-Route::middleware(['auth:api', 'roles'])->get('/tracks', 'Admin\TrackController@getTracks');
+Route::middleware(['auth:api', 'hidden'])->get('/tracks', 'Admin\TrackController@getTracks');
 
-Route::middleware(['auth:api', 'roles'])->post('/tracks', 'Admin\TrackController@storeTrack');
+Route::middleware(['auth:api', 'hidden'])->post('/tracks', 'Admin\TrackController@storeTrack');
 
-Route::middleware(['auth:api', 'roles'])->get('/track/{trackId}', 'Admin\TrackController@showTrack');
+Route::middleware(['auth:api', 'hidden'])->get('/track/{trackId}', 'Admin\TrackController@showTrack');
 
-Route::middleware(['auth:api', 'roles'])->patch('/track/{trackId}', 'Admin\TrackController@editTrack');
+Route::middleware(['auth:api', 'hidden'])->patch('/track/{trackId}', 'Admin\TrackController@editTrack');
 
-Route::middleware(['auth:api', 'roles'])->delete('/track/{trackId}', 'Admin\TrackController@deleteTrack');
+Route::middleware(['auth:api', 'hidden'])->delete('/track/{trackId}', 'Admin\TrackController@deleteTrack');
 
 
 //Sessions
-Route::middleware(['auth:api', 'roles'])->get('/sessions', 'Admin\AgendaController@getSessions');
+Route::middleware(['auth:api', 'hidden'])->get('/sessions', 'Admin\AgendaController@getSessions');
 
-Route::middleware(['auth:api', 'roles'])->post('/session', 'Admin\AgendaController@storeSession');
+Route::middleware(['auth:api', 'hidden'])->post('/session', 'Admin\AgendaController@storeSession');
 
-Route::middleware(['auth:api', 'roles'])->get('/session/{sessionId}', 'Admin\AgendaController@showSession');
+Route::middleware(['auth:api', 'hidden'])->get('/session/{sessionId}', 'Admin\AgendaController@showSession');
 
-Route::middleware(['auth:api', 'roles'])->patch('/session/{sessionId}', 'Admin\AgendaController@editSession');
+Route::middleware(['auth:api', 'hidden'])->patch('/session/{sessionId}', 'Admin\AgendaController@editSession');
 
-Route::middleware(['auth:api', 'roles'])->delete('/session/{sessionId}', 'Admin\AgendaController@deleteSession');
+Route::middleware(['auth:api', 'hidden'])->delete('/session/{sessionId}', 'Admin\AgendaController@deleteSession');
 
-Route::middleware(['auth:api', 'roles'])->post('/sessionspeaker', 'Admin\AgendaController@addSpeakerToSession');
+Route::middleware(['auth:api', 'hidden'])->post('/sessionspeaker', 'Admin\AgendaController@addSpeakerToSession');
 
-Route::middleware(['auth:api', 'roles'])->delete('/sessionspeaker', 'Admin\AgendaController@removeSpeakerFromSession');
+Route::middleware(['auth:api', 'hidden'])->delete('/sessionspeaker', 'Admin\AgendaController@removeSpeakerFromSession');
 
 
 //Speaker Grid
@@ -95,12 +95,12 @@ Route::middleware(['auth:api', 'roles'])->patch('/speakergrid/{gridId}/{speakerI
 Route::middleware(['auth:api', 'roles'])->delete('/speakergriditem/{gridId}/{speakerId}', 'Admin\SpeakerGridController@removeFromGrid');
 
 //Sponsor Grid
-Route::middleware(['auth:api', 'roles'])->get('/sponsorgrid/{gridId}', 'Admin\SponsorGridController@listGridContent');
+Route::middleware(['auth:api', 'hidden'])->get('/sponsorgrid/{gridId}', 'Admin\SponsorGridController@listGridContent');
 
-Route::middleware(['auth:api', 'roles'])->post('/sponsorgrid/{gridId}', 'Admin\SponsorGridController@addToGrid');
+Route::middleware(['auth:api', 'hidden'])->post('/sponsorgrid/{gridId}', 'Admin\SponsorGridController@addToGrid');
 
-Route::middleware(['auth:api', 'roles'])->get('/sponsorgriditem/{gridId}/{sponsorId}', 'Admin\SponsorGridController@showGridItem');
+Route::middleware(['auth:api', 'hidden'])->get('/sponsorgriditem/{gridId}/{sponsorId}', 'Admin\SponsorGridController@showGridItem');
 
-Route::middleware(['auth:api', 'roles'])->patch('/sponsorgrid/{gridId}/{sponsorId}', 'Admin\SponsorGridController@editGridItem');
+Route::middleware(['auth:api', 'hidden'])->patch('/sponsorgrid/{gridId}/{sponsorId}', 'Admin\SponsorGridController@editGridItem');
 
-Route::middleware(['auth:api', 'roles'])->delete('/sponsorgriditem/{gridId}/{sponsorId}', 'Admin\SponsorGridController@removeFromGrid');
+Route::middleware(['auth:api', 'hidden'])->delete('/sponsorgriditem/{gridId}/{sponsorId}', 'Admin\SponsorGridController@removeFromGrid');

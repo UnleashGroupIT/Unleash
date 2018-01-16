@@ -37,7 +37,11 @@ class SubPageController extends Controller
    //return view('speakers');
    }
 
-   public function sponsorUI(Request $request){
+   public function sponsorUI(Request $request, User $user){
+
+    $this->authorize('AdminHiddenSiteAccess', $user);
+
+    
      $request->request->add(['category' => 2]);
     
      $grids = new GridController;
@@ -52,6 +56,24 @@ class SubPageController extends Controller
               ]);
    //return view('speakers');
    }   
+
+
+   public function agendaUI(Request $request, User $user){
+
+    $this->authorize('AdminHiddenSiteAccess', $user);
+
+    
+
+     $events = Events::all();
+
+    return view('admin.pages.agenda', [
+                  
+                  'events' => $events
+               
+              ]);
+   
+   }   
+
 
    public function axiostest(){
 

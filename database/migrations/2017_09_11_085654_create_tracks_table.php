@@ -18,6 +18,7 @@ class CreateTracksTable extends Migration
             $table->integer('event_id');
             $table->string('track_name');
             $table->text('description')->nullable();
+            $table->text('quote')->nullable();
             $table->string('color_class')->nullable();
             $table->string('main_color')->nullable();
             $table->string('url')->nullable();
