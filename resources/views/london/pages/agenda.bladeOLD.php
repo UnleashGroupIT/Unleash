@@ -23,7 +23,7 @@
 @section('title', 'London - Agenda')
 
 @section('headercss')
-<link rel="stylesheet" type="text/css" href="{{ mix('css/london/agenda-v2.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ mix('css/london/agenda.css') }}">
 @endsection
 
 @section('headerjs')
@@ -47,7 +47,6 @@
 					</nav>
 				</div>
 				<div id="day1" class="tabContent active">
-
 
 					<!-- Main Stage -->
 	    			<div class="cnt-wrp main-stage">
@@ -484,10 +483,13 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<!-- END Startup Stage -->		    	
+	    			<!-- END Startup Stage -->		    			   			
+
+
 				</div>
 				<div id="day2" class="tabContent">
-	<!-- Main Stage -->
+
+			<!-- Main Stage -->
 	    			<div class="cnt-wrp main-stage">
 	    				<div class="left-side">
 	    					<div class="upper-side">
@@ -923,13 +925,14 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<!-- END Startup Stage -->		 
+	    			<!-- END Startup Stage -->		    	
 
 				</div>
 			</div>
 		</div>
 	</section>	
 @endsection
+
 @section('footerscripts')
 	<script>
 	$('#day2').addClass('hide');

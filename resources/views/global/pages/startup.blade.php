@@ -150,32 +150,54 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
           </div>
         </div>
     </div>
-
     <div id="videoo">
-		<div class="PopupContainer" id="ContainerVideo" onClick="event.stopPropagation();">
-			<div id="VideoCloseButton"><span id="vidclose" class="close">✕</span></div>
-			<div id="TrailerPopupContent" class="PopupContent">
-				<div class='embed-container'><iframe id="youtube_player" class="yt_player_iframe" src='https://www.youtube.com/embed/PX8wRQBJE8k?rel=0&enablejsapi=1&showinfo=0' frameborder='0' allowfullscreen></iframe>
+	    <div class="PopupContainer" id="ContainerVideo" onClick="event.stopPropagation();">
+				<div id="VideoCloseButton"><span id="vidclose" class="close">✕</span></div>
+				<div id="TrailerPopupContent" class="PopupContent">
+					<div class='embed-container'><iframe id="youtube_player" class="yt_player_iframe" src='https://www.youtube.com/embed/PX8wRQBJE8k?rel=0&enablejsapi=1&showinfo=0' frameborder='0' allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>	
+	</div>
 @endsection
 
 @section('footerscripts')
 
 <script type="text/javascript">
+	var tag = document.createElement('script');
+ 		tag.src = 'https://www.youtube.com/iframe_api';
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	var player;
+	var video = 'PX8wRQBJE8k'
+ 
+	function onYouTubeIframeAPIReady() {
+		player = new YT.Player('youtube_player', {
+			videoId: video,
+        	events: {
+            	'onStateChange': onPlayerStateChange
+        	}
+     	});
+	};
+	function onPlayerStateChange(event) {
+	    switch (event.data) {
+	        case YT.PlayerState.ENDED:
+	            var element = document.getElementById("videoo");
+  				element.classList.remove("showvid");
+	            break;
+	    };
+	};
+</script>
+
+<script type="text/javascript">
 	if (window.location.href.indexOf('#becomeasponsor') != -1) {
            $('#becomeasponsor').css("display", "flex")
    	}
-</script>
-<script type="text/javascript">
-	if (window.location.href.indexOf('#becomeaspeaker') != -1) {
+   	if (window.location.href.indexOf('#becomeaspeaker') != -1) {
            $('#becomeaspeaker').css("display", "flex")
    	}
-</script>
-<script type="text/javascript">
-	if (window.location.href.indexOf('#applytocompete') != -1) {
+   	if (window.location.href.indexOf('#applytocompete') != -1) {
            $('#compete').css("display", "flex")
    	}
 </script>

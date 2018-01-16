@@ -9,7 +9,7 @@
 						<div class="social-icons">
 							<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ asset('gfx/facebook.png') }}" alt="Facebook"></a></div>
 							<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ asset('gfx/youtube.png') }}" alt="Youtube"></a></div>
-							<div><a href="https://twitter.com/hrtechworld"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
+							<div><a href="https://twitter.com/unleashgroup"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
 							<div><a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
 						</div>
 					</div>
@@ -17,7 +17,7 @@
 					@if(Request::url() === 'http://www.unleashgroup.io/about')
 						<button class="blue-btn popup" data-popupdata="contact">Contact Us</button>
 					@else
-						<button class="blue-btn popup" data-popupdata="booknow">Book now 2018</button>
+						<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
 					@endif
 						<button class="black-btn popup" data-popupdata="joinourcommunity">Subscribe</button>
 					</div>
@@ -27,16 +27,10 @@
 						<nav>
 							<ul>
 								<li><a href="http://www.unleashgroup.io">News</a></li>
+								<li><a href="{{ route('global.startup') }}">Startup</a></li>
 								<li><a href="{{ route('ams.about') }}">About</a></li>
 								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
-							</ul>
-						</nav>
-						<nav class="upper">
-							<ul>
-								<li><a href="{{ route('ams.index') }}">Show</a></li>
-								<li><a href="{{ route('ams.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
-								<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
+								<li><a href="{{ route('press') }}">Press</a></li>
 							</ul>
 						</nav>
 					</div>

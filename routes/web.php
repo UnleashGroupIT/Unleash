@@ -51,6 +51,7 @@ Route::get('/startup', function () {
 })->name('global.startup');
 
 
+
 Route::get('/wpredirect', 'StaticPageController@wpredirect');
 	  
 /*********** Amsterdam ************/
@@ -94,7 +95,7 @@ Route::get('/amsterdam/speakers', function () {
 
 Route::get('/amsterdam/startups', 'StartupsController@index')->name('ams.startup');
 
-Route::get('/amsterdam/agenda', 'AgendaController@index')->name('ams.agenda');
+//Route::get('/amsterdam/agenda', 'AgendaController@index')->name('ams.agenda');
 
 
 Route::get('/amsterdam/about', function () {
@@ -206,7 +207,9 @@ Route::get('/london/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('l
 
 Route::get('/london/startups', 'StartupsController@index')->name('london.startup');
 
-//Route::get('/london/agenda', 'AgendaController@index')->name('london.agenda');
+Route::get('/london/agenda', function () {
+  return view('london.pages.agenda');
+})->name('london.agenda');
 
 Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 

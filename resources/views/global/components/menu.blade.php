@@ -17,8 +17,8 @@
 										<ul class="subs-ul">
 											<li><a href="{{ route('london.index') }}">Show</a></li>
 											<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
+											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('london.sponsors') }}">Our Clients</a></li>
-											<!--<li><a href="{{ route('london.loyalty') }}">Loyalty</a></li>-->
 											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>

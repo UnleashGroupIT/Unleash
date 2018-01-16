@@ -182,6 +182,9 @@ section.header-title {
 
     li{
       @media (min-width: 75em) {
+        margin: auto .5em;
+      }
+      @media (min-width: 100em) {
         margin: auto 1em;
       }
       @media (min-width: 120em) {

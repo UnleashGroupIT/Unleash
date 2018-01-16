@@ -9,7 +9,7 @@
 						<div class="social-icons">
 							<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ asset('gfx/facebook.png') }}" alt="Facebook"></a></div>
 							<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ asset('gfx/youtube.png') }}" alt="Youtube"></a></div>
-							<div><a href="https://twitter.com/hrtechworld"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
+							<div><a href="https://twitter.com/unleashgroup"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
 							<div><a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
 						</div>
 					</div>
@@ -23,20 +23,10 @@
 						<nav>
 							<ul>
 								<li><a href="http://www.unleashgroup.io">News</a></li>
-								<!--<li><a href="#">Events</a></li>-->
+								<li><a href="{{ route('global.startup') }}">Startup</a></li>
 								<li><a href="{{ route('ams.about') }}">About</a></li>
 								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
-								<!--<li><a href="#">Careers</a></li>
-								<li><a href="#">Press</a></li>
-								<li><a href="#">Contact</a></li>-->
-							</ul>
-						</nav>
-						<nav class="upper">
-							<ul>
-								<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
-								<li><a href="{{ route('lasvegas.speakers') }}">Speakers</a></li>
-								<li><a href="{{ route('lasvegas.sponsors') }}">OUR CLIENTS</a></li>
-								<li><a href="{{ route('lasvegas.floorplan') }}">Venue</a></li>
+								<li><a href="{{ route('press') }}">Press</a></li>
 							</ul>
 						</nav>
 					</div>
