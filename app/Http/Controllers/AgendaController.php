@@ -42,4 +42,27 @@ class AgendaController extends Controller
   	return $sessions;
 
   }
+
+  public function search(){
+
+
+      $facets = [
+          'event:2',
+          'start_time.day:15',
+          
+
+      ];
+
+
+      $params = [
+                  'facetFilters' => $facets,
+                  'hitsPerPage' => 30,
+                  'page' => 0,
+
+              ];
+
+     $result = AgendaSessions::search('')->with($params)->get();
+    return $result->load('speakers')->load('tracks');
+    
+  }  
 }

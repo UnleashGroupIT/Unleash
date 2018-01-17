@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Algolia\ScoutMacros\ServiceProvider::class,
         /*
          * Application Service Providers...
          */

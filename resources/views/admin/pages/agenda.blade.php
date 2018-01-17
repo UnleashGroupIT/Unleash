@@ -1,17 +1,52 @@
 @extends('admin.main')
        
-@section('title', 'Speakers')
+@section('title', 'Agenda')
 
 
 @section('customcss')
+   <link href="{{ mix('css/style.css', '/admin') }}" rel="stylesheet">
+
 <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="{{ mix('css/bootstrap.min.css', '/admin') }}" rel="stylesheet" type="text/css">
   
  
   <link href="{{ mix('css/agenda.css', '/admin') }}" rel="stylesheet" type="text/css">
+  <link href="{{ mix('css/common.css', '/admin') }}" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch-theme-algolia.min.css">  
 @endsection
 @section('content')
+<div id="PageContainer">
+ <section id="GridSection">
+<p>Event Selector</p>
+  <div id="GridInnerContainer">
+
+            <select name="EventSelect" id ="EventSelect">
+            	@foreach ($events as $event)
+            		@if($event->event_code == Config::get('unleash.admin.default_event'))
+		              <option value="{{ $event->event_code }}" selected>
+		                {{ $event->event_name }}
+		              </option>
+		             @else
+		              <option value="{{ $event->event_code }}">
+		                {{ $event->event_name }}
+		              </option>		             
+		             @endif
+            	@endforeach
+
+            </select>
+
+	  <nav>
+		<ul class="side tabs">
+	    	<li class="tab" id = "Track">Tracks</li>
+	    	<li class="tab" id = "Session">Sessions</li>  
+		</ul>
+	</nav>     
+
+  </div>
+ </section>
+ </div>
 	<section class="agenda">
 		<div class="title-section">
 			<h1>Agenda</h1>
@@ -36,9 +71,7 @@
 		    					<div class="date">
 		    						<h4>March 20.</h4>
 		    					</div>
-		    					<div class="time">
-		    						<h2>08:00</h2>
-		    					</div>
+
 		    					<div class="session-name">
 		    						<h3>Main Stage</h3>
 		    					</div>
