@@ -14,13 +14,28 @@
   <link href="{{ mix('css/common.css', '/admin') }}" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch-theme-algolia.min.css">  
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.4.1/dist/instantsearch-theme-algolia.min.css"> 
+
+
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 <style>
-#Tracks, #NewSession{
+.hiddenTab{
 	display:none;
 
 } 
+.activeTab{
+	display:block;
+}
+
+.tab{
+	transition: all 0.3s;
+}
+.tab:hover{
+	background-color: rgb(175, 201, 40);
+	color:#fff !important;
+}
 </style> 
 
 @endsection
@@ -50,9 +65,9 @@
  				<div class="tabs-wrp admin-wrp">
 					<nav>
 						<ul class="side tabs">
-							<li class="tab adminActive" id = "SessionButton">Sessions</li> 
-							<li class="tab" id = "NewSessionButton">Create new Session</li> 
-					    	<li class="tab" id = "TrackButton">Tracks</li>
+							<li @click="selectPage('Sessions')" class="tab adminActive" id = "SessionButton">Sessions</li> 
+							<li @click="selectPage('NewSession')" class="tab" id="NewSessionButton">Create new Session</li> 
+					    	<li @click="selectPage('Tracks')" class="tab" id="TrackButton">Tracks</li>
 					    	
 						</ul>
 					</nav>
@@ -61,9 +76,9 @@
  </div>
 
 {{-- TRACKS --}}
-	<section id="Tracks" class="agenda">
+	<section id="Tracks" class="agenda hiddenTab">
 		<div class="title-section">
-			<h1>Agenda</h1>
+			<h1>Tracks</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
 		</div>
 		<div class="contents-bg">
@@ -245,7 +260,7 @@
 
 
 {{-- NEW SESSION --}}
-	<section id="NewSession">
+	<section id="NewSession" class="hiddenTab">
 		
                       
                                 <div class="modal-dialog">
@@ -288,9 +303,9 @@
 {{-- END NEW SESSION --}}
 
 {{-- SESSIONS --}}
-<section id="Sessions" class="agenda">
+<section id="Sessions" class="agenda activeTab">
 		<div class="title-section">
-			<h1>Agenda</h1>
+			<h1 id="TestAgendaText">Sessions</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
 		</div>
 		<div class="contents-bg">

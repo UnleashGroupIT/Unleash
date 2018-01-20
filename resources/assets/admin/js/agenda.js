@@ -1,9 +1,23 @@
 window._ = require('lodash');
 
 	 window.jQuery = require('jquery');
+	 window.$ = window.jQuery;
      window.bootstrap = require('bootstrap');
 global.axios = require('axios');
 
+
+window.jQuery.fn.extend({
+    animateCss: function (animationName, callback) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+            if (callback) {
+              callback();
+            }
+        });
+        return this;
+    }
+});
 
 global.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -74,9 +88,45 @@ var spVue = new Vue({
 		newSession(){
 			console.log('moo');
 		},
+
+		selectPage(type){
+			let activteThis = '';
+			jQuery('.tab').removeClass('adminActive');
+			   switch (type) {
+				 	case 'Sessions':
+				 		activteThis = "#Sessions";
+				 		jQuery('#SessionButton').addClass('adminActive');
+				 		break;
+				 	case 'NewSession':
+				 		activteThis = "#NewSession";
+				 		jQuery('#NewSessionButton').addClass('adminActive');
+				 		break;
+				 	case 'Tracks':
+				 	    jQuery('#TrackButton').addClass('adminActive');
+				 		activteThis = "#Tracks";
+				 		break;				 						 	
+				 	default:
+				 		
+				 		break;
+				 }
+				 
+				 let activeNow = jQuery('.activeTab').attr("id");
+				 console.log(activeNow);
+
+			jQuery('.activeTab').animateCss('bounceOutRight', function () {
+				jQuery('.activeTab').addClass('hiddenTab');
+				jQuery("#"+activeNow).removeClass("activeTab");
+
+			    jQuery(activteThis).animateCss('bounceInLeft');
+			    jQuery(activteThis).addClass('activeTab');
+			});
+					
+				 
+
+		},
 	
 
-},
+	},
 
   mounted(){
 
@@ -86,6 +136,8 @@ var spVue = new Vue({
 
 
 });
+
+
 
 
 

@@ -24,6 +24,7 @@
         "vue": "^2.5.10"
     },
     "dependencies": {
+        "animate.css": "^3.5.2",
         "daterangepicker": "^2.1.27",
         "es6-promise": "^4.1.1",
         "instantsearch.js": "^2.4.1",
