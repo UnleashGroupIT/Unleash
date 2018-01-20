@@ -24,8 +24,11 @@
         "vue": "^2.5.10"
     },
     "dependencies": {
+        "daterangepicker": "^2.1.27",
         "es6-promise": "^4.1.1",
         "instantsearch.js": "^2.4.1",
+        "moment": "^2.20.1",
+        "moment-timezone": "^0.5.14",
         "pnotify": "^3.2.1",
         "sortablejs": "^1.7.0",
         "style-loader": "^0.18.2",

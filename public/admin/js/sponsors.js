@@ -60,291 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 101);
+/******/ 	return __webpack_require__(__webpack_require__.s = 221);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
-/***/ (function(module, exports) {
-
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file.
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier /* server only */
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = injectStyles
-  }
-
-  if (hook) {
-    var functional = options.functional
-    var existing = functional
-      ? options.render
-      : options.beforeCreate
-
-    if (!functional) {
-      // inject component registration as beforeCreate hook
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    } else {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return existing(h, context)
-      }
-    }
-  }
-
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 10:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      events: [],
-      grids: [],
-      selectedGrid: null,
-      seletedevent: null,
-      NewGridName: null
-    };
-  },
-
-
-  props: ['gridtype'],
-
-  methods: {
-    prepareGrid: function prepareGrid(event) {
-      jQuery("#CustomItemGrid").fadeOut();
-      jQuery('#CustomItemLoading').fadeIn();
-
-      if (event) {
-        var options = event.target.options;
-        var selectedOption = options[options.selectedIndex];
-        if (selectedOption) {
-          this.selectedName = selectedOption.textContent;
-        }
-      }
-
-      if (this.selectedGrid) {
-        this.$emit('griddisplay', [this.selectedGrid, this.selectedName]);
-      }
-    },
-    getAllEvents: function getAllEvents() {
-      var _this = this;
-
-      axios.get('/api/events').then(function (response) {
-        // JSON responses are automatically parsed.
-        _this.events = response.data;
-      }).catch(function (e) {
-        _this.errors.push(e);
-      });
-    },
-    saveGrid: function saveGrid() {
-      var self = this;
-      if (this.seletedevent && this.NewGridName) {
-        axios.post('/api/grids', {
-          eventId: this.seletedevent,
-          grid_name: this.NewGridName,
-          type: this.gridtype
-        }).then(function (response) {
-          self.NewGridName = '';
-          self.displayGrid();
-        }).catch(function (error) {
-          console.log(error);
-        });
-      } else {
-        if (!this.seletedevent && !this.NewGridName) {
-          new PNotify({
-            title: 'Error!',
-            text: 'Grid name is not set and no event has been selected!',
-            type: 'error'
-          });
-        } else {
-          if (!this.seletedevent) {
-            new PNotify({
-              title: 'Error!',
-              text: 'No Event is selected!',
-              type: 'error'
-            });
-          }
-          if (!this.NewGridName) {
-            new PNotify({
-              title: 'Error!',
-              text: 'Grid name is missing!',
-              type: 'error'
-            });
-          }
-        }
-      }
-    },
-    displayGrid: function displayGrid() {
-      var _this2 = this;
-
-      axios.get('/api/grids?category=' + this.gridtype).then(function (response) {
-        _this2.grids = response.data;
-      });
-    }
-  },
-
-  // Fetches posts when the component is created.
-  created: function created() {
-    this.getAllEvents();
-    this.displayGrid();
-
-    // async / await version (created() becomes async created())
-    //
-    // try {
-    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-    //   this.posts = response.data
-    // } catch (e) {
-    //   this.errors.push(e)
-    // }
-  }
-});
-
-/***/ }),
-
-/***/ 101:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(102);
+module.exports = __webpack_require__(222);
 
 
 /***/ }),
 
-/***/ 102:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
 
-Vue.component('sponsors-all', __webpack_require__(103));
+Vue.component('sponsors-all', __webpack_require__(223));
 
-Vue.component('grid-controller', __webpack_require__(9));
+Vue.component('grid-controller', __webpack_require__(64));
 
 
 
@@ -674,15 +413,15 @@ var spVue = new Vue({
 
 /***/ }),
 
-/***/ 103:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(1)
+var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(104)
+var __vue_script__ = __webpack_require__(224)
 /* template */
-var __vue_template__ = __webpack_require__(105)
+var __vue_template__ = __webpack_require__(225)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -723,7 +462,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 104:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -929,7 +668,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 105:
+/***/ 225:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1043,7 +782,317 @@ if (false) {
 
 /***/ }),
 
-/***/ 11:
+/***/ 3:
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 64:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(65)
+/* template */
+var __vue_template__ = __webpack_require__(66)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\admin\\js\\components\\GridComponent.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-134dd93a", Component.options)
+  } else {
+    hotAPI.reload("data-v-134dd93a", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 65:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      events: [],
+      grids: [],
+      selectedGrid: null,
+      seletedevent: null,
+      NewGridName: null
+    };
+  },
+
+
+  props: ['gridtype'],
+
+  methods: {
+    prepareGrid: function prepareGrid(event) {
+      jQuery("#CustomItemGrid").fadeOut();
+      jQuery('#CustomItemLoading').fadeIn();
+
+      if (event) {
+        var options = event.target.options;
+        var selectedOption = options[options.selectedIndex];
+        if (selectedOption) {
+          this.selectedName = selectedOption.textContent;
+        }
+      }
+
+      if (this.selectedGrid) {
+        this.$emit('griddisplay', [this.selectedGrid, this.selectedName]);
+      }
+    },
+    getAllEvents: function getAllEvents() {
+      var _this = this;
+
+      axios.get('/api/events').then(function (response) {
+        // JSON responses are automatically parsed.
+        _this.events = response.data;
+      }).catch(function (e) {
+        _this.errors.push(e);
+      });
+    },
+    saveGrid: function saveGrid() {
+      var self = this;
+      if (this.seletedevent && this.NewGridName) {
+        axios.post('/api/grids', {
+          eventId: this.seletedevent,
+          grid_name: this.NewGridName,
+          type: this.gridtype
+        }).then(function (response) {
+          self.NewGridName = '';
+          self.displayGrid();
+        }).catch(function (error) {
+          console.log(error);
+        });
+      } else {
+        if (!this.seletedevent && !this.NewGridName) {
+          new PNotify({
+            title: 'Error!',
+            text: 'Grid name is not set and no event has been selected!',
+            type: 'error'
+          });
+        } else {
+          if (!this.seletedevent) {
+            new PNotify({
+              title: 'Error!',
+              text: 'No Event is selected!',
+              type: 'error'
+            });
+          }
+          if (!this.NewGridName) {
+            new PNotify({
+              title: 'Error!',
+              text: 'Grid name is missing!',
+              type: 'error'
+            });
+          }
+        }
+      }
+    },
+    displayGrid: function displayGrid() {
+      var _this2 = this;
+
+      axios.get('/api/grids?category=' + this.gridtype).then(function (response) {
+        _this2.grids = response.data;
+      });
+    }
+  },
+
+  // Fetches posts when the component is created.
+  created: function created() {
+    this.getAllEvents();
+    this.displayGrid();
+
+    // async / await version (created() becomes async created())
+    //
+    // try {
+    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+    //   this.posts = response.data
+    // } catch (e) {
+    //   this.errors.push(e)
+    // }
+  }
+});
+
+/***/ }),
+
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1206,7 +1255,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 12:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
@@ -2753,55 +2802,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
 	Sortable.version = '1.7.0';
 	return Sortable;
 });
-
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(10)
-/* template */
-var __vue_template__ = __webpack_require__(11)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\admin\\js\\components\\GridComponent.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-134dd93a", Component.options)
-  } else {
-    hotAPI.reload("data-v-134dd93a", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
 
 
 /***/ })

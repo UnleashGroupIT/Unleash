@@ -6,13 +6,14 @@ window._ = require('lodash');
  */
 
 
-try {
-	global.$ = global.jQuery = require('jquery');
-     require('bootstrap');
-} catch (e) {}
+
+	 window.jQuery = require('jquery');
+     window.bootstrap = require('bootstrap');
+
 
 
 global.axios = require('axios');
+
 
 global.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

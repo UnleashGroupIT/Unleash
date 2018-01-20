@@ -25,6 +25,7 @@ mix.sass('resources/assets/admin/scss/agenda.scss', 'css');
    
 mix.js('resources/assets/admin/js/speakers.js', 'js');
 mix.js('resources/assets/admin/js/sponsors.js', 'js');
+mix.js('resources/assets/admin/js/agenda.js', 'js');
 mix.js('resources/assets/admin/js/axiostest.js', 'js');
 
 

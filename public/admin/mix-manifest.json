@@ -1,14 +1,15 @@
 {
+    "/js/agenda.js": "/js/agenda.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/style.css": "/css/style.css",
     "/css/common.css": "/css/common.css",
     "/css/speakers.css": "/css/speakers.css",
     "/css/sponsors.css": "/css/sponsors.css",
+    "/css/agenda.css": "/css/agenda.css",
     "/js/api.js": "/js/api.js",
     "/js/sponsors.js": "/js/sponsors.js",
     "/js/speakers.js": "/js/speakers.js",
     "/js/axiostest.js": "/js/axiostest.js",
-    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
-    "/css/agenda.css": "/css/agenda.css"
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css"
 }
