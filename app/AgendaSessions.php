@@ -50,6 +50,7 @@ class AgendaSessions extends Model
 
         $dateData['year'] = $dt->year;
         $dateData['month'] = $dt->month;
+        $dateData['month_name'] = $dt->format('F');
         $dateData['day'] =  $dt->day;
         $dateData['time'] = $dt->hour.':'.sprintf("%02d", $dt->minute);
         return $dateData;
@@ -60,6 +61,7 @@ class AgendaSessions extends Model
 
         $dateData['year'] = $dt->year;
         $dateData['month'] = $dt->month;
+        $dateData['month_name'] = $dt->format('F');
         $dateData['day'] =  $dt->day;
         $dateData['time'] = $dt->hour.':'.sprintf("%02d", $dt->minute);
         return $dateData;

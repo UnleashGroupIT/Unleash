@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\GridController;
 use App\Events;
 use App\User;
+use App\Tracks;
+use JavaScript;
 
 class SubPageController extends Controller
 {
@@ -65,11 +67,18 @@ class SubPageController extends Controller
     
 
      $events = Events::all();
+     $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))->get();
+
+     JavaScript::put([
+        'default_event_id' => \Config::get('unleash.admin.default_event_id'),
+        'default_event_code' => \Config::get('unleash.admin.default_event'),
+        'default_day' => \Config::get('unleash.admin.default_agenda_day')
+      ]);
 
     return view('admin.pages.agenda', [
                   
-                  'events' => $events
-               
+                  'events' => $events,
+                  'AgendaTracks' =>$tracks
               ]);
    
    }   

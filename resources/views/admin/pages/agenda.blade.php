@@ -36,6 +36,13 @@
 	background-color: rgb(175, 201, 40);
 	color:#fff !important;
 }
+#SessionFilterSection, #SessionList{
+	display: inline-block;
+
+}
+#SessionFilterSection{
+	vertical-align: top;
+}
 </style> 
 
 @endsection
@@ -48,11 +55,11 @@
             <select name="EventSelect" id ="EventSelect">
             	@foreach ($events as $event)
             		@if($event->event_code == Config::get('unleash.admin.default_event'))
-		              <option value="{{ $event->event_code }}" selected>
+		              <option value="{{ $event->id }}" selected>
 		                {{ $event->event_name }}
 		              </option>
 		             @else
-		              <option value="{{ $event->event_code }}">
+		              <option value="{{ $event->id }}">
 		                {{ $event->event_name }}
 		              </option>		             
 		             @endif
@@ -72,6 +79,7 @@
 						</ul>
 					</nav>
 				</div>
+	
 
  </div>
 
@@ -308,7 +316,16 @@
 			<h1 id="TestAgendaText">Sessions</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
 		</div>
-		<div class="contents-bg">
+
+		<div id="SessionFilterSection">
+			<div class="FilterInnerSection">
+				@foreach($AgendaTracks as $TrackFilters)
+					<input v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }} <br />
+				@endforeach
+				
+			</div>	
+		</div>	
+		<div class="contents-bg" id="SessionList">
 			<div class="contents-wrp">
 				<div class="tabs-wrp">
 					<nav>
@@ -320,161 +337,13 @@
 				</div>
 				<div id="day1" class="tabContent active">
 
-					<!-- Main Stage -->
-	    			<div class="cnt-wrp main-stage">
-	    				<div class="left-side">
-	    					<div class="upper-side">
-		    					<div class="date">
-		    						<h4>March 20.</h4>
-		    					</div>
-
-		    					<div class="session-name">
-		    						<h3>Main Stage</h3>
-		    					</div>
-	    					</div>
-	    					<div class="shares">
-	    						<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
-	    						<a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a>
-	    						<a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a>
-	    					</div>
-	    				</div>
-	    				<div class="right-side">
-	    					<div class="header">
-	    						<div class="place">
-	    							<h4>ICC Auditorium</h4>
-	    						</div>
-	    					</div>
-	    					<div class="body">
-	    						<div class="title">
-	    							<h2>Inspiration Visionaries, Entrepreneurs and Thinkers.</h2>
-	    						</div>
-	    						<div class="content">
-	    							<p>Inspirational Visionaries, Entrepreneurs and Thinkers who get the challenges of the tech revolution and what it means for business and organizations. Our Main Stage is second to none when it comes to helping you better understand and meet the challenges posed by technology. Let our speakers inspire you to create a better and brighter future world of work, and improved organizations that feel at ease in their ability to meet the challenge of disruptive innovation.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<!-- END Main Stage -->
-
-					<!-- HR Tech -->
-	    			<div class="cnt-wrp hr-tech">
-	    				<div class="left-side">
-	    					<div class="upper-side">
-		    					<div class="date">
-		    						<h4>March 20.</h4>
-		    					</div>
-		    					<div class="time">
-		    						<h2>08:00</h2>
-		    					</div>
-		    					<div class="session-name">
-		    						<h3>HR Tech</h3>
-		    					</div>
-	    					</div>
-	    					<div class="shares">
-	    						<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
-	    						<a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a>
-	    						<a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a>
-	    					</div>
-	    				</div>
-	    				<div class="right-side">
-	    					<div class="header">
-	    						<div class="place">
-	    							<h4>Room 14</h4>
-	    						</div>
-	    					</div>
-	    					<div class="body">
-	    						<div class="title">
-	    							<h2>Get behind the scene on tech-driven transformation.</h2>
-	    						</div>
-	    						<div class="content">
-	    							<p>Get behind the scenes and take a good hard look at what HR Technology does and does not offer. Does it do what it’s supposed to do, and if not, why not? Tech driven transformation is never going to be easy in a world where the range of solutions is bewildering. Hear from senior executives who have been there and done that to benefit from their insights about how they’d do things differently with the benefit of hindsight.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<!-- END HR Tech -->
-
+					
+					  <agenda-sessions ref="SessionsDay1" :childfilters="filters"></agenda-sessions>
 	    			    			   			
 
 
 				</div>
 				<div id="day2" class="tabContent">
-
-			<!-- Main Stage -->
-	    			<div class="cnt-wrp main-stage">
-	    				<div class="left-side">
-	    					<div class="upper-side">
-		    					<div class="date">
-		    						<h4>March 21.</h4>
-		    					</div>
-		    					<div class="time">
-		    						<h2>08:00</h2>
-		    					</div>
-		    					<div class="session-name">
-		    						<h3>Main Stage</h3>
-		    					</div>
-	    					</div>
-	    					<div class="shares">
-	    						<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
-	    						<a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a>
-	    						<a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a>
-	    					</div>
-	    				</div>
-	    				<div class="right-side">
-	    					<div class="header">
-	    						<div class="place">
-	    							<h4>ICC Auditorium</h4>
-	    						</div>
-	    					</div>
-	    					<div class="body">
-	    						<div class="title">
-	    							<h2>Inspiration Visionaries, Entrepreneurs and Thinkers.</h2>
-	    						</div>
-	    						<div class="content">
-	    							<p>Inspirational Visionaries, Entrepreneurs and Thinkers who get the challenges of the tech revolution and what it means for business and organizations. Our Main Stage is second to none when it comes to helping you better understand and meet the challenges posed by technology. Let our speakers inspire you to create a better and brighter future world of work, and improved organizations that feel at ease in their ability to meet the challenge of disruptive innovation.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<!-- END Main Stage -->
-
-					<!-- HR Tech -->
-	    			<div class="cnt-wrp hr-tech">
-	    				<div class="left-side">
-	    					<div class="upper-side">
-		    					<div class="date">
-		    						<h4>March 21.</h4>
-		    					</div>
-		    					<div class="time">
-		    						<h2>08:00</h2>
-		    					</div>
-		    					<div class="session-name">
-		    						<h3>HR Tech</h3>
-		    					</div>
-	    					</div>
-	    					<div class="shares">
-	    						<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
-	    						<a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a>
-	    						<a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a>
-	    					</div>
-	    				</div>
-	    				<div class="right-side">
-	    					<div class="header">
-	    						<div class="place">
-	    							<h4>Room 14</h4>
-	    						</div>
-	    					</div>
-	    					<div class="body">
-	    						<div class="title">
-	    							<h2>Get behind the scene on tech-driven transformation.</h2>
-	    						</div>
-	    						<div class="content">
-	    							<p>Get behind the scenes and take a good hard look at what HR Technology does and does not offer. Does it do what it’s supposed to do, and if not, why not? Tech driven transformation is never going to be easy in a world where the range of solutions is bewildering. Hear from senior executives who have been there and done that to benefit from their insights about how they’d do things differently with the benefit of hindsight.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<!-- END HR Tech -->
 
 	    				    	
 

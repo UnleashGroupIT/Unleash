@@ -71,12 +71,21 @@ const momenttimezone = require('moment-timezone');
  * Copyright 2016-2017 Jonathan Peterson
  * Licensed under MIT (https://github.com/tempusdominus/bootstrap-3/blob/master/LICENSE)
  */
+
+ Vue.component(
+    'agenda-sessions',
+    require('./components/AgendaSessions.vue')
+);
+
 var spVue = new Vue({
 	el: '#app',
 
 	data: {
 
-		event: null,
+		eventid: null,
+		eventcode: null,
+		day: null,
+		filters: []
 
 		
 
@@ -88,6 +97,7 @@ var spVue = new Vue({
 		newSession(){
 			console.log('moo');
 		},
+
 
 		selectPage(type){
 			let activteThis = '';
@@ -124,15 +134,18 @@ var spVue = new Vue({
 				 
 
 		},
+
+
 	
 
 	},
 
   mounted(){
+  	this.eventid = default_event_id;
+  	this.eventcode = default_event_code;
+  	this.day = default_day;
 
-
-  }
-
+  },
 
 
 });

@@ -43,20 +43,52 @@ class AgendaController extends Controller
 
   }
 
-  public function search(){
+  public function search(Request $request){
+
+     $facets = '';
+
+     if ($request->filled('eventid')){
+        $facets .= 'event:'.$request->eventid;
+     } else {
+         return response('Missing eventid', 400);
+     }
+
+      if ($request->filled('day')){
+        $facets .= ' AND start_time.day:'.$request->day;
+     } 
 
 
-      $facets = [
-          'event:2',
-          'start_time.day:15',
-          
+    if($request->filled('tracks')){
 
-      ];
+        $facets .= ' AND (';
+
+      try{
+        $tracks = json_decode($request->tracks);
+
+        $firstInLine = 0;
+        foreach ($tracks as $key => $track) {
+
+          if($firstInLine == 0){
+             $facets .= 'tracks:'.$track;
+             $firstInLine++;
+           }else {
+            $facets .= ' OR tracks:'.$track;
+           }
+         
+        } //end foreach
+         $facets .=')';
+
+      } catch (Exception $e) {
+         echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+
+
+    }//if tracks
 
 
       $params = [
-                  'facetFilters' => $facets,
-                  'hitsPerPage' => 30,
+                  'filters' => $facets,
+                  'hitsPerPage' => 100,
                   'page' => 0,
 
               ];

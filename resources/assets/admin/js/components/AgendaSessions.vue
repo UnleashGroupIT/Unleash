@@ -1,0 +1,119 @@
+<template>
+	<div v-if="dataready">
+	<!-- Main Stage -->
+	<div v-for="sess in agendasession" class="cnt-wrp main-stage">
+		<div class="left-side">
+			<div class="upper-side">
+				<div class="date">
+					<h4>{{sess.start_time.month_name}} {{sess.start_time.day}}.</h4>
+				</div>
+				<div class="time">
+					<h2>{{sess.start_time.time}}</h2>
+				</div>
+				<div class="session-name">
+					<h3>{{sess.tracks[0].track_name}}</h3>
+				</div>
+			</div>
+<!-- 			<div class="shares">
+				<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
+				<a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ URL::asset('gfx/linkedin-white.svg') }}" alt="Linkedin"></a>
+				<a href="https://twitter.com/hrtechworld"><img src="{{ URL::asset('gfx/twitter-white.svg') }}" alt="Twitter"></a>
+			</div> -->
+		</div>
+		<div class="right-side">
+			<div class="header">
+				<div class="place">
+					<h4>{{sess.tracks[0].room}}</h4>
+				</div>
+			</div>
+			<div class="body">
+				<div class="title">
+					<h2>{{sess.session_title}}</h2>
+				</div>
+				<div class="content">
+					<p>{{sess.session_description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Main Stage -->
+ </div>	
+</template>
+
+<script>
+
+export default {
+    aSessions: null,
+    dataReady: false,	
+  data() {
+	return {
+		agendasession: null,
+		dataready: false,
+		eventid: null,
+		eventcode: null,
+		day: null,
+		filterArray: []
+		
+ 
+	};
+  
+  },
+
+ props: ['childfilters'],
+
+//TODO: Reload the selected grid when we edit a speaker
+
+  methods: {
+
+
+ 		filteredSearch(){
+			let eId = this.eventid;
+			let day = this.day;
+			var filters;
+
+			
+			if (this.filterArray[0]){
+				filters = this.filterArray;
+			     filters = JSON.stringify(filters);
+    			 filters = encodeURIComponent(filters);	
+			} else {
+				 filters = ' ';
+			}
+			
+    			 
+			axios.get('/api/agenda/search?eventid='+eId+'&day='+day+'&tracks='+filters)
+			  	   .then((response) => {
+  			this.agendasession = response.data;
+       		this.dataready = true;
+  			});
+		},
+
+  },
+
+  // Fetches posts when the component is created.
+  async mounted() {
+
+  	axios.get('/api/agenda/search?eventid='+default_event_id+'&day='+default_day)
+  	   .then((response) => {
+  			this.agendasession = response.data;
+       		this.dataready = true;
+  	});
+
+  	this.eventid = default_event_id;
+  	this.eventcode = default_event_code;
+  	this.day = default_day;
+
+  },
+
+  watch: {
+
+  	childfilters: function (val){
+  		this.filterArray = val;
+  		this.filteredSearch();
+
+  	}
+  }
+
+
+}
+</script>

@@ -91,6 +91,9 @@
         @yield('content')
     </div>
 
+	 <div id="MiscScripts">
+	 	@include('globalscript')
+	</div>	
     <!-- Scripts -->
         @yield('customscripts')
 </body>

@@ -4,7 +4,6 @@ use Faker\Generator as Faker;
 
 $factory->define(App\AgendaSessions::class, function (Faker $faker) {
     return [
-        'tracks_id' => rand(1, 7),
         'session_title' => $faker->unique()->catchPhrase,
         'session_description' => $faker->realText($maxNbChars = 200, $indexSize = 2), // secret
         'category_id' => 1,
