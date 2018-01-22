@@ -17,7 +17,7 @@ return [
     'admin' => [
         'default_event' =>'EN18',
 		'default_event_id' => 2,
-		'default_agenda_day' => 15,
+		'default_agenda_day' => 20,
     ],
 
    

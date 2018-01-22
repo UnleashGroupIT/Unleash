@@ -12,11 +12,11 @@ class SessionSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-       factory(App\AgendaSessions::class, 50)->create();
+       factory(App\AgendaSessions::class, 500)->create();
 
-    foreach(range(1, 50) as $index){
+    foreach(range(1, 500) as $index){
         DB::table('sessiontracks')->insert([
-            'session_id' => $faker->unique()->numberBetween(1, 51),
+            'session_id' => $faker->unique()->numberBetween(1, 501),
             'track_id' => $faker->numberBetween(1, 7)
         ]);
     }

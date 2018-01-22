@@ -52,41 +52,20 @@ export default {
 		eventid: null,
 		eventcode: null,
 		day: null,
-		filterArray: []
 		
  
 	};
   
   },
 
- props: ['childfilters'],
+ props: ['agendadata'],
 
 //TODO: Reload the selected grid when we edit a speaker
 
   methods: {
 
 
- 		filteredSearch(){
-			let eId = this.eventid;
-			let day = this.day;
-			var filters;
 
-			
-			if (this.filterArray[0]){
-				filters = this.filterArray;
-			     filters = JSON.stringify(filters);
-    			 filters = encodeURIComponent(filters);	
-			} else {
-				 filters = ' ';
-			}
-			
-    			 
-			axios.get('/api/agenda/search?eventid='+eId+'&day='+day+'&tracks='+filters)
-			  	   .then((response) => {
-  			this.agendasession = response.data;
-       		this.dataready = true;
-  			});
-		},
 
   },
 
@@ -107,11 +86,12 @@ export default {
 
   watch: {
 
-  	childfilters: function (val){
-  		this.filterArray = val;
-  		this.filteredSearch();
+  	agendadata: function (val){
+  		this.agendasession = val;
 
-  	}
+
+  	},
+
   }
 
 

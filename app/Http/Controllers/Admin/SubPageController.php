@@ -9,6 +9,7 @@ use App\Events;
 use App\User;
 use App\Tracks;
 use JavaScript;
+use Carbon\Carbon;
 
 class SubPageController extends Controller
 {
@@ -69,10 +70,28 @@ class SubPageController extends Controller
      $events = Events::all();
      $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))->get();
 
+     $eventsData = [];
+     foreach ($events as $event) {
+       ;
+       $start = Carbon::parse($event->first_day['numberFormat']);
+       $end = Carbon::parse($event->second_day['numberFormat']);
+
+       $tmp = (object)array(
+        'id' => $event->id,
+        'year' => $start->year,
+        'month' => $start->month,
+        'day1' => $start->day,
+        'day2' => $end->day 
+      );
+        array_push($eventsData, $tmp);
+      
+     }
+
      JavaScript::put([
         'default_event_id' => \Config::get('unleash.admin.default_event_id'),
         'default_event_code' => \Config::get('unleash.admin.default_event'),
-        'default_day' => \Config::get('unleash.admin.default_agenda_day')
+        'default_day' => \Config::get('unleash.admin.default_agenda_day'),
+        'eventdata' => $eventsData
       ]);
 
     return view('admin.pages.agenda', [

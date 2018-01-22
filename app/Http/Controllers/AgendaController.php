@@ -85,6 +85,11 @@ class AgendaController extends Controller
 
     }//if tracks
 
+ if ($request->filled('keyword')){
+   $keyword = $request->keyword;
+ }else {
+  $keyword = '';
+ }
 
       $params = [
                   'filters' => $facets,
@@ -93,7 +98,7 @@ class AgendaController extends Controller
 
               ];
 
-     $result = AgendaSessions::search('')->with($params)->get();
+     $result = AgendaSessions::search($keyword)->with($params)->get();
     return $result->load('speakers')->load('tracks');
     
   }  

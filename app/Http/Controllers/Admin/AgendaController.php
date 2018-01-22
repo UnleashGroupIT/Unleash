@@ -14,6 +14,7 @@ class AgendaController extends Controller
     	//TODO: Implement filters
     	return AgendaSessions::all();
     }
+
     //store a session
     public function storeSession(Request $request){
     	

@@ -85,8 +85,12 @@ var spVue = new Vue({
 		eventid: null,
 		eventcode: null,
 		day: null,
-		filters: []
-
+		filters: [],
+		searchbar: null,
+		agendasession: null,
+		events: null,
+		day1: null,
+		day2: null,
 		
 
 	},//data,
@@ -96,6 +100,47 @@ var spVue = new Vue({
 	methods: {
 		newSession(){
 			console.log('moo');
+		},
+
+		getDays(){
+			var vm = this;
+		this.events.forEach(function(element) {
+		     if(element.id == default_event_id){
+		   		vm.day1 = element.day1;
+		   		vm.day2 = element.day2;
+		     }
+			});
+		},	
+
+		changeDay(selected, id){
+			this.day = selected;
+			this.filteredSearch();
+			$('.tabs .tab').removeClass('active');
+			$('#s_day-'+id).addClass('active');
+		},	
+
+ 		filteredSearch(){
+			let eId = this.eventid;
+			let day = this.day;
+			var filters;
+			let searchQuery = '';
+			
+			if (this.filters[0]){
+				filters = this.filters;
+			     filters = JSON.stringify(filters);
+    			 filters = encodeURIComponent(filters);	
+			} else {
+				 filters = ' ';
+			}
+
+			if (this.searchbar){
+				searchQuery = '&keyword='+this.searchbar;
+			}
+    			 
+			axios.get('/api/agenda/search?eventid='+eId+'&day='+day+'&tracks='+filters+searchQuery)
+			  	   .then((response) => {
+  			this.agendasession = response.data;
+  			});
 		},
 
 
@@ -144,8 +189,23 @@ var spVue = new Vue({
   	this.eventid = default_event_id;
   	this.eventcode = default_event_code;
   	this.day = default_day;
-
+  	this.events = eventdata;
+  	eventdata = '';
+  	this.getDays();
   },
+
+  watch: {
+
+  	filters: function (val){
+  		this.filters = val;
+  		this.filteredSearch();
+
+  	},
+  	searchbar: function (val){
+  	  	this.searchbar = val;
+  		this.filteredSearch();	
+  	}
+  }  
 
 
 });

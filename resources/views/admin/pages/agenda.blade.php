@@ -38,10 +38,27 @@
 }
 #SessionFilterSection, #SessionList{
 	display: inline-block;
+	text-align: left;
 
 }
 #SessionFilterSection{
 	vertical-align: top;
+}
+#SessionContentSectionContainer{
+	margin: 0 auto;
+	text-align: center;
+}
+#SearchBarContainer{
+	margin: 3vw auto;
+text-align: center;
+}
+.SearchBar{
+	background-color: rgba(191, 194, 194, 0.32);
+	width: 50%;
+	margin: 0 auto;
+	text-align: left;
+	height: 36px;
+
 }
 </style> 
 
@@ -52,7 +69,7 @@
 <p>Event Selector</p>
   <div id="GridInnerContainer">
 
-            <select name="EventSelect" id ="EventSelect">
+            <select name="EventSelect" id ="EventSelect" v-model="eventid">
             	@foreach ($events as $event)
             		@if($event->event_code == Config::get('unleash.admin.default_event'))
 		              <option value="{{ $event->id }}" selected>
@@ -316,7 +333,10 @@
 			<h1 id="TestAgendaText">Sessions</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
 		</div>
-
+		<div id="SearchBarContainer">
+			<input v-model="searchbar" class="SearchBar" type="text" id="SessionSearchBar" name="SessionSearchBar">
+		</div>
+		<div id="SessionContentSectionContainer">
 		<div id="SessionFilterSection">
 			<div class="FilterInnerSection">
 				@foreach($AgendaTracks as $TrackFilters)
@@ -330,26 +350,23 @@
 				<div class="tabs-wrp">
 					<nav>
 						<ul class="side tabs">
-					    	<li class="tab active" id = "day-1">March 20.</li>
-					    	<li class="tab" id = "day-2">March 21.</li>  
+					    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">March 20.</li>
+					    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">March 21.</li>  
 						</ul>
 					</nav>
 				</div>
-				<div id="day1" class="tabContent active">
+				<div id="SessionContent" class="tabContent active">
 
 					
-					  <agenda-sessions ref="SessionsDay1" :childfilters="filters"></agenda-sessions>
+					  <agenda-sessions ref="Sessions" :agendadata="agendasession"></agenda-sessions>
 	    			    			   			
 
 
 				</div>
-				<div id="day2" class="tabContent">
 
-	    				    	
-
-				</div>
 			</div>
 		</div>
+	 </div>	
 	</section>	
 {{-- END SESSIONS --}}
 
