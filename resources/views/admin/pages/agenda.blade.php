@@ -60,6 +60,32 @@ text-align: center;
 	height: 36px;
 
 }
+.SpeakerListContainer{
+	margin-top:25px;
+}
+.SpeakerContent, .SpeakerImgContainer{
+	display:inline-block;
+}
+.SpeakerContent{
+	margin-left: 5px;
+}
+.SpeakerImgContainer{
+	width: 60px;
+}
+.SpeakerContent h3{
+	line-height: 1em;
+	margin: 0;
+}
+.SpeakerContent p{
+	line-height: 1.3em;
+	margin: 0;
+}
+.SpeakerImage{
+	vertical-align: text-bottom;
+}
+.SpeakerListContainer ul li{
+	margin-bottom: 10px;
+}
 </style> 
 
 @endsection

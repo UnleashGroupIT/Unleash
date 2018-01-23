@@ -1,415 +1,218 @@
+window._ = require('lodash');
 
-//FIX TO SCROLL
-
-(function () {
-    $.fn.visible = function(partial) {
-    
-        var $t            = $(this),
-            $w            = $(window),
-            viewTop       = $w.scrollTop(),
-            viewBottom    = viewTop + $w.height(),
-            _top          = $t.offset().top,
-            _bottom       = _top + $t.height(),
-            compareTop    = partial === true ? _bottom : _top,
-            compareBottom = partial === true ? _top : _bottom;
-      
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-      };
-  })();
-
-  $(function(){
-
-    var rmv = $("#rmv");
-
-    $(window).scroll(function() {
-      
-      if ($(window).width() > 1920) {
-          if ($(this).scrollTop() >=1200) {
-            $('.cnt').addClass("fxd");
-
-          }else{
-            $('.cnt').removeClass("fxd");
-            $('.cnt').removeClass("opa");
-          }
-        } else{
-          if ($(this).scrollTop() >= 500) {
-            $('.cnt').addClass("fxd");
-
-          }else{
-            $('.cnt').removeClass("fxd");
-            $('.cnt').removeClass("opa");
-          }
-        }            
-    });
-    $(window).scroll(function(event) {
-              rmv.each(function(i, rmv) {
-                var rmv = $(rmv);
-                if (rmv.visible(true)) {
-                  $('.cnt').removeClass("fxd");
-                }
-              });
-            });                
-        
- });
-
-  /*var fix = $(".cnt");
-if ($(window).scrollTop() >= (scrollBottom - 930)) {
-          $('.cnt').removeClass("fxd");    
-        }
-var rmv = $(".testimonial-left-img");
-            
+	 window.jQuery = require('jquery');
+	 window.$ = window.jQuery;
+     window.bootstrap = require('bootstrap');
+global.axios = require('axios');
 
 
-
-  win.scroll(function(event) {
-    
-    fix.each(function(i, fix) {
-      var fix = $(fix);
-      if (fix.visible(true)) {
-        fix.addClass("fxd"); 
-      }else{
-        animRight.removeClass("fxd");
-      } 
-    });
-  
-  });*/
-
-//FIX TO SCROLL END
-
-var ColorPalette = {};
-ColorPalette.color = '#3E80B3';
-ColorPalette.defaultcolor = '#3E80B3';
-ColorPalette.colorArray= '';
-ColorPalette.active = 1;
-
-var agendaTracks = [1, 2, 3, 15, 16, 7, 5, 6, 10, 11, 9, 13, 12, 17, 18];
-var pointer = 0;
-//Get all the colors
-
-
-function nextItem() {
-    pointer = pointer + 1; // increase i by one
-    pointer = pointer % agendaTracks.length; // if we've gone too high, start from `0` again
-    desktop_agenda($('[data-desktopstage='+agendaTracks[pointer]+']')); // give us back the item of where we are now
-}
-
-function prevItem() {
-    if (pointer === 0) { // i would become 0
-        pointer = agendaTracks.length; // so put it at the other end of the array
+window.jQuery.fn.extend({
+    animateCss: function (animationName, callback) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+            if (callback) {
+              callback();
+            }
+        });
+        return this;
     }
-    pointer = pointer - 1; // decrease by one
-    desktop_agenda($('[data-desktopstage='+agendaTracks[pointer]+']')); // give us back the item of where we are now
-}
+});
 
-function desktop_agenda(elem, mode = 0){
-    
-    if (mode == 0){
-		var category = elem.data('desktopstage');
-	} else {
-	   var category = elem;
-	}
-	
-	ColorPalette.active = category;
-    
-     $(".BreakoutDesktop .BreakoutDesktopIcon").removeClass("ActiveBreakoutIcon");
-     $(".BreakoutDesktop .TooltipContent").removeClass("ActiveTooltipContent");
-        
-        var thisBreakout = elem;
-        
-		//Fade out the break-out panel
-		$('#SessionCategoriesDesktop').fadeOut(); 
-		$(thisBreakout).children(".BreakoutDesktopIcon").addClass("ActiveBreakoutIcon");
-    $(thisBreakout).children(".TooltipContent").addClass("ActiveTooltipContent");
-		
-		
-					  $.ajax({
-                url: 'controllers/ajax.php',
-                type: 'POST',
-				dataType:"json",
-                data: {action:"agenda_desktop_breakout", category:category},
-                success: function(data) {	
-		
-		//Fade out and fade in the containers
-               $('#DesktopAgenda').css("opacity",0);
-                    
-                setTimeout(function () {
-                    
-                      //Check if we have data for day 1
-                       if (typeof data[0] == "undefined" || data[0] == "error"){
-                          $('#AgendaDayOne').css('display','none');
-                          $('#SessionsDayOne').css('display','none');
-                       }else {
-                          $('#AgendaDayOne').css('display','block');
-                          $('#SessionsDayOne').css('display','block');      
-                       }
-
-                      //Check if we have data for day 2
-                        if (typeof data[1] == "undefined" || data[1] == "error"){
-                          $('#AgendaDayTwo').css('display','none');
-                          $('#SessionsDayTwo').css('display','none');
-                       } else {
-                          $('#AgendaDayTwo').css('display','block');
-                          $('#SessionsDayTwo').css('display','block');
-
-                       }                    
-
-                    
-                   //Content Change
-
-                      
+global.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
-                               //Track description
-                              $("#SelectedStageText").html(data[4]); 
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
 
-                             //Floor
-							 	// 6: disruptHR
-							 	// 16: Think Tank I
-								// 17: Think Tank II
-								// 18: Think Tank III
-								// 19: Workshop
+let token = document.head.querySelector('meta[name="csrf-token"]');
 
-								
-								$('#LevelNum').html(data[3]["level"]);
-							/*
-                             if(category == 6){
-                                  $('#LevelNum').html('1');
-                             }else {
-                                  $('#LevelNum').html('2');
-                             }*/
-
-                              //Track Title
-
-                                $( "#AgendaStageTitle" ).html(data[3]["category"]); 
-
-                                //Transform the text for disruptHR
-                               if (data[3]["category"] == "disruptHR"){
-                                 $( "#AgendaStageTitle" ).addClass('NoCaps');
-
-                               } else {
-                                 $( "#AgendaStageTitle" ).removeAttr('class');  
-                               }
-
-                                //Room data
-								//$('#RoomData').html('<i class="fa fa-dot-circle-o"></i> '+data[3]["room"]);
-                               $('#RoomData').html(data[3]["room"]);
-                               $('#LocationContainerDesktop').css('color',data[3]["main_color"]);
-
-                              //Track title color
-                               ColorPalette.color = data[3]["main_color"];
-                               $( "#AgendaStageTitle" ).css('color',ColorPalette.color);
-
-                              //Day 1 Content
-                               if (typeof data[0] != "undefined" && data[0] != "error"){
-                                    $('#SessionsDayOne').html(data[0]);
-                               }
-
-                             //Day 2 Content  
-                               if (typeof data[1] != "undefined" && data[1] != "error"){
-                                   $('#SessionsDayTwo').html(data[1]);
-                               }                    
-
-
-                                   $('#DesktopAgenda').css("opacity",1); 
-                                } , 350); //set timeout (This is for the opacity)
-
-
-
-      }//on ajax success
-                     
-				
-			 });// ajax call end	
-
-    
-    
+if (token) {
+  global.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 
 
 
-/* Navigation Mobile */
-$(document).ready(function() {
-    $('body').on('click', '.BreakoutHeaderMobile', function(e) {	  
-        var stage = $(this).data("mobilestage");
-        
-        var state = $('.BreakoutMobile[data-mobilestage="'+stage+'"]').data('currstate');
-        
-        switch(state){
-            case 0:
-              $('.BreakoutCollapsibleMobile[data-mobilecontstage="'+stage+'"]').slideToggle(300);
-		      $(this).toggleClass("BreakoutHeaderMobileActive");
-              $('.BreakoutMobile[data-mobilestage="'+stage+'"] .fa').toggleClass("CaretActive");
-                break;
-        }
-        
-	});
-    
-   
-	$(".MobileCloseSession").on("click", function() {
-        var thisData = $(this).data('closetrack');
-        var stage = $(this).data('mobilestage');
-        
-            $('html, body').animate({
-              scrollTop:  $('*[data-mobilestage="'+thisData+'"]').offset().top-75
-             }, 1000);
-        
-		$(this).parent('.BreakoutCollapsibleMobile[data-mobilecontstage="'+stage+'"]').slideToggle(1000);
-    
-		$('.BreakoutHeaderMobile[data-mobilestage="'+stage+'"]').toggleClass("BreakoutHeaderMobileActive");
-		$('.BreakoutHeaderMobile[data-mobilestage="'+stage+'"] .fa').toggleClass("CaretActive");
-	});
-    
-});
-/* END Navigation Mobile */
+global.Vue = require('vue');
+
+var VueResource = require('vue-resource');
+
+Vue.use(VueResource);
+
+global.PNotify = require('pnotify');
 
 
 
+import 'pnotify/dist/pnotify.css';
+import 'pnotify/dist/pnotify.brighttheme.css';
+import 'pnotify/dist/pnotify.buttons.css';
+import 'pnotify/dist/pnotify.buttons.js';
+import 'pnotify/dist/pnotify.confirm.js';
+
+
+PNotify.prototype.options.styling = "bootstrap3";
+PNotify.prototype.options.styling = "fontawesome";
+PNotify.prototype.options.delay = 3500;
+
+
+//const instantsearch = require('instantsearch.js');  
+global.moment = require('moment');
+
+const momenttimezone = require('moment-timezone');
+
+/*@preserve
+ * Tempus Dominus Bootstrap4 v5.0.0-alpha14 (https://tempusdominus.github.io/bootstrap-4/)
+ * Copyright 2016-2017 Jonathan Peterson
+ * Licensed under MIT (https://github.com/tempusdominus/bootstrap-3/blob/master/LICENSE)
+ */
+
+ Vue.component(
+    'agenda-sessions',
+    require('./components/AgendaSessions.vue')
+);
+
+var spVue = new Vue({
+	el: '#app',
+
+	data: {
+
+		eventid: null,
+		eventcode: null,
+		day: null,
+		filters: [],
+		searchbar: null,
+		agendasession: null,
+		events: null,
+		day1: null,
+		day2: null,
+		
+
+	},//data,
 
 
 
-//Get the track id from url
-$(function() {
-var url = window.location.href;
-    
-var parts = url.split('#');
- if (typeof parts[1] != "undefined" && parts[1] != '' ){
-	  
-	  					  $.ajax({
-                url: 'controllers/ajax.php',
-                type: 'POST',
-				dataType:"json",
-                data: {action:"url_decoder", url_data:parts[1]},
-                success: function(data) {	
-						
-	
-                    //Válasszuk külön a mobilt és a desktopot 
-                    if(data[0] == 'stage'){
-                       
-						if($(window).width() < 1000) {	
-									
-							
-								
-						
-						    setTimeout(function(){ 
-								$('.BreakoutCollapsibleMobile[data-mobilecontstage="'+data[1]+'"]').slideToggle(300);
-								$($('[data-mobilestage="'+data[1]+'"]')).toggleClass("BreakoutHeaderMobileActive");
-								$('.BreakoutMobile[data-mobilestage="'+data[1]+'"] .fa').toggleClass("CaretActive");
-								
-									$('html, body').animate({
-											scrollTop: $( $('[data-mobilestage="'+data[1]+'"]') ).offset().top-80
-										}, 1000);
-								
-								mobile_stage_change(data[1]);
+	methods: {
+		newSession(){
+			console.log('moo');
+		},
 
-							}, 750);
-						     
-						
-						} else {
-						 desktop_agenda($('*[data-desktopstage="'+data[1]+'"]'));
-						}
-						
-                    }
+		getDays(){
+			var vm = this;
+		this.events.forEach(function(element) {
+		     if(element.id == default_event_id){
+		   		vm.day1 = element.day1;
+		   		vm.day2 = element.day2;
+		     }
+			});
+		},	
 
-                    if(data[0] == 'session'){
-                            change_stage(data[1]['category']);
+		changeDay(selected, id){
+			this.day = selected;
+			this.filteredSearch();
+			$('.tabs .tab').removeClass('active');
+			$('#s_day-'+id).addClass('active');
+		},	
 
-                    }
-	
-	
-             }
-            });// ajax call end
-	  
-  }
+ 		filteredSearch(){
+			let eId = this.eventid;
+			let day = this.day;
+			var filters;
+			let searchQuery = '';
+			
+			if (this.filters[0]){
+				filters = this.filters;
+			     filters = JSON.stringify(filters);
+    			 filters = encodeURIComponent(filters);	
+			} else {
+				 filters = ' ';
+			}
 
-});
+			if (this.searchbar){
+				searchQuery = '&keyword='+this.searchbar;
+			}
+    			 
+			axios.get('/api/agenda/search?eventid='+eId+'&day='+day+'&tracks='+filters+searchQuery)
+			  	   .then((response) => {
+  			this.agendasession = response.data;
+  			});
+		},
 
 
-$(document).ready(function() {
+		selectPage(type){
+			let activteThis = '';
+			jQuery('.tab').removeClass('adminActive');
+			   switch (type) {
+				 	case 'Sessions':
+				 		activteThis = "#Sessions";
+				 		jQuery('#SessionButton').addClass('adminActive');
+				 		break;
+				 	case 'NewSession':
+				 		activteThis = "#NewSession";
+				 		jQuery('#NewSessionButton').addClass('adminActive');
+				 		break;
+				 	case 'Tracks':
+				 	    jQuery('#TrackButton').addClass('adminActive');
+				 		activteThis = "#Tracks";
+				 		break;				 						 	
+				 	default:
+				 		
+				 		break;
+				 }
+				 
+				 let activeNow = jQuery('.activeTab').attr("id");
+				 console.log(activeNow);
 
+			jQuery('.activeTab').animateCss('bounceOutRight', function () {
+				jQuery('.activeTab').addClass('hiddenTab');
+				jQuery("#"+activeNow).removeClass("activeTab");
 
-/**********************************************************
-Desktop Stage Changer
-************************************************************/	
-$('body').on('click', '.BreakoutDesktop', function(e) {	 
-let elemId =  $(this).data('desktopstage');
-
-pointer = agendaTracks.indexOf(elemId);
-
-desktop_agenda($(this));
-    
-	  });
-
-  
-    
-    
-         $.ajax({
-                url: 'controllers/ajax.php',
-                type: 'POST',
-                data: {action:"display_mobile_agenda"},
-                success: function(data) {	
+			    jQuery(activteThis).animateCss('bounceInLeft');
+			    jQuery(activteThis).addClass('activeTab');
+			});
 					
-              // $('#AgendaNavMobile').html(data);
+				 
+
+		},
+
+
 	
-	
-             }
-            });// ajax call end
-    
-   
-    
 
-   
-  
-$('body').on('click', '.BreakoutHeaderMobile', function(e) {
-if ($(this).hasClass('BreakoutHeaderMobileActive')){
-    
+	},
 
-    
- var track = $(this).data("mobilestage");
- mobile_stage_change(track);
+  mounted(){
+  	this.eventid = default_event_id;
+  	this.eventcode = default_event_code;
+  	this.day = default_day;
+  	this.events = eventdata;
+  	eventdata = '';
+  	this.getDays();
+  },
 
-    
-}
- 
-    
-	  });      
+  watch: {
 
-  
+  	filters: function (val){
+  		this.filters = val;
+  		this.filteredSearch();
+
+  	},
+  	searchbar: function (val){
+  	  	this.searchbar = val;
+  		this.filteredSearch();	
+  	}
+  }  
+
+
 });
 
-function mobile_stage_change(track){
-   $('[data-mobilecontstage="'+track+'"]').html('<div id="canvasloader-container2" class="wrapper MarginBottomMedium"></div>');   
- 
-	var cl = new CanvasLoader('canvasloader-container2');
-		cl.setDiameter(40); // default is 40
-		cl.setDensity(103); // default is 40
-		cl.setRange(1); // default is 1.3
-		cl.setFPS(30); // default is 24
-		cl.show(); // Hidden by default
-		
-		// This bit is only for positioning - not necessary
-		  var loaderObj = document.getElementById("canvasLoader");
-  		loaderObj.style.position = "static";
-  		loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
-  		loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
-    
-    
-    
-    
-         $.ajax({
-                url: 'controllers/ajax.php',
-                type: 'POST',
-                data: {action:"display_mobile_agenda_data", track:track},
-                success: function(data) {	
-					
-               $('[data-mobilecontstage="'+track+'"]').html(data);
-	
-	
-             }
-            });// ajax call end
 
-}
 
-function prevNext(){
-	
-}
+
+
+
+

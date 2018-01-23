@@ -33,22 +33,6 @@
 				<div class="content">
 					<p>{{sess.session_description}}</p>
 				</div>
-				<div class='SpeakerListContainer'>
-					<ul>
-					  <li v-if="sess.speakers[0]" v-for="speakers in sess.speakers">
-					  	<a :href="'/london/speaker/'+speakers.slug">
-					  	<div class="SpeakerImgContainer">
-					  		<img class="SpeakerImage" :alt="speakers.full_name" :src="'/storage/speakers/'+speakers.img_url">
-					  	</div>
-					  	<div class="SpeakerContent">
-					  		<h3>{{speakers.full_name}}</h3>
-					  		<p>{{speakers.job_title}}</p>
-					  		<p>{{speakers.company}}</p>
-					  	</div>
-					  	</a>	
-					  </li>
-					</ul>	
-				</div>	
 			</div>
 		</div>
 	</div>
