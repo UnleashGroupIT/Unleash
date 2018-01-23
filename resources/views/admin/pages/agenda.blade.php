@@ -311,8 +311,9 @@ text-align: center;
 
 
 {{-- NEW SESSION --}}
-<!-- 	<section id="NewSession" class="agenda hiddenTab "> -->
-	<section id="NewSession" class="agenda activeTab ">
+<!-- 	<section id="NewSession" class="agenda activeTab ">-->
+	<section id="NewSession" class="agenda hiddenTab "> 
+
 
 
 
@@ -418,8 +419,8 @@ text-align: center;
 {{-- END NEW SESSION --}}
 
 {{-- SESSIONS --}}
-<!-- <section id="Sessions" class="agenda activeTab"> -->
-<section id="Sessions" class="agenda hiddenTab">	
+ <section id="Sessions" class="agenda activeTab"> 
+<!--<section id="Sessions" class="agenda hiddenTab">-->	
 		<div class="title-section">
 			<h1 id="TestAgendaText">Sessions</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
