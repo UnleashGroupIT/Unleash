@@ -344,7 +344,7 @@ text-align: center;
 				@endforeach
 				</select>
 
-				<select id="SessionType" name="SessionType">
+				<select id="sessiontype" name="sessiontype">
 					<option value="1">Normal Session</option>
 					<option value="2">Registration</option>
 					<option value="3">Coffee Break</option>

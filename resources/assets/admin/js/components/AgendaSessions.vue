@@ -11,7 +11,8 @@
 					<h2>{{sess.start_time.time}}</h2>
 				</div>
 				<div class="session-name">
-					<h3>{{sess.tracks[0].track_name}}</h3>
+					<h3 v-if="sess.tracks[1]">ALL STAGES</h3>
+					<h3 v-else >{{sess.tracks[0].track_name}}</h3>
 				</div>
 			</div>
 <!-- 			<div class="shares">

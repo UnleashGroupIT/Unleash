@@ -245,7 +245,7 @@ var spVue = new Vue({
       form.append('description', $event.target.description.value);
       form.append('speakers', JSON.stringify(this.newSpeaker));
       form.append('track', $event.target.NewSessionTrack.value);
-      form.append('sessionType', $event.target.SessionType.value);
+      form.append('sessiontype', $event.target.sessiontype.value);
       form.append('eventid', this.eventid);
       
       

@@ -36,14 +36,15 @@ class AgendaController extends Controller
         //'extra_category' => $request->extra_category ?? null
 
                  ]);
-
-    // Perform model actions...
      });
     	
 
-        if ($request->has('SessionType') && $request->SessionType > 1){
-            $allTracks = Tracks::where('eventid',$request->eventid);
-            foreach ($allTracks as $key => $track) {
+
+        if ($request->has('sessiontype') && $request->sessiontype > 1){
+
+             $allTracks = Tracks::where('event_id',$request->eventid)->get();
+            foreach ($allTracks as $track) {
+           
                 SessionTracks::create([
                     'session_id' => $agSession->id,
                     'track_id' => $track->id
@@ -67,7 +68,7 @@ class AgendaController extends Controller
     	}
 
         $agSession->searchable();
-        
+
     	return $agSession;
 
     }
