@@ -67,7 +67,7 @@ transformative technology and how it can unleash the power of people!</p>
 			<h2>Register Now!</h2>
 			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
 			<div class="your-clock"></div>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Register Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Register Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->

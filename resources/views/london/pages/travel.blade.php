@@ -225,7 +225,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<button class="green-btn popup" data-popupdata="booknow">Book now</button>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book now</button></a>
 		</div>
 	</section>
 @endsection

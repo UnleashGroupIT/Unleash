@@ -42,7 +42,7 @@
             <li class="NavMenuLi NavActive" data-filter=".SummerSaver">SINGLE ATTENDEE</li>
             <li class="NavMenuLi" data-filter=".Group">GROUP TICKETS</li>
             <li class="NavMenuLi" data-filter=".Investor">INVESTORS</li>
-            <li class="NavMenuLi" data-filter=".Startup">STARTUPS</li>
+            <!--<li class="NavMenuLi" data-filter=".Startup">STARTUPS</li>-->
         </ul>
     </div>
 </section>
@@ -337,7 +337,7 @@
   <!-- INVESTORS END -->
 
   <!-- STARTUP -->
-      <div class="TicketBox IsoBox Startup TicketFour mobilemargin-up" data-category="Startup">
+      <!--<div class="TicketBox IsoBox Startup TicketFour mobilemargin-up" data-category="Startup">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">STARTUP</h2>
@@ -377,7 +377,7 @@
    <button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" data-popupdata="startup">BOOK NOW</button>
   <!-- STARTUP END -->
 
- </div>
+ </div>-->
  </div>
 
      <div id="ButtonContainer">

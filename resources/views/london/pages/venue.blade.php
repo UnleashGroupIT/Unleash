@@ -52,7 +52,7 @@
 				<h2>London</h2>
 				<p>The world’s foremost financial center and a leading global and cultural capital, London is one of the world's most visited cities. London has something for everyone: from business and commerce through to history and culture, and it’s a great city for good times!</p>
 			</div>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book Now</button></a>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg floorplancitybg"></div>
@@ -78,7 +78,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology.</p>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 @endsection

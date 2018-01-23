@@ -3,8 +3,8 @@
 @section('meta')
 		<meta name="description" content="We are passionate creative people on a mission to inspire and transform the world of work and technology. London, Las Vegas, Amsterdam. #UNLEASH18">
          <!-- Open Graph data -->
-        <meta property="og:site_name" content="UNLEASH - Press"/>
-        <meta property="og:title" content="UNLEASH - Press"/>
+        <meta property="og:site_name" content="UNLEASH - Media"/>
+        <meta property="og:title" content="UNLEASH - Media"/>
         <meta property="og:description" content="We are passionate creative people on a mission to inspire and transform the world of work and technology. London, Las Vegas, Amsterdam. #UNLEASH18"/>
         <meta property="og:url" content="http://www.unleashgroup.io/press">
         <meta property="og:type" content="website"/>
@@ -13,12 +13,12 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@hrtechworld">
         <meta name="twitter:creator" content="@hrneurope">
-        <meta name="twitter:title" content="UNLEASH - Press">
+        <meta name="twitter:title" content="UNLEASH - Media">
         <meta name="twitter:description" content="We are passionate creative people on a mission to inspire and transform the world of work and technology. London, Las Vegas, Amsterdam. #UNLEASH18" />
         <meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
 @endsection
 
-@section('title', 'Press')
+@section('title', 'Media')
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ mix('css/global/press.css') }}">
@@ -36,14 +36,14 @@
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<h2>Press Centre</h2>
-				<p>Welcome to the UNLEASH Press Centre for our media, analysts and influencers! Make sure to browse the full menu for press releases, latest articles, as well as press and analyst registration information to our UNLEASH events.<br /></p>
+				<h2>MEDIA, ANALYSTS &amp; INFLUENCERS</h2>
+				<p>Welcome to the UNLEASH Media, Analysts &amp; Influencers Page! Make sure to browse the page for press releases, corporate blog posts, latest articles about UNLEASH, as well as media and analyst registration information to our UNLEASH events. You can also download our MEDIA Kit for our official logos and banners.<br /></p>
 				<p>For any inquiries, please contact Andi Lustak on <strong>pr@unleashgroup.io</strong><br />or by calling the following numbers:<br /></p>
 				<p><strong>UK: +44 20 34 689 689<br />US: +1 415 795 7022<br />EU: +36 1 201 1469</strong></p>
 			</div>
 			<div class="schedule-wrp">
-				<button class="darkgreen-btn popup" data-popupdata="subscribe">News Subscribe</button>
-				<a href="#analyst"><button class="darkgreen-btn">Press Registration</button></a>
+				<a href="UNLEASH_MediaKit.rar"><button class="darkgreen-btn popup" data-popupdata="">Media Kit</button></a>
+				<a href="#analyst"><button class="darkgreen-btn">Media Registration</button></a>
 			</div>
 		</div>
 	</section>
@@ -55,6 +55,10 @@
 				<p>The world’s fastest growing community on the Future of Work, UNLEASH is ranked as the largest Corporate Network focused on the interface between people, technology, organizations and the future. Our events attract the world’s leading entrepreneurs, visionaries, disrupters and doers, including Sir Richard Branson, Arianna Huffington, Sir Ken Robinson, Rachel Botsman, Gary Vaynerchuk and many more. Past and future show locations include Amsterdam, London, San Francisco, Paris and Las Vegas and have welcomed over 9,000 attendees in 2017.</p>
 				<p>In 2018, UNLEASH will scale significantly to become the world’s leading marketplace and community on the future of the workplace and technology. Join the community and find out more at <a style="display: inline-block;" href="http://www.unleashgroup.io">www.unleashgroup.io</a></p>
 				<p>Twitter: #UNLEASH18</p>
+				<p>Sign up to receive our latest announcements about UNLEASH events and news.</p>
+			</div>
+			<div class="schedule-wrp">
+				<button class="darkgreen-btn popup" data-popupdata="subscribe">PR News</button>
 			</div>
 		</div>
 		<div class="wrppr">
@@ -75,9 +79,6 @@
 					<a href="{{ route('ams.index') }}"><img src="{{ URL::asset('gfx/ams-box.png') }}" alt="Amsterdam"></a>
 				</div>
 			</div>
-			<h2>JOIN our community</h2>
-			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<button class="white-btn popup" data-popupdata="joinourcommunity">Join now</button>
 		</div>
 	</section>
 	<section class="two clients">
@@ -86,7 +87,7 @@
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<h2>PRESS RELEASES</h2>
+				<h2>MEDIA RELEASES</h2>
 				<p>
 					<a href="http://www.unleashgroup.io/news/unleash-first-round-of-speakers-london18/" target="_blank">UNLEASH Conference &amp; Expo announces first round of speakers for London show in March. (11 January 2018)</a>
 					<a href="http://www.unleashgroup.io/news/bri-vellis-chief-marketing-officer/" target="_blank">Bri Vellis Joins UNLEASH as Chief Marketing Officer (12 December 2017)</a>
@@ -167,10 +168,10 @@
 	</section>
 	<section id="analyst" class="one-cntr">
 		<div class="wrp">
-			<h2>PRESS &amp; AnaLyst registration</h2>
-			<p>All media and analyst representatives who plan to attend UNLEASH Conference and Expo in London must register their interest in attending the show. Press Passes are free-of-charge to all press/media/ industry analysts/ bloggers with valid and current credentials. The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved.</p>
-			<p>If you have any questions about registration or require assistance, please contact Andi Lustak at pr@unleashgroup.io Please note: You will be required to show identification and credentials when you arrive at ExCeL, London.</p>
-			<button class="white-btn popup" data-popupdata="pressreg">Press Registration</button>
+			<h2>Media &amp; AnaLyst registration</h2>
+			<p>All media and analyst representatives who plan to attend UNLEASH events must register their interest in attending each show. Media and Analyst Passes are free-of-charge to all press/media/ industry analysts/ bloggers with valid and current credentials. The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved.</p>
+			<p>If you have any questions about registration or require assistance, please contact Andi Lustak at pr@unleashgroup.io Please note: You will be required to show identification and credentials when you arrive to the conference venues.</p>
+			<button class="white-btn popup" data-popupdata="pressreg">Media Registration</button>
 		</div>
 	</section>
 	<div id="thankyoupress" class="modal">

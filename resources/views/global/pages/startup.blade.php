@@ -56,7 +56,7 @@
 			<div class="content-wrap">
 				<h2>Apply for the competition</h2>
 				<p>If you are shortlisted in our competition, you will compete with five (5) other finalists to convince an experts jury that your solution will make a difference. The winner will walk away with a spring in their step. Apart from the pride and prize, our winners will gain global media coverage and personal introductions to real movers, shakers and connectors in the industry. Past jury members have included thinkers and analysts like Josh Bersin, Jason Corsello, and Heidi Spirgi as well as investors, vendors, media - and perhaps most importantly of all - the organizations they wish to serve.</p>
-				<p id="orange-text">APPLICATION DEADLINE <a class="eventlink" href="/london" target="_blank">FOR LONDON</a> IS 26 FEBRUARY 2018.</p>
+				<p id="orange-text"><a class="eventlink" href="/london" target="_blank"><img src="{{ URL::asset('gfx/deadline-london-blck.png') }}" alt="London Deadline 26 FEBR 2018"></a><br /></p>
 			</div>
 			<div class="schedule-wrp">
 				<button class="orange-btn popup" data-popupdata="compete">Apply to Compete</button>
@@ -109,7 +109,7 @@
 		<div class="wrp animated fadeInTop">
 			<h2>APPLY NOW</h2>
 			<p>To apply, follow the link below and complete the registration form and we will be<br />in touch shortly to discuss it personally with you.</p>
-			<p id="orange-text">APPLICATION DEADLINE <a class="eventlink" href="/london" target="_blank">FOR LONDON</a> IS 26 FEBRUARY 2018.</p>
+			<p id="orange-text"><a class="eventlink" href="/london" target="_blank"><img src="{{ URL::asset('gfx/deadline-london.png') }}" alt="London Deadline 26 FEBR 2018"></a></p>
 			<button class="orange-btn popup" data-popupdata="compete">Apply</button>
 		</div>
 	</section>

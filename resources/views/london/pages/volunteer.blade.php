@@ -107,24 +107,5 @@
 		</div>
 	</section>
 	
-<script>
-$('#ContactForm').submit(function(event){
-
-    event.preventDefault();
-     var formData = $('#ContactForm').serialize();
-
-
-               $.post( "https://www.hrtechcongress.com/marketingelements/smartrecruiters/ssl_test.php", {action: "externship", formData: formData })
-              .done(function( data ) {
-                if (typeof data != "undefined" && data != 0 && data != ''){
-
-						window.location = "https://hrtechcongress.com/sanfrancisco/#ThankYouForEnquiry";
-
-                }
-        });
-
-
-});
-
-</script>	
+	
 @endsection

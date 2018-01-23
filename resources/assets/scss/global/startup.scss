@@ -19,9 +19,9 @@ h2{
 }
 
 #startup-logo-wrp{
-    width: 215px;
+    width: 230px;
     position: fixed;
-    top: 57px;
+    top: 65px;
     opacity: 0;
     visibility: hidden;
     left: 0;
@@ -31,11 +31,11 @@ h2{
       visibility: visible;
     }
     @media (min-width: 75em) {
-      width: 240px;
+      width: 225px;
       top: 68px;
     }
     @media (min-width: 125em) {
-      width: 13vw;
+      width: 12.2vw;
       top: 3.5vw;
     }
 }
@@ -309,6 +309,17 @@ section.one-cntr {
   font-weight: bold;
   color:$orange;
   text-transform: uppercase;
+  font-size: 19px;
+  margin-top: 1em;
+  @media (min-width: 650px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 125em) {
+    img{
+      width: 15vw;
+    }
+  }
 }
 
 #arctic{

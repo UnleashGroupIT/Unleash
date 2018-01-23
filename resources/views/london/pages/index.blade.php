@@ -40,15 +40,13 @@
 			<!--<h4>Main sponsors</h4>-->
 			<div class="mainsponsors-wrap">
 					
-					<div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img id="ach" src="{{ URL::asset('gfx/london/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
+					
 			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
                     <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                    <div><a href="https://www.cut-e.com/assessment-solutions/" target="_blank" title="Cut-e"><img id="cute" src="{{ URL::asset('gfx/london/header/sponsors/cute.svg') }}" alt="Cut-e"></a></div>
-                    <div><a href="https://www.hirevue.com/" target="_blank" title="Hirevue"><img src="{{ URL::asset('gfx/london/header/sponsors/hirevue.svg') }}" alt="Hirevue"></a></div>
-                    <div><a href="https://www.instructure.com/" target="_blank" title="Instructure"><img class="sppn" id="ins" src="{{ URL::asset('gfx/london/header/sponsors/instructure.png') }}" alt="Instructure"></a></div>
-                    <div><a href="https://www.mhr.co.uk/" target="_blank" title="MHR"><img id="mhr" src="{{ URL::asset('gfx/london/header/sponsors/mhr.svg') }}" alt="MHR"></a></div>
                     <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
                     <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+                    <div><a href="https://www.workday.com/" target="_blank" title="Workday"><img src="{{ URL::asset('gfx/london/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
+
 
 			</div>
 		</section>
@@ -61,7 +59,7 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>2018 marks UNLEASH’s fourth year at the ExCel London, a ground-breaking show unlike any other. Offering unparalleled learning and networking opportunities on the Future of Work and Technology, UNLEASH Conference &amp; Expo in 2018 is officially the UK’s largest enterprise show for decision makers, with over 60 nationalities represented in 2017 and more than half of the attendees from the C-Suite. We are the fastest growing people-focused event on the planet and we pride ourselves in organising shows that make a real difference and bring a greater good to the world.</p>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Book Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
@@ -126,7 +124,7 @@
 			<h2>Register Now!</h2>
 			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
 			<div class="your-clock"></div>
-			<a href="{{ route('london.tickets') }}"><button class="green-btn">Register Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Register Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -143,7 +141,7 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/london/google.png') }}" alt="Google">
 			</div>
-			<button id="spnsrgrd" class="green-btn popup" data-popupdata="booknow">Get Your Ticket</button>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button id="spnsrgrd" class="green-btn">Get Your Ticket</button></a>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg expobg"></div>

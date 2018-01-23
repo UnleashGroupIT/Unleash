@@ -356,8 +356,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h3>PRESS &amp; ANALYST REGISTRATION</h3>
-		    <p>Register for a Press/Analyst Pass at UNLEASH Conference &amp; Expo in London, 20-21 March, 2018!</p>
+		    <h3>MEDIA &amp; ANALYST REGISTRATION</h3>
+		    <p>Register for a Media/Analyst Pass at one of the UNLEASH shows in 2018!</p>
 		  </div>
 		  <div class="modal-body">
 		    <form class="form" accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-05-23/jqxys">
@@ -367,6 +367,21 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_22401pi_145751_22401" id="145751_22401pi_145751_22401" size="30" maxlength="40" type="tel">
                 <input required="required" placeholder="City, Country" class="form-input" name="145751_22403pi_145751_22403" id="145751_22403pi_145751_22403" size="30" maxlength="255" type="text">
                 <input required="required" placeholder="URL to latest article from past 3 months" class="form-input" name="145751_22405pi_145751_22405" id="145751_22405pi_145751_22405" size="30" maxlength="255" type="text">
+                <div class="event-wrp">
+	                <p>Please choose an event</p>
+	                <div>
+	                	<label for="145751_29934pi_145751_29934_195180_195180">UNLEASH Conference &amp; Expo<br />London 20-21, March 2018</label>
+	                	<input type="radio" name="145751_29934pi_145751_29934[]" id="145751_29934pi_145751_29934_195180_195180" value="195180">
+	                </div>
+	                <div>
+	                	<label for="145751_29934pi_145751_29934_195182_195182">UNLEASH America<br />Las Vegas 15-16, May 2018</label>
+	                	<input type="radio" name="145751_29934pi_145751_29934[]" id="145751_29934pi_145751_29934_195182_195182" value="195182">
+	                </div>
+	                <div>
+	                	<label for="145751_29934pi_145751_29934_195184_195184">UNLEASH World Conference &amp; Expo<br />Amsterdam 23-24, October 2018</label>
+	                	<input type="radio" name="145751_29934pi_145751_29934[]" id="145751_29934pi_145751_29934_195184_195184" value="195184">
+	                </div>
+	            </div>
                 <p class="hidden">
                     <input placeholder="First name" data-field="fname" class="form-input" name="145751_22393pi_145751_22393" id="145751_22393pi_145751_22393" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="145751_22395pi_145751_22395" id="145751_22395pi_145751_22395" size="30" maxlength="255" type="text">

@@ -293,3 +293,46 @@ input[type="submit"]{
   -moz-appearance: button;
   appearance: button;
 }
+
+.event-wrp{
+  display: flex;
+  flex-direction: column;
+  p{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+  }
+  div{
+    display: flex;
+    margin:.5em 0;
+    &:hover{
+      cursor: pointer;
+      label{
+        color:#000;
+      }
+    }
+    
+    label{
+      font-size: 12px;
+      color:#aaa;
+      cursor: pointer;
+    }
+    input{
+      margin-left: auto;
+    }
+  }
+}
+
+#cv{
+  display:flex;
+  flex-direction:column;
+  p{
+    text-align:center;
+  }
+  input{
+    font-size: 13px;
+    width: 175px;
+    margin: 0 auto;
+  }
+}
