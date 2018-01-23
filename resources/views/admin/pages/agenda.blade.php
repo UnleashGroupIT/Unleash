@@ -311,50 +311,115 @@ text-align: center;
 
 
 {{-- NEW SESSION --}}
-	<section id="NewSession" class="hiddenTab">
-		
+<!-- 	<section id="NewSession" class="agenda hiddenTab "> -->
+	<section id="NewSession" class="agenda activeTab ">
+
+
+
+		<div class="title-section">
+			<h1>Create New Session</h1>
+			<h4>London 20-21 March 2018 | ExCeL</h4>
+		</div>
+		<div class="contents-bg">
+			<div class="contents-wrp">
+
+				<div id="day1" class="tabContent active">
+
+					<!-- Main Stage -->
+	    			<div class="cnt-wrp main-stage">
+                        <form id="NewSpeakerForm" role="form" v-on:submit.prevent="newSessionSubmit">
+              
+                          
+
+                            
+                            <input type="text" required name="session_name" id="session_name" placeholder="Session Name" class="form-control">
+
+
+
+									<input type="text" id="startTime" name="startTime" value="03/20/2018 8:00:00" />
+									<input type="text" id="endTime" name="endTime" value="03/20/2018 8:00:00" />
+				<select id="NewSessionTrack" name="NewSessionTrack">
+				@foreach($AgendaTracks as $TrackFilters)
+					<option value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}</option>
+				@endforeach
+				</select>
+
+				<select id="SessionType" name="SessionType">
+					<option value="1">Normal Session</option>
+					<option value="2">Registration</option>
+					<option value="3">Coffee Break</option>
+					<option value="4">Coctail Break</option>
+					<option value="5">Lunch Break</option>
+				</select>	
+                            <br />
+                            <textarea name="description" id="description" placeholder="Session Description"></textarea>
+                            <br />
+
+			<div id="NSSList">
+				<ul>
+					<li v-if="newSpeakerVisual" v-for="speakervisual in newSpeakerVisual">
+						<div @click="removeSpeakerFromNewSession(speakervisual.id)">
+					  	<div class="SpeakerImgContainer">
+					  		<img class="SpeakerImage" :alt="speakervisual.full_name" :src="'/storage/speakers/'+speakervisual.img_url">
+					  	</div>
+					  	<div class="SpeakerContent">
+					  		<h3>@{{speakervisual.full_name}}</h3>
+					  		<p>@{{speakervisual.job_title}}</p>
+					  		<p>@{{speakervisual.company}}</p>
+					  	</div>
+					  </div>
+					</li>
+				</ul>	
+			</div>	                                                                          
+
                       
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Add New Session</h4>
-                                        </div>
-                                            
-                                            <form id="NewSpeakerForm" role="form" v-on:submit.prevent="newSessionSubmit">
-                                            <div class="modal-body">
-                                              
+               
+                            <button type="submit" class="btn btn-succes">Submit</button>
 
-                                                <label class="sr-only" for="session_name">Session Name</label>
-                                                <input type="text" required name="session_name" id="session_name" placeholder="Session Name" class="form-control m-t-10">
+            
+                    </form>
+
+	    			</div>
+	    			<!-- END Main Stage -->
 
 
+	    			    			   			
 
-			 <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
 
-                                                <br />
-                                                <textarea name="description" id="description" placeholder="Session Description"></textarea>
-                                                <br />
+				</div>
 
-                                                                                              
+			</div>
+		</div>  
 
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="submit" class="btn btn-succes">Submit</button>
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                    Close
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                 
+		<div id="NewSessionSpeakers">
+			<h4>Speakers</h4>
+			<div id="NSSearchBarCont">
+				<input type="text" id="NSSBar" v-model="speakersearch">
+			</div>
+			<div id="NSSList">
+				<ul>
+					<li v-if="speakers" v-for="speaker in speakers">
+						<div @click="addSpeakerToNewSession(speaker.id)">
+					  	<div class="SpeakerImgContainer">
+					  		<img class="SpeakerImage" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url">
+					  	</div>
+					  	<div class="SpeakerContent">
+					  		<h3>@{{speaker.full_name}}</h3>
+					  		<p>@{{speaker.job_title}}</p>
+					  		<p>@{{speaker.company}}</p>
+					  	</div>
+					  </div>
+					</li>
+				</ul>	
+			</div>	
+		</div>	
 
 	</section>	
 {{-- END NEW SESSION --}}
 
 {{-- SESSIONS --}}
-<section id="Sessions" class="agenda activeTab">
+<!-- <section id="Sessions" class="agenda activeTab"> -->
+<section id="Sessions" class="agenda hiddenTab">	
 		<div class="title-section">
 			<h1 id="TestAgendaText">Sessions</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
@@ -438,13 +503,29 @@ text-align: center;
 
 
 jQuery(function() {
-   jQuery('input[name="daterange"]').daterangepicker({
+   jQuery('input[name="startTime"]').daterangepicker({
         timePicker: true,
-        timePickerIncrement: 30,
+   		//timePicker24Hour: true,	        
+        timePickerIncrement: 5,
+        singleDatePicker: true,
+   		minDate: "03/20/2018",
+   		maxDate: "03/21/2018 11:59 PM",
         locale: {
             format: 'MM/DD/YYYY h:mm A'
         }
     });
+
+   jQuery('input[name="endTime"]').daterangepicker({
+        timePicker: true,
+       // timePicker24Hour: true,	
+        timePickerIncrement: 5,
+        singleDatePicker: true,
+   		minDate: "03/20/2018",
+   		maxDate: "03/21/2018 11:59 PM",			        
+        locale: {
+            format: 'MM/DD/YYYY h:mm A'
+        }
+    });   
 });
 
 </script>	

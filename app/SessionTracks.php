@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SessionSpeakers extends Model
+class SessionTracks extends Model
 {
-
   protected $fillable = [
 	'session_id',
-	'speaker_id'
+	'track_id'
 ];
-  protected $table = 'sessionspeakers';
+
+  protected $table = 'sessiontracks';
 
 }

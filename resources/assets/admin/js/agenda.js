@@ -91,6 +91,10 @@ var spVue = new Vue({
 		events: null,
 		day1: null,
 		day2: null,
+		speakersearch: null,
+		speakers: null,
+		newSpeaker: [], //This contains the true ids for speaker upload for sessions
+		newSpeakerVisual: []
 		
 
 	},//data,
@@ -180,8 +184,101 @@ var spVue = new Vue({
 
 		},
 
+     searchForSpeakers(keyword){
 
-	
+        axios.get(`/api/speakers?search=${keyword}&limit=5`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.speakers = response.data.data;
+          
+        })
+        .catch(e => {
+         console.log(e);
+        })
+
+     },
+
+	addSpeakerToNewSession(speaker_Id){
+
+		if(!this.newSpeaker.includes(speaker_Id)){
+			this.newSpeaker.push(speaker_Id);
+			var vm = this;
+
+			this.speakers.forEach(function(element) {
+			     if(element.id == speaker_Id){
+
+			     	vm.newSpeakerVisual.push(element);
+			  
+			     }
+				});			
+			console.log(this.newSpeaker);
+			console.log(this.newSpeakerVisual);
+		}
+
+	},
+
+	removeSpeakerFromNewSession(speaker_Id){
+
+		if(this.newSpeaker.includes(speaker_Id)){
+			let rIndex = this.newSpeaker.indexOf(speaker_Id);
+			 this.newSpeaker.splice(rIndex, 1);
+		
+			var vm = this;
+
+			this.newSpeakerVisual = this.newSpeakerVisual.filter(function(el) {
+    			return el.id !== speaker_Id;
+			});
+			console.log(this.newSpeaker);
+			console.log(this.newSpeakerVisual);
+					
+		}
+
+	},
+
+	newSessionSubmit($event){
+
+      // create a form
+      const form = new FormData();
+      form.append('sessionTitle', $event.target.session_name.value);
+      form.append('startTime', $event.target.startTime.value);
+      form.append('endTime', $event.target.endTime.value);
+      form.append('description', $event.target.description.value);
+      form.append('speakers', JSON.stringify(this.newSpeaker));
+      form.append('track', $event.target.NewSessionTrack.value);
+      form.append('sessionType', $event.target.SessionType.value);
+      form.append('eventid', this.eventid);
+      
+      
+      // submit the image			
+
+        const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+
+			axios.post('/api/session', form, config)
+			  .then(function (response) {
+			  //	document.getElementById("NewSpeakerForm").reset();
+				
+			  		
+			 		    new PNotify({
+					        title: 'Success!',
+					        text: 'Speaker Saved!',
+					        type: 'success'
+    					});
+
+    			
+			  })
+			  .catch(function (error) {
+			  	 new PNotify({
+                  title: 'Error!',
+                  text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+                  type: 'error'
+              });
+			    console.log(error);
+			  });
+
+
+	}			
 
 	},
 
@@ -204,7 +301,11 @@ var spVue = new Vue({
   	searchbar: function (val){
   	  	this.searchbar = val;
   		this.filteredSearch();	
-  	}
+  	},
+    speakersearch: function (val){
+    	this.searchForSpeakers(val);
+    }
+
   }  
 
 

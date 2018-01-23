@@ -34,10 +34,16 @@ class SpeakerController extends Controller
 
          if ($request->has('search')){
             $speakers->where('full_name','like', '%'.$request->search.'%');
-        }        
+        }      
+
+         if ($request->has('limit')){
+            $limit = $request->limit;
+        }else {
+            $limit = 30;
+        }             
        
        // return $speakers->get();
-        return $speakers->paginate(30);
+        return $speakers->paginate($limit);
     	
     }
     //store a speaker

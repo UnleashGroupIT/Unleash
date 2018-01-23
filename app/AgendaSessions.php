@@ -13,6 +13,15 @@ class AgendaSessions extends Model
 
     use Searchable;
 
+  protected $fillable = [
+        'session_title',
+        'session_description',
+        'category_id',
+        'start_time',
+        'end_time',
+        'extra_category'
+    ];
+    
      public function speakers(){
 
         	return $this->belongsToMany('App\Speakers', 'sessionspeakers','session_id', 'speaker_id')

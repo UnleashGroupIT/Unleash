@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\AgendaSessions;
+use App\Tracks;
 use App\SessionSpeakers;
+use App\SessionTracks;
+use Carbon\Carbon;
 
 class AgendaController extends Controller
 {
@@ -16,31 +19,59 @@ class AgendaController extends Controller
     }
 
     //store a session
-    public function storeSession(Request $request){
-    	
-    	$agSession = AgendaSessions::create([
-		'track_id' => $request->track,
-		'session_title' => $request->session_title, 
-		'session_description' => $request->session_description, 
-		'category_id' => $request->category_id ?? 1, 
-		'start_time' => $request->start_time, 
-		'end_time' => $request->end_time, 
-		'extra_category' => $request->extra_category ?? null
+    public function storeSession(Request $request, AgendaSessions $agenda){
 
-    		]);
+
+       $agSession = $agenda->withoutSyncingToSearch(function () use ($agenda, $request){
+            $start = Carbon::parse($request->startTime);
+            $end = Carbon::parse($request->endTime);      
+              
+        return $agenda->create([
+        //'track_id' => $request->track,
+        'session_title' => $request->sessionTitle, 
+        'session_description' => $request->description, 
+        'category_id' => $request->SessionType ?? 1, 
+        'start_time' => $start, 
+        'end_time' => $end, 
+        //'extra_category' => $request->extra_category ?? null
+
+                 ]);
+
+    // Perform model actions...
+     });
+    	
+
+        if ($request->has('SessionType') && $request->SessionType > 1){
+            $allTracks = Tracks::where('eventid',$request->eventid);
+            foreach ($allTracks as $key => $track) {
+                SessionTracks::create([
+                    'session_id' => $agSession->id,
+                    'track_id' => $track->id
+                    ]);
+            }
+        }else {
+                 SessionTracks::create([
+                    'session_id' => $agSession->id,
+                    'track_id' => $request->track
+                    ]);
+        }
 
     	if (!empty($request->speakers)){
-    		foreach ($request->speakers as $key => $speaker_num) {
+            $spkrs = json_decode($request->speakers);
+    		foreach ($spkrs as $key => $speaker_num) {
     			SessionSpeakers::create([
     				'session_id' => $agSession->id,
     				'speaker_id' => $speaker_num
-    				])
+    				]);
     		}
     	}
 
+        $agSession->searchable();
+        
     	return $agSession;
 
     }
+
     //show a specific session by id
     public function showSession($sessionId){
     	return AgendaSessions::find($sessionId);
@@ -79,7 +110,7 @@ class AgendaController extends Controller
     			SessionSpeakers::create([
     				'session_id' => $request->sessionId,
     				'speaker_id' => $request->speakerId
-    				])
+    				]);
     		
     	}
     	//ide kellene valami return érték

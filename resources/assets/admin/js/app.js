@@ -1,4 +1,4 @@
-window._ = require('lodash');
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,14 +6,13 @@ window._ = require('lodash');
  */
 
 
-
-	 window.jQuery = require('jquery');
-     window.bootstrap = require('bootstrap');
-
+try {
+	global.$ = global.jQuery = require('jquery');
+     require('bootstrap');
+} catch (e) {}
 
 
 global.axios = require('axios');
-
 
 global.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
