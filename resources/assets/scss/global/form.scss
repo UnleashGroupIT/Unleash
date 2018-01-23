@@ -1,0 +1,259 @@
+@import 'reset';
+@import '../common';
+@import '../footer';
+@import '../menu';
+@import '../inner-menu';
+@import '../popup';
+@import 'menu';
+
+$blue : #0090ff;
+
+body{
+	background-color:#eee;
+}
+
+header,footer{
+	display:none;
+}
+
+input{
+	padding:.1em .5em;
+    border: 1px solid #ccc;
+    
+    @media (min-width: 500px) {
+		margin-left: auto;
+	}
+}
+
+#text-area{
+	flex-direction:column;
+}
+
+textarea{
+	border: 1px solid #ccc;
+    margin-top: 1em;
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+}
+label{
+	margin:auto 0;
+	margin-right:2em;
+	margin-bottom:.3em;
+	@media (min-width: 500px) {
+		margin-bottom: 0;
+	}
+}
+
+#form-wrp{
+	display:flex;
+}
+
+#form{
+	width:1170px;
+	max-width:100%;
+	margin:70px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+}
+
+.title{
+	background: repeating-linear-gradient(-45deg, rgba(0, 144, 255, 0.3), rgba(0, 144, 255, 0.3) 3px, transparent 3px, transparent 6px);
+	margin-bottom:1em;
+	h4{
+		display: inline-block;
+	    background: #fff;
+	    margin: 0;
+	    margin-top: .5em;
+	    padding: .25em;
+	    padding-left: 0;
+	    font-weight: bold;
+	}
+}
+.sec{
+	margin-bottom:3em;
+}
+
+.form-header{
+	background-color:#000;
+	display: flex;
+    padding: 1em 2em;
+    flex-direction: column;
+    @media (min-width: 50em) {
+		flex-direction: row;
+	}
+    .form-title{
+    	display: flex;
+    	@media (min-width: 50em) {
+			margin-left: auto;
+		}
+    	h2{
+    		margin:auto 0;
+    		font-size: 18px;
+    		@media (min-width: 50em) {
+				font-size: 24px;
+			}
+    	}
+    }
+}
+
+.form-body{
+	padding:2em;
+}
+
+.event-pick{
+	display:flex;
+	flex-direction:column;
+	@media (min-width: 50em) {
+		flex-direction: row;
+	}
+	.deadline{
+		margin: auto 0;
+		width: 100%;
+		margin-bottom: 2em;
+		@media (min-width: 50em) {
+			width: 65%;
+			margin: auto 0;
+		}
+		h4{
+			color:#000;
+			font-weight: bold;
+			strong{
+				color: $blue;
+			}
+		}
+	}
+	.event-details{
+		
+		@media (min-width: 50em) {
+			margin-left: auto;
+		}
+		div{
+			display: flex;
+			margin:.5em 0;
+			flex-direction: column;
+			@media (min-width: 500px) {
+				flex-direction: row;
+			}
+		}
+		input{
+			@media (min-width: 500px) {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.publicy-contact{
+	display:flex;
+	flex-wrap:wrap;
+	@media (min-width: 50em) {
+		flex-wrap: nowrap;
+	}
+
+	.publicy{
+		width: 100%;
+		@media (min-width: 50em) {
+			width: 65%;
+			margin-right: 2em;
+		}
+
+		.publicy-details{
+			div{
+				display: flex;
+				margin:.5em 0;
+				flex-direction: column;
+				@media (min-width: 500px) {
+					flex-direction: row;
+				}
+			}
+		}
+	}
+
+	.contact{
+		margin-left: auto;
+		width: 100%;
+		margin-top: 2em;
+		@media (min-width: 50em) {
+			width: auto;
+			margin-top: 0;
+		}
+		.contact-details{
+			div{
+				display: flex;
+				margin:.5em 0;
+				flex-direction: column;
+				@media (min-width: 500px) {
+					flex-direction: row;
+				}
+			}
+		}
+	}
+}
+
+.picture{
+	input{
+		width: 100%;
+		padding:2em;
+		margin:1em auto;
+	}
+}
+
+.company{
+	.company-details{
+		div{
+			display: flex;
+			margin:.5em 0;
+			flex-direction: column;
+			@media (min-width: 500px) {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.product{
+	.product-details{
+		div{
+			display: flex;
+			margin:.5em 0;
+			flex-direction: column;
+			@media (min-width: 500px) {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.blue-btn{
+	padding: .8em;
+  	margin: .5em;
+  	background-color: #0090ff;
+  	color: #fff;
+  	margin-left: 2em;
+  	margin-bottom: 2em;
+  	width: 100%;
+  	border-radius: 3px;
+  	text-transform: uppercase;
+  	font-weight: bold;
+  	border: 1px solid transparent;
+
+	@media (min-width: 30em) {
+	   width: 205px;
+	}
+
+	@media (min-width: 120em) {
+	  width: 11vw;
+	  font-size: .8vw;
+	}
+
+  	&:hover{
+  		-webkit-transition: all .3s;
+  		transition: all .3s;
+  		cursor: pointer;
+  		color: #0090ff;
+  	    background-color: #fff;
+  	    border-color: #0090ff;
+  	}
+}

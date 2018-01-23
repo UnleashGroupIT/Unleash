@@ -1,0 +1,39 @@
+$black: #000;
+
+#desktop-menu{
+    background:$black;
+}
+
+#sub{
+    position: fixed;
+    top: 67px;
+    height: 36px;
+    @media (min-width: 125em) {
+        top:3.47vw;
+        height: 1.65vw;
+    }
+}
+
+#unleash-logo #full-logo {
+    @media (min-width: 75em){
+        width: 320px;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        padding: 8px 0;
+    }
+    @media (min-width: 125em) {
+        width: 15vw;
+        padding: .5vw 0;
+    }
+}
+
+#hamburger{
+    background:$black;
+    #mobile-logo{
+        width: 320px;
+    }
+}
+
+#unleash-logo.show #full-logo{
+    margin-top: 0;
+}
