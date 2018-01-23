@@ -425,12 +425,12 @@ section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+4) {
   }
 }
 
-section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours {
+section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours, section.one-cntr.counter .flip-clock-divider.hours .flip {
   display: none;
 }
 
 @media (min-width: 45em) {
-  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours {
+  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds, section.one-cntr.counter .flip-clock-divider.hours, section.one-cntr.counter .flip-clock-divider.hours .flip {
     display: block;
   }
 }

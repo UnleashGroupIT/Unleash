@@ -29,32 +29,16 @@
 
                 <p class="Paragraph">Welcome to the UNLEASH website (hereinafter referred to as the “Website”). Please read carefully our Terms and Conditions (hereinafter referred to as “Terms”) and Privacy Policy before using this Website.</p><br>
 
-                <p class="Paragraph">If you have any questions or comments, please refer to the operator of the Website: HRN Europe Ltd.
-HRN Europe Ltd. Alkotás Point, Building C, 6th floor Alkotas utca 50. 1123 Budapest, Hungary 
-(hereinafter referred to as “Data Controller” or “HRN”).
-
+                <p class="Paragraph">If you have any questions or comments, please refer to the operator of the Website: HRN Europe Ltd. HRN Europe Ltd. Alkotás Point, Building C, 6th floor Alkotas utca 50. 1123 Budapest, Hungary 
+				(hereinafter referred to as “Data Controller” or “HRN”).
 				</p>
-				
-				
-				 <h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">TICKET DISCLAIMERS</h3>
-				
-				@foreach($terms as $term)
-					<h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">{{$term->title}}</h3>
-					@foreach($term->content as $cont)
-							<p class="Paragraph">{{ $cont }}</p>
-							<br/ >
-					@endforeach
-					
-				@endforeach
-
-				
-                <h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">GENERAL TERMS &amp; CONDITIONS FOR HRN EVENTS AND TRADE SHOW TICKET PURCHASE AND PARTICIPATION</h3>
+                <h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">GENERAL TERMS & CONDITIONS FOR HRN EVENTS AND TRADE SHOW TICKET PURCHASE AND PARTICIPATION</h3>
                 <p class="Paragraph">In the following document HRN describe the terms and conditions between HRN and you when you purchase a ticket or register for any HRN event or trade show, or take part in any HRN and/or affiliate conducted survey. By purchasing a ticket or registering for an HRN event or trade show or taking part in an HRN and/or affiliate conducted survey you give your consent to agree to and be bound by these terms and conditions. Please take your time to thoroughly read this document.</p>
                 <br>
                 <p class="Paragraph">HRN retains the right to modify and change at any time these terms and conditions. Any modified terms and conditions document will be updated on this website. This latest updated version of terms and conditions is applicable from 9 January, 2018.</p>
 
                 <h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">EVENT OR TRADESHOW ORGANIZER</h3>
-                <p class="Paragraph">UNLEASH (formerly HR Tech World) is organized by HRN Europe Ltd. HRN Europe Ltd. is active in the business of creating business reports, awards, communities and tradeshows under various brand names including but not limited to: UNLEASH Conference &amp; Expo, UNLEASH Americas, UNLEASH World Conference &amp; Expo, HR Tech World Congress, HR Tech World, iRecruit, disruptHR.</p>
+                <p class="Paragraph">UNLEASH (formerly HR Tech World) is organized by HRN Europe Ltd. HRN Europe Ltd. is active in the business of creating business reports, awards, communities and tradeshows under various brand names including but not limited to: UNLEASH Conference & Expo, UNLEASH Americas, UNLEASH World Conference & Expo, HR Tech World Congress, HR Tech World, iRecruit, disruptHR.</p>
 
                 <h3 class="MediumParagraph AmsterdamColor Caps BoldText MarginTopSmall MarginBottomSmall">Declaration of Consent</h3>
                 <p class="Paragraph">Having read the terms and conditions document I hereby give my consent to HRN and its subsidiaries to collect, process, store and use my personal data for the purposes of administration regarding the purchase of my ticket and for any other kind of use to which I have given my consent. The information provided by you will be used for administrating and processing ticket sales and adding your data to delegate lists and our email database, including all delegates from past and current events and trade shows. If you do not wish your name, photograph, country where based and company name to be disclosed on the delegate list please email  <a href="mailto:info@unleashgroup.io" title="info@unleashgroup.io"><strong class="AmsterdamColor">info@unleashgroup.io</strong></a></p>
@@ -75,7 +59,7 @@ HRN Europe Ltd. Alkotás Point, Building C, 6th floor Alkotas utca 50. 1123 Buda
                     <br>
                     b) change, update or modify fully or partially these Terms from time to time. Your continued use of the entire HRN IT infrastructure or any part thereof following such change shall be subject to, and including the changes made, to the terms from time to time. <br>
                     <br>
-                    c) Monitor any user activity and third-party content associated with the entire HRN IT infrastructure. <br>
+                    c) Monitor any user activity and third party content associated with the entire HRN IT infrastructure. <br>
                     <br>
                     d) to investigate any reported violation of these Terms to confirm that HRN shall not be liable to you or any third party for any modification to or withdrawal of the entire HRN IT infrastructure; and/or deemed to be your acceptance of such change. </p>
                 <br>

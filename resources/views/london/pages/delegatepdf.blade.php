@@ -42,6 +42,6 @@
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/pdfs.css') }}">
-<meta http-equiv="refresh" content="0; url=https://docsend.com/view/g2kgky8" />
+<meta http-equiv="refresh" content="0; url=https://docsend.com/view/5n2aara" />
 </head>
 	 <body></body></head><html>

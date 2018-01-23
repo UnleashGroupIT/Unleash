@@ -222,10 +222,6 @@ section.two .wrppr {
     }
     @media (min-width: 75em) {
       height: 100%;
-      background-size: contain;
-      background-attachment:fixed;
-    }
-    @media (min-width: 110em) {
       background-size: 50% 100%;
       background-attachment:fixed;
     }

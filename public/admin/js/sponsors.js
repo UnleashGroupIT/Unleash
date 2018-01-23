@@ -402,106 +402,106 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      speakers: []
-    };
-  },
-
-
-  methods: {
-    addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
-
-      this.$emit('speakeradded', speakerId);
+    data: function data() {
+        return {
+            speakers: []
+        };
     },
-    deleteFromDatabase: function deleteFromDatabase(speakerId) {
-      var thisInstance = this;
-      var thisSelected = this.selected;
-      var thisSearch = this.speakerSearch;
 
-      new PNotify({
-        title: 'Confirmation Needed',
-        text: 'Are you sure you want to delete this speaker?',
-        icon: 'fa fa-question-circle',
-        type: 'error',
-        hide: false,
-        confirm: {
-          confirm: true
+
+    methods: {
+        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
+
+            this.$emit('speakeradded', speakerId);
         },
-        buttons: {
-          closer: false,
-          sticker: false
+        deleteFromDatabase: function deleteFromDatabase(speakerId) {
+            var thisInstance = this;
+            var thisSelected = this.selected;
+            var thisSearch = this.speakerSearch;
+
+            new PNotify({
+                title: 'Confirmation Needed',
+                text: 'Are you sure you want to delete this speaker?',
+                icon: 'fa fa-question-circle',
+                type: 'error',
+                hide: false,
+                confirm: {
+                    confirm: true
+                },
+                buttons: {
+                    closer: false,
+                    sticker: false
+                },
+                history: {
+                    history: false
+                }
+
+            }).get().on('pnotify.confirm', function () {
+
+                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
+                    // JSON responses are automatically parsed.
+                    thisInstance.filterSpeakers(thisSelected, thisSearch);
+                    new PNotify({
+                        title: 'Success!',
+                        text: 'Deleted Successfully!',
+                        type: 'success'
+                    });
+                }).catch(function (error) {
+                    new PNotify({
+                        title: 'Error!',
+                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+                        type: 'error'
+                    });
+                    console.log(error);
+                });
+            }).on('pnotify.cancel', function () {});
         },
-        history: {
-          history: false
+        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
+            var _this = this;
+
+            var exludeG = '';
+            var searchQ = '';
+
+            if (gridId) {
+                exludeG = 'exlude=' + gridId;
+            }
+
+            if (searchQuery) {
+                searchQ = 'search=' + searchQuery;
+            }
+
+            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
+                // JSON responses are automatically parsed.
+                _this.speakers = response.data;
+            }).catch(function (e) {
+                _this.errors.push(e);
+            });
+        },
+        getAllSpeakers: function getAllSpeakers() {
+            var _this2 = this;
+
+            axios.get('/api/sponsors').then(function (response) {
+                // JSON responses are automatically parsed.
+                _this2.speakers = response.data;
+            }).catch(function (e) {
+                _this2.errors.push(e);
+            });
         }
-
-      }).get().on('pnotify.confirm', function () {
-
-        axios.delete('/api/sponsor/' + speakerId).then(function (response) {
-          // JSON responses are automatically parsed.
-          thisInstance.filterSpeakers(thisSelected, thisSearch);
-          new PNotify({
-            title: 'Success!',
-            text: 'Deleted Successfully!',
-            type: 'success'
-          });
-        }).catch(function (error) {
-          new PNotify({
-            title: 'Error!',
-            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-            type: 'error'
-          });
-          console.log(error);
-        });
-      }).on('pnotify.cancel', function () {});
     },
-    filterSpeakers: function filterSpeakers(gridId, searchQuery) {
-      var _this = this;
 
-      var exludeG = '';
-      var searchQ = '';
+    // Fetches posts when the component is created.
+    created: function created() {
+        this.getAllSpeakers();
 
-      if (gridId) {
-        exludeG = 'exlude=' + gridId;
-      }
-
-      if (searchQuery) {
-        searchQ = 'search=' + searchQuery;
-      }
-
-      axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
-        // JSON responses are automatically parsed.
-        _this.speakers = response.data;
-      }).catch(function (e) {
-        _this.errors.push(e);
-      });
-    },
-    getAllSpeakers: function getAllSpeakers() {
-      var _this2 = this;
-
-      axios.get('/api/sponsors').then(function (response) {
-        // JSON responses are automatically parsed.
-        _this2.speakers = response.data;
-      }).catch(function (e) {
-        _this2.errors.push(e);
-      });
+        // async / await version (created() becomes async created())
+        //
+        // try {
+        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+        //   this.posts = response.data
+        // } catch (e) {
+        //   this.errors.push(e)
+        // }
     }
-  },
-
-  // Fetches posts when the component is created.
-  created: function created() {
-    this.getAllSpeakers();
-
-    // async / await version (created() becomes async created())
-    //
-    // try {
-    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-    //   this.posts = response.data
-    // } catch (e) {
-    //   this.errors.push(e)
-    // }
-  }
 });
 
 /***/ }),
@@ -2618,7 +2618,8 @@ var spVue = new Vue({
 	}
 
 	/*mounted(){
- 		
+ 
+ 	
  }*/
 
 });

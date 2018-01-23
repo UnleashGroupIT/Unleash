@@ -17,11 +17,12 @@
 										<ul class="subs-ul">
 											<li><a href="{{ route('london.index') }}">Show</a></li>
 											<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
+											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('london.sponsors') }}">Our Clients</a></li>
 											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
-											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
+											<li><a href="https://unleash.swoogo.com/unleashlondon" target="_blank">Tickets</a></li>
 										</ul>
 									</li>
 									<li class="lasvegas" title="LAS VEGAS">
@@ -33,6 +34,7 @@
 											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
 											<li><a href="{{ route('lasvegas.index') }}#spkrgrd">Speakers</a></li>
 											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
+											<li><a href="{{ route('lasvegas.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('lasvegas.travel') }}">Venue &amp; Travel</a></li>
 											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
 										</ul>
@@ -57,5 +59,5 @@
 					<li><a href="{{ route('global.startup') }}">Startup</a></li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
 					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
-					<li><a href="{{ route('press') }}">Media</a></li>
+					<li><a href="{{ route('media') }}">Media</a></li>
 				</ul>

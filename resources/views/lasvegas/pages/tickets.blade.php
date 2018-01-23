@@ -42,7 +42,7 @@
             <li class="NavMenuLi NavActive" data-filter=".SummerSaver">SINGLE ATTENDEE</li>
             <li class="NavMenuLi" data-filter=".Group">GROUP TICKETS</li>
             <li class="NavMenuLi" data-filter=".Investor">INVESTORS</li>
-            <li class="NavMenuLi" data-filter=".Startup">STARTUPS</li>
+            <!--<li class="NavMenuLi" data-filter=".Startup">STARTUPS</li>-->
         </ul>
     </div>
 </section>
@@ -151,7 +151,7 @@
    <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="oneday">BOOK NOW</button>
   </div>
   
-    <div class="TicketBox IsoBox Group TicketFour" data-category="Group">
+     <div class="TicketBox IsoBox Group TicketFour" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">A'LACARTE</h2>
@@ -164,7 +164,7 @@
 
        </div>
    <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="alacarte">CONTACT US</button>
-  </div>
+  </div> 
 
   <div class="TicketBox IsoBox Group TicketThree mobilemargin-up" data-category="Group">
     <div class="TicketBoxHeader">
@@ -337,7 +337,7 @@
   <!-- INVESTORS END -->
 
   <!-- STARTUP -->
-      <div class="TicketBox IsoBox Startup TicketFour mobilemargin-up" data-category="Startup">
+      <!--<div class="TicketBox IsoBox Startup TicketFour mobilemargin-up" data-category="Startup">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">STARTUP</h2>
@@ -377,7 +377,7 @@
    <button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" data-popupdata="startup">BOOK NOW</button>
   <!-- STARTUP END -->
 
- </div>
+ </div>-->
  </div>
 
      <div id="ButtonContainer">
@@ -452,8 +452,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
           </div>
         </div>
     </div>
-	
-	
+
     <div id="alacarte" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -486,8 +485,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
             </form>
           </div>
         </div>
-    </div>	
-
+    </div>		
+	
     <div id="team-5" class="modal">
         <!-- Modal content -->
         <div class="modal-content">

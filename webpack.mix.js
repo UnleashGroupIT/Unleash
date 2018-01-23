@@ -25,8 +25,6 @@ mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam
 mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
    .sass('resources/assets/scss/global/about.scss', 'public/css/global')
    .sass('resources/assets/scss/global/startup.scss', 'public/css/global')
-   .sass('resources/assets/scss/global/form.scss', 'public/css/global')
-   .sass('resources/assets/scss/global/formpdf.scss', 'public/css/global')
    .sass('resources/assets/scss/global/holiday.scss', 'public/css/global').options({
          processCssUrls: false,
           /* purifyCss: {
@@ -81,7 +79,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/sponsors.scss', 'public/css/lasvegas')  
    .sass('resources/assets/scss/lasvegas/venue.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/travel.scss', 'public/css/lasvegas')
-.sass('resources/assets/scss/lasvegas/volunteer.scss', 'public/css/lasvegas')
+   .sass('resources/assets/scss/lasvegas/volunteer.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/startup.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/tickets_temp.scss', 'public/css/lasvegas')     
    .sass('resources/assets/scss/lasvegas/tickets_old.scss', 'public/css/lasvegas')     

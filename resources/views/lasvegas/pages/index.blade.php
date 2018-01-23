@@ -38,13 +38,13 @@
 			<span>Lead Sponsors <strong>2018</strong></span>
 			<div class="mainsponsors-wrap">
                    
-                   <div><a href="" target="_blank" title="CareerBuilder"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Careerbuilder.svg') }}" alt="CareerBuilder"></a></div>
+                   <div><a href="https://www.careerbuilder.com/" target="_blank" title="CareerBuilder"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Careerbuilder.svg') }}" alt="CareerBuilder"></a></div>
                    
                     <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
                     
-                    <div><a href="" target="_blank" title="Culture Amp"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>
+                    <div><a href="https://www.cultureamp.com/" target="_blank" title="Culture Amp"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>
                     <div>  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
-                  <div><a href="" target="_blank" title="WalkMe"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div> 
+                  <div><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div> 
                    
                   <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
                    

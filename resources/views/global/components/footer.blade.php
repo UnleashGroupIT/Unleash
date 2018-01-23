@@ -4,13 +4,13 @@
 				<div class="left">
 					<div class="wrap">
 						<div class="footer-logo">
-							<img src="{{ asset('gfx/unleash-logo.png') }}" alt="Unleash"></h1>
+							<img src="{{ asset('gfx/footer-logo.png') }}" alt="Unleash"></h1>
 						</div>
 						<div class="social-icons">
 							<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ asset('gfx/facebook.png') }}" alt="Facebook"></a></div>
 							<div><a href="https://www.youtube.com/user/hrneurope/"><img src="{{ asset('gfx/youtube.png') }}" alt="Youtube"></a></div>
-							<div><a href="https://twitter.com/hrtechworld"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
-							<div><a href="https://www.linkedin.com/groups/3930182/profile"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
+							<div><a href="https://twitter.com/unleashgroup"><img src="{{ asset('gfx/twitter.png') }}" alt="Twitter"></a></div>
+							<div><a href="https://www.linkedin.com/company/hrn-europe---pan-european-hr-network/"><img src="{{ asset('gfx/linkedin.png') }}" alt="Linkedin"></a></div>
 						</div>
 					</div>
 					<div class="footer-btns">
@@ -27,8 +27,10 @@
 						<nav>
 							<ul>
 								<li><a href="http://www.unleashgroup.io">News</a></li>
+								<li><a href="{{ route('global.startup') }}">Startup</a></li>
 								<li><a href="{{ route('ams.about') }}">About</a></li>
 								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
+								<li><a href="{{ route('media') }}">Media</a></li>
 							</ul>
 						</nav>
 						<nav class="upper">
@@ -41,7 +43,7 @@
 						</nav>
 					</div>
 					<div class="contact-wrp">
-						<p>info@hrtechcongress.com</p>
+						<p>info@unleashgroup.io</p>
 						<p>+44 20 34 689 689</p>
 						<p>+36 1 201 1469</p>
 						<a href="{{ route('global.terms') }}"><p>HRN Terms &amp; Conditions</p></a>

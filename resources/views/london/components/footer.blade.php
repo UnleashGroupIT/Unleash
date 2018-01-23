@@ -4,7 +4,7 @@
 				<div class="left">
 					<div class="wrap">
 						<div class="footer-logo">
-							<img src="{{ asset('gfx/unleash-logo.png') }}" alt="Unleash"></h1>
+							<img src="{{ asset('gfx/footer-logo.png') }}" alt="Unleash"></h1>
 						</div>
 						<div class="social-icons">
 							<div><a href="https://www.facebook.com/unleashgroup/"><img src="{{ asset('gfx/facebook.png') }}" alt="Facebook"></a></div>
@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="footer-btns">
-						<a href="{{ route('london.tickets') }}"><button class="green-btn">Book now</button></a>
+						<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book now</button></a>
 						<button class="black-btn popup" data-popupdata="joinourcommunity">Subscribe</button>
 					</div>
 				</div>
@@ -26,7 +26,7 @@
 								<li><a href="{{ route('global.startup') }}">Startup</a></li>
 								<li><a href="{{ route('ams.about') }}">About</a></li>
 								<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
-								<li><a href="{{ route('press') }}">Press</a></li>
+								<li><a href="{{ route('media') }}">Media</a></li>
 							</ul>
 						</nav>
 					</div>

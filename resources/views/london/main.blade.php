@@ -118,12 +118,12 @@
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('london.index') }}">SHOW</a></li>
 				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
+				<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 				<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
-				{{--<li><a href="{{ route('london.loyalty') }}">LOYALTY</a></li>--}}
 				<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
-				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
+				<li><a href="https://unleash.swoogo.com/unleashlondon" target="_blank">TICKETS</a></li>
 			</ul>
 		</nav>
 		
@@ -148,12 +148,16 @@
 
 
  <!-- LiveChat code -->
-<script>
-  window.intercomSettings = {
-    app_id: "vc03kwlz"
-  };
+<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8465813;
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
 </script>
-
+<!-- END LiveChat code -->  
 </body>
 
 @yield('footerscripts')

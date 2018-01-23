@@ -1,6 +1,7 @@
 @extends('london.main')
 
 @section('meta')
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
          <!-- Open Graph data -->
         <meta property="og:site_name" content="UNLEASH London - Tickets"/>
