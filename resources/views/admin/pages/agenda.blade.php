@@ -22,6 +22,13 @@
 
 <style>
 
+.hiddenTab{
+	display:none;
+ 
+} 
+.activeTab{
+	display:block;
+}
 
 .tab{
 	transition: all 0.3s;
@@ -79,6 +86,59 @@ text-align: center;
 }
 .SpeakerListContainer ul li{
 	margin-bottom: 10px;
+}
+.SessionAdmin{
+
+}
+.EditSession, .DeleteSession {
+display: inline-block;
+
+padding: 9px 5px;
+margin: 0 11px;
+font-size: 24px;
+}
+.EditSession{
+
+}
+.DeleteSession{
+
+}
+.ssfname{
+background-color: rgba(174, 176, 111, 0.11);
+}
+.SessDesc{
+	width: 80%;
+	height: 150px;
+	margin: 30px 0 40px 0;
+	background-color: rgba(246, 231, 209, 0.57);
+}
+.sessionform{
+width: 87%;
+margin: 60px auto;
+}
+.dateSelectorContainer{
+	margin: 25px 0;
+}
+.dateSelector{
+	background-color: rgba(174, 176, 111, 0.11);
+    padding: 7px 10px;
+    cursor:pointer;
+}
+.SpList{
+	width: 100%;
+margin: 0 auto;
+max-width: 57%;
+margin-bottom: 200px;
+}
+.SpSearchBar{
+	width: 100%;
+background-color: rgba(83, 99, 99, 0.13);
+padding: 10px;
+margin-bottom: 40px;
+}
+.SpVisual{
+	margin: 10px 0;
+cursor: pointer;
 }
 </style> 
 
@@ -309,10 +369,8 @@ text-align: center;
 	<section id="NewSession" class="agenda hiddenTab "> 
 
 
-
-
 		<div class="title-section">
-			<h1>Create New Session</h1>
+			<h1>@{{ NewEditTitle }}</h1>
 			<h4>London 20-21 March 2018 | ExCeL</h4>
 		</div>
 		<div class="contents-bg">
@@ -322,24 +380,27 @@ text-align: center;
 
 					<!-- Main Stage -->
 	    			<div class="cnt-wrp main-stage">
-                        <form id="NewSpeakerForm" role="form" v-on:submit.prevent="newSessionSubmit">
+                        <form id="NewSessionForm" role="form" v-on:submit.prevent="newSessionSubmit" class="sessionform">
               
-                          
+     
+                           <input type="text" required name="session_name" id="session_name" placeholder="Session Name" class="form-control ssfname">
 
-                            
-                            <input type="text" required name="session_name" id="session_name" placeholder="Session Name" class="form-control">
+                           <div class="dateSelectorContainer">
+									Start Time: <input type="text" class="dateSelector" id="startTime" name="startTime" value="03/20/2018 8:00:00" />
+									End Time: <input type="text" class="dateSelector" id="endTime" name="endTime" value="03/20/2018 8:00:00" />                           	
+                           </div>
 
 
 
-									<input type="text" id="startTime" name="startTime" value="03/20/2018 8:00:00" />
-									<input type="text" id="endTime" name="endTime" value="03/20/2018 8:00:00" />
-				<select id="NewSessionTrack" name="NewSessionTrack">
+                 Stage:
+				<select id="NewSessionTrack" name="NewSessionTrack" class="dateSelector">
 				@foreach($AgendaTracks as $TrackFilters)
 					<option value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}</option>
 				@endforeach
 				</select>
 
-				<select id="sessiontype" name="sessiontype">
+				Session Type:
+				<select id="sessiontype" name="sessiontype" class="dateSelector">
 					<option value="1">Normal Session</option>
 					<option value="2">Registration</option>
 					<option value="3">Coffee Break</option>
@@ -347,12 +408,12 @@ text-align: center;
 					<option value="5">Lunch Break</option>
 				</select>	
                             <br />
-                            <textarea name="description" id="description" placeholder="Session Description"></textarea>
+                            <textarea name="description" id="description" placeholder="Session Description" class="SessDesc"></textarea>
                             <br />
 
 			<div id="NSSList">
 				<ul>
-					<li v-if="newSpeakerVisual" v-for="speakervisual in newSpeakerVisual">
+					<li v-if="newSpeakerVisual" v-for="speakervisual in newSpeakerVisual" class="SpVisual">
 						<div @click="removeSpeakerFromNewSession(speakervisual.id)">
 					  	<div class="SpeakerImgContainer">
 					  		<img class="SpeakerImage" :alt="speakervisual.full_name" :src="'/storage/speakers/'+speakervisual.img_url">
@@ -367,8 +428,6 @@ text-align: center;
 				</ul>	
 			</div>	                                                                          
 
-                      
-               
                             <button type="submit" class="btn btn-succes">Submit</button>
 
             
@@ -377,23 +436,18 @@ text-align: center;
 	    			</div>
 	    			<!-- END Main Stage -->
 
-
-	    			    			   			
-
-
 				</div>
 
 			</div>
-		</div>  
 
-		<div id="NewSessionSpeakers">
+		<div id="NewSessionSpeakers" class="SpList">
 			<h4>Speakers</h4>
 			<div id="NSSearchBarCont">
-				<input type="text" id="NSSBar" v-model="speakersearch">
+				<input type="text" id="NSSBar" v-model="speakersearch" class="SpSearchBar">
 			</div>
 			<div id="NSSList">
 				<ul>
-					<li v-if="speakers" v-for="speaker in speakers">
+					<li v-if="speakers" v-for="speaker in speakers" class="SpVisual">
 						<div @click="addSpeakerToNewSession(speaker.id)">
 					  	<div class="SpeakerImgContainer">
 					  		<img class="SpeakerImage" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url">
@@ -408,6 +462,10 @@ text-align: center;
 				</ul>	
 			</div>	
 		</div>	
+
+		</div>  
+
+
 
 	</section>	
 {{-- END NEW SESSION --}}

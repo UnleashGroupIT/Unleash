@@ -14,6 +14,14 @@
 					<h3 v-if="sess.tracks[1]">ALL STAGES</h3>
 					<h3 v-else >{{sess.tracks[0].track_name}}</h3>
 				</div>
+				<div class="SessionAdmin">
+					<div class="EditSession" @click="triggerEdit(sess.id)">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					</div>
+					<div class="DeleteSession" @click="deleteSession(sess.id)">
+						<i class="fa fa-trash-o" aria-hidden="true"></i>
+					</div>					
+				</div>	
 			</div>
 <!-- 			<div class="shares">
 				<a href="https://www.facebook.com/unleashgroup/"><img src="{{ URL::asset('gfx/facebook-white.svg') }}" alt="Facebook"></a>
@@ -81,7 +89,13 @@ export default {
 
   methods: {
 
+  	triggerEdit(data){
+		this.$parent.$options.methods.triggerEdit(data);
+  	},
 
+  	deleteSession(data){
+  		this.$parent.$options.methods.deleteSession(data);
+  	}
 
 
   },

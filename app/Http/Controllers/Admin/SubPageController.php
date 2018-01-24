@@ -91,7 +91,8 @@ class SubPageController extends Controller
         'default_event_id' => \Config::get('unleash.admin.default_event_id'),
         'default_event_code' => \Config::get('unleash.admin.default_event'),
         'default_day' => \Config::get('unleash.admin.default_agenda_day'),
-        'eventdata' => $eventsData
+        'eventdata' => $eventsData,
+        'tracks' => $tracks
       ]);
 
     return view('admin.pages.agenda', [
