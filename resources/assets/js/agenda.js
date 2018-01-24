@@ -1,8 +1,8 @@
 window._ = require('lodash');
 
-	 window.jQuery = require('jquery');
+/*	 window.jQuery = require('jquery');
 	 window.$ = window.jQuery;
-     window.bootstrap = require('bootstrap');
+     window.bootstrap = require('bootstrap');*/
 global.axios = require('axios');
 
 
@@ -38,33 +38,13 @@ if (token) {
 
 
 
-
 global.Vue = require('vue');
 
 var VueResource = require('vue-resource');
 
 Vue.use(VueResource);
 
-global.PNotify = require('pnotify');
 
-
-
-import 'pnotify/dist/pnotify.css';
-import 'pnotify/dist/pnotify.brighttheme.css';
-import 'pnotify/dist/pnotify.buttons.css';
-import 'pnotify/dist/pnotify.buttons.js';
-import 'pnotify/dist/pnotify.confirm.js';
-
-
-PNotify.prototype.options.styling = "bootstrap3";
-PNotify.prototype.options.styling = "fontawesome";
-PNotify.prototype.options.delay = 3500;
-
-
-//const instantsearch = require('instantsearch.js');  
-global.moment = require('moment');
-
-const momenttimezone = require('moment-timezone');
 
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.0.0-alpha14 (https://tempusdominus.github.io/bootstrap-4/)
@@ -78,7 +58,7 @@ const momenttimezone = require('moment-timezone');
 );
 
 var spVue = new Vue({
-	el: '#app',
+	el: '#Agenda',
 
 	data: {
 
@@ -91,6 +71,8 @@ var spVue = new Vue({
 		events: null,
 		day1: null,
 		day2: null,
+		speakersearch: null,
+		speakers: null,
 		
 
 	},//data,
@@ -98,9 +80,7 @@ var spVue = new Vue({
 
 
 	methods: {
-		newSession(){
-			console.log('moo');
-		},
+
 
 		getDays(){
 			var vm = this;
@@ -144,44 +124,24 @@ var spVue = new Vue({
 		},
 
 
-		selectPage(type){
-			let activteThis = '';
-			jQuery('.tab').removeClass('adminActive');
-			   switch (type) {
-				 	case 'Sessions':
-				 		activteThis = "#Sessions";
-				 		jQuery('#SessionButton').addClass('adminActive');
-				 		break;
-				 	case 'NewSession':
-				 		activteThis = "#NewSession";
-				 		jQuery('#NewSessionButton').addClass('adminActive');
-				 		break;
-				 	case 'Tracks':
-				 	    jQuery('#TrackButton').addClass('adminActive');
-				 		activteThis = "#Tracks";
-				 		break;				 						 	
-				 	default:
-				 		
-				 		break;
-				 }
-				 
-				 let activeNow = jQuery('.activeTab').attr("id");
-				 console.log(activeNow);
 
-			jQuery('.activeTab').animateCss('bounceOutRight', function () {
-				jQuery('.activeTab').addClass('hiddenTab');
-				jQuery("#"+activeNow).removeClass("activeTab");
+     searchForSpeakers(keyword){
 
-			    jQuery(activteThis).animateCss('bounceInLeft');
-			    jQuery(activteThis).addClass('activeTab');
-			});
-					
-				 
+        axios.get(`/api/speakers?search=${keyword}&limit=5`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.speakers = response.data.data;
+          
+        })
+        .catch(e => {
+         console.log(e);
+        })
 
-		},
+     },
 
 
-	
+
+				
 
 	},
 
@@ -204,7 +164,11 @@ var spVue = new Vue({
   	searchbar: function (val){
   	  	this.searchbar = val;
   		this.filteredSearch();	
-  	}
+  	},
+    speakersearch: function (val){
+    	this.searchForSpeakers(val);
+    }
+
   }  
 
 

@@ -207,6 +207,9 @@ section.one.mainsponsors {
       }
       #sap{
         width: 200px;
+         @media (min-width: 400px) {
+          width: 220px;
+        }
         @media (min-width: 125em) {
           width: 10.5vw;
         }
@@ -236,6 +239,20 @@ section.one.mainsponsors {
         }
         @media (min-width: 125em) {
           width: 6.3vw;
+        }
+      }
+
+      #corner{
+        margin-bottom: 1.3em;
+        @media (min-width: 1000px) {
+          margin-bottom: auto;
+        }
+      }
+
+      #orac{
+        margin-bottom: 1.4em;
+        @media (min-width: 1000px) {
+          margin-bottom: auto;
         }
       }
 
@@ -277,10 +294,10 @@ section.two .fix-bg {
     }
     @media (min-width: 75em) {
       height: 100%;
-      background-size: contain;
+      background-size: 50% 100%;
       background-attachment:fixed;
     }
-    @media (min-width: 105em) {
+    @media (min-width: 100em) {
       height: 100%;
       background-size: 50% 100%;
       background-attachment:fixed;

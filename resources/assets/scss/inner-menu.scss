@@ -16,19 +16,24 @@ $black: #000;
 
 #unleash-logo #full-logo {
     @media (min-width: 75em){
-        width: 250px;
+        width: 320px;
         -webkit-transition: all .5s;
         transition: all .5s;
-        padding: 2px 0;
+        padding: 8px 0;
     }
     @media (min-width: 125em) {
-        width: 13vw;
+        width: 15vw;
+        padding: .5vw 0;
     }
 }
 
 #hamburger{
     background:$black;
     #mobile-logo{
-        width: 230px;
+        width: 320px;
     }
+}
+
+#unleash-logo.show #full-logo{
+    margin-top: 0;
 }

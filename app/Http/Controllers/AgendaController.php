@@ -5,34 +5,49 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tracks;
 use App\AgendaSessions;
+use App\Events;
 use JavaScript;
+use Carbon\Carbon;
 
 class AgendaController extends Controller
 {
-  public function index(){
-	  
-	  //TODO: Sort Sessions by start time!!
+   public function index(Request $request){
 
-	
-	  
- 	//$sessions = Tracks::where('id',1)
- 	$sessions = Tracks::where('event_id',1)
- 	                     ->where('track_status',1)
- 	                     ->with('event', 'sessions.speakers')
-						 ->get();   	
-	$sessions->extra = 0;	
-	
+
+     $events = Events::all();
+     $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))->get();
+
+     $eventsData = [];
+     foreach ($events as $event) {
+       
+       $start = Carbon::parse($event->first_day['numberFormat']);
+       $end = Carbon::parse($event->second_day['numberFormat']);
+
+       $tmp = (object)array(
+        'id' => $event->id,
+        'year' => $start->year,
+        'month' => $start->month,
+        'day1' => $start->day,
+        'day2' => $end->day 
+      );
+        array_push($eventsData, $tmp);
+      
+     }
+
      JavaScript::put([
-        'trackData' => $sessions,
-        
-    ]);
-    	
-    	   return view('amsterdam.pages.agenda', [
-                  	'tracks' => $sessions
-                 
-                ]);
+        'default_event_id' => \Config::get('unleash.admin.default_event_id'),
+        'default_event_code' => \Config::get('unleash.admin.default_event'),
+        'default_day' => \Config::get('unleash.admin.default_agenda_day'),
+        'eventdata' => $eventsData
+      ]);
 
-  }
+    return view('london.pages.agenda', [
+                  
+                  'events' => $events,
+                  'AgendaTracks' =>$tracks
+              ]);
+   
+   }   
 
   public function getSessions(Request $request, $trackId){
 

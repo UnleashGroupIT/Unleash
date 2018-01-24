@@ -30,6 +30,12 @@ $talent : #00cc33;
 $speed-I : #3476b9; 
 $speed-II : #3476b9;
 
+$one : #f5a503;
+$two : #083643;
+$three : #f2385a;
+$four : #bedb39;
+$five : #4ad9d9;
+
 
 .agenda{
 	margin-top:5.5em;
@@ -61,7 +67,7 @@ $speed-II : #3476b9;
 }
 .contents-wrp{
 	width:1170px;
-	max-width:100%;
+	max-width:90%;
 	margin:0 auto;
 	@media (min-width: 125em) {
 		width: 61vw;
@@ -77,6 +83,7 @@ $speed-II : #3476b9;
 
 	h4{
 		text-align: center;
+		color: $dark-green;
 	}
 }
 
@@ -96,7 +103,6 @@ $speed-II : #3476b9;
 
 .tabs-wrp{
 	background:#fff;
-	margin:0 2em;
 	margin-bottom:2em;
 	@media (min-width: 30em) {
 		margin: 0;
@@ -125,7 +131,7 @@ $speed-II : #3476b9;
     		}
 
 			&.active{
-				background: $lon;
+				background: $dark-green;
 				color: #fff;
 			}
 		}
@@ -291,20 +297,15 @@ $speed-II : #3476b9;
 
 .main-stage{
 	.left-side{
-		background:$main-stage;
+		background:$one;
 	}
 	.right-side{
 		h4{
-			color:$main-stage;
+			color:$one;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-main.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-main.svg");
+				background:url("../../gfx/london/agenda/pin-orange.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -314,20 +315,15 @@ $speed-II : #3476b9;
 
 .adoption{
 	.left-side{
-		background:$adoption;
+		background:$one;
 	}
 	.right-side{
 		h4{
-			color:$adoption;
+			color:$one;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-adoption.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-adoption.svg");
+				background:url("../../gfx/london/agenda/pin-orange.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -337,20 +333,15 @@ $speed-II : #3476b9;
 
 .digital{
 	.left-side{
-		background:$digital;
+		background:$three;
 	}
 	.right-side{
 		h4{
-			color:$digital;
+			color:$three;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-digital.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-digital.svg");
+				background:url("../../gfx/london/agenda/pin-adoption.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -360,20 +351,15 @@ $speed-II : #3476b9;
 
 .smartdata{
 	.left-side{
-		background:$smartdata;
+		background:$two;
 	}
 	.right-side{
 		h4{
-			color:$smartdata;
+			color:$two;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-smartdata.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-smartdata.svg");
+				background:url("../../gfx/london/agenda/pin-darkgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -383,20 +369,15 @@ $speed-II : #3476b9;
 
 .think-tank{
 	.left-side{
-		background:$think-tank;
+		background:$two;
 	}
 	.right-side{
 		h4{
-			color:$think-tank;
+			color:$two;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-darkgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -406,20 +387,15 @@ $speed-II : #3476b9;
 
 .HR-Payroll{
 	.left-side{
-		background:$hrss-payroll;
+		background:$two;
 	}
 	.right-side{
 		h4{
-			color:$hrss-payroll;
+			color:$two;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-hrpayroll.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-hrpayroll.svg");
+				background:url("../../gfx/london/agenda/pin-darkgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -430,20 +406,15 @@ $speed-II : #3476b9;
 
 .hr-tech{
 	.left-side{
-		background:$hrtech-stage;
+		background:$four;
 	}
 	.right-side{
 		h4{
-			color:$hrtech-stage;
+			color:$four;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-lightgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -453,20 +424,15 @@ $speed-II : #3476b9;
 
 .talent{
 	.left-side{
-		background:$talent;
+		background:$five;
 	}
 	.right-side{
 		h4{
-			color:$talent;
+			color:$five;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-topaz.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -477,20 +443,15 @@ $speed-II : #3476b9;
 
 .learning{
 	.left-side{
-		background:$learn-dev;
+		background:$three;
 	}
 	.right-side{
 		h4{
-			color:$learn-dev;
+			color:$three;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-adoption.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -501,20 +462,15 @@ $speed-II : #3476b9;
 
 .wellbeing{
 	.left-side{
-		background:$rewards;
+		background:$four;
 	}
 	.right-side{
 		h4{
-			color:$rewards;
+			color:$four;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-lightgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -525,20 +481,15 @@ $speed-II : #3476b9;
 
 .analytst{
 	.left-side{
-		background:$hrtech-analyst
+		background:$five;
 	}
 	.right-side{
 		h4{
-			color:$hrtech-analyst;
+			color:$five;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-topaz.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -549,20 +500,15 @@ $speed-II : #3476b9;
 
 .productdemo{
 	.left-side{
-		background:$product-stage;
+		background:$four;
 	}
 	.right-side{
 		h4{
-			color:$product-stage;
+			color:$four;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-lightgreen.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -573,20 +519,15 @@ $speed-II : #3476b9;
 
 .startup-stage{
 	.left-side{
-		background:$startup-stage;
+		background:$one;
 	}
 	.right-side{
 		h4{
-			color:$startup-stage;
+			color:$one;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-orange.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -597,20 +538,15 @@ $speed-II : #3476b9;
 
 .leadership{
 	.left-side{
-		background:$Leadership;
+		background:$one;
 	}
 	.right-side{
 		h4{
-			color:$Leadership;
+			color:$one;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-orange.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}
@@ -621,20 +557,15 @@ $speed-II : #3476b9;
 
 .hrss{
 	.left-side{
-		background:$hrss-payroll;
+		background:$three;
 	}
 	.right-side{
 		h4{
-			color:$hrss-payroll;
+			color:$three;
 		}
 		.header{
 			.place::before{
-				background:url("../../gfx/london/agenda/pin-thinktank.svg");
-				background-size:contain;
-				background-repeat:no-repeat;
-			}
-			.duration::before{
-				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background:url("../../gfx/london/agenda/pin-adoption.svg");
 				background-size:contain;
 				background-repeat:no-repeat;
 			}

@@ -29,95 +29,10 @@ header {
       height: 55vh;
       background: url("../../gfx/london/speakers-bg.jpg") no-repeat #000;
       background-size: cover;
-      background-position: left; } }
-
-.hamb-wrp {
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  z-index: 7000;
-  padding: 0 2em;
-  display: flex; }
-  @media (min-width: 75em) {
-    .hamb-wrp {
-      display: none; } }
-  .hamb-wrp img {
-    display: none; }
-  .hamb-wrp.vanish {
-    background-color: transparent;
-    position: absolute;
-    z-index: 9915; }
-  .hamb-wrp.black {
-    background-color: #000;
-    transition: none; }
-    .hamb-wrp.black #unleash-logo {
-      margin: auto 0; }
-    .hamb-wrp.black img {
-      display: block;
-      width: 150px; }
-    @media (min-width: 40em) {
-      .hamb-wrp.black {
-        transition: background-color 2s; } }
-
-#hamburger {
-  position: fixed;
-  right: 5%;
-  top: 0;
-  width: 35px;
-  height: 57px;
-  cursor: pointer; }
-  #hamburger.active {
-    position: absolute; }
-  @media (min-width: 40em) {
-    #hamburger {
-      top: 1px;
-      right: 3%; } }
-  @media (min-width: 75em) {
-    #hamburger {
-      display: none; } }
-
-.bar,
-.bar:after,
-.bar:before {
-  width: 35px;
-  height: 5px; }
-
-.bar {
-  position: relative;
-  transform: translateY(26px);
-  background: white;
-  transition: all 0ms 300ms; }
-  .bar.animate {
-    background: rgba(255, 255, 255, 0); }
-
-.bar:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  background: white;
-  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-
-.bar:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background: white;
-  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-
-.bar.animate:after {
-  top: 0;
-  transform: rotate(45deg);
-  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-
-.bar.animate:before {
-  bottom: 0;
-  transform: rotate(-45deg);
-  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+      background-position: top left; } }
 
 .wrp {
-  max-width: 1024px;
+  max-width: 1060px;
   margin: 0 auto;
   padding: 0 1em; }
   @media (min-width: 120em) {
@@ -132,16 +47,16 @@ section.one .wrp {
     section.one .wrp {
       padding: 4em 3em; } }
   section.one .wrp button {
-    margin: 4em 0;
+    margin: 1em 0;
     margin-bottom: 0; }
 @media (min-width: 40em) {
   section.one.futureofwork {
     text-align: center; } }
 section.one.futureofwork .wrp {
-  padding-top: 3em; }
+  padding-top: 2em; }
   @media (min-width: 75em) {
     section.one.futureofwork .wrp {
-      padding-bottom: 0; } }
+      padding-bottom: 2em; } }
 section.one.mainsponsors {
   text-align: center; }
   section.one.mainsponsors h4 {
@@ -214,40 +129,67 @@ section.two {
   }
 }
 
-section.two .fix-bg {
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-          box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-  display: block;
-  background-size:100%;
-    background-position: top center;
-    @media (min-width: 75em) {
-      background-size: 50% 100%;
-    }
+section.two.keynote.arianna .BettsOxford {
+  padding: 0 1.4em;
+  color:#fff;
+  font-size: 1.2rem;
+  margin: 1em 0;
 }
-@media (min-width: 120em) {
-  section.two .fix-bg {
-    background-size: 50% 100%; 
+
+
+@media (min-width: 75em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3em;
   }
 }
 
-section.two .fix-bg.robinson {
-  background-image: url("../../gfx/london/robinson-mobile-bg.jpg");
+@media (min-width: 120em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3.1vw;
+
+  }
+}
+
+section.two .fix-bg {
+    width: 100%;
+    height: 500px;
+    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+    display: block;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
+    @media (min-width: 75em) {
+      height: 100%;
+      background-size: 50% 100%;
+      background-attachment:fixed;
+    }
+    @media (min-width: 100em) {
+      height: 100%;
+      background-size: 50% 100%;
+      background-attachment:fixed;
+    }
+  }
+
+section.two .fix-bg.betts {
+  background-image: url("../../gfx/london/betts-mobile-bg.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 @media (min-width: 40em) {
-  section.two .fix-bg.robinson {
-    background-image: url("../../gfx/london/robinson-tablet-bg.jpg");
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/london/betts-tablet-bg.png");
   }
 }
 
 @media (min-width: 75em) {
-  section.two .fix-bg.robinson {
-    background-image: url("../../gfx/london/robinson-bg.jpg");
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/london/betts-bg.png");
     background-position: top left;
   }
 }

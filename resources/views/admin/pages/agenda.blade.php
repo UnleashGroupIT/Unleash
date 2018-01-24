@@ -21,13 +21,7 @@
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 <style>
-.hiddenTab{
-	display:none;
 
-} 
-.activeTab{
-	display:block;
-}
 
 .tab{
 	transition: all 0.3s;

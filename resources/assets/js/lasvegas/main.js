@@ -343,4 +343,8 @@ $(document).ready(function()	{
 			$('#thankyou').css("display", "flex")
     }    
 
+    if (window.location.href.indexOf('#ThankYouForSigningUp') != -1) {
+			$('#thankyousign').css("display", "flex")
+    }  
+	
 }); // READY END

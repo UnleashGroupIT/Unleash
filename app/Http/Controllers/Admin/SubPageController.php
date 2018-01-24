@@ -72,7 +72,7 @@ class SubPageController extends Controller
 
      $eventsData = [];
      foreach ($events as $event) {
-       ;
+       
        $start = Carbon::parse($event->first_day['numberFormat']);
        $end = Carbon::parse($event->second_day['numberFormat']);
 

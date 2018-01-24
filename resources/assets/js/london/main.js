@@ -1,4 +1,8 @@
 $(document).ready(function()	{
+
+	if(window.location.hash == "signup") {
+		$("#joinourcommunity").css("display", "flex");
+	}
 	
 	(function () {
 		$('#hamburger .bar-wrp').on('click', function() { // ICON CLICK
@@ -342,4 +346,9 @@ $(document).ready(function()	{
 			$('#thankyou').css("display", "flex")
     }    
 
+    if (window.location.href.indexOf('#ThankYouForSigningUp') != -1) {
+			$('#thankyousign').css("display", "flex")
+    }  
+	
+	
 }); // READY END

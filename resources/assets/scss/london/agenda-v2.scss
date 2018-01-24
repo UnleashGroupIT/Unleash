@@ -78,7 +78,7 @@ $speed-II : #3476b9;
 
 	h4{
 		text-align: center;
-		color:$main-stage;
+		color:$dark-green;
 	}
 }
 
@@ -127,7 +127,7 @@ $speed-II : #3476b9;
     		}
 
 			&.active{
-				background: $main-stage;
+				background: $dark-green;
 				color: #fff;
 			}
 		}
@@ -155,7 +155,7 @@ $speed-II : #3476b9;
 		padding:2em;
 		padding-right:2em;
 		position:relative;
-		background:$main-stage;
+		background:$dark-green;
 
 		@media (min-width: 65em) {
     		width: 225px;
@@ -243,7 +243,7 @@ $speed-II : #3476b9;
 		}
 		h4{
 			text-transform: none;
-			color: $main-stage;
+			color: $dark-green;
 		}
 		.header{
 			display: flex;

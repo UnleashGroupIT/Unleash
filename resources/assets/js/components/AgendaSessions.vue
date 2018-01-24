@@ -1,7 +1,7 @@
 <template>
 	<div v-if="dataready">
 	<!-- Main Stage -->
-	<div v-for="sess in agendasession" class="cnt-wrp main-stage">
+	<div v-for="sess in agendasession" class="cnt-wrp" :class="sess.tracks[0].color_class">
 		<div class="left-side">
 			<div class="upper-side">
 				<div class="date">
@@ -11,7 +11,8 @@
 					<h2>{{sess.start_time.time}}</h2>
 				</div>
 				<div class="session-name">
-					<h3>{{sess.tracks[0].track_name}}</h3>
+					<h3 v-if="sess.tracks[1]">ALL STAGES</h3>
+					<h3 v-else >{{sess.tracks[0].track_name}}</h3>
 				</div>
 			</div>
 <!-- 			<div class="shares">
@@ -33,6 +34,22 @@
 				<div class="content">
 					<p>{{sess.session_description}}</p>
 				</div>
+				<div class='SpeakerListContainer'>
+					<ul>
+					  <li v-if="sess.speakers[0]" v-for="speakers in sess.speakers">
+					  	<a :href="'/london/speaker/'+speakers.slug">
+					  	<div class="SpeakerImgContainer">
+					  		<img class="SpeakerImage" :alt="speakers.full_name" :src="'/storage/speakers/'+speakers.img_url">
+					  	</div>
+					  	<div class="SpeakerContent">
+					  		<h3>{{speakers.full_name}}</h3>
+					  		<p>{{speakers.job_title}}</p>
+					  		<p>{{speakers.company}}</p>
+					  	</div>
+					  	</a>	
+					  </li>
+					</ul>	
+				</div>	
 			</div>
 		</div>
 	</div>
