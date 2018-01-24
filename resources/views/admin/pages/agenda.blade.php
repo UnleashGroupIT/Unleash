@@ -145,7 +145,7 @@ cursor: pointer;
 @endsection
 @section('content')
 <div id="PageContainer">
- <section id="GridSection">
+ <section id="GridSection" class="hiddenTab">
 <p>Event Selector</p>
   <div id="GridInnerContainer">
 
@@ -171,7 +171,7 @@ cursor: pointer;
 						<ul class="side tabs">
 							<li @click="selectPage('Sessions')" class="tab adminActive" id = "SessionButton">Sessions</li> 
 							<li @click="selectPage('NewSession')" class="tab" id="NewSessionButton">Create new Session</li> 
-					    	<li @click="selectPage('Tracks')" class="tab" id="TrackButton">Tracks</li>
+					    	 <li {{--@click="selectPage('Tracks')" --}} class="tab" id="TrackButton">Tracks (Not Yet Implemented)</li>
 					    	
 						</ul>
 					</nav>

@@ -449,6 +449,14 @@ const spVue = new Vue({
   	},
     speakersearch: function (val){
     	this.searchForSpeakers(val);
+    },
+
+    eventid: function (val){
+    	this.eventid(val);
+    	this.filteredSearch();
+
+
+
     }
 
   }  
