@@ -23,9 +23,8 @@ Route::get('/', function (Request $request) {
     return redirect('/news/');
 });
 
-Route::get('/terms', function () {
-  return view('global.pages.terms');
-})->name('global.terms');
+Route::get('/terms', 'TermsController@index')->name('global.terms');
+Route::get('terms/{param}', 'TermsController@index');
 
 Route::get('/about', function () {
   return view('global.pages.about');

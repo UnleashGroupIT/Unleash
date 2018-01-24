@@ -34,6 +34,11 @@
 
 
 @section('headercontent')
+		<video id="header-video" poster="{{ URL::asset('gfx/london/header-bg-desktop.jpg') }}" loop="" muted="" autoplay="">
+          	<source src="{{ URL::asset('gfx/london/video/video-bg.webm') }}" type="video/webm">
+         	<source src="{{ URL::asset('gfx/london/video/video-bg.mp4') }}" type="video/mp4">
+         	<source src="{{ URL::asset('gfx/london/video/video-bg.ogv') }}" type="video/ogv">
+		</video>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<span>Lead Sponsors <strong>2018</strong></span>
@@ -42,8 +47,8 @@
 					
 					
 			        <div><a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/london/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
-                    <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                    <div><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
+                    <div id="corner"><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/london/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                    <div id="orac"><a href="https://www.oracle.com/" target="_blank" title="Oracle"><img class="sppn" id="oracle" src="{{ URL::asset('gfx/london/header/sponsors/oracle.png') }}" alt="Oracle"></a></div>
                     <div><a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/london/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
                     <div><a href="https://www.workday.com/" target="_blank" title="Workday"><img src="{{ URL::asset('gfx/london/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
 

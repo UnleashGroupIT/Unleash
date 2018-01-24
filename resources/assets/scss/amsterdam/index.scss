@@ -73,6 +73,7 @@ section.one .wrp {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  z-index: 2;
   @media (min-width: 75em) {
     margin-bottom: 2em;
   }

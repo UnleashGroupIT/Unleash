@@ -32,6 +32,11 @@
 
 
 @section('headercontent')
+		<video id="header-video" poster="{{ URL::asset('gfx/amsterdam/header-bg-desktop.jpg') }}" loop="" muted="" autoplay="">
+          	<source src="{{ URL::asset('gfx/amsterdam/video/video-bg.webm') }}" type="video/webm">
+         	<source src="{{ URL::asset('gfx/amsterdam/video/video-bg.mp4') }}" type="video/mp4">
+         	<source src="{{ URL::asset('gfx/amsterdam/video/video-bg.ogv') }}" type="video/ogv">
+		</video>
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->

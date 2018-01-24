@@ -204,3 +204,18 @@ span {
       @media (min-width: 120em) {
   p {
     font-size: .84vw; } }
+
+    #header-video{
+      display: none;
+      position: absolute;
+      top: 50%; left: 50%;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      @media (min-width: 75em) {
+        display: block;
+      }
+  }
