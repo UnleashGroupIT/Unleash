@@ -145,11 +145,11 @@ cursor: pointer;
 @endsection
 @section('content')
 <div id="PageContainer">
- <section id="GridSection" class="hiddenTab">
-<p>Event Selector</p>
+ <section id="GridSection">
+<p>Event Selector - (Only London for now)</p>
   <div id="GridInnerContainer">
 
-            <select name="EventSelect" id ="EventSelect" v-model="eventid">
+            <select name="EventSelect" id ="EventSelect" v-model="eventid" disabled>
             	@foreach ($events as $event)
             		@if($event->event_code == Config::get('unleash.admin.default_event'))
 		              <option value="{{ $event->id }}" selected>
