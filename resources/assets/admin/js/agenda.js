@@ -451,13 +451,13 @@ const spVue = new Vue({
     	this.searchForSpeakers(val);
     },
 
-    eventid: function (val){
+   /* eventid: function (val){
     	this.eventid(val);
     	this.filteredSearch();
 
 
 
-    }
+    }*/
 
   }  
 
