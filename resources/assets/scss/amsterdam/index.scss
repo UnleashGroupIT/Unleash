@@ -136,7 +136,7 @@ section.one.mainsponsors {
         }
       }
       #cornerstone{
-        width: 110px;
+        width: 120px;
         @media (min-width: 55em) {
           width: 135px;
         }
@@ -163,7 +163,7 @@ section.one.mainsponsors {
         }
       }
       #sap{
-        width: 210px;
+        width: 280px;
         @media (min-width: 125em) {
           width: 10.7vw;
         }
@@ -177,6 +177,40 @@ section.one.mainsponsors {
         @media (min-width: 125em) {
           width: 6.3vw;
         }
+      }
+
+      #avature-wrp{
+        margin-top: 10px;
+        @media (min-width: 780px) {
+          margin-top:auto;
+        }
+        img{
+          width: 85px;
+        }
+      }
+
+      #corner-wrp{
+        margin-top: .75em;
+        @media (min-width: 780px) {
+          margin-top:auto;
+        }
+      }
+
+      #talentsoft-wrp{
+        margin-top: 1.5em;
+        @media (min-width: 780px) {
+          margin-top:1.85em;
+        }
+        img{
+          width: 85px;
+          @media (min-width: 780px) {
+            width: 100px;
+          }
+        }
+      }
+
+      #workday-wrp{
+        margin-top: 10px;
       }
 
 

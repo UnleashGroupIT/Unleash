@@ -54,6 +54,9 @@
                         @can('AdminSubSiteAccess', App\User::class)
                        <li><a href="{{ route('admin.speakers') }}">Speakers</a></li>
                        @endcan
+                        @can('AdminSubSiteAccess', App\User::class)
+                       <li><a href="{{ route('admin.agenda') }}">Agenda</a></li>
+                       @endcan					   
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -91,6 +94,9 @@
         @yield('content')
     </div>
 
+	 <div id="MiscScripts">
+	 	@include('globalscript')
+	</div>	
     <!-- Scripts -->
         @yield('customscripts')
 </body>

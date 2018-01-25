@@ -35,9 +35,10 @@ mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
       })
    .version(); 
  
+ mix.js('resources/assets/js/agenda.js', 'public/js');
+ 
 /******** Amsterdam *********/  
-mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
-   .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
+mix.js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
    .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 

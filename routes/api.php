@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/agenda/search', 'AgendaController@search');
+
 Route::middleware(['auth:api', 'roles'])->get('/user', function (Request $request) {
     return $request->user();
 });

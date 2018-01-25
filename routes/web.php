@@ -207,6 +207,10 @@ Route::get('/london/loyalty', function () {
   return view('london.pages.loyalty');
 })->name('london.loyalty');
 
+Route::get('/london/tickets_earlybird', function () {
+  return view('london.pages.tickets_earlybird');
+})->name('london.tickets_earlybird');
+
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
 //Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
@@ -228,9 +232,11 @@ Route::get('/london/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('l
 
 Route::get('/london/startups', 'StartupsController@index')->name('london.startup');
 
-Route::get('/london/agenda', function () {
+/*Route::get('/london/agenda', function () {
   return view('london.pages.agenda');
-})->name('london.agenda');
+})->name('london.agenda');*/
+
+Route::get('/london/agenda','AgendaController@index')->name('london.agenda');
 
 Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 
@@ -391,6 +397,7 @@ Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
 //Admin pages
 Route::get('/adminsite/speakers', 'Admin\SubPageController@speakerUI')->name('admin.speakers');
 Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
+Route::get('/adminsite/agenda', 'Admin\SubPageController@agendaUI')->name('admin.agenda');
 
 //Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
 //Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');

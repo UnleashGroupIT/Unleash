@@ -42,14 +42,20 @@
 			<!--<h4>Main sponsors</h4>-->
 			<span>Lead Sponsors <strong>2018</strong></span>
 			<div class="mainsponsors-wrap">
-			   <div><a href="https://www.achievers.com/" target="_blank" title="Achievers"><img id="ach" src="{{ URL::asset('gfx/amsterdam/header/sponsors/achievers.png') }}" alt="Achievers"></a></div>
-			   <div> <a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
-			   <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="cross" src="{{ URL::asset('gfx/amsterdam/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
-                <div><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
-                <div><a href="https://www.hirevue.com/" target="_blank" title="Hirevue"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/hirevue.svg') }}" alt="Hirevue"></a></div>
-               <div> <a href="https://www.indeed.com/" target="_blank" title="Indeed"><img id="ind" src="{{ URL::asset('gfx/amsterdam/header/sponsors/Indeed.png') }}" alt="Indeed"></a></div>
+			   
+			   <div id="avature-wrp"> <a href="https://www.avature.net/" target="_blank" title="Avature"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/avature.svg') }}" alt="Avature"></a></div>
+			   
+                <div id="corner-wrp"><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/amsterdam/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
+                
+               
                <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/amsterdam/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
-               <div> <a href="http://www.sumtotalsystems.com/" target="_blank" title="Sumtotal"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/sumtotal.svg') }}" alt="Sumtotal"></a></div>
+
+               <div id="talentsoft-wrp"><a href="http://www.talentsoft.com/" target="_blank" title="TALENTSOFT"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/talentsoft.png') }}" alt="TALENTSOFT"></a>	</div>
+
+               <div id="workday-wrp"><a href="https://www.workday.com/" target="_blank" title="Workday"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/workday.svg') }}" alt="Workday"></a>	</div>		
+
+
+               
        			
 			
 			</div>

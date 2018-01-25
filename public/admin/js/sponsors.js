@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 98);
+/******/ 	return __webpack_require__(__webpack_require__.s = 220);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -175,7 +175,771 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 10:
+/***/ 220:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(221);
+
+
+/***/ }),
+
+/***/ 221:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
+
+Vue.component('sponsors-all', __webpack_require__(222));
+
+Vue.component('grid-controller', __webpack_require__(62));
+
+
+
+Vue.directive('sortable', {
+  inserted: function inserted(el, binding) {
+    var sortable = new __WEBPACK_IMPORTED_MODULE_0_sortablejs___default.a(el, binding.value || {});
+  }
+});
+
+var spVue = new Vue({
+  el: '#PageContainer',
+
+  data: {
+    sponsors: [],
+    selected: null,
+    selectedName: '',
+    sponsorSearch: '',
+    sponsorAll: '',
+    event: null,
+    editSponsorData: {},
+    GridType: 2,
+    sortableOptions: {
+      animation: 150,
+      forceFallback: false,
+      // Changed sorting within list
+      onUpdate: function onUpdate( /**Event*/evt) {
+
+        var new_item_id = evt.item.dataset.sponsorid;
+        var new_item_order = evt.newIndex;
+        var old_item_order = evt.oldIndex;
+        var old_item_id = $("#CustomItemGrid").children().eq(evt.oldIndex).data('sponsorid');
+        var gridId = $("#SelectSponsorGrid").val();
+
+        axios.patch('/api/sponsorgrid/' + gridId + '/' + old_item_id, {
+          order_number: old_item_order
+        }).then(function (response) {
+          console.log(response);
+        }).catch(function (error) {
+          new PNotify({
+            title: 'Error!',
+            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+            type: 'error'
+          });
+          console.log(error);
+        });
+
+        axios.patch('/api/sponsorgrid/' + gridId + '/' + new_item_id, {
+          order_number: new_item_order
+        }).then(function (response) {
+          console.log(response);
+        }).catch(function (error) {
+          new PNotify({
+            title: 'Error!',
+            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+            type: 'error'
+          });
+          console.log(error);
+        });
+      }
+    },
+
+    //Image Variables
+    allowableTypes: ['jpg', 'jpeg', 'png', 'gif'],
+    maximumSize: 5000000,
+    selectedImage: null,
+    image: null,
+    imgPrev: '',
+    imgTempText: 'Drag your files here or click in this area.'
+
+  },
+
+  methods: {
+
+    //Function that triggers when a grid is selected.
+    //The function gets the id of the grid from the Grid Child component
+    //With an axios request we get the content of the grid and display it
+    showGrid: function showGrid(event) {
+      var _this = this;
+
+      if (event[0]) {
+        this.selected = event[0];
+        this.selectedName = event[1];
+      }
+
+      axios.get('/api/sponsorgrid/' + this.selected).then(function (response) {
+        return _this.sponsors = response.data;
+      });
+
+      this.sponsorAll = this.$refs.allSponsorGrid;
+      this.sponsorAll.filterSponsors(this.selected, this.sponsorSearch);
+
+      setTimeout(function () {
+        jQuery('#CustomItemLoading').fadeOut();
+        jQuery("#CustomItemGrid").fadeIn();
+        /* jQuery( "#CustomSponsorGrid" ).slideToggle( "slow", function() {
+        			  });*/
+      }, 2000);
+    },
+
+
+    //Attach a sponsor to the selected grid
+    addToGrid: function addToGrid(sponsorId) {
+
+      if (!this.selected) {
+        new PNotify({
+          title: 'Error!',
+          text: 'Please select a grid first!',
+          type: 'error'
+        });
+      } else {
+
+        axios.post('/api/sponsorgrid/' + this.selected, {
+          sponsor_id: sponsorId
+        }).then(function (response) {
+          new PNotify({
+            title: 'Success!',
+            text: 'Added to Grid!',
+            type: 'success'
+          });
+          spVue.showGrid('');
+        }).catch(function (error) {
+          new PNotify({
+            title: 'Error!',
+            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+            type: 'error'
+          });
+          console.log(error);
+        });
+      }
+    },
+
+
+    //Remove a sponsor from the selected grid	
+    removeFromGrid: function removeFromGrid(sponsorId) {
+
+      if (!this.selected) {
+        alert('No Grid is selected!');
+      } else {
+
+        axios.delete('/api/sponsorgriditem/' + this.selected + '/' + sponsorId, {}).then(function (response) {
+          spVue.showGrid('');
+          new PNotify({
+            title: 'Success!',
+            text: 'Removed from Grid!',
+            type: 'success'
+          });
+        }).catch(function (error) {
+          new PNotify({
+            title: 'Error!',
+            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+            type: 'error'
+          });
+          console.log(error);
+        });
+      }
+    },
+
+
+    //Filter sponsors by the filter field's value and ofc by the selected grid
+    //We don't want to show sponsors in the "all sponsors" section
+    //who is also in the selected grid.
+
+    filterSponsors: function filterSponsors() {
+      this.sponsorAll = this.$refs.allSponsorGrid;
+
+      this.sponsorAll.filterSponsors(this.selected, this.sponsorSearch);
+    },
+
+
+    //Create a new Sponsor	
+    newSponsorSubmit: function newSponsorSubmit($event) {
+      var ref = this.$refs.allSponsorGrid;
+      var selectedGr = this.selected;
+      var SearchVar = this.sponsorSearch;
+      // create a form
+      var form = new FormData();
+      form.append('sponsor_img', this.selectedImage);
+      form.append('first_name', $event.target.first_name.value);
+      form.append('last_name', $event.target.last_name.value);
+      form.append('job_title', $event.target.job_title.value);
+      form.append('company', $event.target.company.value);
+      form.append('facebook', $event.target.facebook.value);
+      form.append('twitter', $event.target.twitter.value);
+      form.append('linkedin', $event.target.linkedin.value);
+      // submit the image			
+
+      var config = {
+        headers: { 'content-type': 'multipart/form-data' }
+      };
+
+      axios.post('/api/sponsor', form, config).then(function (response) {
+        document.getElementById("NewSponsorForm").reset();
+        document.getElementById("sponsorPrevImg").src = "";
+        document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';
+        new PNotify({
+          title: 'Success!',
+          text: 'Sponsor Saved!',
+          type: 'success'
+        });
+
+        ref.filterSponsors(selectedGr, SearchVar);
+      }).catch(function (error) {
+        new PNotify({
+          title: 'Error!',
+          text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+          type: 'error'
+        });
+        console.log(error);
+      });
+    },
+
+
+    //Image Functions
+    //We use this for the preview image for the image uplod in the "create new sponsor" modal
+    validate: function validate(image) {
+      if (!this.allowableTypes.includes(image.name.split(".").pop().toLowerCase())) {
+        alert('Sorry you can only upload ' + this.allowableTypes.join("|").toUpperCase() + ' files.');
+        return false;
+      }
+
+      if (image.size > this.maximumSize) {
+        alert("Sorry File size exceeding from 5 Mb");
+        return false;
+      }
+
+      return true;
+    },
+    onImageError: function onImageError(err) {
+      console.log(err, 'do something with error');
+    },
+    changeImage: function changeImage($event) {
+
+      this.selectedImage = $event.target.files[0];
+      //validate the image
+      if (!this.validate(this.selectedImage)) return;
+
+      this.createImage();
+    },
+    createImage: function createImage() {
+      var _this2 = this;
+
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        _this2.image = e.target.result;
+        _this2.imgPrev = e.target.result;
+      };
+      reader.readAsDataURL(this.selectedImage);
+      this.imgTempText = '';
+    },
+    editFilteredSponsor: function editFilteredSponsor(sponsorId) {
+      var _this3 = this;
+
+      axios.get('/api/sponsor/' + sponsorId).then(function (response) {
+        // JSON responses are automatically parsed.
+        _this3.sponsorEditRequest(response.data);
+      }).catch(function (e) {
+        console.log(e);
+        // this.errors.push(e)
+      });
+    },
+    sponsorEditRequest: function sponsorEditRequest(sponsorData) {
+      this.editSponsorData = sponsorData;
+      this.imgPrev = '/storage/sponsor/' + sponsorData.img_url + '?id=' + this.generateHash(10);
+      $('#edit_form_modal').modal({ backdrop: 'static', keyboard: true });
+    },
+    editSponsor: function editSponsor($event) {
+      var ref = this.$refs.allSponsorGrid;
+      var selectedGr = this.selected;
+      var SearchVar = this.sponsorSearch;
+      // create a form
+      var form = new FormData();
+      form.append('sponsor_img', this.selectedImage);
+      form.append('prefix', $event.target.prefix.value);
+      form.append('first_name', $event.target.first_name.value);
+      form.append('last_name', $event.target.last_name.value);
+      form.append('job_title', $event.target.job_title.value);
+      form.append('company', $event.target.company.value);
+      form.append('facebook', $event.target.facebook.value);
+      form.append('twitter', $event.target.twitter.value);
+      form.append('linkedin', $event.target.linkedin.value);
+      // submit the image			
+
+      var config = {
+        headers: { 'content-type': 'multipart/form-data' }
+      };
+
+      axios.post('/api/sponsor/' + this.editSponsorData.id + '?_method=PATCH', form, config).then(function (response) {
+
+        new PNotify({
+          title: 'Success!',
+          text: 'Sponsor Saved!',
+          type: 'success'
+        });
+
+        ref.filterSponsors(selectedGr, SearchVar);
+      }).catch(function (error) {
+        new PNotify({
+          title: 'Error!',
+          text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+          type: 'error'
+        });
+        console.log(error);
+      });
+    },
+    generateHash: function generateHash(num) {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for (var i = 0; i < num; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }return text;
+    }
+  },
+
+  mounted: function mounted() {
+    $(this.$refs.editmodal).on("hidden.bs.modal", function () {
+      document.getElementById("EditSponsorForm").reset();
+      document.getElementById("NewSponsorForm").reset();
+      this.selectedImage = '';
+      this.imgPrev = '';
+      this.image = '';
+      this.speakerPrevImg = '';
+      $('#sponsorPrevImg').attr('src', '');
+    });
+  }
+});
+
+/***/ }),
+
+/***/ 222:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(223)
+/* template */
+var __vue_template__ = __webpack_require__(224)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/admin/js/components/SponsorsAll.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a311bfbe", Component.options)
+  } else {
+    hotAPI.reload("data-v-a311bfbe", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 223:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      sponsors: [],
+      bottom: false,
+      sponsorPageData: {
+        current_page: 0,
+        list: [],
+        busy: false
+      },
+      filtered: false
+    };
+  },
+
+
+  methods: {
+    addSponsorToGrid: function addSponsorToGrid(sponsorId) {
+
+      this.$emit('sponsoradded', sponsorId);
+    },
+    deleteFromDatabase: function deleteFromDatabase(sponsorId) {
+      var thisInstance = this;
+      var thisSelected = this.selected;
+      var thisSearch = this.sponsorSearch;
+
+      new PNotify({
+        title: 'Confirmation Needed',
+        text: 'Are you sure you want to delete this sponsor?',
+        icon: 'fa fa-question-circle',
+        type: 'error',
+        hide: false,
+        confirm: {
+          confirm: true
+        },
+        buttons: {
+          closer: false,
+          sticker: false
+        },
+        history: {
+          history: false
+        }
+
+      }).get().on('pnotify.confirm', function () {
+
+        axios.delete('/api/sponsor/' + sponsorId).then(function (response) {
+          // JSON responses are automatically parsed.
+          thisInstance.filterSponsors(thisSelected, thisSearch);
+          new PNotify({
+            title: 'Success!',
+            text: 'Deleted Successfully!',
+            type: 'success'
+          });
+        }).catch(function (error) {
+          new PNotify({
+            title: 'Error!',
+            text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+            type: 'error'
+          });
+          console.log(error);
+        });
+      }).on('pnotify.cancel', function () {});
+    },
+    editSponsor: function editSponsor(sponsorId) {
+      var _this = this;
+
+      axios.get('/api/sponsor/' + sponsorId).then(function (response) {
+        // JSON responses are automatically parsed.
+        _this.$emit('editsponsordata', response.data);
+      }).catch(function (e) {
+        console.log(e);
+        // this.errors.push(e)
+      });
+    },
+    filterSponsors: function filterSponsors(gridId, searchQuery) {
+      var _this2 = this;
+
+      var exludeG = '';
+      var searchQ = '';
+
+      this.filtered = true;
+
+      if (gridId) {
+        exludeG = 'exlude=' + gridId;
+      }
+
+      if (searchQuery) {
+        searchQ = 'search=' + searchQuery;
+      }
+
+      axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
+        // JSON responses are automatically parsed.
+        _this2.sponsors = response.data.data;
+      }).catch(function (e) {
+        _this2.errors.push(e);
+      });
+    },
+    getAllSponsors: function getAllSponsors() {
+      var _this3 = this;
+
+      this.filtered = false;
+      axios.get('/api/sponsors').then(function (response) {
+        //console.log(response.data);
+        // JSON responses are automatically parsed.
+        _this3.sponsors = response.data.data;
+      }).catch(function (e) {
+        _this3.errors.push(e);
+      });
+    },
+    generateHash: function generateHash(num) {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for (var i = 0; i < num; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }return text;
+    },
+    bottomVisible: function bottomVisible() {
+      var scrollY = window.scrollY;
+      var visible = document.documentElement.clientHeight;
+      var pageHeight = document.documentElement.scrollHeight;
+      var bottomOfPage = visible + scrollY >= pageHeight;
+      return bottomOfPage || pageHeight < visible;
+    },
+    loadMore: function loadMore() {
+      var _this4 = this;
+
+      if (this.sponsorPageData.current_page != this.sponsorPageData.max + 1) {
+        axios.get('/api/sponsors', {
+          params: {
+            page: this.sponsorPageData.current_page + 1
+          }
+        }).then(function (_ref) {
+          var data = _ref.data;
+
+          if (data.data.length) {
+            _this4.sponsorPageData.current_page = data.current_page;
+            _this4.sponsorPageData.max = data.last_page;
+            _this4.sponsors = _this4.sponsors.concat(data.data);
+          }
+        });
+      }
+    }
+  },
+
+  // Fetches posts when the component is created.
+  created: function created() {
+    var _this5 = this;
+
+    window.addEventListener('scroll', function () {
+      _this5.bottom = _this5.bottomVisible();
+    });
+    this.loadMore();
+
+    //  this.getAllSponsors();
+
+    // async / await version (created() becomes async created())
+    //
+    // try {
+    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+    //   this.posts = response.data
+    // } catch (e) {
+    //   this.errors.push(e)
+    // }
+  },
+
+
+  watch: {
+    bottom: function bottom(_bottom) {
+      if (_bottom && this.filtered == false) {
+        this.loadMore();
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ 224:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    { staticClass: "SponsorsGrid" },
+    _vm._l(_vm.sponsors, function(sponsor) {
+      return _c(
+        "li",
+        { attrs: { id: sponsor.id, "data-sponsorId": sponsor.id } },
+        [
+          _c("div", { staticClass: "GridImageContainer" }, [
+            _c("div", { staticClass: "IconContainer" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "AddToGrid",
+                  attrs: { title: "Add To Current Grid" },
+                  on: {
+                    click: function($event) {
+                      _vm.addSponsorToGrid(sponsor.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-plus-square",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "EditSponsorGlobal",
+                  attrs: { title: "Edit sponsor across events" },
+                  on: {
+                    click: function($event) {
+                      _vm.editSponsor(sponsor.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil-square-o",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "DeleteItem",
+                  attrs: { title: "Delete from Database" },
+                  on: {
+                    click: function($event) {
+                      _vm.deleteFromDatabase(sponsor.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-trash",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "GridOverlay" }, [
+              _c("h2", { staticClass: "SliphoverHeadline" }, [
+                _vm._v(_vm._s(sponsor.company_name))
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "SmallParagraph" }, [
+                _vm._v(_vm._s(sponsor.website))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "Square GridItem",
+              attrs: {
+                alt: sponsor.company_name,
+                src:
+                  "/storage/sponsors/colored/" +
+                  sponsor.logo_url +
+                  "?id=" +
+                  _vm.generateHash(10)
+              }
+            })
+          ])
+        ]
+      )
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a311bfbe", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(63)
+/* template */
+var __vue_template__ = __webpack_require__(64)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/admin/js/components/GridComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-29339320", Component.options)
+  } else {
+    hotAPI.reload("data-v-29339320", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -236,8 +1000,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     prepareGrid: function prepareGrid(event) {
-      jQuery("#CustomSpeakerGrid").fadeOut();
-      jQuery('#CustomSpeakerLoading').fadeIn();
+      jQuery("#CustomItemGrid").fadeOut();
+      jQuery('#CustomItemLoading').fadeIn();
 
       if (event) {
         var options = event.target.options;
@@ -326,274 +1090,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 100:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(101)
-/* template */
-var __vue_template__ = __webpack_require__(102)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/admin/js/components/SponsorsAll.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-a311bfbe", Component.options)
-  } else {
-    hotAPI.reload("data-v-a311bfbe", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 101:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            speakers: []
-        };
-    },
-
-
-    methods: {
-        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
-
-            this.$emit('speakeradded', speakerId);
-        },
-        deleteFromDatabase: function deleteFromDatabase(speakerId) {
-            var thisInstance = this;
-            var thisSelected = this.selected;
-            var thisSearch = this.speakerSearch;
-
-            new PNotify({
-                title: 'Confirmation Needed',
-                text: 'Are you sure you want to delete this speaker?',
-                icon: 'fa fa-question-circle',
-                type: 'error',
-                hide: false,
-                confirm: {
-                    confirm: true
-                },
-                buttons: {
-                    closer: false,
-                    sticker: false
-                },
-                history: {
-                    history: false
-                }
-
-            }).get().on('pnotify.confirm', function () {
-
-                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
-                    // JSON responses are automatically parsed.
-                    thisInstance.filterSpeakers(thisSelected, thisSearch);
-                    new PNotify({
-                        title: 'Success!',
-                        text: 'Deleted Successfully!',
-                        type: 'success'
-                    });
-                }).catch(function (error) {
-                    new PNotify({
-                        title: 'Error!',
-                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-                        type: 'error'
-                    });
-                    console.log(error);
-                });
-            }).on('pnotify.cancel', function () {});
-        },
-        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
-            var _this = this;
-
-            var exludeG = '';
-            var searchQ = '';
-
-            if (gridId) {
-                exludeG = 'exlude=' + gridId;
-            }
-
-            if (searchQuery) {
-                searchQ = 'search=' + searchQuery;
-            }
-
-            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
-                // JSON responses are automatically parsed.
-                _this.speakers = response.data;
-            }).catch(function (e) {
-                _this.errors.push(e);
-            });
-        },
-        getAllSpeakers: function getAllSpeakers() {
-            var _this2 = this;
-
-            axios.get('/api/sponsors').then(function (response) {
-                // JSON responses are automatically parsed.
-                _this2.speakers = response.data;
-            }).catch(function (e) {
-                _this2.errors.push(e);
-            });
-        }
-    },
-
-    // Fetches posts when the component is created.
-    created: function created() {
-        this.getAllSpeakers();
-
-        // async / await version (created() becomes async created())
-        //
-        // try {
-        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-        //   this.posts = response.data
-        // } catch (e) {
-        //   this.errors.push(e)
-        // }
-    }
-});
-
-/***/ }),
-
-/***/ 102:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "ul",
-    { staticClass: "SpeakersGrid" },
-    _vm._l(_vm.speakers, function(speaker) {
-      return _c(
-        "li",
-        { attrs: { id: speaker.id, "data-speakerId": speaker.id } },
-        [
-          _c("div", { staticClass: "GridImageContainer" }, [
-            _c("div", { staticClass: "IconContainer" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "AddToGrid",
-                  attrs: { title: "Add To Current Grid" },
-                  on: {
-                    click: function($event) {
-                      _vm.addSpeakerToGrid(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-plus-square",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "DeleteItem",
-                  attrs: { title: "Delete from Database" },
-                  on: {
-                    click: function($event) {
-                      _vm.deleteFromDatabase(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-trash",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "GridOverlay" }, [
-              _c("h2", { staticClass: "SliphoverHeadline" }, [
-                _vm._v(_vm._s(speaker.company_name))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "Square GridItem",
-              attrs: {
-                alt: speaker.full_name,
-                src: "/storage/sponsors/colored/" + speaker.logo_url
-              }
-            })
-          ])
-        ]
-      )
-    })
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-a311bfbe", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 11:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -696,7 +1193,7 @@ var render = function() {
               expression: "selectedGrid"
             }
           ],
-          attrs: { name: "GridSelect", id: "SelectSpeakerGrid" },
+          attrs: { name: "GridSelect", id: "SelectGrid" },
           on: {
             change: [
               function($event) {
@@ -756,7 +1253,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 12:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
@@ -2304,325 +2801,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
 	return Sortable;
 });
 
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(10)
-/* template */
-var __vue_template__ = __webpack_require__(11)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/admin/js/components/GridComponent.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-29339320", Component.options)
-  } else {
-    hotAPI.reload("data-v-29339320", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 98:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(99);
-
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
-
-Vue.component('speakers-all', __webpack_require__(100));
-
-Vue.component('grid-controller', __webpack_require__(9));
-
-
-
-Vue.directive('sortable', {
-	inserted: function inserted(el, binding) {
-		var sortable = new __WEBPACK_IMPORTED_MODULE_0_sortablejs___default.a(el, binding.value || {});
-	}
-});
-
-var spVue = new Vue({
-	el: '#PageContainer',
-
-	data: {
-		speakers: [],
-		selected: null,
-		selectedName: '',
-		speakerSearch: '',
-		speakerAll: '',
-		event: null,
-		GridType: 2,
-		sortableOptions: {
-			animation: 150,
-			forceFallback: false,
-			// Changed sorting within list
-			onUpdate: function onUpdate( /**Event*/evt) {
-
-				var new_item_id = evt.item.dataset.speakerid;
-				var new_item_order = evt.newIndex;
-				var old_item_order = evt.oldIndex;
-				var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
-				var gridId = $("#SelectSpeakerGrid").val();
-
-				axios.patch('/api/sponsorgrid/' + gridId + '/' + old_item_id, {
-					order_number: old_item_order
-				}).then(function (response) {
-					console.log(response);
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-
-				axios.patch('/api/sponsorgrid/' + gridId + '/' + new_item_id, {
-					order_number: new_item_order
-				}).then(function (response) {
-					console.log(response);
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-		//Image Variables
-		allowableTypes: ['jpg', 'jpeg', 'png', 'gif'],
-		maximumSize: 5000000,
-		selectedImage: null,
-		image: null,
-		imgPrev: '',
-		imgTempText: 'Drag your files here or click in this area.'
-
-	},
-
-	methods: {
-
-		//Function that triggers when a grid is selected.
-		//The function gets the id of the grid from the Grid Child component
-		//With an axios request we get the content of the grid and display it
-		showGrid: function showGrid(event) {
-			var _this = this;
-
-			if (event[0]) {
-				this.selected = event[0];
-				this.selectedName = event[1];
-			}
-
-			axios.get('/api/sponsorgrid/' + this.selected).then(function (response) {
-				return _this.speakers = response.data;
-			});
-
-			this.speakerAll = this.$refs.allSpeakerGrid;
-			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
-		},
-
-
-		//Attach a speaker to the selected grid
-		addToGrid: function addToGrid(speakerId) {
-
-			if (!this.selected) {
-				new PNotify({
-					title: 'Error!',
-					text: 'Please select a grid first!',
-					type: 'error'
-				});
-			} else {
-
-				axios.post('/api/sponsorgrid/' + this.selected, {
-					speaker_id: speakerId
-				}).then(function (response) {
-					new PNotify({
-						title: 'Success!',
-						text: 'Added to Grid!',
-						type: 'success'
-					});
-					spVue.showGrid('');
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-
-		//Remove a speaker from the selected grid	
-		removeFromGrid: function removeFromGrid(speakerId) {
-
-			if (!this.selected) {
-				alert('No Grid is selected!');
-			} else {
-
-				axios.delete('/api/sponsorgriditem/' + this.selected + '/' + speakerId, {}).then(function (response) {
-					spVue.showGrid('');
-					new PNotify({
-						title: 'Success!',
-						text: 'Removed from Grid!',
-						type: 'success'
-					});
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-
-		//Filter speakers by the filter field's value and ofc by the selected grid
-		//We don't want to show speakers in the "all speakers" section
-		//who is also in the selected grid.
-
-		filterSpeakers: function filterSpeakers() {
-			this.speakerAll = this.$refs.allSpeakerGrid;
-
-			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
-		},
-
-
-		//Create a new Speaker	
-		formSubmit: function formSubmit($event) {
-			var ref = this.$refs.allSpeakerGrid;
-			var selectedGr = this.selected;
-			var SearchVar = this.speakerSearch;
-			// create a form
-			var form = new FormData();
-			form.append('speaker_img', this.selectedImage);
-			form.append('first_name', $event.target.first_name.value);
-			form.append('last_name', $event.target.last_name.value);
-			form.append('job_title', $event.target.job_title.value);
-			form.append('company', $event.target.company.value);
-			form.append('facebook', $event.target.facebook.value);
-			form.append('twitter', $event.target.twitter.value);
-			form.append('linkedin', $event.target.linkedin.value);
-			// submit the image			
-
-			var config = {
-				headers: { 'content-type': 'multipart/form-data' }
-			};
-
-			axios.post('/api/speakers', form, config).then(function (response) {
-				document.getElementById("NewSpeakerForm").reset();
-				document.getElementById("speakerPrevImg").src = "";
-				document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';
-				new PNotify({
-					title: 'Success!',
-					text: 'Speaker Saved!',
-					type: 'success'
-				});
-
-				ref.filterSpeakers(selectedGr, SearchVar);
-			}).catch(function (error) {
-				new PNotify({
-					title: 'Error!',
-					text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
-					type: 'error'
-				});
-				console.log(error);
-			});
-		},
-
-
-		//Image Functions
-		//We use this for the preview image for the image uplod in the "create new speaker" modal
-		validate: function validate(image) {
-			if (!this.allowableTypes.includes(image.name.split(".").pop().toLowerCase())) {
-				alert('Sorry you can only upload ' + this.allowableTypes.join("|").toUpperCase() + ' files.');
-				return false;
-			}
-
-			if (image.size > this.maximumSize) {
-				alert("Sorry File size exceeding from 5 Mb");
-				return false;
-			}
-
-			return true;
-		},
-		onImageError: function onImageError(err) {
-			console.log(err, 'do something with error');
-		},
-		changeImage: function changeImage($event) {
-
-			this.selectedImage = $event.target.files[0];
-			//validate the image
-			if (!this.validate(this.selectedImage)) return;
-
-			this.createImage();
-		},
-		createImage: function createImage() {
-			var _this2 = this;
-
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				_this2.image = e.target.result;
-				_this2.imgPrev = e.target.result;
-			};
-			reader.readAsDataURL(this.selectedImage);
-			this.imgTempText = '';
-		}
-	}
-
-	/*mounted(){
- 
- 	
- }*/
-
-});
 
 /***/ })
 
