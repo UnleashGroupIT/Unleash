@@ -38,17 +38,22 @@
 			<span>Lead Sponsors <strong>2018</strong></span>
 			<div class="mainsponsors-wrap">
                    
-                   <div><a href="https://www.careerbuilder.com/" target="_blank" title="CareerBuilder"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Careerbuilder.svg') }}" alt="CareerBuilder"></a></div>
+                   <div id="cb"><a href="https://www.careerbuilder.com/" target="_blank" title="CareerBuilder"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Careerbuilder.svg') }}" alt="CareerBuilder"></a></div>
                    
-                    <div><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
+                    <div id="cross"><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
                     
-                    <div><a href="https://www.cultureamp.com/" target="_blank" title="Culture Amp"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>
-                    <div>  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
-                  <div><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div> 
+                    <div id="cultureamp"><a href="https://www.cultureamp.com/" target="_blank" title="Culture Amp"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>
+                    <div id="ibm-wrp">  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
+
+                  <div id="icims"><a href=https://www.icims.com/" target="_blank" title="iCims"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/icims-white.svg') }}" alt="iCims"></a></div>
+
+                  <div id="tanner"><a href="http://www.octanner.com/language.html" target="_blank" title="O.C.Tanner"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/oct.png') }}" alt="O.C.Tanner"></a></div> 
                    
-                  <div> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
+                  <div id="sap-wrp"> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
                    
-                  <div><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
+                  <div id="smart-wrp"><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
+
+                  <div id="walkme"><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div>
                    		
 
 			</div>

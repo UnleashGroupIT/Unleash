@@ -79,7 +79,7 @@
 			<div class="content-wrap">
 				<h2>Testimonials</h2>
 				<p>" Volunteering at HR Tech World gave me a chance to connect with others in building what I felt was one of the best HR conferences I have ever been to (I've been to a few). As someone who loves people and tech, being a part of HR Tech World allowed me to hear from a lot of experienced speakers talk about how to better integrate the two and create an environment for both to thrive in the workplace. I would recommend this to anyone who is passionate about HR and wants to meet likeminded individuals from all walks of life who enjoy being a part of the success story that is HR Tech World. I really benefited by getting additional time with speakers because I volunteered. "</p>
-				<strong>Brian Boncy<br />HR/Payroll<br />Ethos Lending, USA</strong>
+				<strong>Brian Boncy<br />Ethos Lending, USA</strong>
 			</div>
 		</div>
 	</section>
@@ -87,9 +87,9 @@
 		<div class="content">
 			<div class="content-wrap">
 				<p>" Volunteering with HR Tech World provided the wonderful opportunity to witness and participate in a world-class conference. As a bonus, I was fortunate to gain insight into the Human Resources industry and exposure to leading technology solutions. I heard thought-provoking speeches by trending business leaders. It was a pleasure to support HR Tech World in connecting Human Resources professionals with one another. I would gladly volunteer again! "</p>
-				<strong>Michael Umbay<br />Data Specialist and Operations Director<br />University of California<br />Berkeley, USA</strong>
+				<strong>Michael Umbay<br />Berkeley, USA</strong>
 				<p>" I am very glad that I had a chance to participate in HR Tech World. This is the greatest conference that makes you feel not only like part of this industry. I learned about new strategies in HR that use technology which could help me increase productivity in my company. "</p>
-				<strong>Antonina Musenko<br />Accounting Assistant<br />Nikon, USA</strong>
+				<strong>Antonina Musenko<br />Nikon, USA</strong>
 			</div>
 		</div>
 		<div class="wrppr">

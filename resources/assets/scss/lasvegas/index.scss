@@ -155,6 +155,7 @@ section.one .wrp button {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  z-index: 2;
   @media (min-width: 75em) {
     margin-bottom: 2em;
   }
@@ -163,9 +164,6 @@ section.one.mainsponsors {
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: .5em;
-    strong{
-      color:#e80f42;
-    }
   }
 }
   
@@ -210,10 +208,43 @@ section.one.mainsponsors {
           section.one.mainsponsors .mainsponsors-wrap > div img {
             width: 5.3vw; } }
 
+      #ibm-wrp{
+        @media (min-width: 440px) {
+          margin-top: .75em;
+        }
+      }
+
+      #sap-wrp{
+        margin-top: 0;
+        @media (min-width: 440px) {
+          margin-top: auto;
+        }
+        @media (min-width: 75em) {
+          margin-top: 0;
+        }
+      }
+
+      #smart-wrp{
+        margin-top: .5em;
+        @media (min-width: 470px) {
+          margin-top: .75em;
+        }
+      }
+
+      #tanner{
+        margin-top: .7em;
+        img{
+          width: 107px;
+          @media (min-width: 415px) {
+            width: 120px;
+          }
+        }
+      }
+
       #adp,#ibm{
         width: 60px;
         @media (min-width: 55em) {
-          width: 80px;
+          width: 70px;
         }
         @media (min-width: 125em) {
           width: 4.2vw;
@@ -232,7 +263,7 @@ section.one.mainsponsors {
       }
 
 
-      #cornerstone,#cross,#smart{
+      #cornerstone,#smart{
         width: 110px;
         @media (min-width: 55em) {
           width: 135px;
@@ -252,8 +283,62 @@ section.one.mainsponsors {
       }
       #sap{
         width: 200px;
+        margin-top: 10px;
+        @media (min-width: 400px) {
+          width: 230px;
+        }
         @media (min-width: 125em) {
           width: 10.5vw;
+        }
+      }
+
+      #cb{
+        margin-top: .7em;
+        @media (min-width: 775px) {
+          margin-top: 1.2em;
+        }
+
+        img{
+          width: 155px;
+        }
+      }
+
+      #cultureamp{
+        img{
+          width: 135px;
+        }
+      }
+
+      #walkme{
+        img{
+          width: 70px;
+          margin-top: 10px;
+        }
+      }
+
+      #cross{
+        img{
+          width: 155px;
+        }
+      }
+
+      #icims{
+        img{
+          width: 70px;
+          @media (min-width: 75em) {
+            width: 75px;
+          }
+        }
+        margin-bottom: .75em;
+        @media (min-width: 440px) {
+          margin-bottom: 1em;
+        }
+        @media (min-width: 700px) {
+          margin-bottom: .75em;
+        }
+        @media (min-width: 75em) {
+          width: 75px;
+          margin-bottom: 0;
         }
       }
 

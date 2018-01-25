@@ -29,7 +29,7 @@ class SpeakersController extends Controller
      }   
 
       if ($request->is('america') || $request->is('america/*')) {
-         $SpeakerGridId = 1;
+         $SpeakerGridId = 9;
 
          $site = 'lasvegas.pages.speakers';
      }   

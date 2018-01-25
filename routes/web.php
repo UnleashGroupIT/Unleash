@@ -23,9 +23,9 @@ Route::get('/', function (Request $request) {
     return redirect('/news/');
 });
 
-Route::get('/terms', function () {
-  return view('global.pages.terms');
-})->name('global.terms');
+Route::get('terms', 'TermsController@index')->name('global.terms');
+
+Route::get('/terms/{param}', 'TermsController@index');
 
 Route::get('/about', function () {
   return view('global.pages.about');
@@ -93,6 +93,11 @@ Route::get('/amsterdam/sponsors', function () {
 Route::get('/amsterdam/speaker', function () {
     return redirect('/amsterdam/index#spkrgrd');
 });
+
+Route::get('/amsterdam/agenda', function () {
+    return redirect('http://archives.hrn.io/AMSTERDAM2017/agenda');
+});
+
 
 Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
 
@@ -256,9 +261,13 @@ Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorpla
 })->name('london.tickets');*/
 
 
+
+
 Route::get('/london/tickets', function () {
      return redirect('https://unleash.swoogo.com/unleashlondon');
 })->name('london.tickets');
+
+
 
 Route::get('/london/terms', function () {
     return redirect('/terms');
@@ -291,6 +300,7 @@ Route::get('/america/index', 'MainPageController@index')->name('lasvegas.index')
 
 //Route::get('/america/speaker', 'SpeakersController@speaker');
 
+Route::get('/america/sptest', 'SpeakersController@index');
 
 Route::get('/america/speaker', function () {
     return redirect('/america/index#spkrgrd');
