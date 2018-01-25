@@ -340,9 +340,15 @@ Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floor
     return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');*/
 
-Route::get('/america/tickets', function () {
+/*Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');
+*/
+
+Route::get('/america/tickets', function () {
+     return redirect('https://unleash.swoogo.com/unleashamerica/');
+})->name('lasvegas.tickets');
+
 
 Route::get('/america/travel', function () {
     return view('lasvegas.pages.travel');

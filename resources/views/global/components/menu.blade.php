@@ -36,7 +36,7 @@
 											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
 											<li><a href="{{ route('lasvegas.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('lasvegas.travel') }}">Venue &amp; Travel</a></li>
-											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
+											<li><a href="https://unleash.swoogo.com/unleashamerica" target="_blank">Tickets</a></li>
 										</ul>
 									</li>
 									<li class="amsterdam" title="AMSTERDAM">
