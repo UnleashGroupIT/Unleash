@@ -6,10 +6,13 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "algolia/algoliasearch-client-php": "^1.25",
+        "algolia/laravel-scout-algolia-macros": "^0.4.0",
         "fideloper/proxy": "~3.3",
         "laracasts/utilities": "^3.0",
         "laravel/framework": "5.5.*",
         "laravel/passport": "^4.0",
+        "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "voku/portable-utf8": "^3.1"
     },

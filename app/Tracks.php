@@ -9,11 +9,6 @@ class Tracks extends Model
 {
 
 
-     public function sessions(){
-
-        return $this->hasMany('App\AgendaSessions');
-    }
-
     public function event(){
 
     	return $this->belongsTo('App\Events');

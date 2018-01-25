@@ -39,7 +39,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            'throttle:60,1',
+            'throttle:10000,1',
             'bindings',
         ],
     ];
@@ -60,5 +60,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 		'checkevent' => \App\Http\Middleware\CheckEvent::class,
         'roles' => \App\Http\Middleware\UserRoles::class,
+        'hidden' => \App\Http\Middleware\HiddenFunctions::class,		
     ];
 }

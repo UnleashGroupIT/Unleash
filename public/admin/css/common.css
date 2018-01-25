@@ -346,6 +346,10 @@ button {
   padding: 25px;
 }
 
+#PageContainer {
+  text-align: center;
+}
+
 #CustomSpeakerLoading {
   display: none;
 }

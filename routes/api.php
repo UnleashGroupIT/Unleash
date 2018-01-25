@@ -21,6 +21,8 @@ Route::middleware(['auth:api', 'roles'])->get('/user', function (Request $reques
 //TODO: User permission handling. Not everyone should be allowed to do stuff :D
 //TODO: Middleware that specifically checks eventId (if it is given and it's valid)
 
+Route::get('/agenda/search', 'AgendaController@search');
+
 //Events
 Route::middleware(['auth:api', 'roles'])->get('/events', 'Admin\EventController@listEvents');
 

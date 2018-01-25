@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 98);
+/******/ 	return __webpack_require__(__webpack_require__.s = 220);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -175,7 +175,593 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 10:
+/***/ 220:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(221);
+
+
+/***/ }),
+
+/***/ 221:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
+
+Vue.component('speakers-all', __webpack_require__(222));
+
+Vue.component('grid-controller', __webpack_require__(62));
+
+
+
+Vue.directive('sortable', {
+	inserted: function inserted(el, binding) {
+		var sortable = new __WEBPACK_IMPORTED_MODULE_0_sortablejs___default.a(el, binding.value || {});
+	}
+});
+
+var spVue = new Vue({
+	el: '#PageContainer',
+
+	data: {
+		speakers: [],
+		selected: null,
+		selectedName: '',
+		speakerSearch: '',
+		speakerAll: '',
+		event: null,
+		GridType: 2,
+		sortableOptions: {
+			animation: 150,
+			forceFallback: false,
+			// Changed sorting within list
+			onUpdate: function onUpdate( /**Event*/evt) {
+
+				var new_item_id = evt.item.dataset.speakerid;
+				var new_item_order = evt.newIndex;
+				var old_item_order = evt.oldIndex;
+				var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
+				var gridId = $("#SelectSpeakerGrid").val();
+
+				axios.patch('/api/sponsorgrid/' + gridId + '/' + old_item_id, {
+					order_number: old_item_order
+				}).then(function (response) {
+					console.log(response);
+				}).catch(function (error) {
+					new PNotify({
+						title: 'Error!',
+						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+						type: 'error'
+					});
+					console.log(error);
+				});
+
+				axios.patch('/api/sponsorgrid/' + gridId + '/' + new_item_id, {
+					order_number: new_item_order
+				}).then(function (response) {
+					console.log(response);
+				}).catch(function (error) {
+					new PNotify({
+						title: 'Error!',
+						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+						type: 'error'
+					});
+					console.log(error);
+				});
+			}
+		},
+
+		//Image Variables
+		allowableTypes: ['jpg', 'jpeg', 'png', 'gif'],
+		maximumSize: 5000000,
+		selectedImage: null,
+		image: null,
+		imgPrev: '',
+		imgTempText: 'Drag your files here or click in this area.'
+
+	},
+
+	methods: {
+
+		//Function that triggers when a grid is selected.
+		//The function gets the id of the grid from the Grid Child component
+		//With an axios request we get the content of the grid and display it
+		showGrid: function showGrid(event) {
+			var _this = this;
+
+			if (event[0]) {
+				this.selected = event[0];
+				this.selectedName = event[1];
+			}
+
+			axios.get('/api/sponsorgrid/' + this.selected).then(function (response) {
+				return _this.speakers = response.data;
+			});
+
+			this.speakerAll = this.$refs.allSpeakerGrid;
+			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+		},
+
+
+		//Attach a speaker to the selected grid
+		addToGrid: function addToGrid(speakerId) {
+
+			if (!this.selected) {
+				new PNotify({
+					title: 'Error!',
+					text: 'Please select a grid first!',
+					type: 'error'
+				});
+			} else {
+
+				axios.post('/api/sponsorgrid/' + this.selected, {
+					speaker_id: speakerId
+				}).then(function (response) {
+					new PNotify({
+						title: 'Success!',
+						text: 'Added to Grid!',
+						type: 'success'
+					});
+					spVue.showGrid('');
+				}).catch(function (error) {
+					new PNotify({
+						title: 'Error!',
+						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+						type: 'error'
+					});
+					console.log(error);
+				});
+			}
+		},
+
+
+		//Remove a speaker from the selected grid	
+		removeFromGrid: function removeFromGrid(speakerId) {
+
+			if (!this.selected) {
+				alert('No Grid is selected!');
+			} else {
+
+				axios.delete('/api/sponsorgriditem/' + this.selected + '/' + speakerId, {}).then(function (response) {
+					spVue.showGrid('');
+					new PNotify({
+						title: 'Success!',
+						text: 'Removed from Grid!',
+						type: 'success'
+					});
+				}).catch(function (error) {
+					new PNotify({
+						title: 'Error!',
+						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+						type: 'error'
+					});
+					console.log(error);
+				});
+			}
+		},
+
+
+		//Filter speakers by the filter field's value and ofc by the selected grid
+		//We don't want to show speakers in the "all speakers" section
+		//who is also in the selected grid.
+
+		filterSpeakers: function filterSpeakers() {
+			this.speakerAll = this.$refs.allSpeakerGrid;
+
+			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+		},
+
+
+		//Create a new Speaker	
+		formSubmit: function formSubmit($event) {
+			var ref = this.$refs.allSpeakerGrid;
+			var selectedGr = this.selected;
+			var SearchVar = this.speakerSearch;
+			// create a form
+			var form = new FormData();
+			form.append('speaker_img', this.selectedImage);
+			form.append('first_name', $event.target.first_name.value);
+			form.append('last_name', $event.target.last_name.value);
+			form.append('job_title', $event.target.job_title.value);
+			form.append('company', $event.target.company.value);
+			form.append('facebook', $event.target.facebook.value);
+			form.append('twitter', $event.target.twitter.value);
+			form.append('linkedin', $event.target.linkedin.value);
+			// submit the image			
+
+			var config = {
+				headers: { 'content-type': 'multipart/form-data' }
+			};
+
+			axios.post('/api/speakers', form, config).then(function (response) {
+				document.getElementById("NewSpeakerForm").reset();
+				document.getElementById("speakerPrevImg").src = "";
+				document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';
+				new PNotify({
+					title: 'Success!',
+					text: 'Speaker Saved!',
+					type: 'success'
+				});
+
+				ref.filterSpeakers(selectedGr, SearchVar);
+			}).catch(function (error) {
+				new PNotify({
+					title: 'Error!',
+					text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+					type: 'error'
+				});
+				console.log(error);
+			});
+		},
+
+
+		//Image Functions
+		//We use this for the preview image for the image uplod in the "create new speaker" modal
+		validate: function validate(image) {
+			if (!this.allowableTypes.includes(image.name.split(".").pop().toLowerCase())) {
+				alert('Sorry you can only upload ' + this.allowableTypes.join("|").toUpperCase() + ' files.');
+				return false;
+			}
+
+			if (image.size > this.maximumSize) {
+				alert("Sorry File size exceeding from 5 Mb");
+				return false;
+			}
+
+			return true;
+		},
+		onImageError: function onImageError(err) {
+			console.log(err, 'do something with error');
+		},
+		changeImage: function changeImage($event) {
+
+			this.selectedImage = $event.target.files[0];
+			//validate the image
+			if (!this.validate(this.selectedImage)) return;
+
+			this.createImage();
+		},
+		createImage: function createImage() {
+			var _this2 = this;
+
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				_this2.image = e.target.result;
+				_this2.imgPrev = e.target.result;
+			};
+			reader.readAsDataURL(this.selectedImage);
+			this.imgTempText = '';
+		}
+	}
+
+	/*mounted(){
+ 
+ 	
+ }*/
+
+});
+
+/***/ }),
+
+/***/ 222:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(223)
+/* template */
+var __vue_template__ = __webpack_require__(224)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/admin/js/components/SponsorsAll.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a311bfbe", Component.options)
+  } else {
+    hotAPI.reload("data-v-a311bfbe", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 223:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            speakers: []
+        };
+    },
+
+
+    methods: {
+        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
+
+            this.$emit('speakeradded', speakerId);
+        },
+        deleteFromDatabase: function deleteFromDatabase(speakerId) {
+            var thisInstance = this;
+            var thisSelected = this.selected;
+            var thisSearch = this.speakerSearch;
+
+            new PNotify({
+                title: 'Confirmation Needed',
+                text: 'Are you sure you want to delete this speaker?',
+                icon: 'fa fa-question-circle',
+                type: 'error',
+                hide: false,
+                confirm: {
+                    confirm: true
+                },
+                buttons: {
+                    closer: false,
+                    sticker: false
+                },
+                history: {
+                    history: false
+                }
+
+            }).get().on('pnotify.confirm', function () {
+
+                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
+                    // JSON responses are automatically parsed.
+                    thisInstance.filterSpeakers(thisSelected, thisSearch);
+                    new PNotify({
+                        title: 'Success!',
+                        text: 'Deleted Successfully!',
+                        type: 'success'
+                    });
+                }).catch(function (error) {
+                    new PNotify({
+                        title: 'Error!',
+                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+                        type: 'error'
+                    });
+                    console.log(error);
+                });
+            }).on('pnotify.cancel', function () {});
+        },
+        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
+            var _this = this;
+
+            var exludeG = '';
+            var searchQ = '';
+
+            if (gridId) {
+                exludeG = 'exlude=' + gridId;
+            }
+
+            if (searchQuery) {
+                searchQ = 'search=' + searchQuery;
+            }
+
+            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
+                // JSON responses are automatically parsed.
+                _this.speakers = response.data;
+            }).catch(function (e) {
+                _this.errors.push(e);
+            });
+        },
+        getAllSpeakers: function getAllSpeakers() {
+            var _this2 = this;
+
+            axios.get('/api/sponsors').then(function (response) {
+                // JSON responses are automatically parsed.
+                _this2.speakers = response.data;
+            }).catch(function (e) {
+                _this2.errors.push(e);
+            });
+        }
+    },
+
+    // Fetches posts when the component is created.
+    created: function created() {
+        this.getAllSpeakers();
+
+        // async / await version (created() becomes async created())
+        //
+        // try {
+        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+        //   this.posts = response.data
+        // } catch (e) {
+        //   this.errors.push(e)
+        // }
+    }
+});
+
+/***/ }),
+
+/***/ 224:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    { staticClass: "SpeakersGrid" },
+    _vm._l(_vm.speakers, function(speaker) {
+      return _c(
+        "li",
+        { attrs: { id: speaker.id, "data-speakerId": speaker.id } },
+        [
+          _c("div", { staticClass: "GridImageContainer" }, [
+            _c("div", { staticClass: "IconContainer" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "AddToGrid",
+                  attrs: { title: "Add To Current Grid" },
+                  on: {
+                    click: function($event) {
+                      _vm.addSpeakerToGrid(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-plus-square",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "DeleteItem",
+                  attrs: { title: "Delete from Database" },
+                  on: {
+                    click: function($event) {
+                      _vm.deleteFromDatabase(speaker.id)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-trash",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "GridOverlay" }, [
+              _c("h2", { staticClass: "SliphoverHeadline" }, [
+                _vm._v(_vm._s(speaker.company_name))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "Square GridItem",
+              attrs: {
+                alt: speaker.full_name,
+                src: "/storage/sponsors/colored/" + speaker.logo_url
+              }
+            })
+          ])
+        ]
+      )
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a311bfbe", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(63)
+/* template */
+var __vue_template__ = __webpack_require__(64)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/admin/js/components/GridComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-29339320", Component.options)
+  } else {
+    hotAPI.reload("data-v-29339320", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -326,274 +912,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 100:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(101)
-/* template */
-var __vue_template__ = __webpack_require__(102)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/admin/js/components/SponsorsAll.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-a311bfbe", Component.options)
-  } else {
-    hotAPI.reload("data-v-a311bfbe", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 101:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            speakers: []
-        };
-    },
-
-
-    methods: {
-        addSpeakerToGrid: function addSpeakerToGrid(speakerId) {
-
-            this.$emit('speakeradded', speakerId);
-        },
-        deleteFromDatabase: function deleteFromDatabase(speakerId) {
-            var thisInstance = this;
-            var thisSelected = this.selected;
-            var thisSearch = this.speakerSearch;
-
-            new PNotify({
-                title: 'Confirmation Needed',
-                text: 'Are you sure you want to delete this speaker?',
-                icon: 'fa fa-question-circle',
-                type: 'error',
-                hide: false,
-                confirm: {
-                    confirm: true
-                },
-                buttons: {
-                    closer: false,
-                    sticker: false
-                },
-                history: {
-                    history: false
-                }
-
-            }).get().on('pnotify.confirm', function () {
-
-                axios.delete('/api/sponsor/' + speakerId).then(function (response) {
-                    // JSON responses are automatically parsed.
-                    thisInstance.filterSpeakers(thisSelected, thisSearch);
-                    new PNotify({
-                        title: 'Success!',
-                        text: 'Deleted Successfully!',
-                        type: 'success'
-                    });
-                }).catch(function (error) {
-                    new PNotify({
-                        title: 'Error!',
-                        text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-                        type: 'error'
-                    });
-                    console.log(error);
-                });
-            }).on('pnotify.cancel', function () {});
-        },
-        filterSpeakers: function filterSpeakers(gridId, searchQuery) {
-            var _this = this;
-
-            var exludeG = '';
-            var searchQ = '';
-
-            if (gridId) {
-                exludeG = 'exlude=' + gridId;
-            }
-
-            if (searchQuery) {
-                searchQ = 'search=' + searchQuery;
-            }
-
-            axios.get('/api/sponsors?' + exludeG + '&' + searchQ).then(function (response) {
-                // JSON responses are automatically parsed.
-                _this.speakers = response.data;
-            }).catch(function (e) {
-                _this.errors.push(e);
-            });
-        },
-        getAllSpeakers: function getAllSpeakers() {
-            var _this2 = this;
-
-            axios.get('/api/sponsors').then(function (response) {
-                // JSON responses are automatically parsed.
-                _this2.speakers = response.data;
-            }).catch(function (e) {
-                _this2.errors.push(e);
-            });
-        }
-    },
-
-    // Fetches posts when the component is created.
-    created: function created() {
-        this.getAllSpeakers();
-
-        // async / await version (created() becomes async created())
-        //
-        // try {
-        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-        //   this.posts = response.data
-        // } catch (e) {
-        //   this.errors.push(e)
-        // }
-    }
-});
-
-/***/ }),
-
-/***/ 102:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "ul",
-    { staticClass: "SpeakersGrid" },
-    _vm._l(_vm.speakers, function(speaker) {
-      return _c(
-        "li",
-        { attrs: { id: speaker.id, "data-speakerId": speaker.id } },
-        [
-          _c("div", { staticClass: "GridImageContainer" }, [
-            _c("div", { staticClass: "IconContainer" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "AddToGrid",
-                  attrs: { title: "Add To Current Grid" },
-                  on: {
-                    click: function($event) {
-                      _vm.addSpeakerToGrid(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-plus-square",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "DeleteItem",
-                  attrs: { title: "Delete from Database" },
-                  on: {
-                    click: function($event) {
-                      _vm.deleteFromDatabase(speaker.id)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-trash",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "GridOverlay" }, [
-              _c("h2", { staticClass: "SliphoverHeadline" }, [
-                _vm._v(_vm._s(speaker.company_name))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "Square GridItem",
-              attrs: {
-                alt: speaker.full_name,
-                src: "/storage/sponsors/colored/" + speaker.logo_url
-              }
-            })
-          ])
-        ]
-      )
-    })
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-a311bfbe", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 11:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -756,7 +1075,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 12:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
@@ -2304,325 +2623,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
 	return Sortable;
 });
 
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(10)
-/* template */
-var __vue_template__ = __webpack_require__(11)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/admin/js/components/GridComponent.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-29339320", Component.options)
-  } else {
-    hotAPI.reload("data-v-29339320", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 98:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(99);
-
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sortablejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sortablejs__);
-
-Vue.component('speakers-all', __webpack_require__(100));
-
-Vue.component('grid-controller', __webpack_require__(9));
-
-
-
-Vue.directive('sortable', {
-	inserted: function inserted(el, binding) {
-		var sortable = new __WEBPACK_IMPORTED_MODULE_0_sortablejs___default.a(el, binding.value || {});
-	}
-});
-
-var spVue = new Vue({
-	el: '#PageContainer',
-
-	data: {
-		speakers: [],
-		selected: null,
-		selectedName: '',
-		speakerSearch: '',
-		speakerAll: '',
-		event: null,
-		GridType: 2,
-		sortableOptions: {
-			animation: 150,
-			forceFallback: false,
-			// Changed sorting within list
-			onUpdate: function onUpdate( /**Event*/evt) {
-
-				var new_item_id = evt.item.dataset.speakerid;
-				var new_item_order = evt.newIndex;
-				var old_item_order = evt.oldIndex;
-				var old_item_id = $("#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
-				var gridId = $("#SelectSpeakerGrid").val();
-
-				axios.patch('/api/sponsorgrid/' + gridId + '/' + old_item_id, {
-					order_number: old_item_order
-				}).then(function (response) {
-					console.log(response);
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-
-				axios.patch('/api/sponsorgrid/' + gridId + '/' + new_item_id, {
-					order_number: new_item_order
-				}).then(function (response) {
-					console.log(response);
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-		//Image Variables
-		allowableTypes: ['jpg', 'jpeg', 'png', 'gif'],
-		maximumSize: 5000000,
-		selectedImage: null,
-		image: null,
-		imgPrev: '',
-		imgTempText: 'Drag your files here or click in this area.'
-
-	},
-
-	methods: {
-
-		//Function that triggers when a grid is selected.
-		//The function gets the id of the grid from the Grid Child component
-		//With an axios request we get the content of the grid and display it
-		showGrid: function showGrid(event) {
-			var _this = this;
-
-			if (event[0]) {
-				this.selected = event[0];
-				this.selectedName = event[1];
-			}
-
-			axios.get('/api/sponsorgrid/' + this.selected).then(function (response) {
-				return _this.speakers = response.data;
-			});
-
-			this.speakerAll = this.$refs.allSpeakerGrid;
-			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
-		},
-
-
-		//Attach a speaker to the selected grid
-		addToGrid: function addToGrid(speakerId) {
-
-			if (!this.selected) {
-				new PNotify({
-					title: 'Error!',
-					text: 'Please select a grid first!',
-					type: 'error'
-				});
-			} else {
-
-				axios.post('/api/sponsorgrid/' + this.selected, {
-					speaker_id: speakerId
-				}).then(function (response) {
-					new PNotify({
-						title: 'Success!',
-						text: 'Added to Grid!',
-						type: 'success'
-					});
-					spVue.showGrid('');
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-
-		//Remove a speaker from the selected grid	
-		removeFromGrid: function removeFromGrid(speakerId) {
-
-			if (!this.selected) {
-				alert('No Grid is selected!');
-			} else {
-
-				axios.delete('/api/sponsorgriditem/' + this.selected + '/' + speakerId, {}).then(function (response) {
-					spVue.showGrid('');
-					new PNotify({
-						title: 'Success!',
-						text: 'Removed from Grid!',
-						type: 'success'
-					});
-				}).catch(function (error) {
-					new PNotify({
-						title: 'Error!',
-						text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-						type: 'error'
-					});
-					console.log(error);
-				});
-			}
-		},
-
-
-		//Filter speakers by the filter field's value and ofc by the selected grid
-		//We don't want to show speakers in the "all speakers" section
-		//who is also in the selected grid.
-
-		filterSpeakers: function filterSpeakers() {
-			this.speakerAll = this.$refs.allSpeakerGrid;
-
-			this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
-		},
-
-
-		//Create a new Speaker	
-		formSubmit: function formSubmit($event) {
-			var ref = this.$refs.allSpeakerGrid;
-			var selectedGr = this.selected;
-			var SearchVar = this.speakerSearch;
-			// create a form
-			var form = new FormData();
-			form.append('speaker_img', this.selectedImage);
-			form.append('first_name', $event.target.first_name.value);
-			form.append('last_name', $event.target.last_name.value);
-			form.append('job_title', $event.target.job_title.value);
-			form.append('company', $event.target.company.value);
-			form.append('facebook', $event.target.facebook.value);
-			form.append('twitter', $event.target.twitter.value);
-			form.append('linkedin', $event.target.linkedin.value);
-			// submit the image			
-
-			var config = {
-				headers: { 'content-type': 'multipart/form-data' }
-			};
-
-			axios.post('/api/speakers', form, config).then(function (response) {
-				document.getElementById("NewSpeakerForm").reset();
-				document.getElementById("speakerPrevImg").src = "";
-				document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';
-				new PNotify({
-					title: 'Success!',
-					text: 'Speaker Saved!',
-					type: 'success'
-				});
-
-				ref.filterSpeakers(selectedGr, SearchVar);
-			}).catch(function (error) {
-				new PNotify({
-					title: 'Error!',
-					text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
-					type: 'error'
-				});
-				console.log(error);
-			});
-		},
-
-
-		//Image Functions
-		//We use this for the preview image for the image uplod in the "create new speaker" modal
-		validate: function validate(image) {
-			if (!this.allowableTypes.includes(image.name.split(".").pop().toLowerCase())) {
-				alert('Sorry you can only upload ' + this.allowableTypes.join("|").toUpperCase() + ' files.');
-				return false;
-			}
-
-			if (image.size > this.maximumSize) {
-				alert("Sorry File size exceeding from 5 Mb");
-				return false;
-			}
-
-			return true;
-		},
-		onImageError: function onImageError(err) {
-			console.log(err, 'do something with error');
-		},
-		changeImage: function changeImage($event) {
-
-			this.selectedImage = $event.target.files[0];
-			//validate the image
-			if (!this.validate(this.selectedImage)) return;
-
-			this.createImage();
-		},
-		createImage: function createImage() {
-			var _this2 = this;
-
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				_this2.image = e.target.result;
-				_this2.imgPrev = e.target.result;
-			};
-			reader.readAsDataURL(this.selectedImage);
-			this.imgTempText = '';
-		}
-	}
-
-	/*mounted(){
- 
- 	
- }*/
-
-});
 
 /***/ })
 

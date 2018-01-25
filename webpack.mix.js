@@ -24,6 +24,7 @@ mix.sass('resources/assets/scss/amsterdam/flipclock.scss', 'public/css/amsterdam
 /******** Global **************/   
 mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
    .sass('resources/assets/scss/global/about.scss', 'public/css/global')
+.sass('resources/assets/scss/header-footer.scss', 'public/css')
    .sass('resources/assets/scss/global/startup.scss', 'public/css/global')
    .sass('resources/assets/scss/global/holiday.scss', 'public/css/global').options({
          processCssUrls: false,
@@ -35,9 +36,9 @@ mix.sass('resources/assets/scss/global/press.scss', 'public/css/global')
       })
    .version(); 
  
+ mix.js('resources/assets/js/agenda.js', 'public/js') 
 /******** Amsterdam *********/  
-mix.js('resources/assets/js/amsterdam/agenda.js', 'public/js/amsterdam') 
-   .js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
+mix.js('resources/assets/js/amsterdam/flipclock.min.js', 'public/js/amsterdam')
    .js('resources/assets/js/amsterdam/main.js', 'public/js/amsterdam');
    
 
@@ -114,6 +115,7 @@ mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .sass('resources/assets/scss/london/tickets_old.scss', 'public/css/london')
    .sass('resources/assets/scss/london/pdfs.scss', 'public/css/london')  
    .sass('resources/assets/scss/london/agenda.scss', 'public/css/london')
+   .sass('resources/assets/scss/london/agenda_beta.scss', 'public/css/london')   
    .sass('resources/assets/scss/london/agenda-v2.scss', 'public/css/london')     
    .options({
          processCssUrls: false,
