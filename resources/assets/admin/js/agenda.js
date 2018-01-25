@@ -332,6 +332,10 @@ const spVue = new Vue({
           this.sessionedit.endformatted = this.sessionedit.end_time.month+'/'+this.sessionedit.end_time.day+'/'+this.sessionedit.end_time.year+' '+this.sessionedit.end_time.time+':00';
          
  		jQuery("#session_name").attr('value',this.sessionedit.session_title);
+		
+ 		jQuery('input[name="startTime"]').val(this.sessionedit.startformatted);
+ 		jQuery('input[name="endTime"]').val(this.sessionedit.endformatted);		
+		
  		jQuery("#startTime").attr('value',this.sessionedit.startformatted);
  		jQuery("#endTime").attr('value',this.sessionedit.endformatted);
 
