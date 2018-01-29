@@ -22,7 +22,7 @@
 											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
-											<li><a href="https://unleash.swoogo.com/unleashlondon" target="_blank">Tickets</a></li>
+											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
 										</ul>
 									</li>
 									<li class="lasvegas" title="LAS VEGAS">

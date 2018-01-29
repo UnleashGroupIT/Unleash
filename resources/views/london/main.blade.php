@@ -123,7 +123,7 @@
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
 				<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
-				<li><a href="https://unleash.swoogo.com/unleashlondon" target="_blank">TICKETS</a></li>
+				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 			</ul>
 		</nav>
 		

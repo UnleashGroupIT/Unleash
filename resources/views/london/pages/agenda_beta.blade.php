@@ -2,7 +2,7 @@
 
 @section('meta')
  <meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018.">
- <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+ 
 	  <!-- Open Graph data -->
 	<meta property="og:site_name" content="UNLEASH London - Agenda"/>
 	<meta property="og:title" content="UNLEASH London - Agenda"/>
@@ -56,7 +56,7 @@
 			</div>
 
 			<div id="SearchBarContainer">
-				<input v-model="searchbar" class="SearchBar" type="text" id="SessionSearchBar" name="SessionSearchBar">
+				<input v-model="searchbar" class="SearchBar" type="text" id="SessionSearchBar" name="SessionSearchBar" placeholder="Search ...">
 			</div>
 			
 			<div id="SessionContentSectionContainer">
