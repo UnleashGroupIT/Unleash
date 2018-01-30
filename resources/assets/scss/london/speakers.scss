@@ -32,23 +32,46 @@ header {
       background-position: top left; } }
 
 .wrp {
-  max-width: 1060px;
+  max-width: 1030px;
   margin: 0 auto;
-  padding: 0 1em; }
-  @media (min-width: 120em) {
-    .wrp {
-      max-width: 53vw; } }
+  padding: 0 1em;
+}
+
+@media (min-width: 120em) {
+  .wrp {
+    max-width: 53vw;
+  }
+}
 
 section.one .wrp {
-  padding: 2em;
-  padding-bottom: 3em;
-  color: #fff; }
+  padding: 2em 1em;
+  color: #fff;
   @media (min-width: 40em) {
-    section.one .wrp {
-      padding: 4em 3em; } }
-  section.one .wrp button {
-    margin: 1em 0;
-    margin-bottom: 0; }
+    padding: 4em 3em;
+  }
+
+  strong{
+    font-weight: bold;
+  }
+}
+
+section.one .wrp button {
+  margin: 2em 0;
+  margin-bottom: 0;
+}
+
+section.one.futureofwork{
+  background-color:$topaz;
+  h2{
+    color:$dark-green;
+    font-size: 4rem;
+    font-family: "Anton","museo-sans",sans-serif;
+  }
+  @media (min-width: 40em) {
+    text-align: center;
+  }
+}
+
 @media (min-width: 40em) {
   section.one.futureofwork {
     text-align: center; } }
@@ -117,170 +140,67 @@ section.two {
     @media (min-width: 75em) {
       section.two.expo {
         flex-direction: row; } }
-  section.two .wrppr {
+
+
+section.two .wrppr {
   width: 100%;
   min-height: 500px;
-  box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7)
-}
-
-@media (min-width: 75em) {
-  section.two .wrppr {
+  @media (min-width: 75em) {
     width: 50%;
   }
-}
 
-section.two.keynote.arianna .BettsOxford {
-  padding: 0 1.4em;
-  color:#fff;
-  font-size: 1.2rem;
-  margin: 1em 0;
-}
+  .img-bg{
+    height: 100%;
 
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3.1vw;
-
-  }
-}
-
-section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-    @media (min-width: 100em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
+    &.jonas{
+      background:url("../../gfx/london/v2-site/jonas-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
     }
   }
-
-section.two .fix-bg.betts {
-  background-image: url("../../gfx/london/betts-mobile-bg.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center;
 }
-
-@media (min-width: 40em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/london/betts-tablet-bg.png");
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/london/betts-bg.png");
-    background-position: top left;
-  }
-}
-  section.two.testimonial {
+  
+section.two.testimonial {
     flex-direction: column-reverse; }
     @media (min-width: 75em) {
       section.two.testimonial {
         flex-direction: row; } }
-  section.two.keynote.arianna .content {
-    background-color: #33cc33;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 3em; }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .content {
-        padding-bottom: 2.55vw; } }
-  section.two.keynote.arianna .h4wrp {
-    display: flex;
-    margin-bottom: 1em; }
-    section.two.keynote.arianna .h4wrp > div {
-      display: flex;
-      margin-left: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp > div {
-          margin-left: 3.5em; } }
-    section.two.keynote.arianna .h4wrp .U-logo {
-      margin: auto;
-      margin-right: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp .U-logo {
-          margin: auto;
-          margin-right: 4em; } }
-  section.two.keynote.arianna p {
-    color: #fff; }
-  section.two.keynote.arianna h2 {
-    padding: .2em;
-    padding-left: 1em;
-    padding-right: .5em;
-    color: #fff;
-    background-color: #083643;
-    display: inline-block; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h2 {
-        padding-left: 2em; } }
-  section.two.keynote.arianna h4 {
-    color: #fff;
-    margin: auto;
-    font-size: 1rem;
-    padding: 0 1em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h4 {
-        font-size: 1.3rem;
-        padding: 0 2em; } }
-  section.two.keynote.arianna h3 {
-    color: #fff;
-    margin-left: 3em;
-    margin-top: 2em; }
-  section.two.keynote.arianna .pdg {
-    padding: 0 2em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 4em; } }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 3.4vw; } }
-  section.two.keynote.arianna .strn {
-    display: block;
-    font-weight: 600;
-    margin: .5em 0; }
-  section.two.keynote.arianna .schedule-wrp {
-    width: 84%;
-    margin: 0 auto; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .schedule-wrp {
-        margin-top: auto;
-        margin-left: 4em; } }
-    section.two.keynote.arianna .schedule-wrp .schedule {
-      display: flex;
-      margin-bottom: 1em; }
-      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
-        margin: auto 0; }
-      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
-        margin-left: 1em;
-        text-transform: uppercase; }
-        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
-          font-weight: 600; }
-  section.two.keynote.arianna button {
-    margin-left: 0;
-    color: #33cc33; }
-    section.two.keynote.arianna button:hover {
-      color: #fff; }
+
+
+  section.two.keynote .content {
+  background-color: $butter;
+}
+
+section.two.keynote h5 {
+  margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+  font-weight:100;
+  letter-spacing:0;
+}
+
+section.two.keynote h2 {
+  font-size: 4rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
+}
+
+
+section.two.keynote .schedule-wrp {
+  button{
+    margin: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  section.two.keynote .schedule-wrp {
+    margin-top: auto;
+  }
+}
+
+
+
+
   section.two.keynote.second {
     flex-direction: column-reverse; }
     @media (min-width: 75em) {
@@ -312,73 +232,43 @@ section.two .fix-bg.betts {
     margin-bottom: 0; }
 
 section.one-cntr {
-  background: url("../../gfx/london/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  background-color:$butter;
   text-align: center;
-  padding: 2em 0; }
-  section.one-cntr.counter {
-    background: url("../../gfx/london/counter-bg.jpg");
-    background-size: cover;
-    background-position: center; }
-  @media (min-width: 75em) {
-    section.one-cntr {
-      padding: 4em 0; } }
-  section.one-cntr p, section.one-cntr h2 {
-    color: #fff;
-    line-height: 2em; }
-  section.one-cntr h2 {
-    display: inline-block;
-    position: relative;
-    background-color: #33cc33;
-    padding: .2em .5em;
-    line-height: 1; }
-    section.one-cntr h2::before, section.one-cntr h2::after {
-      position: absolute;
-      top: 3px; }
-    section.one-cntr h2::before {
-      content: url("../../gfx/london/left-sign.png");
-      left: -33px; }
-    section.one-cntr h2::after {
-      content: url("../../gfx/london/right-sign.png");
-      right: -33px; }
+  padding: 2em 0;
+}
+
+@media (min-width: 75em) {
+  section.one-cntr {
+    padding: 4em 0;
+  }
+}
+
+section.one-cntr h2{
+  font-size: 4rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
+}
+section.one-cntr p{
+  margin: 2em 0;
+}
+
+section.one-cntr button {
+  width: 90%;
+}
+
+@media (min-width: 40em) {
   section.one-cntr button {
-    margin: 1em;
-    margin-top: 2em;
-    width: 90%; }
-    @media (min-width: 40em) {
-      section.one-cntr button {
-        width: 205px; } }
-    @media (min-width: 120em) {
-      section.one-cntr button {
-        width: 10.7vw; } }
-    section.one-cntr button:hover {
-      background-color: transparent;
-      color: #fff;
-      border-color: #fff; }
-  section.one-cntr.counter .your-clock {
-    display: flex;
-    justify-content: center;
-    margin: 5em 0; }
-    @media (min-width: 120em) {
-      section.one-cntr.counter .your-clock {
-        margin: 2.8vw 0; } }
-  section.one-cntr.counter button {
-    margin-top: 0; }
-    @media (min-width: 45em) {
-      section.one-cntr.counter button {
-        margin: 0 2em; } }
-  section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
-    display: none; }
-  @media (min-width: 45em) {
-    section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
-      display: block; } }
-  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
-    display: none; }
-    @media (min-width: 45em) {
-      section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
-        display: block; } }
+    width: 205px;
+  }
+}
+
+@media (min-width: 120em) {
+  section.one-cntr button {
+    width: 10.7vw;
+  }
+}
 
 .testim {
   margin: 0 2em;
@@ -419,54 +309,92 @@ section.one-cntr {
   }
 
 section.map {
-  background: url("../../gfx/london/map-bg.jpg");
+ background: url("../../gfx/london/map-mobile-bg.jpg");
   background-size: cover;
-  background-position: center;
-  min-height: 600px;
-  display: flex; }
-  @media (min-width: 65em) {
-    section.map {
-      display: block; } }
-  section.map .content {
-    padding: 0 2em;
-    display: flex;
-    flex-wrap: wrap; }
-    @media (min-width: 65em) {
-      section.map .content {
-        max-width: 950px;
-        flex-wrap: nowrap;
-        padding: 6em 4em; } }
-    @media (min-width: 75em) {
-      section.map .content {
-        max-width: 49.5vw;
-        padding: 5vw 4vw; } }
-  section.map .mapcont-wrp {
-    padding: 2em;
-    background-color: #fff;
-    box-shadow: 3px 3px 15px #999;
-    margin-top: auto;
-    max-width: 400px; }
-    section.map .mapcont-wrp p {
-      margin: 1em 0; }
-    @media (min-width: 95em) {
-      section.map .mapcont-wrp {
-        padding: 3.3vw;
-        max-width: 21vw;
-        width: 50%;
-        padding: 4em; } }
-    section.map .mapcont-wrp button {
-      margin-top: 1em; }
-  section.map .map-pic {
-    width: 100%;
-    background: url("../../gfx/london/venue.jpg");
+  background-position: top;
+  display: flex;
+  @media (min-width: 600px) {
+    background: url("../../gfx/london/map-bg.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: 3px 3px 15px #999;
-    display: none; }
-    @media (min-width: 95em) {
-      section.map .map-pic {
-        width: 50%;
-        display: block; } }
+  }
+}
+
+@media (min-width: 65em) {
+  section.map {
+    display: block;
+  }
+}
+
+section.map .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      height: 500px;
+}
+
+@media (min-width: 65em) {
+  section.map .content {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 75em) {
+  section.map .content {
+    max-width: 49.5vw;
+  }
+}
+
+section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background-color: $topaz;
+  -webkit-box-shadow: 3px 3px 15px #999;
+          box-shadow: 3px 3px 15px #999;
+}
+
+section.map .mapcont-wrp p {
+  margin: 1em 0;
+}
+
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
+@media (min-width: 95em) {
+  section.map .mapcont-wrp {
+    width: 50%;
+    padding: 4em;
+  }
+}
+
+section.map .mapcont-wrp button {
+  margin-top: 1em;
+}
+
+section.map .map-pic {
+  width: 100%;
+  background: url("../../gfx/london/v2-site/venue-sec-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+@media (min-width: 95em) {
+  section.map .map-pic {
+    width: 50%;
+    display: block;
+  }
+}
 
 section.sponsors {
   min-height: 300px;

@@ -99,6 +99,7 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
 /******** London *********/
 mix.js('resources/assets/js/london/agenda.js', 'public/js/london') 
 .js('resources/assets/js/london/flipclock.min.js', 'public/js/london')
+.js('resources/assets/js/london/responsiveslides.js', 'public/js/london')
 .js('resources/assets/js/london/main.js', 'public/js/london');
 
 mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')

@@ -204,14 +204,13 @@ section.two {
 section.two .wrppr {
     width: 100%;
     min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+}
     @media (min-width: 75em) {
       section.two .wrppr {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
     height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
     background-size:cover;
     background-repeat:no-repeat;
@@ -281,136 +280,78 @@ section.two.clients {
   }
 }
 
-section.two.keynote.arianna{
-  flex-direction: column-reverse;
-  @media (min-width: 75em) {
-    flex-direction: row;
-  }
-
-  &.flights{
-    display: none;
-  }
-
+section.two.keynote.flights{
+  display:none;
 }
 
-section.two.keynote.arianna .content {
-  background-color: #33cc33;
-  padding-left: 0;
-  padding-right: 0;
-  @media (min-width: 75em) {
-    padding-bottom: 3em;
+section.two.keynote .content {
+  background-color: $butter;
+}
+
+section.two.keynote h5 {
+  margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+}
+
+section.two.keynote h2 {
+  font-size: 4rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
+}
+
+section.two.keynote span {
+  display:block
+}
+
+
+section.two.keynote .schedule-wrp {
+  button{
+    margin: 0;
   }
 }
 
-section.two.keynote.arianna .mic-logo{
-  margin-left: 5px;
+@media (min-width: 75em) {
+  section.two.keynote .schedule-wrp {
+    margin-top: auto;
+  }
+}
+
+section.two .content {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.two .content .content-wrap {
+  margin: 2em 0;
+  margin-top: 0;
+  p{
+    margin-bottom: 2em;
+  }
 }
 
 @media (min-width: 120em) {
-  section.two.keynote.arianna .content {
-    padding-bottom: 2.55vw;
-  }
-}
-
-section.two.keynote.arianna .btm .h4wrp{
-  display: block;
-  margin: 0;
-  @media (min-width: 40em) {
-    display: flex;
-  }
-}
-
-section.two.keynote.arianna .h4wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1em;
-  .white-btn{
-    margin: .5em 0;
-    @media (min-width: 40em) {
-      margin: 0;
-      margin-right: 1em;
-    }
-  }
-}
-
-section.two.keynote.arianna .h4wrp > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.5em;
-  }
-}
-
-section.two.keynote.arianna .h4wrp .U-logo {
-  margin: auto;
-  margin-right: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp .U-logo {
-    margin: auto;
-    margin-right: 4em;
-  }
-}
-
-section.two.keynote.arianna p {
-  color: #fff;
-}
-
-section.two.keynote.arianna h2 {
-  padding: .2em;
-  padding-left: 1em;
-  padding-right: .5em;
-  color: #fff;
-  background-color: #083643;
-  display: inline-block;
-  //font-size: 1.2em;
-  &.aloft{
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 512px) {
-    font-size: 1.9rem;
+  section.two .content .content-wrap {
+    margin: 1.68vw 0;
   }
 }
 
 @media (min-width: 75em) {
-  section.two.keynote.arianna h2 {
-    padding-left: 2em;
+  section.two .content {
+    width: 50%;
+    padding: 2em 4em;
   }
 }
 
-section.two.keynote.arianna h4 {
-  color: #fff;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0 1em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna h4 {
-    font-size: 1.3rem;
-    padding: 0 2em;
-  }
-}
-
-section.two.keynote.arianna .pdg {
-  padding: 0 2em;
-  h3{
-    color:#fff;
-  }
-  span{
-    text-transform: uppercase;
-    font-weight: 600;
-    display: block;
-    margin: .5em 0;
-    font-size: 100%;
+@media (min-width: 120em) {
+  section.two .content {
+    padding: 1.68vw 3.4vw;
   }
 }
 
@@ -440,17 +381,7 @@ p.code{
 
 section.two.keynote.arianna .btm{margin-top:auto}
 
-@media (min-width: 75em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 4em;
-  }
-}
 
-@media (min-width: 120em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 3.1vw;
-  }
-}
 
 section.two .content {
   padding: 2em;
@@ -501,16 +432,16 @@ section.two button {
 }
 
 section.one-cntr {
-  background: url("../../gfx/london/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  background-color:$butter;
   text-align: center;
   padding: 2em 0;
+
   &.vhcls{
     background: url("../../gfx/london/travel-vehicles-bg.jpg");
     background-size: cover;
     background-position: center;
+    p{margin-top:0;}
+    h2{color:$white;}
   }
 }
 
@@ -520,41 +451,18 @@ section.one-cntr {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
+section.one-cntr h2{
+  font-size: 4rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
 }
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #33cc33;
-  padding: .2em .5em;
-  line-height: 1;
-  font-size: 1.6rem;
-  @media (min-width: 40em) {
-    font-size: 1.9rem;
-  }
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/london/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/london/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -570,11 +478,6 @@ section.one-cntr button {
   }
 }
 
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
 
 section.map {
   min-height: 600px;
@@ -596,22 +499,22 @@ section.map {
 }
 
 section.map .content {
-  padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position:absolute;
-  bottom:0;
-  width: 90%;
+      height: 500px;
+      position:absolute;
+      bottom:0;
+      width:90%;
+}
+@media (min-width: 40em) {
+  width:50%;
 }
 
 @media (min-width: 65em) {
   section.map .content {
-    max-width: 950px;
-    top: 20%;
-    bottom:auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -624,22 +527,27 @@ section.map .content {
 }
 
 section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
-  background-color: #fff;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
-  margin-top: auto;
-  max-width: 400px;
+  background-color: $topaz;
 }
 
 section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
 @media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 3.3vw;
-    max-width: 21vw;
     width: 50%;
     padding: 4em;
   }
@@ -651,11 +559,9 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/london/venue.jpg");
+  background: url("../../gfx/london/v2-site/venue-sec-bg.jpg");
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
   display: none;
 }
 
@@ -773,7 +679,7 @@ section.hotels{
   }
 
   .speakers-wrap .speaker .dtls-wrap p.code{
-    color: $lon;
+    color: $topaz;
     margin:1em 0;
     font-size: 13px;
     padding: 0;

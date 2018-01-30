@@ -10,7 +10,7 @@
 @import 'components/speakergrid';
 @import 'components/common';
 
-$lon: #33cc33;
+$lon: $topaz;
 
 header {
   height: 92vh;
@@ -65,7 +65,7 @@ section.one .wrp {
 }
 
 section.one .wrp h2 {
-  color: #33cc33;
+  color: $topaz;
 }
 
 section.one .wrp button {
@@ -85,14 +85,13 @@ section.two {
 section.two .wrppr {
     width: 100%;
     min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+}
     @media (min-width: 75em) {
       section.two .wrppr {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
     height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
     background-size:cover;
     background-repeat:no-repeat;
@@ -249,10 +248,7 @@ section.two a{
 }
 
 section.one-cntr {
-  background: url("../../gfx/upcoming-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  background-color:$butter;
   text-align: center;
   padding: 2em 0;
 }
@@ -263,42 +259,18 @@ section.one-cntr {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
+section.one-cntr h2{
+  font-size: 4rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
 }
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #33cc33;
-  padding:.5em;
-  font-size: 22px;
-  line-height: 1;
-  @media (min-width: 40em) {
-    padding:.2em .5em;
-    font-size: 1.9rem;
-  }
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/london/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/london/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -314,13 +286,10 @@ section.one-cntr button {
   }
 }
 
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
 #viki{
+  background:url("../../gfx/upcoming-bg.jpg");
+  background-size:cover;
+  background-position:center;
   padding:2em 4em;
 	#viki-prof{
 		width:150px;
@@ -328,10 +297,16 @@ section.one-cntr button:hover {
 	}
 	span{
 		font-size: 13px;
+    color:$white;
     @media (min-width: 125em) {
       font-size: .7vw;
     }
 	}
+  p{
+    color:$white;
+    margin:0;
+
+  }
 	p.testim{
 		margin-top: 1em;
 		position:relative;

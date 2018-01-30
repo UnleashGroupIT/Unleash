@@ -146,7 +146,8 @@
 	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
 	})();
 </script>
-<!-- END LiveChat code -->  
+<!-- END LiveChat code -->
+    @include('global.components.trackers')  
 </body>
 @yield('footerscripts')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/amsterdam/flipclock.css') }}">

@@ -44,7 +44,7 @@
 				<p>In 2018, UNLEASH will scale significantly to become the world’s leading marketplace and community on the future of the workplace and technology. #UNLEASH18</p>
 				<p>As part of the volunteer program, you will be granted a complementary conference ticket (actual value of GBP 1395,00), which gives you access to all of our sessions that you can visit during your free time. Volunteers will also receive a reference letter after completing the program.</p>
 			</div>
-			<button class="green-btn popup" data-popupdata="volunteer">Apply</button>
+			<button class="topaz-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>
 	</section>
 
@@ -56,7 +56,7 @@
 				<p>The volunteer program includes the following task opportunities for participants: coordinating catering, registration assistance, traffic coordination, delegate bag distribution, seating, room monitoring and general assistance of the operations team.</p>
 				<p>We can only accept applications with full availability between 19-21 March 2018. Volunteers’ travel and accommodation costs are not covered.</p>
 			</div>
-			<button class="green-btn popup" data-popupdata="volunteer">Apply</button>
+			<button class="topaz-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg vol-2"></div>
@@ -68,7 +68,7 @@
 		<div class="wrp">
 			<h2>APPLY as VOLUNTEER</h2>
 			<p>We can only accept applications with full availability between 19-21 March 2018.<br />We can only welcome applications from candidates based in London UK,<br />unless all accommodation and travel costs are covered by the applicant.</p>
-			<button class="green-btn popup" data-popupdata="volunteer">Apply</button>
+			<button class="red-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>
 	</section>
 	<section class="two clients">

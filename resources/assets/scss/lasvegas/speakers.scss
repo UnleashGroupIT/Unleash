@@ -29,7 +29,7 @@ header {
       height: 55vh;
       background: url("../../gfx/lasvegas/speakers-bg.jpg") no-repeat #000;
       background-size: cover;
-      background-position: top left; } }
+      background-position: 0px 60px; } }
 
 .wrp {
   max-width: 1060px;
@@ -175,7 +175,7 @@ section.two .fix-bg {
   }
 
 section.two .fix-bg.betts {
-  background-image: url("../../gfx/lasvegas/betts-mobile-bg.png");
+  background-image: url("../../gfx/lasvegas/mo-mobile-bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
@@ -183,13 +183,13 @@ section.two .fix-bg.betts {
 
 @media (min-width: 40em) {
   section.two .fix-bg.betts {
-    background-image: url("../../gfx/lasvegas/betts-tablet-bg.png");
+    background-image: url("../../gfx/lasvegas/mo-tablet-bg.jpg");
   }
 }
 
 @media (min-width: 75em) {
   section.two .fix-bg.betts {
-    background-image: url("../../gfx/lasvegas/betts-bg.png");
+    background-image: url("../../gfx/lasvegas/mo-bg.jpg");
     background-position: top left;
   }
 }
@@ -261,7 +261,12 @@ section.two .fix-bg.betts {
     margin: .5em 0; }
   section.two.keynote.arianna .schedule-wrp {
     width: 84%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    @media (min-width: 480px) {
+      width:auto;
+      margin-left:2em;
+    }
+  }
     @media (min-width: 75em) {
       section.two.keynote.arianna .schedule-wrp {
         margin-top: auto;

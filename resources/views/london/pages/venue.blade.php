@@ -42,7 +42,7 @@
 				<h2>ExCel - London</h2>
 				<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier. Just a short ride by metro or car takes you to the heart of London, a leading global city, world cultural capital and leading financial center has been measured as the world’s most visited capital city. </p>
 			</div>
-			<a href="https://www.excel.london/" target="_blank"><button class="green-btn">Learn More</button></a>
+			<a href="https://www.excel.london/" target="_blank"><button class="topaz-btn">Learn More</button></a>
 		</div>
 	</section>
 
@@ -52,7 +52,7 @@
 				<h2>London</h2>
 				<p>The world’s foremost financial center and a leading global and cultural capital, London is one of the world's most visited cities. London has something for everyone: from business and commerce through to history and culture, and it’s a great city for good times!</p>
 			</div>
-			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book Now</button></a>
+			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="topaz-btn">Book Now</button></a>
 		</div>
 		<div class="wrppr">
 			<div class="fix-bg floorplancitybg"></div>
@@ -67,18 +67,17 @@
 					<h2>Venue</h2>
 					<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier.</p>
 				</div>
-				<button class="green-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
+				<a href="https://www.excel.london/" target="_blank"><button class="darkgreen-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
 		</div>
 	</section>
-	<!--Map END-->
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology.</p>
-			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book Now</button></a>
+			<p>Unleash Your People!<br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
+			<a href="{{ route('london.tickets') }}" target="_blank"><button class="red-btn">Register Now</button></a>
 		</div>
 	</section>
 @endsection

@@ -5,8 +5,11 @@ $lon : #33cc33;
 $las : #e80f42;
 $dark-green : #083643;
 $darker-green : #062a34;
+$topaz : #4ad9d9;
+$butter : #e9f1df;
 
-$gray : #101010;
+$gray : #4d4d4f;
+$dark-gray : #101010;
 
 body.hide{
   overflow:hidden;
@@ -330,7 +333,7 @@ section.header-title {
                 background:$black;
               }
               &:nth-child(odd){
-                background:$gray;
+                background:$dark-gray;
               }
               a{
                 font-size: 13px;
@@ -611,7 +614,6 @@ section.header-title {
       background: $dark-green;
       margin:0;
       padding:0;
-      box-shadow:3px 7px 15px rgba(0, 0, 0, 0.2);
       &.fxd{
         position:fixed;
         top: 68px;
@@ -946,12 +948,12 @@ section.header-title {
 }
 
 @media (min-width: 30em) {
-    .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
+    .btn, .full-btn, .pink-btn, .topaz-btn, .orange-btn, .darkgreen-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
       width: 220px!important;
     }
 }
 @media (min-width: 125em) {
-    .btn, .full-btn, .pink-btn, .green-btn, .black-btn, .blue-btn, .red-btn, .amsblue-btn, .white-btn, .trans-btn {
+    .btn, .full-btn, .pink-btn, .topaz-btn, .orange-btn, .darkgreen-btn, .green-btn, .black-btn, .blue-btn, .amsblue-btn, .red-btn, .white-btn, .trans-btn {
       width: 11.5vw!important;
     }
 }

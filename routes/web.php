@@ -300,17 +300,17 @@ Route::get('/america/index', 'MainPageController@index')->name('lasvegas.index')
 
 //Route::get('/america/speakers', 'SpeakersController@index')->name('lasvegas.speakers');
 
-//Route::get('/america/speaker', 'SpeakersController@speaker');
+Route::get('/america/speaker', 'SpeakersController@index');
 
-Route::get('/america/sptest', 'SpeakersController@index');
+Route::get('/america/speakers', 'SpeakersController@index')->name('lasvegas.speakers');
 
-Route::get('/america/speaker', function () {
+/*Route::get('/america/speaker', function () {
     return redirect('/america/index#spkrgrd');
-});
+});*/
 
-Route::get('/america/speakers', function () {
+/*Route::get('/america/speakers', function () {
     return redirect('/america/index#spkrgrd');
-})->name('lasvegas.speakers');
+})->name('lasvegas.speakers');*/
 
 Route::get('/america/speaker/{speakerId}', 'SpeakersController@speaker')->name('lasvegas.speaker');
 

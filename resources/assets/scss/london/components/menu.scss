@@ -1,4 +1,4 @@
-$lon : #33cc33;
+$lon : $topaz;
 
 #desktop-menu .menu-ul li a:hover{
   color:$lon;
@@ -9,7 +9,7 @@ $lon : #33cc33;
 }
 
 #desktop-menu .menu-ul li.more > a:hover::after{
-    background: url(../../gfx/arrow-down-green.png);
+    background: url(../../gfx/arrow-down-topaz.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -34,11 +34,7 @@ $lon : #33cc33;
   }
 }
 
-// TAGS COLOR
-
 h2,h4{
-  color: $lon;
+  color: $topaz;
 }
-.white-btn{
-  color: $lon;
-}
+

@@ -74,14 +74,25 @@
 	<!--Keynote-->
 	<section class="two keynote arianna">
 		<div class="wrppr">
-			<div class="fix-bg keynote"></div>
+			<div class="fix-bg betts"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-
-				<h2>America is the world’s supreme entrepreneurial hotspot...</h2>
-				<div class="h4wrp"><img class="U-logo" src="{{ URL::asset('gfx/lasvegas/U.png') }}" alt="Unleash"></div>
-				<p class="pdg">...generating a seemingly endless supply of new technologies, new companies, people-to-people networks, new ideas and diversity. Following critical acclaim at the inaugural show in San Francisco, appetite for the greatest show on Future of Work and Technology, UNLEASH, will scale to +10,000 industry leaders from over 120 countries across all three shows in London, Amsterdam and this year’s big announcement: Las Vegas in 2018! Our U.S.-based event will be headquartered at the Aria Resort &amp; Casino Las Vegas for the next two years.</p>
+				<div class="h4wrp">
+					<div>
+						<img class="mic-logo" src="{{ URL::asset('gfx/lasvegas/mic.png') }}" alt="Keynote">
+						<h4 class="ky">Keynote in America</h4>
+					</div>
+					<img class="U-logo" src="{{ URL::asset('gfx/lasvegas/U.png') }}" alt="Unleash">
+				</div>
+				<h2>Mo Gawdat</h2>
+				<h5 class="BettsOxford"> Former Chief Business Officer - Google X</h5>
+				
+				<p class="pdg">With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
+				
+				<p class="pdg">For the first time ever, Mo Gawdat, Chief Business Officer for Google X, will take to the stage with strategies and ideas to help you on your way to building a successful innovation factory. In his step-by-step approach, he will deliver critical insight into what works and what can change the world.</p>
+							
+				
 
 			</div>
 			<div class="schedule-wrp">

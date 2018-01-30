@@ -61,7 +61,7 @@
 
 				<div class="speaker-more">
 					<p>{{ strip_tags( voku::cleanup($speaker->bio) ) }}</p>
-					<a href="#"><button class="blue-btn popup" data-popupdata="applytospeak">Apply To Speak</button></a>
+					<a href="#"><button class="topaz-btn popup" data-popupdata="applytospeak">Apply To Speak</button></a>
 				</div>
 				<a class="quit" href="
 				@if($speaker->referer)

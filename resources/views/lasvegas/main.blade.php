@@ -112,7 +112,7 @@
 		<nav id="sub" class="sub-menu">
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('lasvegas.index') }}">SHOW</a></li>
-				<li><a href="{{ route('lasvegas.index') }}#spkrgrd">SPEAKERS</a></li>
+				<li><a href="{{ route('lasvegas.speakers') }}">SPEAKERS</a></li>
 				<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">OUR CLIENTS</a></li>
 				<li><a href="{{ route('lasvegas.volunteer') }}">VOLUNTEER</a></li>
 				<li><a href="{{ route('lasvegas.travel') }}">VENUE &amp; TRAVEL</a></li>
@@ -150,6 +150,7 @@
 	})();
 </script>
 <!-- END LiveChat code -->  
+    @include('global.components.trackers')
 </body>
 @yield('footerscripts')
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">

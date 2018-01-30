@@ -368,6 +368,27 @@ section.two .wrppr {
   }
 }
 
+section.two.keynote.arianna .BettsOxford {
+  padding: 0 1.4em;
+  color:#fff;
+  font-size: 1.2rem;
+  margin: 1em 0;
+}
+
+
+@media (min-width: 75em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3em;
+  }
+}
+
+@media (min-width: 120em) {
+  section.two.keynote.arianna .BettsOxford {
+    padding: 0 3.1vw;
+
+  }
+}
+
 section.two .fix-bg {
     width: 100%;
     height: 500px;
@@ -392,22 +413,22 @@ section.two .fix-bg {
     }
   }
 
-section.two .fix-bg.keynote {
-  background-image: url("../../gfx/lasvegas/keynote-mobile-bg.png");
+section.two .fix-bg.betts {
+  background-image: url("../../gfx/lasvegas/mo-mobile-bg.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 @media (min-width: 40em) {
-  section.two .fix-bg.keynote {
-    background-image: url("../../gfx/lasvegas/keynote-tablet-bg.png");
-      background-attachment: fixed;
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/lasvegas/mo-tablet-bg.jpg");
   }
 }
 
 @media (min-width: 75em) {
-  section.two .fix-bg.keynote {
-    background-image: url("../../gfx/lasvegas/keynote-bg.png");
+  section.two .fix-bg.betts {
+    background-image: url("../../gfx/lasvegas/mo-bg.jpg");
     background-position: top left;
   }
 }
@@ -519,179 +540,97 @@ section.two.testimonial {
   }
 }
 
+
 section.two.keynote.arianna .content {
-  background-color: #f2385a;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 3em;
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .content {
-    padding-bottom: 2.55vw;
-  }
-}
-
-section.two.keynote.arianna .h4wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: inline-block;
-  margin-bottom: 1em;
-  vertical-align: top;
-}
-
-section.two.keynote.arianna .h4wrp > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.5em;
-  }
-}
-
-section.two.keynote.arianna .h4wrp .U-logo {
-  margin: auto;
-  margin-right: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp .U-logo {
-    margin: auto;
-    margin-right: 4em;
-  }
-}
-
-section.two.keynote.arianna p {
-  color: #fff;
-}
-
-section.two.keynote.arianna h2 {
-  padding: .2em;
-  padding-left: 1em;
-  padding-right: .5em;
-  color: #fff;
-  /*background-color: #083643;*/
-  display: inline-block;
-  width: 89%;
-}
-
-
-
-
-
-@media (min-width: 300px) {
+    background-color: #e80f42;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3em; }
+    @media (min-width: 120em) {
+      section.two.keynote.arianna .content {
+        padding-bottom: 2.55vw; } }
+  section.two.keynote.arianna .h4wrp {
+    display: flex;
+    margin-bottom: 1em; }
+    section.two.keynote.arianna .h4wrp > div {
+      display: flex;
+      margin-left: 2em; }
+      @media (min-width: 75em) {
+        section.two.keynote.arianna .h4wrp > div {
+          margin-left: 3.5em; } }
+    section.two.keynote.arianna .h4wrp .U-logo {
+      margin: auto;
+      margin-right: 2em; }
+      @media (min-width: 75em) {
+        section.two.keynote.arianna .h4wrp .U-logo {
+          margin: auto;
+          margin-right: 4em; } }
+  section.two.keynote.arianna p {
+    color: #fff; }
   section.two.keynote.arianna h2 {
-    font-size: 1.6rem;
+    padding: .2em;
     padding-left: 1em;
-	width: 79%
-  }
-}
-@media (min-width: 1200px) {
-  section.two.keynote.arianna h2 {
-    padding-left: 2em;
-	width: 79%
-  }
-}
-
-@media (min-width: 1800px) {
-  section.two.keynote.arianna h2 {
-    padding-left: 2em;
-	 width: 89%;
-  }
-}
-
-@media (min-width: 2000px) {
-  section.two.keynote.arianna h2 {
-    padding-left: 3.2vw;
-  }
-}
-
-section.two.keynote.arianna h4 {
-  color: #fff;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0 1em;
-}
-
-@media (min-width: 75em) {
+    padding-right: .5em;
+    color: #fff;
+    background-color: #083643;
+    display: inline-block; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna h2 {
+        padding-left: 2em; } }
   section.two.keynote.arianna h4 {
-    font-size: 1.3rem;
-    padding: 0 2em;
-  }
-}
-
-
-
-section.two.keynote.arianna .pdg {
-  padding: 0 2em;
-}
-
-@media (min-width: 75em) {
+    color: #fff;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0 1em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna h4 {
+        font-size: 1.3rem;
+        padding: 0 2em; } }
+  section.two.keynote.arianna h3 {
+    color: #fff;
+    margin-left: 3em;
+    margin-top: 2em; }
   section.two.keynote.arianna .pdg {
-    padding: 0 4em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 3.1vw;
-  }
-}
-
-section.two.keynote.arianna .strn {
-  display: block;
-  font-weight: 600;
-  margin: .5em 0;
-}
-
-section.two.keynote.arianna .mic-logo{
-  margin-left: 5px;
-}
-
-section.two.keynote.arianna .schedule-wrp {
-  width: 84%;
-  margin: 0 auto;
-}
-
-@media (min-width: 75em) {
+    padding: 0 2em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 4em; } }
+    @media (min-width: 120em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 3.4vw; } }
+  section.two.keynote.arianna .strn {
+    display: block;
+    font-weight: 600;
+    margin: .5em 0; }
   section.two.keynote.arianna .schedule-wrp {
-    margin-top: auto;
-    margin-left: 4em;
+    width: 84%;
+    margin: 0 auto;
+    @media (min-width: 480px) {
+      width:auto;
+      margin-left:2em;
+    }
   }
-}
+    @media (min-width: 75em) {
+      section.two.keynote.arianna .schedule-wrp {
+        margin-top: auto;
+        margin-left: 4em; } }
+    section.two.keynote.arianna .schedule-wrp .schedule {
+      display: flex;
+      margin-bottom: 1em; }
+      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
+        margin: auto 0; }
+      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
+        margin-left: 1em;
+        text-transform: uppercase; }
+        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
+          font-weight: 600; }
+  section.two.keynote.arianna button {
+    margin-left: 0;
+    color: #e80f42; }
+    section.two.keynote.arianna button:hover {
+      color: #fff; }
 
-section.two.keynote.arianna .schedule-wrp .schedule {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 2em;
-}
 
-section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
-  margin: auto 0;
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule .date-place {
-  margin-left: 1em;
-  text-transform: uppercase;
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
-  font-weight: 600;
-}
-
-section.two.keynote.arianna button {
-  margin-left: 0;
-  color: #f2385a;
-}
-
-section.two.keynote.arianna button:hover {
-  color: #fff;
-}
 
 section.two .content {
   padding: 2em;

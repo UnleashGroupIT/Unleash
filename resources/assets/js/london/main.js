@@ -1,5 +1,15 @@
 $(document).ready(function()	{
 
+	$(".rslides").responsiveSlides({
+		  nav: true,
+		  prevText: "<",   // String: Text for the "previous" button
+      	  nextText: ">",
+      	  pause: true,
+      	  timeout: 500000,
+      	  auto: false,
+      	  pager: true, 
+	});
+
 	if(window.location.hash == "signup") {
 		$("#joinourcommunity").css("display", "flex");
 	}
@@ -34,14 +44,6 @@ $(document).ready(function()	{
 		
 		}) // ICON CLICK END
 	})(); // FUNC END
-
-
-	//COUNTER
-
-	var clock = $('.your-clock').FlipClock(new Date("March 20, 2018 07:30:00"),{
-    	clockFace: 'DailyCounter',
-   		countdown: true
-   });
 
 
 	//SPONSORS

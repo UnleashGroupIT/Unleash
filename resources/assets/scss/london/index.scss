@@ -14,6 +14,7 @@ body {
 }
 
 header {
+  position:relative;
   min-height: 800px;
   overflow: hidden;
   display: -webkit-box;
@@ -33,8 +34,7 @@ header {
 
 @media (min-width: 40em) {
   header {
-    height: 100vh;
-    min-height: 780px;
+    min-height: auto;
     background: url("../../gfx/london/header-bg-desktop.jpg") no-repeat #000;
     background-size: cover;
     background-position: center;
@@ -43,7 +43,7 @@ header {
 
 @media (min-width: 75em) {
   header {
-    position: relative;
+  
   }
 }
 
@@ -109,24 +109,14 @@ header {
 }
 
 section.one .wrp {
-  padding: 2em;
-  padding-bottom: 3em;
+  padding: 2em 1em;
   color: #fff;
-  p{
-    font-size:14px;
-    @media (min-width: 120em) {
-      font-size:.76vw;
-    }
+  @media (min-width: 40em) {
+    padding: 4em 3em;
   }
 
   strong{
     font-weight: bold;
-  }
-}
-
-@media (min-width: 40em) {
-  section.one .wrp {
-    padding: 4em 3em;
   }
 }
 
@@ -135,19 +125,38 @@ section.one .wrp button {
   margin-bottom: 0;
 }
 
-@media (min-width: 40em) {
-  section.one.futureofwork {
+section.one.futureofwork{
+  background-color:$topaz;
+  h2{
+    color:$dark-green;
+    font-size: 4rem;
+    font-family: "Anton","museo-sans",sans-serif;
+  }
+  @media (min-width: 40em) {
     text-align: center;
   }
 }
 
-
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
+  background: rgba(0,0,0,0.95);
+  padding-top:2em;
+  @media (min-width: 40em) {
+    margin-top:-5px;
+  }
   @media (min-width: 75em) {
     margin-bottom: 2em;
   }
+
+  @media (min-width: 95em) {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    z-index: 5;
+    background:none;
+  }
+
   span{
     display: block;
     text-transform: uppercase;
@@ -271,139 +280,41 @@ section.two {
 section.two .wrppr {
   width: 100%;
   min-height: 500px;
-  box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7)
-}
-
-@media (min-width: 75em) {
-  section.two .wrppr {
+  @media (min-width: 75em) {
     width: 50%;
   }
-}
 
-section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
+  .img-bg{
+    height: 100%;
+
+    &.jonas{
+      background:url("../../gfx/london/v2-site/jonas-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
     }
-    @media (min-width: 75em) {
+
+    &.expo{
+      background:url("../../gfx/london/v2-site/expo-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+
+    &.clients{
+      background:url("../../gfx/london/v2-site/clients-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
+      @media (min-width: 75em) {
       height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
+      }
     }
-    @media (min-width: 100em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-  }
-
-section.two .fix-bg.betts {
-  background-image: url("../../gfx/london/betts-mobile-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/london/betts-tablet-bg.png");
-    background-attachment: fixed;
+    &.startup{
+      background:url("../../gfx/london/v2-site/startup-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }  
   }
 }
-
-@media (min-width: 75em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/london/betts-bg.png");
-    background-position: top left;
-  }
-}
-
-section.two .fix-bg.expobg {
-  background-image: url("../../gfx/london/expo-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.expobg {
-    background-image: url("../../gfx/london/expo-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.expobg {
-    background-image: url("../../gfx/london/expo-sec-bg.jpg");
-    background-position: top right;
-  }
-}
-
-section.two .fix-bg.clientsbg {
-  background-image: url("../../gfx/london/clients-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.clientsbg {
-    background-image: url("../../gfx/london/clients-sec-tablet-bg.jpg");
-     background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.clientsbg {
-    background-image: url("../../gfx/london/clients-sec-bg.jpg");
-    background-position: top left;
-  }
-}
-
-section.two .fix-bg.startupbg {
-  background-image: url("../../gfx/london/startup-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.startupbg {
-    background-image: url("../../gfx/london/startup-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.startupbg {
-    background-image: url("../../gfx/london/startup-sec-bg.jpg");
-    background-position: top right;
-  }
-}
-
-section.two .fix-bg.speakers.right {
-  background-image: url("../../gfx/london/speakers-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.speakers.right {
-    background-image: url("../../gfx/london/speakers-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.speakers.right {
-    background-image: url("../../gfx/london/speakers-sec-bg.jpg");
-    background-position: top right;
-  }
-}
-
 
 .two.clients{
   flex-direction: column-reverse;
@@ -412,172 +323,35 @@ section.two .fix-bg.speakers.right {
   }
 }
 
-section.two.keynote.arianna .content {
-  background-color: #33cc33;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 3em;
+section.two.keynote .content {
+  background-color: $butter;
 }
 
-section.two.keynote.arianna .mic-logo{
-  margin-left: 5px;
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .content {
-    padding-bottom: 2.55vw;
-  }
-}
-
-section.two.keynote.arianna .h4wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1em;
-}
-
-section.two.keynote.arianna .h4wrp > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.5em;
-  }
-}
-
-section.two.keynote.arianna .h4wrp .U-logo {
-  margin: auto;
-  margin-right: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp .U-logo {
-    margin: auto;
-    margin-right: 4em;
-  }
-}
-
-section.two.keynote.arianna p {
-  color: #fff;
-}
-
-section.two.keynote.arianna h2 {
-  padding: .2em;
-  padding-left: 1em;
-  padding-right: .5em;
-  color: #fff;
-  background-color: #083643;
-  display: inline-block;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna h2 {
-    padding-left: 2em;
-  }
-}
-
-section.two.keynote.arianna h4 {
-  color: #fff;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0 1em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna h4 {
-    font-size: 1.3rem;
-    padding: 0 2em;
-  }
-}
-
-section.two.keynote.arianna .pdg {
-  padding: 0 2em;
-  margin-bottom: 30px;
-}
-
-section.two.keynote.arianna .BettsOxford {
-  padding: 0 1.4em;
-  color:#fff;
-  font-size: 1.2rem;
+section.two.keynote h5 {
   margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+  font-weight:100;
+  letter-spacing:0;
+}
+
+section.two.keynote h2 {
+  font-size: 4rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
 }
 
 
-@media (min-width: 75em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3em;
+section.two.keynote .schedule-wrp {
+  button{
+    margin: 0;
   }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3.1vw;
-
-  }
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 4em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 3.1vw;
-    margin-bottom: 2vw;
-  }
-}
-
-section.two.keynote.arianna .strn {
-  display: block;
-  font-weight: 600;
-  margin: .5em 0;
-}
-
-section.two.keynote.arianna .schedule-wrp {
-  width: 84%;
-  margin: 0 auto;
 }
 
 @media (min-width: 75em) {
-  section.two.keynote.arianna .schedule-wrp {
+  section.two.keynote .schedule-wrp {
     margin-top: auto;
-    margin-left: 4em;
   }
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 2em;
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
-  margin: auto 0;
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule .date-place {
-  margin-left: 1em;
-  text-transform: uppercase;
-}
-
-section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
-  font-weight: 600;
-}
-
-section.two.keynote.arianna button {
-  margin-left: 0;
-  color: #33cc33;
-}
-
-section.two.keynote.arianna button:hover {
-  color: #fff;
 }
 
 section.two .content {
@@ -594,6 +368,9 @@ section.two .content {
 section.two .content .content-wrap {
   margin: 2em 0;
   margin-top: 0;
+  p{
+    margin-bottom: 2em;
+  }
 }
 
 @media (min-width: 120em) {
@@ -615,6 +392,10 @@ section.two .content .content-wrap {
   }
 }
 
+section.two h2{
+  color:$topaz;
+}
+
 section.two button {
   margin-top: auto;
 }
@@ -629,19 +410,222 @@ section.two.keynote button {
   margin-bottom: 0;
 }
 
-section.one-cntr {
-  background: url("../../gfx/london/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 2em 0;
+.speaker-highlights{
+  .highlights-wrp{
+    display: flex;
+    flex-wrap: wrap;
+     @media (min-width: 75em) {
+        min-height: 850px;
+      }
+    .hl-member{
+      position:relative;
+      &:after{
+          content: '';
+          width: 100%;
+          height: 100%;
+          background:rgba(0,0,0,0.2);
+          display: block;
+          position:absolute;
+          top: 0;
+          left: 0;
+      }
+
+      width: 50%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 500px) {
+        height: 250px;
+      }
+      @media (min-width: 600px) {
+        height: 300px;
+      }
+      @media (min-width: 700px) {
+        height: 350px;
+      }
+      @media (min-width: 800px) {
+        width: auto;
+        height: 200px;
+        flex-basis: 25%;
+      }
+      @media (min-width: 1000px) {
+        height: 250px;
+      }
+      @media (min-width: 75em) {
+        height: auto;
+      }
+
+      .member-wrp{
+        position:relative;
+        z-index: 2;
+        margin-top: auto;
+        padding:1.5em 1em;
+        @media (min-width: 75em) {
+          padding:1.5em 2em;
+        }
+
+        h2{
+          font-size: 3.5vw;
+          color:$white;
+          margin-bottom: 0;
+          @media (min-width: 800px) {
+            font-size: 2vw;
+          }
+          @media (min-width: 900px) {
+            font-size: 1.5vw;
+          }
+
+        }
+        h5{
+          margin:0;
+          color:$white;
+          font-size: 3vw;
+          display: none;
+          @media (min-width: 500px) {
+            font-size: 2.5vw;
+          }
+          @media (min-width: 800px) {
+            font-size: 1.5vw;
+          }
+          @media (min-width: 75em) {
+            font-size: 1vw;
+          }
+          @media (min-width: 95em) {
+            font-size: .7vw;
+            display: block;
+          }
+        }
+        h6{
+          color:$white;
+          font-weight:bold;
+          margin-top: 2px;
+          font-size: 3vw;
+          @media (min-width: 500px) {
+            font-size: 2.5vw;
+          }
+          @media (min-width: 800px) {
+            font-size: 1.5vw;
+          }
+          @media (min-width: 75em) {
+            font-size: 1vw;
+          }
+          @media (min-width: 95em) {
+            font-size: .7vw;
+          }
+        }
+      }
+
+
+      &.kristen-pressner{
+        background:url("../../gfx/london/v2-site/kristen-pressner.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.alexander-betts{
+        background:url("../../gfx/london/v2-site/alexander-betts.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.ana-segurado{
+        background:url("../../gfx/london/v2-site/ana-segurado.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.bruce-daisley{
+        background:url("../../gfx/london/v2-site/bruce-daisley.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.christian-illek{
+        background:url("../../gfx/london/v2-site/christian-illek.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.deb-lee{
+        background:url("../../gfx/london/v2-site/deb-lee.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.dk-bartley{
+        background:url("../../gfx/london/v2-site/dk-bartley.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.kim-wylie{
+        background:url("../../gfx/london/v2-site/kim-wylie.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+    }    
+  }
+  .highlight-text{
+    background-color:$las;
+    text-align: center;
+    padding:2em 1em;
+    padding-bottom:1em;
+    @media (min-width: 40em) {
+      padding:4em 1em;
+      padding-bottom:1em;
+    }
+
+    h2,h4,p{
+      color:$white;
+    }
+    h2{
+      font-size: 1.6rem;
+      font-family: "Anton","museo-sans",sans-serif;
+      @media (min-width: 500px) {
+        font-size: 2rem;
+      }
+      @media (min-width: 800px) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 75em) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 95em) {
+        font-size: 4rem;
+      }
+    }
+    h4{
+      font-size: 1.2rem;
+      font-weight:100;
+      line-height: 1.3em;
+      text-transform: none;
+      @media (min-width: 800px) {
+        font-size: 1.4rem;
+      }
+      @media (min-width: 75em) {
+        font-size: 1.6rem;
+      }
+    }
+  }  
 }
 
-section.one-cntr.counter {
-  background: url("../../gfx/counter-bg.jpg");
-  background-size: cover;
-  background-position: center;
+section.past-speakers{
+  h2{
+    color: $gray;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+section.one-cntr {
+  background-color:$butter;
+  text-align: center;
+  padding: 2em 0;
 }
 
 @media (min-width: 75em) {
@@ -650,37 +634,18 @@ section.one-cntr.counter {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
+section.one-cntr h2{
+  font-size: 4rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
 }
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #33cc33;
-  padding: .2em .5em;
-  line-height: 1;
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/london/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/london/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -695,39 +660,6 @@ section.one-cntr button {
     width: 10.7vw;
   }
 }
-
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
-section.one-cntr.counter .your-clock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 5em 0;
-}
-
-@media (min-width: 120em) {
-  section.one-cntr.counter .your-clock {
-    margin: 2.8vw 0;
-  }
-}
-
-section.one-cntr.counter button {
-  margin-top: 0;
-}
-
-@media (min-width: 45em) {
-  section.one-cntr.counter button {
-    margin: 0 2em;
-  }
-}
-
 
 .testim {
   margin: 0 2em;
@@ -771,7 +703,6 @@ section.map {
  background: url("../../gfx/london/map-mobile-bg.jpg");
   background-size: cover;
   background-position: top;
-  min-height: 600px;
   display: flex;
   @media (min-width: 600px) {
     background: url("../../gfx/london/map-bg.jpg");
@@ -787,47 +718,51 @@ section.map {
 }
 
 section.map .content {
-  padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      height: 500px;
 }
 
 @media (min-width: 65em) {
   section.map .content {
-    max-width: 950px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: 6em 4em;
   }
 }
 
 @media (min-width: 75em) {
   section.map .content {
     max-width: 49.5vw;
-    padding: 5vw 4vw;
   }
 }
 
 section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
-  background-color: #fff;
+  background-color: $topaz;
   -webkit-box-shadow: 3px 3px 15px #999;
           box-shadow: 3px 3px 15px #999;
-  margin-top: auto;
-  max-width: 400px;
 }
 
 section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
 @media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 3.3vw;
-    max-width: 21vw;
     width: 50%;
     padding: 4em;
   }
@@ -839,11 +774,9 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/london/venue.jpg");
+  background: url("../../gfx/london/v2-site/venue-sec-bg.jpg");
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
   display: none;
 }
 
@@ -935,3 +868,139 @@ section.sponsors img {
             transform: scale3d(1, 1, 1);
   }
 }
+
+.speakers-wrap a:last-child{
+  @media (min-width: 75em) {
+      display:none;
+    }
+}
+
+
+
+
+
+/*! http://responsiveslides.com v1.55 by @viljamis */
+
+.rslides_tabs{
+  position: absolute;
+    z-index: 5;
+    display:none;
+    top: 42vw;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+    @media (min-width: 40em) {
+      //display:block;
+    }
+    @media (min-width: 95em) {
+      top:4vw;
+    }
+
+  li{
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    list-style: none;
+    display:inline-block;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: .3s;
+    &.rslides_here{
+      background:$topaz;
+    }
+
+    a{
+      color:transparent;
+    }
+  }
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+  @media (min-width: 40em) {
+    display: block;
+  }
+  video{width:100%;margin-top:-2.5%;}
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  max-height:950px;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
+  .rslides_nav{
+    display: none;
+    position: absolute;
+    bottom: 60%;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 900;
+    color: #083643;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #083643;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    height: 30px;
+    border-radius: 10px;
+    @media (min-width: 40em) {
+      display: block;
+    }
+    @media (min-width: 75em) {
+      font-size: 30px;
+      height: 40px;
+    }
+    @media (min-width: 95em) {
+      bottom:50%;
+    }
+
+    &:hover{
+      color:#fff;
+      background:rgba(0,0,0,0.7);
+    }
+
+    &.prev{
+      left: 20px;
+      padding-left: 9px;
+      padding-right: 9px;
+      @media (min-width: 75em) {
+        padding-right: 12px;
+      }
+    }
+    &.next{
+      right: 20px;
+      padding-left: 9px;
+      padding-right: 9px;
+      @media (min-width: 75em) {
+        padding-left: 12px;
+      }
+    }
+  }

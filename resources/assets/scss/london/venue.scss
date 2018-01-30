@@ -200,14 +200,13 @@ section.two {
 section.two .wrppr {
     width: 100%;
     min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+}
     @media (min-width: 75em) {
       section.two .wrppr {
         width: 50%; } }
   section.two .fix-bg {
     width: 100%;
     height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
     display: block;
     background-size:cover;
     background-repeat:no-repeat;
@@ -320,10 +319,7 @@ section.two a{
 }
 
 section.one-cntr {
-  background: url("../../gfx/london/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  background-color:$butter;
   text-align: center;
   padding: 2em 0;
 }
@@ -334,37 +330,18 @@ section.one-cntr {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
+section.one-cntr h2{
+  font-size: 4rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
 }
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #33cc33;
-  padding: .2em .5em;
-  line-height: 1;
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/london/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/london/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -380,17 +357,10 @@ section.one-cntr button {
   }
 }
 
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
 section.map {
  background: url("../../gfx/london/map-mobile-bg.jpg");
   background-size: cover;
   background-position: top;
-  min-height: 600px;
   display: flex;
   @media (min-width: 600px) {
     background: url("../../gfx/london/map-bg.jpg");
@@ -406,47 +376,49 @@ section.map {
 }
 
 section.map .content {
-  padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      height: 500px;
 }
 
 @media (min-width: 65em) {
   section.map .content {
-    max-width: 950px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: 6em 4em;
   }
 }
 
 @media (min-width: 75em) {
   section.map .content {
     max-width: 49.5vw;
-    padding: 5vw 4vw;
   }
 }
 
 section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
-  background-color: #fff;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
-  margin-top: auto;
-  max-width: 400px;
+  background-color: $topaz;
 }
 
 section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
+section.map .mapcont-wrp button {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
 @media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 3.3vw;
-    max-width: 21vw;
     width: 50%;
     padding: 4em;
   }
@@ -458,11 +430,9 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/london/venue.jpg");
+  background: url("../../gfx/london/v2-site/venue-sec-bg.jpg");
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
   display: none;
 }
 

@@ -158,6 +158,8 @@
 	})();
 </script>
 <!-- END LiveChat code -->  
+
+    @include('global.components.trackers')
 </body>
 
 @yield('footerscripts')

@@ -41,7 +41,6 @@
 			<div class="content-wrap">
 				<div class="h4wrp">
 					<h2 class="aloft">Aloft London</h2>
-					<img class="U-logo" src="{{ URL::asset('gfx/london/U.png') }}" alt="Unleash">
 				</div>
 				<p class="pdg">Aloft London Excel is the only hotel in London directly connected to the ExCeL International Convention Centre. Located right next to the Prince Regent DLR station, it is minutes away from London City Airport and Canary Wharf.</p>
 			</div>
@@ -54,8 +53,8 @@
 			</div>
 			<div class="pdg btm">
 				<div class="h4wrp">
-					<a href="https://www.starwoodmeeting.com/events/start.action?id=1709223927&key=18A2CFB" target="_blank"><button class="white-btn">Book now</button></a>
-					<a href="https://www.google.hu/maps/place/Aloft+London+Excel/@51.5083719,0.0355768,15z/data=!4m5!3m4!1s0x0:0x89b18efc117c73fe!8m2!3d51.5083719!4d0.0355768" target="_blank"><button class="white-btn">Show on Map</button></a>
+					<a href="https://www.starwoodmeeting.com/events/start.action?id=1709223927&key=18A2CFB" target="_blank"><button class="red-btn">Book now</button></a>
+					<a href="https://www.google.hu/maps/place/Aloft+London+Excel/@51.5083719,0.0355768,15z/data=!4m5!3m4!1s0x0:0x89b18efc117c73fe!8m2!3d51.5083719!4d0.0355768" target="_blank"><button class="red-btn">Show on Map</button></a>
 				</div>
 			</div>
 		</div>
@@ -80,7 +79,7 @@
 					<span>Double Occupancy: &pound;195 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
 					<p class="code">The hotel requires a minimum nights’ stay of 2 nights on Monday 19th &amp; Tuesday 20th March 2018.</p>
-					<a href="http://doubletree.hilton.com/en/dt/groups/personalized/L/LONEXDI-CHRN-20180317/index.jhtml" target="_blank"><button class="green-btn">Book now</button></a>
+					<a href="http://doubletree.hilton.com/en/dt/groups/personalized/L/LONEXDI-CHRN-20180317/index.jhtml" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker">
@@ -95,7 +94,7 @@
 					<span>Single Occupancy: &pound;199 / night</span>
 					<span>Double Occupancy: &pound;209 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Unleash%2018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6002/03/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="green-btn">Book now</button></a>
+					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Unleash%2018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6002/03/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker">
@@ -110,7 +109,7 @@
 					<span>Single Occupancy: &pound;175 / night</span>
 					<span>Double Occupancy: &pound;185 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-					<a href="http://www.accorhotels.com/gb/promotions-offers/hot-deals-offers/owm004847-001-hr-tech-world.shtml" target="_blank"><button class="green-btn">Book now</button></a>
+					<a href="http://www.accorhotels.com/gb/promotions-offers/hot-deals-offers/owm004847-001-hr-tech-world.shtml" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker">
@@ -126,7 +125,7 @@
 					<span>Double Occupancy: &pound;90 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
 					<p class="code">The hotel requires a minimum nights’ stay of 2 nights.</p>
-					<a href="http://group.hamptoninn.com/Unleash18" target="_blank"><button class="green-btn">Book now</button></a>
+					<a href="http://group.hamptoninn.com/Unleash18" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker holiday">
@@ -141,7 +140,7 @@
 					<span>Single Occupancy: &pound;99 / night</span>
 					<span>Double Occupancy: &pound;104 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-					<button class="green-btn popup" data-popupdata="reservation">Book now</button>
+					<button class="topaz-btn popup" data-popupdata="reservation">Book now</button>
 				</div>
 			</div>
 		</div>
@@ -214,7 +213,7 @@
 					<h2>Venue</h2>
 					<p>ExCeL London, will host UNLEASH in March 2018. ExCeL is London and the UK's leading venue for exhibitions and conferences.</p>
 				</div>
-				<button class="green-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
+				<button class="darkgreen-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
 			</div>
 			<div class="map-pic">
 			</div>
@@ -224,8 +223,8 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
-			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="green-btn">Book now</button></a>
+			<p>Unleash Your People!<br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
+			<a href="{{ route('london.tickets') }}" target="_blank"><button class="red-btn">Register Now</button></a>
 		</div>
 	</section>
 @endsection
