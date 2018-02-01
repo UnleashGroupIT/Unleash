@@ -153,6 +153,8 @@
     @include('global.components.trackers')
 </body>
 @yield('footerscripts')
+<script src="https://use.typekit.net/oip3jmq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lasvegas/flipclock.css') }}">
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </html>

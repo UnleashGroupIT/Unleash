@@ -214,8 +214,3 @@
 	</section>
 	<!--Map END-->
 @endsection
-
-@section('footerscripts')
-<script src="https://use.typekit.net/oip3jmq.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-@endsection

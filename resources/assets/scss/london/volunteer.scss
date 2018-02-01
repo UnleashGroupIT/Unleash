@@ -83,82 +83,43 @@ section.two {
 }
 
 section.two .wrppr {
-    width: 100%;
-    min-height: 500px;
-}
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-    @media (min-width: 100em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
+  width: 100%;
+  min-height: 500px;
+  @media (min-width: 75em) {
+    width: 50%;
   }
-    section.two .fix-bg.vol-1 {
-      background-image: url("../../gfx/london/volunteer-1-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.vol-1 {
-          background-image: url("../../gfx/london/volunteer-1-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
+
+  .img-bg{
+    height: 100%;
+
+    &.vol-1{
+      background:url("../../gfx/london/volunteer-1-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+
+    &.vol-2{
+      background:url("../../gfx/london/volunteer-2-sec-bg.jpg");
+      background-size:cover;
+      background-position: top;
+    }
+
+    &.vol-3{
+      background:url("../../gfx/london/volunteer-3-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
       @media (min-width: 75em) {
-        section.two .fix-bg.vol-1 {
-          background-image: url("../../gfx/london/volunteer-1-sec-bg.jpg");
-          background-position: bottom left; } }
-    section.two .fix-bg.vol-2 {
-      background-image: url("../../gfx/london/volunteer-2-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.vol-2 {
-          background-image: url("../../gfx/london/volunteer-2-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.vol-2 {
-          background-image: url("../../gfx/london/volunteer-2-sec-bg.jpg");
-          background-position: top right; } }
-      section.two .fix-bg.vol-3 {
-      background-image: url("../../gfx/london/volunteer-3-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.vol-3 {
-          background-image: url("../../gfx/london/volunteer-3-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.vol-3 {
-          background-image: url("../../gfx/london/volunteer-3-sec-bg.jpg");
-          background-position: bottom left; } }
-          section.two .fix-bg.vol-4 {
-      background-image: url("../../gfx/london/volunteer-4-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.vol-4 {
-          background-image: url("../../gfx/london/volunteer-4-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.vol-4 {
-          background-image: url("../../gfx/london/volunteer-4-sec-bg.jpg");
-          background-position: top right; } }
+      height: 100%;
+      }
+    }
+    &.vol-4{
+      background:url("../../gfx/london/volunteer-4-sec-bg.jpg");
+      background-size:cover;
+      background-position: top;
+    }  
+  }
+}
 
 section.two.clients {
   -webkit-box-orient: vertical;

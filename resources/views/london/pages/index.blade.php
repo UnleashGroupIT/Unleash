@@ -255,23 +255,21 @@
 	</section>
 	<!--Testimonial END-->
 	<!--Map-->
-	<section class="map">
+	<section id="map" class="map">
+		<iframe src="https://snazzymaps.com/embed/27565" width="100%" height="600px" style="border:none;"></iframe>
 		<div class="content">
 			<div class="mapcont-wrp">
+				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
 					<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier.</p>
 				</div>
 				<a href="{{ route('london.floorplan') }}"><button class="darkgreen-btn">More</button></a>
 			</div>
-			<a href="https://www.google.hu/maps/place/ExCeL+London/@51.5084601,0.0276573,17z/data=!3m2!4b1!5s0x47d8a8716fa1509d:0x342201ee325a678c!4m5!3m4!1s0x47d8a80ce609e50d:0xa0de5f705d7aec7!8m2!3d51.5084601!4d0.029846" target="_blank"></a><div class="map-pic">
-            </div></a>
+			<div class="map-pic">
+			</div>
 		</div>
 	</section>
 	<!--Map END-->
 @endsection
 
-@section('footerscripts')
-<script src="https://use.typekit.net/oip3jmq.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-@endsection

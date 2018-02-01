@@ -61,9 +61,11 @@ transformative technology and how it can unleash the power of people!</p>
 	</section>
 	<!--Counter END-->
 	<!--Map-->
-	<section class="map">
+	<section id="map" class="map">
+		<iframe src="https://snazzymaps.com/embed/27565" width="100%" height="600px" style="border:none;"></iframe>
 		<div class="content">
 			<div class="mapcont-wrp">
+				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
 					<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier.</p>

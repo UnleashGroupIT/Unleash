@@ -432,7 +432,7 @@
  </div>
 
      <div id="ButtonContainer">
-     <button id="SeeAllButton" onclick="changeText()" class="green-btn">SEE BENEFITS</button>
+     <button id="SeeAllButton" onclick="changeText()" class="topaz-btn">SEE BENEFITS</button>
     </div>   
 </section>
 
