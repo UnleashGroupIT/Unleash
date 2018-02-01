@@ -361,7 +361,7 @@ button {
 .form-control {
   margin: 10px 0px;
   display: inline-block;
-  width: 43%;
+  width: 100%;
 }
 
 #bio {

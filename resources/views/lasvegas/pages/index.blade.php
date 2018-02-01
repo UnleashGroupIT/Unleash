@@ -86,7 +86,7 @@
 					<img class="U-logo" src="{{ URL::asset('gfx/lasvegas/U.png') }}" alt="Unleash">
 				</div>
 				<h2>Mo Gawdat</h2>
-				<h5 class="BettsOxford"> Former Chief Business Officer - Google X</h5>
+				<h5 class="BettsOxford">Chief Business Officer - Google X</h5>
 				
 				<p class="pdg">With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
 				

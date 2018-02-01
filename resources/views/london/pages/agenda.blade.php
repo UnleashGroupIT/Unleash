@@ -17,13 +17,17 @@
 	<meta name="twitter:title" content="UNLEASH London - Agenda">
 	<meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH London on 20-21 March 2018." />
 	<meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
-		
+	
 @endsection
 
 @section('title', 'London - Agenda')
 
 @section('headercss')
 <link rel="stylesheet" type="text/css" href="{{ mix('css/london/agenda.css') }}">
+
+
+
+
 @endsection
 
 @section('headerjs')
@@ -31,6 +35,18 @@
 @endsection
 
 @section('maincontent')
+
+
+	/*QF by Tom */
+    <style type="text/css">
+   *{
+        -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    }
+
+
+</style>
+
 	<section class="agenda">
 		<div class="title-section">
 			<h1>Agenda</h1>

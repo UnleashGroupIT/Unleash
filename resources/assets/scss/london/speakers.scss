@@ -64,8 +64,14 @@ section.one.futureofwork{
   background-color:$topaz;
   h2{
     color:$dark-green;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Anton","museo-sans",sans-serif;
+    @media (min-width: 40em) {
+      font-size:3.5rem
+    }
+    @media (min-width: 95em) {
+      font-size:4rem
+    }
   }
   @media (min-width: 40em) {
     text-align: center;
@@ -180,9 +186,15 @@ section.two.keynote h5 {
 }
 
 section.two.keynote h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   color:$dark-green;
   font-family: "Anton","museo-sans",sans-serif;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 75em) {
+    font-size:4rem;
+  }
 }
 
 
@@ -244,12 +256,19 @@ section.one-cntr {
 }
 
 section.one-cntr h2{
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Anton","museo-sans",sans-serif;
   line-height: 1em;
   margin: 0;
   color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
 }
+
 section.one-cntr p{
   margin: 2em 0;
 }
@@ -313,6 +332,8 @@ section.map {
   background-size: cover;
   background-position: top;
   display: flex;
+  height:600px;
+  position:relative;
   @media (min-width: 600px) {
     background: url("../../gfx/london/map-bg.jpg");
     background-size: cover;
@@ -332,7 +353,12 @@ section.map .content {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      height: 500px;
+      position:absolute;
+      bottom:0;
+
+  @media (min-width: 600px) {
+    width:50%; 
+  }
 }
 
 @media (min-width: 65em) {
@@ -353,8 +379,6 @@ section.map .mapcont-wrp {
   flex-direction: column;
   padding: 2em;
   background-color: $topaz;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
 }
 
 section.map .mapcont-wrp p {
@@ -395,6 +419,8 @@ section.map .map-pic {
     display: block;
   }
 }
+
+
 
 section.sponsors {
   min-height: 300px;

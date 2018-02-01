@@ -107,8 +107,8 @@ font-size: 24px;
 background-color: rgba(174, 176, 111, 0.11);
 }
 .SessDesc{
-	width: 80%;
-	height: 150px;
+	width: 100%;
+	height: 185px;
 	margin: 30px 0 40px 0;
 	background-color: rgba(246, 231, 209, 0.57);
 }

@@ -147,9 +147,9 @@
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 2 day"
-    ExpiresByType application/x-javascript              "access plus 2 day"
-    ExpiresByType text/javascript                       "access plus 2 day"
+    ExpiresByType application/javascript                "access plus 2 days"
+    ExpiresByType application/x-javascript              "access plus 2 days"
+    ExpiresByType text/javascript                       "access plus 2 days"
 
 
   # Manifest files

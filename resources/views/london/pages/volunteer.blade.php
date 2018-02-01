@@ -96,7 +96,7 @@
 			<div class="fix-bg vol-4"></div>
 		</div>
 	</section>
-	<section id="viki" class="one-cntr">
+	<section id="viki" class="one-cntr" style="background:#4ad9d9 !important;">
 		<div class="wrp">
 			<div>
 				<img id="viki-prof" src="{{ URL::asset('gfx/london/viki.jpg') }}" alt="Viki McCann">

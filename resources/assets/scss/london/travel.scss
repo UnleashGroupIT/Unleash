@@ -7,8 +7,8 @@
 @import 'components/menu';
 @import 'components/footer';
 @import 'components/popup';
-@import 'components/speakergrid';
 @import 'components/common';
+@import 'speakergrid-travel';
 
 $lon : #33cc33;
 $dark-green: #083643;
@@ -284,6 +284,14 @@ section.two.keynote.flights{
   display:none;
 }
 
+section.two.keynote .h4wrp a{
+  display:block;
+  margin-top:1em;
+  @media (min-width: 510px) {
+    display:inline-block;
+  }
+}
+
 section.two.keynote .content {
   background-color: $butter;
 }
@@ -295,9 +303,15 @@ section.two.keynote h5 {
 }
 
 section.two.keynote h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   color:$dark-green;
   font-family: "Anton","museo-sans",sans-serif;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 75em) {
+    font-size:4rem;
+  }
 }
 
 section.two.keynote span {
@@ -452,11 +466,17 @@ section.one-cntr {
 }
 
 section.one-cntr h2{
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Anton","museo-sans",sans-serif;
   line-height: 1em;
   margin: 0;
   color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
 }
 section.one-cntr p{
   margin: 2em 0;
@@ -504,13 +524,11 @@ section.map .content {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      height: 500px;
       position:absolute;
       bottom:0;
-      width:90%;
-}
-@media (min-width: 40em) {
-  width:50%;
+      @media (min-width: 40em) {
+        width:50%;
+    }
 }
 
 @media (min-width: 65em) {

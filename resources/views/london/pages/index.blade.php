@@ -155,11 +155,11 @@
 						<h6>Dentsu Aegis</h6>
 					</div>
 				</div>
-				<div class="hl-member kim-wylie">
+				<div class="hl-member zoe-vince">
 					<div class="member-wrp">
-						<h2>kim wylie</h2>
-						<h5>Head of Customer Change and Culture</h5>
-						<h6>Google Cloud Professional Services at Google</h6>
+						<h2>Zoe Vince</h2>
+						<h5>Head of HR Innovation and Technology</h5>
+						<h6>Cabinet Office</h6>
 					</div>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p><strong>Unleash Your People!</strong><br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
+			<p><strong><b style="font-weight:400;">UNLEASH Your People!</b></strong><br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
 			<a href="{{ route('london.tickets') }}" target="_blank"><button class="red-btn">Register Now</button></a>
 		</div>
 	</section>
@@ -264,8 +264,8 @@
 				</div>
 				<a href="{{ route('london.floorplan') }}"><button class="darkgreen-btn">More</button></a>
 			</div>
-			<div class="map-pic">
-			</div>
+			<a href="https://www.google.hu/maps/place/ExCeL+London/@51.5084601,0.0276573,17z/data=!3m2!4b1!5s0x47d8a8716fa1509d:0x342201ee325a678c!4m5!3m4!1s0x47d8a80ce609e50d:0xa0de5f705d7aec7!8m2!3d51.5084601!4d0.029846" target="_blank"></a><div class="map-pic">
+            </div></a>
 		</div>
 	</section>
 	<!--Map END-->

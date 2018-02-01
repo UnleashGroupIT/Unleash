@@ -248,20 +248,10 @@ Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorpla
 
 Route::get('/london/tickets', function(){
 
-	$now = Carbon::now();
-	
-	$early = Carbon::create(2018, 01, 31, 24, 59, 0);
-
-	if ($now->gt($early)){
-		return view('london.pages.tickets_regular');
-	
-	} else {
-		return view('london.pages.tickets_earlybird');
-	}
+  return view('london.pages.tickets_normal');
 
 	
 })->name('london.tickets');
-
 
 
 

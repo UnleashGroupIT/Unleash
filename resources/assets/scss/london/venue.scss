@@ -331,12 +331,19 @@ section.one-cntr {
 }
 
 section.one-cntr h2{
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Anton","museo-sans",sans-serif;
   line-height: 1em;
   margin: 0;
   color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
 }
+
 section.one-cntr p{
   margin: 2em 0;
 }
@@ -362,6 +369,8 @@ section.map {
   background-size: cover;
   background-position: top;
   display: flex;
+  height:600px;
+  position:relative;
   @media (min-width: 600px) {
     background: url("../../gfx/london/map-bg.jpg");
     background-size: cover;
@@ -381,7 +390,12 @@ section.map .content {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      height: 500px;
+      position:absolute;
+      bottom:0;
+
+  @media (min-width: 600px) {
+    width:50%; 
+  }
 }
 
 @media (min-width: 65em) {
@@ -408,7 +422,7 @@ section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
-section.map .mapcont-wrp button {
+section.map .mapcont-wrp a {
   display: block;
   margin-top:auto;
 }

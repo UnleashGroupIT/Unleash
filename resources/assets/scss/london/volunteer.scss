@@ -260,12 +260,19 @@ section.one-cntr {
 }
 
 section.one-cntr h2{
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Anton","museo-sans",sans-serif;
   line-height: 1em;
   margin: 0;
   color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
 }
+
 section.one-cntr p{
   margin: 2em 0;
 }

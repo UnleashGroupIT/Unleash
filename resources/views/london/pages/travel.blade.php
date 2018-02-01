@@ -170,7 +170,7 @@
 			<div class="fix-bg floorplanbg"></div>
 		</div>
 	</section>
-	<section class="one-cntr vhcls">
+	<section style="display:none;" class="one-cntr vhcls">
 		<div class="wrp">
 			<h2>How to get there</h2>
 			

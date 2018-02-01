@@ -5,42 +5,42 @@ section.speakers-grid {
   @media (min-width: 75em) {
     section.speakers-grid {
       padding: 3em 4em;
+      padding-bottom:0;
       display: flex;
       flex-direction: column; } }
   @media (min-width: 120em) {
     section.speakers-grid {
-      padding: 2.5vw 3.35vw; } }
+      padding: 2.5vw 3.35vw;
+      padding-bottom:0; } }
   section.speakers-grid .speakers-wrap {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 2em;
-    justify-content: space-between; }
+    justify-content: left; }
     section.speakers-grid .speakers-wrap a{
       color: #323232;
     }
     section.speakers-grid .speakers-wrap .speaker {
       /*flex-grow: 1;*/
-      padding: .5em 0;
+      padding: .5em .25em;
       margin: 0 2px;
       width: 48%; }
-      @media (min-width: 512px) {
+      @media (min-width: 612px) {
         section.speakers-grid .speakers-wrap .speaker {
-          width: 150px;
-          margin: 0} }
+          flex-basis: 33.3%;
+          margin: 0 } }
+          @media (min-width: 1000px) {
+        section.speakers-grid .speakers-wrap .speaker {
+          flex-basis: 25%;}
+        }
       @media (min-width: 120em) {
         section.speakers-grid .speakers-wrap .speaker {
-          padding: .42vw 0; } }
+          padding: .4vw; } }
       section.speakers-grid .speakers-wrap .speaker img {
         width: 100%; }
-        @media (min-width: 75em) {
-          section.speakers-grid .speakers-wrap .speaker {
-            width: 220px; } }
         @media (min-width: 95em) {
           section.speakers-grid .speakers-wrap .speaker {
-            width: 330px; } }
-        @media (min-width: 120em) {
-          section.speakers-grid .speakers-wrap .speaker {
-            width: 17.15vw; } }
+            flex-basis:20%; } }
       section.speakers-grid .speakers-wrap .speaker .dtls-wrap {
         padding-top: 1em; }
         section.speakers-grid .speakers-wrap .speaker .dtls-wrap h6 {
@@ -74,10 +74,4 @@ section.speakers-grid {
               font-size: 1em; } }
           @media (min-width: 120em) {
             section.speakers-grid .speakers-wrap .speaker .dtls-wrap span {
-              font-size: .83vw; } }
-			  
-@media (max-width: 1000px) {
-.speakers-wrap a:last-child {
-    display:none;
-}
-}			  
+              font-size: .83vw; } } 
