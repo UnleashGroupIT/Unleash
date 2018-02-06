@@ -197,54 +197,35 @@ section.two {
   min-height: 600px;
 }
 
+
 section.two .wrppr {
-    width: 100%;
-    min-height: 500px;
-}
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
+  width: 100%;
+  min-height: 500px;
+  @media (min-width: 75em) {
+    width: 50%;
+  }
+
+  .img-bg{
     height: 500px;
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
     @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
+      height:100%;
+    }
+
+    &.floorplanbg{
+      background:url("../../gfx/london/floorplan-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+
+    &.floorplancitybg{
+      background:url("../../gfx/london/floorplancity-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
     }
   }
-    section.two .fix-bg.floorplanbg {
-      background-image: url("../../gfx/london/floorplan-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/london/floorplan-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/london/floorplan-sec-bg.jpg");
-          background-position: bottom left; } }
-    section.two .fix-bg.floorplancitybg {
-      background-image: url("../../gfx/london/floorplancity-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/london/floorplancity-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/london/floorplancity-sec-bg.jpg");
-          background-position: top right; } }
+}
+
+
 
 section.two.clients {
   -webkit-box-orient: vertical;

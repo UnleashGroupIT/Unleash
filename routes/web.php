@@ -234,11 +234,12 @@ Route::get('/london/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('l
 
 Route::get('/london/startups', 'StartupsController@index')->name('london.startup');
 
+/*
 Route::get('/london/agenda', function () {
   return view('london.pages.agenda');
-})->name('london.agenda');
+})->name('london.agenda');*/
 
-Route::get('/london/agtest','AgendaController@index');
+Route::get('/london/agenda','AgendaController@index')->name('london.agenda');
 
 Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 

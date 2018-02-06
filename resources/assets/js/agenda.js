@@ -120,6 +120,7 @@ var spVue = new Vue({
 			axios.get('/api/agenda/search?eventid='+eId+'&day='+day+'&tracks='+filters+searchQuery)
 			  	   .then((response) => {
   			this.agendasession = response.data;
+			console.log(this.agendasession);
   			});
 		},
 

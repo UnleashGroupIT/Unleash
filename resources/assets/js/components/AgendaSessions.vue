@@ -1,14 +1,15 @@
 <template>
 	<div v-if="dataready">
 	<!-- Main Stage -->
-	<div v-for="sess in agendasession" class="cnt-wrp" :class="sess.tracks[0].color_class">
+	<div v-for="sess in agendasession" class="cnt-wrp" :class="trackClass(sess)">
 		<div class="left-side">
 			<div class="upper-side">
 				<div class="date">
-					<h4>{{sess.start_time.month_name}} {{sess.start_time.day}}.</h4>
+					<h4>{{sess.start_time.day}}. {{sess.start_time.month_name}}</h4>
 				</div>
 				<div class="time">
-					<h2>{{sess.start_time.time}}</h2>
+					<h2>{{sess.start_time.time}} - {{sess.end_time.time}}</h2>
+					
 				</div>
 				<div class="session-name">
 					<h3 v-if="sess.tracks[1]">ALL STAGES</h3>
@@ -24,7 +25,11 @@
 		<div class="right-side">
 			<div class="header">
 				<div class="place">
-					<h4>{{sess.tracks[0].room}}</h4>
+					<h4 v-if="sess.tracks[1]">Catering Points</h4>
+					<h4 v-else>{{sess.tracks[0].room}}</h4>
+				</div>
+				<div class="duration">
+					<i class="fa fa-clock-o"></i> {{ duration(sess) }}
 				</div>
 			</div>
 			<div class="body">
@@ -80,7 +85,26 @@ export default {
 
   methods: {
 
+ 	trackClass (sessData){
+ 		 if(typeof sessData.tracks[1] != "undefined"){
+ 		 	return 'Coffee';
+ 		 }else{
+ 		 	return sessData.tracks[0].color_class;
+ 		 }
+ 		
+ 	},
+	
 
+	
+	duration(sessData){
+	   let start = new Date(sessData.start_time.month+"/"+sessData.start_time.day+"/"+sessData.start_time.year+" "+sessData.start_time.time+":00" );
+	   let end = new Date(sessData.end_time.month+"/"+sessData.end_time.day+"/"+sessData.end_time.year+" "+sessData.end_time.time+":00" );
+	   let diff = end.getTime() - start.getTime();
+	   
+	   let msec = diff;
+	   let mm = Math.floor(msec / 1000 / 60);
+		return mm+" mins";
+	}
 
 
   },
@@ -108,7 +132,8 @@ export default {
 
   	},
 
-  }
+  },
+
 
 
 }

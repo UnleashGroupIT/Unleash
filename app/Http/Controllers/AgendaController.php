@@ -15,7 +15,9 @@ class AgendaController extends Controller
 
 
      $events = Events::all();
-     $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))->get();
+     $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))
+		->orderBy('order', 'asc')
+		->get();
 
      $eventsData = [];
      foreach ($events as $event) {
@@ -108,8 +110,8 @@ class AgendaController extends Controller
 
       $params = [
                   'filters' => $facets,
-                  'hitsPerPage' => 100,
-                  'page' => 0,
+                  'hitsPerPage' => 150,
+                  'page' => 0,			  
 
               ];
 

@@ -25,12 +25,7 @@
 @section('headercss')
 <link rel="stylesheet" type="text/css" href="{{ mix('css/london/agenda_beta.css') }}">
 <style>
-#Algolia{
-	text-align: right;
-    padding: 2em;
-    max-width: 1170px;
-    margin: 0 auto;
-}
+
 
 
 
@@ -54,8 +49,8 @@
 			<div class="tabs-wrp">
 				<nav>
 					<ul class="side tabs">
-				    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">20 March</li>
-				    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">21 March</li>  
+				    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">March 20.</li>
+				    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">March 21.</li>  
 					</ul>
 				</nav>
 			</div>
@@ -68,9 +63,7 @@
 			<div id="SessionFilterSection">
 				<div class="FilterInnerSection">
 					@foreach($AgendaTracks as $TrackFilters)
-						<div>
-							<input v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}
-						</div>
+						<input v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }} <br />
 					@endforeach
 					
 				</div>	
@@ -90,9 +83,6 @@
 			</div>
 		 </div>
 		 </div>
-		 <section id="Algolia">
-<img src="https://www.algolia.com/static_assets/images/pricing/pricing_new/algolia-powered-by-14773f38.svg" alt="Algolia">
-</section>
 	 </div>	
 	</section>	
 {{-- END SESSIONS --}}

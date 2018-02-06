@@ -102,7 +102,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
             <h2 class="TicketHeadline">REGULAR</h2>
-            <h2 class="TicketPrice">&pound;1795</h2>
+            <h2 class="TicketPrice">&pound;1395</h2>
             <h3 class="TicketDeadline">UNTIL February 28.</h3>
             <h4 id="hide" class="TicketSmallText">.</h4>
         </div>
@@ -141,8 +141,9 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">PUBLIC &amp; GOVERNMENTAL SECTOR</h2>
-            <h2 class="TicketPrice">&pound;1495</h2>
-            <h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>
+            <h2 class="TicketPrice">&pound;1195</h2>
+            <!--<h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>-->
+			<h4 class="TicketSmallText">&nbsp;</h4>
             <h3 class="TicketDeadline">UNTIL MARCH 31.</h3>
         </div>
     </div>
@@ -178,7 +179,7 @@
     <div class="TicketBoxHeader" >
         <div class="TicketBoxHeaderInner" id="Standard">
             <h2 class="TicketHeadline">STANDARD CONFERENCE &amp; EXPO</h2>
-            <h2 class="TicketPrice">&pound;1795</h2>
+            <h2 class="TicketPrice">&pound;1395</h2>
             <h3 class="TicketDeadline">UNTIL FEBRUARY 28.</h3>
             <h4 class="TicketSmallText" style="margin-bottom:10px">Do you have a promo code?</h4>
             <h3 class="TicketDeadline"><input type="text" class="DiscountInput" id="DiscountField" placeholder="Type it here"></h3>

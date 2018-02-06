@@ -49,6 +49,8 @@ class AgendaSessions extends Model
 
          $extra_data['start_timestamp'] = strtotime($this->start_time['year'].'-'.$this->start_time['month'].'-'.$this->start_time['day'].' '.$this->start_time['time']); //$this->start_time['time'];
          $extra_data['end_timestamp'] = strtotime($this->end_time['year'].'-'.$this->end_time['month'].'-'.$this->end_time['day'].' '.$this->end_time['time']);
+		 
+		  $extra_data['duration'] = (Carbon::parse($this->end_time['original'])->diffInSeconds( Carbon::parse($this->start_time['original']) )) / 60;
 
         return array_merge($this->toArray(), $extra_data);
     }   
@@ -56,7 +58,8 @@ class AgendaSessions extends Model
 
     public function getStartTimeAttribute($value){
         $dt = Carbon::parse($value);
-
+		
+		$dateData['original'] = $value;
         $dateData['year'] = $dt->year;
         $dateData['month'] = $dt->month;
         $dateData['month_name'] = $dt->format('F');
@@ -67,7 +70,8 @@ class AgendaSessions extends Model
 
     public function getEndTimeAttribute($value){
         $dt = Carbon::parse($value);
-
+		
+		$dateData['original'] = $value;
         $dateData['year'] = $dt->year;
         $dateData['month'] = $dt->month;
         $dateData['month_name'] = $dt->format('F');

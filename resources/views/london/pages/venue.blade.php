@@ -35,7 +35,7 @@
 
 	<section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg floorplanbg"></div>
+			<div class="img-bg floorplanbg"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -55,7 +55,7 @@
 			<a href="https://unleash.swoogo.com/unleashlondon" target="_blank"><button class="topaz-btn">Book Now</button></a>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg floorplancitybg"></div>
+			<div class="img-bg floorplancitybg"></div>
 		</div>
 	</section>
 	<!--Expo END-->

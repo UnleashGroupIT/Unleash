@@ -35,7 +35,7 @@
 
 	<section class="two keynote arianna">
 		<div class="wrppr">
-			<div class="fix-bg travelbg"></div>
+			<div class="img-bg travelbg"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -154,7 +154,7 @@
 			</div>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg floorplancitybg"></div>
+			<div class="img-bg floorplancitybg"></div>
 		</div>
 	</section>
 	<!--Expo END-->
@@ -167,7 +167,7 @@
 			</div>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg floorplanbg"></div>
+			<div class="img-bg floorplanbg"></div>
 		</div>
 	</section>
 	<section style="display:none;" class="one-cntr vhcls">
