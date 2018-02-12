@@ -295,6 +295,9 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                     <input placeholder="First name" data-field="fname" class="form-input" name="fname" id="fname" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="lname" id="lname" size="30" maxlength="255" type="text">
                     <input placeholder="Page Source" data-field="page_source" class="form-input" name="page_source" id="page_source" size="30" maxlength="255" type="text" value="America2018">
+					
+					<input placeholder="Bonus" data-field="bonus" class="form-input" name="bonus" id="bonus" size="30" maxlength="255" type="text">
+					
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>

@@ -50,10 +50,6 @@
 				<span>Single Occupancy: &pound;230 per night</span>
 				<span>Double Occupancy: &pound;240 per night</span>
 				<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-				<p><strong>Booking via telephone:</strong> 00 44 207 290 7575<br>
-<strong>via mail:</strong> reservations.aloftlondonexcel@alofthotels.com<br>
-<strong>Booking name:</strong> UNLEASH18 (Please quote if calling in or emailing the hotel)</p>
-				
 			</div>
 			<div class="pdg btm">
 				<div class="h4wrp">
@@ -74,10 +70,6 @@
 					<div class="booking-wrp">
 						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
 						<p class="code">* Please quote if calling in or emailing the hotel.</p>
-						<p>Booking via telephone:00 44 207 540 48 35<br>
-via mail: irene.ortiz@dtexcel.com
- 
-					</p>
 					</div>
 					<p>Standard Room: 17<sup>th</sup>, 18<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;160 / night</span>
@@ -88,7 +80,6 @@ via mail: irene.ortiz@dtexcel.com
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
 					<p class="code">The hotel requires a minimum nights’ stay of 2 nights on Monday 19th &amp; Tuesday 20th March 2018.</p>
 					<a href="http://doubletree.hilton.com/en/dt/groups/personalized/L/LONEXDI-CHRN-20180317/index.jhtml" target="_blank"><button class="topaz-btn">Book now</button></a>
-					
 				</div>
 			</div>
 			<div class="speaker">
@@ -98,10 +89,6 @@ via mail: irene.ortiz@dtexcel.com
 					<div class="booking-wrp">
 						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
 						<p class="code">* Please quote if calling in or emailing the hotel.</p>
-						<p>Booking via telephone: +31 202 259 693<br>
-Via email: renate.wijnbergen@belvar.eu
-					</p>
-						
 					</div>
 					<p>Standard Room:</p>
 					<span>Single Occupancy: &pound;199 / night</span>
@@ -129,10 +116,7 @@ Via email: renate.wijnbergen@belvar.eu
 				<img src="{{ URL::asset('gfx/london/hampton.jpg') }}" alt="Hampton by Hilton">
 				<div class="dtls-wrap">
 					<h6 class="name">Hampton by Hilton</h6>
-						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
-					<p>Booking via telephone: 00 44 (0) 203 002 2972<br>
-Via email: reservations@hbhlondondocklands.co.uk
-						 </p>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<p>Queen Room: 17<sup>th</sup>, 19<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;119 / night</span>
 					<span>Double Occupancy: &pound;119 / night</span>
@@ -148,9 +132,7 @@ Via email: reservations@hbhlondondocklands.co.uk
 				<img src="{{ URL::asset('gfx/london/holiday-inn.jpg') }}" alt="Holiday Inn Express">
 				<div class="dtls-wrap">
 					<h6 class="name">Holiday Inn Express</h6>
-						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
-					<p>Booking via email:  reservations@hiexpresslondonexcel.co.uk
- </p>
+					<!--<span>Booking Code: <p class="code">UNLEASH18</p></span>-->
 					<p>Standard Room: 17<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
 					<span>Single Occupancy: &pound;149 / night</span>
 					<span>Double Occupancy: &pound;154 / night</span>

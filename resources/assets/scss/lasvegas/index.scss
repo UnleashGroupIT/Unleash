@@ -170,10 +170,10 @@ section.one.mainsponsors {
   section.one.mainsponsors .mainsponsors-wrap {
     display: flex;
     flex-wrap: wrap;
-    padding: .4em 1em;
+    padding: .4em 0;
     justify-content: center;
     @media (min-width: 55em) {
-      padding:1em;
+      padding:1em 0;
     }
   }
     @media (min-width: 125em) {
@@ -183,7 +183,7 @@ section.one.mainsponsors {
       }
     }
     section.one.mainsponsors .mainsponsors-wrap > div {
-      margin: 1em .5em;
+      margin: 1em .25em;
       margin-top: auto;
       flex-grow: 1;
       text-align: center;
@@ -191,7 +191,7 @@ section.one.mainsponsors {
       opacity: 0; }
       @media (min-width: 75em) {
         section.one.mainsponsors .mainsponsors-wrap > div {
-          margin: 0 1em;
+          margin: 0 .75em;
           margin-top: auto;
           flex-grow: 0;
           padding-bottom: 1em; } }
@@ -224,7 +224,7 @@ section.one.mainsponsors {
         }
       }
 
-      #smart-wrp{
+      #smart-wrp,#apple-wrp{
         margin-top: .5em;
         @media (min-width: 470px) {
           margin-top: .75em;
@@ -263,7 +263,7 @@ section.one.mainsponsors {
       }
 
 
-      #cornerstone,#smart{
+      #cornerstone,#smart,#applearn{
         width: 110px;
         @media (min-width: 55em) {
           width: 135px;

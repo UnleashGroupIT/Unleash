@@ -201,6 +201,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                     <input placeholder="First name" data-field="fname" class="form-input" name="fname" id="fname" size="30" maxlength="255" type="text">
                     <input placeholder="Last name" data-field="lname" class="form-input" name="lname" id="lname" size="30" maxlength="255" type="text">
 					<input placeholder="Page Source" data-field="page_source" class="form-input" name="page_source" id="page_source" size="30" maxlength="255" type="text" value="London2018">
+					
+					 <input placeholder="Bonus" data-field="bonus" class="form-input" name="bonus" id="bonus" size="30" maxlength="255" type="text">
                 </p>  
                 <div class="popup-paragraph popup-policy ">
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
@@ -317,10 +319,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		    <span class="close">&times;</span>
 		    <h3>Reservations</h3>
 		    <p>Via email:</p>
-		    <span><script type="text/javascript">
-document.write(atob("PGEgaHJlZj0ibWFpbHRvOnJlc2VydmF0aW9uc21nckBoaWV4cHJlc3Nsb25kb25leGNlbC5jby51ayI+cmVzZXJ2YXRpb25zbWdyQGhpZXhwcmVzc2xvbmRvbmV4Y2VsLmNvLnVrPC9hPiA8YSBocmVmPSJodHRwOi8vd3d3LndlYmVzdG9vbHMuY29tL2FudGlzcGFtLWVtYWlsLXByb3RlY3Rpb24tb2JmdXNjYXRlLWVtYWlsLWFkZHJlc3Mtd2Vic2l0ZS1jb2RlLXNwYW0tamF2YXNjcmlwdC1iYXNlNjQtZW1haWwtZW5jb2RpbmctY3J5cHQuaHRtbCIgdGl0bGU9IkFudGktU1BBTSBQcm90ZWN0aW9uIj48aW1nIHNyYz0iLy91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy8yLzI4L1NlbWlfcHJvdGVjdC5zdmciIHdpZHRoPTE0IGhlaWdodD0xNCAvPjwvYT4="));
-</script>
-<noscript>Please enable Javascript to see the email address</noscript></span><p>Via phone:</p><span>00 44 203096 5888 Extension 2.</span>
+		    <span>reservations@hiexpresslondonexcel.co.uk</span><p>Via phone:</p><span>00 44 203096 5888 Extension 2.</span>
 		    <button class="green-btn">Please refer to the UNLEASH18 booking name, and to the "H02" booking code.</button>
 		  </div>
 		</div>

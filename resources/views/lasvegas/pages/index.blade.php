@@ -38,8 +38,11 @@
 			<span>Lead Sponsors <strong>2018</strong></span>
 			<div class="mainsponsors-wrap">
                    
+                   
+				  <div id="apple-wrp"><a href="https://www.applearn.com/" target="_blank" title="Applearn"><img id="applearn" src="{{ URL::asset('gfx/lasvegas/header/sponsors/applearn.svg') }}" alt="Applearn"></a></div>
                    <div id="cb"><a href="https://www.careerbuilder.com/" target="_blank" title="CareerBuilder"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Careerbuilder.svg') }}" alt="CareerBuilder"></a></div>
                    
+                    <div id="corner"><a href="http://www.cornerstoneondemand.co.uk/" target="_blank" title="Cornerstone OnDemand"><img id="cornerstone" src="{{ URL::asset('gfx/lasvegas/header/sponsors/cornerstone.svg') }}" alt="Cornerstone"></a></div>
                     <div id="cross"><a href="http://www.crossknowledge.com/en_US/elearning/home.html" target="_blank" title="CrossKnowledge"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/crossknowledge.svg') }}" alt="CrossKnowledge"></a></div>
                     
                     <div id="cultureamp"><a href="https://www.cultureamp.com/" target="_blank" title="Culture Amp"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>

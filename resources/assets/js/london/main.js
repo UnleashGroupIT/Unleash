@@ -352,5 +352,9 @@ $(document).ready(function()	{
 			$('#thankyousign').css("display", "flex")
     }  
 	
+    if (window.location.href.indexOf('#BecomeaSponsor') != -1) {
+			$('#becomeasponsor').css("display", "flex")
+    }   	
+	
 	
 }); // READY END

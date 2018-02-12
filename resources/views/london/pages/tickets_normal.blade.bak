@@ -231,7 +231,7 @@
    <button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" data-popupdata="contact">CONTACT US</button>
   </div>
   
- 
+ <!--  
   <div class="PopularTicketBox IsoBox Group TicketTwo" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
@@ -267,7 +267,7 @@
              <li>Key account manager support</li>
             </ul> 
        </div>
-<a href="https://unleash.swoogo.com/unleashlondon/register?reg_type_id=22981" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
+<a href="https://unleash.swoogo.com/unleashlondon/register?reg_type_id=19040" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
   </div>
   <div class="TicketBox IsoBox Group TicketOne mobilemargin-up" data-category="Group">
     <div class="TicketBoxHeader">
@@ -303,7 +303,7 @@
              <li>Key account manager support</li>
             </ul> 
        </div>
-<a href="https://unleash.swoogo.com/unleashlondon/application?reg_type_id=22982" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
+<a href="https://unleash.swoogo.com/unleashlondon/register?reg_type_id=19040" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
   </div>
 
     <div class="TicketBox IsoBox Group TicketThree mobilemargin-up" data-category="Group">
@@ -341,8 +341,9 @@
              <li>Key account manager support</li>
             </ul> 
        </div>
-<a href="https://unleash.swoogo.com/unleashlondon/application?reg_type_id=22984" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
-  </div> 
+<a href="https://unleash.swoogo.com/unleashlondon/register?reg_type_id=19040" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover">BOOK NOW</button></a>
+  </div> -->
+
   <!-- GROUP TICKETS END -->
 
   <!-- INVESTORS -->

@@ -77,7 +77,178 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		</div>
 	</div>
 
+	<div id="supbrochure" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>Request Brochure</h3>
+		    <p>Thank you for your interest in our event.
+Please fill in all the fields below, and we'll get back to you soon.</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7nnf" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_30838pi_145751_30838" id="145751_30838pi_145751_30838" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_30858pi_145751_30858" id="145751_30858pi_145751_30858" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company name" class="form-input" name="145751_30836pi_145751_30836" id="145751_30836pi_145751_30836" size="30" maxlength="255" type="text">
 
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_30832pi_145751_30832" id="145751_30832pi_145751_30832" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_30834pi_145751_30834" id="145751_30834pi_145751_30834" size="30" maxlength="255" type="text">
+                    <input placeholder="Robot Source" value="Startup2018-DownloadBrochure" class="form-input" name="145751_30862pi_145751_30862" id="145751_30862pi_145751_30862" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_30860pi_145751_30860" id="145751_30860pi_145751_30860" value="Startup2018-DownloadBrochure" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>	
+	
+	<div id="supbecomeasponsor" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>APPLY TO BE A SPONSOR</h3>
+		    <p>Join the Event that Helps Shape the Future of Work &amp; Technology</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7nr9" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_30870pi_145751_30870" id="145751_30870pi_145751_30870" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_30872pi_145751_30872" id="145751_30872pi_145751_30872" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_30868pi_145751_30868" id="145751_30868pi_145751_30868" size="30" maxlength="255" type="text">
+                <div class="event-wrp">
+	                <p>Please choose an Event</p>
+	                <div>
+	                	<label for="145751_30878pi_145751_30878_196332">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
+	                	<input type="checkbox" name="145751_30878pi_145751_30878_196332" id="145751_30878pi_145751_30878_196332" value="196332">
+	                </div>
+	                <div>
+	                	<label for="145751_30878pi_145751_30878_196334">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
+	                	<input type="checkbox" name="145751_30878pi_145751_30878_196334" id="145751_30878pi_145751_30878_196334" value="196334">
+	                </div>
+	                <div>
+	                	<label for="145751_30878pi_145751_30878_196336">UNLEASH World Conference &amp; Expo<br />Amsterdam 23-24. October 2018</label>
+	                	<input type="checkbox" name="145751_30878pi_145751_30878_196336" id="145751_30878pi_145751_30878_196336" value="196336">
+	                </div>
+	            </div>
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_30864pi_145751_30864" id="145751_30864pi_145751_30864" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_30866pi_145751_30866" id="145751_30866pi_145751_30866" size="30" maxlength="255" type="text">
+                    <input placeholder="Robot Source" value="Startup2018-BecomeASponsor" class="form-input" name="145751_30876pi_145751_30876" id="145751_30876pi_145751_30876" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_30874pi_145751_30874" id="145751_30874pi_145751_30874" value="Startup2018-BecomeASponsor" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>		
+	
+	<div id="supbecomeaspeaker" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>Apply to Speak</h3>
+		    <p><!--If you would like to join our incredible community of thought leaders and influencers from the HR industry,<br>--> Please fill out the following details and we will get in touch with you.</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7ntk" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_30886pi_145751_30886" id="145751_30886pi_145751_30886" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_30888pi_145751_30888" id="145751_30888pi_145751_30888" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_30884pi_145751_30884" id="145751_30884pi_145751_30884" size="30" maxlength="255" type="text">
+				  <textarea required style="border: 1px solid rgb(221, 221, 221)" name="145751_30896pi_145751_30896" id="145751_30896pi_145751_30896" placeholder="Area of expertise / topic" onchange="" class="TextAreaClass ContactTextArea"></textarea>
+                <div class="event-wrp">
+	                <p>Please choose an Event</p>
+	                <div>
+	                	<label for="145751_30894pi_145751_30894_196338">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
+	                	<input type="checkbox" name="145751_30894pi_145751_30894_196338" id="145751_30894pi_145751_30894_196338" value="196338">
+	                </div>
+	                <div>
+	                	<label for="145751_30894pi_145751_30894_196340">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
+	                	<input type="checkbox" name="145751_30894pi_145751_30894_196340" id="145751_30894pi_145751_30894_196340" value="196340">
+	                </div>
+	                <div>
+	                	<label for="145751_30894pi_145751_30894_196342">UNLEASH World Conference &amp; Expo<br />Amsterdam 23-24. October 2018</label>
+	                	<input type="checkbox" name="145751_30894pi_145751_30894_196342" id="145751_30894pi_145751_30894_196342" value="196342">
+	                </div>
+	            </div>
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_30880pi_145751_30880" id="145751_30880pi_145751_30880" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_30882pi_145751_30882" id="145751_30882pi_145751_30882" size="30" maxlength="255" type="text">
+                    <input placeholder="Robot Source" value="Startup2018-BecomeASpeaker" class="form-input" name="145751_30892pi_145751_30892" id="145751_30892pi_145751_30892" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_30890pi_145751_30890" id="145751_30890pi_145751_30890" value="Startup2018-BecomeASpeaker" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>	
+
+	<div id="supcompete" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h3>Apply to Compete</h3>
+		    <p>Thank you for your interest in our event.
+Please fill in all the fields below, and we'll get back to you soon.</p>
+		  </div>
+		  <div class="modal-body">
+		    <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7q99" class="form">
+                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
+                <input required="required" placeholder="Business Email" class="form-input" name="145751_30904pi_145751_30904" id="145751_30904pi_145751_30904" size="30" maxlength="255" type="email">
+                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_30906pi_145751_30906" id="145751_30906pi_145751_30906" size="30" maxlength="40" type="tel">
+                <input required="required" placeholder="Company Name" class="form-input" name="145751_30902pi_145751_30902" id="145751_30902pi_145751_30902" size="30" maxlength="255" type="text">
+                <div class="event-wrp">
+	                <p>Please choose an Event</p>
+	                <div>
+	                	<label for="145751_30912pi_145751_30912_196344">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
+	                	<input type="checkbox" name="145751_30912pi_145751_30912_196344" id="145751_30912pi_145751_30912_196344" value="196344">
+	                </div>
+	                <div>
+	                	<label for="145751_30912pi_145751_30912_196346">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
+	                	<input type="checkbox" name="145751_30912pi_145751_30912_196346" id="145751_30912pi_145751_30912_196346" value="196346">
+	                </div>
+	                <div>
+	                	<label for="145751_30912pi_145751_30912_196348">UNLEASH World Conference &amp; Expo<br />Amsterdam 23-24. October 2018</label>
+	                	<input type="checkbox" name="145751_30912pi_145751_30912_196348" id="145751_30912pi_145751_30912_196348" value="196348">
+	                </div>
+	            </div>
+
+			<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                    <input placeholder="First name" data-field="fname" class="form-input" name="145751_30898pi_145751_30898" id="145751_30898pi_145751_30898" size="30" maxlength="255" type="text">
+                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_30900pi_145751_30900" id="145751_30900pi_145751_30900" size="30" maxlength="255" type="text">
+                    <input placeholder="Robot Source" value="Startup2018-Compete" class="form-input" name="145751_30910pi_145751_30910" id="145751_30910pi_145751_30910" size="30" maxlength="255" type="text">
+					<input placeholder="Page Source" type="text" name="145751_30908pi_145751_30908" id="145751_30908pi_145751_30908" value="Startup2018-Compete" class="text" size="30" maxlength="255"  />
+                </p>  
+                <div class="popup-paragraph popup-policy ">
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
+                </div>
+                <input name="submit" value="submit" type="submit" class="blue-btn">
+            </form>
+		  </div>
+		</div>
+	</div>		
+	
 	<div id="becomeaspeaker" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">

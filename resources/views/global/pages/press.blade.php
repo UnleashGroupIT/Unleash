@@ -89,7 +89,10 @@
 			<div class="content-wrap">
 				<h2>MEDIA RELEASES</h2>
 				<p>
-					<a href="http://www.unleashgroup.io/news/google-x-johnson-johnson-cisco-ge-digital-microsoft-speak-at-unleash-america/" target="_blank">Google X, Johnson &amp; Johnson, Cisco, GE Digital and Microsoft to Speak at UNLEASH America</a>
+					<a href="http://www.unleashgroup.io/news/unleash-hires-anna-ott/" target="_blank">UNLEASH hires Anna Ott as Head of Startup Ecosystem (8 February 2018)</a>
+					<a href="http://www.unleashgroup.io/news/technology-disruptor-jonas-kjellberg-keynote-unleash-conference-expo/" target="_blank">Technology Disruptor Jonas Kjellberg to keynote at UNLEASH Conference &amp; Expo (6 February 2018)</a>
+					
+					<a href="http://www.unleashgroup.io/news/google-x-johnson-johnson-cisco-ge-digital-microsoft-speak-at-unleash-america/" target="_blank">Google X, Johnson &amp; Johnson, Cisco, GE Digital and Microsoft to Speak at UNLEASH America (31 January 2018)</a>
 					<a href="http://www.unleashgroup.io/news/unleash-first-round-of-speakers-london18/" target="_blank">UNLEASH Conference &amp; Expo announces first round of speakers for London show in March. (11 January 2018)</a>
 					<a href="http://www.unleashgroup.io/news/bri-vellis-chief-marketing-officer/" target="_blank">Bri Vellis Joins UNLEASH as Chief Marketing Officer (12 December 2017)</a>
 					<a href="http://www.unleashgroup.io/news/unleash-appoints-mark-downey-head-strategy-corporate-ventures/" target="_blank">UNLEASH Appoints Mark Downey as Head of Strategy and Corporate Ventures; Continues to Roll Out Future Growth Plans (20 November 2017)</a>

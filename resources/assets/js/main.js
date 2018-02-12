@@ -342,6 +342,10 @@ $(document).ready(function(){
 
     if (window.location.href.indexOf('#ThankYouForEnquiry') != -1) {
 			$('#thankyou').css("display", "flex")
+    }
+
+    if (window.location.href.indexOf('#becomeasponsor') != -1) {
+			$('#becomeasponsor').css("display", "flex")
     }   
 
     if (window.location.href.indexOf('#ThankYouForSigningUp') != -1) {
