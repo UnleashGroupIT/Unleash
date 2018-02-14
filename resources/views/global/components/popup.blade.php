@@ -127,7 +127,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 	                <p>Please choose an Event</p>
 	                <div>
 	                	<label for="145751_30878pi_145751_30878_196332">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
-	                	<input type="checkbox" name="145751_30878pi_145751_30878_196332" id="145751_30878pi_145751_30878_196332" value="196332">
+	                	<input type="checkbox" name="145751_30878pi_145751_30878_196332" id="145751_30878pi_145751_30878_196332" value="196332" checked>
 	                </div>
 	                <div>
 	                	<label for="145751_30878pi_145751_30878_196334">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
@@ -174,7 +174,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 	                <p>Please choose an Event</p>
 	                <div>
 	                	<label for="145751_30894pi_145751_30894_196338">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
-	                	<input type="checkbox" name="145751_30894pi_145751_30894_196338" id="145751_30894pi_145751_30894_196338" value="196338">
+	                	<input type="checkbox" name="145751_30894pi_145751_30894_196338" id="145751_30894pi_145751_30894_196338" value="196338" checked>
 	                </div>
 	                <div>
 	                	<label for="145751_30894pi_145751_30894_196340">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
@@ -221,7 +221,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 	                <p>Please choose an Event</p>
 	                <div>
 	                	<label for="145751_30912pi_145751_30912_196344">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
-	                	<input type="checkbox" name="145751_30912pi_145751_30912_196344" id="145751_30912pi_145751_30912_196344" value="196344">
+	                	<input type="checkbox" name="145751_30912pi_145751_30912_196344" id="145751_30912pi_145751_30912_196344" value="196344" checked>
 	                </div>
 	                <div>
 	                	<label for="145751_30912pi_145751_30912_196346">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
