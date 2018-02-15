@@ -215,7 +215,7 @@ Route::get('/london/loyalty', function () {
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
-//Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
+Route::get('/london/sponsors_dev', 'SponsorsController@index');
 
 
 
@@ -327,18 +327,18 @@ Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about
 
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
 
-/*Route::get('/america/tickets', function () {
+Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
-})->name('lasvegas.tickets');*/
+})->name('lasvegas.tickets');
 
 /*Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');
 */
 
-Route::get('/america/tickets', function () {
+/*Route::get('/america/tickets', function () {
      return redirect('https://unleash.swoogo.com/unleashamerica/');
-})->name('lasvegas.tickets');
+})->name('lasvegas.tickets');*/
 
 
 Route::get('/america/travel', function () {

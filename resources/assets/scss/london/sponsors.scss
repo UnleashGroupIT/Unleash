@@ -180,7 +180,7 @@ section.two {
   min-height: 400px; }
   section.two.clients {
     flex-direction: column-reverse;
-    .green-btn{
+    .topaz-btn{
       margin-top: 2em;
     }
     p{
@@ -195,46 +195,36 @@ section.two {
     @media (min-width: 75em) {
       section.two.expo {
         flex-direction: row; } }
-  section.two .wrppr {
-    width: 100%;
-    min-height: 400px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
+  
+section.two .wrppr {
+  width: 100%;
+  min-height: 500px;
+  @media (min-width: 75em) {
+    width: 50%;
+  }
+
+  .img-bg{
+    height: 100%;
+
+    &.sponsorsbg{
+      background:url("../../gfx/london/sponsor-sec-mobile-bg.jpg");
+      background-size:cover;
+      background-position: bottom;
+      height: 500px;
+      @media (min-width: 40em) {
+        background:url("../../gfx/london/sponsor-sec-tablet-bg.jpg");
+        background-size:cover;
+        background-position: bottom;
+      }
+      @media (min-width: 75em) {
+      background-image: url("../../gfx/london/sponsor-sec-bg.jpg");
+      background-size:cover;
+      background-position: bottom;
       height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
+      }
     }
   }
-    section.two .fix-bg.sponsorsbg {
-      background-image: url("../../gfx/london/sponsor-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.sponsorsbg {
-          background-image: url("../../gfx/london/sponsor-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.sponsorsbg {
-          background-image: url("../../gfx/london/sponsor-sec-bg.jpg");
-          background-position: top left; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.sponsorsbg {
-          background-size: 50% 100%; } }
+}
   section.two.testimonial {
     flex-direction: column-reverse; }
     @media (min-width: 75em) {
@@ -356,72 +346,49 @@ section.two {
     margin-bottom: 0; }
 
 section.one-cntr {
-  background: url("../../gfx/london/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  background-color:$butter;
   text-align: center;
-  padding: 2em 0; }
-  section.one-cntr.counter {
-    background: url("../../gfx/counter-bg.jpg");
-    background-size: cover;
-    background-position: center; }
-  @media (min-width: 75em) {
-    section.one-cntr {
-      padding: 4em 0; } }
-  section.one-cntr p, section.one-cntr h2 {
-    color: #fff;
-    line-height: 2em; }
-  section.one-cntr h2 {
-    display: inline-block;
-    position: relative;
-    background-color: #33cc33;
-    padding: .2em .5em;
-    line-height: 1; }
-    section.one-cntr h2::before, section.one-cntr h2::after {
-      position: absolute;
-      top: 3px; }
-    section.one-cntr h2::before {
-      content: url("../../gfx/left-sign.png");
-      left: -33px; }
-    section.one-cntr h2::after {
-      content: url("../../gfx/right-sign.png");
-      right: -33px; }
+  padding: 2em 0;
+}
+
+@media (min-width: 75em) {
+  section.one-cntr {
+    padding: 4em 0;
+  }
+}
+
+section.one-cntr h2{
+  font-size: 3rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
+}
+section.one-cntr p{
+  margin: 2em 0;
+}
+
+section.one-cntr button {
+  width: 90%;
+}
+
+@media (min-width: 40em) {
   section.one-cntr button {
-    margin: 1em;
-    margin-top: 2em;
-    width: 90%; }
-    @media (min-width: 40em) {
-      section.one-cntr button {
-        width: 205px; } }
-    @media (min-width: 120em) {
-      section.one-cntr button {
-        width: 10.7vw; } }
-    section.one-cntr button:hover {
-      background-color: transparent;
-      color: #fff;
-      border-color: #fff; }
-  section.one-cntr.counter .your-clock {
-    display: flex;
-    justify-content: center;
-    margin: 5em 0; }
-    @media (min-width: 120em) {
-      section.one-cntr.counter .your-clock {
-        margin: 2.8vw 0; } }
-    @media (min-width: 45em) {
-      section.one-cntr.counter button {
-        margin: 0 2em;
-        margin-top: 2em } }
-  section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
-    display: none; }
-  @media (min-width: 45em) {
-    section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
-      display: block; } }
-  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
-    display: none; }
-    @media (min-width: 45em) {
-      section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
-        display: block; } }
+    width: 205px;
+  }
+}
+
+@media (min-width: 120em) {
+  section.one-cntr button {
+    width: 10.7vw;
+  }
+}
 
 .testim {
   margin: 3em 0;
@@ -455,57 +422,94 @@ section.map {
  background: url("../../gfx/london/map-mobile-bg.jpg");
   background-size: cover;
   background-position: top;
-  min-height: 600px;
   display: flex;
+  height:600px;
+  position:relative;
   @media (min-width: 600px) {
     background: url("../../gfx/london/map-bg.jpg");
     background-size: cover;
     background-position: center;
   }
 }
-  @media (min-width: 65em) {
-    section.map {
-      display: block; } }
+
+@media (min-width: 65em) {
+  section.map {
+    display: block;
+  }
+}
+
+section.map .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      position:absolute;
+      bottom:0;
+
+  @media (min-width: 600px) {
+    width:50%; 
+  }
+}
+
+@media (min-width: 65em) {
   section.map .content {
-    padding: 0 2em;
-    display: flex;
-    flex-wrap: wrap; }
-    @media (min-width: 65em) {
-      section.map .content {
-        max-width: 950px;
+    -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        padding: 6em 4em; } }
-    @media (min-width: 75em) {
-      section.map .content {
-        max-width: 49.5vw;
-        padding: 5vw 4vw; } }
+  }
+}
+
+@media (min-width: 75em) {
+  section.map .content {
+    max-width: 49.5vw;
+  }
+}
+
+section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background-color: $topaz;
+}
+
+section.map .mapcont-wrp p {
+  margin: 1em 0;
+}
+
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
+@media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 2em;
-    background-color: #fff;
-    box-shadow: 3px 3px 15px #999;
-    margin-top: auto;
-    max-width: 400px; }
-    section.map .mapcont-wrp p {
-      margin: 1em 0; }
-    @media (min-width: 95em) {
-      section.map .mapcont-wrp {
-        padding: 3.3vw;
-        max-width: 21vw;
-        width: 50%;
-        padding: 4em; } }
-    section.map .mapcont-wrp button {
-      margin-top: 1em; }
+    width: 50%;
+    padding: 4em;
+  }
+}
+
+section.map .mapcont-wrp button {
+  margin-top: 1em;
+}
+
+section.map .map-pic {
+  width: 100%;
+  background: url("../../gfx/london/v2-site/venue-sec-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+@media (min-width: 95em) {
   section.map .map-pic {
-    width: 100%;
-    background: url("../../gfx/london/venue.jpg");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 3px 3px 15px #999;
-    display: none; }
-    @media (min-width: 95em) {
-      section.map .map-pic {
-        width: 50%;
-        display: block; } }
+    width: 50%;
+    display: block;
+  }
+}
 
 section.sponsors {
   min-height: 300px;

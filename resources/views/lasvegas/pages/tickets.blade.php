@@ -78,7 +78,7 @@
         <div class="BoxInnerConent">
 						<h3>Access to Discounted <br> Hotel Room Rate</h3>
 							<ul class="BenefitUL">
-							<li>Book your room at $125 / night at Aria Resort and Casino <br>in Las Vegas</li>
+							<li>+ 2 night discounted accommodation at Aria Resort and Casino ($125/night) <br>in Las Vegas</li>
 							</ul>
 
             <h3>Full Access to Exhibition Floor</h3>
@@ -105,9 +105,9 @@
             </ul>
 
        </div>
-   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="supersaver">BOOK NOW</button>
+   <a href="https://unleash.swoogo.com/unleashamerica/application?reg_type_id=21582" target="_blank"><button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup">BOOK NOW</button></a>
   </div>
-
+<!--
 
 
     <div id="GovSector" class="TicketBox IsoBox SummerSaver TicketThree" data-category="SummerSaver">
@@ -150,7 +150,7 @@
        </div>
    <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="oneday">BOOK NOW</button>
   </div>
-  
+  -->
      <div class="TicketBox IsoBox Group TicketFour" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
@@ -164,9 +164,13 @@
 
        </div>
    <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="alacarte">CONTACT US</button>
-  </div> 
-
-  <div class="TicketBox IsoBox Group TicketThree mobilemargin-up" data-category="Group">
+ 
+			
+			
+			
+			
+			</div> 
+ <div class="TicketBox IsoBox Group TicketThree mobilemargin-up" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">TEAM 5 OR MORE</h2>
@@ -207,7 +211,7 @@
             </ul>
 
        </div>
-   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="team-5">BOOK NOW</button>
+  <a href="https://unleash.swoogo.com/unleashamerica/register?reg_type_id=22983" target="_blank"> <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" >BOOK NOW</button></a>
   </div>
   <div class="TicketBox IsoBox Group TicketOne mobilemargin-up" data-category="Group">
     <div class="TicketBoxHeader">
@@ -249,7 +253,7 @@
             </ul>
 
        </div>
-   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="team-8">BOOK NOW</button>
+   <a href="https://unleash.swoogo.com/unleashamerica/register?reg_type_id=22985"><button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup">BOOK NOW</button></a>
   </div>
 
 <div class="PopularTicketBox IsoBox Group TicketTwo" data-category="Group">
@@ -293,15 +297,15 @@
             </ul>
 
        </div>
-   <button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" data-popupdata="team-12">BOOK NOW</button>
-  </div>
+   <a href="https://unleash.swoogo.com/unleashamerica/register?reg_type_id=22986"><button class="TicketButton AmericasButtonInverted AmericasButtonInvertedHover popup" >BOOK NOW</button></a>
+			</div>
     <!-- GROUP TICKETS END -->
     <!-- INVESTORS -->
       <div class="TicketBox IsoBox Investor TicketFour mobilemargin-up" data-category="Investor">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">INVESTOR/VC</h2>
-            <h2 class="TicketPrice">$695</h2>
+            <h2 class="TicketPrice">$995</h2>
             <h4 class="TicketSmallText">Save $100</h4>
             <h3 class="TicketDeadline">Until March 31.</h3>
         </div>
@@ -332,7 +336,7 @@
              <li>Dedicated networking lounges</li>
             </ul>
        </div>
-   <button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" data-popupdata="investor">BOOK NOW</button>
+   <a href="https://unleash.swoogo.com/unleashamerica/register?reg_type_id=22246" target="_blank"><button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" >BOOK NOW</button></a>
   </div>
   <!-- INVESTORS END -->
 
@@ -377,7 +381,7 @@
    <button class="TicketButton AmsterdamButtonInverted AmsterdamButtonInvertedHover popup" data-popupdata="startup">BOOK NOW</button>
   <!-- STARTUP END -->
 
- </div>-->
+ </div>
  </div>
 
      <div id="ButtonContainer">
@@ -487,108 +491,6 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
         </div>
     </div>		
 	
-    <div id="team-5" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h3>Team 5 or more</h3>
-            <p>Thank you for your interest in our event.
-Please fill in all the fields below, and we'll get back to you soon.</p>
-          </div>
-          <div class="modal-body">
-            <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-12-13/lkkft" class="form">
-                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Business Email" class="form-input" name="145751_28508pi_145751_28508" id="145751_28508pi_145751_28508" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_28510pi_145751_28510" id="145751_28510pi_145751_28510" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organization Name" class="form-input" name="145751_28506pi_145751_28506" id="145751_28506pi_145751_28506" size="30" maxlength="255" type="text">
-
-
-            <p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_28502pi_145751_28502" id="145751_28502pi_145751_28502" size="30" maxlength="255" type="text">
-                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_28504pi_145751_28504" id="145751_28504pi_145751_28504" size="30" maxlength="255" type="text">
-                    <input placeholder="Ticket Type" data-field="type" class="form-input" name="145751_29318pi_145751_29318" id="145751_29318pi_145751_29318" size="30" maxlength="255" type="text" value="Team-5">
-                    <input placeholder="Robot Source" type="text" name="145751_28514pi_145751_28514" id="145751_28514pi_145751_28514" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                    <input placeholder="Page Source" type="text" name="145751_28516pi_145751_28516" id="145751_28516pi_145751_28516" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                </p>
-                <div class="popup-paragraph popup-policy ">
-                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-                </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn TicketSubmit">
-            </form>
-          </div>
-        </div>
-    </div>
-
-    <div id="team-8" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h3>Team 8 or more</h3>
-            <p>Thank you for your interest in our event.
-Please fill in all the fields below, and we'll get back to you soon.</p>
-          </div>
-          <div class="modal-body">
-            <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-12-13/lkkft" class="form">
-                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Business Email" class="form-input" name="145751_28508pi_145751_28508" id="145751_28508pi_145751_28508" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_28510pi_145751_28510" id="145751_28510pi_145751_28510" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organization Name" class="form-input" name="145751_28506pi_145751_28506" id="145751_28506pi_145751_28506" size="30" maxlength="255" type="text">
-
-
-            <p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_28502pi_145751_28502" id="145751_28502pi_145751_28502" size="30" maxlength="255" type="text">
-                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_28504pi_145751_28504" id="145751_28504pi_145751_28504" size="30" maxlength="255" type="text">
-                    <input placeholder="Ticket Type" data-field="type" class="form-input" name="145751_29318pi_145751_29318" id="145751_29318pi_145751_29318" size="30" maxlength="255" type="text" value="Team-8">
-                    <input placeholder="Robot Source" type="text" name="145751_28514pi_145751_28514" id="145751_28514pi_145751_28514" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                    <input placeholder="Page Source" type="text" name="145751_28516pi_145751_28516" id="145751_28516pi_145751_28516" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                </p>
-                <div class="popup-paragraph popup-policy ">
-                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-                </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn TicketSubmit">
-            </form>
-          </div>
-        </div>
-    </div>
-
-    <div id="team-12" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h3>Team 12 or more</h3>
-            <p>Thank you for your interest in our event.
-Please fill in all the fields below, and we'll get back to you soon.</p>
-          </div>
-          <div class="modal-body">
-            <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2017-12-13/lkkft" class="form">
-                <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
-                <input required="required" placeholder="Business Email" class="form-input" name="145751_28508pi_145751_28508" id="145751_28508pi_145751_28508" size="30" maxlength="255" type="email">
-                <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_28510pi_145751_28510" id="145751_28510pi_145751_28510" size="30" maxlength="40" type="tel">
-                <input required="required" placeholder="Organization Name" class="form-input" name="145751_28506pi_145751_28506" id="145751_28506pi_145751_28506" size="30" maxlength="255" type="text">
-
-
-            <p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                    <input placeholder="First name" data-field="fname" value="." class="form-input" name="145751_28502pi_145751_28502" id="145751_28502pi_145751_28502" size="30" maxlength="255" type="text">
-                    <input placeholder="Last name" data-field="lname" class="form-input" name="145751_28504pi_145751_28504" id="145751_28504pi_145751_28504" size="30" maxlength="255" type="text">
-                    <input placeholder="Ticket Type" data-field="type" class="form-input" name="145751_29318pi_145751_29318" id="145751_29318pi_145751_29318" size="30" maxlength="255" type="text" value="Team-12">
-                    <input placeholder="Robot Source" type="text" name="145751_28514pi_145751_28514" id="145751_28514pi_145751_28514" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                    <input placeholder="Page Source" type="text" name="145751_28516pi_145751_28516" id="145751_28516pi_145751_28516" value="America2018-Tickets" class="text" size="30" maxlength="255"  />
-                </p>
-                <div class="popup-paragraph popup-policy ">
-                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
-                    <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
-                </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn TicketSubmit">
-            </form>
-          </div>
-        </div>
-    </div>
-
     <div id="investor" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -743,7 +645,7 @@ $('.NavMenuLi').on( 'click', function(e) {
   $('.NavMenuLi').removeClass('NavActive');
   $(e.target).addClass('NavActive');
 
-  if ( filterValue == ".SummerSaver"){
+ /* if ( filterValue == ".SummerSaver"){
      $('#TimelineOther').fadeOut(100, function(){
         $('#TimelineSingle').fadeIn(100);
      });
@@ -754,7 +656,7 @@ $('.NavMenuLi').on( 'click', function(e) {
          $('#TimelineOther').fadeIn(100);
     });
 
-  }
+  }*/
 });
 
 

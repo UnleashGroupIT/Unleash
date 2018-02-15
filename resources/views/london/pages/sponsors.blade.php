@@ -35,12 +35,19 @@
 	<!--Keynote-->
 	<section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg sponsorsbg"></div>
+			<div class="img-bg sponsorsbg"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<p>UNLEASH sponsors represent the Who’s Who of the world’s leading solution and service providers offering the most innovative and disruptive technologies to be found anywhere. Our sponsors have the solutions that are shaping the Future of Work and driving rapid transformation inside the the 21st century’s most forward thinking organizations. At UNLEASH the show is a happening place for optimism and wonder where inspiration bubbles, and where attendees can discuss and identify the latest technologies and how to implement them for the greatest potential impact.</p>
-				<button class="green-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
+				<p>UNLEASH is the leading show on Future of Work and Technology both in terms of content provided by hundreds of speakers and deal-making on our expo floors. With the largest group of Enterprise buyers in the industry attending our shows, large enterprises to the next innovators from around the world will want to attend UNLEASH Conference &amp; Expo in London. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the way the world works!
+ <br>
+<br>
+
+
+
+ 
+The Expo Floor and A La Carte Packages are running out – be sure to book your spot now!</p>
+				<button class="topaz-btn popup" data-popupdata="becomeasponsor">Become a sponsor</button>
 			</div>
 		</div>
 	</section>
@@ -55,7 +62,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 1)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>	
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -67,7 +76,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 2)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+			<div class="sponsor">
+					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+			</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -80,7 +91,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 3)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -93,7 +106,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 4)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -105,7 +120,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 5)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -118,7 +135,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 6)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -131,7 +150,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 7)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+				<div class="sponsor">
+						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -143,7 +164,9 @@
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 10 || $sponsor->pivot->alacarte == 1)
 			 <!--sponsors-->
-				 @include('london.components.sponsorpagegrid')
+			<div class="sponsor">
+					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+			</div>
 			<!--sponsors END-->
 			   @endif
 			@endforeach	
@@ -168,19 +191,21 @@
 			<h2>Register Now!</h2>
 			<p>Unleash Yourself! Book your place at the world's leading and fastest growing show on the future of work. Now is the time to face the challenge of change. Set your people loose and power your organization into the next decade of the 21st Century.</p>
 			<div class="your-clock"></div>
-			<button class="green-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
+			<button class="red-btn popup" data-popupdata="becomeasponsor">Become a Sponsor</button>
 		</div>
 	</section>
 	<!--Counter END-->
 	<!--Map-->
-	<section class="map">
+	<section id="map" class="map">
+		<iframe src="https://snazzymaps.com/embed/27565" width="100%" height="600px" style="border:none;"></iframe>
 		<div class="content">
 			<div class="mapcont-wrp">
+				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>ExCeL London, will host Unleash in March 2018. ExCeL is London and the UK’s leading venue for exhibitions, conferences, and much more.</p>
+					<p>The ExCeL London, will host UNLEASH in March 2018. The ExCeL is London and the UK's leading venue for exhibitions and conferences. With two on-site metro stations, parking for 3,700 cars and London City Airport just five minutes away, getting to ExCeL London couldn't be easier.</p>
 				</div>
-				<a href="{{ route('london.floorplan') }}"><button class="green-btn">More</button></a>
+				<a href="{{ route('london.floorplan') }}"><button class="darkgreen-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
