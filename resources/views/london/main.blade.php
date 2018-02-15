@@ -119,7 +119,7 @@
 				<li><a href="{{ route('london.index') }}">SHOW</a></li>
 				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
 				<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
-				<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
+				<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
 				<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>

@@ -217,15 +217,15 @@ Route::get('/london/loyalty', function () {
 
 Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('london.speaker');
 
-Route::get('/london/sponsors_dev', 'SponsorsController@index');
+Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
 
 
 
 //Route::get('/london/sponsor', 'SponsorsController@index');
 
-Route::get('/london/sponsors', function () {
+/*Route::get('/london/sponsors', function () {
     return redirect('/london/index#spnsrgrd');
-})->name('london.sponsors');
+})*/
 
 Route::get('/london/sponsor', function () {
     return redirect('/london/index#spnsrgrd');
