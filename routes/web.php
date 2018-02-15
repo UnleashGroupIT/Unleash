@@ -58,9 +58,7 @@ Route::get('/holiday', function () {
   
 })->name('ams.holiday');
 
-Route::get('/startup', function () {
-  return view('global.pages.startup');
-})->name('global.startup');
+Route::get('/startup', 'StartupsController@index')->name('global.startup');
 
 
 

@@ -67,37 +67,27 @@
 			<div class="fix-bg startup-2"></div>
 		</div>
 	</section>
+	<!--
 	<section class="divider">
 		<h4>Past winners of the UNLEASH startup competition</h4>
-	</section>
+	</section> 
+
+	<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
+
 		<div class="sponsors-wrp">
-			<div id="arctic" class="sponsor come-in">
-				<a href="https://www.arcticshores.com/">
-					<img src="{{ URL::asset('gfx/arcticShores.png') }}" alt="Arcticshores">
-				</a>
-			</div><!--sponsors END-->
-			<div class="sponsor come-in">
-				<a href="https://www.clustree.com/">
-					<img src="{{ URL::asset('gfx/clustree.png') }}" alt="Clustree">
-				</a>
-			</div><!--sponsors END-->
-			<div class="sponsor come-in">
-				<a href="https://ico.robotvera.com/">
-					<img src="{{ URL::asset('gfx/robot-vera.png') }}" alt="Robot Vera">
-				</a>
-			</div><!--sponsors END-->
-			<div class="sponsor come-in">
-				<a href="http://tandemhrsolutions.com/">
-					<img src="{{ URL::asset('gfx/tandem.png') }}" alt="Tandem">
-				</a>
-			</div><!--sponsors END-->
-			<div class="sponsor come-in">
-				<a href="https://textio.com/">
-					<img src="{{ URL::asset('gfx/textio.png') }}" alt="Textio">
-				</a>
-			</div><!--sponsors END-->
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 0)
+			 <!--sponsors-->
+				<div class="sponsor">
+					<a href="{{$sponsor->website}}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
+				</div>	
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
 		</div>
+										
 	</section>
 	<section class="one futureofwork">
 		<div class="wrp animated fadeInTop">

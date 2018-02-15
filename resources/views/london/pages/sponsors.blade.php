@@ -52,7 +52,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 		</div>
 	</section>
 	<section class="divider">
-		<h4>Our previous sponsors of 2017</h4>
+		<h4>Our Sponsors</h4>
 	</section>
 		<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
@@ -62,9 +62,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 1)
 			 <!--sponsors-->
-				<div class="sponsor">
-					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>	
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -76,9 +74,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 2)
 			 <!--sponsors-->
-			<div class="sponsor">
-					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-			</div>
+				@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -91,9 +87,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 3)
 			 <!--sponsors-->
-				<div class="sponsor">
-						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -106,28 +100,24 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 4)
 			 <!--sponsors-->
-				<div class="sponsor">
-						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
 
 		</div>
 
-		<h2>Gold Sponsors</h2>
+	{{--	<h2>Gold Sponsors</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 5)
 			 <!--sponsors-->
-				<div class="sponsor">
-						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
 
-		</div>
+	</div> --}}
 
 
 		<h2>Silver Sponsors</h2>
@@ -135,9 +125,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 6)
 			 <!--sponsors-->
-				<div class="sponsor">
-						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
@@ -150,28 +138,26 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 7)
 			 <!--sponsors-->
-				<div class="sponsor">
-						<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-				</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach
 
 		</div>	
 
-		<h2>A La Carte</h2>
+	{{--	<h2>A La Carte</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 10 || $sponsor->pivot->alacarte == 1)
 			 <!--sponsors-->
-			<div class="sponsor">
-					<a href="{{ route('london.sponsor', $sponsor->slug) }}"><img src="{{ URL::asset('storage/sponsors/colored') }}/{{$sponsor->logo_url}}" alt="{{$sponsor->company_name}}"></a>
-			</div>
+					@include('london.components.sponsorpagegrid')
 			<!--sponsors END-->
 			   @endif
 			@endforeach	
 		</div>	
 		
+	--}}
+	
 		<!--<h2> Startup</h2>
 		<div class="sponsors-wrp">
 			{{--@foreach($sponsors as $sponsor)
