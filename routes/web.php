@@ -31,6 +31,10 @@ Route::get('/about', function () {
   return view('global.pages.about');
 })->name('ams.about');
 
+Route::get('/careers', function () {
+   return redirect('https://careers.unleashgroup.io/homepage');
+})->name('careers');
+
 Route::get('/media', function () {
   return view('global.pages.press');
 })->name('media');

@@ -58,6 +58,6 @@
 					</li>
 					<li><a href="{{ route('global.startup') }}">Startup</a></li>
 					<li><a href="{{ route('ams.about') }}">About</a></li>
-					<li><a href="{{ route('ams.about') }}#careers">Careers</a></li>
+					<li><a href="https://careers.unleashgroup.io/homepage">Careers</a></li>
 					<li><a href="{{ route('media') }}">Media</a></li>
 				</ul>
