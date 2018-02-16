@@ -69,7 +69,7 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .version(); 
 
 /******** America *********/
-mix.js('resources/assets/js/lasvegas/flipclock.min.js', 'public/js/lasvegas')
+mix.js('resources/assets/js/lasvegas/responsiveslides.js', 'public/js/lasvegas')
    .js('resources/assets/js/lasvegas/main.js', 'public/js/lasvegas');  
 
 mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')

@@ -32,44 +32,25 @@
 
 @section('maincontent')
 
-	<section class="two keynote arianna">
+	<section class="two keynote f">
 		<div class="wrppr">
-			<div class="fix-bg travelbg"></div>
+			<div class="img-bg travelbg"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<div class="h4wrp">
-					<h2 class="aloft">ARIA RESORT &amp; CASINO</h2>
-					<img class="U-logo" src="{{ URL::asset('gfx/london/U.png') }}" alt="Unleash">
-				</div>
-				<p class="pdg">UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
+				<h2>ARIA RESORT &amp; CASINO</h2>
+				
+				<p>UNLEASH is delighted to be making it's US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows. Described in Popular Mechanics as possibly "the most technologically advanced hotel ever built" the Aria has something for everyone, including a casino, 16 restaurants, bars, nightclubs, pools, and shopping. The Aria’s technologically advanced, flexible meeting space is highlighted by stunning indoor/open-air spaces and a glass-enclosed venue with dramatic views of The Park and the spectacular new T-Mobile Arena.</p>
+				<h3>ADDRESS</h3>
+				<p>3730 S Las Vegas Blvd, Las Vegas, NV 89158</p>							
 			</div>
-			<div class="content-wrap pdg">
-				<h3>Address</h3>
-				<p>3730 S Las Vegas Blvd, Las Vegas, NV 89158</p>
-			</div>
-			<div class="pdg btm">
-				<div class="h4wrp">
-					<!--<a href="https://www.aria.com/en/booking/room-booking.html" target="_blank"><button class="white-btn">Book now</button></a>-->
-					<a href="https://www.google.hu/maps/place/ARIA+Resort+%26+Casino+Las+Vegas/@36.1074628,-115.1789045,17z/data=!3m2!4b1!5s0x80c8c431e35b9c4b:0xa1d65d6b6c79b3db!4m5!3m4!1s0x80c8c42e1d156485:0x2ef3882f44b3056f!8m2!3d36.1074585!4d-115.1767158?hl=hu" target="_blank"><button class="white-btn">Show on Map</button></a>
-				</div>
+			<div class="schedule-wrp">
+				<a href="https://www.google.hu/maps/place/ARIA+Resort+%26+Casino+Las+Vegas/@36.1074628,-115.1789045,17z/data=!3m2!4b1!5s0x80c8c431e35b9c4b:0xa1d65d6b6c79b3db!4m5!3m4!1s0x80c8c42e1d156485:0x2ef3882f44b3056f!8m2!3d36.1074585!4d-115.1767158?hl=hu" target="_blank"><button class="white-btn">Show on Map</button></a>
 			</div>
 		</div>
 	</section>
-	<section class="two keynote arianna flights">
-		<div class="content">
-			<div class="content-wrap">
-				<h2>Flights</h2>
-				<p class="pdg">We would like to provide you the best experience possible as you arrive to London. That’s why HR Tech World and British Airways have partnered to give you 20% off of your round-trip airfare! For you to receive the discounted airfare, please click below to be directed to the British Airways’ website where you can purchase your flight to London. <br /><br />Please note, to be eligible for the 20% discount, HR Tech World London attendees must be flying to London City Airport from Amsterdam, Edinburgh, Dublin, Dusseldorf, Frankfurt, Geneva, Glasgow, Isle of Man, Madrid, Rotterdam or Zurich.</p>
-			</div>
-		</div>
-		<div class="wrppr">
-			<div class="fix-bg floorplancitybg"></div>
-		</div>
-	</section>
-	<!--Expo END-->
 
-	<section class="two clients">
+	<section class="two keynote">
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Las Vegas</h2>
@@ -77,7 +58,7 @@
 			</div>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg floorplanbg"></div>
+			<div class="img-bg floorplanbg"></div>
 		</div>
 	</section>
 	<section class="one-cntr vhcls">
@@ -108,15 +89,16 @@
 		</div>
 	</section>
 
-	<section class="map">
+	<section id="map" class="map">
+		<iframe src="https://snazzymaps.com/embed/48553" width="100%" height="600px" style="border:none;"></iframe>
 		<div class="content">
 			<div class="mapcont-wrp">
 				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>Inspire the flow of new ideas with an unconventional space for your next meeting. Native plants and trees and natural light add a calming desert ambiance to our 300,000 square feet of versatile.</p>
+					<p>UNLEASH is delighted to make its US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
-				<button class="red-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
+				<button class="darkgreen-btn popup" data-popupdata="joinourcommunity">Join Our Community</button>
 			</div>
 			<div class="map-pic">
 			</div>

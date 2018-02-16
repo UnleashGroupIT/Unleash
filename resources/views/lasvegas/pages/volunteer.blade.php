@@ -35,7 +35,7 @@
 
 <section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg vol-1"></div>
+			<div class="img-bg vol-1"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -59,7 +59,7 @@
 			<button class="red-btn popup" data-popupdata="volunteer">Apply</button>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg vol-2"></div>
+			<div class="img-bg vol-2"></div>
 		</div>
 	</section>
 	<!--Expo END-->
@@ -73,7 +73,7 @@
 	</section>
 	<section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg vol-3"></div>
+			<div class="img-bg vol-3"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -93,7 +93,7 @@
 			</div>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg vol-4"></div>
+			<div class="img-bg vol-4"></div>
 		</div>
 	</section>
 	<section id="viki" class="one-cntr">

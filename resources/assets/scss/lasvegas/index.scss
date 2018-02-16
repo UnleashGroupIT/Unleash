@@ -19,6 +19,7 @@ body {
 }
 
 header {
+  position:relative;
   min-height: 800px;
   overflow: hidden;
   display: -webkit-box;
@@ -38,17 +39,10 @@ header {
 
 @media (min-width: 40em) {
   header {
-    height: 100vh;
-    min-height: 780px;
+    min-height: auto;
     background: url("../../gfx/lasvegas/header-bg-desktop.jpg") no-repeat #000;
     background-size: cover;
     background-position: center;
-  }
-}
-
-@media (min-width: 75em) {
-  header {
-    position: relative;
   }
 }
 
@@ -146,8 +140,23 @@ section.one .wrp button {
   margin-bottom: 0;
 }
 
-@media (min-width: 40em) {
-  section.one.futureofwork {
+section.one.futureofwork{
+  background-color:$las;
+  p{
+    color:$white;
+  }
+  h2{
+    color:$white;
+    font-size: 3rem;
+    font-family: "Anton","museo-sans",sans-serif;
+    @media (min-width: 40em) {
+      font-size:3.5rem
+    }
+    @media (min-width: 95em) {
+      font-size:3.7rem
+    }
+  }
+  @media (min-width: 40em) {
     text-align: center;
   }
 }
@@ -155,10 +164,23 @@ section.one .wrp button {
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
-  z-index: 2;
+  background: rgba(0,0,0,0.95);
+  padding-top:2em;
+  @media (min-width: 40em) {
+    margin-top:-5px;
+  }
   @media (min-width: 75em) {
     margin-bottom: 2em;
   }
+
+  @media (min-width: 95em) {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    z-index: 5;
+    background:none;
+  }
+
   span{
     display: block;
     text-transform: uppercase;
@@ -166,6 +188,11 @@ section.one.mainsponsors {
     margin-bottom: .5em;
   }
 }
+
+
+
+
+
   
   section.one.mainsponsors .mainsponsors-wrap {
     display: flex;
@@ -359,157 +386,39 @@ section.two {
 section.two .wrppr {
   width: 100%;
   min-height: 500px;
-  box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7);
-}
-
-@media (min-width: 75em) {
-  section.two .wrppr {
+  @media (min-width: 75em) {
     width: 50%;
   }
-}
 
-section.two.keynote.arianna .BettsOxford {
-  padding: 0 1.4em;
-  color:#fff;
-  font-size: 1.2rem;
-  margin: 1em 0;
-}
+  .img-bg{
+    height: 100%;
 
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .BettsOxford {
-    padding: 0 3.1vw;
-
-  }
-}
-
-section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
+    &.mo{
+      background:url("../../gfx/lasvegas/v2-site/mo-bg.jpg");
+      background-size:cover;
+      background-position: center;
     }
-    @media (min-width: 75em) {
+
+    &.expo{
+      background:url("../../gfx/lasvegas/expo-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+
+    &.clients{
+      background:url("../../gfx/lasvegas/clients-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
+      @media (min-width: 75em) {
       height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
+      }
     }
-    @media (min-width: 105em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-  }
-
-section.two .fix-bg.betts {
-  background-image: url("../../gfx/lasvegas/mo-mobile-bg.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/lasvegas/mo-tablet-bg.jpg");
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.betts {
-    background-image: url("../../gfx/lasvegas/mo-bg.jpg");
-    background-position: top left;
-  }
-}
-
-section.two .fix-bg.expobg {
-  background-image: url("../../gfx/lasvegas/expo-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.expobg {
-    background-image: url("../../gfx/lasvegas/expo-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.expobg {
-    background-image: url("../../gfx/lasvegas/expo-sec-bg.jpg");
-    background-position: top right;
-  }
-}
-
-section.two .fix-bg.clientsbg {
-  background-image: url("../../gfx/lasvegas/clients-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.clientsbg {
-    background-image: url("../../gfx/lasvegas/clients-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.clientsbg {
-    background-image: url("../../gfx/lasvegas/clients-sec-bg.jpg");
-    background-position: top left;
-  }
-}
-
-section.two .fix-bg.startupbg {
-  background-image: url("../../gfx/lasvegas/startup-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.startupbg {
-    background-image: url("../../gfx/lasvegas/startup-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.startupbg {
-    background-image: url("../../gfx/lasvegas/startup-sec-bg.jpg");
-    background-position: top right;
-  }
-}
-
-section.two .fix-bg.speakers.right {
-  background-image: url("../../gfx/lasvegas/speakers-sec-mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-@media (min-width: 40em) {
-  section.two .fix-bg.speakers.right {
-    background-image: url("../../gfx/lasvegas/speakers-sec-tablet-bg.jpg");
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 75em) {
-  section.two .fix-bg.speakers.right {
-    background-image: url("../../gfx/lasvegas/speakers-sec-bg.jpg");
-    background-position: top right;
+    &.startup{
+      background:url("../../gfx/lasvegas/startup-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }  
   }
 }
 
@@ -522,113 +431,42 @@ section.two .fix-bg.speakers.right {
 }
 
 
+section.two.keynote .content {
+  background-color: $butter;
+}
+
+section.two.keynote h5 {
+  margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+  font-weight:100;
+  letter-spacing:0;
+}
+
+section.two.keynote h2 {
+  font-size: 3rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:3.7rem;
+  }
+}
 
 
-section.two.testimonial {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+section.two.keynote .schedule-wrp {
+  button{
+    margin: 0;
+  }
 }
 
 @media (min-width: 75em) {
-  section.two.testimonial {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  section.two.keynote .schedule-wrp {
+    margin-top: auto;
   }
 }
-
-
-section.two.keynote.arianna .content {
-    background-color: #e80f42;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 3em; }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .content {
-        padding-bottom: 2.55vw; } }
-  section.two.keynote.arianna .h4wrp {
-    display: flex;
-    margin-bottom: 1em; }
-    section.two.keynote.arianna .h4wrp > div {
-      display: flex;
-      margin-left: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp > div {
-          margin-left: 3.5em; } }
-    section.two.keynote.arianna .h4wrp .U-logo {
-      margin: auto;
-      margin-right: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp .U-logo {
-          margin: auto;
-          margin-right: 4em; } }
-  section.two.keynote.arianna p {
-    color: #fff; }
-  section.two.keynote.arianna h2 {
-    padding: .2em;
-    padding-left: 1em;
-    padding-right: .5em;
-    color: #fff;
-    background-color: #083643;
-    display: inline-block; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h2 {
-        padding-left: 2em; } }
-  section.two.keynote.arianna h4 {
-    color: #fff;
-    margin: auto;
-    font-size: 1rem;
-    padding: 0 1em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h4 {
-        font-size: 1.3rem;
-        padding: 0 2em; } }
-  section.two.keynote.arianna h3 {
-    color: #fff;
-    margin-left: 3em;
-    margin-top: 2em; }
-  section.two.keynote.arianna .pdg {
-    padding: 0 2em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 4em; } }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 3.4vw; } }
-  section.two.keynote.arianna .strn {
-    display: block;
-    font-weight: 600;
-    margin: .5em 0; }
-  section.two.keynote.arianna .schedule-wrp {
-    width: 84%;
-    margin: 0 auto;
-    @media (min-width: 480px) {
-      width:auto;
-      margin-left:2em;
-    }
-  }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .schedule-wrp {
-        margin-top: auto;
-        margin-left: 4em; } }
-    section.two.keynote.arianna .schedule-wrp .schedule {
-      display: flex;
-      margin-bottom: 1em; }
-      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
-        margin: auto 0; }
-      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
-        margin-left: 1em;
-        text-transform: uppercase; }
-        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
-          font-weight: 600; }
-  section.two.keynote.arianna button {
-    margin-left: 0;
-    color: #e80f42; }
-    section.two.keynote.arianna button:hover {
-      color: #fff; }
 
 
 
@@ -667,6 +505,10 @@ section.two .content .content-wrap {
   }
 }
 
+section.two h2{
+  color:$las;
+}
+
 section.two button {
   margin-top: auto;
 }
@@ -681,19 +523,223 @@ section.two.keynote button {
   margin-bottom: 0;
 }
 
-section.one-cntr {
-  background: url("../../gfx/lasvegas/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 2em 0;
+.speaker-highlights{
+  .highlights-wrp{
+    display: flex;
+    flex-wrap: wrap;
+     @media (min-width: 75em) {
+        min-height: 850px;
+      }
+    .hl-member{
+      position:relative;
+      &:after{
+          content: '';
+          width: 100%;
+          height: 100%;
+          background:rgba(0,0,0,0.2);
+          display: block;
+          position:absolute;
+          top: 0;
+          left: 0;
+      }
+
+      width: 50%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 500px) {
+        height: 250px;
+      }
+      @media (min-width: 600px) {
+        height: 300px;
+      }
+      @media (min-width: 700px) {
+        height: 350px;
+      }
+      @media (min-width: 800px) {
+        width: auto;
+        height: 200px;
+        flex-basis: 25%;
+      }
+      @media (min-width: 1000px) {
+        height: 250px;
+      }
+      @media (min-width: 75em) {
+        height: auto;
+      }
+
+      .member-wrp{
+        position:relative;
+        z-index: 2;
+        margin-top: auto;
+        padding:1.5em 1em;
+        @media (min-width: 75em) {
+          padding:1.5em 2em;
+        }
+
+        h2{
+          font-size: 3.5vw;
+          color:$white;
+          margin-bottom: 0;
+          @media (min-width: 800px) {
+            font-size: 2vw;
+          }
+          @media (min-width: 900px) {
+            font-size: 1.5vw;
+          }
+
+        }
+        h5{
+          margin:0;
+          color:$white;
+          letter-spacing:0;
+          font-size: 3vw;
+          display: none;
+          @media (min-width: 500px) {
+            font-size: 2.5vw;
+          }
+          @media (min-width: 800px) {
+            font-size: 1.5vw;
+          }
+          @media (min-width: 75em) {
+            font-size: 1vw;
+          }
+          @media (min-width: 95em) {
+            font-size: .7vw;
+            display: block;
+          }
+        }
+        h6{
+          color:$white;
+          font-weight:bold;
+          margin-top: 2px;
+          font-size: 3vw;
+          @media (min-width: 500px) {
+            font-size: 2.5vw;
+          }
+          @media (min-width: 800px) {
+            font-size: 1.5vw;
+          }
+          @media (min-width: 75em) {
+            font-size: 1vw;
+          }
+          @media (min-width: 95em) {
+            font-size: .7vw;
+          }
+        }
+      }
+
+
+      &.jill-larsen{
+        background:url("../../gfx/lasvegas/v2-site/jill-larsen.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.josh-bersin{
+        background:url("../../gfx/lasvegas/v2-site/josh-bersin.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.jennifer-waldo{
+        background:url("../../gfx/lasvegas/v2-site/jennifer-waldo.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.david-lee{
+        background:url("../../gfx/lasvegas/v2-site/david-lee.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.kathleen-hogan{
+        background:url("../../gfx/lasvegas/v2-site/kathleen-hogan.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.sjoerd-gehring{
+        background:url("../../gfx/lasvegas/v2-site/sjoerd-gehring.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.diane-adams{
+        background:url("../../gfx/lasvegas/v2-site/diane-adams.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+      &.curt-burghardt{
+        background:url("../../gfx/lasvegas/v2-site/curt-burghardt.jpg");
+        background-size:cover;
+        background-position:bottom;
+        background-repeat:no-repeat;
+      }
+    }    
+  }
+  .highlight-text{
+    background-color:$las;
+    text-align: center;
+    padding:2em 1em;
+    padding-bottom:1em;
+    @media (min-width: 40em) {
+      padding:4em 1em;
+      padding-bottom:1em;
+    }
+
+    h2,h4,p{
+      color:$white;
+    }
+    h2{
+      font-size: 1.6rem;
+      font-family: "Anton","museo-sans",sans-serif;
+      @media (min-width: 500px) {
+        font-size: 2rem;
+      }
+      @media (min-width: 800px) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 75em) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 95em) {
+        font-size: 4rem;
+      }
+    }
+    h4{
+      font-size: 1.2rem;
+      font-weight:100;
+      line-height: 1.3em;
+      text-transform: none;
+      @media (min-width: 800px) {
+        font-size: 1.4rem;
+      }
+      @media (min-width: 75em) {
+        font-size: 1.6rem;
+      }
+    }
+  }  
 }
 
-section.one-cntr.counter {
-  background: url("../../gfx/counter-bg.jpg");
-  background-size: cover;
-  background-position: center;
+section.past-speakers{
+  h2{
+    color: $gray;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+section.one-cntr {
+  background-color:$butter;
+  text-align: center;
+  padding: 2em 0;
 }
 
 @media (min-width: 75em) {
@@ -702,37 +748,24 @@ section.one-cntr.counter {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
+section.one-cntr h2{
+  font-size: 3rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
 }
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #f2385a;
-  padding: .2em .5em;
-  line-height: 1;
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/lasvegas/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/lasvegas/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -747,39 +780,6 @@ section.one-cntr button {
     width: 10.7vw;
   }
 }
-
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
-section.one-cntr.counter .your-clock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 5em 0;
-}
-
-@media (min-width: 120em) {
-  section.one-cntr.counter .your-clock {
-    margin: 2.8vw 0;
-  }
-}
-
-section.one-cntr.counter button {
-  margin-top: 0;
-}
-
-@media (min-width: 45em) {
-  section.one-cntr.counter button {
-    margin: 0 2em;
-  }
-}
-
 
 
 .testim {
@@ -824,8 +824,9 @@ section.map {
  background: url("../../gfx/lasvegas/map-mobile-bg.jpg");
   background-size: cover;
   background-position: top;
-  min-height: 600px;
   display: flex;
+  height:600px;
+  position:relative;
   @media (min-width: 600px) {
     background: url("../../gfx/lasvegas/map-bg.jpg");
     background-size: cover;
@@ -840,47 +841,54 @@ section.map {
 }
 
 section.map .content {
-  padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      position:absolute;
+      bottom:0;
+
+  @media (min-width: 600px) {
+    width:50%; 
+  }
 }
 
 @media (min-width: 65em) {
   section.map .content {
-    max-width: 950px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: 6em 4em;
   }
 }
 
 @media (min-width: 75em) {
   section.map .content {
     max-width: 49.5vw;
-    padding: 5vw 4vw;
   }
 }
 
 section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
-  background-color: #fff;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
-  margin-top: auto;
-  max-width: 400px;
+  background-color: $topaz;
 }
 
 section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
 @media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 3.3vw;
-    max-width: 21vw;
     width: 50%;
     padding: 4em;
   }
@@ -892,11 +900,9 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/lasvegas/venue.jpg");
+  background: url("../../gfx/lasvegas/v2-site/venue-sec-bg.jpg");
   background-size: cover;
-  background-position: center;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
+  background-position: bottom;
   display: none;
 }
 
@@ -988,3 +994,128 @@ section.sponsors img {
             transform: scale3d(1, 1, 1);
   }
 }
+
+
+.rslides_tabs{
+  position: absolute;
+    z-index: 5;
+    display:none;
+    top: 42vw;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+    @media (min-width: 40em) {
+      //display:block;
+    }
+    @media (min-width: 95em) {
+      top:4vw;
+    }
+
+  li{
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    list-style: none;
+    display:inline-block;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: .3s;
+    &.rslides_here{
+      background:$las;
+    }
+
+    a{
+      color:transparent;
+    }
+  }
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+  @media (min-width: 40em) {
+    display: block;
+  }
+  video{width:100%;margin-top:-2.5%;}
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  max-height:950px;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
+  .rslides_nav{
+    display: none;
+    position: absolute;
+    bottom: 60%;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 900;
+    color: #083643;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #083643;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    height: 30px;
+    border-radius: 10px;
+    @media (min-width: 40em) {
+      display: block;
+    }
+    @media (min-width: 75em) {
+      font-size: 30px;
+      height: 40px;
+    }
+    @media (min-width: 95em) {
+      bottom:50%;
+    }
+
+    &:hover{
+      color:#fff;
+      background:rgba(0,0,0,0.7);
+    }
+
+    &.prev{
+      left: 20px;
+      padding-left: 9px;
+      padding-right: 9px;
+      @media (min-width: 75em) {
+        padding-right: 12px;
+      }
+    }
+    &.next{
+      right: 20px;
+      padding-left: 9px;
+      padding-right: 9px;
+      @media (min-width: 75em) {
+        padding-left: 12px;
+      }
+    }
+  }

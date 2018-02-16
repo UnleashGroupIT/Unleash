@@ -33,6 +33,21 @@
 
 
 @section('headercontent')
+		<ul class="rslides" id="slider-demo">
+          <!-- Slides -->
+          <li>
+            <video poster="{{ URL::asset('gfx/lasvegas/v2-site/header-bg-desktop.jpg') }}" id="bgvid" loop muted autoplay>
+              <source src="{{ URL::asset('gfx/lasvegas/video/video-bg.webm') }}" type="video/webm">
+              <source src="{{ URL::asset('gfx/lasvegas/video/video-bg.mp4') }}" type="video/mp4">
+              <source src="{{ URL::asset('gfx/lasvegas/video/video-bg.ogv') }}" type="video/ogv">
+            </video>
+          </li>
+          <li><img src="{{ URL::asset('gfx/lasvegas/v2-site/slider-1.jpg') }}" alt=""></li>
+          <li><img src="{{ URL::asset('gfx/lasvegas/v2-site/slider-2.jpg') }}" alt=""></li>
+          <li><img src="{{ URL::asset('gfx/lasvegas/v2-site/slider-3.jpg') }}" alt=""></li>
+          <li><img src="{{ URL::asset('gfx/lasvegas/v2-site/slider-4.jpg') }}" alt=""></li>          
+      	</ul>
+
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<span>Lead Sponsors <strong>2018</strong></span>
@@ -48,7 +63,7 @@
                     <div id="cultureamp"><a href="https://www.cultureamp.com/" target="_blank" title="Culture Amp"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/CultureAmp.svg') }}" alt="Culture Amp"></a></div>
                     <div id="ibm-wrp">  <a href="https://www.ibm.com/" target="_blank" title="IBM"><img id="ibm" src="{{ URL::asset('gfx/lasvegas/header/sponsors/ibm.svg') }}" alt="IBM"></a></div>
 
-                  <div id="icims"><a href=https://www.icims.com/" target="_blank" title="iCims"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/icims-white.svg') }}" alt="iCims"></a></div>
+                  <div id="icims"><a href="https://www.icims.com/" target="_blank" title="iCims"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/icims-white.svg') }}" alt="iCims"></a></div>
 
                   <div id="tanner"><a href="http://www.octanner.com/language.html" target="_blank" title="O.C.Tanner"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/oct.png') }}" alt="O.C.Tanner"></a></div> 
                    
@@ -70,69 +85,112 @@
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
 			<p>Human Resources is no longer just HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to apply them that will have the greatest potential impact and value. Brought to you by the team behind UNLEASH World Conference &amp; Expo (formerly HR Tech World), the fastest growing HR Show in the World over the last five years, UNLEASH America gives you the platform to meet with more than vendors, but also the decision makers and innovators shaping the way we work and get work done.</p>
-			<a href="{{ route('lasvegas.tickets') }}"><button class="red-btn">Book Now</button></a>
+			<a href="{{ route('lasvegas.tickets') }}"><button class="white-btn">Book Now</button></a>
 		</div>
 	</section>
 	<!--Future of Work END-->
 	<!--Keynote-->
-	<section class="two keynote arianna">
+	<section class="two keynote">
 		<div class="wrppr">
-			<div class="fix-bg betts"></div>
+			<div class="img-bg mo"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
-				<div class="h4wrp">
-					<div>
-						<img class="mic-logo" src="{{ URL::asset('gfx/lasvegas/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in America</h4>
-					</div>
-					<img class="U-logo" src="{{ URL::asset('gfx/lasvegas/U.png') }}" alt="Unleash">
-				</div>
-				<h2>Mo Gawdat</h2>
-				<h5 class="BettsOxford">Chief Business Officer - Google X</h5>
+				<h2>MO GAWDAT</h2>
+				<h5>Chief Business Officer - Google X</h5>
 				
-				<p class="pdg">With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
+				<p>With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
 				
-				<p class="pdg">For the first time ever, Mo Gawdat, Chief Business Officer for Google X, will take to the stage with strategies and ideas to help you on your way to building a successful innovation factory. In his step-by-step approach, he will deliver critical insight into what works and what can change the world.</p>
+				<p>For the first time ever, Mo Gawdat, Chief Business Officer for Google X, will take to the stage with strategies and ideas to help you on your way to building a successful innovation factory. In his step-by-step approach, he will deliver critical insight into what works and what can change the world.</p>
 							
-				
-
 			</div>
 			<div class="schedule-wrp">
-				<button id="spkrgrd" class="white-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
+				<button id="spkrgrd" class="red-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
-	<section class="two keynote second speakers">
-		<div class="content">
-			<div class="content-wrap">
-				<h2>Past Speakers</h2>
-				<p>We bring you the visionaries, the movers &amp; shakers and the hard-edged thinkers shaping and unleashing tomorrow's world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today speak and attend our events. More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
-				<div class="testim wdth">
-					<img class="coma" src="http://www.unleashgroup.io/gfx/lasvegas/coma.png" alt="coma">
-					<span>The best event in the world on HR and Technology</span>
-						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
+	<section class="one speaker-highlights">
+			<div class="highlights-wrp">
+				<div class="hl-member jill-larsen">
+					<div class="member-wrp">
+						<h2>Jill Larsen</h2>
+						<h5>SVP Human Resources &amp; Talent Acquisition</h5>
+						<h6>Cisco</h6>
+					</div>
+				</div>
+				<div class="hl-member josh-bersin">
+					<div class="member-wrp">
+						<h2>Josh Bersin</h2>
+						<h5>Founder and Principal</h5>
+						<h6>Bersin by Deloitte</h6>
+					</div>
+				</div>
+				<div class="hl-member jennifer-waldo">
+					<div class="member-wrp">
+						<h2>Jennifer Waldo</h2>
+						<h5>Vice President,  CHRO</h5>
+						<h6>GE Digital</h6>
+					</div>
+				</div>
+				<div class="hl-member david-lee">
+					<div class="member-wrp">
+						<h2>David Lee</h2>
+						<h5>VP, Innovation &amp; Strategic Enterprise Fund</h5>
+						<h6>UPS</h6>
+					</div>
+				</div>
+				<div class="hl-member kathleen-hogan">
+					<div class="member-wrp">
+						<h2>Kathleen Hogan</h2>
+						<h5>Chief People Officer</h5>
+						<h6>Microsoft</h6>
+					</div>
+				</div>
+				<div class="hl-member sjoerd-gehring">
+					<div class="member-wrp">
+						<h2>Sjoerd Gehring</h2>
+						<h5>Global VP of Talent Acquisition &amp; Employee Experience</h5>
+						<h6>Johnson &amp; Johnson</h6>
+					</div>	
+				</div>
+				<div class="hl-member diane-adams">
+					<div class="member-wrp">
+						<h2>Diane K. Adams</h2>
+						<h5>Chief Culture and Talent Officer</h5>
+						<h6>McGraw-Hill Education</h6>
+					</div>
+				</div>
+				<div class="hl-member curt-burghardt">
+					<div class="member-wrp">
+						<h2>Curt Burghardt </h2>
+						<h5>VP, HR Shared Services &amp; HR Systems</h5>
+						<h6>Walgreens</h6>
+					</div>
 				</div>
 			</div>
-			<button class="red-btn popup" data-popupdata="applytospeak">Become a Speaker</button>
-		</div>
-		<div class="wrppr">
-			<div class="fix-bg speakers right"></div>
-		</div>
+			<div class="highlight-text">
+				<h2>12 stages. 120 speakers. 2500+ decision-makers.</h2>
+				<div class="wrp">
+					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry's latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br /><br />
+					In an era of tech and socio-political uncertainty, how can you make sure your workforce maintains collaboration and innovation? UNLEASH’s dynamic speaker lineup and Expo Floor will give you the tools you need to maintain your company’s growth. We’ll guide you through adopting the best tech, protecting your 
+employee’s data from cyber-attacks, improving your hiring strategies and bringing your talent branding to where exactly it needs to be. All of this and more awaits at UNLEASH America in Last Vegas. Don’t miss your chance to be part of the conversations changing the Future of Work. Challenge the status quo in the world of work and <strong>UNLEASH your people!</strong></p>
+				</div>
+			</div>
 	</section>
-	<!--Keynote END-->
 
 	<!--Speakers-->
-	 @include('lasvegas.components.speakergrid')
+	<section class="one past-speakers">
+		<h2>PAST SPEAKERS</h2>
+		@include('lasvegas.components.speakergrid')
+	</section>
 	<!--Speakers END-->
 
 	<!--Counter-->
-	<section class="one-cntr counter">
+	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
-			<div class="your-clock"></div>
-			<a href="{{ route('lasvegas.tickets') }}"><button class="red-btn">Register Now</button></a>
+			<p><strong><b style="font-weight:400;">UNLEASH Your People!</b></strong><br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
+			<a href="{{ route('lasvegas.tickets') }}" target="_blank"><button class="red-btn">Register Now</button></a>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -149,17 +207,17 @@
 				<strong class="strn">- Google</strong>
 				<img class="quote-logo" src="{{ URL::asset('gfx/lasvegas/google.png') }}" alt="Google">
 			</div>
-			<a href="{{ route('lasvegas.tickets') }}"><button id="spnsrgrd" class="red-btn">Get Your Ticket</button></a>
+			<a href="{{ route('lasvegas.tickets') }}" target="_blank"><button id="spnsrgrd" class="red-btn">Get Your Ticket</button></a>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg expobg"></div>
+			<div class="img-bg expo"></div>
 		</div>
 	</section>
 	<!--Expo END-->
 	<!--Clients-->
 	<section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg clientsbg"></div>
+			<div class="img-bg clients"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -181,39 +239,45 @@
 	<!--Sponsors END-->
 
 	<!--Testimonial-->
-	<section class="two testimonial">
+	<section class="two startup">
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Startup Zone</h2>
 				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and Technology.
 					First staged in October 2011, it has successfully hosted eight editions in total, including four in Amsterdam,
-					two in London and two in Paris. As the show has matured, what started as pro-bono work is now the
+					two in London and two in Paris. As the show has matured, what started as pro-bono work, is now the
 					must-attend show for startups; it’s where they learn how to pitch their product to fans and critics alike
 					including entrepreneurs such as Arianna Huffington and Sir Richard Branson, thinkers and analysts like
 					Josh Bersin, Gary Hamel and Simon Sinek, as well as investors, vendors, media - and perhaps most
 					importantly of all - the organizations they wish to serve.</p>
 			</div>
-			<button class="red-btn popup" data-popupdata="compete">Apply to compete</button>
+			<a href="/startup"><button class="red-btn popup" data-popupdata="compete">Learn More</button></a>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg startupbg"></div>
+			<div class="img-bg startup"></div>
 		</div>
 	</section>
 	<!--Testimonial END-->
 	<!--Map-->
-	<section class="map">
+	<section id="map" class="map">
+		<iframe src="https://snazzymaps.com/embed/48553" width="100%" height="600px" style="border:none;"></iframe>
 		<div class="content">
 			<div class="mapcont-wrp">
+				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
 					<p>UNLEASH is delighted to make its US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
-				<a href="{{ route('lasvegas.travel') }}"><button class="red-btn">More</button></a>
+				<a href="{{ route('lasvegas.travel') }}"><button class="darkgreen-btn">More</button></a>
 			</div>
 			<div class="map-pic">
 			</div>
 		</div>
 	</section>
 	<!--Map END-->
+
+
+
+	
 @endsection
 

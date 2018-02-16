@@ -202,68 +202,32 @@ section.two {
 }
 
 section.two .wrppr {
-    width: 100%;
-    min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
+  width: 100%;
+  min-height: 500px;
+  @media (min-width: 75em) {
+    width: 50%;
   }
 
-    section.two .fix-bg.travelbg {
-      background-image: url("../../gfx/lasvegas/floorplan-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.travelbg {
-          background-image: url("../../gfx/lasvegas/floorplan-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.travelbg {
-          background-image: url("../../gfx/lasvegas/floorplan-sec-bg.jpg");
-          background-position: bottom left; } }
+  .img-bg{
+    height: 100%;
 
-    section.two .fix-bg.floorplanbg {
-      background-image: url("../../gfx/lasvegas/floorplancity-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/lasvegas/floorplancity-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
+    &.travelbg{
+      background:url("../../gfx/lasvegas/v2-site/venue-sec-bg.jpg");
+      background-size:cover;
+      background-position: bottom;
+      height: 500px;
       @media (min-width: 75em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/lasvegas/floorplancity-sec-bg.jpg");
-          background-position: bottom right; } }
-    section.two .fix-bg.floorplancitybg {
-      background-image: url("../../gfx/lasvegas/airplane-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/lasvegas/airplane-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/lasvegas/airplane-sec-bg.jpg");
-          background-position: top right; } }
+      height: 100%;
+      }
+    }
+
+    &.floorplanbg{
+      background:url("../../gfx/lasvegas/v2-site/venue2-sec-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+  }
+}
 
 section.two.clients {
     a{
@@ -271,180 +235,51 @@ section.two.clients {
     }
 }
 
-section.two.keynote.arianna{
-  flex-direction: column-reverse;
+section.two.keynote.f{
+  flex-direction:column-reverse;
   @media (min-width: 75em) {
-    flex-direction: row;
-  }
-
-  &.flights{
-    display: none;
-  }
-
-}
-
-section.two.keynote.arianna .content {
-  background-color: $las;
-  padding-left: 0;
-  padding-right: 0;
-  @media (min-width: 75em) {
-    padding-bottom: 3em;
+    flex-direction:row;
   }
 }
 
-section.two.keynote.arianna .mic-logo{
-  margin-left: 5px;
+section.two.keynote .content {
+  background-color: $butter;
 }
 
-@media (min-width: 120em) {
-  section.two.keynote.arianna .content {
-    padding-bottom: 2.55vw;
-  }
+section.two.keynote h5 {
+  margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+  font-weight:100;
+  letter-spacing:0;
 }
 
-section.two.keynote.arianna .btm .h4wrp{
-  display: block;
-  margin: 0;
+section.two.keynote h2 {
+  font-size: 3rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
   @media (min-width: 40em) {
-    display: flex;
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:3.7rem;
   }
 }
 
-section.two.keynote.arianna .h4wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1em;
-  .white-btn{
-    margin: .5em 0;
-    color:$las;
-    &:hover{
-      color:#fff;
-    }
-    @media (min-width: 40em) {
-      margin: 0;
-      margin-right: 1em;
-    }
-  }
+section.two.keynote h3{
+  margin-top:2em;
 }
 
-section.two.keynote.arianna .h4wrp > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 2em;
-}
 
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp > div {
-    margin-left: 3.5em;
-  }
-}
-
-section.two.keynote.arianna .h4wrp .U-logo {
-  margin: auto;
-  margin-right: 2em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .h4wrp .U-logo {
-    margin: auto;
-    margin-right: 4em;
-  }
-}
-
-section.two.keynote.arianna p {
-  color: #fff;
-}
-
-section.two.keynote.arianna h2 {
-  padding: .2em;
-  padding-left: 1em;
-  padding-right: .5em;
-  color: #fff;
-  display: inline-block;
-  //font-size: 1.2em;
-  &.aloft{
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 512px) {
-    font-size: 1.9rem;
-  }
-  @media (min-width: 600px) {
-    background-color: #083643;
+section.two.keynote .schedule-wrp {
+  button{
+    margin: 0;
   }
 }
 
 @media (min-width: 75em) {
-  section.two.keynote.arianna h2 {
-    padding-left: 2em;
-  }
-}
-
-section.two.keynote.arianna h4 {
-  color: #fff;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0 1em;
-}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna h4 {
-    font-size: 1.3rem;
-    padding: 0 2em;
-  }
-}
-
-section.two.keynote.arianna .pdg {
-  padding: 0 2em;
-  h3{
-    color:#fff;
-  }
-  span{
-    text-transform: uppercase;
-    font-weight: 600;
-    display: block;
-    margin: .5em 0;
-    font-size: 100%;
-  }
-}
-
-p.code{
-    display: inline-block;
-    padding-left: .5em;
-    line-height: normal;
-    font-weight: 600;
-  }
-
-  .booking-wrp{
-    margin-top:1em;
-    p.code{
-      margin:0!important;
-      font-style: italic;
-    }
-  }
-
-  .booking-code{
-    background: $dark-green;
-    padding: 5px;
-    span{
-      color:#fff;
-      font-weight: bold;
-    }
-  }
-
-section.two.keynote.arianna .btm{margin-top:auto}
-
-@media (min-width: 75em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 4em;
-  }
-}
-
-@media (min-width: 120em) {
-  section.two.keynote.arianna .pdg {
-    padding: 0 3.1vw;
+  section.two.keynote .schedule-wrp {
+    margin-top: auto;
   }
 }
 
@@ -497,17 +332,10 @@ section.two button {
 }
 
 section.one-cntr {
-  background: url("../../gfx/lasvegas/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  display:none;
+  background-color:$butter;
   text-align: center;
   padding: 2em 0;
-  &.vhcls{
-    background: url("../../gfx/lasvegas/travel-vehicles-bg.jpg");
-    background-size: cover;
-    background-position: center;
-  }
 }
 
 @media (min-width: 75em) {
@@ -516,41 +344,24 @@ section.one-cntr {
   }
 }
 
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
-}
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: $las;
-  padding: .2em .5em;
-  line-height: 1;
-  font-size: 1.6rem;
+section.one-cntr h2{
+  font-size: 3rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
   @media (min-width: 40em) {
-    font-size: 1.9rem;
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
   }
 }
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/lasvegas/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/lasvegas/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -566,18 +377,13 @@ section.one-cntr button {
   }
 }
 
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
 section.map {
  background: url("../../gfx/lasvegas/map-mobile-bg.jpg");
   background-size: cover;
   background-position: top;
-  min-height: 600px;
   display: flex;
+  height:600px;
+  position:relative;
   @media (min-width: 600px) {
     background: url("../../gfx/lasvegas/map-bg.jpg");
     background-size: cover;
@@ -592,47 +398,54 @@ section.map {
 }
 
 section.map .content {
-  padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      position:absolute;
+      bottom:0;
+
+  @media (min-width: 600px) {
+    width:50%; 
+  }
 }
 
 @media (min-width: 65em) {
   section.map .content {
-    max-width: 950px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: 6em 4em;
   }
 }
 
 @media (min-width: 75em) {
   section.map .content {
     max-width: 49.5vw;
-    padding: 5vw 4vw;
   }
 }
 
 section.map .mapcont-wrp {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
-  background-color: #fff;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
-  margin-top: auto;
-  max-width: 400px;
+  background-color: $topaz;
 }
 
 section.map .mapcont-wrp p {
   margin: 1em 0;
 }
 
+section.map .mapcont-wrp a {
+  display: block;
+  margin-top:auto;
+}
+
+section.map .mapcont-wrp h2 {
+  color:$dark-green;
+}
+
 @media (min-width: 95em) {
   section.map .mapcont-wrp {
-    padding: 3.3vw;
-    max-width: 21vw;
     width: 50%;
     padding: 4em;
   }
@@ -644,11 +457,9 @@ section.map .mapcont-wrp button {
 
 section.map .map-pic {
   width: 100%;
-  background: url("../../gfx/lasvegas/venue.jpg");
+  background: url("../../gfx/lasvegas/v2-site/venue-sec-bg.jpg");
   background-size: cover;
-  background-position: center;
-  -webkit-box-shadow: 3px 3px 15px #999;
-          box-shadow: 3px 3px 15px #999;
+  background-position: bottom;
   display: none;
 }
 
