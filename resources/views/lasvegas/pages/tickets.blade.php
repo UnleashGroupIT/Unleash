@@ -154,7 +154,7 @@
      <div class="TicketBox IsoBox Group TicketFour" data-category="Group">
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
-            <h2 class="TicketHeadline">A'LACARTE</h2>
+            <h2 class="TicketHeadline"> A LA CARTE</h2>
 
             <p class="AlaCarteText">To gain access to an exclusive and multi-dimensional conference experience, bring your leadership figures with you and enjoy the benefits of a tailor-made package designed to ensure you make the best of your team's away days.</p>
 

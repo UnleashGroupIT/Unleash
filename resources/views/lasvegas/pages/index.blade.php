@@ -33,6 +33,12 @@
 
 
 @section('headercontent')
+
+<style type="text/css">
+	.wrp{
+max-width: 1124px !important; }
+</style>
+
 		<ul class="rslides" id="slider-demo">
           <!-- Slides -->
           <li>
@@ -67,11 +73,11 @@
 
                   <div id="tanner"><a href="http://www.octanner.com/language.html" target="_blank" title="O.C.Tanner"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/oct.png') }}" alt="O.C.Tanner"></a></div> 
                    
-                  <div id="sap-wrp"> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
-                   
                   <div id="smart-wrp"><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
 
                   <div id="walkme"><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div>
+
+                  <div id="sap-wrp"> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
                    		
 
 			</div>
@@ -173,7 +179,7 @@
 				<div class="wrp">
 					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry's latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br /><br />
 					In an era of tech and socio-political uncertainty, how can you make sure your workforce maintains collaboration and innovation? UNLEASH’s dynamic speaker lineup and Expo Floor will give you the tools you need to maintain your company’s growth. We’ll guide you through adopting the best tech, protecting your 
-employee’s data from cyber-attacks, improving your hiring strategies and bringing your talent branding to where exactly it needs to be. All of this and more awaits at UNLEASH America in Last Vegas. Don’t miss your chance to be part of the conversations changing the Future of Work. Challenge the status quo in the world of work and <strong>UNLEASH your people!</strong></p>
+employee’s data from cyber-attacks, improving your hiring strategies and bringing your talent branding to where exactly it needs to be. All of this and more awaits at UNLEASH America in Las Vegas. Don’t miss your chance to be part of the conversations changing the Future of Work. Challenge the status quo in the world of work and <strong>UNLEASH your people!</strong></p>
 				</div>
 			</div>
 	</section>
@@ -266,7 +272,7 @@ employee’s data from cyber-attacks, improving your hiring strategies and bring
 				<!-- Google API for MAP -->
 				<div class="content-wrap">
 					<h2>Venue</h2>
-					<p>UNLEASH is delighted to make its US home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
+					<p>UNLEASH is delighted to make its U.S. home at the Aria Resort and Casino in Las Vegas, one of North America's premier destinations for large-scale meetings and shows.</p>
 				</div>
 				<a href="{{ route('lasvegas.travel') }}"><button class="darkgreen-btn">More</button></a>
 			</div>

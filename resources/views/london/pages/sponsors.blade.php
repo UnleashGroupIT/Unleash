@@ -24,7 +24,18 @@
 
 @section('headercss')
 	<link rel="stylesheet" type="text/css" href="{{ mix('css/london/sponsors.css') }}">
-
+	<style>
+	 .headlinesponsors .sponsor {
+		 width: 190px !important;
+		height: 190px !important;
+	 }
+	 .headlinesponsors .sponsor a {
+			transform: scale(1.1,1.1);
+	 }	 
+	 .HeadlineH2{
+		font-size: 1.9rem !important;
+	 }
+	</style>
 @endsection
 
 @section('headerjs')
@@ -39,6 +50,7 @@
 		</div>
 		<div class="content">
 			<div class="content-wrap">
+				<h2>This March, come to the show that hosts 2500+ decision makers under one roof.</h2>
 				<p>UNLEASH is the leading show on Future of Work and Technology both in terms of content provided by hundreds of speakers and deal-making on our expo floors. With the largest group of Enterprise buyers in the industry attending our shows, large enterprises to the next innovators from around the world will want to attend UNLEASH Conference &amp; Expo in London. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the way the world works!
  <br>
 <br>
@@ -57,8 +69,8 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 		<!--Sponsors-->
 	<section class="sponsors" id="spnsrz">
 
-		<h2>Headline Sponsors</h2>
-		<div class="sponsors-wrp">
+		<h2 class="HeadlineH2">Headline Sponsors</h2>
+		<div class="sponsors-wrp headlinesponsors">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 1)
 			 <!--sponsors-->
@@ -107,7 +119,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 
 		</div>
 
-	{{--	<h2>Gold Sponsors</h2>
+		<h2>Gold Sponsors</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 5)
@@ -117,7 +129,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			   @endif
 			@endforeach
 
-	</div> --}}
+	</div> 
 
 
 		<h2>Silver Sponsors</h2>

@@ -240,6 +240,13 @@ section.one.mainsponsors {
         }
       }
 
+      #ava{
+        margin-bottom:.5em;
+        @media (min-width: 75em) {
+          margin-bottom:0;
+        }
+      }
+
       #mhr{
         width: 45px;
         @media (min-width: 125em) {

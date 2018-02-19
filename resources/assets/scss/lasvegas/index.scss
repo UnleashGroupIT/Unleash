@@ -212,10 +212,15 @@ section.one.mainsponsors {
     section.one.mainsponsors .mainsponsors-wrap > div {
       margin: 1em .25em;
       margin-top: auto;
+      flex-basis:45%;
       flex-grow: 1;
       text-align: center;
       visibility: hidden;
-      opacity: 0; }
+      opacity: 0;
+      @media (min-width: 30em) {
+        flex-basis:auto;
+      }
+    }
       @media (min-width: 75em) {
         section.one.mainsponsors .mainsponsors-wrap > div {
           margin: 0 .75em;
