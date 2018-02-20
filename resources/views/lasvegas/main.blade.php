@@ -116,6 +116,7 @@
 				<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">OUR CLIENTS</a></li>
 				<li><a href="{{ route('lasvegas.volunteer') }}">VOLUNTEER</a></li>
 				<li><a href="{{ route('lasvegas.travel') }}">VENUE &amp; TRAVEL</a></li>
+				<li><a href="{{ route('america.floorplan') }}">FLOOR PLAN</a></li>
 				<li><a href="{{ route('lasvegas.tickets') }}">TICKETS</a></li>
 
 			</ul>

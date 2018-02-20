@@ -369,6 +369,10 @@ Route::get('/america/terms', function () {
     return redirect('/terms');
 });
 
+Route::get('/america/floorplan', function () {
+  return view('lasvegas.pages.floorplan');
+})->name('america.floorplan');
+
 /******** Admin Routes **********/
 
   

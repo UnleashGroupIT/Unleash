@@ -1,6 +1,8 @@
 @extends('amsterdam.main')
 
 @section('meta')
+<meta http-equiv="refresh" content="0;url=https://unleash.swoogo.com/unleashamsterdam" />
+
 		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH Amsterdam on 23-24 October 2018.">
  
          <!-- Open Graph data -->

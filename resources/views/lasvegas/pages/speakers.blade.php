@@ -31,7 +31,7 @@
 		<div class="content">
 			<div class="content-wrap">
 				<h2>MO GAWDAT</h2>
-				<h5>Chief Business Officer - Google X</h5>
+				<h5>Author, Former Chief Business Officer - Google X</h5>
 				
 				<p>With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
 				
