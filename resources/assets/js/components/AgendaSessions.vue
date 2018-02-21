@@ -12,7 +12,8 @@
 					
 				</div>
 				<div class="session-name">
-					<h3 v-if="sess.tracks[1]">ALL STAGES</h3>
+					<h3 v-if="sess.category_id == 2"></h3>
+					<h3 v-else-if="sess.tracks[1]">ALL STAGES</h3>
 					<h3 v-else >{{sess.tracks[0].track_name}}</h3>
 				</div>
 			</div>
@@ -25,10 +26,11 @@
 		<div class="right-side">
 			<div class="header">
 				<div class="place">
-					<h4 v-if="sess.tracks[1]">Catering Points</h4>
+					<h4 v-if="sess.category_id == 2">Entrance</h4>
+					<h4 v-else-if="sess.tracks[1]">Catering Points</h4>
 					<h4 v-else>{{sess.tracks[0].room}}</h4>
 				</div>
-				<div class="duration">
+				<div class="duration" v-if="sess.category_id != 2">
 					<i class="fa fa-clock-o"></i> {{ duration(sess) }}
 				</div>
 			</div>
