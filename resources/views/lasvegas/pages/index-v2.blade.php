@@ -90,7 +90,7 @@ max-width: 1124px !important; }
 	<section class="one futureofwork">
 		<div class="wrp">
 			<h2>The Future of Work is Now!</h2>
-			<p>Today we all have a responsibility to help unleash the potential of our people. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to apply them that will have the greatest potential impact and value. Brought to you by the team behind UNLEASH World Conference &amp; Expo (formerly HR Tech World), the fastest growing HR Show in the World over the last five years, UNLEASH America gives you the platform to meet with more than vendors, but also the decision makers and innovators shaping the way we work and get work done.</p>
+			<p>Today we all have a responsibility to help unleash the potential of our people. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to apply them that will have the greatest potential impact and value. UNLEASH America gives you the platform to meet with more than just the vendors, but also the leaders, decision makers and innovators shaping the way we work and get work done.</p>
 			<a href="{{ route('lasvegas.tickets') }}"><button class="white-btn">Book Now</button></a>
 		</div>
 	</section>
@@ -105,14 +105,36 @@ max-width: 1124px !important; }
 				<h2>MO GAWDAT</h2>
 				<h5>Author, Former Chief Business Officer - Google X</h5>
 				
-				<p>With a career rooted in innovation, Mo Gawdat is no stranger to the grit business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.</p>
+				<p>With a career rooted in innovation, Mo Gawdat is no stranger to the grit that business leaders must show to evolve and scale their organisations. We’re elated to have Mo join us for UNLEASH America in Las Vegas to give his take on what you need to harness your business’s potential.<br>
+<br>
+
+
+</p>
 				
-				<p>For the first time ever, Mo Gawdat, Chief Business Officer for Google X, will take to the stage with strategies and ideas to help you on your way to building a successful innovation factory. In his step-by-step approach, he will deliver critical insight into what works and what can change the world.</p>
+				<p>For the first time ever, Mo Gawdat, former Chief Business Officer for Google X, will take to the stage with strategies and ideas to help you on your way to building a successful innovation factory. In his step-by-step approach, he will deliver critical insight into what works and what can change the world.</p>
 							
 			</div>
 			<div class="schedule-wrp">
 				<button id="spkrgrd" class="red-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
 			</div>
+		</div>
+	</section>
+	<section class="two keynote second">
+		<div class="content">
+			<div class="content-wrap">
+				<h2>Rachel Botsman</h2>
+				<h5>Author, Lecturer<br />Saïd Business School of the University of Oxford</h5>
+				
+				<p>A brilliant storyteller, Rachel Botsman has led the way in discussing how our heavy reliance on tech is redefining cultural norms, whether it be predicting the sharing economy to exploring tech’s influence on trust. In her most recent book, "Who Can You Trust?", Rachel examines the reasons and possible consequences of people losing trust in themselves and global institutions, and instead relying on (and trusting in) AI and automation far more. When we begin to trust machines more than other humans, what does that mean for humanity?</p>
+				
+				<p>In her talk, Rachel will delve deeper into this relationship between trust and technology, pulling from everyday examples like Amazon Echo to China’s planned citizen scores.</p>
+			</div>
+			<div class="schedule-wrp">
+				<button id="spkrgrd" class="red-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
+			</div>
+		</div>
+		<div class="wrppr">
+			<div class="img-bg bots"></div>
 		</div>
 	</section>
 	<section class="one speaker-highlights">
@@ -175,11 +197,13 @@ max-width: 1124px !important; }
 				</div>
 			</div>
 			<div class="highlight-text">
-				<h2>12 stages. 120 speakers. 2500+ decision-makers.</h2>
+				<h2>12 STAGES. 100 SPEAKERS. <br>
+2500+ DECISION-MAKERS.</h2>
 				<div class="wrp">
-					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry's latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br /><br />
-					In an era of tech and socio-political uncertainty, how can you make sure your workforce maintains collaboration and innovation? UNLEASH’s dynamic speaker lineup and Expo Floor will give you the tools you need to maintain your company’s growth. We’ll guide you through adopting the best tech, protecting your 
-employee’s data from cyber-attacks, improving your hiring strategies and bringing your talent branding to where exactly it needs to be. All of this and more awaits at UNLEASH America in Las Vegas. Don’t miss your chance to be part of the conversations changing the Future of Work. Challenge the status quo in the world of work and <strong>UNLEASH your people!</strong></p>
+					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry’s latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br>
+<br>
+
+In an era of technological and socio-political uncertainty, how can you make sure your workforce maintains collaboration and innovation? UNLEASH’s dynamic speaker lineup and Expo Floor will give you the tools you need to maintain your company’s growth. We’ll guide you through adopting the best tech, protecting your employee’s data from cyber-attacks, improving your hiring strategies and bringing your talent branding to exactly where it needs to be. All of this and more awaits you at UNLEASH America in Las Vegas. Don’t miss your chance to be part of the conversation on changing the Future of Work.  Challenge the status quo in the world of work and <strong>UNLEASH your people!</strong></p>
 				</div>
 			</div>
 	</section>
@@ -205,7 +229,7 @@ employee’s data from cyber-attacks, improving your hiring strategies and bring
 		<div class="content">
 			<div class="content-wrap">
 				<h2>The Expo</h2>
-				<p>The Expo at UNLEASH is more than just a showcase of vendors - it’s full of interactivity, excitement, fun, friendships and entertainment. Its where those shaping the future of work and technology – from large enterprises to the next innovators from around the world – network and meet up.</p>
+				<p>The Expo at UNLEASH is more than just a showcase of vendors - it’s full of interactivity, excitement, fun, friendships and entertainment. It’s where those shaping the future of work and technology – from large enterprises to the next innovators from around the world – network and meet up.</p>
 			</div>
 			<div class="testim wdth">
 				<img class="coma" src="{{ URL::asset('gfx/lasvegas/coma.png') }}" alt="coma">
@@ -249,13 +273,7 @@ employee’s data from cyber-attacks, improving your hiring strategies and bring
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Startup Zone</h2>
-				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and Technology.
-					First staged in October 2011, it has successfully hosted eight editions in total, including four in Amsterdam,
-					two in London and two in Paris. As the show has matured, what started as pro-bono work, is now the
-					must-attend show for startups; it’s where they learn how to pitch their product to fans and critics alike
-					including entrepreneurs such as Arianna Huffington and Sir Richard Branson, thinkers and analysts like
-					Josh Bersin, Gary Hamel and Simon Sinek, as well as investors, vendors, media - and perhaps most
-					importantly of all - the organizations they wish to serve.</p>
+				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and Technology. First staged in October 2011, it has successfully hosted eight editions in total, including four in Amsterdam, two in London and two in Paris. As the show has matured, what started as pro-bono work is now the must-attend show for startups; it’s where they learn how to pitch their product to fans and critics alike, including entrepreneurs such as Arianna Huffington and Sir Richard Branson, thinkers and analysts like Josh Bersin, Gary Hamel and Simon Sinek, as well as investors, vendors, media - and perhaps most importantly of all - the organizations they wish to serve.</p>
 			</div>
 			<a href="/startup"><button class="red-btn popup" data-popupdata="compete">Learn More</button></a>
 		</div>

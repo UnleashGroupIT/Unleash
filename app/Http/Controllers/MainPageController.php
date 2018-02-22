@@ -35,6 +35,12 @@ class MainPageController extends Controller
          $SponsorGridId = 3;
          $site = 'lasvegas.pages.index';
      }   
+	 
+	 $uri = $request->path();
+	 
+	 if($uri == 'america/indexv2'){
+		  $site = 'lasvegas.pages.index-v2';
+	 }	 
 
      $SpeakerGridController = new SpeakersController;
      $speakerGrids =  $SpeakerGridController->listGridContent($SpeakerGridId);

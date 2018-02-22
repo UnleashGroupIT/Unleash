@@ -34,6 +34,11 @@ class SpeakersController extends Controller
          $site = 'lasvegas.pages.speakers';
      }   
 
+	 $uri = $request->path();
+	 
+	 if($uri == 'america/speakersv2'){
+		  $site = 'lasvegas.pages.speakers-v2';
+	 }
 
         $speakerGrids = $this->listGridContent($SpeakerGridId);
 

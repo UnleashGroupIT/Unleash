@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -34,8 +35,10 @@ class HomeController extends Controller
       
 
     }
-    public function oauth()
+    public function oauth(User $user)
     {
+		$this->authorize('AdminHiddenSiteAccess', $user);
+		
         return view('admin.auth.pages.oauth');
     }
 	

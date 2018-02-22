@@ -403,6 +403,15 @@ section.two .wrppr {
       background-size:cover;
       background-position: center;
     }
+    &.bots{
+      background:url("../../gfx/lasvegas/v2-site/bots-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height:500px;
+      @media (min-width: 75em) {
+        height:100%;
+      }
+    }
 
     &.expo{
       background:url("../../gfx/lasvegas/expo-sec-bg.jpg");
@@ -439,6 +448,12 @@ section.two .wrppr {
 section.two.keynote .content {
   background-color: $butter;
 }
+
+section.two.keynote.second {
+    flex-direction: column-reverse; }
+    @media (min-width: 75em) {
+      section.two.keynote.second {
+        flex-direction: row; } }
 
 section.two.keynote h5 {
   margin: 1em 0;

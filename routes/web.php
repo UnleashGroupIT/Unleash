@@ -72,19 +72,12 @@ Route::get('/amsterdam/index', 'MainPageController@index')->name('ams.index');
 
 Route::get('/amsterdam/speakers', 'SpeakersController@index')->name('ams.speakers');
 
-//Route::get('/amsterdam/speaker', 'SpeakersController@speaker');
-
-//Route::get('/amsterdam/speaker/{speakerId}', 'SpeakersController@speaker')->name('ams.speaker');
-
-//Route::get('/amsterdam/sponsors', 'SponsorsController@index')->name('ams.sponsors');
-
 Route::get('/amsterdam/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('ams.sponsor');
 
 Route::get('/amsterdam/sponsor', function () {
     return redirect('/amsterdam/sponsors');
 });
 
-//Route::get('/amsterdam/sponsor', 'SponsorsController@index');
 
 Route::get('/amsterdam/sponsors', function () {
     return redirect('/amsterdam/index#spnsrgrd');
@@ -109,8 +102,6 @@ Route::get('/amsterdam/speakers', function () {
 
 
 Route::get('/amsterdam/startups', 'StartupsController@index')->name('ams.startup');
-
-//Route::get('/amsterdam/agenda', 'AgendaController@index')->name('ams.agenda');
 
 
 Route::get('/amsterdam/about', function () {
@@ -166,15 +157,6 @@ Route::get('/london/speakers', 'SpeakersController@index')->name('london.speaker
 
 
 Route::get('/london/speaker', 'SpeakersController@speaker');
-
-/*Route::get('/london/speaker', function () {
-    return redirect('/london/index#spkrgrd');
-});*/
-
-/*Route::get('/london/speakers', function () {
-    return redirect('/london/index#spkrgrd');
-})->name('london.speakers');*/
-
 
 Route::get('/london/travel', function () {
   return view('london.pages.travel');
@@ -291,25 +273,13 @@ Route::get('/america/', 'MainPageController@index')->name('lasvegas.index');
 
 Route::get('/america/index', 'MainPageController@index')->name('lasvegas.index');
 
-//Route::get('/america/speakers', 'SpeakersController@index')->name('lasvegas.speakers');
 
 Route::get('/america/speaker', 'SpeakersController@index');
 
 Route::get('/america/speakers', 'SpeakersController@index')->name('lasvegas.speakers');
 
-/*Route::get('/america/speaker', function () {
-    return redirect('/america/index#spkrgrd');
-});*/
-
-/*Route::get('/america/speakers', function () {
-    return redirect('/america/index#spkrgrd');
-})->name('lasvegas.speakers');*/
 
 Route::get('/america/speaker/{speakerId}', 'SpeakersController@speaker')->name('lasvegas.speaker');
-
-//Route::get('/america/sponsors', 'SponsorsController@index')->name('lasvegas.sponsors');
-
-//Route::get('/america/sponsor', 'SponsorsController@index');
 
 Route::get('/america/sponsors', function () {
     return redirect('/america/index#spnsrgrd');
@@ -323,7 +293,6 @@ Route::get('/america/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('
 
 Route::get('/america/startups', 'StartupsController@index')->name('lasvegas.startups');
 
-//Route::get('/lasvegas/agenda', 'AgendaController@index')->name('lasvegas.agenda');
 
 Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about');
 
@@ -333,16 +302,6 @@ Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
 })->name('lasvegas.tickets');
 
-/*Route::get('/america/tickets', function () {
-    return view('lasvegas.pages.tickets');
-})->name('lasvegas.tickets');
-*/
-
-/*Route::get('/america/tickets', function () {
-     return redirect('https://unleash.swoogo.com/unleashamerica/');
-})->name('lasvegas.tickets');*/
-
-
 Route::get('/america/travel', function () {
     return view('lasvegas.pages.travel');
 })->name('lasvegas.travel');
@@ -351,7 +310,6 @@ Route::get('/america/volunteer', function () {
     return view('lasvegas.pages.volunteer');
 })->name('lasvegas.volunteer');
 
-//Route::get('/lasvegas/tickets', 'StaticPageController@about')->name('lasvegas.tickets');
 
 Route::get('/america/sponsor-pdf', function () {
   return view('lasvegas.pages.sponsorshippdf');
@@ -373,6 +331,12 @@ Route::get('/america/floorplan', function () {
   return view('lasvegas.pages.floorplan');
 })->name('america.floorplan');
 
+Route::get('/america/indexv2', 'MainPageController@index');
+
+Route::get('/america/speakersv2', 'SpeakersController@index');
+
+Route::get('/america/sp', 'SponsorsController@index');
+
 /******** Admin Routes **********/
 
   
@@ -384,14 +348,6 @@ Route::post('adminsite/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('adminsite/usrreg', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('adminsite/usrreg', 'Auth\RegisterController@register');
 
-//Admin Registration is closed for the moment... need some more safeguards and stuff
-/*Route::get('adminsite/usrreg', function () {
-    return redirect('adminsite/login');
-})->name('register');
-Route::post('adminsite/usrreg', function () {
-    return redirect('adminsite/login');
-});*/
-
 // Password Reset Routes...
 Route::get('adminsite/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('adminsite/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -402,14 +358,11 @@ Route::post('adminsite/password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/adminsite', 'HomeController@index');
 Route::get('/adminsite/home', 'HomeController@index')->name('home');
 
-Route::get('/adminsite/profile/oauth', 'HomeController@oauth')->name('home');
+//Route::get('/adminsite/profile/oauth', 'HomeController@oauth');
 
 //Admin pages
 Route::get('/adminsite/speakers', 'Admin\SubPageController@speakerUI')->name('admin.speakers');
 Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
 
 Route::get('/adminsite/agenda', 'Admin\SubPageController@agendaUI')->name('admin.agenda');
-
-//Route::get('/adminsite/speakers/slugger', 'Admin\SpeakerController@addSlug');
-//Route::get('/adminsite/sponsors/slugger', 'Admin\SponsorController@addSlug');
 

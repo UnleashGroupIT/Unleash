@@ -147,6 +147,15 @@ section.two .wrppr {
       background-size:cover;
       background-position: center;
     }
+    &.bots{
+      background:url("../../gfx/lasvegas/v2-site/bots-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height:500px;
+      @media (min-width: 75em) {
+        height:100%;
+      }
+    }
   }
 }
 
