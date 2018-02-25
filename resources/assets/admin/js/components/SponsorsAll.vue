@@ -12,7 +12,7 @@
 
                             </div>
 
-                            <img class="Square GridItem" :alt="sponsor.company_name" :src="'/storage/sponsors/colored/'+sponsor.logo_url+'?id='+generateHash(10)">
+                            <img class="Square GridItem SponsorItem" :alt="sponsor.company_name" :src="'/storage/sponsors/colored/'+sponsor.logo_url+'?id='+generateHash(10)">
                         </div>
                     </li>
  

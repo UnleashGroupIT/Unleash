@@ -40,15 +40,16 @@
 
     <div class="GridContainer CustomSpeakerContainer">
         <div class="SponsorsGrid" id="CustomSpeakerGrid">
-         <sponsors-selected ref="SelectedSponsorGrid1" :sponsors="sponsors" :category_name="'Headline'" :category_id="1"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid2" :sponsors="sponsors" :category_name="'Diamond'" :category_id="2"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid3" :sponsors="sponsors" :category_name="'Emerald'" :category_id="3"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid4" :sponsors="sponsors" :category_name="'Platinum'" :category_id="4"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid5" :sponsors="sponsors" :category_name="'Gold'" :category_id="5"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid6" :sponsors="sponsors" :category_name="'Silver'" :category_id="6"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid7" :sponsors="sponsors" :category_name="'Exhibitors'" :category_id="7"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid8" :sponsors="sponsors" :category_name="'Startup'" :category_id="8"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid10" :sponsors="sponsors" :category_name="'A La Carte Only'" :category_id="10"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid1" :sponsors="sponsors" :category_name="'Headline'" :category_id="1" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid2" :sponsors="sponsors" :category_name="'Diamond'" :category_id="2" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid3" :sponsors="sponsors" :category_name="'Emerald'" :category_id="3" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid4" :sponsors="sponsors" :category_name="'Platinum'" :category_id="4" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid5" :sponsors="sponsors" :category_name="'Gold'" :category_id="5" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid6" :sponsors="sponsors" :category_name="'Silver'" :category_id="6" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid7" :sponsors="sponsors" :category_name="'Exhibitors'" :category_id="7" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid8" :sponsors="sponsors" :category_name="'Startup'" :category_id="8" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid10" :sponsors="sponsors" :category_name="'A La Carte Only'" :category_id="10" @removesponsor="removeFromGrid"></sponsors-selected>
+          <sponsors-selected ref="SelectedSponsorGrid0" :sponsors="sponsors" :category_name="'No Category'" :category_id="0" @removesponsor="removeFromGrid"></sponsors-selected>
        </div>
       </div> 
  </section>
@@ -189,6 +190,25 @@
                                 </div>
                             </div>
                             <!-- form-modal end --> 
+
+<div id="CategorySelector">
+   <h3>Please select a category</h3>
+   <select id="CatSelect" name="CatSelect">
+     <option value="1">Headline</option>
+     <option value="2">Diamond</option>
+     <option value="3">Emerald</option>
+     <option value="4">Platinum</option>
+     <option value="5">Gold</option>
+     <option value="6">Silver</option>
+     <option value="7">Exhibitor</option>
+     <option value="8">Startup</option>
+     <option value="10">A La Carte Only</option>
+     <option value="0">No Category</option>
+   </select> 
+   <br />
+   <button id="CatSelectButton" class="ui-pnotify-action-button btn btn-default">Save</button>
+   <button id="CatCancelButton" class="ui-pnotify-action-button btn btn-default">Cancel</button>
+</div>    
 
 </div>
 

@@ -122,7 +122,7 @@ var spVue = new Vue({
 	       this.$refs.SelectedSponsorGrid6.sponsors = this.sponsors;
 	       this.$refs.SelectedSponsorGrid7.sponsors = this.sponsors;
 	       this.$refs.SelectedSponsorGrid10.sponsors = this.sponsors;
-	       //this.$refs.SelectedSponsorGrid.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid0.sponsors = this.sponsors;
 
 
 			setTimeout(function(){ 
@@ -146,28 +146,55 @@ var spVue = new Vue({
               });
          } else {
 
-			axios.post('/api/sponsorgrid/'+this.selected, {
-			    sponsor_id: sponsorId
-			  })
-			  .then(function (response) {
-              new PNotify({
-                  title: 'Success!',
-                  text: 'Added to Grid!',
-                  type: 'success'
-              });          
-			    spVue.showGrid('');
-			  })
-			  .catch(function (error) {
-           new PNotify({
-                  title: 'Error!',
-                  text: 'There was an unexpected error with the request. Please, reload the page and try again!',
-                  type: 'error'
-              });           
-			    console.log(error);
-			  });
+			var selected = this.selected;
 
-         	
-         }
+			var notice = new PNotify({
+			    text: $('#CategorySelector').html(),
+			    icon: false,
+			    width: 'auto',
+			    hide: false,
+			    buttons: {
+			        closer: false,
+			        sticker: false
+			    },
+			    insert_brs: false
+			});
+			notice.get().on('click', '#CatCancelButton', function() {
+			    notice.remove();
+			});
+			notice.get().on('click', '#CatSelectButton', function() {
+			  var selectedCategoryId = notice.get().find('#CatSelect').val();
+					axios.post('/api/sponsorgrid/'+selected, {
+								    sponsor_id: sponsorId,
+								    category_id: selectedCategoryId
+								  })
+								  .then(function (response) {
+
+										 notice.update({
+									        title: 'Success!',
+									        text: 'Added to Grid!',
+									        icon: true,
+									        width: PNotify.prototype.options.width,
+									        hide: true,
+									        buttons: {
+									            closer: true,
+									            sticker: true
+									        },
+									        type: 'success'
+									    });       
+								    spVue.showGrid('');
+								  })
+								  .catch(function (error) {
+										 notice.update({
+							                  title: 'Error!',
+							                  text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+							                  type: 'error'
+									    });          
+								    console.log(error);
+								  });  
+			  
+			});
+		}
             
 
 		},
@@ -396,7 +423,6 @@ var spVue = new Vue({
 		$('#sponsorPrevImg').attr('src','');
     })
   },
-
 
 });
 

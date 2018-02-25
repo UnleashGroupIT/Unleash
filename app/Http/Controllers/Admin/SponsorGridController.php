@@ -18,23 +18,17 @@ class SponsorGridController extends Controller
 
 	}
 
-	/*public function addToGrid(Request $request, $gridId){
+	public function addToGrid(Request $request, $gridId){
 
 		$grid = Grids::find($gridId);
 		$sponsor = $grid->sponsors()
-					 //->orderBy('speaker_grids.order_number','desc')
 		             ->get();
-		if (!empty($speaker[0]->pivot->order_number)){
-			$order = $speaker[0]->pivot->order_number +1;
-		} else {
-			$order = 1;
-		}   
 
-	return $grid->sponsors()->attach($request->sponsor_id,['order_number' => $order]);	       
+	return $grid->sponsors()->attach($request->sponsor_id,['category_id' => $request->category_id]);	       
 
 
 		
-	}*/
+	}
 
 	public function showGridItem($gridId, $speakerId){
 		$grid = Grids::find($gridId);
@@ -63,9 +57,9 @@ class SponsorGridController extends Controller
 
 	}*/
 
-	/*public function removeFromGrid($gridId, $speakerId){
+	public function removeFromGrid($gridId, $sponsorId){
 		$grid = Grids::find($gridId);
-		return $grid->speakers()->detach($speakerId);
+		return $grid->sponsors()->detach($sponsorId);
 
-	}*/
+	}
 }
