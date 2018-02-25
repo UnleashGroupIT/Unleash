@@ -53,7 +53,9 @@
 				<h2>Rachel Botsman</h2>
 				<h5>Author, Lecturer<br />Saïd Business School of the University of Oxford</h5>
 				
-				<p>A brilliant storyteller, Rachel Botsman has led the way in discussing how our heavy reliance on tech is redefining cultural norms, whether it be predicting the sharing economy to exploring tech’s influence on trust. In her most recent book, "Who Can You Trust?", Rachel examines the reasons and possible consequences of people losing trust in themselves and global institutions, and instead relying on (and trusting in) AI and automation far more. When we begin to trust machines more than other humans, what does that mean for humanity?</p>
+				<p>A brilliant storyteller, Rachel Botsman has led the way in discussing how our heavy reliance on tech is redefining cultural norms, whether it be predicting the sharing economy to exploring tech’s influence on trust. In her most recent book, "Who Can You Trust?", Rachel examines the reasons and possible consequences of people losing trust in themselves and global institutions, and instead relying on (and trusting in) AI and automation far more. When we begin to trust machines more than other humans, what does that mean for humanity?<br>
+<br>
+</p>
 				
 				<p>In her talk, Rachel will delve deeper into this relationship between trust and technology, pulling from everyday examples like Amazon Echo to China’s planned citizen scores.</p>
 			</div>

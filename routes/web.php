@@ -147,6 +147,13 @@ Route::get('/amsterdam/terms', function () {
     return redirect('/terms');
 });
 
+
+Route::get('/amsterdam/tckts', function(){
+
+  return view('amsterdam.pages.tickets_normal');
+
+	
+});
 /*********** London ************/
 
 Route::get('/london/', 'MainPageController@index')->name('london.index');
@@ -281,13 +288,11 @@ Route::get('/america/speakers', 'SpeakersController@index')->name('lasvegas.spea
 
 Route::get('/america/speaker/{speakerId}', 'SpeakersController@speaker')->name('lasvegas.speaker');
 
-Route::get('/america/sponsors', function () {
-    return redirect('/america/index#spnsrgrd');
-});
+Route::get('/america/sponsors', 'SponsorsController@index')->name('lasvegas.sponsors');
 
 Route::get('/america/sponsor', function () {
-    return redirect('/america/index#spnsrgrd');
-})->name('lasvegas.sponsors');
+    return redirect('/america/sponsors');
+});
 
 Route::get('/america/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('lasvegas.sponsor');
 
@@ -323,6 +328,14 @@ Route::get('/america/delegate-brochure', function () {
   return view('lasvegas.pages.delegatespdf');
 });
 
+Route::get('/america/room-availablity', function () {
+  return view('lasvegas.pages.roomavailability');
+});
+
+Route::get('/america/room-setup', function () {
+  return view('lasvegas.pages.roomsetup');
+});
+
 Route::get('/america/terms', function () {
     return redirect('/terms');
 });
@@ -335,7 +348,10 @@ Route::get('/america/indexv2', 'MainPageController@index');
 
 Route::get('/america/speakersv2', 'SpeakersController@index');
 
-Route::get('/america/sp', 'SponsorsController@index');
+
+
+
+
 
 /******** Admin Routes **********/
 

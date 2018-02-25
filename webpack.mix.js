@@ -56,7 +56,8 @@ mix.sass('resources/assets/scss/amsterdam/about.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/venue.scss', 'public/css/amsterdam')
    .sass('resources/assets/scss/amsterdam/agenda.scss', 'public/css/amsterdam')  
    .sass('resources/assets/scss/amsterdam/terms.scss', 'public/css/amsterdam')
-   .sass('resources/assets/scss/amsterdam/tickets_temp.scss', 'public/css/amsterdam')    
+   .sass('resources/assets/scss/amsterdam/tickets_temp.scss', 'public/css/amsterdam')
+   .sass('resources/assets/scss/amsterdam/tickets_old.scss', 'public/css/amsterdam')   
    .sass('resources/assets/scss/amsterdam/pdfs.scss', 'public/css/amsterdam')      
    .options({
          processCssUrls: false,
