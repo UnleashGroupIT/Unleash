@@ -35,9 +35,10 @@ export default {
     removeFromGrid(sponsorId) {
 
         this.$emit('removesponsor', sponsorId);
-          
-         
-    
+    },
+
+    editFilteredSponsor(sponsorId){
+       this.$emit('editsponsor', sponsorId);
     },
 
   },

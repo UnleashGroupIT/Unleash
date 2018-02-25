@@ -11,7 +11,6 @@
     <link href="{{ mix('css/style.css', '/admin') }}" rel="stylesheet">
   <link href="{{ mix('css/sponsors.css', '/admin') }}" rel="stylesheet" type="text/css">
   <link href="{{ mix('css/common.css', '/admin') }}" rel="stylesheet" type="text/css">
-
 @endsection
   
 @section('content')
@@ -40,16 +39,16 @@
 
     <div class="GridContainer CustomSpeakerContainer">
         <div class="SponsorsGrid" id="CustomSpeakerGrid">
-         <sponsors-selected ref="SelectedSponsorGrid1" :sponsors="sponsors" :category_name="'Headline'" :category_id="1" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid2" :sponsors="sponsors" :category_name="'Diamond'" :category_id="2" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid3" :sponsors="sponsors" :category_name="'Emerald'" :category_id="3" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid4" :sponsors="sponsors" :category_name="'Platinum'" :category_id="4" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid5" :sponsors="sponsors" :category_name="'Gold'" :category_id="5" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid6" :sponsors="sponsors" :category_name="'Silver'" :category_id="6" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid7" :sponsors="sponsors" :category_name="'Exhibitors'" :category_id="7" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid8" :sponsors="sponsors" :category_name="'Startup'" :category_id="8" @removesponsor="removeFromGrid"></sponsors-selected>
-         <sponsors-selected ref="SelectedSponsorGrid10" :sponsors="sponsors" :category_name="'A La Carte Only'" :category_id="10" @removesponsor="removeFromGrid"></sponsors-selected>
-          <sponsors-selected ref="SelectedSponsorGrid0" :sponsors="sponsors" :category_name="'No Category'" :category_id="0" @removesponsor="removeFromGrid"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid1" :sponsors="sponsors" :category_name="'Headline'" :category_id="1" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid2" :sponsors="sponsors" :category_name="'Diamond'" :category_id="2" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid3" :sponsors="sponsors" :category_name="'Emerald'" :category_id="3" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid4" :sponsors="sponsors" :category_name="'Platinum'" :category_id="4" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid5" :sponsors="sponsors" :category_name="'Gold'" :category_id="5" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid6" :sponsors="sponsors" :category_name="'Silver'" :category_id="6" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid7" :sponsors="sponsors" :category_name="'Exhibitors'" :category_id="7" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid8" :sponsors="sponsors" :category_name="'Startup'" :category_id="8" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+         <sponsors-selected ref="SelectedSponsorGrid10" :sponsors="sponsors" :category_name="'A La Carte Only'" :category_id="10" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
+          <sponsors-selected ref="SelectedSponsorGrid0" :sponsors="sponsors" :category_name="'No Category'" :category_id="0" @removesponsor="removeFromGrid" @editsponsor="editFilteredSponsor"></sponsors-selected>
        </div>
       </div> 
  </section>

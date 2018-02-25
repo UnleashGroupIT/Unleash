@@ -109,7 +109,7 @@ var spVue = new Vue({
 
 
 			axios.get('/api/sponsorgrid/'+this.selected).then(response => this.sponsors = response.data);
-			console.log(this.sponsors);
+
 	       
 	       this.sponsorAll = this.$refs.allSponsorGrid;
 	       this.sponsorAll.filterSponsors(this.selected, this.sponsorSearch);
@@ -356,17 +356,15 @@ var spVue = new Vue({
 	},
 
 	editSponsor($event){
-			let ref = this.$refs.allSponsorGrid;
-			let selectedGr = this.selected;
-			let SearchVar = this.sponsorSearch;
+		var thiiiis = this;
       // create a form
       const form = new FormData();
       form.append('sponsor_img', this.selectedImage);
-      form.append('company', $event.target.company.value);
+      form.append('company_name', $event.target.company.value);
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
-	  form.append('bio', $event.target.bio.value);
+	  form.append('short_bio', $event.target.bio.value);
 	  form.append('website', $event.target.website.value);
 	  
 	  console.log($event.target.bio.value);
@@ -384,8 +382,8 @@ var spVue = new Vue({
 					        text: 'Sponsor Saved!',
 					        type: 'success'
     					});
-
-    			ref.filterSponsors(selectedGr, SearchVar);	
+			 thiiiis.showGrid(thiiiis.selected);
+    				
 			  })
 			  .catch(function (error) {
 			  	 new PNotify({

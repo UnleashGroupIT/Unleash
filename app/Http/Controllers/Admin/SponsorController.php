@@ -31,24 +31,51 @@ class SponsorController extends Controller
             $sponsors->where('company_name','like', '%'.$request->search.'%');
         }        
        
-       // return $speakers->get();
+       // return $sponsors->get();
         return $sponsors->paginate(30);        
     }
     //store a sponsor
     public function storeSponsor(Request $request){
     	
-    	if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
-   			 $img_url = $request->file('logo')->store('sponsors');
-	    } else {
-	    	$img_url = '';
-	    }
-    	   
+      $fullName = $request->company;
+
+           if(isset($fullName)){
+
+                $slug = htmlspecialchars(Controller::clrSTR($fullName));
+
+            }       
+
+        
+        if ($request->hasFile('sponsor_img') && $request->file('sponsor_img')->isValid()) {
+
+            switch ($request->file('sponsor_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
+
+
+               $img_url = 'storage/public/'.$request->file('sponsor_img')->storeAs(
+                'public/sponsors/colored', $slug.$extension
+                );
+
+             $img_url = $slug.$extension;
+        } else {
+            $img_url = '';
+        }       
+    
             	   
     	Sponsors::create([
-			'company_name' => $request->company_name,
+			'company_name' => $request->company,
 			'website' => $request->website ?? null, 
 			'short_bio' => $request->bio ?? null, 
-			'logo_url' => $logo, 
+			'logo_url' => $img_url, 
 			'facebook' => $request->facebook ?? null, 
 			'twitter' => $request->twitter ?? null, 
 			'linkedin' => $request->linkedin ?? null
@@ -62,27 +89,66 @@ class SponsorController extends Controller
 
     }
 
-    //edit a specific sponsor
+   //edit a specific sponsor
     public function editSponsor(Request $request, $sponsorId){
 
-    	$sponsor = Sponsors::find($sponsorId);
+        $sponsor = Sponsors::find($sponsorId);
 
-    	foreach ($request->all() as $field => $value) {
-    		if(isset($sponsor->$field) || is_null($sponsor->$field)){
-				$sponsor->$field = $value;
+        if ($request->hasFile('sponsor_img') && $request->file('sponsor_img')->isValid()) {
 
-    		}
-    		
-    	}
+            switch ($request->file('sponsor_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
 
-    	$sponsor->save();
 
-    	return $sponsor;
+               $img_url = 'storage/public/'.$request->file('sponsor_img')->storeAs(
+                'public/sponsors/colored', $sponsor->slug.$extension
+                );
+
+             $sponsor->logo_url = $sponsor->slug.$extension;
+        }       
+
+     $changable = [
+        'slug',
+        'short_bio',
+        'company_name',
+        'logo_url',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'website',
+];
+        foreach ($request->all() as $field => $value) {
+          
+            if(in_array($field, $changable) && $sponsor->$field != $value){
+                
+                $sponsor->$field = $value;
+
+            }
+
+
+            
+        }
+
+
+
+
+        $sponsor->save();
+
+        return $sponsor;
 
 
     }
 
-    //delete a specific speaker
+    //delete a specific sponsor
     public function deleteSponsors($sponsorId){
     		return Sponsors::destroy($sponsorId);
 

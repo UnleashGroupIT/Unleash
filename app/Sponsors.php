@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Sponsors extends Model
 {
 
+      protected $fillable = [
+      	'company_name',
+      	'slug',
+      	'short_bio',
+      	'logo_url',
+      	'facebook',
+      	'twitter',
+      	'linkedin',
+      	'website',
+  ];  
 
         public function solutions(){
 
