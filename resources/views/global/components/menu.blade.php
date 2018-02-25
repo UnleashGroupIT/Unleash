@@ -33,7 +33,7 @@
 										<ul class="subs-ul">
 											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
 											<li><a href="{{ route('lasvegas.speakers') }}">Speakers</a></li>
-											<li><a href="{{ route('lasvegas.index') }}#spnsrgrd">Our Clients</a></li>
+											<li><a href="{{ route('lasvegas.sponsors') }}">Sponsors</a></li>
 											<li><a href="{{ route('lasvegas.volunteer') }}">Volunteer</a></li>
 											<li><a href="{{ route('lasvegas.travel') }}">Venue &amp; Travel</a></li>
 											<li><a href="{{ route('america.floorplan') }}">Floor plan</a></li>

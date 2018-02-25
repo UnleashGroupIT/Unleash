@@ -40,25 +40,25 @@
 		<div class="content">
 			<div class="content-wrap">
 				<div class="h4wrp">
-					<h2 class="aloft">Aloft London</h2>
+					<h2 class="aloft">Moxy London ExCeL</h2>
 				</div>
-				<p class="pdg">Aloft London Excel is the only hotel in London directly connected to the ExCeL International Convention Centre. Located right next to the Prince Regent DLR station, it is minutes away from London City Airport and Canary Wharf.</p>
+				<p class="pdg">In a city that is known for bright lights and constant activity, MOXY London Excel has arrived to add guts to this high powered community. Marrying smart service and technology with contemporary style, Moxy is do-it-yourself made easy.</p>
 			</div>
 			<div class="content-wrap pdg">
-				<h3>Aloft London Excel</h3>
+				<h3>Moxy London ExCeL</h3>
 				<!--<span>Booking Code:<p class="code">UNLEASH18</p></span>-->
-				<span>Single Occupancy: &pound;230 per night</span>
-				<span>Double Occupancy: &pound;240 per night</span>
+				<span>Single Occupancy: &pound;179 per night</span>
+				<span>Double Occupancy: &pound;189 per night</span>
 				<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-				<p><strong>Booking via telephone:</strong> 00 44 207 290 7575<br>
+			<!--	<p><strong>Booking via telephone:</strong> 00 44 207 290 7575<br>
 <strong>via mail:</strong> reservations.aloftlondonexcel@alofthotels.com<br>
-<strong>Booking name:</strong> UNLEASH18 (Please quote if calling in or emailing the hotel)</p>
+<strong>Booking name:</strong> UNLEASH18 (Please quote if calling in or emailing the hotel)</p> -->
 				
 			</div>
 			<div class="pdg btm">
 				<div class="h4wrp">
-					<a href="https://www.starwoodmeeting.com/events/start.action?id=1709223927&key=18A2CFB" target="_blank"><button class="red-btn">Book now</button></a>
-					<a href="https://www.google.hu/maps/place/Aloft+London+Excel/@51.5083719,0.0355768,15z/data=!4m5!3m4!1s0x0:0x89b18efc117c73fe!8m2!3d51.5083719!4d0.0355768" target="_blank"><button class="red-btn">Show on Map</button></a>
+					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=HR%20Tech%20World%202018%5ELONOR%60HRNHRNA%60179%60GBP%60false%602%603/17/18%603/22/18%6003/02/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="red-btn">Book now</button></a>
+					<a href="https://www.google.hu/maps/place/MOXY+London+Excel/@51.508499,0.0390773,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8a87c6b7b8d3f:0xb816048defc063cd!8m2!3d51.508499!4d0.041266" target="_blank"><button class="red-btn">Show on Map</button></a>
 				</div>
 			</div>
 		</div>
@@ -67,6 +67,28 @@
 	<section class="speakers-grid hotels">
 		<h2>Preferred Hotels</h2>
 		<div class="speakers-wrap">
+		<div class="speaker">
+				<img src="{{ URL::asset('gfx/london/hampton.jpg') }}" alt="Hampton by Hilton">
+				<div class="dtls-wrap">
+					<h6 class="name">Hampton by Hilton</h6>
+						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
+					<p>Booking via telephone: 00 44 (0) 203 002 2972<br>
+Via email: reservations@hbhlondondocklands.co.uk
+						 </p>
+					<p>Queen Room: 17<sup>th</sup>, 19<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
+					<span>Single Occupancy: &pound;119 / night</span>
+					<span>Double Occupancy: &pound;119 / night</span>
+					<p>Standard Room: 18<sup>th</sup> March 2018</p>
+					<span>Single Occupancy: &pound;90 / night</span>
+					<span>Double Occupancy: &pound;90 / night</span>
+					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
+					<p class="code">The hotel requires a minimum nights’ stay of 2 nights.</p>
+					<a href="http://group.hamptoninn.com/Unleash18" target="_blank"><button class="topaz-btn">Book now</button></a>
+				</div>
+			</div>
+		
+		
+		
 			<div class="speaker">
 				<img src="{{ URL::asset('gfx/london/doubletree.jpg') }}" alt="Doubletree by Hilton">
 				<div class="dtls-wrap">
@@ -94,20 +116,20 @@ via mail: irene.ortiz@dtexcel.com
 			<div class="speaker">
 				<img src="{{ URL::asset('gfx/london/moxy.jpg') }}" alt="Moxy">
 				<div class="dtls-wrap">
-					<h6 class="name">Moxy</h6>
+					<h6 class="name">Aloft ExCel</h6>
 					<div class="booking-wrp">
 						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
 						<p class="code">* Please quote if calling in or emailing the hotel.</p>
-						<p>Booking via telephone: +31 202 259 693<br>
-Via email: renate.wijnbergen@belvar.eu
+						<p>Booking via telephone: 00 44 207 290 7575<br>
+Via email: aloftlondonexcel@alofthotels.com
 					</p>
 						
 					</div>
 					<p>Standard Room:</p>
-					<span>Single Occupancy: &pound;199 / night</span>
-					<span>Double Occupancy: &pound;209 / night</span>
+					<span>Single Occupancy: &pound;230 / night</span>
+					<span>Double Occupancy: &pound;240 / night</span>
 					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-					<a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Unleash%2018%5ELONOR%60hrnhrna%60199%60GBP%60false%602%603/17/18%603/22/18%6002/03/18&app=resvlink&stop_mobi=yes" target="_blank"><button class="topaz-btn">Book now</button></a>
+					<a href="https://www.starwoodmeeting.com/events/start.action?id=1709223927&key=18A2CFB" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
 			<div class="speaker">
@@ -125,25 +147,7 @@ Via email: renate.wijnbergen@belvar.eu
 					<a href="http://www.accorhotels.com/gb/promotions-offers/hot-deals-offers/owm004847-001-hr-tech-world.shtml" target="_blank"><button class="topaz-btn">Book now</button></a>
 				</div>
 			</div>
-			<div class="speaker">
-				<img src="{{ URL::asset('gfx/london/hampton.jpg') }}" alt="Hampton by Hilton">
-				<div class="dtls-wrap">
-					<h6 class="name">Hampton by Hilton</h6>
-						<div class="booking-code"><span>Booking Name: UNLEASH18</span></div>
-					<p>Booking via telephone: 00 44 (0) 203 002 2972<br>
-Via email: reservations@hbhlondondocklands.co.uk
-						 </p>
-					<p>Queen Room: 17<sup>th</sup>, 19<sup>th</sup>, 20<sup>th</sup> &amp; 21<sup>st</sup> March 2018</p>
-					<span>Single Occupancy: &pound;119 / night</span>
-					<span>Double Occupancy: &pound;119 / night</span>
-					<p>Standard Room: 18<sup>th</sup> March 2018</p>
-					<span>Single Occupancy: &pound;90 / night</span>
-					<span>Double Occupancy: &pound;90 / night</span>
-					<p>Rates: Inclusive of VAT, WIFI &amp; Breakfast.</p>
-					<p class="code">The hotel requires a minimum nights’ stay of 2 nights.</p>
-					<a href="http://group.hamptoninn.com/Unleash18" target="_blank"><button class="topaz-btn">Book now</button></a>
-				</div>
-			</div>
+			
 			<div class="speaker holiday">
 				<img src="{{ URL::asset('gfx/london/holiday-inn.jpg') }}" alt="Holiday Inn Express">
 				<div class="dtls-wrap">
