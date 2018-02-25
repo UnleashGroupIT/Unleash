@@ -149,7 +149,7 @@ class SponsorController extends Controller
     }
 
     //delete a specific sponsor
-    public function deleteSponsors($sponsorId){
+    public function deleteSponsor($sponsorId){
     		return Sponsors::destroy($sponsorId);
 
     }  
