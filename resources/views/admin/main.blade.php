@@ -53,10 +53,10 @@
                     <ul class="nav navbar-nav admin-nav">
                         @can('AdminSubSiteAccess', App\User::class)
                        <li><a href="{{ route('admin.speakers') }}">Speakers</a></li>
-                       @endcan
-                        @can('AdminSubSiteAccess', App\User::class)
                        <li><a href="{{ route('admin.agenda') }}">Agenda</a></li>
-                       @endcan					   
+                       <li><a href="{{ route('admin.sponsors') }}">Sponsors</a></li>
+                       @endcan
+			   
                     </ul>
 
                     <!-- Right Side Of Navbar -->
