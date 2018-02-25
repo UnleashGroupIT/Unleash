@@ -42,7 +42,7 @@ class SubPageController extends Controller
 
    public function sponsorUI(Request $request, User $user){
 
-    $this->authorize('AdminHiddenSiteAccess', $user);
+    $this->authorize('AdminSubSiteAccess', $user);
 
     
      $request->request->add(['category' => 2]);
