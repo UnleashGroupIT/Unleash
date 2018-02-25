@@ -5,12 +5,34 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Sponsors;
+use App\SponsorGrid;
 
 class SponsorController extends Controller
 {
    //List all sponsors
     public function getSponsors(Request $request){
-    	return Sponsors::all();
+    	//return Sponsors::all();
+
+        $sponsorIds = [];
+
+         $sponsors = (new Sponsors)->newQuery();
+
+        if ($request->has('exlude')){
+
+            $grid = SponsorGrid::where('grid_id',$request->exlude)->get();
+            foreach ($grid as $key => $value) {
+               array_push($sponsorIds, $value->sponsor_id);
+            }
+            $sponsors->whereNotIn('id', $sponsorIds);
+
+        }
+
+         if ($request->has('search')){
+            $sponsors->where('company_name','like', '%'.$request->search.'%');
+        }        
+       
+       // return $speakers->get();
+        return $sponsors->paginate(30);        
     }
     //store a sponsor
     public function storeSponsor(Request $request){
@@ -61,7 +83,7 @@ class SponsorController extends Controller
     }
 
     //delete a specific speaker
-    public function deleteSpeaker($sponsorId){
+    public function deleteSponsors($sponsorId){
     		return Sponsors::destroy($sponsorId);
 
     }  

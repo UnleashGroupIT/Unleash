@@ -1,7 +1,12 @@
 
 Vue.component(
-    'speakers-all',
+    'sponsors-all',
     require('./components/SponsorsAll.vue')
+);
+
+Vue.component(
+    'sponsors-selected',
+    require('./components/SponsorsSelected.vue')
 );
 
 Vue.component(
@@ -21,12 +26,13 @@ var spVue = new Vue({
 	el: '#PageContainer',
 
 	data: {
-		speakers: [],
+		sponsors: [],
 		selected : null,
 		selectedName: '',
-		speakerSearch: '',
-		speakerAll: '',
+		sponsorSearch: '',
+		sponsorAll: '',
 		event: null,
+		editSponsorData: {},
 		GridType: 2,
 		sortableOptions: {
 			animation: 150,
@@ -34,11 +40,11 @@ var spVue = new Vue({
 			// Changed sorting within list
 			onUpdate: function (/**Event*/evt) {
 
-					let new_item_id = evt.item.dataset.speakerid
+					let new_item_id = evt.item.dataset.sponsorid
 					let new_item_order = evt.newIndex
 					let old_item_order = evt.oldIndex;
-					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
-					let gridId = $("#SelectSpeakerGrid").val();
+					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('sponsorid');
+					let gridId = $("#SelectSponsorGrid").val();
 
 				axios.patch(`/api/sponsorgrid/${gridId}/${old_item_id}`, {
 				    order_number: old_item_order
@@ -82,7 +88,8 @@ var spVue = new Vue({
     	selectedImage: null,
     	image: null,
     	imgPrev: '',
-    	imgTempText: 'Drag your files here or click in this area.'		
+    	imgTempText: 'Drag your files here or click in this area.',
+		
 
 	},
 
@@ -101,15 +108,35 @@ var spVue = new Vue({
 				}
 
 
-			axios.get('/api/sponsorgrid/'+this.selected).then(response => this.speakers = response.data);
+			axios.get('/api/sponsorgrid/'+this.selected).then(response => this.sponsors = response.data);
+			console.log(this.sponsors);
 	       
-	       this.speakerAll = this.$refs.allSpeakerGrid;
-	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+	       this.sponsorAll = this.$refs.allSponsorGrid;
+	       this.sponsorAll.filterSponsors(this.selected, this.sponsorSearch);
+
+	       this.$refs.SelectedSponsorGrid1.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid2.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid3.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid4.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid5.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid6.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid7.sponsors = this.sponsors;
+	       this.$refs.SelectedSponsorGrid10.sponsors = this.sponsors;
+	       //this.$refs.SelectedSponsorGrid.sponsors = this.sponsors;
+
+
+			setTimeout(function(){ 
+				     jQuery('#CustomSpeakerLoading').fadeOut();
+				     jQuery( "#CustomSpeakerGrid" ).fadeIn();
+			 		/* jQuery( "#CustomSpeakerGrid" ).slideToggle( "slow", function() {
+			 
+			  });*/
+			 }, 2000);
 
 		},
 
-	//Attach a speaker to the selected grid
-		addToGrid(speakerId) {
+	//Attach a sponsor to the selected grid
+		addToGrid(sponsorId) {
 			
          if(!this.selected){
          	    new PNotify({
@@ -120,7 +147,7 @@ var spVue = new Vue({
          } else {
 
 			axios.post('/api/sponsorgrid/'+this.selected, {
-			    speaker_id: speakerId
+			    sponsor_id: sponsorId
 			  })
 			  .then(function (response) {
               new PNotify({
@@ -145,14 +172,14 @@ var spVue = new Vue({
 
 		},
 
-	//Remove a speaker from the selected grid	
-		removeFromGrid(speakerId) {
+	//Remove a sponsor from the selected grid	
+		removeFromGrid(sponsorId) {
 			
          if(!this.selected){
          	alert('No Grid is selected!');
          } else {
 
-			axios.delete('/api/sponsorgriditem/'+this.selected+'/'+speakerId, {
+			axios.delete('/api/sponsorgriditem/'+this.selected+'/'+sponsorId, {
 			  })
 			  .then(function (response) {
 			    spVue.showGrid('');
@@ -176,51 +203,50 @@ var spVue = new Vue({
 		
 		},
 
-	//Filter speakers by the filter field's value and ofc by the selected grid
-	//We don't want to show speakers in the "all speakers" section
+	//Filter sponsors by the filter field's value and ofc by the selected grid
+	//We don't want to show sponsors in the "all sponsors" section
 	//who is also in the selected grid.
 
-        filterSpeakers(){
-           this.speakerAll = this.$refs.allSpeakerGrid;
+        filterSponsors(){
+           this.sponsorAll = this.$refs.allSponsorGrid;
 	       
-		   this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
+		   this.sponsorAll.filterSponsors(this.selected, this.sponsorSearch);
         	
       
 		},
 
-	//Create a new Speaker	
-	formSubmit($event){
-			let ref = this.$refs.allSpeakerGrid;
+	//Create a new Sponsor	
+	newSponsorSubmit($event){
+			let ref = this.$refs.allSponsorGrid;
 			let selectedGr = this.selected;
-			let SearchVar = this.speakerSearch;
+			let SearchVar = this.sponsorSearch;
       // create a form
       const form = new FormData();
-      form.append('speaker_img', this.selectedImage);
-      form.append('first_name', $event.target.first_name.value);
-      form.append('last_name', $event.target.last_name.value);
-      form.append('job_title', $event.target.job_title.value);
+      form.append('sponsor_img', this.selectedImage);
       form.append('company', $event.target.company.value);
       form.append('facebook', $event.target.facebook.value);
       form.append('twitter', $event.target.twitter.value);
       form.append('linkedin', $event.target.linkedin.value);
+	  form.append('bio', $event.target.bio.value);
+	  form.append('website', $event.target.website.value);
       // submit the image			
 
         const config = {
             headers: { 'content-type': 'multipart/form-data' }
         }
 
-			axios.post('/api/speakers', form, config)
+			axios.post('/api/sponsors', form, config)
 			  .then(function (response) {
-			  	document.getElementById("NewSpeakerForm").reset();
-				document.getElementById("speakerPrevImg").src="";
+			  	document.getElementById("NewSponsorForm").reset();
+				document.getElementById("sponsorPrevImg").src="";
 			  	document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';	
 			 		    new PNotify({
 					        title: 'Success!',
-					        text: 'Speaker Saved!',
+					        text: 'Sponsor Saved!',
 					        type: 'success'
     					});
 
-    			ref.filterSpeakers(selectedGr, SearchVar);	
+    			ref.filterSponsors(selectedGr, SearchVar);	
 			  })
 			  .catch(function (error) {
 			  	 new PNotify({
@@ -236,7 +262,7 @@ var spVue = new Vue({
 
 
 //Image Functions
-//We use this for the preview image for the image uplod in the "create new speaker" modal
+//We use this for the preview image for the image uplod in the "create new sponsor" modal
  	validate(image) {
       if (!this.allowableTypes.includes(image.name.split(".").pop().toLowerCase())) {
         alert(`Sorry you can only upload ${this.allowableTypes.join("|").toUpperCase()} files.`)
@@ -278,18 +304,101 @@ var spVue = new Vue({
       };
        reader.readAsDataURL(this.selectedImage);
      this.imgTempText = '';
-    },   						
+    }, 
 
-	}
+    editFilteredSponsor(sponsorId){
 
-	/*mounted(){
+        axios.get(`/api/sponsor/${sponsorId}`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+           this.sponsorEditRequest(response.data);
+        })
+        .catch(e => {
+          console.log(e);
+         // this.errors.push(e)
+        })
 
-		
-	}*/
+
+       
+    },
+
+	sponsorEditRequest(sponsorData){
+		this.editSponsorData = sponsorData;
+		this.imgPrev =  '/storage/sponsors/colored/'+sponsorData.logo_url+'?id='+this.generateHash(10);
+	    $('#edit_form_modal').modal({backdrop: 'static', keyboard: true});
+	},
+
+	editSponsor($event){
+			let ref = this.$refs.allSponsorGrid;
+			let selectedGr = this.selected;
+			let SearchVar = this.sponsorSearch;
+      // create a form
+      const form = new FormData();
+      form.append('sponsor_img', this.selectedImage);
+      form.append('company', $event.target.company.value);
+      form.append('facebook', $event.target.facebook.value);
+      form.append('twitter', $event.target.twitter.value);
+      form.append('linkedin', $event.target.linkedin.value);
+	  form.append('bio', $event.target.bio.value);
+	  form.append('website', $event.target.website.value);
+	  
+	  console.log($event.target.bio.value);
+      // submit the image			
+
+        const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+
+			axios.post(`/api/sponsor/${this.editSponsorData.id}?_method=PATCH`, form, config)
+			  .then(function (response) {
+			  	
+			 		    new PNotify({
+					        title: 'Success!',
+					        text: 'Sponsor Saved!',
+					        type: 'success'
+    					});
+
+    			ref.filterSponsors(selectedGr, SearchVar);	
+			  })
+			  .catch(function (error) {
+			  	 new PNotify({
+                  title: 'Error!',
+                  text: 'There was an unexpected error with the upload. Please, reload the page and try again!',
+                  type: 'error'
+              });
+			    console.log(error);
+			  });
+
+
+		},	
+
+  generateHash(num){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < num; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+
+  }, 
+
+},
+
+  mounted(){
+    $(this.$refs.editmodal).on("hidden.bs.modal", function(){
+    	document.getElementById("EditSponsorForm").reset();
+    	document.getElementById("NewSponsorForm").reset();
+    	this.selectedImage = '';
+    	this.imgPrev = '';
+		this.image= '';
+    	this.sponsorPrevImg = '';
+		$('#sponsorPrevImg').attr('src','');
+    })
+  },
 
 
 });
-
 
 
 
