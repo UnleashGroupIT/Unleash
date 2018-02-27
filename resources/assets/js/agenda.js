@@ -73,6 +73,7 @@ var spVue = new Vue({
 		day2: null,
 		speakersearch: null,
 		speakers: null,
+		allfilters: null
 		
 
 	},//data,
@@ -168,7 +169,25 @@ var spVue = new Vue({
   	},
     speakersearch: function (val){
     	this.searchForSpeakers(val);
-    }
+    },
+
+    allfilters: function (val){
+    	this.filters = [];
+    	if(val){
+    		
+    		var vm = this;
+	    	$( ".AgendaFilters" ).each( function( index, el ) {
+			    $( el ).prop( "checked", true );
+			    vm.filters.push($( el ).val());
+			});
+    		
+    		
+    	}else {
+	    	$( ".AgendaFilters" ).each( function( index, el ) {
+			    $( el ).prop( "checked", false );
+			});    		
+    	}
+    }    
 
   }  
 

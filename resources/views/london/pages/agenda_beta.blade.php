@@ -69,10 +69,12 @@
 				<div class="FilterInnerSection">
 					@foreach($AgendaTracks as $TrackFilters)
 						<div>
-							<input v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}
+							<input class="AgendaFilters" v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}
 						</div>
 					@endforeach
-					
+					  <div>
+							<input id="SelectAllFilter" v-model="allfilters" type="checkbox" value="0"> Select All
+					 </div>
 				</div>	
 			</div>	
 			<div class="contents-bg" id="SessionList">
@@ -121,6 +123,23 @@
 			/*$('#day1').hide();*/
 		}
 	});
+
+ 
+/*$('body').on('click', '#SelectAllFilter', function() {
+ 	
+ 	if($('#SelectAllFilter').prop("checked")){
+		$( ".AgendaFilters" ).each( function( index, el ) {
+		    $( el ).prop( "checked", true );
+		});
+ 	} else {
+		$( ".AgendaFilters" ).each( function( index, el ) {
+		    $( el ).prop( "checked", false );
+		});
+
+ 	}
+
+});*/
+
 	</script>
   <script src="{{ mix('js/agenda.js') }}" type="text/javascript"></script>	
 @endsection
