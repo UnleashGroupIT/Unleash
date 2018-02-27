@@ -12,6 +12,9 @@ class TrackController extends Controller
    //List all Tracks
     public function getTracks(Request $request){
         
+        if($request->filled('event')){
+           return Tracks::where('event_id', $request->event)->get();
+        }
         //TODO: Need filter by event
     	return Tracks::all();
     }

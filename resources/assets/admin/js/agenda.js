@@ -91,13 +91,16 @@ const spVue = new Vue({
 		events: null,
 		day1: null,
 		day2: null,
+		month: null,
+		year: null,
+		event_name: null,
 		speakersearch: null,
 		speakers: null,
 		newSpeaker: [], //This contains the true ids for speaker upload for sessions
 		newSpeakerVisual: [],
 		sessionedit: null,
 		editmode: false,
-		tracks: null,
+		tracks: [],
 		NewEditTitle: 'Create New Session',
 		underEditId: null,
 		
@@ -126,9 +129,52 @@ const spVue = new Vue({
 		getDays(){
 			var vm = this;
 		this.events.forEach(function(element) {
-		     if(element.id == default_event_id){
+		     if(element.id == vm.eventid){
 		   		vm.day1 = element.day1;
 		   		vm.day2 = element.day2;
+		   		vm.day = element.day1;
+		   		switch(element.month){
+		   			case 1:
+		   			 vm.month = 'January';
+		   			break;
+		   			case 2:
+		   			 vm.month = 'February';
+		   			break;
+		   			case 3:
+		   			 vm.month = 'March';
+		   			break;
+		   			case 4:
+		   			 vm.month = 'April';
+		   			break;
+		   			case 5:
+		   			 vm.month = 'May';
+		   			break;
+		   			case 6:
+		   			 vm.month = 'June';
+		   			break;
+		   			case 7:
+		   			 vm.month = 'July';
+		   			break;
+		   			case 8:
+		   			 vm.month = 'August';
+		   			break;
+		   			case 9:
+		   			 vm.month = 'September';
+		   			break;
+		   			case 10:
+		   			 vm.month = 'October';
+		   			break;
+		   			case 11:
+		   			 vm.month = 'November';
+		   			break;
+		   			case 12:
+		   			 vm.month = 'December';
+		   			break;		   					   					   				   			
+                	
+		   		}
+		   		vm.monthDate = element.month;
+		   		vm.event_name = element.name;
+		   		vm.year = element.year;
 		     }
 			});
 		},	
@@ -426,7 +472,19 @@ const spVue = new Vue({
 
 
 
-    },		
+    },	
+
+    getTracks(){
+        axios.get(`/api/tracks?event=${this.eventid}`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.tracks = response.data;
+          
+        })
+        .catch(e => {
+         console.log(e);
+        })    	
+    },	
 
 	},
 
@@ -456,13 +514,41 @@ const spVue = new Vue({
     	this.searchForSpeakers(val);
     },
 
-   /* eventid: function (val){
-    	this.eventid(val);
+    eventid: function (val){
+    	this.getDays();
     	this.filteredSearch();
+    	this.getTracks();
+    	jQuery('input[name="startTime"]').data('daterangepicker', '');
+    	jQuery('input[name="endTime"]').data('daterangepicker', '');
+
+		  var startTime = jQuery('input[name="startTime"]').daterangepicker({
+		        timePicker: true,
+		   		//timePicker24Hour: true,	        
+		        timePickerIncrement: 5,
+		        singleDatePicker: true,
+		   		minDate: `${this.monthDate}/${this.day1}/${this.year}`,
+		   		maxDate: `${this.monthDate}/${this.day2}/${this.year} 11:59 PM`,
+		        locale: {
+		            format: 'MM/DD/YYYY h:mm A'
+		        }
+		    });
 
 
+		   var endTime = jQuery('input[name="endTime"]').daterangepicker({
+		        timePicker: true,
+		       // timePicker24Hour: true,	
+		        timePickerIncrement: 5,
+		        singleDatePicker: true,
+		   		minDate: `${this.monthDate}/${this.day1}/${this.year}`,
+		   		maxDate: `${this.monthDate}/${this.day2}/${this.year} 11:59 PM`,		        
+		        locale: {
+		            format: 'MM/DD/YYYY h:mm A'
+		        }
+		    });     	
 
-    }*/
+	
+
+    }
 
   }  
 

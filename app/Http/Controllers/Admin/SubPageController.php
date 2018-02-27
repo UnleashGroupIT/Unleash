@@ -77,6 +77,7 @@ class SubPageController extends Controller
        $end = Carbon::parse($event->second_day['numberFormat']);
 
        $tmp = (object)array(
+        'name' => $event->event_name,
         'id' => $event->id,
         'year' => $start->year,
         'month' => $start->month,

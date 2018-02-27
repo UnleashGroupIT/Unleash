@@ -140,6 +140,11 @@ margin-bottom: 40px;
 	margin: 10px 0;
 cursor: pointer;
 }
+.TrackSelectContainer {
+	width: 100%;
+max-width: 280px;
+display: inline-block;
+}
 </style> 
 
 @endsection
@@ -149,7 +154,7 @@ cursor: pointer;
 <p>Event Selector - (Only London for now)</p>
   <div id="GridInnerContainer">
 
-            <select name="EventSelect" id ="EventSelect" v-model="eventid" disabled>
+            <select name="EventSelect" id ="EventSelect" v-model="eventid">
             	@foreach ($events as $event)
             		@if($event->event_code == Config::get('unleash.admin.default_event'))
 		              <option value="{{ $event->id }}" selected>
@@ -171,7 +176,7 @@ cursor: pointer;
 						<ul class="side tabs">
 							<li @click="selectPage('Sessions')" class="tab adminActive" id = "SessionButton">Sessions</li> 
 							<li @click="selectPage('NewSession')" class="tab" id="NewSessionButton">Create new Session</li> 
-					    	 <li {{--@click="selectPage('Tracks')" --}} class="tab" id="TrackButton">Tracks (Not Yet Implemented)</li>
+					    	<li {{--@click="selectPage('Tracks')" --}} class="tab" id="TrackButton">Tracks (Not Yet Implemented)</li>
 					    	
 						</ul>
 					</nav>
@@ -371,7 +376,7 @@ cursor: pointer;
 
 		<div class="title-section">
 			<h1>@{{ NewEditTitle }}</h1>
-			<h4>London 20-21 March 2018 | ExCeL</h4>
+			<h4>@{{event_name}} @{{day1}}-@{{day2}} @{{month}} @{{year}}</h4>
 		</div>
 		<div class="contents-bg">
 			<div class="contents-wrp">
@@ -392,12 +397,14 @@ cursor: pointer;
 
 
 
+
                  Stage:
-				<select id="NewSessionTrack" name="NewSessionTrack" class="dateSelector">
-				@foreach($AgendaTracks as $TrackFilters)
-					<option value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}</option>
-				@endforeach
-				</select>
+				<div v-if="tracks && tracks[0] && tracks[0].track_name" class="TrackSelectContainer">
+					<select id="NewSessionTrack" name="NewSessionTrack" class="dateSelector">
+						<option v-for="track in tracks" :value="track.id"> @{{track.track_name}}</option>
+					</select>
+				  
+				</div>	
 
 				Session Type:
 				<select id="sessiontype" name="sessiontype" class="dateSelector">
@@ -475,7 +482,7 @@ cursor: pointer;
 <!--<section id="Sessions" class="agenda hiddenTab">-->	
 		<div class="title-section">
 			<h1 id="TestAgendaText">Sessions</h1>
-			<h4>London 20-21 March 2018 | ExCeL</h4>
+			<h4>@{{event_name}} @{{day1}}-@{{day2}} @{{month}} @{{year}}</h4>
 		</div>
 		<div id="SearchBarContainer">
 			<input v-model="searchbar" class="SearchBar" type="text" id="SessionSearchBar" name="SessionSearchBar">
@@ -483,9 +490,15 @@ cursor: pointer;
 		<div id="SessionContentSectionContainer">
 		<div id="SessionFilterSection">
 			<div class="FilterInnerSection">
-				@foreach($AgendaTracks as $TrackFilters)
-					<input v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }} <br />
-				@endforeach
+
+				<div v-if="tracks && tracks[0] && tracks[0].track_name">
+					<div v-for="track in tracks">
+					   <input v-model="filters" type="checkbox" :value="track.id"> @{{track.track_name}} <br />
+					</div>
+				  
+				</div>	
+				
+				
 				
 			</div>	
 		</div>	
@@ -494,8 +507,8 @@ cursor: pointer;
 				<div class="tabs-wrp">
 					<nav>
 						<ul class="side tabs">
-					    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">March 20.</li>
-					    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">March 21.</li>  
+					    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">@{{month}} @{{day1}}.</li>
+					    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">@{{month}} @{{day2}}.</li>  
 						</ul>
 					</nav>
 				</div>
@@ -556,7 +569,7 @@ cursor: pointer;
 
 
 jQuery(function() {
-   jQuery('input[name="startTime"]').daterangepicker({
+  var startTime = jQuery('input[name="startTime"]').daterangepicker({
         timePicker: true,
    		//timePicker24Hour: true,	        
         timePickerIncrement: 5,
@@ -568,7 +581,7 @@ jQuery(function() {
         }
     });
 
-   jQuery('input[name="endTime"]').daterangepicker({
+   var endTime = jQuery('input[name="endTime"]').daterangepicker({
         timePicker: true,
        // timePicker24Hour: true,	
         timePickerIncrement: 5,
