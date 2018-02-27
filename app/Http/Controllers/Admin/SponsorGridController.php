@@ -30,32 +30,32 @@ class SponsorGridController extends Controller
 		
 	}
 
-	public function showGridItem($gridId, $speakerId){
+	public function showGridItem($gridId, $sponsorId){
 		$grid = Grids::find($gridId);
 	
 		return $grid->sponsors()->find($sponsorId);
 	}
 
 
-	/*public function editGridItem(Request $request, $gridId, $speakerId){
+	public function editGridItem(Request $request, $gridId, $sponsorId){
 
 		$grid = Grids::find($gridId);
 
-		$speaker = $grid->speakers()->find($speakerId);
+		$sponsor = $grid->sponsors()->find($sponsorId);
 
 		
 		 foreach ($request->all() as $field => $value) {
-    		if(isset($speaker->pivot->$field) || is_null($speaker->pivot->$field)){
+    		if(isset($sponsor->pivot->$field) || is_null($sponsor->pivot->$field)){
     		
-				$speaker->pivot->$field = $value;
+				$sponsor->pivot->$field = $value;
 
     		}
     		
     	}
 
-    	$speaker->pivot->save();
+    	$sponsor->pivot->save();
 
-	}*/
+	}
 
 	public function removeFromGrid($gridId, $sponsorId){
 		$grid = Grids::find($gridId);

@@ -34,6 +34,7 @@ var spVue = new Vue({
 		event: null,
 		editSponsorData: {},
 		GridType: 2,
+		alacarte: false,
 		sortableOptions: {
 			animation: 150,
 			forceFallback: false,
@@ -396,6 +397,94 @@ var spVue = new Vue({
 
 
 		},	
+
+//Attach a sponsor to the selected grid
+		aLaCarte(sponsorId) {
+			var vm = this;
+
+			
+         if(!this.selected){
+         	    new PNotify({
+                  title: 'Error!',
+                  text: 'Please select a grid first!',
+                  type: 'error'
+              });
+         } else {
+
+	   axios.get(`/api/sponsorgriditem/${vm.selected}/${sponsorId}`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          var spdata = response.data;
+
+			var notice = new PNotify({
+			    text: $('#aLaCarteEditor').html(),
+			    icon: false,
+			    width: 'auto',
+			    hide: false,
+			    buttons: {
+			        closer: false,
+			        sticker: false
+			    },
+			    insert_brs: false
+			});
+			console.log(spdata);
+			if(spdata.pivot.alacarte){
+				notice.get().find('#aLaCarte').attr('checked','checked');
+			}
+
+			notice.get().on('click', '#CarteCancelButton', function() {
+			    notice.remove();
+			});
+			notice.get().on('click', '#CarteSelectButton', function() {
+				var carteVale = notice.get().find('#aLaCarte').prop("checked");
+
+			  var selectedCategoryId = notice.get().find('#CatSelect').val();
+					axios.patch(`/api/sponsorgrid/${vm.selected}/${sponsorId}`, {
+								    sponsor_id: sponsorId,
+								    alacarte: carteVale
+								  })
+								  .then(function (response) {
+
+										 notice.update({
+									        title: 'Success!',
+									        text: 'A La Carte option Updated!',
+									        icon: true,
+									        width: PNotify.prototype.options.width,
+									        hide: true,
+									        buttons: {
+									            closer: true,
+									            sticker: true
+									        },
+									        type: 'success'
+									    });       
+								    spVue.showGrid('');
+								  })
+								  .catch(function (error) {
+										 notice.update({
+							                  title: 'Error!',
+							                  text: 'There was an unexpected error with the request. Please, reload the page and try again!',
+							                  type: 'error'
+									    });          
+								    console.log(error);
+								  });  
+			  
+			});
+
+
+
+        })
+        .catch(e => {
+          console.log(e);
+         // this.errors.push(e)
+        })
+
+
+
+
+		}
+            
+
+		},
 
   generateHash(num){
     var text = "";

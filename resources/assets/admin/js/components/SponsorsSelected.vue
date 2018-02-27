@@ -7,6 +7,7 @@
                               <div class="IconContainer">
                                <div title="Remove from selected grid" class="RemoveFromGrid" v-on:click="removeFromGrid(sponsor.id)"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
                                 <div title="Edit Sponsor across all events" class="EditSponsorGlobal" v-on:click="editFilteredSponsor(sponsor.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                                <div title="A La Carte" class="EditSponsorGlobal" v-on:click="aLaCarte(sponsor.id)"><i class="fa fa-font" aria-hidden="true"></i></div>
                               </div>
                                 <div class="GridOverlay">
                                     <h2 class="SliphoverHeadline">{{ sponsor.company_name }}</h2>
@@ -41,6 +42,9 @@ export default {
        this.$emit('editsponsor', sponsorId);
     },
 
+    aLaCarte(sponsorId){
+       this.$emit('alacartemode', sponsorId);
+    },
   },
 
   // Fetches posts when the component is created.
