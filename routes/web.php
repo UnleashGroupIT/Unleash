@@ -140,7 +140,7 @@ Route::get('/amsterdam/thankyou', function(){
 });
 
 Route::get('/amsterdam/tickets', function () {
-    return view('amsterdam.pages.tickets_temp');
+    return view('amsterdam.pages.tickets_normal');
 })->name('ams.tickets');
 
 Route::get('/amsterdam/terms', function () {

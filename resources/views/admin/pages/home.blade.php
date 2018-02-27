@@ -22,3 +22,7 @@
     </div>
 </div>
 @endsection
+
+@section('customscripts')
+   <script src="{{ mix('js/app.js', '/admin') }}" type="text/javascript"></script>
+@endsection

@@ -62,6 +62,7 @@
             <li class="TimeLineActive">
                 <span class="TimeLineActive">/</span> SUPER SAVER <div  id="UntilSummer"> <span class="SummerSaverUntil">UNTIL</span> <br class="BRDesktop"> <span class="SummerSaverDate">MARCH 31.</span></div> </span>/</span></li>
             <li>EARLY BIRD <span >/</span></li>
+			 <li>SUMMER SAVER <span >/</span></li>
             <li >REGULAR <div  id="UntilSummer">  <br class="BRDesktop"> <span class="SummerSaverDate"></span></div> <span>/</span></li>
             <li>LATE <span>/</span></li>
             <li>ONSITE REGISTRATION</li>
@@ -77,7 +78,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 id="ticket-type" class="TicketHeadline">EXPO ONLY</h2>
-            <h2 class="TicketPrice">&euro; 299</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>299</h2>
             <h3 class="TicketDeadline">UNTIL MARCH 31.</h3>
         </div>
     </div>
@@ -85,8 +86,8 @@
             
             <h3>Access to Exhibition Floor</h3>
             <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+             <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -109,19 +110,18 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
             <h2 class="TicketHeadline">Super Saver</h2>
-            <h2 class="TicketPrice">&euro;1271</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>1271</h2>
             <h3 class="TicketDeadline">UNTIL MARCH 31.</h3>
             <h4 id="hide" class="TicketSmallText">.</h4>
         </div>
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -148,7 +148,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">Public Promotion</h2>
-            <h2 class="TicketPrice">&euro;971</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>971</h2>
             <!--<h4 class="TicketSmallText">Save &pound;300 off Regular ticket price</h4>-->
 			<h4 class="TicketSmallText">&nbsp;</h4>
             <h3 class="TicketDeadline">UNTIL MARCH 31.</h3>
@@ -156,12 +156,11 @@
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -186,7 +185,7 @@
     <div class="TicketBoxHeader" >
         <div class="TicketBoxHeaderInner" id="Standard">
             <h2 class="TicketHeadline">STANDARD CONFERENCE &amp; EXPO</h2>
-            <h2 class="TicketPrice">&euro;1695</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>1695</h2>
             <h3 class="TicketDeadline">UNTIL MARCH 31.</h3>
             <h4 class="TicketSmallText" style="margin-bottom:10px">Do you have a promo code?</h4>
             <h3 class="TicketDeadline"><input type="text" class="DiscountInput" id="DiscountField" placeholder="Type it here"></h3>
@@ -194,12 +193,11 @@
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -243,7 +241,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
             <h2 class="TicketHeadline">TEAM 8 OR MORE</h2>
-            <h2 class="TicketPrice">&euro;1271</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>1271</h2>
             <h4 class="pTicket">per ticket</h4>
          
             <h4 id="hide" class="TicketSmallText">.</h4>
@@ -251,12 +249,11 @@
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -280,19 +277,18 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">TEAM 13 OR MORE</h2>
-            <h2 class="TicketPrice">&euro;1187</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>1187</h2>
             <h4 class="pTicket">per ticket</h4>
             
         </div>
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>
@@ -317,7 +313,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">TEAM 18 OR MORE</h2>
-            <h2 class="TicketPrice">&euro;1102</h2>
+            <h2 class="TicketPrice"><span style="font-size:75%">&euro;</span>1102</h2>
             <h4 class="pTicket">per ticket</h4>
            
 
@@ -325,12 +321,11 @@
     </div>
         <div class="BoxInnerConent">
             <h3>Full Access to Exhibition Floor</h3>
-            <ul class="BenefitUL">
-             <li>+100 industry leading vendors</li>
-             <li>+50 of the hottest HR startups</li>
+            <ul class="BenefitUL"> <li>+200 industry leading vendors</li>
+             <li>+100 hottest HR startups</li>
              <li>Product demos</li>
-             <li>Targeted breakout sessions</li>
-             <li>Access to all stages</li>
+             <li>+12 Targeted breakout sessions</li>
+             <li>2 Main Stages<br> (Future of Work and iRecruit)</li>
             </ul>
 
             <h3>Food &amp; Beverage</h3>

@@ -151,7 +151,7 @@ display: inline-block;
 @section('content')
 <div id="PageContainer">
  <section id="GridSection">
-<p>Event Selector - (Only London for now)</p>
+<p>Event Selector</p>
   <div id="GridInnerContainer">
 
             <select name="EventSelect" id ="EventSelect" v-model="eventid">

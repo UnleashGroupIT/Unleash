@@ -64,7 +64,7 @@
 	      function init() {
 
 	        var mapMinZoom = 0;
-	        var mapMaxZoom = 5;
+	        var mapMaxZoom = 4;
 	        var map = L.map('map', {
 	          maxZoom: mapMaxZoom,
 	          minZoom: mapMinZoom,
@@ -74,8 +74,8 @@
 	        }).setView([0, 0], mapMaxZoom);
 	        
 	        var mapBounds = new L.LatLngBounds(
-	            map.unproject([0, 3328], mapMaxZoom),
-	            map.unproject([4352, 0], mapMaxZoom));
+				map.unproject([0, 2304], mapMaxZoom),
+				map.unproject([3072, 0], mapMaxZoom));
 	            
 	        map.fitBounds(mapBounds);
 	        map.scrollWheelZoom.disable();
@@ -94,7 +94,7 @@
 	      function init2() {
 
 	        var mapMinZoom = 0;
-	        var mapMaxZoom = 5;
+	        var mapMaxZoom = 4;
 	        var map = L.map('map2', {
 	          maxZoom: mapMaxZoom,
 	          minZoom: mapMinZoom,
@@ -104,8 +104,8 @@
 	        }).setView([0, 0], mapMaxZoom);
 	        
 	        var mapBounds = new L.LatLngBounds(
-	            map.unproject([0, 3328], mapMaxZoom),
-	            map.unproject([4352, 0], mapMaxZoom));
+				map.unproject([0, 2304], mapMaxZoom),
+				map.unproject([3072, 0], mapMaxZoom));
 	            
 	        map.fitBounds(mapBounds);
 	        map.scrollWheelZoom.disable();

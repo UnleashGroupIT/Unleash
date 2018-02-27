@@ -69,7 +69,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
             <h2 class="TicketHeadline">EARLY BIRD</h2>
-            <h2 class="TicketPrice">$1,349</h2>
+            <h2 class="TicketPrice"><span style="font-size: 75%">$</span>1,349</h2>
             <h3 class="TicketDeadline">UNTIL MARCH 21.</h3>
             <h4 class="TicketSmallText">Save $146</h4>
             <h4 id="hide" class="TicketSmallText">.</h4>
@@ -174,7 +174,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">TEAM 5 OR MORE</h2>
-            <h2 class="TicketPrice">$1,121</h2>
+            <h2 class="TicketPrice"><span style="font-size: 75%">$</span>1,121</h2>
             <h4 class="pTicket">per ticket</h4>
             <h4 class="TicketSmallText">Save 25%</h4>
 
@@ -217,7 +217,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">TEAM 8 OR MORE</h2>
-            <h2 class="TicketPrice">$1,046</h2>
+            <h2 class="TicketPrice"><span style="font-size: 75%">$</span>1,046</h2>
             <h4 class="pTicket">per ticket</h4>
             <h4 class="TicketSmallText">Save 30%</h4>
         </div>
@@ -260,7 +260,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner PopularHeader">
             <h2 class="TicketHeadline">TEAM 12 OR MORE</h2>
-            <h2 class="TicketPrice">$971</h2>
+            <h2 class="TicketPrice"><span style="font-size: 75%">$</span>971</h2>
             <h4 class="pTicket">per ticket</h4>
             <h4 id="mp" class="TicketSmallText">Save 35%</h4>
             <h4 id="hide" class="TicketSmallText">.</h4>
@@ -305,7 +305,7 @@
     <div class="TicketBoxHeader">
         <div class="TicketBoxHeaderInner">
             <h2 class="TicketHeadline">INVESTOR/VC</h2>
-            <h2 class="TicketPrice">$995</h2>
+            <h2 class="TicketPrice"><span style="font-size: 75%">$</span>995</h2>
             <h4 class="TicketSmallText">Save $100</h4>
             <h3 class="TicketDeadline">Until March 31.</h3>
         </div>
