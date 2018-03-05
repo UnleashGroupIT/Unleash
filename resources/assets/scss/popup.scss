@@ -49,7 +49,15 @@
   .form .popup-accept {
     display: flex;
     margin: 1em 0;
-    justify-content: center; }
+    @media (min-width: 500px) {
+      justify-content: center;
+    }
+  }
+  .popup-paragraph-small{
+    @media (min-width: 500px) {
+      text-align:center;
+    }
+  }
   .form .popup-accept-button {
     font-size: 12px;
     margin-left: 5px; }
@@ -77,9 +85,9 @@
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
 
-  @media (max-width: 400px) {
+  @media (min-width: 500px) {
     .modal-content{
-      height: 100%;
+      height: auto!important;
     }
   }
 
@@ -128,7 +136,12 @@
 
 /* Modal Content */
 .modal-content {
-  position: relative;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  overflow-y:auto;
+  height:100%;
   background-color: #fefefe;
   margin: auto;
   padding: 0;

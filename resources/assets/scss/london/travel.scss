@@ -216,16 +216,11 @@ section.two .wrppr {
 }
 
     section.two .img-bg.travelbg {
-      background-image: url("../../gfx/london/travel-sec-mobile-bg.jpg");
+      background-image: url("../../gfx/london/travel-sec-bg.jpg");
       background-repeat: no-repeat;
       background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .img-bg.travelbg {
-          background-image: url("../../gfx/london/travel-sec-tablet-bg.jpg");
-          } }
       @media (min-width: 75em) {
         section.two .img-bg.travelbg {
-          background-image: url("../../gfx/london/travel-sec-bg.jpg");
           background-position: bottom left; } }
 
     section.two .img-bg.floorplanbg {
@@ -446,11 +441,9 @@ section.one-cntr {
   padding: 2em 0;
 
   &.vhcls{
-    background: url("../../gfx/london/travel-vehicles-bg.jpg");
-    background-size: cover;
-    background-position: center;
+    background: $darker-green;
     p{margin-top:0;}
-    h2{color:$white;}
+    h2{color:$topaz;}
   }
 }
 
@@ -741,80 +734,36 @@ section.hotels{
 
 .vehicles-wrp{
   .vehicles{
-    padding: 1em 3em;
-    background: #fff;
-    text-align: left;
+    padding: 1em;
+    border:1px solid transparent;
+    text-align: center;
     margin: 2em 0;
-    position:relative;
+    @media (min-width: 40em) {
+      padding: 2em 3em;
+    }
     @media (min-width: 125em) {
       padding: .21vw 2.5vw;
     }
 
     &:hover{
-      background:#33cc33;
-      p,span{
-        color: #fff;
-      }
-      &::after{
-        background-image:url("../../gfx/london/jobarrow-hover.png");
-      }
-    }
-
-    &::before{
-      content: '';
-      display: block;
-      width: 20px;
-      height: 20px;
-      position:absolute;
-      left: 10px;
-      top: 11px;
-      background-size: contain;
-      background-position: center;
-      background-repeat:no-repeat;
-      @media (min-width: 40em) {
-        width: 25px;
-        height: 25px;
-      }
-      @media (min-width: 125em) {
-        width: 1.3vw;
-        height: 1.3vw;
-      }
-    }
-    &::after{
-      content: '';
-      display: block;
-      width: 10px;
-      height: 10px;
-      position:absolute;
-      right: 15px;
-      top: calc(50% - 5px);
-      background-image:url("../../gfx/london/jobarrow.png");
-      background-size: contain;
-      background-position: center;
-      background-repeat:no-repeat;
-      @media (min-width: 125em) {
-        width: .55vw;
-        height: .55vw;
-      }
+      transition:all .3s;
     }
 
     p{
-      color: #33cc33;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 12px;
+      font-size: 24px;
       line-height: normal;
-      margin-bottom:.5em; 
+      margin-bottom:.25em; 
       @media (min-width: 40em) {
-        font-size: 15px;
+        font-size: 36px;
       }
       @media (min-width: 125em) {
-        font-size: .78vw;
+        font-size: 1vw;
       }
     }
     span{
       font-size: 12px;
       color:#000;
+      line-height:2;
       @media (min-width: 40em) {
         font-size: 15px;
       }
@@ -827,45 +776,53 @@ section.hotels{
 
   .eliz{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/london/metroicon.png");
+    border-color:$topaz;
+    p,span{
+      color:$topaz;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/london/metroicon-hover.png");
+      background:$topaz;
+      p,span{
+        color:$white;
       }
     }
   }
   .tube{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/london/tubeicon.png");
+    border-color:$las;
+    p,span{
+      color:$las;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/london/tubeicon-hover.png");
+      background:$las;
+      p,span{
+        color:$white;
       }
     }
   }
   .car{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/london/caricon.png");
+    border-color:#bedb39;
+    p,span{
+      color:#bedb39; //sarga
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/london/caricon-hover.png");
+      background:#bedb39;
+      p,span{
+        color:$white;
       }
     }
   }
   .park{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/london/parkicon.png");
+    border-color:#f5a503;
+    p,span{
+      color:#f5a503;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/london/parkicon-hover.png");
+      background:#f5a503;
+      p,span{
+        color:$white;
       }
     }
   }

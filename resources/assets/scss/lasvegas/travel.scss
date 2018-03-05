@@ -337,11 +337,9 @@ section.one-cntr {
   padding: 2em 0;
 
   &.vhcls{
-    background:url("../../gfx/lasvegas/travel-vehicles-bg.jpg");
-    background-position:center;
-    background-size:cover;
+    background:$darker-green;
     h2{
-      color:$white;
+      color:$topaz;
     }
   }
 }
@@ -634,81 +632,37 @@ section.hotels{
 
 .vehicles-wrp{
   .vehicles{
-    padding: 1em 3em;
-    background: #fff;
-    text-align: left;
+    padding: 1em;
+    border:1px solid transparent;
+    text-align: center;
     margin: 2em 0;
-    position:relative;
+    @media (min-width: 40em) {
+      padding: 2em 3em;
+    }
     @media (min-width: 125em) {
       padding: .21vw 2.5vw;
     }
 
     &:hover{
-      background:$las;
-      p,span{
-        color: #fff;
-      }
-      &::after{
-        background-image:url("../../gfx/lasvegas/jobarrow-hover.png");
-      }
-    }
-
-    &::before{
-      content: '';
-      display: block;
-      width: 20px;
-      height: 20px;
-      position:absolute;
-      left: 10px;
-      top: 11px;
-      background-size: contain;
-      background-position: center;
-      background-repeat:no-repeat;
-      @media (min-width: 40em) {
-        width: 25px;
-        height: 25px;
-      }
-      @media (min-width: 125em) {
-        width: 1.3vw;
-        height: 1.3vw;
-      }
-    }
-    &::after{
-      content: '';
-      display: block;
-      width: 10px;
-      height: 10px;
-      position:absolute;
-      right: 15px;
-      top: calc(50% - 5px);
-      background-image:url("../../gfx/lasvegas/jobarrow.png");
-      background-size: contain;
-      background-position: center;
-      background-repeat:no-repeat;
-      @media (min-width: 125em) {
-        width: .55vw;
-        height: .55vw;
-      }
+      transition:all .3s;
     }
 
     p{
-      color: $las;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: normal;
-      margin-bottom:.5em; 
+      font-size: 24px;
       margin-top:0;
+      line-height: normal;
+      margin-bottom:.25em; 
       @media (min-width: 40em) {
-        font-size: 15px;
+        font-size: 36px;
       }
       @media (min-width: 125em) {
-        font-size: .78vw;
+        font-size: 1vw;
       }
     }
     span{
       font-size: 12px;
       color:#000;
+      line-height:2;
       @media (min-width: 40em) {
         font-size: 15px;
       }
@@ -721,45 +675,54 @@ section.hotels{
 
   .eliz{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/lasvegas/metroicon.png");
+    border-color:$topaz;
+    p,span{
+      color:$topaz;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/lasvegas/metroicon-hover.png");
+      background:$topaz;
+      p,span{
+        color:$white;
       }
     }
   }
   .tube{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/lasvegas/tubeicon.png");
+    border-color:$las;
+    p,span{
+      color:$las;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/lasvegas/tubeicon-hover.png");
+      background:$las;
+      p,span{
+        color:$white;
       }
     }
   }
   .car{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/lasvegas/caricon.png");
+    border-color:#bedb39;
+    p,span{
+      color:#bedb39; //sarga
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/lasvegas/caricon-hover.png");
+      background:#bedb39;
+      p,span{
+        color:$white;
       }
     }
   }
   .park{
     @extend .vehicles;
-    &::before{
-      background-image:url("../../gfx/lasvegas/parkicon.png");
+    border-color:#f5a503;
+    margin-bottom:0;
+    p,span{
+      color:#f5a503;
     }
     &:hover{
-      &::before{
-        background-image:url("../../gfx/lasvegas/parkicon-hover.png");
+      background:#f5a503;
+      p,span{
+        color:$white;
       }
     }
   }

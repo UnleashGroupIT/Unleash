@@ -192,32 +192,32 @@ Via email: aloftlondonexcel@alofthotels.com
 			<div class="img-bg floorplanbg"></div>
 		</div>
 	</section>
-	<section style="display:none;" class="one-cntr vhcls">
+	<section class="one-cntr vhcls">
 		<div class="wrp">
 			<h2>How to get there</h2>
 			
 			<div class="vehicles-wrp">
 				<a href="https://www.excel.london/organiser/visitor-experience/elizabeth-line" target="_blank">
 					<div class="eliz">
-						<p>ELIZABETH LINE</p>
+						<p>Elizabeth Line</p>
 						<span>Connecting Reading and Heathrow with East London, reaching ExCeL London hasn’t been easier.</span>
 					</div>
 				</a>
 				<a href="https://tfl.gov.uk/dlr/timetable/dlr?FromId=940GZZDLCGT&fromText=Canning+Town+DLR+Station&toText=Prince+Regent+DLR+Station&ToId=940GZZDLPRE&SelectedTime=8" target="_blank">
 					<div class="tube">
-						<p>TUBE</p>
+						<p>Tube</p>
 						<span>The Jubilee Line is recommended as the quickest route to ExCeL London. Alight at Canning Town and change onto a Beckton-bound DLR train, for the quick 3-stop journey to Prince Regent for ExCeL (East) entrance.</span>
 					</div>
 				</a>
 				<a href="https://www.google.com/maps/place/ExCeL+London/@51.5173734,0.0006612,13z/data=!3m1!5s0x47d8a8716fa1509d:0x342201ee325a678c!4m5!3m4!1s0x47d8a80ce609e50d:0xa0de5f705d7aec7!8m2!3d51.5084601!4d0.029846" target="_blank">
 					<div class="car">
-						<p>CAR</p>
+						<p>Car</p>
 						<span>When driving to ExCeL London follow signs for Royal Docks, City Airport and ExCeL. There is easy access from the M25, M11, A406 and A13.</span>
 					</div>
 				</a>
 				<a href="https://www.excel.london/visitor/getting-here/driving-and-parking" target="_blank">
 					<div class="park">
-						<p>PARKING</p>
+						<p>Parking</p>
 						<span>All on-site parking is pay and display. Three pay points located within the car park (on level two and level zero) at the end of your visit. All machines accept cash and credit card. Parking in the orange undercroft car park and the east car park is £20 per day. Parking in the Royal Victoria multi-storey car park is £15 per day. Motorcycles can be parked free of charge in the designated motorcycle parking area.</span>
 					</div>
 				</a>				

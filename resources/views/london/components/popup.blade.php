@@ -278,8 +278,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 					<input placeholder="Page Source" type="text" name="145751_23341pi_145751_23341" id="145751_23341pi_145751_23341" value="London2018-JoinOurCommunity" class="text" size="30" maxlength="255"  />
                 </p>  
                 <div class="popup-paragraph popup-policy ">
-                    <div class="popup-accept"><input id="TechtargetAccepted" type="checkbox"><span class="popup-accept-button">Sign up for Computer Weekly by Techtarget</span></div>
-                    <div class="popup-paragraph-small" style="text-align:center">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">UNLEASH</a> and <a href="https://www.techtarget.com/privacy-policy/" target="_blank">TechTarget privacy policy</a>.</div>
+                    <div class="popup-accept"><input required="required" id="TechtargetAccepted" type="checkbox"><span class="popup-accept-button">Sign up for Computer Weekly by Techtarget</span></div>
+                    <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">UNLEASH</a> and <a href="https://www.techtarget.com/privacy-policy/" target="_blank">TechTarget privacy policy</a>.</div>
                     <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">I accept the terms and conditions</span></div>
                 </div>
 				<div class="captchaContainer" id="joinourcommunity-captcha"></div>

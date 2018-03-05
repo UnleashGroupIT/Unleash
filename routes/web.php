@@ -209,7 +209,9 @@ Route::get('/london/speaker/{speakerId}', 'SpeakersController@speaker')->name('l
 
 Route::get('/london/sponsors', 'SponsorsController@index')->name('london.sponsors');
 
-
+Route::get('/london/mobileapp', function () {
+  return view('london.pages.mobileapp');
+});
 
 //Route::get('/london/sponsor', 'SponsorsController@index');
 
@@ -265,6 +267,9 @@ Route::get('/london/startup-pdf', function () {
 Route::get('/london/startup-brochure', function () {
   return view('london.pages.startuppdf');
 });
+
+
+Route::get('/london/delegate-list', 'DelegateController@index');
 
 /*********** America ************/
 

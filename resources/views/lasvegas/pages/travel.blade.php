@@ -74,13 +74,13 @@
 				</a>
 				<a href="https://www.aria.com/en/amenities/rideshare.html" target="_blank">
 					<div class="car">
-						<p>UBER</p>
+						<p>Uber</p>
 						<span>ARIA and Uber have teamed up to help you get the most out of your stay here in Las Vegas. ARIA now has a designated pick up and drop off location to make your time here hassle free. Simply open the app, request and meet your driver.</span>
 					</div>
 				</a>
 				<a href="https://www.aria.com/en/amenities/parking.html" target="_blank">
 					<div class="park">
-						<p>PARKING</p>
+						<p>Parking</p>
 						<span>Whether you are visiting for a few hours or for a few days, parking at ARIA will be easy and convenient during your stay. *Prices may be higher during special events. Parking fees are subject to change and parking is subject to availability.</span>
 					</div>
 				</a>				
