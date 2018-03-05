@@ -194,11 +194,12 @@ Route::get('/london/loyalty-brochure', function () {
   return view('london.pages.loyaltypdf');
 });
 
-
-
 Route::get('/london/room-availability', function () {
   return view('london.pages.roompdf');
 });
+
+Route::get('/london/indexv2', 'MainPageController@index');
+
 
 Route::get('/london/loyalty', function () {
   return view('london.pages.loyalty');
@@ -349,7 +350,7 @@ Route::get('/america/indexv2', 'MainPageController@index');
 Route::get('/america/speakersv2', 'SpeakersController@index');
 
 
-
+Route::get('/america/ag','AgendaController@usagenda');
 
 
 

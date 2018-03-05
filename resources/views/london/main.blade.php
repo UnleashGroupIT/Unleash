@@ -8,11 +8,11 @@
  	 @yield('meta')
 
      <!-- Browser color  -->
-    <meta name="theme-color" content="#33cc33">
+    <meta name="theme-color" content="#4AD9D9">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#33cc33">
+    <meta name="msapplication-navbutton-color" content="#4AD9D9">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#33cc33">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4AD9D9">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gfx/favicon/apple-touch-icon-57x57.png') }}">
@@ -32,6 +32,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gfx/favicon/favicon-196x196.png') }}">
     <link rel="manifest" href="{{ URL::asset('gfx/favicon/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/favicon/ms-icon-144x144.png') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 
 	
     <!-- CSRF Token -->
@@ -63,6 +65,12 @@
 <!-- Google API for MAPS -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC23Ed2Jj6V22JPpxKutPZnH1LiJ7tabsA&callback=initMap"
                     type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+var formId = null;
+var doSubmit = false;
+</script>						
 </head>
 <body>
 
@@ -95,7 +103,84 @@
 				</div>
 				<img id="x-btn" src="{{ URL::asset('gfx/x-btn.svg') }}" alt="X">
 				
-				 @include('global.components.menu')	
+				 <ul class="menu-ul">
+				 	<li class="sub-menu--li">
+						<nav id="sub" class="sub-menu">
+							<ul class="spec-menu amsterdam">
+								<li><a href="{{ route('london.index') }}">SHOW</a></li>
+								<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
+								<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
+								<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
+								<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
+								<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+								<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
+								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
+							</ul>
+						</nav>
+					</li>
+					<li><a href="/" title="HOME">Home</a></li>
+					<li><a href="/" title="NEWS">News</a></li>
+					<!--Dropdownbox for the menu-->
+					<li title="EVENTS" class="more opened">
+						<a class="more-a">Events</a>
+						<!--Double wrap to prevent hover interrupt-->
+						<div class="dropdownbox">
+							<div class="ul-wrp">
+								<h4>Where would you like to go?</h4>
+								<ul class="first-ul">
+									<li class="london" title="LONDON">
+										<a class="prevent" href="{{ route('london.index') }}">
+											<img src="{{ URL::asset('gfx/london-box.png') }}" alt="LONDON">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('london.index') }}">Show</a></li>
+											<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
+											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
+											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
+											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
+											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('london.travel') }}">Travel</a></li>
+											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
+										</ul>
+									</li>
+									<li class="lasvegas" title="LAS VEGAS">
+										<a class="prevent" href="{{ route('lasvegas.index') }}">
+											<img src="{{ URL::asset('gfx/vegas-box.png') }}" alt="LAS VEGAS">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
+											<li><a href="{{ route('lasvegas.speakers') }}">Speakers</a></li>
+											<li><a href="{{ route('lasvegas.sponsors') }}">Sponsors</a></li>
+											<li><a href="{{ route('lasvegas.volunteer') }}">Volunteer</a></li>
+											<li><a href="{{ route('lasvegas.travel') }}">Venue &amp; Travel</a></li>
+											<li><a href="{{ route('america.floorplan') }}">Floor plan</a></li>
+											<li><a href="{{ route('lasvegas.tickets') }}">Tickets</a></li>
+										</ul>
+									</li>
+									<li class="amsterdam" title="AMSTERDAM">
+										<a class="prevent" href="{{ route('ams.index') }}">
+											<img src="{{ URL::asset('gfx/ams-box.png') }}" alt="AMSTERDAM">
+											<div class="brdr"></div>
+										</a>
+										<ul class="subs-ul">
+											<li><a href="{{ route('ams.index') }}">Show</a></li>
+											<li><a href="{{ route('ams.index') }}#spkrgrd">Speakers</a></li>
+											<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
+											<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('ams.tickets') }}">Tickets</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li><a href="{{ route('global.startup') }}">Startup</a></li>
+					<li><a href="{{ route('ams.about') }}">About</a></li>
+					<li><a href="https://careers.unleashgroup.io/homepage">Careers</a></li>
+					<li><a href="{{ route('media') }}">Media</a></li>
+				</ul>	
 				 
 				<div class="social-booknow">
 					<div class="icos-wrp">
@@ -147,12 +232,17 @@
     @include('london.components.popup')
 
 
- <script>
-  window.intercomSettings = {
-    app_id: "vc03kwlz"
-  };
+ <!-- LiveChat code -->
+<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8465813;
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
 </script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/vc03kwlz';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<!-- END LiveChat code -->
 
     @include('global.components.trackers')
 </body>

@@ -324,7 +324,12 @@ $(document).ready(function()	{
 
 	$('.popup').click(function() { 
 		let popupName = $(this).data('popupdata');
-		$('#'+popupName).css("display", "flex")
+		$('#'+popupName).css("display", "flex");
+		  grecaptcha.render(popupName+'-captcha', {
+          'sitekey' : '6Ld7QUkUAAAAAK2tq3dnMv2AbRwPfFc4GUR9Exsu',
+		  'callback': reCaptchaVerify,
+		  'expired-callback': reCaptchaExpired
+        });		
 	})
 
 	$('.close').click(function() { 
@@ -356,5 +361,41 @@ $(document).ready(function()	{
 			$('#becomeasponsor').css("display", "flex")
     }   	
 	
+var bindFunct = function(){
+	
+	$('[name="CTAForms"]').one('submit', function(e) {
+		  e.preventDefault();
+		if (doSubmit) {
+			let formID = $(this).attr('id');
+			document.getElementById(formID).submit(); 
+		} else {
+			alert('Please, complete the captcha!');
+			bindFunct();
+		}		  
+	});	
+}	
+$('[name="CTAForms"]').one('submit', function(e) {
+    e.preventDefault();
+    // do your things ...
+		
+		
+	if (doSubmit) {
+		let formID = $(this).attr('id');
+		document.getElementById(formID).submit(); 
+    } else {
+		alert('Please, complete the captcha!');
+		bindFunct();
+	}
+    // and when you done:
+    
+});	
 	
 }); // READY END
+
+function reCaptchaVerify(response) {
+        doSubmit = true;
+}
+
+function reCaptchaExpired () {
+    /* do something when it expires */
+}

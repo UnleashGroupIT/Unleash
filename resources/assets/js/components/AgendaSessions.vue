@@ -130,7 +130,7 @@ export default {
 
   	agendadata: function (val){
   		this.agendasession = val;
-
+		
 
   	},
 

@@ -6,12 +6,41 @@ $black: #000;
 
 #sub{
     position: fixed;
+    display:none;
     top: 67px;
     height: 36px;
+    @media (min-width: 75em) {
+        display:block;
+    }
     @media (min-width: 125em) {
         top:3.47vw;
         height: 1.65vw;
     }
+}
+
+#desktop-menu .menu-ul .sub-menu--li{
+  padding:0;
+  @media (min-width: 75em) {
+    display:none;
+  }
+}
+
+.sub-menu--li #sub{
+  position:static;
+  display:block;
+  margin:0;
+  height:auto;
+  @media (min-width: 75em) {
+    display:none;
+    height:36px;
+  }
+}
+
+.sub-menu--li #sub .spec-menu{
+  display:block;
+  @media (min-width: 75em) {
+    display:none;
+  }
 }
 
 #unleash-logo #full-logo {

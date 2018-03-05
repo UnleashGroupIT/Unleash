@@ -33,6 +33,8 @@
     <link rel="manifest" href="{{ URL::asset('gfx/favicon/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ URL::asset('gfx/favicon/ms-icon-144x144.png') }}">
 
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -54,7 +56,12 @@
 </script>
 <!-- CrazyEgg -->
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<script>
+var formId = null;
+var doSubmit = false;
+</script>	
 </head>
 <body>
 
@@ -136,12 +143,17 @@
 	
     @include('amsterdam.components.popup')
 
- <script>
-  window.intercomSettings = {
-    app_id: "vc03kwlz"
-  };
+ <!-- LiveChat code -->
+<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8465813;
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
 </script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/vc03kwlz';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<!-- END LiveChat code -->
 
     @include('global.components.trackers')  
 </body>

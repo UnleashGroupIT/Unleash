@@ -42,6 +42,10 @@ class MainPageController extends Controller
 		  $site = 'lasvegas.pages.index-v2';
 	 }	 
 
+	 if($uri == 'london/indexv2'){
+		  $site = 'london.pages.indexv2';
+	 }	 	 
+	 
      $SpeakerGridController = new SpeakersController;
      $speakerGrids =  $SpeakerGridController->listGridContent($SpeakerGridId);
 

@@ -24,6 +24,20 @@
 				<img id="x-btn" src="{{ URL::asset('gfx/x-btn.svg') }}" alt="X">
 				<ul class="menu-ul">
 					<li><a href="/" title="HOME">Home</a></li>
+					<li class="sub-menu--li">
+						<nav id="sub" class="sub-menu">
+							<ul class="spec-menu amsterdam">
+								<li><a href="{{ route('london.index') }}">SHOW</a></li>
+								<li><a href="{{ route('london.index') }}#spkrgrd">SPEAKERS</a></li>
+								<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
+								<!--<li><a href="{{ route('london.loyalty') }}">LOYALTY</a></li>-->
+								<li><a href="{{ route('london.volunteer') }}">VOLUNTEER PROGRAM</a></li>
+								<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+								<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
+								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
+							</ul>
+						</nav>
+					</li>
 					<li><a href="/" title="NEWS">News</a></li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more opened">

@@ -75,12 +75,14 @@ max-width: 1124px !important; }
                    
                   <div id="smart-wrp"><a href="https://www.smartrecruiters.com/" target="_blank" title="smartrecruiters"><img id="smart" src="{{ URL::asset('gfx/lasvegas/header/sponsors/smartrecruiters.svg') }}" alt="smartrecruiters"></a></div>
 
-                  <div id="walkme"><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div>
+                  <div id="sumtotal"><a href="http://www.sumtotalsystems.com/" target="_blank" title="SumTotal"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/sumtotal-v4.svg') }}" alt="Sumtotal"></a></div>
 
                   <div id="sap-wrp"> <a href="http://www.successfactors.com/en_us.html" target="_blank" title="SAP SuccessFactors"><img id="sap" src="{{ URL::asset('gfx/lasvegas/header/sponsors/successfactors.svg') }}" alt="SAP SuccessFactors"></a></div>
 
-                  <div id="sumtotal"><a href="http://www.sumtotalsystems.com/" target="_blank" title="SumTotal"><img src="{{ URL::asset('gfx/amsterdam/header/sponsors/sumtotal.svg') }}" alt="Sumtotal"></a></div>
-                   		
+                  <div id="walkme"><a href="https://www.walkme.com/" target="_blank" title="WalkMe"><img src="{{ URL::asset('gfx/lasvegas/header/sponsors/Walkme.svg') }}" alt="WalkMe"></a></div>
+                     		
+				  <div id="workday"> <a href="http://www.workday.com" target="_blank" title="workday"><img id="workday" src="{{ URL::asset('gfx/lasvegas/header/sponsors/workday.svg') }}" alt="wokrday"></a></div>
+ 		
 
 			</div>
 		</section>

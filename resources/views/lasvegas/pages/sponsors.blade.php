@@ -150,7 +150,7 @@
 
 		</div>	
 
-	{{--	<h2>A La Carte</h2>
+		<h2>A La Carte</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 10 || $sponsor->pivot->alacarte == 1)
@@ -161,7 +161,7 @@
 			@endforeach	
 		</div>	
 		
-	--}}
+	
 	
 		<h2> Startup</h2>
 		<div class="sponsors-wrp">

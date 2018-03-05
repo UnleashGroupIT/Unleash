@@ -11,6 +11,30 @@ $butter : #e9f1df;
 $gray : #4d4d4f;
 $dark-gray : #101010;
 
+
+#desktop-menu .menu-ul .sub-menu--li{
+  padding:0;
+  @media (min-width: 75em) {
+    display:none;
+  }
+}
+
+.sub-menu--li .sub-menu{
+  position:static;
+  margin:0;
+  @media (min-width: 75em) {
+    display:none;
+  }
+}
+
+.sub-menu--li .sub-menu .spec-menu{
+  display:block;
+  @media (min-width: 75em) {
+    display:none;
+  }
+}
+
+
 body.hide{
   overflow:hidden;
 }

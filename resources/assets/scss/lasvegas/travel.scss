@@ -332,10 +332,18 @@ section.two button {
 }
 
 section.one-cntr {
-  display:none;
   background-color:$butter;
   text-align: center;
   padding: 2em 0;
+
+  &.vhcls{
+    background:url("../../gfx/lasvegas/travel-vehicles-bg.jpg");
+    background-position:center;
+    background-size:cover;
+    h2{
+      color:$white;
+    }
+  }
 }
 
 @media (min-width: 75em) {
@@ -690,6 +698,7 @@ section.hotels{
       font-size: 12px;
       line-height: normal;
       margin-bottom:.5em; 
+      margin-top:0;
       @media (min-width: 40em) {
         font-size: 15px;
       }

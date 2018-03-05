@@ -50,6 +50,46 @@ class AgendaController extends Controller
               ]);
    
    }   
+   
+  public function usagenda(Request $request){
+
+
+     $events = Events::all();
+     $tracks = Tracks::where('event_id', 3)
+		->orderBy('order', 'asc')
+		->get();
+
+     $eventsData = [];
+     foreach ($events as $event) {
+       
+       $start = Carbon::parse($event->first_day['numberFormat']);
+       $end = Carbon::parse($event->second_day['numberFormat']);
+
+       $tmp = (object)array(
+        'id' => $event->id,
+        'year' => $start->year,
+        'month' => $start->month,
+        'day1' => $start->day,
+        'day2' => $end->day 
+      );
+        array_push($eventsData, $tmp);
+      
+     }
+
+     JavaScript::put([
+        'default_event_id' => 3,
+        'default_event_code' => 'US18',
+        'default_day' => 15,
+        'eventdata' => $eventsData
+      ]);
+
+    return view('lasvegas.pages.agenda_beta', [
+                  
+                  'events' => $events,
+                  'AgendaTracks' =>$tracks
+              ]);
+   
+   }      
 
   public function getSessions(Request $request, $trackId){
 

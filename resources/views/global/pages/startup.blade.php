@@ -29,13 +29,22 @@
 @endsection
 
 @section('maincontent')
+
+<style type="text/css">
+	* {
+	box-shadow: none !important;
+	 -webkit-box-shadow:none !important;
+    
+}
+	
+</style>
 <div id="startup-logo-wrp" class="animated">
 	<img src="{{ URL::asset('gfx/startup-logo-v2.png') }}" alt="UNLEASH Startup">
 </div>
 	<section id="rel" class="two clients">
 		<button id="trailer" class="white-btn">Watch Trailer</button>
 		<div class="wrppr">
-			<div class="fix-bg startup-1"></div>
+			<div class="img-bg startup-1"></div>
 		</div>
 		<div class="content">
 			<div class="content-wrap">
@@ -64,7 +73,7 @@
 			</div>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg startup-2"></div>
+			<div class="img-bg startup-2"></div>
 		</div>
 	</section>
 	<!--
@@ -96,7 +105,7 @@
 		</div>
 	</section>
 	<section class="one-cntr">
-		<div class="wrp animated fadeInTop">
+		<div class="wrp">
 			<h2>APPLY NOW</h2>
 			<p>To apply, follow the link below and complete the registration form and we will be<br />in touch shortly to discuss it personally with you.</p>
 			<p id="orange-text"><a class="eventlink" href="/london" target="_blank"><img src="{{ URL::asset('gfx/deadline-london.png') }}" alt="London Deadline 26 FEBR 2018"></a></p>
@@ -115,7 +124,7 @@
 Please fill in all the fields below, and we'll get back to you soon.</p>
           </div>
           <div class="modal-body">
-            <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7qct" class="form">
+            <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/145751/2018-02-12/p7qct" class="form" name="CTAForms" id="conf-expo-form">
                 <input required="required" placeholder="Full Name" class="form-input" name="Input1" id="FullName" size="30" maxlength="40" type="text">
                 <input required="required" placeholder="Business Email" class="form-input" name="145751_30920pi_145751_30920" id="145751_30920pi_145751_30920" size="30" maxlength="255" type="email">
                 <input required="required" placeholder="Mobile Phone" class="form-input" name="145751_30922pi_145751_30922" id="145751_30922pi_145751_30922" size="30" maxlength="40" type="tel">
@@ -135,7 +144,8 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                     <div class="popup-paragraph-small">By submitting data to us you give your consent that data you submit may be processed for the purposes described in the <a href="terms" target="_blank">privacy policy</a>.</div>
                     <div class="popup-accept"><input required="required" id="PolicyAccepted" type="checkbox"><span class="popup-accept-button">Accept</span></div>
                 </div>
-                <input name="submit" value="submit" type="submit" class="blue-btn">
+				<div class="captchaContainer" id="conf-expo-captcha"></div>
+                <input name="submitbutton" value="submit" type="submit" class="blue-btn">
             </form>
           </div>
         </div>
@@ -144,7 +154,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 	    <div class="PopupContainer" id="ContainerVideo" onClick="event.stopPropagation();">
 				<div id="VideoCloseButton"><span id="vidclose" class="close">✕</span></div>
 				<div id="TrailerPopupContent" class="PopupContent">
-					<div class='embed-container'><iframe id="youtube_player" class="yt_player_iframe" src='https://www.youtube.com/embed/PX8wRQBJE8k?rel=0&enablejsapi=1&showinfo=0' frameborder='0' allowfullscreen></iframe>
+					<div class='embed-container'><iframe id="youtube_player" class="yt_player_iframe" src='https://www.youtube.com/embed/qONWtk5VY1E?rel=0&enablejsapi=1&showinfo=0' frameborder='0' allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
