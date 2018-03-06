@@ -100,9 +100,13 @@ class swoogo extends Command
                      foreach ($endResult->items as $key => $value) {
                         if (isset($value->billingAddress->country->name)){
                             $country = $value->billingAddress->country->name;
-                        }else {
-                            $country = null;
-                        }
+                        }elseif(isset($value->workAddress->country->name)) {
+                            $country = $value->workAddress->country->name;
+                        }elseif(isset($value->homeAddress->country->name)) {
+							$country = $value->homeAddress->country->name;
+						} else {
+							$country = null;
+						}
 					   if($value->registration_status == "confirmed"){
 							$delegate = Delegates::create([
 								'first_name' => ltrim($value->first_name),

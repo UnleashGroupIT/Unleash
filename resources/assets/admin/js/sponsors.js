@@ -368,14 +368,16 @@ var spVue = new Vue({
 	  form.append('short_bio', $event.target.bio.value);
 	  form.append('website', $event.target.website.value);
 	  
-	  console.log($event.target.bio.value);
+	  let spID = this.editSponsorData.id;
+	  
+	  
       // submit the image			
 
         const config = {
             headers: { 'content-type': 'multipart/form-data' }
         }
 
-			axios.post(`/api/sponsor/${this.editSponsorData.id}?_method=PATCH`, form, config)
+			axios.post(`/api/sponsor/${spID}?_method=PATCH`, form, config)
 			  .then(function (response) {
 			  	
 			 		    new PNotify({
@@ -383,7 +385,10 @@ var spVue = new Vue({
 					        text: 'Sponsor Saved!',
 					        type: 'success'
     					});
-			 thiiiis.showGrid(thiiiis.selected);
+				if(thiiiis.selected){
+					thiiiis.showGrid(thiiiis.selected);
+				}
+			 
     				
 			  })
 			  .catch(function (error) {

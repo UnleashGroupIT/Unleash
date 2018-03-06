@@ -268,8 +268,12 @@ Route::get('/london/startup-brochure', function () {
   return view('london.pages.startuppdf');
 });
 
+Route::get('/dlgtlst', 'DelegateController@index');
 
-Route::get('/london/dlgtlst', 'DelegateController@index');
+Route::get('/london/dlgtlst', function () {
+    return redirect('/dlgtlst');
+});
+
 
 /*********** America ************/
 

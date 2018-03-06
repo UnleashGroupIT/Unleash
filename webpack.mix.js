@@ -132,6 +132,7 @@ mix.sass('resources/assets/scss/london/index.scss', 'public/css/london')
    .version();    
 
    
+mix.js('resources/assets/js/minrequire.js', 'public/js');   
    
 mix.copy('resources/assets/gfx', 'public/gfx', false); // Don't flatten!   
    

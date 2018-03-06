@@ -78,7 +78,8 @@ class SponsorController extends Controller
 			'logo_url' => $img_url, 
 			'facebook' => $request->facebook ?? null, 
 			'twitter' => $request->twitter ?? null, 
-			'linkedin' => $request->linkedin ?? null
+			'linkedin' => $request->linkedin ?? null,
+			'slug' => $slug
 
     		]);
 
@@ -91,8 +92,10 @@ class SponsorController extends Controller
 
    //edit a specific sponsor
     public function editSponsor(Request $request, $sponsorId){
+		
 
         $sponsor = Sponsors::find($sponsorId);
+		
 
         if ($request->hasFile('sponsor_img') && $request->file('sponsor_img')->isValid()) {
 

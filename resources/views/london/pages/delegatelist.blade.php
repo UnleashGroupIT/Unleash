@@ -30,6 +30,9 @@
 	margin-top: 150px; 
 	overflow-x: auto;
 }
+.blurSection{
+	filter: blur(3px);
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -52,6 +55,40 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+#protection{
+	position: absolute;
+	top: 25%;
+	margin: 0 auto;
+	text-align: center;
+	left: auto;
+	right: auto;
+	width: 100%;
+}
+#protbg{
+overflow: hidden;
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+background: rgba(0, 0, 0, 0.52);
+}
+#pwdContainer{
+	background: rgb(243, 243, 243);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 550px;
+    box-shadow: #3c3c33 1px 1px 15px 1px;
+}
+body{
+	overflow-y: hidden;
+}
+.pwdInput{
+	padding: 10px;
+	margin: 30px 0;
+	width: 100%;
+	max-width: 300px;
+}
 </style>
 @endsection
 
@@ -61,7 +98,7 @@ tr:nth-child(even) {
 
 @section('maincontent')
 
-<section id="TableSection">
+<section id="TableSection" class="blurSection">
 <h2>Unleash London 2018 - Delegate List</h2>	
 <table>
   <tr>
@@ -83,4 +120,23 @@ tr:nth-child(even) {
 @endforeach  
 </table>
 </section>	
+<div id="protbg">
+<div id="protection">
+	<div id="pwdContainer">
+		<p>Please type in the password!</p>
+		<input required type="password" name="pwd" id="pwd" class="pwdInput"><br />
+		<button class="red-btn" id="SubmitPWD">Submit</button>
+	</div>
+</div>
+</div>	
+<script>
+</script>
+  <script src="{{ mix('js/minrequire.js') }}" type="text/javascript"></script>		
+@endsection
+
+@section('footerscripts')
+	
+<script>
+$(document).on("click","#SubmitPWD",function(o){var e=$("#pwd").val();void 0!==e&&""!=e?axios.post("/api/delegatepwd",{password:e}).then(function(o){1==o.data?($("#TableSection").removeClass("blurSection"),$("#protbg").hide(),$("html, body").css("overflowY","auto")):alert("Invalid password!")}).catch(function(o){console.log(o)}):alert("Please, type in the password!")});
+</script>	
 @endsection

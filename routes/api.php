@@ -23,6 +23,8 @@ Route::middleware(['auth:api', 'roles'])->get('/user', function (Request $reques
 
 Route::get('/agenda/search', 'AgendaController@search');
 
+Route::post('/delegatepwd','DelegateController@pwdCheck');
+
 //Events
 Route::middleware(['auth:api', 'roles'])->get('/events', 'Admin\EventController@listEvents');
 

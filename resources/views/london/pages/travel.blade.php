@@ -197,12 +197,12 @@ Via email: aloftlondonexcel@alofthotels.com
 			<h2>How to get there</h2>
 			
 			<div class="vehicles-wrp">
-				<a href="https://www.excel.london/organiser/visitor-experience/elizabeth-line" target="_blank">
+				<!-- <a href="https://www.excel.london/organiser/visitor-experience/elizabeth-line" target="_blank">
 					<div class="eliz">
 						<p>Elizabeth Line</p>
 						<span>Connecting Reading and Heathrow with East London, reaching ExCeL London hasn’t been easier.</span>
 					</div>
-				</a>
+				</a> -->
 				<a href="https://tfl.gov.uk/dlr/timetable/dlr?FromId=940GZZDLCGT&fromText=Canning+Town+DLR+Station&toText=Prince+Regent+DLR+Station&ToId=940GZZDLPRE&SelectedTime=8" target="_blank">
 					<div class="tube">
 						<p>Tube</p>
