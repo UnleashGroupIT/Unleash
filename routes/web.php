@@ -269,7 +269,7 @@ Route::get('/london/startup-brochure', function () {
 });
 
 
-Route::get('/london/delegate-list', 'DelegateController@index');
+Route::get('/london/dlgtlst', 'DelegateController@index');
 
 /*********** America ************/
 

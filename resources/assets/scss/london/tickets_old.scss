@@ -110,7 +110,10 @@ section.one .wrp {
 
 /*Header Navigation */
     #TicketNavigation {
-      margin-top: 65px;
+      margin-top: 130px;
+      @media (min-width: 40em) {
+        margin-top: 65px;
+      }
       margin-bottom:2em;
       background-color: #f9f9f9;
       -webkit-box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52);

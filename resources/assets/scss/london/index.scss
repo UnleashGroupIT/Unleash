@@ -1,6 +1,7 @@
 @import 'components/reset';
 @import '../common';
 @import '../menu';
+@import '../inner-menu';
 @import '../footer';
 @import '../popup';
 @import 'components/menu';
@@ -150,9 +151,6 @@ section.one.mainsponsors {
   padding-top:2em;
   @media (min-width: 40em) {
     margin-top:-5px;
-  }
-  @media (min-width: 75em) {
-    margin-bottom: 2em;
   }
 
   @media (min-width: 95em) {
@@ -978,7 +976,7 @@ section.sponsors img {
   @media (min-width: 40em) {
     display: block;
   }
-  video{width:100%;margin-top:-2.5%;}
+  video{width:100%;margin-top:-2%;}
 }
 
 .rslides li {

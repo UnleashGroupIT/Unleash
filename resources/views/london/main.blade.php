@@ -211,6 +211,11 @@ var doSubmit = false;
 				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 			</ul>
 		</nav>
+		<div class="mobileButtons">
+	      <a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
+	      <a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
+	      <a href="{{ route('london.tickets') }}"><button id="mobileTicket">TICKETS</button></a>
+    	</div>
 		
 		
 		<!--Menu icon in lower sizes.-->

@@ -10,7 +10,7 @@ class DelegateController extends Controller
 {
  public function index(){
 
- 	$delegates = Delegates::orderBy('first_name')->get();
+ 	$delegates = Delegates::orderBy('last_name')->get();
   
  	            return view('london.pages.delegatelist', [
                   'delegates' => $delegates,

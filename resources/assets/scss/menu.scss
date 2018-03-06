@@ -12,6 +12,36 @@ $gray : #4d4d4f;
 $dark-gray : #101010;
 
 
+.mobileButtons{
+    position: fixed;
+    top: 65px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    left: 0;
+    z-index: 5;
+    padding:1em;
+    background:rgba($black,0.3);
+    //box-shadow: 0px 8px 8px rgba(17, 12, 17, 0.2);
+    @media (min-width: 40em) {
+      display:none;
+    }
+
+    #mobileTicket{
+      padding: .5em 1em;
+      background: rgba($black,0.8);
+      color: $white;
+      font-weight: bold;
+      border-radius:3px;
+      cursor:pointer;
+      text-transform: uppercase;
+      &:hover{
+        background:rgba($white,0.8);
+        color:$black;
+      }
+    }        
+}
+
 #desktop-menu .menu-ul .sub-menu--li{
   padding:0;
   @media (min-width: 75em) {
