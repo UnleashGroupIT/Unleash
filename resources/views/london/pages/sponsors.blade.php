@@ -35,6 +35,10 @@
 	 .HeadlineH2{
 		font-size: 1.9rem !important;
 	 }
+	.sponsors h2 {
+	color:#000 !important;
+	}
+
 	</style>
 @endsection
 

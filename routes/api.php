@@ -22,6 +22,7 @@ Route::middleware(['auth:api', 'roles'])->get('/user', function (Request $reques
 //TODO: Middleware that specifically checks eventId (if it is given and it's valid)
 
 Route::get('/agenda/search', 'AgendaController@search');
+Route::get('/agenda/searchke', 'AgendaController@searchTest');
 
 Route::post('/delegatepwd','DelegateController@pwdCheck');
 

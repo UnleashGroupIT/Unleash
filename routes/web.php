@@ -275,6 +275,10 @@ Route::get('/london/dlgtlst', function () {
 });
 
 
+Route::get('/london/flrpln', function () {
+   return view('london.pages.floorplan');
+});
+
 /*********** America ************/
 
 Route::get('/lasvegas/', function () {

@@ -41,8 +41,8 @@
 			<button class="blue-btn popup" data-popupdata="booknow">Book now</button>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg floorplancitybg"></div>
-		</div>
+      <div class="img-bg venue1"></div>
+    </div>
 	</section>
 	<!--Expo END-->
 
@@ -64,7 +64,7 @@
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology.</p>
-			<button class="blue-btn popup" data-popupdata="booknow">Register now</button>
+			<button class="red-btn popup" data-popupdata="booknow">Register now</button>
 		</div>
 	</section>
 @endsection

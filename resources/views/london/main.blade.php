@@ -107,18 +107,16 @@ var doSubmit = false;
 				 	<li class="sub-menu--li">
 						<nav id="sub" class="sub-menu">
 							<ul class="spec-menu amsterdam">
-								<li><a href="{{ route('london.index') }}">SHOW</a></li>
+								<li><a href="{{ route('london.index') }}">HOME</a></li>
 								<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
 								<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 								<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
-								<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
+								<li><a href="{{ route('global.startup') }}">STARTUPS</a></li>
 								<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
-								<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 							</ul>
 						</nav>
 					</li>
-					<li><a href="/" title="HOME">Home</a></li>
 					<li><a href="/" title="NEWS">News</a></li>
 					<!--Dropdownbox for the menu-->
 					<li title="EVENTS" class="more opened">
@@ -134,7 +132,7 @@ var doSubmit = false;
 											<div class="brdr"></div>
 										</a>
 										<ul class="subs-ul">
-											<li><a href="{{ route('london.index') }}">Show</a></li>
+											<li><a href="{{ route('london.index') }}">Home</a></li>
 											<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
 											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
@@ -150,7 +148,7 @@ var doSubmit = false;
 											<div class="brdr"></div>
 										</a>
 										<ul class="subs-ul">
-											<li><a href="{{ route('lasvegas.index') }}">Show</a></li>
+											<li><a href="{{ route('lasvegas.index') }}">Home</a></li>
 											<li><a href="{{ route('lasvegas.speakers') }}">Speakers</a></li>
 											<li><a href="{{ route('lasvegas.sponsors') }}">Sponsors</a></li>
 											<li><a href="{{ route('lasvegas.volunteer') }}">Volunteer</a></li>
@@ -165,7 +163,7 @@ var doSubmit = false;
 											<div class="brdr"></div>
 										</a>
 										<ul class="subs-ul">
-											<li><a href="{{ route('ams.index') }}">Show</a></li>
+											<li><a href="{{ route('ams.index') }}">Home</a></li>
 											<li><a href="{{ route('ams.index') }}#spkrgrd">Speakers</a></li>
 											<li><a href="{{ route('ams.sponsors') }}">Our Clients</a></li>
 											<li><a href="{{ route('ams.floorplan') }}">Venue</a></li>
@@ -201,7 +199,7 @@ var doSubmit = false;
 		</section>
 		<nav id="sub" class="sub-menu">
 			<ul class="spec-menu amsterdam">
-				<li><a href="{{ route('london.index') }}">SHOW</a></li>
+				<li><a href="{{ route('london.index') }}">HOME</a></li>
 				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
 				<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 				<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
@@ -212,10 +210,10 @@ var doSubmit = false;
 			</ul>
 		</nav>
 		<div class="mobileButtons">
-	      <a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
-	      <a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
-	      <a href="{{ route('london.tickets') }}"><button id="mobileTicket">TICKETS</button></a>
-    	</div>
+			<a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
+			<a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
+			<a href="{{ route('london.tickets') }}"><button id="mobileTicket">TICKETS</button></a>
+		</div>
 		
 		
 		<!--Menu icon in lower sizes.-->

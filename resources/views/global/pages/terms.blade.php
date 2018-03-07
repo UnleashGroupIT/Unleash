@@ -248,7 +248,7 @@ HRN Europe Ltd. Alkotás Point, Building C, 6th floor Alkotas utca 50. 1123 Buda
 					<p class="Paragraph">VIP tickets are issued to Sponsors and Network Members to invite enterprise companies (clients and/or prospective clients) and enterprise buyers of software/services/solutions. VIP Tickets are non-transferable: they cannot be sold, shared or otherwise offered to vendor companies (software/services/solution providers), consultants, media, analysts, public relations or bloggers etc. UNLEASH reserves the right to invalidate registrations which do not qualify as per policy stated above.</p>
 
 
-					<p class="Paragraph">Cancellation Policy & Replacements for VIP Tickets: PLEASE NOTE: Upon registration, there will be a 200 GBP safety deposit charge which will be refunded to your account immediately after your attendance at the event has been verified. If for any reason you or any of your delegates need to cancel your booking, you may send a replacement from your HR Leadership team until 1 week prior to the event at no additional cost.  In cases of cancellation and no replacement up to a week prior to the event, the safety deposit and service charge will not be refunded.</p>
+					<p class="Paragraph">Cancellation Policy & Replacements for VIP Tickets: PLEASE NOTE: Upon registration, there will be a  safety deposit charge which will be refunded to your account immediately after your attendance at the event has been verified. If for any reason you or any of your delegates need to cancel your booking, you may send a replacement from your HR Leadership team until 1 week prior to the event at no additional cost.  In cases of cancellation and no replacement up to a week prior to the event, the safety deposit and service charge will not be refunded.</p>
 				
 				</div>
 				<div id="VIPNDP">
@@ -259,7 +259,7 @@ HRN Europe Ltd. Alkotás Point, Building C, 6th floor Alkotas utca 50. 1123 Buda
 					<p class="Paragraph">VIP Tickets: VIP tickets are issued to Sponsors and Network Members to invite enterprise companies (clients and/or prospective clients) and enterprise buyers of software/services/solutions. VIP Tickets are non-transferable: they cannot be sold, shared or otherwise offered to vendor companies (software/services/solution providers) consultants, media, public relations or bloggers etc. UNLEASH reserves the right to invalidate registrations which do not qualify as per policy stated above.</p>
 
 
-					<p class="Paragraph">Cancellation Policy & Replacements for VIP Tickets: PLEASE NOTE: If for any reason you or any of your delegates need to cancel your booking, you may send a replacement from your HR Leadership team until 1 week prior to the event at no additional cost.  In cases of cancellation and no replacement, a service charge and catering fee for the 2 Day Conference applies of 200 GBP.</p>
+					<p class="Paragraph">Cancellation Policy & Replacements for VIP Tickets: PLEASE NOTE: If for any reason you or any of your delegates need to cancel your booking, you may send a replacement from your HR Leadership team until 1 week prior to the event at no additional cost.  In cases of cancellation and no replacement, a service charge and catering fee for the 2 Day Conference applies.</p>
 				
 				</div>
 				

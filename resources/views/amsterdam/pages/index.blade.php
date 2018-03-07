@@ -32,6 +32,17 @@
 
 
 @section('headercontent')
+		<ul class="rslides" id="slider-demo">
+          <!-- Slides -->
+          <li>
+            <video poster="{{ URL::asset('gfx/amsterdam/header-bg-desktop.jpg') }}" id="bgvid" loop muted autoplay>
+              <source src="{{ URL::asset('gfx/amsterdam/video/video-bg.webm') }}" type="video/webm">
+              <source src="{{ URL::asset('gfx/amsterdam/video/video-bg.mp4') }}" type="video/mp4">
+              <source src="{{ URL::asset('gfx/amsterdam/video/video-bg.ogv') }}" type="video/ogv">
+            </video>
+          </li>
+      	</ul>
+
 		<!--Mainsponsors-->
 		<section class="one mainsponsors">
 			<!--<h4>Main sponsors</h4>-->
@@ -63,28 +74,39 @@
 			<p>UNLEASH World Conference & Expo returns to the RAI Amsterdam in 2018 as the largest conference in the world on the Future of Work and Technology. As organisations adapt to the future of work, models of leadership need to change if they want to have any hope of unleashing their people. Leadership needs to be as adaptive as the organisation they are seeking to create. </p><br/>
 			
 			<p>From 23-24 October in 2018, +6000 leaders from the most exciting brands, largest enterprises, startups, media and governments will attend our largest show to date at the RAI Amsterdam from over 120 countries worldwide for three days of inspiring stories, networking, and FUN. </p>
-			<button class="blue-btn popup" data-popupdata="booknow">Book Now</button>
+			<button class="red-btn popup" data-popupdata="booknow">Book Now</button>
 
 		</div>
 	</section>
 	<!--Future of Work END-->
 	<!--Keynote-->
 	<!--Keynote-->
-	<section class="two keynote arianna">
-		<div class="wrppr">
-			<div class="fix-bg arianna"></div>
-		</div>
+	<section class="two keynote second speakers">
 		<div class="content">
 			<div class="content-wrap">
-				<div class="h4wrp">
-					<div>
-						<img class="mic-logo" src="{{ URL::asset('gfx/amsterdam/mic.png') }}" alt="Keynote">
-						<h4 class="ky">Keynote in Amsterdam 2017</h4>
-					</div>
-					<img class="U-logo" src="{{ URL::asset('gfx/amsterdam/U.png') }}" alt="Unleash">
+				<h2>Past Speakers</h2>
+				<p>We bring you the visionaries, the movers &amp; shakers and the hard-edged thinkers shaping and unleashing tomorrow's world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today speak and attend our events. More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
+				<div class="testim wdth">
+					<img class="coma" src="http://www.unleashgroup.io/gfx/amsterdam/coma.png" alt="coma">
+					<span>The best event in the world on HR and Technology</span>
+						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
 				</div>
+			</div>
+			<button class="red-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
+		</div>
+		<div class="wrppr">
+	      <div class="img-bg keynote2"></div>
+	    </div>
+	</section>
+	<!--Keynote END-->
+	<section class="two keynote">
+		<div class="wrppr">
+	      <div class="img-bg arianna"></div>
+	    </div>
+		<div class="content">
+			<div class="content-wrap">
 				<h2>Arianna Huffington</h2>
-				<p class="pdg">Named to Time Magazine's list of the world’s 100 most influential people, and the Forbes Most Powerful
+				<p>Named to Time Magazine's list of the world’s 100 most influential people, and the Forbes Most Powerful
 				Women list, Arianna Huffington serves on numerous boards, including Uber and The Center for Public
 				Integrity. She is also the founder of Huffington Post, the founder and CEO of Thrive Global, mother,
 				sister, flat shoe advocate, sleep evangelist and the author of fifteen books, including, most recently,
@@ -97,40 +119,21 @@
 				</div>
 			</div>
 			<div class="schedule-wrp">
-				<button id="spkrgrd" class="white-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
+				<button id="spkrgrd" class="red-btn popup" data-popupdata="becomeaspeaker">Apply to Speak</button>
 			</div>
 		</div>
 	</section>
-	<section class="two keynote second speakers">
-		<div class="content">
-			<div class="content-wrap">
-				<h2>Past Speakers</h2>
-				<p>We bring you the visionaries, the movers &amp; shakers and the hard-edged thinkers shaping and unleashing tomorrow's world of work. The CEOs, CIOs, CHROs and leaders from the world’s most innovative enterprises, the people and organizations that have been there and done it, the ones who can and will share the challenges they had to overcome to get where they are today speak and attend our events. More than that speakers at UNLEASH will share their passion for people, for life and for the power of transformative technology and how it can unleash the power of people!</p>
-				<div class="testim wdth">
-					<img class="coma" src="http://www.unleashgroup.io/gfx/amsterdam/coma.png" alt="coma">
-					<span>The best event in the world on HR and Technology</span>
-						<p><strong class="strn">Josh Bersin, Principal &amp; Founder, Bersin by Deloitte</strong></p>
-				</div>
-			</div>
-			<button class="blue-btn popup" data-popupdata="becomeaspeaker">Become a Speaker</button>
-		</div>
-		<div class="wrppr">
-			<div class="fix-bg speakers right"></div>
-		</div>
-	</section>
-	<!--Keynote END-->
 
 	<!--Speakers-->
 	 @include('amsterdam.components.speakergrid')
 	<!--Speakers END-->
 
 	<!--Counter-->
-	<section class="one-cntr counter">
+	<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
-			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology.<p>
-			<div class="your-clock"></div>
-			<button class="amsblue-btn popup" data-popupdata="booknow">Register now </button>
+			<p>Unleash Your People! Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology.</p>
+			<button class="red-btn popup" data-popupdata="booknow">Register now</button>
 		</div>
 	</section>
 	<!--Counter END-->
@@ -150,15 +153,15 @@
 			<button id="spnsrgrd" class="blue-btn popup" data-popupdata="booknow">Get Your Ticket</button>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg expobg"></div>
-		</div>
+	      <div class="img-bg expo"></div>
+	    </div>
 	</section>
 	<!--Expo END-->
 	<!--Clients-->
 	<section class="two clients">
 		<div class="wrppr">
-			<div class="fix-bg clientsbg"></div>
-		</div>
+	      <div class="img-bg clients"></div>
+	    </div>
 		<div class="content">
 			<div class="content-wrap">
 				<h2>Our Clients</h2>
@@ -182,7 +185,7 @@
 	<section class="two testimonial">
 		<div class="content">
 			<div class="content-wrap">
-				<h2>Startup Zone</h2>
+				<h2>Startup Expo</h2>
 				<p>UNLEASH is host to the world’s leading Startup Competition on the Future of Work and Technology.
 					First staged in October 2011, it has successfully hosted eight editions in total, including four in Amsterdam,
 					two in London and two in Paris. As the show has matured, what started as pro-bono work is now the
@@ -194,8 +197,8 @@
 			<button class="blue-btn popup" data-popupdata="compete">Apply to compete</button>
 		</div>
 		<div class="wrppr">
-			<div class="fix-bg startupbg"></div>
-		</div>
+	      <div class="img-bg startup"></div>
+	    </div>
 	</section>
 	<!--Testimonial END-->
 	<!--Map-->

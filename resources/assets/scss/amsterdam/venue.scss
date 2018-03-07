@@ -199,55 +199,24 @@ section.two {
   min-height: 600px;
 }
 
-section.two .wrppr {
-    width: 100%;
-    min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
+    section.two .wrppr {
+  width: 100%;
+  min-height: 500px;
+  @media (min-width: 75em) {
+    width: 50%;
   }
-    section.two .fix-bg.floorplanbg {
-      background-image: url("../../gfx/amsterdam/floorplan-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/amsterdam/floorplan-sec-tablet-bg.jpg");
-          background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.floorplanbg {
-          background-image: url("../../gfx/amsterdam/floorplan-sec-bg.jpg");
-          background-position: top left; } }
-    section.two .fix-bg.floorplancitybg {
-      background-image: url("../../gfx/amsterdam/floorplancity-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/amsterdam/floorplancity-sec-tablet-bg.jpg");
-          background-attachment: fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.floorplancitybg {
-          background-image: url("../../gfx/amsterdam/floorplancity-sec-bg.jpg");
-          background-position: top right; } }
+
+  .img-bg{
+    height: 100%;
+
+    &.venue1{
+      background:url("../../gfx/amsterdam/v2-site/venue1-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }  
+  }
+}
+
 
           section.two.clients{
             flex-direction: column-reverse;
@@ -305,52 +274,33 @@ section.two.keynote button {
   margin-bottom: 0;
 }
 
-section.one-cntr {
-  background: url("../../gfx/amsterdam/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 2em 0;
+section.one-cntr{
+    background-color: $butter;
+    text-align: center;
+    padding: 2em 0;
+    @media (min-width: 75em) {
+      padding:4em 0;
+    }
 }
 
-@media (min-width: 75em) {
-  section.one-cntr {
-    padding: 4em 0;
+section.one-cntr h2{
+  font-size: 3rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
   }
 }
-
-section.one-cntr p, section.one-cntr h2 {
-  color: #fff;
-  line-height: 2em;
-}
-
-section.one-cntr h2 {
-  display: inline-block;
-  position: relative;
-  background-color: #0090ff;
-  padding: .2em .5em;
-  line-height: 1;
-}
-
-section.one-cntr h2::before, section.one-cntr h2::after {
-  position: absolute;
-  top: 3px;
-}
-
-section.one-cntr h2::before {
-  content: url("../../gfx/amsterdam/left-sign.png");
-  left: -33px;
-}
-
-section.one-cntr h2::after {
-  content: url("../../gfx/amsterdam/right-sign.png");
-  right: -33px;
+section.one-cntr p{
+  margin: 2em 0;
 }
 
 section.one-cntr button {
-  margin: 1em;
-  margin-top: 2em;
   width: 90%;
 }
 
@@ -364,12 +314,6 @@ section.one-cntr button {
   section.one-cntr button {
     width: 10.7vw;
   }
-}
-
-section.one-cntr button:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
 }
 
 section.map {

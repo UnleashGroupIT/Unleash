@@ -2,6 +2,7 @@
 @import '../common';
 @import '../footer';
 @import '../menu';
+@import '../inner-menu';
 @import '../popup';
 @import 'speakergrid';
 
@@ -15,25 +16,32 @@ body {
   position: relative; }
 
 header {
+  position:relative;
   min-height: 800px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   background: url("../../gfx/amsterdam/header-bg-mobile.jpg") no-repeat #000;
   background-size: cover;
-  background-position: center; }
-  @media (min-width: 40em) {
-    header {
-      height: 100vh;
-      min-height: 780px;
-      background: url("../../gfx/amsterdam/header-bg-desktop.jpg") no-repeat #000;
-      background-size: cover;
-      background-position: center; } }
-  @media (min-width: 75em) {
-    header {
-      position: relative; } }   
+  background-position: center;
+}
+
+@media (min-width: 40em) {
+  header {
+    min-height: auto;
+    background: url("../../gfx/amsterdam/header-bg-desktop.jpg") no-repeat #000;
+    background-size: cover;
+    background-position: center;
+  }
+}   
 
 .wrp {
   max-width: 1024px;
@@ -67,16 +75,43 @@ section.one .wrp {
   section.one .wrp button {
     margin: 2em 0;
     margin-bottom: 0; }
-@media (min-width: 40em) {
-  section.one.futureofwork {
-    text-align: center; } }
+
+section.one.futureofwork{
+  background-color:$topaz;
+  h2{
+    color:$dark-green;
+    font-size: 3rem;
+    font-family: "Anton","museo-sans",sans-serif;
+    @media (min-width: 40em) {
+      font-size:3.5rem
+    }
+    @media (min-width: 95em) {
+      font-size:4rem
+    }
+  }
+  @media (min-width: 40em) {
+    text-align: center;
+  }
+}
+
+
 section.one.mainsponsors {
   text-align: center;
   margin-top: auto;
-  z-index: 2;
-  @media (min-width: 75em) {
-    margin-bottom: 2em;
+  background: rgba(0,0,0,0.95);
+  padding-top:2em;
+  @media (min-width: 40em) {
+    margin-top:-5px;
   }
+
+  @media (min-width: 95em) {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    z-index: 5;
+    background:none;
+  }
+
   span{
     display: block;
     text-transform: uppercase;
@@ -109,8 +144,7 @@ section.one.mainsponsors {
       opacity: 0; }
       @media (min-width: 75em) {
         section.one.mainsponsors .mainsponsors-wrap > div {
-          margin: 0 1em;
-          margin-top: auto;
+          margin: auto 1em;
           flex-grow: 0;
           padding-bottom: 1em; } }
       section.one.mainsponsors .mainsponsors-wrap > div.visible {
@@ -125,6 +159,8 @@ section.one.mainsponsors {
         @media (min-width: 120em) {
           section.one.mainsponsors .mainsponsors-wrap > div img {
             width: 5.3vw; } }
+
+
 
       #adp,#ibm{
         width: 60px;
@@ -198,8 +234,8 @@ section.one.mainsponsors {
 
       #talentsoft-wrp{
         margin-top: 1.5em;
-        @media (min-width: 780px) {
-          margin-top:1.85em;
+        @media (min-width: 75em) {
+          margin-top:1em;
         }
         img{
           width: 85px;
@@ -210,7 +246,10 @@ section.one.mainsponsors {
       }
 
       #workday-wrp{
-        margin-top: 10px;
+        margin-top: 3px;
+        @media (min-width: 75em) {
+          margin-top:3px;
+        }
       }
 
 
@@ -225,214 +264,103 @@ section.one.mainsponsors {
 section.two {
   display: flex;
   flex-wrap: wrap;
-  min-height: 600px; }
-  section.two .wrppr {
-    width: 100%;
-    min-height: 500px;
-    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
-    @media (min-width: 75em) {
-      section.two .wrppr {
-        width: 50%; } }
-  section.two .fix-bg {
-    width: 100%;
-    height: 500px;
-    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
-    display: block;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    background-position: left center;
-    @media (min-width: 40em) {
-      background-attachment:fixed;
-    }
-    @media (min-width: 75em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-    @media (min-width: 100em) {
-      height: 100%;
-      background-size: 50% 100%;
-      background-attachment:fixed;
-    }
-  }
-    section.two .fix-bg.arianna {
-      background-image: url("../../gfx/amsterdam/arianna-mobile-bg.jpg");
-      background-repeat: no-repeat; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.arianna {
-          background-image: url("../../gfx/amsterdam/arianna-tablet-bg.jpg");
-            background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.arianna {
-          background-image: url("../../gfx/amsterdam/arianna-bg.jpg");
-          background-position: left center; } }
-    section.two .fix-bg.expobg {
-      background-image: url("../../gfx/amsterdam/expo-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.expobg {
-          background-image: url("../../gfx/amsterdam/expo-sec-tablet-bg.jpg");
-            background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.expobg {
-          background-image: url("../../gfx/amsterdam/expo-sec-bg.jpg");
-          background-position: top right; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.expobg {
-          background-size: 50% 100%; } }
-    section.two .fix-bg.clientsbg {
-      background-image: url("../../gfx/amsterdam/clients-sec-mobile-bg.jpg");
+  min-height: 600px;
+}
 
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.clientsbg {
-          background-image: url("../../gfx/amsterdam/clients-sec-tablet-bg.jpg");
-            background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.clientsbg {
-          background-image: url("../../gfx/amsterdam/clients-sec-bg.jpg");
-          background-position: top left; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.clientsbg {
-          background-size: 50% 100%; } }
-    section.two .fix-bg.startupbg {
-      background-image: url("../../gfx/amsterdam/startup-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: top center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.startupbg {
-          background-image: url("../../gfx/amsterdam/startup-sec-tablet-bg.jpg");
-            background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.startupbg {
-          background-image: url("../../gfx/amsterdam/startup-sec-bg.jpg");
-          background-position: top right; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.startupbg {
-          background-size: 50% 100%; } }
-    section.two .fix-bg.speakers.right {
-      background-image: url("../../gfx/amsterdam/speakers-sec-mobile-bg.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom center; }
-      @media (min-width: 40em) {
-        section.two .fix-bg.speakers.right {
-          background-image: url("../../gfx/amsterdam/speakers-sec-tablet-bg.jpg");
-            background-attachment:fixed; } }
-      @media (min-width: 75em) {
-        section.two .fix-bg.speakers.right {
-          background-image: url("../../gfx/amsterdam/speakers-sec-bg.jpg");
-          background-position: top right; } }
-      @media (min-width: 120em) {
-        section.two .fix-bg.speakers.right {
-          background-size: 50% 100%; } }
-
-
-          section.two.expo {
-            flex-direction: column-reverse;
-            @media (min-width: 75em) {
-              flex-direction: row;
-            }
-          }
-
-
-
-
-
-
-
-
-
-
-
-
-
+section.two .wrppr {
+  width: 100%;
+  min-height: 500px;
   @media (min-width: 75em) {
-    section.two.keynote.arianna .mic-logo{
-      margin-left: 5px;
+    width: 50%;
+  }
+
+  .img-bg{
+    height: 100%;
+
+    &.arianna{
+      background:url("../../gfx/amsterdam/v2-site/arianna-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }
+
+    &.keynote2{
+      background:url("../../gfx/amsterdam/v2-site/keynote2-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
+      @media (min-width: 75em) {
+      height: 100%;
+      }
+    }
+
+    &.expo{
+      background:url("../../gfx/amsterdam/v2-site/expo-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
+      @media (min-width: 75em) {
+      height: 100%;
+      }
+    }
+
+    &.clients{
+      background:url("../../gfx/amsterdam/v2-site/clients-bg.jpg");
+      background-size:cover;
+      background-position: center;
+      height: 500px;
+      @media (min-width: 75em) {
+      height: 100%;
+      }
+    }
+    &.startup{
+      background:url("../../gfx/amsterdam/v2-site/startup-bg.jpg");
+      background-size:cover;
+      background-position: center;
+    }  
+  }
+}
+
+section.two.keynote .content {
+  background-color: $butter;
+  .testim{
+    margin-left:0;
+    span{
+      color:$black;
     }
   }
-  section.two.keynote.arianna .content {
-    background-color: #0090ff;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 3em; }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .content {
-        padding-bottom: 2.55vw; } }
-  section.two.keynote.arianna .h4wrp {
-    display: flex;
-    margin-bottom: 1em; }
-    section.two.keynote.arianna .h4wrp > div {
-      display: flex;
-      margin-left: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp > div {
-          margin-left: 3.5em; } }
-    section.two.keynote.arianna .h4wrp .U-logo {
-      margin: auto;
-      margin-right: 2em; }
-      @media (min-width: 75em) {
-        section.two.keynote.arianna .h4wrp .U-logo {
-          margin: auto;
-          margin-right: 4em; } }
-  section.two.keynote.arianna p {
-    color: #fff; }
-  section.two.keynote.arianna h2 {
-    padding: .2em;
-    padding-left: 1em;
-    padding-right: .5em;
-    color: #fff;
-    background-color: #083643;
-    display: inline-block; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h2 {
-        padding-left: 2em; } }
-  section.two.keynote.arianna h4 {
-    color: #fff;
-    margin: auto;
-    font-size: 1rem;
-    padding: 0 1em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna h4 {
-        font-size: 1.3rem;
-        padding: 0 2em; } }
-  section.two.keynote.arianna .pdg {
-    padding: 0 2em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 4em; } }
-    @media (min-width: 120em) {
-      section.two.keynote.arianna .pdg {
-        padding: 0 3.1vw; } }
-  section.two.keynote.arianna .strn {
-    display: block;
-    font-weight: 900;
-    margin: .5em 0; }
-  section.two.keynote.arianna .schedule-wrp {
-    width: calc(100% - 4em);
-    margin-left: 2em; }
-    @media (min-width: 75em) {
-      section.two.keynote.arianna .schedule-wrp {
-        margin-top: auto;
-        margin-left: 4em; } }
-    section.two.keynote.arianna .schedule-wrp .schedule {
-      display: flex;
-      margin-bottom: 2em; }
-      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
-        margin: auto 0; }
-      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
-        margin-left: 1em;
-        text-transform: uppercase; }
-        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
-          font-weight: 600; }
-  section.two.keynote.arianna button {
-    margin-left: 0;
-    color: #0090ff; }
-    section.two.keynote.arianna button:hover {
-      color: #fff; }
+}
+
+section.two.keynote h5 {
+  margin: 1em 0;
+  margin-top:0; 
+  color: $dark-green;
+  font-weight:100;
+  letter-spacing:0;
+}
+
+section.two.keynote h2 {
+  font-size: 3rem;
+  color:$dark-green;
+  font-family: "Anton","museo-sans",sans-serif;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 75em) {
+    font-size:4rem;
+  }
+}
+
+section.two.expo,section.two.second.speakers {
+  flex-direction: column-reverse;
+  @media (min-width: 75em) {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
   section.two .content {
     padding: 2em;
     display: flex;
@@ -458,63 +386,51 @@ section.two {
   section.two.keynote button {
     margin-bottom: 0; }
 
-section.one-cntr {
-  background: url("../../gfx/amsterdam/one-cntr-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 2em 0; }
-  section.one-cntr.counter {
-    background: url("../../gfx/counter-bg.jpg");
-    background-size: cover;
-    background-position: center; }
-  @media (min-width: 75em) {
-    section.one-cntr {
-      padding: 4em 0; } }
-  section.one-cntr p, section.one-cntr h2 {
-    color: #fff;
-    line-height: 2em; }
-  section.one-cntr h2 {
-    display: inline-block;
-    position: relative;
-    background-color: #0090ff;
-    padding: .2em .5em;
-    line-height: 1; }
-    section.one-cntr h2::before, section.one-cntr h2::after {
-      position: absolute;
-      top: 3px; }
-    section.one-cntr h2::before {
-      content: url("../../gfx/amsterdam/left-sign.png");
-      left: -33px; }
-    section.one-cntr h2::after {
-      content: url("../../gfx/amsterdam/right-sign.png");
-      right: -33px; }
+
+section.one-cntr{
+    background-color: $butter;
+    text-align: center;
+    padding: 2em 0;
+    @media (min-width: 75em) {
+      padding:4em 0;
+    }
+}
+
+section.one-cntr h2{
+  font-size: 3rem;
+  font-family: "Anton","museo-sans",sans-serif;
+  line-height: 1em;
+  margin: 0;
+  color:$las;
+  @media (min-width: 40em) {
+    font-size:3.5rem;
+  }
+  @media (min-width: 95em) {
+    font-size:4rem;
+  }
+}
+section.one-cntr p{
+  margin: 2em 0;
+}
+
+section.one-cntr button {
+  width: 90%;
+}
+
+@media (min-width: 40em) {
   section.one-cntr button {
-    margin: 1em;
-    margin-top: 2em;
-    width: 90%; }
-    @media (min-width: 40em) {
-      section.one-cntr button {
-        width: 205px; } }
-    @media (min-width: 120em) {
-      section.one-cntr button {
-        width: 10.7vw; } }
-    section.one-cntr button:hover {
-      background-color: transparent;
-      color: #fff;
-      border-color: #fff; }
-  section.one-cntr.counter .your-clock {
-    display: flex;
-    justify-content: center;
-    margin: 5em 0; }
-    @media (min-width: 120em) {
-      section.one-cntr.counter .your-clock {
-        margin: 2.8vw 0; } }
-    @media (min-width: 45em) {
-      section.one-cntr.counter button {
-        margin: 0 2em;
-        margin-top: 2em } }
+    width: 205px;
+  }
+}
+
+@media (min-width: 120em) {
+  section.one-cntr button {
+    width: 10.7vw;
+  }
+}
+
+
+
 
 .testim {
   margin: 0 2em;

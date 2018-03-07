@@ -159,4 +159,73 @@ class AgendaController extends Controller
     return $result->load('speakers')->load('tracks');
     
   }  
+  
+  public function searchTest(Request $request){
+
+     $facets = '';
+
+     if ($request->filled('eventid')){
+        $facets .= 'event:'.$request->eventid;
+     } else {
+         return response('Missing eventid', 400);
+     }
+
+      if ($request->filled('day')){
+        $facets .= ' AND start_time.day:'.$request->day;
+     } 
+
+
+    if($request->filled('tracks')){
+
+        $facets .= ' AND (';
+
+      try{
+        $tracks = json_decode($request->tracks);
+
+        $firstInLine = 0;
+        foreach ($tracks as $key => $track) {
+
+          if($firstInLine == 0){
+             $facets .= 'tracks:'.$track;
+             $firstInLine++;
+           }else {
+            $facets .= ' OR tracks:'.$track;
+           }
+         
+        } //end foreach
+         $facets .=')';
+
+      } catch (Exception $e) {
+         echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+
+
+    }//if tracks
+
+ if ($request->filled('keyword')){
+   $keyword = $request->keyword;
+ }else {
+  $keyword = '';
+ }
+
+      $params = [
+                  'filters' => $facets,
+                  'hitsPerPage' => 150,
+                  'page' => 0,			  
+
+              ];
+
+     $result = AgendaSessions::search($keyword)->with($params)->get();
+	 
+   $res = $result->load('speakers')->load('tracks');
+	
+	
+   $res[0]->session_description= '&lt;p&gt;Text here&lt;/p&gt;';
+   
+   return $res;
+
+    return response()->json($res, 200, ['JSON_HEX_TAG']);	
+
+    
+  }   
 }

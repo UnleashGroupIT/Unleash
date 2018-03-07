@@ -39,7 +39,7 @@
 					<h2>{{sess.session_title}}</h2>
 				</div>
 				<div class="content">
-					<p>{{sess.session_description}}</p>
+					<p v-html="sess.session_description"></p>
 				</div>
 				<div class='SpeakerListContainer'>
 					<ul>
