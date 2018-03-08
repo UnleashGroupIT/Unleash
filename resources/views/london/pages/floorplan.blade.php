@@ -29,6 +29,10 @@
 		min-height: 1000px;
 		margin-top: 104px;
 	 }
+@media (max-width: 640px) {
+	margin-top: 140px;
+}
+	 
 	</style>
 @endsection
 

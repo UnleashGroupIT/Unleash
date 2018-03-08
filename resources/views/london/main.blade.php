@@ -112,7 +112,8 @@ var doSubmit = false;
 								<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 								<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
 								<li><a href="{{ route('global.startup') }}">STARTUPS</a></li>
-								<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+								<li><a href="{{ route('london.venue') }}">VENUE</a></li>
+								<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
 								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 							</ul>
 						</nav>
@@ -137,7 +138,8 @@ var doSubmit = false;
 											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
 											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
-											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('london.venue') }}">Venue</a></li>
+											<li><a href="{{ route('london.floorplan') }}">Floor plan</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
 											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
 										</ul>
@@ -204,7 +206,8 @@ var doSubmit = false;
 				<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 				<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
-				<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+				<li><a href="{{ route('london.venue') }}">VENUE</a></li>
+				<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 			</ul>

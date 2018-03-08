@@ -20,7 +20,7 @@ class DelegateController extends Controller
  }
 
  public function pwdCheck(Request $request){
- 		if ($request->has('password') && ($request->password == "UNLEASHLDN18" || $request->password == "unleashldn18")){
+ 		if ($request->has('password') && ($request->password == "UNLEASH18" || $request->password == "unleash18")){
  			return 'true';
  		} else {
  			return 'false';

@@ -286,7 +286,14 @@ $(document).ready(function()	{
 		});
 	});
 
-	
+$("#trailer").click(function() { 
+        $("#videoo").addClass("showvid");
+        $(".PopupContainer").addClass("op");
+    });
+
+    $("#vidclose").click(function() { 
+        $("#videoo").removeClass("showvid");
+    });	
 
 
 	//SCROLLING BAR

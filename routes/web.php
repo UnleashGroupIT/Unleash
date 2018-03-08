@@ -237,7 +237,7 @@ Route::get('/london/agenda','AgendaController@index')->name('london.agenda');
 
 Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 
-Route::get('/london/venue', 'StaticPageController@venue')->name('london.floorplan');
+Route::get('/london/venue', 'StaticPageController@venue')->name('london.venue');
 
 
 
@@ -275,9 +275,9 @@ Route::get('/london/dlgtlst', function () {
 });
 
 
-Route::get('/london/flrpln', function () {
+Route::get('/london/floorplan', function () {
    return view('london.pages.floorplan');
-});
+})->name('london.floorplan');
 
 /*********** America ************/
 

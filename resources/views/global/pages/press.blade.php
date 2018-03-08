@@ -58,7 +58,7 @@
 				<p>Sign up to receive our latest announcements about UNLEASH events and news.</p>
 			</div>
 			<div class="schedule-wrp">
-				<button class="darkgreen-btn popup" data-popupdata="subscribe">PR News</button>
+				<button class="darkgreen-btn popup" data-popupdata="joinourcommunity">PR News</button>
 			</div>
 		</div>
 		<div class="wrppr">
@@ -175,7 +175,7 @@
 			<h2>Media &amp; AnaLyst registration</h2>
 			<p>All media and analyst representatives who plan to attend UNLEASH events must register their interest in attending each show. Media and Analyst Passes are free-of-charge to all press/media/ industry analysts/ bloggers with valid and current credentials. The UNLEASH PR team will review registrations received and send notification by email within five (5) working days, as to whether attendance is approved.</p>
 			<p>If you have any questions about registration or require assistance, please contact Andi Lustak at pr@unleashgroup.io Please note: You will be required to show identification and credentials when you arrive to the conference venues.</p>
-			<button class="white-btn popup" data-popupdata="pressreg">Media Registration</button>
+			
 		</div>
 	</section>
 	<div id="thankyoupress" class="modal">

@@ -20,7 +20,8 @@
 											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
 											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
 											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
-											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('london.venue') }}">Venue</a></li>
+											<li><a href="{{ route('london.floorplan') }}">Floorplan</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
 											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
 										</ul>

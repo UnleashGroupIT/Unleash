@@ -76,7 +76,7 @@ class swoogo extends Command
 
             
 
-             $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,registration_status&per-page=200&expand=billingAddress', [
+             $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,registration_status,c_102323&per-page=200&expand=billingAddress', [
                 'headers' => [
                     'Authorization' => 'Bearer '.$token,
                 ]
@@ -88,7 +88,7 @@ class swoogo extends Command
 
             if ($userData->_meta->pageCount){
                 for ($i=1; $i <= $userData->_meta->pageCount; $i++) { 
-                     $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,registration_status&per-page=200&expand=billingAddress&page='.$i, [
+                     $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,registration_status,c_102323&per-page=200&expand=billingAddress&page='.$i, [
                         'headers' => [
                             'Authorization' => 'Bearer '.$token,
                         ]
@@ -104,6 +104,8 @@ class swoogo extends Command
                             $country = $value->workAddress->country->name;
                         }elseif(isset($value->homeAddress->country->name)) {
 							$country = $value->homeAddress->country->name;
+						}elseif(isset($value->c_102323->value)) {
+							$country = $value->c_102323->value;	
 						} else {
 							$country = null;
 						}

@@ -69,7 +69,7 @@
 			</div>
 			<div class="schedule-wrp">
 				<button class="orange-btn popup" data-popupdata="supcompete">Apply to Compete</button>
-				<button class="orange-btn popup" data-popupdata="supbecomeaspeaker">Become a Speaker</button>
+				<!-- <button class="orange-btn popup" data-popupdata="supbecomeaspeaker">Become a Speaker</button> -->
 			</div>
 		</div>
 		<div class="wrppr">
@@ -152,7 +152,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
     </div>
     <div id="videoo">
 	    <div class="PopupContainer" id="ContainerVideo" onClick="event.stopPropagation();">
-				<div id="VideoCloseButton"><span id="vidclose" class="close">✕</span></div>
+				<div id="VideoCloseButton"><span id="vidclose" class="close">X</span></div>
 				<div id="TrailerPopupContent" class="PopupContent">
 					<div class='embed-container'><iframe id="youtube_player" class="yt_player_iframe" src='https://www.youtube.com/embed/qONWtk5VY1E?rel=0&enablejsapi=1&showinfo=0' frameborder='0' allowfullscreen></iframe>
 					</div>
@@ -170,7 +170,7 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 	var player;
-	var video = 'PX8wRQBJE8k'
+	var video = 'qONWtk5VY1E'
  
 	function onYouTubeIframeAPIReady() {
 		player = new YT.Player('youtube_player', {

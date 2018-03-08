@@ -32,7 +32,7 @@
 								<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
 								<!--<li><a href="{{ route('london.loyalty') }}">LOYALTY</a></li>-->
 								<li><a href="{{ route('london.volunteer') }}">VOLUNTEER PROGRAM</a></li>
-								<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+								<li><a href="{{ route('london.venue') }}">VENUE</a></li>
 								<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 							</ul>
@@ -58,7 +58,7 @@
 											<li><a href="{{ route('london.sponsors') }}">Our Clients</a></li>
 											<!--<li><a href="{{ route('london.loyalty') }}">Loyalty</a></li>-->
 											<li><a href="{{ route('london.volunteer') }}">Volunteer Program</a></li>
-											<li><a href="{{ route('london.floorplan') }}">Venue</a></li>
+											<li><a href="{{ route('london.venue') }}">Venue</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
 											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
 										</ul>
@@ -121,7 +121,7 @@
 				<li><a href="{{ route('london.sponsors') }}">OUR CLIENTS</a></li>
 				<!--<li><a href="{{ route('london.loyalty') }}">LOYALTY</a></li>-->
 				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER PROGRAM</a></li>
-				<li><a href="{{ route('london.floorplan') }}">VENUE</a></li>
+				<li><a href="{{ route('london.venue') }}">VENUE</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 			</ul>
