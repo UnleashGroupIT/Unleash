@@ -341,6 +341,9 @@ Route::get('/america/sponsor-brochure', function () {
 Route::get('/america/delegate-brochure', function () {
   return view('lasvegas.pages.delegatespdf');
 });
+Route::get('/america/startup-sheet', function () {
+  return view('lasvegas.pages.startuppdf');
+});
 
 Route::get('/america/room-availablity', function () {
   return view('lasvegas.pages.roomavailability');
