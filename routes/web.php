@@ -367,6 +367,7 @@ Route::get('/america/speakersv2', 'SpeakersController@index');
 
 Route::get('/america/ag','AgendaController@usagenda');
 
+Route::get('/america/agenda','AgendaController@usagenda')->name('lasvegas.agenda');
 
 
 /******** Admin Routes **********/

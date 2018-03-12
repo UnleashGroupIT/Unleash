@@ -46,7 +46,7 @@
 				<div class='SpeakerListContainer'>
 					<ul>
 					  <li v-if="sess.speakers[0]" v-for="speakers in sess.speakers">
-					  	<a :href="'/london/speaker/'+speakers.slug">
+					  	<a :href="eventRoute()+speakers.slug">
 					  	<div class="SpeakerImgContainer">
 					  		<img class="SpeakerImage" :alt="speakers.full_name" :src="'/storage/speakers/'+speakers.img_url">
 					  	</div>
@@ -115,6 +115,18 @@ export default {
 		
 		
 		return times[0]+':'+times[1]+' '+timeword;
+	},
+	
+	eventRoute(){
+		switch(this.eventid){
+		 case 2:
+		  return '/london/speaker/';
+			break;
+		 case 3:
+		 return '/america/speaker/';
+			break;
+		};
+		return '/london/speaker/';
 	},
 
 	

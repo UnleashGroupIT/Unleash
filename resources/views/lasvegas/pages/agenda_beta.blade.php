@@ -55,7 +55,7 @@
 			<div class="tabs-wrp">
 				<nav>
 					<ul class="side tabs">
-				    	<li @click="changeDay(day0, 0)" class="tab" id = "s_day-0">May 14.</li>
+				    	<li @click="changeDay(day0, 0)" class="tab" id = "s_day-0">May 14. PRE-EVENT</li>
 				    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">May 15.</li>
 				    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">May 16.</li>  
 					</ul>
@@ -73,9 +73,12 @@
 						 <input id="SelectAllFilter" v-model="allfilters" type="checkbox" value="0"> SELECT ALL
 					 </div>				
 					@foreach($AgendaTracks as $TrackFilters)
-						<div>
-							<input class="AgendaFilters" v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}
-						</div>
+						 @if($TrackFilters->track_status == 1)
+							<div>
+								<input class="AgendaFilters" v-model="filters" type="checkbox" value="{{$TrackFilters->id}}"> {{ $TrackFilters->track_name }}
+							</div>						 
+						 @endif	 
+
 					@endforeach
 
 				</div>	

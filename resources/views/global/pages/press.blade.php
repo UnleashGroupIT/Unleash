@@ -111,6 +111,7 @@
 			<div class="content-wrap">
 				<h2>MEDIA RELEASES</h2>
 				<p>
+					<a href="http://www.unleashgroup.io/news/unleash-startup-award-announces-finalists-london-show/" target="_blank">UNLEASH Startup Award announces six finalists for London show (7 March 2018)</a>
 					<a href="http://www.unleashgroup.io/news/unleash-hires-anna-ott/" target="_blank">UNLEASH hires Anna Ott as Head of Startup Ecosystem (8 February 2018)</a>
 					<a href="http://www.unleashgroup.io/news/technology-disruptor-jonas-kjellberg-keynote-unleash-conference-expo/" target="_blank">Technology Disruptor Jonas Kjellberg to keynote at UNLEASH Conference &amp; Expo (6 February 2018)</a>
 					
