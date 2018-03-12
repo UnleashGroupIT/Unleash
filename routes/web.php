@@ -35,9 +35,7 @@ Route::get('/careers', function () {
    return redirect('https://careers.unleashgroup.io/homepage');
 })->name('careers');
 
-Route::get('/media', function () {
-  return view('global.pages.press');
-})->name('media');
+Route::get('/media', 'MediaController@index')->name('media');
 
 Route::get('/press', function (Request $request) {
     return redirect('/media/');
@@ -278,6 +276,7 @@ Route::get('/london/dlgtlst', function () {
 Route::get('/london/floorplan', function () {
    return view('london.pages.floorplan');
 })->name('london.floorplan');
+
 
 /*********** America ************/
 

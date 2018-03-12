@@ -39,7 +39,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            'throttle:10000,1',
+            'throttle:1000,1',
             'bindings',
         ],
     ];
@@ -60,6 +60,9 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 		'checkevent' => \App\Http\Middleware\CheckEvent::class,
         'roles' => \App\Http\Middleware\UserRoles::class,
-        'hidden' => \App\Http\Middleware\HiddenFunctions::class,		
+        'hidden' => \App\Http\Middleware\HiddenFunctions::class,
+		'fw-only-whitelisted' => \PragmaRX\Firewall\Middleware\FirewallWhitelist::class,
+		'fw-block-blacklisted' => \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
+		'fw-block-attacks' => \PragmaRX\Firewall\Middleware\BlockAttacks::class,		
     ];
 }

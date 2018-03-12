@@ -38,6 +38,7 @@ class AgendaController extends Controller
 
      JavaScript::put([
         'default_event_id' => \Config::get('unleash.admin.default_event_id'),
+		'timesyntax' => 'default',
         'default_event_code' => \Config::get('unleash.admin.default_event'),
         'default_day' => \Config::get('unleash.admin.default_agenda_day'),
         'eventdata' => $eventsData
@@ -80,6 +81,7 @@ class AgendaController extends Controller
         'default_event_id' => 3,
         'default_event_code' => 'US18',
         'default_day' => 15,
+		'timesyntax' => 'us',
         'eventdata' => $eventsData
       ]);
 

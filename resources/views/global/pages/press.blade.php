@@ -81,6 +81,28 @@
 			</div>
 		</div>
 	</section>
+	
+	<section class="divider">
+		<h4>Media Partners</h4>
+	</section>	
+	<section class="sponsors" id="spnsrz">
+
+
+
+		
+		<div class="sponsors-wrp">
+			@foreach($sponsors as $sponsor)
+			   @if($sponsor->pivot->category_id == 0)
+			 <!--sponsors-->
+				@include('london.components.sponsorpagegrid')
+			<!--sponsors END-->
+			   @endif
+			@endforeach
+
+		</div>
+
+						
+	</section>	
 	<section class="two clients">
 		<div class="wrppr">
 			<div class="fix-bg press-3"></div>

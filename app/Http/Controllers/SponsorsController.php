@@ -109,6 +109,39 @@ class SponsorsController extends Controller
                  
 
                 ]);
-    }  
+    } 
+
+    public function media(Request $request){
+
+     $SponsorGridId = 1;
+     $site = '404.blade.php';   
+
+     if ($request->is('amsterdam') || $request->is('amsterdam/*')) {
+         $SponsorGridId = 0;
+ 
+         $site = 'amsterdam.pages.partners';
+     }      
+     
+      if ($request->is('london') || $request->is('london/*')) {
+         $SponsorGridId = 12;
+
+         $site = 'london.pages.partners';    
+     }   
+
+      if ($request->is('america') || $request->is('america/*')) {
+         $SponsorGridId = 0;
+
+         $site = 'lasvegas.pages.partners';
+     }   
+
+
+        $sponsorGrids = $this->listGridContent($SponsorGridId);
+
+            return view($site, [
+                  'sponsors' => $sponsorGrids,
+                 
+                ]);
+
+    }		
 
 }

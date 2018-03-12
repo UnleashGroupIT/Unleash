@@ -73,7 +73,8 @@ var spVue = new Vue({
 		day2: null,
 		speakersearch: null,
 		speakers: null,
-		allfilters: null
+		allfilters: null,
+		timesyntax: null
 		
 
 	},//data,
@@ -152,6 +153,7 @@ var spVue = new Vue({
   	this.eventcode = default_event_code;
   	this.day = default_day;
   	this.events = eventdata;
+	this.timesyntax = timesyntax;
   	eventdata = '';
   	this.getDays();
   },

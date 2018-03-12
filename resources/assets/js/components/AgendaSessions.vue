@@ -5,7 +5,8 @@
 		<div class="left-side">
 			<div class="upper-side">
 				<div class="date">
-					<h4>{{sess.start_time.day}}. {{sess.start_time.month_name}}</h4>
+					<h4 v-if="timesyntax == 'us'">{{sess.start_time.month_name}} {{sess.start_time.day}}. </h4>
+					<h4 v-else>{{sess.start_time.day}}. {{sess.start_time.month_name}}</h4>
 				</div>
 				<div class="time">
 					<h2>{{sess.start_time.time}} - {{sess.end_time.time}}</h2>
@@ -75,6 +76,7 @@ export default {
 		eventid: null,
 		eventcode: null,
 		day: null,
+		timesyntax: null
 		
  
 	};
@@ -123,6 +125,7 @@ export default {
   	this.eventid = default_event_id;
   	this.eventcode = default_event_code;
   	this.day = default_day;
+	this.timesyntax = timesyntax;
 
   },
 
