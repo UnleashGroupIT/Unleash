@@ -9,7 +9,8 @@
 					<h4 v-else>{{sess.start_time.day}}. {{sess.start_time.month_name}}</h4>
 				</div>
 				<div class="time">
-					<h2>{{sess.start_time.time}} - {{sess.end_time.time}}</h2>
+					<h2 v-if="timesyntax == 'us'">{{ usTime(sess.start_time.time) }} - {{ usTime(sess.end_time.time) }}</h2>
+					<h2 v-else>{{sess.start_time.time}} - {{sess.end_time.time}}</h2>
 					
 				</div>
 				<div class="session-name">
@@ -98,6 +99,23 @@ export default {
  		
  	},
 	
+	usTime(timevar){
+		let times = timevar.split(':');
+		let timeword = '';
+		
+		if(times[0] > 11){
+			timeword = 'PM';
+			if(times[0] != '12'){
+			  times[0] = (parseInt(times[0]) - 12);
+			}
+			
+		} else {
+			timeword = 'AM';
+		}
+		
+		
+		return times[0]+':'+times[1]+' '+timeword;
+	},
 
 	
 	duration(sessData){

@@ -30,7 +30,8 @@ class AgendaController extends Controller
         'year' => $start->year,
         'month' => $start->month,
         'day1' => $start->day,
-        'day2' => $end->day 
+        'day2' => $end->day,
+		'day0' => '0',		
       );
         array_push($eventsData, $tmp);
       
@@ -71,7 +72,8 @@ class AgendaController extends Controller
         'year' => $start->year,
         'month' => $start->month,
         'day1' => $start->day,
-        'day2' => $end->day 
+        'day2' => $end->day,
+		'day0' => '14'	
       );
         array_push($eventsData, $tmp);
       

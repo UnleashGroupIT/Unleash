@@ -85,7 +85,8 @@ mix.sass('resources/assets/scss/lasvegas/about.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/volunteer.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/startup.scss', 'public/css/lasvegas')
    .sass('resources/assets/scss/lasvegas/tickets_temp.scss', 'public/css/lasvegas')     
-   .sass('resources/assets/scss/lasvegas/tickets_old.scss', 'public/css/lasvegas')     
+   .sass('resources/assets/scss/lasvegas/tickets_old.scss', 'public/css/lasvegas')
+   .sass('resources/assets/scss/lasvegas/agenda_beta.scss', 'public/css/lasvegas')     
    .sass('resources/assets/scss/lasvegas/pdfs.scss', 'public/css/lasvegas')       
    .options({
          processCssUrls: false,

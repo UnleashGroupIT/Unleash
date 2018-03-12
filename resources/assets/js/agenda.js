@@ -71,6 +71,7 @@ var spVue = new Vue({
 		events: null,
 		day1: null,
 		day2: null,
+		day0: null,
 		speakersearch: null,
 		speakers: null,
 		allfilters: null,
@@ -90,6 +91,7 @@ var spVue = new Vue({
 		     if(element.id == default_event_id){
 		   		vm.day1 = element.day1;
 		   		vm.day2 = element.day2;
+				vm.day0 = element.day0;
 		     }
 			});
 		},	

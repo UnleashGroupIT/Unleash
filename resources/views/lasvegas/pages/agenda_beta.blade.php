@@ -2,29 +2,29 @@
 
 @section('meta')
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
- <meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
- 
-	  <!-- Open Graph data -->
-	<meta property="og:site_name" content="UNLEASH London - Agenda"/>
-	<meta property="og:title" content="UNLEASH London - Agenda"/>
-	<meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018."/>
-	<meta property="og:url" content="http://www.unleashgroup.io/america/ag">
-	<meta property="og:type" content="website"/>
-	<meta property="og:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}" />
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@hrtechworld">
-	<meta name="twitter:creator" content="@hrneurope">
-	<meta name="twitter:title" content="UNLEASH America - Agenda">
-	<meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018." />
-	<meta name="twitter:image" content="{{ URL::asset('gfx/london/UNLEASH_metashare_london.png') }}">
+		<meta name="description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018.">
+ <meta name="google-site-verification" content="n0SN8rSlfzJtkCBmSexzIG6dT59FadZc03C1eYF1qeg" />
+         <!-- Open Graph data -->
+        <meta property="og:site_name" content="UNLEASH America - Agenda"/>
+        <meta property="og:title" content="UNLEASH America - Agenda"/>
+        <meta property="og:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018."/>
+        <meta property="og:url" content="http://www.unleashgroup.io/america">
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@hrtechworld">
+        <meta name="twitter:creator" content="@hrneurope">
+        <meta name="twitter:title" content="UNLEASH America - Agenda">
+        <meta name="twitter:description" content="Unleash your people at the fastest growing Future of Work shows in the world! Join us for UNLEASH America on 15-16 May 2018." />
+        <meta name="twitter:image" content="{{ URL::asset('gfx/lasvegas/UNLEASH_metashare_america.png') }}">
 		
 @endsection
 
 @section('title', 'Las Vegas - Agenda')
 
 @section('headercss')
-<link rel="stylesheet" type="text/css" href="{{ mix('css/london/agenda_beta.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ mix('css/lasvegas/agenda_beta.css') }}">
 <style>
 #Algolia{
 	text-align: right;
@@ -48,15 +48,16 @@
 <!--<section id="Sessions" class="agenda hiddenTab">-->	
 		<div class="title-section">
 			<h1 id="TestAgendaText">AGENDA</h1>
-			<h4>Las Vegas 15-16 May 2018 </h4>
+			<h4>Las Vegas May 15-16 2018 </h4>
 		</div>
 		<div class="content-section">
 			<div class="inner-wrp">
 			<div class="tabs-wrp">
 				<nav>
 					<ul class="side tabs">
-				    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">15 May</li>
-				    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">16 May</li>  
+				    	<li @click="changeDay(day0, 0)" class="tab" id = "s_day-0">May 14.</li>
+				    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">May 15.</li>
+				    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">May 16.</li>  
 					</ul>
 				</nav>
 			</div>
@@ -104,6 +105,7 @@
 @section('footerscripts')
 	<script>
 	$('#day2').addClass('hide');
+	$('#day0').addClass('hide');
 
 	$('#day-1').click(function() { 
 		if (!$(this).hasClass('active')) {
