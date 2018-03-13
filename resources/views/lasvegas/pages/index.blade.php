@@ -145,11 +145,11 @@ max-width: 1124px !important; }
 	</section>
 	<section class="one speaker-highlights">
 			<div class="highlights-wrp">
-				<div class="hl-member jill-larsen">
+				<div class="hl-member harsha-jalihal">
 					<div class="member-wrp">
-						<h2>Jill Larsen</h2>
-						<h5>SVP Human Resources &amp; Talent Acquisition</h5>
-						<h6>Cisco</h6>
+						<h2>Harsha Jalihal</h2>
+						<h5>SVP HR - Future of Work</h5>
+						<h6>Unilever</h6>
 					</div>
 				</div>
 				<div class="hl-member josh-bersin">
@@ -166,11 +166,11 @@ max-width: 1124px !important; }
 						<h6>GE Digital</h6>
 					</div>
 				</div>
-				<div class="hl-member david-lee">
+				<div class="hl-member roy-ashok">
 					<div class="member-wrp">
-						<h2>David Lee</h2>
-						<h5>VP, Innovation &amp; Strategic Enterprise Fund</h5>
-						<h6>UPS</h6>
+						<h2>Roy Ashok</h2>
+						<h5>CEO</h5>
+						<h6>DAQRI</h6>
 					</div>
 				</div>
 				<div class="hl-member kathleen-hogan">
@@ -180,18 +180,18 @@ max-width: 1124px !important; }
 						<h6>Microsoft</h6>
 					</div>
 				</div>
-				<div class="hl-member sjoerd-gehring">
+				<div class="hl-member jason-averbook">
 					<div class="member-wrp">
-						<h2>Sjoerd Gehring</h2>
-						<h5>Global VP of Talent Acquisition &amp; Employee Experience</h5>
-						<h6>Johnson &amp; Johnson</h6>
+						<h2>Jason Averbook</h2>
+						<h5>Founder</h5>
+						<h6>Leapgen</h6>
 					</div>	
 				</div>
-				<div class="hl-member diane-adams">
+				<div class="hl-member michelle-diTondo">
 					<div class="member-wrp">
-						<h2>Diane K. Adams</h2>
-						<h5>Chief Culture and Talent Officer</h5>
-						<h6>McGraw-Hill Education</h6>
+						<h2>Michelle DiTondo</h2>
+						<h5>CHRO</h5>
+						<h6>MGM Resorts International</h6>
 					</div>
 				</div>
 				<div class="hl-member curt-burghardt">
