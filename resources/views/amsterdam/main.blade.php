@@ -55,7 +55,7 @@
   gtag('config', 'UA-69202140-20');
 </script>
 <!-- CrazyEgg -->
-<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
+<!--<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>-->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>

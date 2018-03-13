@@ -34,5 +34,7 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+	'slack' => [
+		'webhook_url' => env('SLACK_WEBHOOK_URL'),
+	],
 ];
