@@ -12,6 +12,11 @@ $(document).ready(function()	{
 
 	if(window.location.hash == "signup") {
 		$("#joinourcommunity").css("display", "flex");
+		  grecaptcha.render('joinourcommunity-captcha', {
+          'sitekey' : '6Ld7QUkUAAAAAK2tq3dnMv2AbRwPfFc4GUR9Exsu',
+		  'callback': reCaptchaVerify,
+		  'expired-callback': reCaptchaExpired
+        });			
 	}
 	
 	(function () {
@@ -365,7 +370,12 @@ $("#trailer").click(function() {
     }  
 	
     if (window.location.href.indexOf('#BecomeaSponsor') != -1) {
-			$('#becomeasponsor').css("display", "flex")
+			$('#becomeasponsor').css("display", "flex");
+		  grecaptcha.render('becomeasponsor-captcha', {
+          'sitekey' : '6Ld7QUkUAAAAAK2tq3dnMv2AbRwPfFc4GUR9Exsu',
+		  'callback': reCaptchaVerify,
+		  'expired-callback': reCaptchaExpired
+        });				
     }   	
 	
 var bindFunct = function(){

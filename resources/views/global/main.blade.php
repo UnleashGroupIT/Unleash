@@ -229,12 +229,12 @@ var doSubmit = false;
 
 	<!--Footer-->
 
-	 @include('london.components.footer')
-     @include('london.components.fixedjs')	 
+	 @include('global.components.footer')
+     @include('global.components.fixedjs')	 
 	 <div id="MiscScripts">
 	 	@include('globalscript')
 	</div>
-    @include('london.components.popup')
+    @include('global.components.popup')
 
 
  <!-- LiveChat code -->
