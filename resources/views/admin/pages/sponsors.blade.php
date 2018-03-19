@@ -59,7 +59,7 @@
     </div>
 
     <!-- form-modal -->
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#form_modal">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#form_modal" id="NewFormButtun" @click="clearNewForm()">
         <i class="fa fa-plus-circle" aria-hidden="true"></i> New Sponsor
     </button>
 

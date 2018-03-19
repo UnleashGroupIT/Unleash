@@ -196,6 +196,10 @@ Route::get('/london/room-availability', function () {
   return view('london.pages.roompdf');
 });
 
+Route::get('/london/startup-segmentation', function () {
+  return view('london.pages.startupsegmentationpdf');
+});
+
 Route::get('/london/indexv2', 'MainPageController@index');
 
 
@@ -316,9 +320,28 @@ Route::get('/america/about', 'StaticPageController@about')->name('lasvegas.about
 
 Route::get('/america/venue', 'StaticPageController@venue')->name('lasvegas.floorplan');
 
-Route::get('/america/tickets', function () {
+/*Route::get('/america/tickets', function () {
     return view('lasvegas.pages.tickets');
+})->name('lasvegas.tickets');*/
+
+
+Route::get('/america/tickets', function(){
+	$now = Carbon::now();
+	
+	$early = Carbon::create(2018, 3, 22, 6, 59, 59);
+	if ($now->gt($early)){
+		 return view('lasvegas.pages.ticketsregular');
+	
+	} else {
+		 return view('lasvegas.pages.tickets');
+	}
+	
 })->name('lasvegas.tickets');
+
+
+Route::get('/america/ticketsregular', function () {
+    return view('lasvegas.pages.ticketsregular');
+})->name('lasvegas.ticketsregular');
 
 Route::get('/america/travel', function () {
     return view('lasvegas.pages.travel');

@@ -245,6 +245,7 @@ var spVue = new Vue({
 
 	//Create a new Sponsor	
 	newSponsorSubmit($event){
+			var thiss = this;
 			let ref = this.$refs.allSponsorGrid;
 			let selectedGr = this.selected;
 			let SearchVar = this.sponsorSearch;
@@ -266,13 +267,19 @@ var spVue = new Vue({
 			axios.post('/api/sponsors', form, config)
 			  .then(function (response) {
 			  	document.getElementById("NewSponsorForm").reset();
+				document.getElementById("EditSponsorForm").reset();
 				document.getElementById("sponsorPrevImg").src="";
 			  	document.getElementById("ImgAreaPlaceholder").innerHTML = 'Drag your files here or click in this area.';	
 			 		    new PNotify({
 					        title: 'Success!',
-					        text: 'Sponsor Saved!',
+					        text: 'Sponsor Saved (logo preview removed to avoid conflicts)!',
 					        type: 'success'
     					});
+						
+				    thiss.selectedImage = null;
+					thiss.image = null;
+					thiss.imgPrev = '';	
+					thiss.sponsorPrevImg = '';
 
     			ref.filterSponsors(selectedGr, SearchVar);	
 			  })
@@ -349,6 +356,15 @@ var spVue = new Vue({
 
        
     },
+	
+	clearNewForm(){
+		document.getElementById("NewSponsorForm").reset();
+		document.getElementById("sponsorPrevImg").src="";		
+		this.selectedImage = null;
+		this.image = null;
+		this.imgPrev = '';	
+		this.sponsorPrevImg = '';	
+	},
 
 	sponsorEditRequest(sponsorData){
 		this.editSponsorData = sponsorData;
@@ -382,9 +398,15 @@ var spVue = new Vue({
 			  	
 			 		    new PNotify({
 					        title: 'Success!',
-					        text: 'Sponsor Saved!',
+					        text: 'Sponsor Saved (logo preview removed to avoid conflicts)!',
 					        type: 'success'
     					});
+					document.getElementById("NewSponsorForm").reset();	
+				    thiiiis.selectedImage = null;
+					thiiiis.image = null;
+					thiiiis.imgPrev = '';	
+					thiiiis.sponsorPrevImg = '';
+					
 				if(thiiiis.selected){
 					thiiiis.showGrid(thiiiis.selected);
 				}

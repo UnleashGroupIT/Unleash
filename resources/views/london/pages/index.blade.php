@@ -46,7 +46,7 @@
           </li>
           <li><img src="{{ URL::asset('gfx/london/v2-site/slider-1.jpg') }}" alt=""></li>
           <li><img src="{{ URL::asset('gfx/london/v2-site/slider-2.jpg') }}" alt=""></li>
-          <li><img src="{{ URL::asset('gfx/london/v2-site/slider-3.jpg') }}" alt=""></li>
+         <!-- <li><img src="{{ URL::asset('gfx/london/v2-site/slider-3.jpg') }}" alt=""></li>-->
           <li><img src="{{ URL::asset('gfx/london/v2-site/slider-4.jpg') }}" alt=""></li>          
       </ul>
 

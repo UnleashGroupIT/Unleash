@@ -161,7 +161,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 
 		</div>	
 
-	{{--	<h2>A La Carte</h2>
+		<h2>A La Carte</h2>
 		<div class="sponsors-wrp">
 			@foreach($sponsors as $sponsor)
 			   @if($sponsor->pivot->category_id == 10 || $sponsor->pivot->alacarte == 1)
@@ -172,7 +172,7 @@ The Expo Floor and A La Carte Packages are running out – be sure to book your 
 			@endforeach	
 		</div>	
 		
-	--}}
+	
 	
 		<!--<h2> Startup</h2>
 		<div class="sponsors-wrp">

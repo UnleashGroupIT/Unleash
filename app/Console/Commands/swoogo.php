@@ -116,6 +116,7 @@ class swoogo extends Command
 								'job_title' => $value->job_title,
 								'company' => $value->company,
 								'country' => $country,
+								'status' => $value->registration_status
 
 							]);						   
 						   

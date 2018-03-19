@@ -108,7 +108,7 @@
 		<div class="wrp">
 			<h2>APPLY NOW</h2>
 			<p>To apply, follow the link below and complete the registration form and we will be<br />in touch shortly to discuss it personally with you.</p>
-			<p id="orange-text"><a class="eventlink" href="/london" target="_blank"><img src="{{ URL::asset('gfx/deadline-london.png') }}" alt="London Deadline 26 FEBR 2018"></a></p>
+			<p id="orange-text"><a class="eventlink" href="/london" target="_blank"><img src="{{ URL::asset('gfx/deadline-london-blck.png') }}" alt="London Deadline 26 FEBR 2018"></a></p>
 			<button class="orange-btn popup" data-popupdata="supcompete">Apply</button>
 		</div>
 	</section>

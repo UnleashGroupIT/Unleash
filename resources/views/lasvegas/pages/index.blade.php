@@ -203,7 +203,7 @@ max-width: 1124px !important; }
 				</div>
 			</div>
 			<div class="highlight-text">
-				<h2>12 STAGES. 100 SPEAKERS. <br>
+				<h2>9 STAGES. 100 SPEAKERS. <br>
 2500+ DECISION-MAKERS.</h2>
 				<div class="wrp">
 					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry’s latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br>

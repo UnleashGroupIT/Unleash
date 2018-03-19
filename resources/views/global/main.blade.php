@@ -60,7 +60,7 @@
   gtag('config', 'UA-69202140-18');
 </script>
 <!-- CrazyEgg -->
-<!--<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>-->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0046/2666.js" async="async"></script>
 
 <!-- Google API for MAPS -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC23Ed2Jj6V22JPpxKutPZnH1LiJ7tabsA&callback=initMap"

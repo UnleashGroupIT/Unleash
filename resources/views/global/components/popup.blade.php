@@ -224,13 +224,13 @@ Please fill in all the fields below, and we'll get back to you soon.</p>
                 <input required="required" placeholder="Company Name" class="form-input" name="145751_30902pi_145751_30902" id="145751_30902pi_145751_30902" size="30" maxlength="255" type="text">
                 <div class="event-wrp">
 	                <p>Please choose an Event</p>
-	                <div>
+	                <!--<div>
 	                	<label for="145751_30912pi_145751_30912_196344">UNLEASH Conference &amp; Expo<br />London 20-21. March 2018</label>
 	                	<input type="checkbox" name="145751_30912pi_145751_30912_196344" id="145751_30912pi_145751_30912_196344" value="196344" checked>
-	                </div>
+	                </div>-->
 	                <div>
 	                	<label for="145751_30912pi_145751_30912_196346">UNLEASH America<br />Las Vegas 15-16. May 2018</label>
-	                	<input type="checkbox" name="145751_30912pi_145751_30912_196346" id="145751_30912pi_145751_30912_196346" value="196346">
+	                	<input type="checkbox" name="145751_30912pi_145751_30912_196346" id="145751_30912pi_145751_30912_196346" value="196346" checked>
 	                </div>
 	                <div>
 	                	<label for="145751_30912pi_145751_30912_196348">UNLEASH World Conference &amp; Expo<br />Amsterdam 23-24. October 2018</label>
