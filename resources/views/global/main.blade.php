@@ -199,7 +199,7 @@ var doSubmit = false;
 				
 			</nav>
 		</section>
-		<nav id="sub" class="sub-menu">
+		<!--<nav id="sub" class="sub-menu">
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('london.index') }}">HOME</a></li>
 				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
@@ -210,7 +210,7 @@ var doSubmit = false;
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
 				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
 			</ul>
-		</nav>
+		</nav>-->
 		<div class="mobileButtons">
 			<a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
 			<a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
