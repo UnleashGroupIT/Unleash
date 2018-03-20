@@ -77,6 +77,11 @@ const momenttimezone = require('moment-timezone');
     require('./components/AgendaSessions.vue')
 );
 
+  Vue.component(
+    'day-selector',
+    require('./components/AgendaDaySelector.vue')
+);
+
 const spVue = new Vue({
 	el: '#app',
 
@@ -85,12 +90,13 @@ const spVue = new Vue({
 		eventid: null,
 		eventcode: null,
 		day: null,
+		day1: null,
+		day2: null,
+		dates: {},
 		filters: [],
 		searchbar: null,
 		agendasession: null,
 		events: null,
-		day1: null,
-		day2: null,
 		month: null,
 		year: null,
 		event_name: null,
@@ -130,48 +136,49 @@ const spVue = new Vue({
 			var vm = this;
 		this.events.forEach(function(element) {
 		     if(element.id == vm.eventid){
-		   		vm.day1 = element.day1;
-		   		vm.day2 = element.day2;
-		   		vm.day = element.day1;
+		   		vm.dates.days = element.days;
 		   		switch(element.month){
 		   			case 1:
-		   			 vm.month = 'January';
+		   			 vm.dates.month = 'January';
 		   			break;
 		   			case 2:
-		   			 vm.month = 'February';
+		   			 vm.dates.month = 'February';
 		   			break;
 		   			case 3:
-		   			 vm.month = 'March';
+		   			 vm.dates.month = 'March';
 		   			break;
 		   			case 4:
-		   			 vm.month = 'April';
+		   			 vm.dates.month = 'April';
 		   			break;
 		   			case 5:
-		   			 vm.month = 'May';
+		   			 vm.dates.month = 'May';
 		   			break;
 		   			case 6:
-		   			 vm.month = 'June';
+		   			 vm.dates.month = 'June';
 		   			break;
 		   			case 7:
-		   			 vm.month = 'July';
+		   			 vm.dates.month = 'July';
 		   			break;
 		   			case 8:
-		   			 vm.month = 'August';
+		   			 vm.dates.month = 'August';
 		   			break;
 		   			case 9:
-		   			 vm.month = 'September';
+		   			 vm.dates.month = 'September';
 		   			break;
 		   			case 10:
-		   			 vm.month = 'October';
+		   			 vm.dates.month = 'October';
 		   			break;
 		   			case 11:
-		   			 vm.month = 'November';
+		   			 vm.dates.month = 'November';
 		   			break;
 		   			case 12:
-		   			 vm.month = 'December';
+		   			 vm.dates.month = 'December';
 		   			break;		   					   					   				   			
                 	
 		   		}
+		   		vm.day1 = vm.day = vm.dates.days[0];
+		   		vm.day2 = vm.dates.days[vm.dates.days.length -1];
+		   		vm.month = vm.dates.month;
 		   		vm.monthDate = element.month;
 		   		vm.event_name = element.name;
 		   		vm.year = element.year;
@@ -179,11 +186,10 @@ const spVue = new Vue({
 			});
 		},	
 
-		changeDay(selected, id){
-			this.day = selected;
+		changeDay(id){
+
+			this.day = id;
 			this.filteredSearch();
-			$('.tabs .tab').removeClass('active');
-			$('#s_day-'+id).addClass('active');
 		},	
 
  		filteredSearch(){
@@ -199,6 +205,7 @@ const spVue = new Vue({
 			} else {
 				 filters = ' ';
 			}
+			
 
 			if (this.searchbar){
 				searchQuery = '&keyword='+this.searchbar;
@@ -228,6 +235,15 @@ const spVue = new Vue({
 				 		jQuery('#NewSessionButton').addClass('adminActive');
 				 		this.sessionedit = null;
 				 		this.editmode = false;
+				 		document.getElementById("NewSessionForm").reset();
+				 		this.sessionedit = null;
+				 		jQuery("#session_name").attr('value', null);
+						
+						
+				 		jQuery("#startTime").attr('value',null);
+				 		jQuery("#endTime").attr('value',null);
+
+				 		jQuery("#description").html(null);				 		
 				 		
 				 		break;
 				 	case 'Tracks':
@@ -493,7 +509,6 @@ const spVue = new Vue({
   	this.eventcode = default_event_code;
   	this.day = default_day;
   	this.events = eventdata;
-  	eventdata = '';
   	this.getDays();
   	this.tracks = tracks;
   	//this.sessionedit = 1;
@@ -509,7 +524,7 @@ const spVue = new Vue({
   	searchbar: function (val){
   	  	this.searchbar = val;
   		this.filteredSearch();	
-  	},
+  	}, 	
     speakersearch: function (val){
     	this.searchForSpeakers(val);
     },

@@ -67,22 +67,28 @@ class SubPageController extends Controller
 
     
 
-     $events = Events::all();
+     $events = Events::with('event_dates')->get();
      $tracks = Tracks::where('event_id', \Config::get('unleash.admin.default_event_id'))->get();
 
      $eventsData = [];
      foreach ($events as $event) {
        
-       $start = Carbon::parse($event->first_day['numberFormat']);
-       $end = Carbon::parse($event->second_day['numberFormat']);
+       $eventDates = [];
+       $eventDays = [];
+       foreach ($event->event_dates as $edates) {
+                $datesTMP = Carbon::parse($edates['event_date']);
+               array_push($eventDates, $datesTMP); 
+               array_push($eventDays, $datesTMP->day); 
+       }
+
 
        $tmp = (object)array(
         'name' => $event->event_name,
         'id' => $event->id,
-        'year' => $start->year,
-        'month' => $start->month,
-        'day1' => $start->day,
-        'day2' => $end->day 
+        'dates' => $eventDates,
+        'year' => $eventDates[0]->year,
+        'month' => $eventDates[0]->month,
+        'days' => $eventDays,
       );
         array_push($eventsData, $tmp);
       

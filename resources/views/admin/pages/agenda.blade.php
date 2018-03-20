@@ -385,14 +385,14 @@ display: inline-block;
 
 					<!-- Main Stage -->
 	    			<div class="cnt-wrp main-stage">
-                        <form id="NewSessionForm" role="form" v-on:submit.prevent="newSessionSubmit" class="sessionform">
+                        <form id="NewSessionForm" name="NewSessForm" role="form" v-on:submit.prevent="newSessionSubmit" class="sessionform">
               
      
                            <input type="text" required name="session_name" id="session_name" placeholder="Session Name" class="form-control ssfname">
 
                            <div class="dateSelectorContainer">
-									Start Time: <input type="text" class="dateSelector" id="startTime" name="startTime" value="03/20/2018 8:00:00" />
-									End Time: <input type="text" class="dateSelector" id="endTime" name="endTime" value="03/20/2018 8:00:00" />                           	
+									Start Time: <input type="text" class="dateSelector" id="startTime" name="startTime" />
+									End Time: <input type="text" class="dateSelector" id="endTime" name="endTime" />                           	
                            </div>
 
 
@@ -506,10 +506,7 @@ display: inline-block;
 			<div class="contents-wrp">
 				<div class="tabs-wrp">
 					<nav>
-						<ul class="side tabs">
-					    	<li @click="changeDay(day1, 1)" class="tab active" id = "s_day-1">@{{month}} @{{day1}}.</li>
-					    	<li @click="changeDay(day2, 2)" class="tab" id = "s_day-2">@{{month}} @{{day2}}.</li>  
-						</ul>
+						<day-selector :selectedevent="eventid" :seldayy="day" @daychange="changeDay"></day-selector>
 					</nav>
 				</div>
 				<div id="SessionContent" class="tabContent active">
