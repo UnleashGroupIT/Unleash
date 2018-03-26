@@ -174,6 +174,10 @@ Route::get('/london/volunteer', function () {
 Route::get('/london/sponsor-pdf', function () {
   return view('london.pages.sponsorshippdf');
 });
+Route::get('/london/qrscanner', function () {
+  return view('london.pages.qrcode');
+});
+
 
 Route::get('/london/sponsor-brochure', function () {
   return view('london.pages.sponsorshippdf');

@@ -88,7 +88,7 @@ class swoogo extends Command
 
             if ($userData->_meta->pageCount){
                 for ($i=1; $i <= $userData->_meta->pageCount; $i++) { 
-                     $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,registration_status,c_102323&per-page=200&expand=billingAddress&page='.$i, [
+                     $data = $client->request('GET', 'https://www.swoogo.com/api/v1/registrants.json?event_id='.env('SWOOGO_EVENT').'&fields=first_name,last_name,company,job_title,email,work_phone,mobile_phone,registration_status,c_102323&per-page=200&expand=billingAddress&page='.$i, [
                         'headers' => [
                             'Authorization' => 'Bearer '.$token,
                         ]
@@ -109,6 +109,22 @@ class swoogo extends Command
 						} else {
 							$country = null;
 						}
+						
+						
+						if(isset($value->mobile_phone)){
+							$phone = $value->mobile_phone;
+						}elseif(isset($value->work_phone)) {
+							$phone = $value->work_phone;
+						}else {
+							$phone = null;
+						}
+						
+						if(isset($value->email)){
+							$email = $value->email;
+						}else {
+							$email = null;
+						}
+		
 					   if($value->registration_status == "confirmed"){
 							$delegate = Delegates::create([
 								'first_name' => ltrim($value->first_name),
@@ -116,6 +132,8 @@ class swoogo extends Command
 								'job_title' => $value->job_title,
 								'company' => $value->company,
 								'country' => $country,
+								'email_address' => $email,
+								'phone' => $phone,
 								'status' => $value->registration_status
 
 							]);						   

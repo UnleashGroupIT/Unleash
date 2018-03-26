@@ -107,6 +107,8 @@ body{
     <th scope="col">Company</th>
     <th scope="col">Job Title</th>
     <th scope="col">Country</th>
+	<th scope="col">Email Address</th>
+	<th scope="col">Phone Number</th>
   </tr>
 
 @foreach($delegates as $delegate)
@@ -116,6 +118,8 @@ body{
     <td>{{$delegate->company}}</td>
     <td>{{$delegate->job_title}}</td>
     <td>{{$delegate->country}}</td>
+	<td>{{$delegate->email_address}}</td>
+	<td>{{$delegate->phone}}</td>
   </tr>
 @endforeach  
 </table>

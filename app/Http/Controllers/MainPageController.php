@@ -25,7 +25,7 @@ class MainPageController extends Controller
      }      
      
       if ($request->is('london') || $request->is('london/*')) {
-         $SpeakerGridId = 6;
+         $SpeakerGridId = 8;
          $SponsorGridId = 3;
          $site = 'london.pages.index';    
      }   

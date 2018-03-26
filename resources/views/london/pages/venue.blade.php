@@ -75,11 +75,11 @@
 			</div>
 		</div>
 	</section>
-	<section class="one-cntr">
+	<!--<section class="one-cntr">
 		<div class="wrp">
 			<h2>Register Now!</h2>
 			<p><strong><b style="font-weight:400 !important;">UNLEASH Your People!</b></strong><br />Be inspired by the industry’s top influencers; source the best solutions and services available for your organization; and have fun meeting like-minded industry leaders and pioneers. Reward yourself and your team by joining the world’s largest community on the Future of Work and Technology. </p>
 			<a href="{{ route('london.tickets') }}" target="_blank"><button class="red-btn">Register Now</button></a>
 		</div>
-	</section>
+	</section>-->
 @endsection

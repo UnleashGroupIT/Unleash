@@ -19,6 +19,8 @@ class CreateDelegatesTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('job_title')->nullable();
             $table->string('company')->nullable();
+			$table->string('email_address')->nullable();
+			$table->string('phone')->nullable();
             $table->string('country')->nullable();
             $table->timestamps();
         });

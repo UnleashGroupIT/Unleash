@@ -114,7 +114,7 @@ var doSubmit = false;
 								<li><a href="{{ route('global.startup') }}">STARTUPS</a></li>
 								<li><a href="{{ route('london.venue') }}">VENUE</a></li>
 								<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
-								<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
+								
 							</ul>
 						</nav>
 					</li>
@@ -141,7 +141,7 @@ var doSubmit = false;
 											<li><a href="{{ route('london.venue') }}">Venue</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Floor plan</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
-											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
+											
 										</ul>
 									</li>
 									<li class="lasvegas" title="LAS VEGAS">
@@ -210,13 +210,13 @@ var doSubmit = false;
 				<li><a href="{{ route('london.venue') }}">VENUE</a></li>
 				<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
 				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
-				<li><a href="{{ route('london.tickets') }}">TICKETS</a></li>
+				
 			</ul>
 		</nav>
 		<div class="mobileButtons">
 			<a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
 			<a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
-			<a href="{{ route('london.tickets') }}"><button id="mobileTicket">TICKETS</button></a>
+			
 		</div>
 		
 		

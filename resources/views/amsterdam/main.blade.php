@@ -129,7 +129,7 @@ var doSubmit = false;
 											<li><a href="{{ route('london.venue') }}">Venue</a></li>
 											<li><a href="{{ route('london.floorplan') }}">Floorplan</a></li>
 											<li><a href="{{ route('london.travel') }}">Travel</a></li>
-											<li><a href="{{ route('london.tickets') }}">Tickets</a></li>
+											
 										</ul>
 									</li>
 									<li class="lasvegas" title="LAS VEGAS">

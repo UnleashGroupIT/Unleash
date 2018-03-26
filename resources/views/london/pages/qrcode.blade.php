@@ -14,7 +14,7 @@
  <meta name="apple-mobile-web-app-status-bar-style" content="#4AD9D9">
 
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<title>UNLEASH | Mobile App</title>
+<title>UNLEASH | Mobile App QR Scanner</title>
 
 <script type="text/javascript">
  var userAgent = navigator.userAgent.toLowerCase();
@@ -32,14 +32,11 @@
         OS: "",
     }
     if (PlatformOS.isIpad || PlatformOS.isIphone ) {
-        location.href = "http://go.pardot.com/l/145751/2018-03-05/pbfyp";
+        location.href = "https://itunes.apple.com/bf/app/qr-reader-for-iphone/id368494609?mt=8";
     }
    
-	else if (PlatformOS.isAndroid) {
-        location.href = "http://go.pardot.com/l/145751/2018-03-05/pbfyr ";
-    }
 	else  {
-        location.href = "https://dl.doubledutch.me/download.aspx?appId=7251e643-6acd-4f70-abb3-61611f874d2e&region=us";
+        location.href = "https://play.google.com/store/apps/details?id=me.scan.android.client&hl=hu";
     }
 </script>
 
