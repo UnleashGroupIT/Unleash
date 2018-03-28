@@ -129,11 +129,11 @@ max-width: 1124px !important; }
 				<h2>Rachel Botsman</h2>
 				<h5>Author, Lecturer<br />Saïd Business School of the University of Oxford</h5>
 				
-				<p>A brilliant storyteller, Rachel Botsman has led the way in discussing how our heavy reliance on tech is redefining cultural norms, whether it be predicting the sharing economy to exploring tech’s influence on trust. In her most recent book, "Who Can You Trust?", Rachel examines the reasons and possible consequences of people losing trust in themselves and global institutions, and instead relying on (and trusting in) AI and automation far more. When we begin to trust machines more than other humans, what does that mean for humanity?<br>
-<br>
-</p>
-				
-				<p>In her talk, Rachel will delve deeper into this relationship between trust and technology, pulling from everyday examples like Amazon Echo to China’s planned citizen scores.</p>
+				<p>A new world order is emerging: we might have lost faith in institutions and leaders, but millions of people travel in cars with total strangers, exchange digital currencies, or find themselves trusting a bot. This is the age of “distributed trust”, a paradigm shift driven by innovative technologies that are rewriting the rules of an all-too-human relationship.<br><br></p>
+
+<p>A brilliant storyteller, Rachel Botsman has led the way in discussing how our heavy reliance on tech is redefining cultural norms, whether it be predicting the sharing economy to exploring tech’s influence on trust.<br><br></p>
+
+<p>In her talk, Rachel will delve deeper into this relationship between trust and technology, pulling from everyday examples like Amazon Echo, Facebook & Cambridge Analytica to China’s planned citizen scores.</p>
 			</div>
 			<div class="schedule-wrp">
 				<button id="spkrgrd" class="red-btn popup" data-popupdata="applytospeak">Apply to Speak</button>
@@ -204,7 +204,7 @@ max-width: 1124px !important; }
 			</div>
 			<div class="highlight-text">
 				<h2>9 STAGES. 100 SPEAKERS. <br>
-2500+ DECISION-MAKERS.</h2>
+2000+ DECISION-MAKERS.</h2>
 				<div class="wrp">
 					<p>Returning to the US in May to bring you the freshest thoughts on the Future of Work, UNLEASH America in Las Vegas takes you to workplace tech’s cloud 9 with our community of CEOs, CPOs, CFOs, HRIT Executives, Tech Disrupters, and Analysts that will show you how the world of work as we know it is shifting for the better. Beyond the industry’s latest technological innovations, the show will also highlight the latest strategies designed to re-infuse a human perspective into the workplace.<br>
 <br>
@@ -306,7 +306,22 @@ In an era of technological and socio-political uncertainty, how can you make sur
 	</section>
 	<!--Map END-->
 
+<!-- Google RBM Pixel-->
 
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 873672563;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/873672563/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
 
 	
 @endsection

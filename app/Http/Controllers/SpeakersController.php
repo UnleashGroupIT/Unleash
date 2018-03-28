@@ -87,7 +87,13 @@ class SpeakersController extends Controller
 
 
     	$speakerTemp = Speakers::where('slug',$speakerId)->get();
-        $speaker = $speakerTemp[0];
+		if(isset($speakerTemp[0])){
+			$speaker = $speakerTemp[0];
+		} else {
+			$speaker = null;
+			abort(404);
+		}
+        
 
 	 if ($request->header() !== null){
 		 $headerData = $request->header();

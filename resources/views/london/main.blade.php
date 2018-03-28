@@ -109,11 +109,8 @@ var doSubmit = false;
 							<ul class="spec-menu amsterdam">
 								<li><a href="{{ route('london.index') }}">HOME</a></li>
 								<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
-								<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
 								<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
-								<li><a href="{{ route('global.startup') }}">STARTUPS</a></li>
-								<li><a href="{{ route('london.venue') }}">VENUE</a></li>
-								<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
+
 								
 							</ul>
 						</nav>
@@ -135,12 +132,10 @@ var doSubmit = false;
 										<ul class="subs-ul">
 											<li><a href="{{ route('london.index') }}">Home</a></li>
 											<li><a href="{{ route('london.speakers') }}">Speakers</a></li>
-											<li><a href="{{ route('london.agenda') }}">Agenda</a></li>
+											
 											<li><a href="{{ route('london.sponsors') }}">Sponsors</a></li>
-											<li><a href="{{ route('london.volunteer') }}">Volunteer</a></li>
-											<li><a href="{{ route('london.venue') }}">Venue</a></li>
-											<li><a href="{{ route('london.floorplan') }}">Floor plan</a></li>
-											<li><a href="{{ route('london.travel') }}">Travel</a></li>
+											
+											
 											
 										</ul>
 									</li>
@@ -204,18 +199,17 @@ var doSubmit = false;
 			<ul class="spec-menu amsterdam">
 				<li><a href="{{ route('london.index') }}">HOME</a></li>
 				<li><a href="{{ route('london.speakers') }}">SPEAKERS</a></li>
-				<li><a href="{{ route('london.agenda') }}">AGENDA</a></li>
+				
 				<li><a href="{{ route('london.sponsors') }}">SPONSORS</a></li>
-				<li><a href="{{ route('london.volunteer') }}">VOLUNTEER</a></li>
-				<li><a href="{{ route('london.venue') }}">VENUE</a></li>
-				<li><a href="{{ route('london.floorplan') }}">FLOOR PLAN</a></li>
-				<li><a href="{{ route('london.travel') }}">TRAVEL</a></li>
+				
+				
 				
 			</ul>
 		</nav>
 		<div class="mobileButtons">
-			<a href="{{ route('london.agenda') }}"><button id="mobileTicket">Agenda</button></a>
+			
 			<a href="{{ route('london.speakers') }}"><button id="mobileTicket">SPEAKERS</button></a>
+			<a href="{{ route('london.sponsors') }}"><button id="mobileTicket">SPONSORS</button></a>
 			
 		</div>
 		

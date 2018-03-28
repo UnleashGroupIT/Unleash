@@ -234,12 +234,13 @@ Route::get('/london/sponsor/{sponsorId}', 'SponsorsController@sponsor')->name('l
 
 Route::get('/london/startups', 'StartupsController@index')->name('london.startup');
 
-/*
-Route::get('/london/agenda', function () {
-  return view('london.pages.agenda');
-})->name('london.agenda');*/
 
-Route::get('/london/agenda','AgendaController@index')->name('london.agenda');
+
+//Route::get('/london/agenda','AgendaController@index')->name('london.agenda');
+
+Route::get('/london/agenda', function () {
+  return redirect('/london/index');
+})->name('london.agenda');
 
 Route::get('/london/about', 'StaticPageController@about')->name('london.about');
 
@@ -248,10 +249,8 @@ Route::get('/london/venue', 'StaticPageController@venue')->name('london.venue');
 
 
 Route::get('/london/tickets', function(){
-
-  return view('london.pages.tickets_normal');
-
-	
+ // return view('london.pages.tickets_normal');
+ return redirect('/london/index');
 })->name('london.tickets');
 
 
@@ -282,7 +281,8 @@ Route::get('/london/dlgtlst', function () {
 
 
 Route::get('/london/floorplan', function () {
-   return view('london.pages.floorplan');
+  // return view('london.pages.floorplan');
+  return redirect('/london/index');
 })->name('london.floorplan');
 
 
