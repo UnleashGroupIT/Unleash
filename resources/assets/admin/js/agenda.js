@@ -66,6 +66,18 @@ global.moment = require('moment');
 
 const momenttimezone = require('moment-timezone');
 
+// Require Froala Editor js file.
+require('froala-editor/js/froala_editor.pkgd.min')
+
+// Require Froala Editor css files.
+require('froala-editor/css/froala_editor.pkgd.min.css')
+require('font-awesome/css/font-awesome.css')
+require('froala-editor/css/froala_style.min.css')
+
+// Import and use Vue Froala lib.
+import VueFroala from 'vue-froala-wysiwyg'
+Vue.use(VueFroala)
+
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.0.0-alpha14 (https://tempusdominus.github.io/bootstrap-4/)
  * Copyright 2016-2017 Jonathan Peterson
@@ -106,9 +118,18 @@ const spVue = new Vue({
 		newSpeakerVisual: [],
 		sessionedit: null,
 		editmode: false,
+		newSessionDescription: null,
 		tracks: [],
 		NewEditTitle: 'Create New Session',
 		underEditId: null,
+		froala_config: {
+			placeholderText: 'Session Description',
+			  // Set custom buttons with separator between them.
+  toolbarButtons: [ 'bold', 'italic', 'underline', 'strikeThrough', '|',
+  'subscript', 'superscript', 'outdent', 'indent', '|', 'formatOL', 'formatUL', '|', 'clearFormatting', 'insertTable', 'html'],
+  toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline'],
+  key: froala_key
+		}
 		
 
 	},//data,
@@ -130,6 +151,7 @@ const spVue = new Vue({
 				spVue.NewEditTitle = 'Create New Session';
 				spVue.editmode = false;
 				spVue.underEditId = null;
+				spVue.newSessionDescription = null;
 		},
 
 		getDays(){
@@ -233,7 +255,6 @@ const spVue = new Vue({
 				 	case 'NewSession':
 				 		activteThis = "#NewSession";
 				 		jQuery('#NewSessionButton').addClass('adminActive');
-				 		this.sessionedit = null;
 				 		this.editmode = false;
 				 		document.getElementById("NewSessionForm").reset();
 				 		this.sessionedit = null;
@@ -243,7 +264,7 @@ const spVue = new Vue({
 				 		jQuery("#startTime").attr('value',null);
 				 		jQuery("#endTime").attr('value',null);
 
-				 		jQuery("#description").html(null);				 		
+				 			 		
 				 		
 				 		break;
 				 	case 'Tracks':
@@ -331,7 +352,7 @@ const spVue = new Vue({
       form.append('sessionTitle', $event.target.session_name.value);
       form.append('startTime', $event.target.startTime.value);
       form.append('endTime', $event.target.endTime.value);
-      form.append('description', $event.target.description.value);
+      form.append('description', this.newSessionDescription);
       form.append('speakers', JSON.stringify(this.newSpeaker));
       form.append('track', $event.target.NewSessionTrack.value);
       form.append('sessiontype', $event.target.sessiontype.value);
@@ -402,7 +423,13 @@ const spVue = new Vue({
  		jQuery("#startTime").attr('value',this.sessionedit.startformatted);
  		jQuery("#endTime").attr('value',this.sessionedit.endformatted);
 
- 		jQuery("#description").html(this.sessionedit.session_description);
+ 		//jQuery("#description").html(this.sessionedit.session_description);
+ 	
+
+
+ 		 spVue.newSessionDescription = this.sessionedit.session_description;
+ 		$('#description').froalaEditor('html.set', this.sessionedit.session_description);
+
  		jQuery("#NewSessionTrack").val(this.sessionedit.tracks[0].id);
  		jQuery("#sessiontype").val(this.sessionedit.category_id);
  		spVue.NewEditTitle = "Edit Session";
@@ -489,6 +516,18 @@ const spVue = new Vue({
 
 
     },	
+
+	 decodeHtml(str){
+	    var map =
+	    {
+	        '&amp;': '&',
+	        '&lt;': '<',
+	        '&gt;': '>',
+	        '&quot;': '"',
+	        '&#039;': "'"
+	    };
+	    return str.replace(/&amp;|&lt;|&gt;|&quot;|&#039;/g, function(m) {return map[m];});
+	},
 
     getTracks(){
         axios.get(`/api/tracks?event=${this.eventid}`)

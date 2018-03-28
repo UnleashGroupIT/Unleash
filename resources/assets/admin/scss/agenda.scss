@@ -24,6 +24,10 @@ $speed-I : #3476b9;
 $speed-II : #3476b9;
 
 
+form ol, form ul, .content ol, .content ul{
+    list-style: initial !important;
+}
+
 .agenda{
 	margin-top: 0;
     box-shadow: inset 0 0 6px 0px rgba(0, 0, 0, 0.12), 0 1px 20px rgba(0, 0, 0, 0.24);

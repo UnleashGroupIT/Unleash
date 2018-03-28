@@ -99,7 +99,8 @@ class SubPageController extends Controller
         'default_event_code' => \Config::get('unleash.admin.default_event'),
         'default_day' => \Config::get('unleash.admin.default_agenda_day'),
         'eventdata' => $eventsData,
-        'tracks' => $tracks
+        'tracks' => $tracks,
+        'froala_key' => env('FROALA_KEY', '')
       ]);
 
     return view('admin.pages.agenda', [

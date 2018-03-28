@@ -415,7 +415,8 @@ display: inline-block;
 					<option value="5">Lunch Break</option>
 				</select>	
                             <br />
-                            <textarea name="description" id="description" placeholder="Session Description" class="SessDesc"></textarea>
+                             <froala class="SessDesc" name="description" id="description" :tag="'textarea'" :config="froala_config" v-model="newSessionDescription"></froala>
+                            
                             <br />
 
 			<div id="NSSList">

@@ -29,7 +29,7 @@ class AgendaController extends Controller
         return $agenda->create([
         //'track_id' => $request->track,
         'session_title' => $request->sessionTitle, 
-        'session_description' => $request->description, 
+        'session_description' => htmlspecialchars($request->description), 
         'category_id' => $request->sessiontype ?? 1, 
         'start_time' => $start, 
         'end_time' => $end, 
@@ -151,7 +151,12 @@ class AgendaController extends Controller
           
             if(in_array($field, $changable) && $session->$field != $value){
                 
-                $session->$field = $value;
+                if($field == 'session_description'){
+                    $session->$field = htmlspecialchars($value);
+                }else {
+                    $session->$field = $value; 
+                }
+               
 
             }
             
